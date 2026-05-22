@@ -20,7 +20,7 @@ The first-campaign factions still make sense if their units are not generic sold
 
 Yes, the current faction set still makes sense. The strongest playable core is:
 
-1. **Kalaallit Compact / Home Rule Coalition** — local legitimacy, terrain knowledge, rescue, community defense, consent politics.
+1. **Home Rule Coalition** — local legitimacy, terrain knowledge, rescue, community defense, consent politics.
 2. **QXZ Meridian Arctic Mandate** — White Sky maintenance, climate liability, proprietary rescue, elite infrastructure security.
 3. **Barents Research Group / Polar Certification Combine** — polar data, route certification, sensors, drones, “neutral” scientific control.
 4. **Digital Peacekeeping Directorate / the Blue / the Blues** — Treaty Net, public infrastructure, cyber peacekeeping, mandate-limited force.
@@ -30,6 +30,12 @@ The best antagonist/side-faction layer is:
 5. **Open Sky / Blue Week Cells** — atmospheric commons, leaks, sabotage, direct action, risky truth.
 6. **Janus-Kestrel Mining-Logistics Consortium** — ports, cargo identity, extraction finance, private security, concession contracts.
 7. **Tundra Biosecurity / Wildlife Control Program** — better as neutral dwelling chain or subfaction first; full faction later if the animal-control fantasy proves strong.
+
+## Cultural Naming Note
+
+Avoid using **Kalaallit** as a faction brand. It is the real endonym connected to Greenlandic national and cultural identity, and using it as a playable strategy-faction label risks turning a living people into game IP.
+
+Safer current placeholder: **Home Rule Coalition**. It describes a political formation in the fiction without claiming to represent all Greenlandic people or appropriating the endonym as a brand. Real Greenland / Kalaallit Nunaat can still be treated respectfully as a place with local sovereignty, municipalities, languages, communities, and interests.
 
 ## Shared Unit Design Rules
 
@@ -53,7 +59,7 @@ For vertical slice, expand each faction to:
 - one faction-specific recruitment site;
 - one elite or controversial unit.
 
-## Kalaallit Compact / Home Rule Coalition
+## Home Rule Coalition
 
 ### Fantasy
 
@@ -77,7 +83,7 @@ Defensive mobility, terrain bonuses, rescue/sustain, ambushes, legitimacy/proof 
 | 4 | SAR Drone Crew | Rescue Mesh Wing | Support drones | Heals/stabilizes, reveals terrain, can recover proof from battlefield. |
 | 5 | Fishery Hardhats | Harbor Defense Union | Tough melee/riot line | Industrial workers with exosuits/tools; strong near ports/factories. |
 | 6 | Compact Negotiators | Consent Wardens | Soft-control/support | Buffs allies, debuffs corporate units, generates Proof/Legitimacy on objectives. |
-| 7 | Heritage Ranger Team | Kalaallit Vanguard | Elite adaptive squad | High morale, terrain mastery, anti-drone tools; politically costly if lost. |
+| 7 | Heritage Ranger Team | Civic Vanguard | Elite adaptive squad | High morale, terrain mastery, anti-drone tools; politically costly if lost. |
 
 ### Signature Mechanic
 
@@ -87,7 +93,7 @@ Defensive mobility, terrain bonuses, rescue/sustain, ambushes, legitimacy/proof 
 
 - **Fjord Stalkers**: scouts who can disappear in bad weather and mark enemy units for ambush.
 - **Consent Wardens**: not fantasy priests; lawyers, elders, translators, feed witnesses, and negotiators who turn legitimacy into tactical effects.
-- **Kalaallit Vanguard**: elite local defenders, not super-soldiers; their power is competence, local trust, and terrain.
+- **Civic Vanguard**: elite local defenders, not super-soldiers; their power is competence, local trust, and terrain.
 
 ## QXZ Meridian Arctic Mandate
 
@@ -259,7 +265,7 @@ Build tempo, armored workers, private security, logistics buffs, resource extrac
 
 ### Signature Mechanic
 
-**Concession Contract** — Janus-Kestrel can mark sites as concession zones, gaining resource advantages and imposing movement/tax penalties, but increasing local resistance and Open Sky/Kalaallit hostility.
+**Concession Contract** — Janus-Kestrel can mark sites as concession zones, gaining resource advantages and imposing movement/tax penalties, but increasing local resistance and Open Sky/local hostility.
 
 ## Tundra Biosecurity / Wildlife Control Program
 
@@ -327,7 +333,7 @@ Objects matter:
 
 For the first tactical prototype, use two factions and six units total:
 
-### Kalaallit Compact
+### Home Rule Coalition
 - Settlement Watch / Council Guard
 - Hunter-Scouts / Fjord Stalkers
 - SAR Drone Crew / Rescue Mesh Wing

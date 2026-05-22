@@ -1,0 +1,13 @@
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Generated/static-site output if added later
+public/
+.quartz-cache/
+node_modules/
+
+# Local agent/runtime files
+.hermes/
+.env

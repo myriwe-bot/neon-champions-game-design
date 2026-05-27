@@ -31,11 +31,21 @@
 - [[production/epics/epic-template]] — epic template.
 - [[production/stories/story-template]] — story template.
 - [[production/gates/gate-template]] — phase/artifact/story gate template.
+- [[production/spikes/spike-001-unity-project-ci-foundation]] — approved first Unity technical foundation spike.
+- [[production/checklists/codex-pr-review-checklist]] — future implementation PR review checklist for Codex/agents.
 
 ## Architecture
 
 - [[docs/architecture/control-manifest]] — agent implementation rules scaffold.
 - [[docs/architecture/architecture]] — architecture scaffold.
+- [[docs/architecture/unity-technical-scheme]] — Unity technical boundaries and defaults.
+- [[docs/architecture/technical-decision-priorities]] — technical decision gate priorities.
+- [[docs/architecture/data-authoring-options]] — data authoring options and phased-hybrid decision.
+- [[docs/architecture/testing-strategy]] — strict layered testing ADR.
+- [[docs/architecture/ci-build-automation]] — strict CI/build automation ADR.
+- [[docs/architecture/codex-agent-instructions]] — researched Codex/AGENTS.md instruction strategy.
+- [[docs/architecture/unity-repo-agents-template]] — approved starting template for future Unity repo AGENTS.md files.
+- [[docs/architecture/multi-agent-operating-model]] — role/gate/worktree model for using many agents safely.
 
 ## Logs
 

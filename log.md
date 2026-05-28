@@ -120,3 +120,10 @@
 - Created `docs/architecture/multi-agent-operating-model.md` to define human/design/architecture/coordinator/implementation/QA/review agent roles, gates, worktree isolation, and evidence rules.
 - Created `production/checklists/codex-pr-review-checklist.md` for future implementation PR review.
 - Updated `SCHEMA.md`, `index.md`, architecture docs, story/epic templates, and SPIKE-001 to include agent instruction scopes and AGENTS.md requirements.
+
+## [2026-05-28] approve | SPIKE-001 source authority cleanup
+
+- Approved `docs/architecture/control-manifest.md` as the technical-setup implementation control manifest.
+- Approved `docs/architecture/unity-technical-scheme.md` for SPIKE-001 foundation scaffold and technical setup boundaries.
+- Kept unresolved production architecture decisions explicit as later blockers: concrete data schemas/tooling, save/load format/versioning, localization implementation layer, and exact CI runner/license/cache/artifact policy.
+- Clarified that approval does not authorize production gameplay; Unity implementation still requires an approved spike or READY story with evidence.

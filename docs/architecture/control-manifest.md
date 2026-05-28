@@ -1,14 +1,15 @@
 ---
 title: Control Manifest
 type: adr
-status: draft
+status: approved
 phase: technical-setup
 owner: shared
 created: 2026-05-22
-updated: 2026-05-27
+updated: 2026-05-28
 source_lore: []
 related: [docs/architecture/architecture, docs/architecture/unity-technical-scheme, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, design/workflow, production/stories/story-template]
-approval: pending
+approval: approved
+approval_scope: Technical setup, SPIKE-001 foundation work, and future implementation control gates.
 ---
 
 # Control Manifest
@@ -205,4 +206,6 @@ This manifest is usable when:
 - every production story can reference the manifest;
 - the manifest supports, but does not replace, GDDs, ADRs, stories, and tests.
 
-Current verdict: DRAFT / pending approval as a technical-setup artifact.
+Current verdict: APPROVED as the technical-setup implementation control manifest.
+
+Approval scope: this manifest approves implementation gates, source-reading rules, stop conditions, evidence requirements, and SPIKE-001 foundation constraints. It does not approve any production gameplay, mechanics, balance, content, save/load format, final data schema, or Unity implementation outside an approved spike or READY story.

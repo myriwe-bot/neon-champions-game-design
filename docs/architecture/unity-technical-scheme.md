@@ -1,14 +1,15 @@
 ---
 title: Unity Technical Scheme
 type: adr
-status: draft
+status: approved
 phase: technical-setup
 owner: shared
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-05-28
 source_lore: []
 related: [docs/architecture/architecture, docs/architecture/control-manifest, docs/architecture/technical-decision-priorities, docs/architecture/data-authoring-options, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, design/workflow]
-approval: pending
+approval: approved
+approval_scope: SPIKE-001 foundation scaffold and technical setup boundaries; unresolved architecture areas remain explicit blockers for later production stories.
 ---
 
 # Unity Technical Scheme
@@ -328,7 +329,7 @@ Codex must stop if:
 
 ## Approval Scope
 
-Approving this skeleton does not approve the full Unity architecture.
+This scheme is approved for SPIKE-001 foundation work and technical setup boundaries. Approving this scheme does not approve the full future Unity architecture.
 
 It approves:
 
@@ -347,4 +348,4 @@ Still not approved:
 - localization implementation package/layer;
 - exact Unity CI commands, Unity license/activation, runner image, caching, and artifact retention policy.
 
-Current verdict: skeleton approved as direction; full architecture remains pending.
+Current verdict: APPROVED for SPIKE-001 foundation scaffold and technical setup boundaries; full production architecture remains gated by the open decisions above.

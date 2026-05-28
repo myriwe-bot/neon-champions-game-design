@@ -30,7 +30,7 @@ approval: pending
 | 7.1 | Faction Unit Rosters | Core | MVP | Factions, Champions, Tactical Combat, Resources | Defines recruitable unit identities and tactical roles for the first campaign. | Draft | design/gdd/faction-unit-rosters |
 | 8 | Information / Feed State | Feature | Vertical Slice | Strategic Map | Differentiates the setting from generic strategy. | Draft | TBD |
 | 9 | Crisis Clocks | Feature | Vertical Slice | Strategic Map, Sites | Creates campaign pressure and consequences. | Draft | TBD |
-| 10 | Tactical Combat | Core | MVP | Champions, Units, Strategic Map, Resources | Full tactical battles are required for the intended HoMM-like experience and MVP fun test. | Draft | TBD |
+| 10 | Tactical Combat | Core | MVP | Champions, Units, Strategic Map, Resources | Full tactical battles are required for the intended HoMM-like experience and MVP fun test; MVP complexity is constrained to flat-grid XCOM-lite combat with brutally simple AP. | Draft | design/gdd/tactical-combat |
 | 11 | UX / HUD | Presentation | MVP | All player-facing MVP systems | Needed for comprehension and playtest. | Draft | TBD |
 | 12 | Save / Load | Foundation | Vertical Slice | Data Registry | Needed beyond throwaway prototypes. | Draft | TBD |
 

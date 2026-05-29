@@ -231,6 +231,39 @@ Scouting/intel contract:
 - Higher Scouting/Intelligence, strong local intel, infiltration, or special Operations may reveal more precise counter-build information.
 - The UI should distinguish estimated information from confirmed information.
 
+### Reinforcements, Garrisons, and Non-MVP Battle Exceptions
+
+Approved direction:
+
+1. MVP has **no ordinary mid-battle reinforcements**. Authored scenario exceptions may exist, but should be rare and explicit.
+2. Garrison participation is **battle-type/site-specific**.
+3. Nearby allied Champions/armies do not normally reinforce battles. Reinforcement-like support may exist only through specific Operations/Assets, and should be very rare because broad proximity reinforcement cuts against the HoMM-style active-army model.
+4. Enemy reinforcements may arrive as timed scenario waves or as alarm/objective-triggered forces.
+5. Reinforcement arrival communication depends on scouting/intel and scenario rules.
+
+Design contract:
+
+- “No normal reserve bench” remains the baseline. Reinforcements are exceptions, not the default combat model.
+- The 7-slot active army is the normal player-controlled force in battle.
+- Allied proximity reinforcement is not an ordinary strategic-map rule for MVP. Do not import Age-of-Wonders-style nearby army joining unless the broader strategic design explicitly changes direction.
+- If allied reinforcement exists, it should be framed as a specific Operation, Asset, story event, faction mechanic, convoy support, drone drop, extraction team, or scripted scenario rule.
+- Enemy reinforcement rules are more acceptable than allied reserve control because they create mission pressure, alarms, and escalation without giving the player a constant reserve bench.
+- Reinforcements must be telegraphed enough to feel fair unless the scenario explicitly sells surprise as the point.
+
+Garrison handling examples:
+
+- **Small outpost**: garrison contributes map defenses, turrets, barriers, or objective control rather than extra stacks.
+- **Town/base defense**: defender may choose the active 7-stack army from present Champion forces plus local garrison before battle.
+- **Siege/arcology/bunker**: site-specific rules may add hardpoints, defenders, alarm waves, locked doors, breach points, or staged reinforcement zones.
+- **Convoy defense**: garrison equivalent may be escort vehicles, civilian assets, cargo units, or extraction objectives rather than ordinary combat stacks.
+
+Communication examples:
+
+- High scouting/intel: exact or near-exact arrival direction, ETA, and likely composition.
+- Moderate scouting/intel: rough direction and ETA range.
+- Low scouting/intel: warning signs, alarms, radio chatter, heat signatures, or delayed reveal.
+- Scenario surprise: hidden until triggered, but should have fiction and encounter design supporting the surprise.
+
 ## Activation, Initiative, AP, Wait, and Defend
 
 ### Approved Direction

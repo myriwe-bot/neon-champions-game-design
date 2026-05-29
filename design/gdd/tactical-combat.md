@@ -4298,6 +4298,73 @@ Implementation readiness gates:
 - Ability design should prioritize Sensor Lock, Certified Route, Risk Score, reveal/mark, route denial, and objective certification.
 - Validation battles should include at least one objective where Barents can certify a route or decertify a Janus-Kestrel concession zone.
 
+## Barents Unit-Line Skeleton
+
+This section turns the Barents Research Group / Polar Certification Combine role skeleton into seven provisional HoMM-style unit lines. These names are approved as **provisional**: strong enough for roster/ability packets, but not final lore or UI lock.
+
+Approved provisional unit lines:
+
+| Tier | Basic Unit | Upgraded Unit | Primary Role | Core Function |
+|---:|---|---|---|---|
+| 1 | Field Surveyors | Certified Route Team | Scout/support | Identify routes, hazards, and objective metadata. |
+| 2 | Ice Radar Operators | Cryo-Mapping Cell | Reveal/mark | Reveal hidden/suspected targets, apply Sensor Lock, improve targeting. |
+| 3 | Research Drones | Boreal Sensor Net | Drone recon/harass | Extend sensor coverage, contest weak objectives, enable marks. |
+| 4 | Rescue Contractors | Denied-Zone Responders | Midline combat/security | Credible combat stack with rescue/security dual use. |
+| 5 | Cable Divers | Under-Ice Saboteurs | Infrastructure/objective specialist | Disable or restore relays, cable nodes, pickup/extraction systems, and map infrastructure. |
+| 6 | Risk Actuaries | Certification Board | Command/support | Apply Risk Score, certify/decertify routes and objectives, manipulate eligibility/progress. |
+| 7 | Polar Exclusion Team | Black-Ice Wardens | Elite control | Area denial, anti-stealth, anti-drone, corridor protection, exclusion enforcement. |
+
+Roster principles:
+
+- The roster should feel like a research/certification corporation that has become a tactical authority, not like a conventional army.
+- Each unit line should imply a source institution: survey offices, radar stations, drone networks, rescue contracts, cable infrastructure, risk boards, and exclusion teams.
+- The heroic read is safety, rescue, navigation, and scientific competence.
+- The horrific read is abandonment, exclusion, proprietary truth, legal violence, and data-backed dispossession.
+- Unit upgrades should feel like stronger mandate, better equipment, cleaner legal authority, improved sensor integration, or more coercive certification power — not fantasy evolution.
+
+Line notes:
+
+1. **Field Surveyors → Certified Route Team**
+   - Baseline utility stack.
+   - Should interact with route/objective metadata early, making Barents readable from tier 1.
+   - Likely abilities: Scout Route, Identify Hazard, Preliminary Certification.
+
+2. **Ice Radar Operators → Cryo-Mapping Cell**
+   - Primary reveal/mark line.
+   - Should be one of the main ways Barents removes suspected/hidden state and applies Sensor Lock.
+   - Likely abilities: Ice Radar Sweep, Sensor Lock, Map Drift.
+
+3. **Research Drones → Boreal Sensor Net**
+   - Mobile recon/harassment and sensor-extension line.
+   - Should be useful without high damage; their value is coverage, tagging, and objective nuisance.
+   - Likely abilities: Extend Sensor Net, Drone Harass, Relay Mark.
+
+4. **Rescue Contractors → Denied-Zone Responders**
+   - Combat-capable human stack with a plausible public-good mask.
+   - Should bridge rescue, private security, and emergency route enforcement.
+   - Likely abilities: Extract Casualties, Secure Zone, Emergency Response.
+
+5. **Cable Divers → Under-Ice Saboteurs**
+   - Distinctive infrastructure and scenario-objective line.
+   - Strongest on maps with cables, relays, ports, ice-water edges, server bunkers, or extraction infrastructure.
+   - Likely abilities: Cut Relay, Restore Cable, Flooded Approach, Under-Ice Breach.
+
+6. **Risk Actuaries → Certification Board**
+   - The most Neon Champions support line: institutional modeling as tactical pressure.
+   - Should apply predictable escalating penalties rather than random punishment.
+   - Likely abilities: Assign Risk Score, Certify Route, Decertify Objective, Liability Finding.
+
+7. **Polar Exclusion Team → Black-Ice Wardens**
+   - Elite control stack and hard expression of Barents authority.
+   - “Black-Ice” should read as both Arctic hazard and cyberpunk ICE.
+   - Likely abilities: Exclusion Zone, Anti-Stealth Sweep, Drone Denial, Corridor Lockdown.
+
+Implementation readiness gates:
+
+- Next Barents packet should define unit stat profiles and combat roles: melee/ranged/support/control, speed, durability, damage posture, AP costs, and objective utility.
+- Ability packets should avoid overloading every unit with all Barents mechanics; distribute Sensor Lock, Certified Route, and Risk Score cleanly across the roster.
+- Names remain provisional until roster feel, faction fantasy, and opponent matchup are tested against Janus-Kestrel.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

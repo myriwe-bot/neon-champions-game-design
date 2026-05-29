@@ -4231,6 +4231,73 @@ Implementation readiness gates:
 - The next roster packet can derive Janus-Kestrel unit roles from concessions, cargo identity, extraction, bonded logistics, and hardened movement.
 - The first three validation battles can frame their objectives around disputed route certification, server/sensor capture, concession-zone control, and extraction/pickup logistics.
 
+## Barents Roster Role Skeleton
+
+This section defines the Barents Research Group / Polar Certification Combine roster role skeleton before final unit names, stats, or ability values are locked. The goal is to keep Barents grounded in existing lore: polar data, route certification, sensor truth, risk scoring, scientific neutrality, and exclusion authority.
+
+Approved direction:
+
+1. Primary tactical identity: **hybrid sensor-control and certification-control faction**.
+2. Durability profile: **low frontline durability, but strong defensive tools and exclusion zones**.
+3. Roster shape: **mixed human specialist teams, drones, route-control tech, and one elite exclusion/security unit**.
+4. Signature mechanic: **Certified Route + Risk Score, with Sensor Lock as common tactical status**.
+5. Objective interaction: **can certify/decertify objective zones, altering scoring, eligibility, and progress**.
+
+Tactical identity:
+
+- Barents should not play as a generic scout faction.
+- It wins by deciding what the battlefield means: what is visible, measurable, safe, unsafe, insured, excluded, claimable, or legally routable.
+- Its information advantage should become movement pressure, objective leverage, debuffs, and selective firepower.
+- Barents should feel calm, procedural, and data-backed even when acting coercively.
+
+Durability profile:
+
+- Barents should not out-brawl Janus-Kestrel in a direct steel-on-steel fight.
+- Frontline bodies are relatively vulnerable compared to heavy industrial factions.
+- Survivability comes from preparation: certified lanes, exclusion zones, sensor coverage, route denial, defensive drones, and positional debuffs.
+- If Barents loses the information layer, it becomes materially exposed.
+
+Roster-shape requirements:
+
+The full MVP/vertical-slice roster should include roles resembling:
+
+1. **Field survey / route team** — basic scout-support stack; identifies zones, hazards, and objective metadata.
+2. **Sensor / radar operators** — reveal, mark, remove suspected/hidden state, apply Sensor Lock.
+3. **Research drone swarm** — mobile recon/harass stack; extends sensor net and contests weak objectives.
+4. **Rescue-security contractors** — midline human stack; credible combat presence without becoming heavy infantry.
+5. **Cable / infrastructure specialists** — scenario and objective interaction; disable relays, restore routes, manipulate pickup/extraction systems.
+6. **Risk / certification board unit** — command-support stack; applies Risk Score, certifies routes, decertifies enemy-controlled zones.
+7. **Polar exclusion/security elite** — expensive control unit; area denial, anti-stealth, anti-drone, protects certified corridors.
+
+Signature mechanic contract:
+
+- **Certified Route** marks tiles/zones/objectives as certified, contested, decertified, or excluded.
+- Certified ally zones may grant movement reliability, objective progress, accuracy, morale stability, or reduced hazard penalties.
+- Decertified or excluded enemy zones may impose movement penalties, objective ineligibility, accuracy penalties, morale pressure, or increased Risk Score.
+- **Risk Score** accumulates on enemy stacks, zones, or actions when they move through excluded routes, attack protected assets, ignore warnings, operate while Sensor Locked, or contest certified objectives.
+- Risk Score should create predictable escalating consequences rather than random punishment.
+- **Sensor Lock** remains the common tactical status: it makes targets easier to hit, reveal, track, debuff, or classify for later Barents effects.
+
+Objective interaction:
+
+- Barents can certify or decertify objective zones rather than simply occupying them.
+- Certification can alter scoring speed, eligibility, visibility, extraction safety, pickup legality, or contesting rules.
+- A Barents-controlled objective may become easier for Barents to score but more politically/legally costly for opponents to attack.
+- Barents should reveal hidden objective rules better than most factions, but should not freely spoof objectives in MVP.
+- Full false objective / spoofed progress play remains a later deception-system extension, not the baseline Barents MVP identity.
+
+Counterplay expectations:
+
+- Janus-Kestrel should be able to contest Barents through hard routing, redundant logistics, armored objective pressure, and contract enforcement.
+- Signal/Intel counterplay should exist: jamming, destroying sensor assets, forcing line-of-sight breaks, corrupting route data, overloading Risk Score systems, or using decoy cargo/entities.
+- Barents should be powerful when prepared but vulnerable when forced into chaotic close fights or when its sensor grid collapses.
+
+Implementation readiness gates:
+
+- The next packet can define concrete Barents unit lines and upgrade names from this skeleton.
+- Ability design should prioritize Sensor Lock, Certified Route, Risk Score, reveal/mark, route denial, and objective certification.
+- Validation battles should include at least one objective where Barents can certify a route or decertify a Janus-Kestrel concession zone.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

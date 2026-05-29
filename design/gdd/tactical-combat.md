@@ -3681,6 +3681,86 @@ Implementation readiness gates:
 - Cleanse/resist/counterplay abilities can target status tags instead of specific status ids only.
 - Automated or explicit QA scenarios cover phase order, hidden visibility, reveal/decode, cleanse/removal, stacking, rout/death interactions, and save/load.
 
+## Tactical Information Model
+
+This section defines how hidden, partial, suspected, false, and revealed tactical information works. The goal is to support Signal/Intel, scouting, deception, hidden statuses, traps, mines, created entities, and later Operation-channel play without making tactical outcomes feel arbitrary.
+
+Approved direction:
+
+1. MVP information states use the **full layered model**: true state, observed state, suspected state, false/decoy state, and revealed/decoded state.
+2. Tactical object coverage follows a **C-to-D path**: MVP applies the information model to statuses, hidden units, objectives, traps/mines, and created entities, then expands toward all tactical objects including abilities, intent, cooldowns, resources, channels, and objective rules.
+3. Suspected/anomaly information uses **type family, confidence, and last-known location/turn**.
+4. False/decoy information can mimic known object categories but must have discoverability and counterplay rules.
+5. Debug/replay follows a **C-to-D path** now, with full timeline inspector as the eventual target: MVP needs player-visible, opponent-visible, and all-truth debug modes; later tooling should inspect visibility-state changes per observer over time.
+
+Information-state contract:
+
+- **True state** — authoritative simulation state used by rules, tests, save/load, and all-truth debug tools.
+- **Observed state** — what a given observer currently knows and can act on.
+- **Suspected state** — incomplete information that marks an anomaly, likely object, or last-known fact without confirming exact details.
+- **False/decoy state** — deliberately misleading information created by abilities, decoys, spoofing, stealth, Media/Psychological effects, or scenario rules.
+- **Revealed/decoded state** — information promoted from hidden/suspected/false/partial into confirmed knowledge by scouting, Signal, Intel, detection, hacking, or scripted reveal.
+
+Object coverage contract:
+
+- MVP information-model objects include:
+  - hidden or partially identified statuses;
+  - hidden units/stacks;
+  - objectives and objective state where uncertainty is intended;
+  - traps, mines, relays, sensors, turrets, drones, Echo projections, decoys, and other created entities;
+  - pickup/extraction objects if scenario rules hide, mask, or misidentify them.
+- Full-vision expansion may include:
+  - ability intent;
+  - cooldowns and charges;
+  - tactical resources;
+  - Operation channels;
+  - counterplay hooks;
+  - objective rules;
+  - hidden faction/Champion traits;
+  - AI plans or predicted actions where appropriate.
+- The design default is not "hide everything." Hidden information must create meaningful decisions, not random punishment.
+
+Suspected/anomaly contract:
+
+- Suspected information should carry:
+  - type family, such as unit, status, trap, mine, objective, signal source, relay, decoy, or unknown anomaly;
+  - confidence level;
+  - last-known location or affected entity;
+  - last-known turn/phase;
+  - source of suspicion, such as scouting, sensor ping, attack trace, movement noise, objective interaction, or counterintel warning.
+- Suspected markers should be readable enough to support planning but incomplete enough to preserve uncertainty.
+- Confidence should be discrete/bounded for MVP, not a deep probabilistic belief simulation.
+
+False/decoy contract:
+
+- Decoys and false information may mimic known categories such as units, statuses, objectives, mines, relays, signals, or created entities.
+- Each false/decoy object must declare:
+  - what category it mimics;
+  - what observers can see;
+  - what interactions reveal, decode, or disprove it;
+  - whether it can block movement, contest objectives, draw attacks, trigger reactions, or only mislead UI/targeting;
+  - what happens when revealed or destroyed.
+- Decoy gameplay must remain counterplayable through scouting, Signal/Intel, proximity, attacks, reveal effects, or faction-specific counters.
+- False information should be used as a signature tactical layer, not as constant UI noise.
+
+Debug / replay contract:
+
+- MVP replay/debug modes must include:
+  - player-visible view;
+  - opponent-visible view;
+  - all-truth debug view.
+- Later tooling should expand into a timeline inspector that shows visibility-state changes per observer, including when information became suspected, observed, false, revealed, decoded, expired, or invalidated.
+- Hidden-state bugs are high risk; every hidden/false/revealed transition should be loggable with true-state and observer-state records.
+- QA needs all-truth visibility even when normal replays preserve player-facing uncertainty.
+
+Implementation readiness gates:
+
+- A hidden status, suspected trap/mine, hidden unit, decoy entity, and revealed objective state can all be represented without bespoke per-case UI state.
+- Scouting/Signal/Intel effects can promote information from hidden/suspected/false/partial to revealed/decoded.
+- False/decoy objects have explicit reveal and counterplay rules.
+- Combat logs/replay can display player-visible, opponent-visible, and all-truth views.
+- The model avoids unfair hidden outcomes by ensuring major hidden threats are inferable, scoutable, revealable, or deliberately framed as deception.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

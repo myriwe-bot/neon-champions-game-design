@@ -3859,6 +3859,86 @@ Implementation readiness gates:
 - Objective visibility integrates with the tactical information model.
 - Scenario overrides cannot bypass generic component contracts without declaring and testing the exception.
 
+## Tactical Data / Save / Replay Contracts
+
+This section defines what tactical state must be serializable, replayable, and testable so hidden information, statuses, objectives, ability effects, and AP/morale/Signal interactions remain debuggable.
+
+Approved direction:
+
+1. Tactical MVP save granularity is **battle start, turn boundaries, and after each stack activation**.
+2. MVP replay model stores **initial state + player commands + RNG seeds + periodic checkpoints**.
+3. Hidden-information save state follows a **C-to-D path**: true state + observer-visible states + suspected/false/revealed metadata now, with full visibility timeline per observer later.
+4. Combat log detail follows a **C-to-D path**: structured logs now, expanding toward full causal event graphs as tooling matures.
+5. Schema/versioning follows a **C-to-D path**: stable ids + schema version fields + migration hooks now, with a fuller formal migration framework later if save/replay longevity demands it.
+
+Save granularity contract:
+
+- Tactical saves/checkpoints must support:
+  - battle start;
+  - turn boundaries;
+  - after each stack activation.
+- Stack activation checkpoints should capture all state needed to resume without replaying the entire battle.
+- Atomic event/effect reconstruction is not required for MVP save granularity, but the data model should not block later event-sourced debugging.
+- Save/checkpoint state must include AP state, status state, objective state, visibility state, ability cooldowns/charges, RNG state or seed cursor, created entities, and battle phase/turn/activation index.
+
+Replay model contract:
+
+- MVP replay stores:
+  - initial battle state;
+  - player commands / AI commands;
+  - RNG seeds or deterministic RNG stream state;
+  - periodic checkpoints.
+- Replay must be deterministic enough to reproduce tactical outcomes during QA.
+- Checkpoints reduce replay fragility and make mid-battle debugging practical.
+- Full event-sourced replay of every atomic effect is deferred, but structured logs should preserve enough causal data to diagnose common issues.
+
+Hidden-information persistence contract:
+
+- Saves and replays must preserve:
+  - true simulation state;
+  - observer-visible state for each side/observer;
+  - suspected/anomaly metadata;
+  - false/decoy metadata;
+  - revealed/decoded metadata;
+  - stale/last-known information where relevant.
+- Later tooling should expand to a full visibility timeline per observer, tracking when information became hidden, suspected, observed, false, revealed, decoded, expired, or invalidated.
+- Hidden information must survive save/load without leaking to the wrong observer or losing QA all-truth visibility.
+
+Structured combat log contract:
+
+- MVP structured logs should include:
+  - turn/phase/activation index;
+  - trigger/event type;
+  - source id;
+  - target id/query result;
+  - costs paid;
+  - effect blocks resolved;
+  - AP changes;
+  - status applications/removals/refreshes;
+  - morale/rout changes;
+  - objective state/progress changes;
+  - visibility state changes;
+  - RNG rolls/seed references where relevant;
+  - fizzle/failure reasons.
+- Player-facing logs may hide or summarize hidden information, but debug/all-truth logs must preserve the real causal data.
+- Later tooling may promote this into a full event graph with causal links between commands, triggers, effects, reactions, statuses, objective changes, and visibility transitions.
+
+Schema and versioning contract:
+
+- Data records, saves, and replays must use stable ids for units, abilities, statuses, objectives, effects, created entities, and scenario objects.
+- Tactical data must include schema version fields.
+- Migration hooks should exist for saves, replays, and data records when ids/fields change.
+- MVP does not require a heavy formal migration framework, but schema changes must not silently corrupt tactical saves/replays.
+- Versioning is especially important for data-driven abilities, status definitions, objective components, and hidden-information metadata.
+
+Implementation readiness gates:
+
+- A battle can be saved and resumed at battle start, turn boundary, and after stack activation.
+- A replay can reproduce a tactical battle from initial state, commands, RNG seed/state, and checkpoints.
+- Hidden/suspected/false/revealed information persists correctly per observer.
+- Structured logs expose enough detail to debug AP grants/refunds, status resolution, objective eligibility/progress, morale/rout, and visibility changes.
+- Schema versions and stable ids exist for tactical data records before broad content authoring begins.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

@@ -3472,6 +3472,106 @@ Implementation readiness gates:
 - Regression scenarios cover the known exploit surfaces before the tactical MVP is considered stable.
 - The ability schema can represent inactive/future Operation channel metadata without changing save format or ability identity.
 
+## Ability / Effect Schema Primitives
+
+This section defines the minimum reusable ability/effect schema needed for tactical MVP and later Operation-channel expansion. The design should keep ordinary ability authoring data-driven while leaving a path toward deeper rules-engine behavior for rare or full-vision effects.
+
+Approved direction:
+
+1. Base ability structure follows a **C-to-D path**: ability record + trigger conditions + ordered effect blocks + costs/cooldowns now, with a path toward fuller card/stack-like rules behavior later if needed.
+2. Effect blocks resolve in **listed order**, but each effect can declare a **timing phase**.
+3. Primitive effect set follows a **C-to-D path**: MVP includes the extended primitive set needed for AP, morale, statuses, resources, summoned/created entities, objectives, and reactions, with room to grow toward a larger full-vision library.
+4. Targeting follows a **C-to-D path**: MVP uses structured target-query records, with later support for scripted/custom predicates for rare abilities.
+5. Future Operation channels follow a **C-to-D path**: ability data includes channel tags, counterplay tags, visibility/noise fields, and later expands toward the full Operation channel subsystem.
+
+Base ability record contract:
+
+- Ability identity:
+  - stable id;
+  - display name;
+  - source type: unit, Champion, faction, objective, asset, scenario, or system;
+  - tags/channels;
+  - tooltip/UX text;
+  - animation/VFX/SFX hooks.
+- Conditions:
+  - trigger condition: active use, passive, on turn start, on turn end, on kill, on damaged, on routed, on objective event, on status event, etc.;
+  - target query;
+  - source eligibility;
+  - battle/objective/scenario restrictions;
+  - channel/counterplay conditions.
+- Costs and limits:
+  - AP cost;
+  - Command/resource cost;
+  - cooldown;
+  - charges;
+  - per-turn/per-battle caps;
+  - once-per-stack/per-source restrictions where needed.
+- Effects:
+  - ordered effect blocks;
+  - optional timing phase per block;
+  - rollback/fizzle behavior if a block fails;
+  - logging/debug metadata.
+
+Effect resolution contract:
+
+- Effects resolve in listed order by default.
+- Each effect block may declare a timing phase, such as pre-cost, cost, targeting, pre-effect, main effect, post-effect, reaction, cleanup, or objective check.
+- Timing phases are deterministic and inspectable in combat logs.
+- Interrupts/reactions should be represented through declared hooks and reaction phases, not arbitrary hidden execution.
+- Full event-queue/interrupt-stack behavior is deferred unless later complexity proves it necessary.
+
+MVP primitive effect set:
+
+- Required primitive categories:
+  - damage / healing / recovery;
+  - grant/spend/refund AP;
+  - modify morale / trigger Rally / affect rout state;
+  - apply/remove/refresh status;
+  - reveal, mark, sensor-lock, hide, or alter visibility;
+  - move, push, pull, reposition, or restrict movement;
+  - spend/refund Command or other tactical resources;
+  - summon/create temporary entity, drone, decoy, Echo projection, mine, turret, relay, or similar explicitly authored entity;
+  - objective interaction: pickup, drop, carry, contest, capture, extract, score progress, reset progress;
+  - trigger reaction/event hook.
+- The full-vision primitive library can expand later, but new primitives should be justified by multiple abilities or a signature faction/system need.
+
+Targeting contract:
+
+- MVP targeting uses structured target-query records rather than hardcoded per-ability targeting.
+- Query fields should support:
+  - side: self, ally, enemy, neutral, any;
+  - target type: stack, Champion, tile, objective, created entity, drone, decoy, Echo projection, terrain feature;
+  - range and distance metric;
+  - line of sight / line of effect requirements;
+  - status filters;
+  - AP/morale/rout filters;
+  - size/stack-count filters where needed for tiny-stack and split-stack rules;
+  - objective eligibility filters;
+  - visibility/scouting filters;
+  - channel/counterplay filters.
+- Later scripted predicates may be added for rare abilities, but the default authoring path should remain query composition, not arbitrary scripts.
+
+Operation metadata contract:
+
+- Ability records should include future-facing Operation metadata even when most Operation channels are inactive in MVP:
+  - operation/channel tags;
+  - counterplay tags;
+  - visibility/noise profile;
+  - traceability/detectability;
+  - jamming/hacking/interference hooks;
+  - UI disclosure level;
+  - faction or Champion doctrine tags.
+- These fields should not force full Operation-channel simulation in the first playable slice.
+- They should prevent schema churn when the design expands from the AP/morale/Signal triad into broader Operations.
+
+Implementation readiness gates:
+
+- The MVP +AP, Rally/morale, and Signal/Intel abilities can be authored as data records using this schema.
+- At least one objective interaction uses ability/effect primitives rather than custom battle code.
+- Combat logs can show trigger, targeting, cost, effect order, status application, reaction, and cleanup.
+- Save/load preserves stable ability ids, status ids, cooldowns, charges, channel metadata, and created-entity ownership.
+- Regression tests cover effect ordering, fizzle behavior, AP caps/refunds, target filters, status priority, and objective eligibility.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

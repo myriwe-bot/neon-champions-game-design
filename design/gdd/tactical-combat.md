@@ -3300,12 +3300,20 @@ Design notes:
 
 > Current working label: **AP abilities group**.
 
-This group contains Champion/faction abilities that temporarily alter the simple 2 AP combat economy. These should be premium command-layer moments, not ordinary unit spam.
+This group contains Champion/faction/rare elite abilities that temporarily alter the simple 2 AP combat economy. These should be premium command-layer or signature identity moments, not ordinary unit spam.
+
+Approved direction:
+
+1. MVP +AP sources may come from **Champions, faction mechanics, and rare elite unit abilities**.
+2. +AP effects should be **rare but build-defining**, with several possible sources constrained by cooldowns, charges, Command/resource costs, or opportunity costs.
+3. Normal tactical cases use a hard cap of **3 total AP on a stack in one turn**.
+4. +AP effects usually cost cooldowns/charges plus Command/resource/opportunity cost. Risk tradeoffs such as self-damage, exposure, Jammed/Hacked vulnerability, heat, or morale stress are reserved for faction flavor and special abilities.
+5. AP refund effects, such as kill-refunds, may exist only as Champion/faction signature effects and should be capped at **once per stack per turn**.
 
 Design law:
 
 ```text
-AP is stable by default. Breaking AP rules is a Champion/faction identity moment.
+AP is stable by default. Breaking AP rules is a Champion, faction, or rare elite identity moment. A normal stack should not exceed 3 AP in one turn.
 ```
 
 ### Candidate Abilities
@@ -3321,11 +3329,13 @@ AP is stable by default. Breaking AP rules is a Champion/faction identity moment
 
 ### Balance Constraints
 
-- Extra AP should usually come from the Champion or faction identity, not ordinary stack abilities.
+- Extra AP should usually come from the Champion, faction identity, or rare elite unit identity, not ordinary stack abilities.
 - +1 AP to a stack is a major effect because it can enable move + attack + defend, triple attack if ammo allows, or attack + reload + attack.
 - AP grants need visible UI/FX so players understand why a stack acted more than expected.
 - AP manipulation must be constrained by cooldown, charges, command resource, risk, positioning, or faction weakness.
 - Avoid permanent AP inflation in MVP.
+- Normal tactical cases cap a stack at 3 total AP in one turn.
+- AP refunds are especially snowball-prone; keep them signature and cap them at once per stack per turn.
 
 ## Stack Action Principle
 

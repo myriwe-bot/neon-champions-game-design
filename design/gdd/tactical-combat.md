@@ -3939,6 +3939,77 @@ Implementation readiness gates:
 - Structured logs expose enough detail to debug AP grants/refunds, status resolution, objective eligibility/progress, morale/rout, and visibility changes.
 - Schema versions and stable ids exist for tactical data records before broad content authoring begins.
 
+## Tactical MVP Content Matrix
+
+This section defines the minimum tactical content needed to validate the MVP systems. The goal is to prove field battles, objectives, AP/morale/Signal abilities, status resolution, hidden information, stack splitting, and exploit surfaces with actual playable scenarios rather than abstract schemas alone.
+
+Approved direction:
+
+1. MVP validation battles follow a **C-to-D path**: start with three core battles plus dedicated exploit/regression scenarios, then expand into a linked campaign slice.
+2. Playable faction coverage follows a **B-to-C-to-D path**: start with two small asymmetric factions, expand to three, then eventually the full initial faction set.
+3. MVP faction unit coverage uses the **full roster** for the selected MVP factions.
+4. Champion/Operation abilities follow a **C-to-D path**: start with six abilities, two each for AP/tempo, Rally/morale, and Signal/Intel, then expand toward 9+ abilities across multiple channels.
+5. Status coverage follows a **C-to-D path**: start with 8-10 validation statuses covering the main tactical categories, then expand toward all drafted statuses.
+
+Validation battle contract:
+
+- First validation set:
+  - one straight field battle;
+  - one control-zone battle;
+  - one extraction/pickup battle;
+  - dedicated exploit/regression scenarios for stack splitting, tiny stacks, Zone of Control, retaliation, AP grants/refunds, objective eligibility, hidden information, and status resolution.
+- After the first validation set is stable, expand into a campaign slice with linked battles, army persistence, Champion/Operation use, post-battle consequences, progression context, and objective variety.
+
+Faction rollout contract:
+
+- MVP begins with **two asymmetric factions** so combat can test different tactical identities without needing the full faction set immediately.
+- The next validation expansion adds a **third faction** to test whether the systems generalize beyond a binary matchup.
+- Full initial faction coverage comes after the tactical loop, schemas, and content pipeline prove stable.
+- Even at two-faction MVP scope, faction choice should express real Neon Champions asymmetry, not palette-swapped mirror units.
+
+Unit roster contract:
+
+- For the selected MVP factions, use the **full intended roster** rather than a partial 3/5/7-unit sample.
+- This is a deliberate scope increase: it tests army composition, 7-slot pressure, duplicate stacks, stack splitting, unit-role overlap, counters, objective roles, and roster identity early.
+- If implementation load becomes too high, content can be staged internally, but the design target remains full roster coverage for MVP validation factions.
+- Roster implementation should prioritize data-driven unit definitions so full roster coverage does not create one-off tactical code.
+
+Champion / Operation ability content contract:
+
+- Initial MVP ability set:
+  - two AP/tempo abilities;
+  - two Rally/morale abilities;
+  - two Signal/Intel abilities.
+- The six-ability set should test variation, not duplicates:
+  - one clean/simple representative per category;
+  - one more conditional, counterplay-heavy, or faction-flavored representative per category.
+- Expansion path:
+  - add 9+ abilities across multiple Operation channels once the six-ability set proves the schema;
+  - later connect abilities to broader Champion progression, faction doctrine, assets, and full Operation-channel systems.
+
+Status content contract:
+
+- Initial validation set should include **8-10 statuses** covering:
+  - Suppressed / action pressure;
+  - Marked or Sensor Lock / targeting and information;
+  - Routed / morale collapse;
+  - Jammed / Signal disruption;
+  - Hacked / hostile system control or interference;
+  - morale modifier or panic/stress state;
+  - visibility/hidden/revealed state;
+  - AP/action restriction or exhaustion state;
+  - objective-affecting state such as carrying, contesting, extracted, disabled, or anchored;
+  - one faction- or Operation-flavored status if needed to prove extensibility.
+- Expansion path moves toward all drafted statuses after the first validation set proves status resolution, visibility, counterplay, and save/replay stability.
+
+Implementation readiness gates:
+
+- The three validation battles and exploit/regression scenarios are playable and replayable.
+- Two asymmetric factions are playable with full rosters and meaningful tactical identity.
+- Full-roster unit data exercises stack splitting, duplicate stacks, objective roles, counters, and 7-slot composition pressure.
+- Six Champion/Operation abilities prove AP, morale, and Signal/Intel ability families through the shared ability schema.
+- 8-10 statuses prove resolution order, stacking, counterplay, hidden information, objective interaction, and save/replay behavior.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

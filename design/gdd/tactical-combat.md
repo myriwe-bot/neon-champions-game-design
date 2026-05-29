@@ -4527,6 +4527,88 @@ Implementation readiness gates:
 - Ability implementation should map each active/passive to the generic ability/effect schema already defined in the tactical implementation contracts.
 - Validation scenarios should test whether Barents has enough combat presence when objective/information tools are less relevant.
 
+## Barents First-Pass Unit Abilities
+
+This section defines preliminary first-pass ability names and effects for Barents Research Group / Polar Certification Combine unit lines. These are **preliminary/provisional**: they should be used to test faction feel and implementation shape, not treated as final balance or final UI copy.
+
+Approved preliminary ability sets:
+
+| Tier | Unit Line | Passive | Active | Core Effect |
+|---:|---|---|---|---|
+| 1 | Field Surveyors → Certified Route Team | Route Literacy | Preliminary Certification | Basic route/objective certification and safer movement/metadata use. |
+| 2 | Ice Radar Operators → Cryo-Mapping Cell | Cold Read | Ice Radar Sweep | Reveal/clarify hidden or suspected targets; apply Sensor Lock rider. |
+| 3 | Research Drones → Boreal Sensor Net | Relay Coverage | Tagging Pass | Extend sensor coverage and apply/refresh constrained Sensor Lock. |
+| 4 | Rescue Contractors → Denied-Zone Responders | Rescue Mandate | Emergency Extraction | Stabilize or reposition endangered stacks/objective carriers. |
+| 5 | Cable Divers → Under-Ice Saboteurs | Wetline Specialist | Restore/Cut Cable | Restore or sabotage relays, cable nodes, extraction systems, and objective infrastructure. |
+| 6 | Risk Actuaries → Certification Board | Risk Ledger | Certify/Decertify | Manipulate Certified Route state and Risk Score / objective eligibility. |
+| 7 | Polar Exclusion Team → Black-Ice Wardens | Wardens' Mandate | Exclusion Zone | Create/control exclusion space; upgrade riders can add anti-stealth/anti-drone. |
+
+Line details:
+
+1. **Field Surveyors → Certified Route Team**
+   - Passive: **Route Literacy**.
+   - Effect: better use of route/objective metadata; reduced penalties or improved reliability on certified routes.
+   - Active: **Preliminary Certification**.
+   - Effect: mark a small route, tile group, or objective zone as preliminarily certified for limited ally movement/objective benefit.
+   - Upgrade direction: Certified Route Team improves the certification's objective-progress, eligibility, or hazard-mitigation effect.
+
+2. **Ice Radar Operators → Cryo-Mapping Cell**
+   - Passive: **Cold Read**.
+   - Effect: improved accuracy/reveal reliability against suspected, hidden, obscured, or Sensor Locked targets.
+   - Active: **Ice Radar Sweep**.
+   - Effect: scan an area, clarify suspected/hidden state, reveal decoys or anomalies where applicable, and apply Sensor Lock to valid targets.
+   - Upgrade direction: Cryo-Mapping Cell increases scan area, reveal strength, or the quality/duration of Sensor Lock.
+
+3. **Research Drones → Boreal Sensor Net**
+   - Passive: **Relay Coverage**.
+   - Effect: extends local Barents sensor coverage and may improve targeting/reveal reliability in nearby zones.
+   - Active: **Tagging Pass**.
+   - Effect: mobile low-damage harassment that tags a target, applies or refreshes constrained Sensor Lock, and helps maintain line-of-sight logic.
+   - Upgrade direction: Boreal Sensor Net improves relay radius, safer disengage, or objective-contest support.
+
+4. **Rescue Contractors → Denied-Zone Responders**
+   - Passive: **Rescue Mandate**.
+   - Effect: improved sustain, extraction, or morale stability near certified/contested zones or endangered allied stacks.
+   - Active: **Emergency Extraction**.
+   - Effect: stabilize, pull, reposition, or protect an endangered allied stack/objective carrier under defined range and AP limits.
+   - Upgrade direction: Denied-Zone Responders improve extraction safety, add zone-securing effect, or gain a defensive rider after extraction.
+
+5. **Cable Divers → Under-Ice Saboteurs**
+   - Passive: **Wetline Specialist**.
+   - Effect: bonuses near infrastructure, relays, cable nodes, ports, ice-water edges, server rooms, or extraction/pickup systems.
+   - Active: **Restore/Cut Cable**.
+   - Effect: choose restoration or sabotage mode on eligible infrastructure: restore allied relay/objective function, or disable enemy route/sensor/objective infrastructure.
+   - Upgrade direction: Under-Ice Saboteurs gain stronger disable, stealthier approach, or Risk Score exploitation against exposed infrastructure.
+
+6. **Risk Actuaries → Certification Board**
+   - Passive: **Risk Ledger**.
+   - Effect: tracks or improves Risk Score / certification effects; may reduce cost or improve effect in certified zones.
+   - Active: **Certify/Decertify**.
+   - Effect: change a route/objective zone's certification state, apply or escalate Risk Score under clear conditions, and manipulate objective eligibility/progress where allowed.
+   - Upgrade direction: Certification Board increases area, adds threshold effects, or gains stronger objective-state manipulation.
+
+7. **Polar Exclusion Team → Black-Ice Wardens**
+   - Passive: **Wardens' Mandate**.
+   - Effect: stronger while defending certified/excluded zones or engaging high-Risk / Sensor Locked targets.
+   - Active: **Exclusion Zone**.
+   - Effect: create or enforce an exclusion area that restricts movement, punishes entry, blocks stealth/drone intrusion with upgrade riders, or protects a certified corridor.
+   - Upgrade direction: Black-Ice Wardens improve area denial, anti-stealth/anti-drone control, or high-Risk target punishment.
+
+Design constraints:
+
+- These abilities should map cleanly to the reusable ability/effect schema: statuses, reveal/mark, movement modification, objective interaction, resource/cost, and zone-state changes.
+- Sensor Lock should be a rider on Ice Radar Sweep and Tagging Pass, not a universal Barents button.
+- Certified Route should remain readable on the board and in objective UI.
+- Risk Ledger and Certify/Decertify must be deterministic and explainable; no hidden random punishment.
+- Emergency Extraction must have tight limits to avoid trivializing positioning, rout, or objective carrier risk.
+- Restore/Cut Cable should degrade gracefully on maps without literal cable infrastructure by targeting relays, extraction machinery, server nodes, or other scenario infrastructure.
+
+Implementation readiness gates:
+
+- Next Barents packet should define ability costs/cooldowns/AP use and MVP effect primitives per ability.
+- Validation should include at least one map with infrastructure targets so Cable Divers can prove their identity.
+- Barents must be tested in at least one low-infrastructure field battle to verify the roster still functions outside ideal maps.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

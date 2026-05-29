@@ -127,3 +127,9 @@
 - Approved `docs/architecture/unity-technical-scheme.md` for SPIKE-001 foundation scaffold and technical setup boundaries.
 - Kept unresolved production architecture decisions explicit as later blockers: concrete data schemas/tooling, save/load format/versioning, localization implementation layer, and exact CI runner/license/cache/artifact policy.
 - Clarified that approval does not authorize production gameplay; Unity implementation still requires an approved spike or READY story with evidence.
+
+## [2026-05-29] revise | Tactical combat GDD and MVP faction pair
+
+- Expanded `design/gdd/tactical-combat.md` with the latest F.67-F.92 tactical packet work: AP limits, tactical MVP scope, implementation contracts, ability/effect schema, status schema, information model, objective schema, save/replay contracts, MVP content matrix, and Barents unit roster packets.
+- Selected the first working canonical MVP faction pair as Barents Research Group / Polar Certification Combine versus Janus-Kestrel Continuity Group / Mining-Logistics Consortium.
+- Added `design/gdd/tactical-combat.md` to the public index so the GDD is visible from the game-design site.

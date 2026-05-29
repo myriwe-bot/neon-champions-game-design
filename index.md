@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-05-22
+> Last updated: 2026-05-29
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -19,6 +19,7 @@
 - [[design/gdd/systems-index]] — system map scaffold.
 - [[design/gdd/intel-resource]] — draft system GDD for Intel as Neon Champions' Alchemical Dust analogue.
 - [[design/gdd/faction-unit-rosters]] — draft unit roster concepts and faction tactical identities for the Greenland campaign.
+- [[design/gdd/tactical-combat]] — active tactical combat GDD, including AP/morale/Signal contracts, MVP scope, save/replay rules, and the provisional Barents vs Janus-Kestrel faction-pair work.
 
 ## World Import Layer
 

@@ -297,6 +297,37 @@ Communication examples:
 - Low scouting/intel: warning signs, alarms, radio chatter, heat signatures, or delayed reveal.
 - Scenario surprise: hidden until triggered, but should have fiction and encounter design supporting the surprise.
 
+### Battle Frequency and Tactical Complexity Budget
+
+Approved direction:
+
+1. Ordinary tactical battles should be **moderately frequent**: fewer and more meaningful than pure HoMM map-clearing, but not rare XCOM-style set-piece missions.
+2. Ordinary MVP battles target **5-10 minutes**, with quicker 3-5 minute fights also desirable. Battles over 10 minutes should be exceedingly rare, if they exist at all.
+3. Ordinary battle round count has **no hard target**. A 4-6 round shape is a useful default expectation, but longer or shorter battles depend on objective type, matchup, map, and battle stakes.
+4. Ordinary pre-battle setup should be quick: reorder/formation/scouting summary, not full loadout puzzle every fight.
+5. MVP tactical complexity should preserve the core identity: core combat, morale, objectives, and limited statuses/Operations. The current drafted systems can remain in the design, but advanced status/channel/edge-case depth should be implemented only as needed.
+
+Design contract:
+
+- Combat must feel **punchy, quick, and readable**, not overwhelming.
+- Strategy-map pacing should not be stalled by long tactical battles as a norm.
+- A normal fight should usually resolve before the player feels they have entered a separate mission game.
+- The system can support richer battle types, but ordinary battles should not require exhaustive planning, long deployment, or many reinforcement waves.
+- Tactical depth should come from clear high-impact choices: AP, positioning, objectives, morale/rout pressure, stack composition, and a small number of readable Champion/faction interventions.
+
+Pacing targets:
+
+- **Quick skirmish**: 3-5 minutes; simple objective or straight fight.
+- **Ordinary battle**: 5-10 minutes; default target for MVP feel.
+- **Long battle**: over 10 minutes; rare, reserved for siege/story/high-stakes scenarios if used.
+- **Round count**: no hard rule; use 4-6 rounds as a rough ordinary-battle expectation, but let objective design and battle type own the final pacing.
+
+MVP complexity stance:
+
+- Include enough morale/objective/Operation texture to test the actual Neon Champions identity.
+- Defer full-depth implementation of every drafted status, channel, reinforcement exception, and specialist objective until the MVP proves the core loop.
+- If battles feel slow, reduce per-battle complexity and setup friction before cutting the HoMM-like active army model.
+
 ## Activation, Initiative, AP, Wait, and Defend
 
 ### Approved Direction

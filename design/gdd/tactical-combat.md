@@ -231,6 +231,39 @@ Scouting/intel contract:
 - Higher Scouting/Intelligence, strong local intel, infiltration, or special Operations may reveal more precise counter-build information.
 - The UI should distinguish estimated information from confirmed information.
 
+### AI Valuation for Split and Duplicate Stacks
+
+Approved direction:
+
+1. AI target priority uses stack size, but modifies it by tactical role, objective threat, and immediate board impact.
+2. AI recognition of retaliation-bait tactics depends on AI difficulty, faction, personality, and tactical sophistication. Basic AI may avoid obvious waste; stronger AI may actively punish bait stacks.
+3. AI use of split stacks is faction/personality-specific.
+4. Tiny stacks on objectives are treated as high-priority threats regardless of damage output when they affect objective progress/control.
+5. Duplicate-stack targeting depends on AI role and tactical context, with wiping smaller duplicates for morale/action advantage as a common pattern.
+
+Design contract:
+
+- AI must not evaluate 1-stacks only by damage output. Blocking, ZOC, retaliation bait, objective interaction, scouting, and finishing blows all matter.
+- AI should recognize that a tiny stack can be strategically decisive if it is contesting, capturing, uploading, extracting, or blocking a critical route.
+- Retaliation-bait handling should scale by enemy competence:
+  - low-discipline enemies may waste retaliation;
+  - trained/tactical enemies avoid obvious bait when they have better targets;
+  - elite, drone, cybernetic, Signal, or doctrine-heavy factions may punish bait stacks deliberately.
+- AI use of split stacks should express faction identity. Disposable drone clouds, decoy-heavy factions, militia swarms, and covert cells may split more; disciplined corporate/heavy factions may prefer concentrated stacks.
+- Duplicate stacks should not be treated as errors. AI can choose to wipe small duplicates for action/morale advantage, hit the largest concentration for attrition, or ignore both to pursue objectives.
+
+AI evaluation examples:
+
+- **Objective AI**: prioritizes a 1-stack on an upload/control/extraction objective over a larger stack that is not affecting the mission.
+- **Morale-pressure AI**: prefers killing weak duplicate stacks to trigger morale/Cohesion pressure and reduce player activation count.
+- **Artillery/area AI**: prefers large concentrations or clustered duplicate stacks.
+- **Elite tactical AI**: avoids spending premium retaliation or high-value cooldowns into obvious 1-stack bait unless doing so protects a critical objective.
+- **Swarm/decoy AI**: uses its own split stacks to block, screen, bait, and contest.
+
+Implementation note:
+
+- Future AI scoring should include separate terms for stack size/value, objective threat, blocking/ZOC threat, killability, morale impact, retaliation-bait risk, and faction/personality modifiers.
+
 ### Reinforcements, Garrisons, and Non-MVP Battle Exceptions
 
 Approved direction:

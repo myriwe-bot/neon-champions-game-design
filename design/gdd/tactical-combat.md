@@ -3398,6 +3398,80 @@ Implementation readiness gates:
 - The AP/morale/Signal ability triad is implemented through a reusable ability/effect framework.
 - Tiny-stack objective, ZOC, retaliation, and AP edge cases have automated tests or explicit QA scenarios.
 
+## Tactical Implementation Contracts
+
+This section turns MVP tactical scope into implementation-safe data contracts. The intent is to let the first tactical slice validate design risk while avoiding hardcoded one-offs that would block later Operation, status, and objective expansion.
+
+Approved direction:
+
+1. Abilities are authored as **data-driven ability records using reusable effect primitives and event hooks**.
+2. Status effects resolve by **priority tier, then source order inside each tier**.
+3. Objectives use **generic objective components plus scenario-specific overrides**.
+4. Tactical test content follows a **C-to-D path**: MVP validation requires three core battles plus exploit/regression scenarios, then expands toward a full campaign slice.
+5. Operation-channel architecture follows a **C-to-D path**: MVP includes shared ability schema plus channel fields/counterplay hooks, then expands toward the full Operation channel system.
+
+Ability authoring contract:
+
+- Each ability should be represented by a data record, not a bespoke class per ability.
+- Ability records should compose reusable primitives such as:
+  - grant AP;
+  - spend Command/resource;
+  - apply status;
+  - remove status;
+  - modify morale;
+  - reveal/mark/sensor-lock;
+  - move/push/pull;
+  - deal damage;
+  - trigger reaction/event hook;
+  - check channel/counterplay condition.
+- Custom code is allowed for new primitives or hooks, not for every individual ability.
+- Ability records must expose tuning values for cost, cooldown, charges, target rules, range, duration, tags/channels, and UI text.
+
+Status resolution contract:
+
+- Statuses resolve in deterministic priority tiers.
+- Within the same priority tier, statuses resolve by source/application order.
+- Each status must define:
+  - priority tier;
+  - duration or removal condition;
+  - stacking/refresh rule;
+  - owner/source;
+  - visible UI state;
+  - save/load representation;
+  - whether it can be cleansed, resisted, suppressed, or countered.
+- Resolution order must be testable with explicit regression scenarios for AP grants, morale/rout, Jammed/Hacked/Signal interactions, and death/removal edge cases.
+
+Objective implementation contract:
+
+- Core objective behavior should use reusable components for capture zones, contesting, extraction, pickup, escort/carry, timers, and victory/failure checks.
+- Scenario-specific overrides are allowed when a mission needs authored behavior, but overrides must declare which generic rule they replace or extend.
+- Objective components must define eligibility rules for tiny/split stacks, summons/decoys/drones/Echo projections, routed units, disabled units, and hidden/scouted units.
+- Objective state must be serializable and visible enough for player planning.
+
+MVP tactical validation content:
+
+- Required first validation set:
+  - one straight field battle;
+  - one control-zone battle;
+  - one extraction/pickup battle;
+  - exploit/regression scenarios for stack splitting, tiny stacks, Zone of Control, retaliation, AP grants/refunds, objective eligibility, status resolution, and morale/rout.
+- After this validation set is stable, expand toward a **full campaign slice** that demonstrates battle selection, army management, deployment, Champion/Operation use, post-battle consequences, and progression context.
+
+Operation-channel architecture contract:
+
+- MVP abilities should use the shared ability schema.
+- The schema should include channel fields and counterplay hooks even if most channels are inactive in the first tactical slice.
+- Channel/counterplay fields should support later Signal, Covert, Media, Logistics, Fire Support, Medical/Recovery, Psychological Warfare, and faction-specific Operations without rewriting the ability model.
+- Full channel breadth is a target state, not a blocker for the first three tactical validation battles.
+
+Implementation readiness gates:
+
+- Designers can author the MVP AP, Rally/morale, and Signal/Intel abilities from data records.
+- Status interactions produce deterministic logs suitable for tests/debugging.
+- Objective logic can run field, control-zone, and extraction/pickup battles without custom battle-mode classes for each case.
+- Regression scenarios cover the known exploit surfaces before the tactical MVP is considered stable.
+- The ability schema can represent inactive/future Operation channel metadata without changing save format or ability identity.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

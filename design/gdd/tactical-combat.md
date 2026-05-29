@@ -3572,6 +3572,115 @@ Implementation readiness gates:
 - Save/load preserves stable ability ids, status ids, cooldowns, charges, channel metadata, and created-entity ownership.
 - Regression tests cover effect ordering, fizzle behavior, AP caps/refunds, target filters, status priority, and objective eligibility.
 
+## Status Schema and Resolution
+
+This section defines the minimum status-effect contract for deterministic tactical play while preserving Neon Champions' emphasis on Signal, deception, hidden information, morale, hacking, and counterplay.
+
+Approved direction:
+
+1. Base status structure uses **status id + duration/removal + priority tier + stacking rule + owner/source + visible UI**.
+2. Stacking uses **per-status stacking modes**: refresh, replace-if-stronger, stack count, unique-per-source, or similar bounded modes.
+3. Status visibility uses a **full fog-of-war / information model**, because hidden state, deception, scouting, and Signal/Intel are core to the game.
+4. Cleanse/resist/counterplay uses **typed counterplay tags**: cleanse, resist, immunity, suppression, jamming, hacking, morale recovery, etc.
+5. MVP status resolution requires at least the full tactical phase set: battle start, turn start, pre-action, on-hit/on-damage, post-action, objective check, morale/rout check, death/removal, and turn end.
+
+Base status record contract:
+
+- Identity:
+  - stable status id;
+  - display name;
+  - status family/category;
+  - tooltip/UX text;
+  - icon/VFX/SFX hooks.
+- State:
+  - duration or removal condition;
+  - priority tier;
+  - resolution phase hooks;
+  - stacking mode;
+  - owner/source;
+  - target entity;
+  - intensity/count/value fields if applicable.
+- Rules:
+  - effect primitives or modifiers applied by the status;
+  - refresh/replace/expire behavior;
+  - cleanse/resist/immunity/counterplay tags;
+  - save/load representation;
+  - combat log visibility.
+- Presentation:
+  - visibility level by observer;
+  - UI disclosure rules;
+  - revealed/identified/decoded state;
+  - preview text for known effects and uncertainty text for unknown effects.
+
+Stacking contract:
+
+- Each status declares one bounded stacking mode rather than freeform stacking code.
+- Required stacking modes:
+  - **refresh** — reapplication extends or resets duration;
+  - **replace-if-stronger** — stronger application replaces weaker application;
+  - **stack count** — applications increment a capped count/intensity;
+  - **unique-per-source** — separate instances can coexist only if their source differs;
+  - **non-stacking** — reapplication has no effect or only updates source metadata.
+- Each status must declare maximum stack count/intensity where relevant.
+- Stacking behavior must be visible or explainable enough that players can predict important outcomes.
+
+Information / visibility contract:
+
+- Status visibility is part of the tactical information model, not just UI polish.
+- A status may have different disclosure levels for owner, opponent, neutral observer, scouted observer, and revealed/decoded observer.
+- Required visibility states:
+  - public and fully identified;
+  - visible but values/remaining duration hidden;
+  - owner-only;
+  - hidden until triggered;
+  - suspected/anomaly state;
+  - scouted/revealed/decoded;
+  - false/decoy status if later deception systems require it.
+- Signal, Intel, scouting, jamming, hacking, stealth, and Media/Psychological effects may alter what status information is visible.
+- Hidden statuses still need deterministic server/simulation state and replay/debug visibility for QA.
+- The player-facing model must avoid unfairness: hidden status effects should be either inferable, scoutable, or deliberately framed as deception/uncertainty.
+
+Counterplay contract:
+
+- Statuses declare typed counterplay tags instead of bespoke hardcoded counter rules.
+- Required counterplay tags include:
+  - cleanse;
+  - resist;
+  - immunity;
+  - suppression;
+  - jamming;
+  - hacking;
+  - morale recovery;
+  - reveal/decode;
+  - dispel/remove;
+  - armor/biotech/network/firewall/faction-specific resistance tags as needed.
+- Abilities, faction traits, Champion skills, and Operations can reference these tags for broad counterplay.
+- Counterplay should distinguish prevention, mitigation, removal, concealment, and information revelation.
+
+Resolution phase contract:
+
+- MVP status hooks must support at least:
+  - battle start;
+  - turn start;
+  - pre-action;
+  - on-hit / on-damage;
+  - post-action;
+  - objective check;
+  - morale/rout check;
+  - death/removal;
+  - turn end.
+- Within a phase, statuses resolve by priority tier, then source/application order.
+- Status resolution should produce deterministic combat log entries, including hidden debug logs for QA/replay when player-facing information is concealed.
+- Arbitrary hook/event-queue behavior is deferred until the bounded phase model fails a real design need.
+
+Implementation readiness gates:
+
+- Suppressed, Marked/Sensor Lock, Routed, Jammed, Hacked, morale modifiers, and objective-affecting statuses can all be represented by the status schema.
+- Status stacking behavior is testable per status mode.
+- Hidden/partial status information can be represented separately from true simulation state.
+- Cleanse/resist/counterplay abilities can target status tags instead of specific status ids only.
+- Automated or explicit QA scenarios cover phase order, hidden visibility, reveal/decode, cleanse/removal, stacking, rout/death interactions, and save/load.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

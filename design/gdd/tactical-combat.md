@@ -3337,6 +3337,67 @@ AP is stable by default. Breaking AP rules is a Champion, faction, or rare elite
 - Normal tactical cases cap a stack at 3 total AP in one turn.
 - AP refunds are especially snowball-prone; keep them signature and cap them at once per stack per turn.
 
+## Tactical Combat MVP Cut / Implementation Readiness
+
+This section defines the first playable tactical slice. The goal is to test whether the core HoMM-like stack combat, AP economy, morale pressure, objectives, deployment, and army-slot constraints work together before expanding into the full tactical vision.
+
+Approved direction:
+
+1. MVP tactical battles include **field battles plus control-zone and extraction/pickup objectives**.
+2. MVP status scope includes **all drafted tactical statuses**, implemented in lean, data-driven forms rather than bespoke one-off scripts.
+3. Champion/Operation MVP scope uses a **C-to-D path**: the first playable version must include one +AP ability, one Rally/morale ability, and one Signal/Intel ability, while the architecture should support expansion into the full Operation channel system.
+4. MVP deployment includes **reorder/formation slots plus scouting preview**.
+5. MVP army management includes **7 active slots, duplicate stacks, and stack splitting**.
+
+MVP battle-type contract:
+
+- **Straight field battle** remains the baseline combat test.
+- **Control-zone objectives** add positional pressure without requiring full siege/raid systems.
+- **Extraction/pickup objectives** test movement, stack splitting, sacrifice, and tiny-stack exploit rules.
+- Ambush, siege, raid, multi-stage battles, and highly authored scenario battle types are deferred until the baseline proves stable.
+
+MVP status contract:
+
+- All drafted statuses may appear in MVP, but each status must have:
+  - a clear owner/source;
+  - visible UI state;
+  - deterministic resolution order;
+  - bounded duration or clear removal condition;
+  - data-driven tuning values.
+- Suppressed, Marked/Sensor Lock, and Routed are the minimum readability anchors.
+- Jammed, Hacked, morale, network, damage-over-time, disable, and other drafted statuses must not become separate minigames in MVP unless explicitly promoted by a later packet.
+
+Champion / Operation implementation contract:
+
+- First playable tactical Champion/Operation content must include:
+  - one **+AP / tempo** ability;
+  - one **Rally / morale recovery** ability;
+  - one **Signal / Intel** ability.
+- These abilities should be authored as early representatives of the broader Operation channel model, not as hardcoded exceptions.
+- Full Operation channel breadth is a supported direction, but it should scale after the minimum AP/morale/Signal triad is playable and understandable.
+
+Deployment MVP contract:
+
+- Players can reorder stacks into formation slots before battle.
+- Scouting preview can reveal enemy formation/objective information according to scouting/intel rules.
+- Full Tactics-skill progression, advanced deployment zones, hidden deployment, decoys, and initiative manipulation remain later-scope unless needed for the MVP slice.
+
+Army-management MVP contract:
+
+- The active army has **7 active slots**.
+- Duplicate stacks of the same unit type are allowed if they consume separate active slots.
+- Stack splitting is allowed and should be tested early because it interacts with objectives, Zone of Control, retaliation, scouting, and exploit prevention.
+- Reserve benches, full garrison logistics, hostile-territory constraints, and storage UX are deferred from the first playable tactical slice.
+
+Implementation readiness gates:
+
+- A battle can be completed with field, control-zone, and extraction/pickup objectives.
+- A player can deploy up to 7 active stacks, including duplicate/split stacks.
+- Scouting preview affects deployment decisions.
+- All MVP statuses have visible icons/tooltips and deterministic turn resolution.
+- The AP/morale/Signal ability triad is implemented through a reusable ability/effect framework.
+- Tiny-stack objective, ZOC, retaliation, and AP edge cases have automated tests or explicit QA scenarios.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

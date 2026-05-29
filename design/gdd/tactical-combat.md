@@ -206,6 +206,31 @@ UI/readability requirements:
 - If exact enemy positions are hidden, the UI should label previews as estimated contacts, likely stacks, heat signatures, intercepted logistics, or similar fiction.
 - Formation slots should be few and fast to choose from; avoid turning ordinary battles into lengthy setup puzzles.
 
+### Active Army Management Timing and Constraints
+
+Approved direction:
+
+1. The player can freely rearrange active army stacks **anywhere on the strategy map outside battle** as the baseline. A later hostile-territory/ambush-risk modifier may be added if needed.
+2. The player can swap units between active army and storage/garrison immediately before a known battle only if the army is **physically co-located** with that storage, garrison, convoy, town, base, or equivalent source.
+3. Splitting/merging stacks in hostile territory is allowed, but may consume strategic movement/time or create ambush vulnerability.
+4. The active army locks when the player **commits to an attack, mission, or site interaction**.
+5. Scouting/intel can reveal enough to let the player adjust the active army before committing, but the default information should be partial rather than exact perfect counter-build data.
+
+Design contract:
+
+- Army rearrangement should be convenient by default; do not force town-only micromanagement unless playtests show free rearrangement trivializes preparation.
+- Physical co-location matters for swapping with storage/garrisons. There is no default global reserve bench or instant global unit access.
+- The active army can be tuned before a fight if the player has scouted, approached, or prepared properly.
+- Once the player commits to a battle-triggering action, army composition is locked unless the battle type explicitly allows changes.
+- Hostile-territory rearrangement is a future risk hook: if needed, it can cost time, consume movement, trigger exposure, or increase ambush chance.
+
+Scouting/intel contract:
+
+- Scouting should reward preparation by giving actionable pre-commitment information.
+- Most scouting should reveal rough enemy composition, faction, tier range, role mix, defensive posture, terrain, or objective type rather than exact stack counts and positions.
+- Higher Scouting/Intelligence, strong local intel, infiltration, or special Operations may reveal more precise counter-build information.
+- The UI should distinguish estimated information from confirmed information.
+
 ## Activation, Initiative, AP, Wait, and Defend
 
 ### Approved Direction

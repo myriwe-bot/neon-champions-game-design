@@ -117,11 +117,29 @@ Rationale:
 - It keeps MVP tactical UI and AI simpler.
 - It preserves future design space for special reinforcements, ambush disruption, siege garrisons, faction assets, or story scenarios without making reserves baseline.
 
-Open tuning questions:
+### Active Army Slot Count and Stack-Splitting Rules
 
-- Default active army slot count is not locked here; likely candidates are **6 or 7**.
-- Whether heavy/elite stacks consume extra command capacity is deferred; avoid adding both slot count and command weight unless playtests need it.
-- Stack-splitting abuse, one-stack utility, and sacrificial stacks need explicit handling once recruitment and stack management rules are drafted.
+Approved direction:
+
+1. The default active army size is **7 stack slots**, as a HoMM-readable working baseline. This may change later if prototype pacing, UI, or battle readability proves 7 too busy.
+2. Marshal and Operator Champions use the **same baseline active army slot count** for MVP.
+3. Every stack uses **1 active army slot** by default; heavy or elite stacks do not consume extra slots.
+4. General stack splitting is allowed, HoMM-like, unless later roster or balance rules constrain it.
+5. Duplicate stacks of the same unit type may occupy separate active army slots if the player intentionally chooses that composition.
+
+Design contract:
+
+- Slot count is a baseline combat/army-management rule, not a Champion-role differentiator for MVP.
+- Marshal/Operator identity should come from Command, Operations, Doctrine, Assets, skills, and faction/archetype weighting rather than different army UI capacity.
+- Heavy and elite units should be constrained first by cost, recruitment access, growth, upkeep, rarity, logistics, tactical profile, or counters rather than by multi-slot weight.
+- If a player splits one unit type into multiple stacks, each split stack consumes a real active army slot.
+- Duplicate/split stacks trade concentrated power for board coverage, activation count, blocking, objective interaction, and tactical flexibility.
+
+Balance risks to watch:
+
+- Free stack splitting can create one-stack abuse, retaliation baiting, objective cheese, disposable blockers, and action-count inflation.
+- If these problems dominate playtests, prefer targeted constraints before removing the rule entirely: minimum split size, no objective interaction by tiny detachments, reduced morale for understrength detachments, limited split count per unit type, or faction/skill-gated detachments.
+- Because stack splitting is now allowed, recruitment, morale, objective, and AI rules must later account for intentionally small stacks.
 
 ## Activation, Initiative, AP, Wait, and Defend
 

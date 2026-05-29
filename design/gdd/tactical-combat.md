@@ -1014,6 +1014,11 @@ Approved direction:
 3. Whether engaged stacks can interact depends on objective type.
 4. Suppressed, Jammed, Hacked, and other statuses can affect objective interaction when relevant to the objective type.
 5. Objective progress can be instant or persistent depending on objective type.
+6. Objective eligibility uses a **universal default with objective-specific overrides**.
+7. Universal default: any **non-routed, non-disabled** stack can interact with or control an objective if it meets the objective's position/range/AP requirements.
+8. Control zones, simple pickups, and extraction presence allow tiny/split stacks by default.
+9. Terminals, sabotage, heavy extraction, repair/medical, and specialist objectives usually require specific unit capability, type, tag, status, or minimum strength.
+10. Revealed/scouted objectives display whether the selected stack is eligible before the player commits movement or AP.
 
 Objective interaction rule:
 
@@ -1024,13 +1029,23 @@ Interact / Objective: Usually costs 1 AP while the stack is in the required posi
 Objective type patterns:
 
 ```text
-Control Zone: Usually checks occupation/control state and may allow engaged stacks to contest or hold.
+Control Zone: Usually checks occupation/control state and may allow engaged stacks to contest or hold. Tiny/split stacks count by default unless the objective specifies minimum strength or special control requirements.
 
-Terminal / Hack Point: Usually requires 1 AP Interact and may be blocked or modified by Jammed, Hacked, Sensor Lock, Signal interference, or enemy adjacency.
+Simple Pickup / Extraction Presence: Usually allows any non-routed, non-disabled stack at the required tile/range to interact or count as present, unless the payload/objective requires minimum strength, cargo capacity, or specialist handling.
 
-Sabotage / Plant / Extract: Usually requires 1 AP Interact and may use instant completion, multi-step progress, or scenario-specific timing.
+Terminal / Hack Point: Usually requires 1 AP Interact and a valid Signal/Hacker/technical capability. May be blocked or modified by Jammed, Hacked, Sensor Lock, Signal interference, enemy adjacency, or objective security state.
+
+Sabotage / Plant / Extract: Usually requires 1 AP Interact and may use instant completion, multi-step progress, or scenario-specific timing. Often requires Covert, Engineer, Heavy, Signal, or other specialist capability depending on fiction.
+
+Heavy Extraction / Repair / Medical / Specialist Objective: Usually requires explicit unit capability, minimum strength, equipment, status condition, or support Asset.
 
 Hold Point / Upload / Ritualized Operation: May use persistent progress across rounds and can be interrupted by displacement, Hacked, Suppressed, objective contesting, or scenario rules.
+```
+
+Eligibility and UI rule:
+
+```text
+Objective Eligibility: By default, any non-routed, non-disabled stack may interact with or control a revealed objective if it satisfies the objective's position, range, and AP requirements. Objectives may override this with capability, unit type, minimum strength, status, or scenario requirements. Once an objective is revealed or scouted, the UI must show whether the selected stack is eligible before the player spends movement or AP.
 ```
 
 Design notes:
@@ -1040,6 +1055,8 @@ Design notes:
 - Engaged interaction should be objective-specific: holding ground while engaged is fine; delicate hacking or extraction under melee pressure may not be.
 - Status interaction should be fictional and readable, not universal. Suppressed might affect exposed upload work; Jammed might block technical interaction; Hacked might compromise a terminal or objective action.
 - Forced movement can remove stacks from objective/control tiles, making displacement valuable in objective play.
+- Objective eligibility must be visible once the objective is known. The player should not spend scarce movement/AP only to discover a revealed terminal requires Signal capability or a heavy extraction requires minimum strength.
+- Tiny/split stacks are valid for spatial presence objectives by default, but specialist objectives should use explicit requirements so one-unit detachments do not solve every mission type.
 
 ## Retreat, Surrender, and Tactical Loss Boundary
 

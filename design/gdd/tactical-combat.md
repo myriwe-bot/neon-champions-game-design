@@ -4441,6 +4441,92 @@ Implementation readiness gates:
 - Unit stat tuning should keep Barents' average durability below Janus-Kestrel while giving Barents superior information and route leverage.
 - Objective validation should include at least one battle where Field Surveyors, Cable Divers, and Risk Actuaries each matter in different ways.
 
+## Barents Unit Ability-Slot Contracts
+
+This section defines provisional ability-slot contracts for each Barents Research Group / Polar Certification Combine unit line. The goal is to preserve strong faction identity without turning every unit into a spellcaster or making every Barents stack carry every faction mechanic.
+
+Approved provisional contracts:
+
+1. Baseline ability complexity: **1 passive + 1 active for most lines; upgraded form improves or adds one interaction**.
+2. Certified Route access: **Field Surveyors get basic certification; Risk Actuaries get strong certification**.
+3. Sensor Lock access: **Ice Radar is primary; Research Drones are secondary**.
+4. Risk Score access: **Risk Actuaries apply it; multiple units may exploit it carefully**.
+5. Objective manipulation: **Field Surveyors + Cable Divers + Risk Actuaries** are the main objective-interaction units.
+
+Complexity rule:
+
+- Most Barents unit lines should have one passive identity hook and one active tactical button.
+- Upgrades should either strengthen an existing interaction, add a conditional rider, or improve the interaction with Certified Route / Sensor Lock / Risk Score.
+- Avoid giving every unit a reveal, a mark, a certification tool, and a Risk Score interaction. The roster should have distributed jobs.
+- Elite or support lines may be more complex, but only if their tactical role requires it.
+
+Mechanic ownership:
+
+| Mechanic | Primary Owner | Secondary / Exploiters | Notes |
+|---|---|---|---|
+| Certified Route | Field Surveyors, Risk Actuaries | Black-Ice Wardens as zone protectors | Field Surveyors teach the mechanic; Risk Actuaries make it powerful. |
+| Sensor Lock | Ice Radar Operators | Research Drones | Keep access common enough for play, but not universal. |
+| Risk Score | Risk Actuaries | Ice Radar, Research Drones, Black-Ice Wardens, possibly Cable Divers as exploiters | Application should be controlled; exploitation can feel faction-wide. |
+| Objective manipulation | Field Surveyors, Cable Divers, Risk Actuaries | Rescue Contractors for extraction/sustain support | Three specialist lines give depth without making all units scenario tools. |
+
+Provisional per-line ability structure:
+
+1. **Field Surveyors → Certified Route Team**
+   - Passive: better objective/hazard metadata visibility or safer movement through certified routes.
+   - Active: basic route/objective certification.
+   - Upgrade delta: certification affects objective progress or eligibility more strongly.
+   - Signature interaction: early access to Certified Route.
+
+2. **Ice Radar Operators → Cryo-Mapping Cell**
+   - Passive: bonus accuracy/reveal reliability against suspected, hidden, or Sensor Locked targets.
+   - Active: scan/reveal and apply Sensor Lock.
+   - Upgrade delta: broader scan, stronger mark, or removes more hidden-state metadata.
+   - Signature interaction: primary Sensor Lock applier.
+
+3. **Research Drones → Boreal Sensor Net**
+   - Passive: extends local sensor coverage or improves Barents targeting in nearby tiles/zones.
+   - Active: mobile mark/harass that can apply or refresh Sensor Lock under constraints.
+   - Upgrade delta: stronger relay coverage, safer disengage, or better objective contest rules.
+   - Signature interaction: secondary Sensor Lock and sensor-net extension.
+
+4. **Rescue Contractors → Denied-Zone Responders**
+   - Passive: improved survival/extraction behavior near certified or contested zones.
+   - Active: stabilize, extract, or secure a zone/stack.
+   - Upgrade delta: stronger denied-zone response, sustain, or emergency movement.
+   - Signature interaction: keeps Barents from collapsing in contact while preserving public-good mask.
+
+5. **Cable Divers → Under-Ice Saboteurs**
+   - Passive: bonuses near infrastructure, relays, cables, ports, ice-water edges, or server objectives.
+   - Active: sabotage/restore infrastructure or manipulate pickup/extraction systems.
+   - Upgrade delta: adds stealthier approach, stronger disable, or Risk Score exploitation against exposed infrastructure.
+   - Signature interaction: objective/infrastructure specialist.
+
+6. **Risk Actuaries → Certification Board**
+   - Passive: improves or discounts Risk/Certification effects in certified zones.
+   - Active: apply Risk Score, certify/decertify route/objective, or issue liability finding.
+   - Upgrade delta: stronger area effect, additional Risk Score threshold, or objective-eligibility manipulation.
+   - Signature interaction: primary Risk Score and strong Certified Route owner.
+
+7. **Polar Exclusion Team → Black-Ice Wardens**
+   - Passive: stronger while defending certified/excluded zones or attacking high-Risk targets.
+   - Active: create exclusion zone, lock corridor, deny drones/stealth, or punish Risk Score threshold.
+   - Upgrade delta: better area denial, anti-stealth/anti-drone, or stronger high-Risk exploitation.
+   - Signature interaction: hard enforcement of Barents' certification authority.
+
+Design constraints:
+
+- Certified Route should be readable as map/objective control, not a hidden math buff.
+- Sensor Lock should be useful even when the enemy is not using stealth, by improving targeting or enabling follow-up effects.
+- Risk Score should be deterministic, escalating, and clearly telegraphed.
+- Objective manipulation should be explicit in UI: players must know why a zone scores, stalls, becomes ineligible, or becomes dangerous.
+- Upgrade deltas should be tactical and thematic, not just flat stat increases.
+
+Implementation readiness gates:
+
+- Next packet can define the actual first-pass ability names/effects per Barents unit line.
+- Ability implementation should map each active/passive to the generic ability/effect schema already defined in the tactical implementation contracts.
+- Validation scenarios should test whether Barents has enough combat presence when objective/information tools are less relevant.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

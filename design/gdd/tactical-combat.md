@@ -4083,6 +4083,99 @@ Implementation readiness gates:
 - Each faction has a representative roster expressing canonical identity.
 - The third faction candidate is chosen by what untested major system it stresses.
 
+## First MVP Faction Pair Candidates
+
+This section selects the first actual MVP faction-pair archetype for representative tactical roster development. The purpose is to give the MVP combat slice a concrete matchup that tests Signal/Intel, hidden information, hardening, objectives, stack splitting, and physical board control while remaining readable.
+
+Approved direction:
+
+1. Signal/Intel-side faction archetype: **corporate surveillance/security network**.
+2. Physical/industrial-side faction archetype: **heavy corporate extraction/logistics bloc**.
+3. First matchup feel: **“Sensors vs steel”** — precision visibility and disruption against armor, redundancy, and mass.
+4. Weirdness level: **grounded and readable**, with weirdness mostly expressed through abilities, statuses, hidden information, and faction-flavored tech.
+5. Naming specificity: use **working canonical names**, with **provisional roster themes** sufficient for roster design.
+
+Signal/Intel faction contract:
+
+- Core fantasy: a corporate surveillance/security apparatus that turns information into battlefield tempo.
+- Tactical identity:
+  - sees more than the opponent;
+  - marks, reveals, sensor-locks, jams, hacks, and coordinates precision action;
+  - uses contracts, compliance logic, predictive security, and networked tactical teams;
+  - wins by making the opponent’s position, intent, and vulnerabilities legible.
+- MVP roles to cover:
+  - sensor/scout unit;
+  - precision ranged unit;
+  - disruption/support unit;
+  - light objective runner;
+  - hardpoint or elite security unit;
+  - at least one drone/relay/created-entity interaction if roster identity needs it.
+- Weaknesses / counterplay:
+  - less raw durability and mass than the industrial faction;
+  - vulnerable to hardening, redundancy, line-of-sight denial, jamming/counterintel, and objective pressure that forces physical commitment;
+  - should not win by invisible gotchas alone.
+
+Physical/industrial faction contract:
+
+- Core fantasy: a heavy extraction/logistics bloc that solves tactical problems through armor, tools, redundancy, mass, and resource control.
+- Tactical identity:
+  - holds ground and survives disruption;
+  - uses armored crews, security contractors, industrial drones-as-tools, repair/logistics assets, heavy weapons, and hardened systems;
+  - pressures objectives through physical presence and resilience;
+  - turns extraction infrastructure into battlefield advantage.
+- MVP roles to cover:
+  - durable frontline/security crew;
+  - heavy ranged or breaching unit;
+  - logistics/repair/support unit;
+  - objective carrier/hauler/extractor;
+  - hardened anti-Signal/counter-disruption unit;
+  - elite industrial platform or contractor force.
+- Weaknesses / counterplay:
+  - less precise information control;
+  - slower or more telegraphed tempo;
+  - vulnerable to being marked, isolated, misdirected, delayed, or forced to split heavy assets across objectives.
+
+Matchup contract — “Sensors vs steel”:
+
+- The Signal/Intel side should feel like it is shaping the fight through knowledge, target designation, disruption, and tempo.
+- The industrial side should feel like it can endure, occupy, contest, repair, and force the Signal side to prove that information can beat mass.
+- The matchup should explicitly test:
+  - hidden/revealed/decoded information;
+  - Marked/Sensor Lock, Jammed, Hacked, Suppressed, Routed, and objective-affecting statuses;
+  - control-zone scoring;
+  - extraction/pickup carrying;
+  - stack splitting and duplicate stacks;
+  - AP/tempo abilities versus armor/redundancy;
+  - Signal counterplay and hardening.
+
+Tone / weirdness contract:
+
+- The first pair should be grounded enough to teach the combat system.
+- Speculative weirdness should appear through tactical effects, not through maximum-concept faction premise.
+- Acceptable early weirdness:
+  - predictive surveillance;
+  - compliance contracts as tactical authority;
+  - automated sensor networks;
+  - hacked logistics systems;
+  - industrial body risk and hardened crews;
+  - drones/relays/created entities;
+  - partial hidden information and decoys.
+- Defer maximum-weirdness faction identity such as Echo/continuity identity confusion or full body-horror biotech until later factions unless a specific unit/ability needs a small preview.
+
+Naming / theme contract:
+
+- Use working canonical names so documents and rosters can be specific.
+- Names remain provisional until faction worldbuilding and roster design settle.
+- Roster themes should be concrete enough to start unit-role packets, but not treated as final art/lore lock.
+- The pair should read as two globally plausible corporate/industrial actors rather than local-only organizations.
+
+Implementation readiness gates:
+
+- Two working canonical faction names can be attached to this pair.
+- Each faction has a provisional full-roster theme list ready for unit-role decomposition.
+- The first three validation battles can be framed around “Sensors vs steel.”
+- The pair can test Signal/Intel versus hardening/redundancy without relying on final campaign lore.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

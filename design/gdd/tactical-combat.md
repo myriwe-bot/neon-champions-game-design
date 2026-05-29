@@ -3133,9 +3133,10 @@ Example:
 - The stack may Move + Shoot, Shoot + Shoot, Reload + Shoot, or Overwatch + Defend.
 - The stack's size modifies output/survivability, not action count.
 - If a Champion grants +1 AP, the same stack can perform a third action this turn.
-- Tactical stack-splitting is not generally available, but specific abilities/assets may create decoys, drone detachments, swarm fragments, Echo projections, or similar exceptions.
+- Tactical stack-splitting is allowed through army management, but every split consumes one of the 7 active army slots.
+- Specific abilities/assets may also create decoys, drone detachments, swarm fragments, Echo projections, or similar exceptions by explicit rule.
 
-This prevents action-count explosion while preserving the power fantasy of larger forces.
+This preserves the power fantasy of larger forces while making each additional tactical entity spend real active-army capacity.
 
 ## Deferred: Elevation / High Ground
 

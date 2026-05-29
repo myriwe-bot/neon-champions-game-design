@@ -4010,6 +4010,79 @@ Implementation readiness gates:
 - Six Champion/Operation abilities prove AP, morale, and Signal/Intel ability families through the shared ability schema.
 - 8-10 statuses prove resolution order, stacking, counterplay, hidden information, objective interaction, and save/replay behavior.
 
+## MVP Faction Pair Selection Criteria
+
+This section defines what the first two MVP tactical factions should prove before exact faction names and rosters are locked. The goal is to choose a matchup that validates Neon Champions' tactical identity rather than merely testing generic damage exchange.
+
+Approved direction:
+
+1. The first two MVP factions should primarily test a **high-tech Signal/Intel faction versus a physical/industrial faction**.
+2. The first matchup should use **strong asymmetry, while both factions still cover essential tactical roles**.
+3. The faction pair should test **basic damage/range balance, objective play/stack splitting, and hidden information/Signal/counterplay**, with hidden information / Signal / counterplay weighted most heavily.
+4. MVP factions should have **canonical faction identities and representative rosters**.
+5. The second expansion faction should stress a **different major system not covered by the first pair**.
+
+First-pair test contract:
+
+- The high-tech Signal/Intel faction should stress:
+  - scouting and information advantage;
+  - hidden/revealed/decoded tactical state;
+  - Jammed/Hacked/Sensor Lock interactions;
+  - ability channels and counterplay hooks;
+  - precision, tempo, or networked coordination.
+- The physical/industrial faction should stress:
+  - durable battlefield presence;
+  - straightforward damage/range baselines;
+  - control-zone and extraction/pickup pressure;
+  - stack-splitting and 7-slot composition tradeoffs;
+  - readable counters to Signal/Intel pressure through armor, logistics, discipline, mass, hardening, or industrial redundancy.
+
+Asymmetry contract:
+
+- The factions should not be palette swaps.
+- Both factions still need enough baseline tools to play the MVP modes:
+  - ranged pressure;
+  - close/control presence;
+  - objective interaction;
+  - some answer to scouting/hidden info;
+  - at least one meaningful Champion/Operation interaction.
+- Asymmetry should be strong enough to expose system stress, but not so extreme that early balance cannot distinguish bad faction design from bad core rules.
+
+Design-risk priority:
+
+- The matchup must test all three risk categories:
+  1. basic damage/range balance;
+  2. objective play and stack splitting;
+  3. hidden information / Signal / counterplay.
+- Hidden information / Signal / counterplay is the highest priority because recent tactical contracts make information state, visibility, replay/debug, and status concealment core rather than optional polish.
+- Basic damage/range and objective/stack-splitting still need explicit scenarios so the MVP does not overfit to Signal play while ignoring fundamentals.
+
+Canonical identity contract:
+
+- MVP factions should use canonical Neon Champions faction identities, not generic placeholder teams.
+- Rosters may be representative rather than final-polished, but their unit roles should express real faction philosophy.
+- The goal is to validate whether the tactical system carries the world's ideological/factional texture.
+- Final names, art direction, VO, campaign integration, and full lore presentation can continue to mature after the tactical contract is proven.
+
+Expansion-faction contract:
+
+- The third faction should not merely counter one of the first two.
+- It should stress a different major system not fully covered by Signal-vs-industrial play, such as:
+  - morale/media/psychological warfare;
+  - biotech/body-subscription pressure;
+  - drone/swarm/network saturation;
+  - Echo/continuity/death-state mechanics;
+  - extreme mobility or logistics;
+  - faction-specific objective manipulation.
+- Selection should be based on system coverage and faction identity proof, not implementation convenience alone.
+
+Implementation readiness gates:
+
+- The first two factions can play field, control-zone, and extraction/pickup battles with strong but understandable asymmetry.
+- The matchup includes explicit scenarios for damage/range balance, stack splitting/objective play, and hidden information/Signal/counterplay.
+- Each faction has a representative roster expressing canonical identity.
+- The third faction candidate is chosen by what untested major system it stresses.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

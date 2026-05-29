@@ -167,6 +167,45 @@ Playtest flags:
 - Watch whether objective-specific eligibility is readable enough in UI.
 - If needed, later constraints should be narrow and explainable rather than removing stack splitting wholesale.
 
+### Deployment Phase, Scouting, and Tactics
+
+Approved direction:
+
+1. Default deployment is **battle-type/map-defined with limited rearrangement**.
+2. In ordinary prepared battles, the player may **reorder stacks and choose from a few formation slots**, similar in spirit to HoMM's Tactics skill texture.
+3. The **Tactics** secondary skill improves deployment advantage by rank/perk, with emphasis on larger/deeper deployment zones.
+4. Ambush and surprise battles may lock army order, scatter/compress positions, give the attacker advantage, or apply other battle-type-specific deployment disruption.
+5. Enemy deployment is visible before player deployment only with sufficient scouting/intel; without enough information, the fallback is a partial preview of rough enemy count/types while exact positions remain hidden.
+
+Design contract:
+
+- Deployment should not become a full roster-selection step. The active army is already chosen before battle.
+- Ordinary prepared battles should provide quick formation agency, not slow tile-by-tile setup every fight.
+- The map/battle type owns the deployment pattern first: field battle, ambush, siege, raid, defense, extraction, and story scenario can all use different deployment constraints.
+- Army slot order remains meaningful because it influences default placement and formation options.
+- Tactics should feel HoMM-readable: better initial positioning, more arrangement control, and stronger counter-deployment when supported by scouting/intel.
+- Scouting and Intel systems should determine how much the player knows before deployment locks.
+
+Example Tactics progression shape:
+
+- **Basic Tactics**: improved reorder/formation options in ordinary prepared battles.
+- **Advanced Tactics**: larger or deeper deployment zone where battle type permits.
+- **Expert Tactics**: better enemy deployment preview, counter-deployment options, or stronger opening formation control when scouting/intel supports it.
+
+Battle-type examples:
+
+- **Prepared field battle**: limited formation slots and reorder before start.
+- **Ambush suffered**: army order may be locked, positions compressed, scattered, flanked, or partially surrounded.
+- **Ambush executed**: attacker may receive forward/side deployment options or delayed reveal.
+- **Siege/defense**: defender may use fixed defensive zones, hardpoints, gates, or reserve/garrison exception rules.
+- **Raid/extraction**: deployment may be tied to entry/exit edges and objective route.
+
+UI/readability requirements:
+
+- Deployment screen must clearly show which information is confirmed vs estimated.
+- If exact enemy positions are hidden, the UI should label previews as estimated contacts, likely stacks, heat signatures, intercepted logistics, or similar fiction.
+- Formation slots should be few and fast to choose from; avoid turning ordinary battles into lengthy setup puzzles.
+
 ## Activation, Initiative, AP, Wait, and Defend
 
 ### Approved Direction

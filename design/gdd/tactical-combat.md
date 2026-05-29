@@ -4176,6 +4176,61 @@ Implementation readiness gates:
 - The first three validation battles can be framed around “Sensors vs steel.”
 - The pair can test Signal/Intel versus hardening/redundancy without relying on final campaign lore.
 
+## Working Names for First MVP Faction Pair
+
+This section selects working canonical names for the first MVP tactical faction pair. The names are lore-derived from existing Neon Champions worldbuilding rather than newly invented placeholders.
+
+Approved direction:
+
+1. Signal/Intel-side MVP faction: **Barents Research Group**.
+2. Signal/Intel battlefield / roster-facing formation: **Polar Certification Combine**.
+3. Physical/industrial-side MVP faction: **Janus-Kestrel Continuity Group**.
+4. Physical/industrial battlefield / roster-facing formation: **Mining-Logistics Consortium**.
+5. Name lock level: **working canonical names** with provisional roster themes. Names can still change after roster/worldbuilding review, but they are strong enough to anchor faction packets.
+
+Faction-pair label:
+
+```text
+Barents Research Group / Polar Certification Combine
+vs
+Janus-Kestrel Continuity Group / Mining-Logistics Consortium
+```
+
+Barents fit:
+
+- Barents is the stronger Signal/Intel MVP candidate because its existing lore already centers on polar data, route certification, sensor truth, risk scoring, and scientific neutrality as power.
+- It should play as the faction that makes the battlefield legible: scouting, marking, revealing, route control, certification, exclusion zones, sensor drones, and debuffs through superior information.
+- Its public face is research, rescue, route safety, and polar certification.
+- Its darker face is that what Barents measures becomes claimable, insurable, legal, safe, unsafe, rescued, abandoned, or excluded.
+
+Janus-Kestrel fit:
+
+- Janus-Kestrel is the stronger industrial/logistics MVP candidate because its existing lore already centers on ports, customs, bonded corridors, cargo identity, cable landings, relay priority, drone corridors, extraction finance, and concession contracts.
+- It should play as the faction that makes force and logistics physically arrive: armored crews, cargo swarms, concession guards, mining frames, customs enforcement, port drones, hardened routes, and objective pressure.
+- Its public face is continuity, circulation, movement, clearance, and emergency logistics.
+- Its darker face is that if Janus-Kestrel does not carry, clear, route, certify, or recognize something, it does not arrive.
+
+Matchup meaning:
+
+- The first MVP faction pair becomes **certification versus concession** as much as **sensors versus steel**.
+- Barents asks: *what is safe, legal, visible, measurable, and certified?*
+- Janus-Kestrel asks: *what is cleared, routed, extracted, delivered, bonded, and enforced?*
+- This gives the MVP matchup a grounded corporate conflict over Arctic/Greenland logistics, extraction, data, route truth, and physical control.
+
+Naming notes:
+
+- Use **Barents Research Group** for the parent/global faction name.
+- Use **Polar Certification Combine** when a more battlefield-facing or campaign-map formation label is useful.
+- Use **Janus-Kestrel Continuity Group** for the parent/global faction name.
+- Use **Mining-Logistics Consortium** when a more battlefield-facing or Greenland/extraction-specific formation label is useful.
+- Avoid shortening Janus-Kestrel to only Janus or only Kestrel; the dual name preserves both threshold/legal control and fast relay/drone movement.
+
+Implementation readiness gates:
+
+- The next roster packet can derive Barents unit roles from certification, sensors, route truth, and polar exclusion.
+- The next roster packet can derive Janus-Kestrel unit roles from concessions, cargo identity, extraction, bonded logistics, and hardened movement.
+- The first three validation battles can frame their objectives around disputed route certification, server/sensor capture, concession-zone control, and extraction/pickup logistics.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

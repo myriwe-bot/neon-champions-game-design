@@ -141,6 +141,32 @@ Balance risks to watch:
 - If these problems dominate playtests, prefer targeted constraints before removing the rule entirely: minimum split size, no objective interaction by tiny detachments, reduced morale for understrength detachments, limited split count per unit type, or faction/skill-gated detachments.
 - Because stack splitting is now allowed, recruitment, morale, objective, and AI rules must later account for intentionally small stacks.
 
+### Stack Splitting Safeguards and One-Stack Rules
+
+Approved direction:
+
+1. A stack of **1 unit** can be created through normal army management. This is allowed for HoMM fidelity, but must be explicitly flagged for playtest.
+2. Objective interaction by tiny/split stacks is **objective-specific**.
+3. Tiny split stacks block movement and exert Zone of Control normally as the working baseline, but this must be playtested.
+4. Retaliation-baiting with tiny stacks is accepted as intended HoMM-like tactical texture.
+5. Understrength/tiny stacks suffer extra morale/Cohesion fragility only when **isolated, outnumbered, or otherwise contextually vulnerable**, not as a flat penalty.
+
+Design contract:
+
+- Tiny stacks are legal tactical entities, not invalid UI artifacts.
+- A tiny stack spends a real active army slot, so its opportunity cost is the main balancing lever.
+- Tiny stacks may be used for scouting, blocking, retaliation baiting, objective pressure, sacrificial tempo, and lane coverage unless a specific rule says otherwise.
+- Objective rules own their own eligibility requirements. Examples: a control zone may count any stack; a terminal may require a Hacker/Signal-capable stack; extraction or sabotage may require minimum strength, unit type, AP, or status requirements.
+- Tiny stacks are not automatically cowardly or useless. Fragility should emerge from board context: isolation, being surrounded, hostile ZOC, suppression, poor Cohesion state, or being badly outmatched.
+
+Playtest flags:
+
+- Watch whether 1-stacks make optimal play tedious or mandatory.
+- Watch whether normal ZOC from tiny stacks creates too much traffic jamming.
+- Watch whether retaliation-baiting is fun tactical texture or repetitive exploit.
+- Watch whether objective-specific eligibility is readable enough in UI.
+- If needed, later constraints should be narrow and explainable rather than removing stack splitting wholesale.
+
 ## Activation, Initiative, AP, Wait, and Defend
 
 ### Approved Direction

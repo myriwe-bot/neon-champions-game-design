@@ -3761,6 +3761,104 @@ Implementation readiness gates:
 - Combat logs/replay can display player-visible, opponent-visible, and all-truth views.
 - The model avoids unfair hidden outcomes by ensuring major hidden threats are inferable, scoutable, revealable, or deliberately framed as deception.
 
+## Objective System Schema
+
+This section defines objective components so field battles, control zones, extraction/pickup missions, exploit tests, and later campaign-slice objectives do not become isolated custom scripts.
+
+Approved direction:
+
+1. Base objective structure follows a **C-to-D path**: objective id + component list + state machine + victory/failure conditions + UI/logging now, with a path toward fuller mission scripting if campaign-slice needs justify it.
+2. Reusable objective components follow a **C-to-D path**: MVP includes capture zones, extraction points, pickup/carry, timers, contesting, score/progress, ownership, and eligibility filters; later expands toward escort, sabotage, defense waves, multi-stage missions, and branching outcomes.
+3. Objective eligibility uses **eligibility query records** with stack size, unit type, status, routed/disabled state, created-entity type, visibility, and faction/objective tags.
+4. Scenario-specific overrides are allowed only as **declared overrides/extensions of generic components**.
+5. Objective information visibility follows a **C-to-D path**: objective existence, state, and rules have separate visibility levels now, with later support for false objectives, hidden objectives, spoofed progress, and masked rules.
+
+Base objective record contract:
+
+- Identity:
+  - stable objective id;
+  - display name;
+  - objective family: field battle, capture/control, extraction, pickup/carry, survival, elimination, scenario, etc.;
+  - scenario/map owner;
+  - UI/logging text.
+- Components:
+  - reusable objective components;
+  - eligibility queries;
+  - progress/scoring rules;
+  - visibility rules;
+  - reward/consequence hooks.
+- State machine:
+  - inactive;
+  - active;
+  - contested;
+  - progressing;
+  - completed;
+  - failed;
+  - expired;
+  - revealed/decoded if hidden information applies.
+- Outcomes:
+  - victory conditions;
+  - failure conditions;
+  - partial-success conditions if later scenario design needs them;
+  - post-battle consequence hooks.
+
+MVP reusable component set:
+
+- **Capture/control zone** — tracks eligible units contesting or controlling an area.
+- **Extraction point** — checks whether eligible entities exit, survive, or deliver carried objects.
+- **Pickup/carry object** — supports pickup, drop, transfer if allowed, carrier death/drop behavior, and extraction delivery.
+- **Timer** — turn/round/phase counters for deadlines, escalation, scoring, or expiry.
+- **Contesting** — determines how opposing eligible entities pause, reverse, or block progress.
+- **Score/progress** — supports accumulated progress, threshold completion, per-turn scoring, and reset/decay rules.
+- **Ownership/control** — tracks faction/side/controller and transfer rules.
+- **Eligibility filter** — queries which stacks/entities can interact, contest, carry, score, or extract.
+
+Full-vision component expansion may include escort, sabotage, defense waves, multi-stage objectives, branching outcomes, deception objectives, scripted campaign consequences, and special scenario setpieces.
+
+Eligibility contract:
+
+- Objective eligibility is data-driven through query records, not hardcoded per objective.
+- Query fields should support:
+  - stack size / tiny-stack thresholds;
+  - unit type and unit tags;
+  - Champion, stack, drone, decoy, Echo projection, summoned/created entity, relay, mine, turret, or objective object;
+  - routed, disabled, suppressed, jammed, hidden, revealed, or other status filters;
+  - visibility/scouting state;
+  - faction/side/controller;
+  - objective-specific tags such as can-carry, can-contest, can-score, can-extract, can-trigger, can-block.
+- Eligibility rules must explicitly handle split stacks and created entities because they are high-risk exploit surfaces.
+
+Scenario override contract:
+
+- Scenario-specific behavior is allowed only as a declared override or extension of a generic component.
+- Each override must declare:
+  - the generic component it modifies;
+  - which rule is replaced or extended;
+  - why generic behavior is insufficient;
+  - visibility/logging behavior;
+  - test or QA scenario coverage.
+- Overrides should be rare for MVP validation battles and more common only in authored campaign-slice missions.
+- Custom scripts must not silently bypass eligibility, visibility, objective-state, or logging contracts.
+
+Objective visibility contract:
+
+- Objective information has separable visibility layers:
+  - existence: whether the player knows an objective exists;
+  - location: where the objective is;
+  - state/progress: current control, progress, timer, carrier, or contested state;
+  - rules: how the objective scores, fails, or can be interacted with;
+  - reward/consequence: what happens after completion or failure.
+- MVP should support hidden or partial objective information when tied to scouting, Signal/Intel, deception, or scenario design.
+- Full-vision expansion may support false objectives, hidden objectives, spoofed progress, masked rules, and decoy pickups, but each must have discoverability and counterplay.
+
+Implementation readiness gates:
+
+- Field battle, control-zone, and extraction/pickup objectives can be built from the objective schema.
+- Tiny-stack, split-stack, routed, disabled, hidden, decoy, drone, and Echo-projection eligibility are all explicit and testable.
+- Objective progress and contesting are deterministic and loggable.
+- Objective visibility integrates with the tactical information model.
+- Scenario overrides cannot bypass generic component contracts without declaring and testing the exception.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

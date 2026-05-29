@@ -4365,6 +4365,82 @@ Implementation readiness gates:
 - Ability packets should avoid overloading every unit with all Barents mechanics; distribute Sensor Lock, Certified Route, and Risk Score cleanly across the roster.
 - Names remain provisional until roster feel, faction fantasy, and opponent matchup are tested against Janus-Kestrel.
 
+## Barents Unit Stat-Role Profiles
+
+This section defines provisional tactical stat-role profiles for each Barents Research Group / Polar Certification Combine unit line before detailed values, final abilities, or balance numbers are locked. These are **provisional role contracts**: enough to guide ability design and matchup testing, not final tuning.
+
+Approved provisional profiles:
+
+| Tier | Unit Line | Profile | Tactical Contract |
+|---:|---|---|---|
+| 1 | Field Surveyors → Certified Route Team | Weak combat, strong certification/objective interaction | Teaches route/objective certification from tier 1. |
+| 2 | Ice Radar Operators → Cryo-Mapping Cell | Ranged support with reveal/mark and light damage | Useful in normal fights while carrying reveal/Sensor Lock duties. |
+| 3 | Research Drones → Boreal Sensor Net | Fast fragile ranged harass + sensor extender | Extends Barents sensor coverage and creates low-damage pressure. |
+| 4 | Rescue Contractors → Denied-Zone Responders | Medium infantry with sustain/extraction utility | Gives Barents a credible midline without becoming heavy industrial infantry. |
+| 5 | Cable Divers → Under-Ice Saboteurs | Mobile sabotage/objective unit with modest combat | Infrastructure flavor remains central, but the line is broadly playable. |
+| 6 | Risk Actuaries → Certification Board | Fragile backline command unit with strong Risk/Certification effects | Powerful battlefield bureaucracy that opponents can punish if exposed. |
+| 7 | Polar Exclusion Team → Black-Ice Wardens | Elite area-denial bruiser with control tools | Closes Barents' durability gap while remaining control-first, not a plain tank. |
+
+Profile principles:
+
+- Barents should be strongest when it prepares, measures, marks, certifies, and controls routes before direct engagement.
+- Barents should be weakest when forced into chaotic close fights without sensor coverage or certified zones.
+- Damage should generally be secondary to information advantage, route control, objective leverage, and escalating Risk Score.
+- The roster needs enough ordinary combat presence to function in frequent HoMM-like battles, but should not out-muscle Janus-Kestrel.
+
+Line-by-line role contracts:
+
+1. **Field Surveyors → Certified Route Team**
+   - Combat: low damage, low-to-medium durability.
+   - Mobility: decent; should reach objectives and route nodes early.
+   - Utility: high; interacts with objective metadata, hazards, routes, and preliminary certification.
+   - Design risk: if too weak, tier 1 feels like dead weight; if too strong, Barents gets too much early board control.
+
+2. **Ice Radar Operators → Cryo-Mapping Cell**
+   - Combat: light ranged damage.
+   - Durability: fragile-to-medium; should need protection.
+   - Utility: reveal, mark, remove suspected state, apply Sensor Lock.
+   - Design risk: reveal tools must be valuable even when the opponent has little hidden information.
+
+3. **Research Drones → Boreal Sensor Net**
+   - Combat: light ranged harassment.
+   - Durability: fragile; vulnerable to anti-drone, jamming, and focused fire.
+   - Mobility: high; likely flying or terrain-agnostic depending on map rules.
+   - Utility: extend sensor net, tag targets, contest weak objectives, enable line-of-sight/range setups.
+   - Design risk: avoid making cheap drones the best objective blockers or stack-splitting exploit units.
+
+4. **Rescue Contractors → Denied-Zone Responders**
+   - Combat: medium infantry baseline.
+   - Durability: medium; the roster's first reliable contact unit.
+   - Utility: sustain, extraction, zone securing, emergency response.
+   - Design risk: should not become generic rifle infantry; rescue/security dual-use must remain visible.
+
+5. **Cable Divers → Under-Ice Saboteurs**
+   - Combat: modest; enough to survive specialist plays.
+   - Mobility: medium-to-high on infrastructure/coastal/ice-water maps; normal elsewhere.
+   - Utility: sabotage and repair of relays, cables, server nodes, extraction systems, pickups, and objective infrastructure.
+   - Design risk: scenario specialization must not make them useless on ordinary field/control-zone battles.
+
+6. **Risk Actuaries → Certification Board**
+   - Combat: very low direct damage.
+   - Durability: fragile; should be protected by positioning and certified zones.
+   - Utility: high-impact Risk Score and certification commands.
+   - Role: caster/commander-equivalent, but expressed through institutional authority rather than magic.
+   - Design risk: effects must be deterministic, readable, and counterplayable; avoid opaque punishment.
+
+7. **Polar Exclusion Team → Black-Ice Wardens**
+   - Combat: strong but control-weighted.
+   - Durability: high for Barents, but not the game's heaviest tank baseline.
+   - Utility: area denial, anti-stealth, anti-drone, corridor lockdown, protects certified routes.
+   - Role: elite bruiser-control stack; the hard edge of Barents authority.
+   - Design risk: should feel like enforcement of exclusion/certification, not generic elite soldiers.
+
+Implementation readiness gates:
+
+- Next Barents packet should define per-line ability slots: passive, active, upgrade delta, and signature interaction.
+- Unit stat tuning should keep Barents' average durability below Janus-Kestrel while giving Barents superior information and route leverage.
+- Objective validation should include at least one battle where Field Surveyors, Cable Divers, and Risk Actuaries each matter in different ways.
+
 ## Stack Action Principle
 
 Neon Champions uses HoMM-style stacks as the baseline tactical entities. Each stack acts as one tactical entity.

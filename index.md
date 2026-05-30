@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-05-29
+> Last updated: 2026-05-30
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -18,6 +18,7 @@
 - [[design/gdd/game-concept]] — current draft concept: HoMM3-inspired cyberpunk strategy/RPG beginning with Greenland during Blue Monday, later remembered as the start of Blue Week.
 - [[design/gdd/game-pillars]] — current draft pillars and anti-pillars, including Intel, infrastructure power, dirty information, and wilderness without escapism.
 - [[design/gdd/systems-index]] — system map scaffold.
+- [[design/gdd/strategic-map]] — strategic-map MVP scope: two-faction local hotseat, duel/race scenario pacing, site control, resources, recruitment/reinforcement, and tactical battle handoff.
 - [[design/gdd/intel-resource]] — draft system GDD for Intel as Neon Champions' Alchemical Dust analogue.
 - [[design/gdd/faction-unit-rosters]] — draft unit roster concepts and faction tactical identities for the Greenland campaign.
 - [[design/gdd/tactical-combat]] — concise active tactical combat GDD for first-read design and AI implementation planning.

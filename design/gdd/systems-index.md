@@ -7,7 +7,7 @@ owner: shared
 created: 2026-05-22
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/tactical-combat, design/gdd/README]
+related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/strategic-map, design/gdd/tactical-combat, design/gdd/README]
 approval: pending
 ---
 
@@ -21,7 +21,7 @@ approval: pending
 |---:|---|---|---|---|---|---|---|
 | 1 | Data Registry | Foundation | MVP | None | Prevents inconsistent terms, entities, formulas. | Draft | TBD |
 | 2 | Turn / Time Structure | Foundation | MVP | Data Registry | Defines the strategy cadence. | Draft | TBD |
-| 3 | Strategic Map | Core | MVP | Turn / Time Structure | Main player decision surface. | Draft | TBD |
+| 3 | Strategic Map | Core | MVP | Turn / Time Structure, Factions, Champions, Resources, Tactical Combat | Main HoMM-like decision surface; MVP target is two-faction local hotseat with duel/race pacing, site control, resources, recruitment/reinforcement, and tactical battle handoff. | Draft | design/gdd/strategic-map |
 | 4 | Site / Infrastructure Control | Core | MVP | Strategic Map | Makes map objectives meaningful. | Draft | TBD |
 | 5 | Resources | Core | MVP | Strategic Map, Sites | Drives expansion, tradeoffs, and constraints. | Draft | TBD |
 | 5.1 | Intel Resource | Core | MVP | Resources, Champions, Strategic Map, Tactical Combat | Special upgrade resource based on Olden Era Alchemical Dust; required for asset empowerment and later recruitment/operation upgrades. | Draft | design/gdd/intel-resource |
@@ -39,6 +39,7 @@ approval: pending
 | System | Risk | Mitigation |
 |---|---|---|
 | Tactical Combat | Could explode scope. | Active GDD now uses a concise first-read contract and keeps long packet history in research reference; build the smallest full tactical battle slice with few unit types, one non-kill objective, simple AP, limited statuses, and data-driven rules. |
+| Strategic Map | Could become either too thin to test the real game loop or too large through full HoMM/campaign scope. | Current MVP direction is C3-H: two-faction local hotseat with B1 duel map plus B2 race pacing; defer strategic AI, networking, full economy, deep fog/feed, and campaign persistence. |
 | Information / Feed State | Can feel unfair if false info is not source-tagged/counterable. | Use explicit provenance states and verification actions. |
 | Champions | Can collapse into generic heroes. | Tie abilities to command, legitimacy, body, interface, death/Echo states. |
 

@@ -161,3 +161,10 @@
 - Normalized `design/gdd/faction-unit-rosters.md` frontmatter to the repository schema.
 - Updated active faction-roster naming from Open Sky / Blue Week Cells to Open Sky / Blue Monday Cells while preserving Blue Week as later public framing.
 - Updated Intel resource source-lore tags to include Blue Monday alongside Blue Week.
+
+## [2026-05-30] add | Strategic map hotseat MVP direction
+
+- Created `design/gdd/strategic-map.md` as the strategic-map MVP GDD entry point.
+- Recorded the approved MVP direction as C3-H: two-faction local hotseat strategy, avoiding strategic AI while keeping a real opposing Champion/faction on the map.
+- Recorded the first scenario shape as B1 duel map with B2 race-map pacing: two starting hubs, neutral sites, guarded resource sites, recruitment/reinforcement points, and a central contested objective.
+- Updated `design/gdd/systems-index.md`, `design/gdd/README.md`, and `index.md` so the strategic map is discoverable before future implementation-story work.

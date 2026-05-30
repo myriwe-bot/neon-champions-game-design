@@ -344,11 +344,31 @@ These are real design gaps, not permission for agents to guess.
 | First faction pair | Needed for playable content slice. | Faction Pair Lock Packet. |
 | Morale numeric model | Needed after the prototype proves morale is worth keeping. | Morale Tuning Packet. |
 
-## 13. Cross-References
+## 13. Detailed Split Articles
+
+The original design-session work is preserved in smaller readable articles. Use these when a story, packet, or implementation prompt needs more detail than this overview.
 
 | Need | Read |
 |---|---|
-| Long historical packet notes | [[design/research/tactical-combat-deep-reference]] |
+| Preservation map for all original top-level sections | [[design/gdd/tactical-combat/section-map]] |
+| Overview, MVP scope, tactical entity model | [[design/gdd/tactical-combat/overview-and-scope]] |
+| Active army slots, stack splitting, deployment, scouting, AI valuation | [[design/gdd/tactical-combat/army-deployment-and-stacks]] |
+| AP, initiative, wait, defend, base actions, counterattacks, ZOC, overwatch | [[design/gdd/tactical-combat/ap-actions-and-reactions]] |
+| LOS, cover, range, damage types, attack model, defenses | [[design/gdd/tactical-combat/targeting-damage-and-defense]] |
+| Status taxonomy, suppression, jammed, hacked, marked, stealth, smoke, terrain, forced movement, objectives | [[design/gdd/tactical-combat/statuses-terrain-and-objectives]] |
+| Retreat, surrender, morale, rout, rally, cohesion, morale UI | [[design/gdd/tactical-combat/morale-rout-and-cohesion]] |
+| Battle outcomes, losses, rewards, capture/recovery exceptions, result UI | [[design/gdd/tactical-combat/post-battle-resolution]] |
+| Ammo, charges, cooldowns, logistics, reload/recharge, indirect/area attacks | [[design/gdd/tactical-combat/ammo-capacity-and-logistics]] |
+| Champion operations, doctrine, progression, builds, assets, secondary skills, AP abilities | [[design/gdd/tactical-combat/champion-operations-and-progression]] |
+| MVP cut, implementation contracts, ability/effect schema, status/objective/info/save/replay contracts | [[design/gdd/tactical-combat/implementation-contracts]] |
+| MVP content matrix, faction-pair candidates, Barents role/stat/ability skeletons | [[design/gdd/tactical-combat/mvp-content-and-faction-rosters]] |
+| Stack action principle, deferred elevation, open questions | [[design/gdd/tactical-combat/deferred-and-open-questions]] |
+
+## 14. Other Cross-References
+
+| Need | Read |
+|---|---|
+| Raw historical packet backup | [[design/research/tactical-combat-deep-reference]] |
 | Commander/operation reference research | [[design/research/commander-spellbook-reference]] |
 | Faction roster concepts | [[design/gdd/faction-unit-rosters]] |
 | Intel resource | [[design/gdd/intel-resource]] |

@@ -21,6 +21,7 @@
 - [[design/gdd/intel-resource]] — draft system GDD for Intel as Neon Champions' Alchemical Dust analogue.
 - [[design/gdd/faction-unit-rosters]] — draft unit roster concepts and faction tactical identities for the Greenland campaign.
 - [[design/gdd/tactical-combat]] — concise active tactical combat GDD for first-read design and AI implementation planning.
+- [[design/gdd/tactical-combat/section-map]] — preservation map for the tactical-combat split; confirms every original top-level section is still present in smaller articles.
 
 ## Research / Deep Reference
 

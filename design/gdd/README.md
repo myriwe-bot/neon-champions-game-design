@@ -59,4 +59,5 @@ Each active system GDD should include:
 | [[design/gdd/systems-index]] | Dependency and priority map. | Draft. |
 | [[design/gdd/intel-resource]] | Intel as resource/upgrade material. | Draft. |
 | [[design/gdd/faction-unit-rosters]] | Faction tactical identities and roster concepts. | Draft. |
-| [[design/gdd/tactical-combat]] | Active tactical combat GDD. | Concise first-read contract; deep packet history is in research notes. |
+| [[design/gdd/tactical-combat]] | Active tactical combat overview and implementation-facing first-read contract. | Concise source-of-truth entry point; detailed preserved design-session material is split under `design/gdd/tactical-combat/`. |
+| [[design/gdd/tactical-combat/section-map]] | Preservation map for tactical-combat split articles. | Confirms every original top-level section is still present and mapped. |

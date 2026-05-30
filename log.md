@@ -140,3 +140,10 @@
 - Preserved the previous long-form tactical packet history in `design/research/tactical-combat-deep-reference.md` as reference material, not the primary implementation contract.
 - Added `design/gdd/README.md` as a GDD reading guide with explicit LLM rules, reading order, and active GDD expectations.
 - Updated `design/gdd/systems-index.md` and `index.md` to point readers to the concise tactical GDD and deep reference split.
+
+## [2026-05-30] revise | Tactical combat split-article preservation pass
+
+- Split the preserved tactical-combat design-session material into smaller readable articles under `design/gdd/tactical-combat/`.
+- Added `design/gdd/tactical-combat/section-map.md` to verify that every original top-level tactical-combat section is mapped to a split article.
+- Kept `design/research/tactical-combat-deep-reference.md` as the raw backup while making the split articles the readable detailed layer.
+- Updated `design/gdd/tactical-combat.md`, `design/gdd/README.md`, and `index.md` so humans and LLM agents can find both the concise overview and the preserved detailed material.

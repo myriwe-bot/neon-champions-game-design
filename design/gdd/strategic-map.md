@@ -168,14 +168,72 @@ The first playable strategic map must make these visible:
 - victory condition progress;
 - clear transition into tactical battle and clear return summary after battle.
 
-## 9. Open Design Packets
+## 9. Strategic Map Topology
+
+### Packet C Decision: C/D Hybrid
+
+Approved direction: use an authored node-route graph for MVP rules, presented over a visual Greenland map. Keep the data model abstract enough that a later tile/grid or richer spatial layer is not blocked.
+
+This is a hybrid of:
+
+- **C: authored nodes over visual terrain** — the player sees a geographic/terrain map, but gameplay decisions happen at discrete sites and routes.
+- **D: phased node-route now, richer map later** — MVP implementation uses node-route rules first, without pretending this is the final full-vision map model.
+
+Rules:
+
+1. The MVP strategic map is a graph of authored nodes connected by authored routes.
+2. Nodes represent meaningful strategic places: hubs, sites, infrastructure, route junctions, objective points, or encounter locations.
+3. Routes represent viable travel corridors: roads, ice roads, air/sea links, maintenance corridors, Treaty Net logistics links, or local wilderness paths.
+4. The visual layer may draw terrain, geography, coastlines, roads, weather, and infrastructure, but rules read from graph topology unless a later packet promotes richer spatial rules.
+5. Movement, reachability, site interaction, and strategic battle triggers operate on node/route state.
+6. The graph model must not hardcode a single visual layout. Nodes need stable IDs and map/presentation coordinates.
+7. The domain model should distinguish graph rules from presentation coordinates.
+8. A future tile/grid/region model should be possible by adding another topology representation or route-generation layer, not by rewriting faction/Champion/site ownership rules.
+
+MVP data implications:
+
+| Concept | Required Fields / Behavior |
+|---|---|
+| StrategicNodeDefinition | stable node ID, node type, display/localization key, presentation position, optional site ID, optional owner/start state. |
+| StrategicRouteDefinition | stable route ID, from node ID, to node ID, movement cost, route type, traversal flags/requirements if any. |
+| StrategicMapDefinition | stable map ID, node list, route list, starting faction placements, optional visual map reference. |
+| ChampionStrategicState | champion ID, faction ID, current node ID, movement points/state. |
+| NodeRuntimeState | owner/control/cleared/visited/guarded state as defined by later site packet. |
+| RouteRuntimeState | open/blocked/contested state if later needed; default route state is open. |
+
+MVP movement contract draft:
+
+1. A Champion occupies exactly one strategic node at a time.
+2. A Champion moves along connected routes.
+3. Route movement cost spends movement points or movement allowance, to be finalized in the Champion/turn packet.
+4. MVP does not require free positioning between nodes.
+5. MVP does not require continuous pathfinding over terrain.
+6. Route blocking, weather, local guide bonuses, and movement-type differences are supported as future route modifiers, not first-pass requirements unless promoted by a later packet.
+
+Why this fits the first scenario:
+
+- B1 duel structure is easy to author as two start hubs connected through neutral site clusters and a central objective.
+- B2 race pacing is easy to tune by route costs and site placement.
+- Playtests can quickly reveal whether map choices, timing, and tactical handoffs are fun.
+- Implementation can start with deterministic pure C# graph logic and simple visual adapters.
+
+Out of scope for MVP topology:
+
+- hex/square strategic tile movement;
+- freeform map movement;
+- complex terrain pathfinding;
+- elevation/terrain simulation;
+- procedural map generation;
+- route construction/destruction systems;
+- final map editor format.
+
+## 10. Open Design Packets
 
 | Packet | Topic | Why It Blocks Implementation |
 |---|---|---|
-| Packet C | Strategic map topology: node-route vs tile/grid, movement cost, reachability. | Required for movement/domain stories. |
 | Packet D | Site and infrastructure states, rewards, ownership, guards. | Required for site interaction and battle trigger stories. |
 | Packet E | Resources, Intel, recruitment/reinforcement minimum. | Required for reward and spending loop. |
-| Packet F | Champion/army strategic state. | Required for movement, army handoff, losses, and growth. |
+| Packet F | Champion/army strategic state and movement allowance. | Required for movement, army handoff, losses, and growth. |
 | Packet G | Turn/scenario/victory structure. | Required for hotseat and win/loss loop. |
 | Packet H | Strategy-to-tactical DTOs. | Required before implementation connects map and combat. |
 
@@ -195,11 +253,12 @@ This GDD is implementation-ready only when later packets define enough detail th
 
 ## 11. Next Packet
 
-Next decision packet: **Packet C — Strategic Map Topology**.
+Next decision packet: **Packet D — Site and Infrastructure States**.
 
-It should decide whether the MVP strategic map is:
+It should decide the MVP site model:
 
-- node-route graph;
-- square/hex tile grid;
-- hybrid authored nodes over a visual map;
-- or a phased approach.
+- what site categories exist;
+- which states a site can be in;
+- how ownership/control works;
+- how guarded neutral sites differ from enemy-contested sites;
+- what rewards and interactions are allowed in the first hotseat scenario.

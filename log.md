@@ -168,3 +168,10 @@
 - Recorded the approved MVP direction as C3-H: two-faction local hotseat strategy, avoiding strategic AI while keeping a real opposing Champion/faction on the map.
 - Recorded the first scenario shape as B1 duel map with B2 race-map pacing: two starting hubs, neutral sites, guarded resource sites, recruitment/reinforcement points, and a central contested objective.
 - Updated `design/gdd/systems-index.md`, `design/gdd/README.md`, and `index.md` so the strategic map is discoverable before future implementation-story work.
+
+## [2026-05-30] approve | Strategic map topology packet
+
+- Recorded Packet C in `design/gdd/strategic-map.md`: use a C/D hybrid topology for MVP.
+- Approved an authored node-route graph as the gameplay rules model, presented over a visual Greenland map.
+- Required stable node/route/map IDs, presentation coordinates separate from domain graph rules, and an abstract enough model to allow richer tile/grid/region topology later.
+- Deferred strategic tile movement, freeform pathfinding, procedural map generation, route construction/destruction, and final map editor format.

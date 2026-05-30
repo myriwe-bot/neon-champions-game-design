@@ -5,8 +5,8 @@ status: draft
 phase: concept
 owner: shared
 created: 2026-05-22
-updated: 2026-05-22
-source_lore: [greenland, blue-week, digital-net, white-sky, champions]
+updated: 2026-05-30
+source_lore: [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
 related: [design/gdd/game-pillars, design/gdd/systems-index, design/world/approved-world-slice]
 approval: pending
 ---
@@ -17,11 +17,11 @@ approval: pending
 
 Neon Champions is a single-player-first turn-based strategy/RPG inspired by Heroes of Might and Magic III and Olden Era, translated into a no-magic cyberpunk world where Champions lead factions through infrastructure wars, polluted information, body technology, and public legitimacy struggles.
 
-The strongest first campaign direction is Greenland during Blue Week: a sparse Arctic strategic theater of outposts, mines, fishery hubs, sensor stations, White Sky infrastructure, Treaty Net nodes, and corporate development spectacle. The player should feel like they are commanding a mythic public operator in a world where every road, feed, body, mine, and sky system is owned, contested, or failing.
+The strongest first campaign direction is Greenland during Blue Monday, later remembered as the start of Blue Week: a sparse Arctic strategic theater of outposts, mines, fishery hubs, sensor stations, White Sky infrastructure, Treaty Net nodes, and corporate development spectacle. The player should feel like they are commanding a mythic public operator in a world where every road, feed, body, mine, and sky system is owned, contested, or failing.
 
 ## Elevator Pitch
 
-Lead Champions across Greenland’s Blue Week crisis: capture outposts, recruit crews, raid guarded sites, steal Intel, upgrade cyberpunk assets, manipulate proof and public legitimacy, and decide who controls the infrastructure that keeps the world alive under the White Sky.
+Lead Champions across Greenland’s Blue Monday crisis: capture outposts, recruit crews, raid guarded sites, steal Intel, upgrade cyberpunk assets, manipulate proof and public legitimacy, and decide who controls the infrastructure that keeps the world alive under the White Sky.
 
 ## Core Fantasy
 
@@ -57,7 +57,7 @@ Scout a local cluster, choose which guarded site or outpost to contest, spend mo
 
 ### Session Loop
 
-Complete one campaign objective or scenario beat: secure a hub, expose a lie, capture a White Sky/Digital-Net node, survive a Blue Week event, defeat a rival Champion, or shift local legitimacy before the crisis clock advances.
+Complete one campaign objective or scenario beat: secure a hub, expose a lie, capture a White Sky/Digital-Net node, survive a Blue Monday event, defeat a rival Champion, or shift local legitimacy before the crisis clock advances.
 
 ### Long-Term Progression
 
@@ -83,11 +83,11 @@ One Greenland region map with:
 - 4 prototype resources: Credits, Energy, Proof, Intel;
 - basic asset equipment and Intel upgrade;
 - simple Digital-Net/proof overlay;
-- one Blue Week crisis clock.
+- one Blue Monday / Blue Week crisis clock.
 
 ### Vertical Slice
 
-A polished Blue Week scenario with:
+A polished Blue Monday / Blue Week scenario with:
 - 3-4 factions;
 - 4-6 Champions;
 - hub building trees;
@@ -127,8 +127,8 @@ White daylight cyberpunk: pale engineered sky, hard Arctic terrain, neon against
 | Question | Owner | Deadline | Resolution |
 |---|---|---|---|
 | Should the first campaign use real Greenland/Kalaallit Nunaat or a fictionalized Arctic autonomy? | Human | Before concept approval | Pending |
-|| Is Blue Week primarily the summit, the sky-break event, or both? | Human | Before concept approval | Current direction: both. |
+| Is Blue Monday primarily the initial sky-break event, with Blue Week as the later/retrospective crisis period? | Human | Before concept approval | Current direction: Blue Monday is the initial event; Blue Week is later/retrospective framing. |
 | What is the first player faction? | Human | Before systems design | Pending |
-|| What should the UNP Net security body be called? | Human | Before world slice approval | Digital Peacekeeping Directorate; commonly the Blue / the Blues. |
+| What should the UNP Net security body be called? | Human | Before world slice approval | Digital Peacekeeping Directorate; commonly the Blue / the Blues. |
 | Is Intel global, Champion-local, or hybrid? | Shared | Before resource GDD | Pending |
-|| Does combat use full tactical battles in MVP or guarded-site autoresolution first? | Human | Before MVP plan | Full tactical battles. |
+| Does combat use full tactical battles in MVP or guarded-site autoresolution first? | Human | Before MVP plan | Full tactical battles. |

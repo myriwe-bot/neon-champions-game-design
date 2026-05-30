@@ -5,15 +5,15 @@ status: draft
 phase: systems-design
 owner: shared
 created: 2026-05-22
-updated: 2026-05-22
+updated: 2026-05-30
 source_lore: []
-related: [design/gdd/game-concept, design/gdd/game-pillars]
+related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/tactical-combat, design/gdd/README]
 approval: pending
 ---
 
 # Systems Index
 
-> Status: Draft. Do not use for implementation yet.
+> Status: Draft. Use for system orientation and planning only; implementation still requires an approved GDD section or READY story.
 
 ## Dependency Layers
 
@@ -44,4 +44,4 @@ approval: pending
 
 ## Deferred / Explicitly Out of Scope
 
-Pending concept approval.
+No additional global exclusions recorded yet. Individual systems list their own MVP cuts, deferred items, and open questions.

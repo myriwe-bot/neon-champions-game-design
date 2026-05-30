@@ -35,7 +35,7 @@ Do not use worldbuilding canon levels for GDDs. Canon belongs in the world wiki;
 ```yaml
 ---
 title: Document Title
-type: concept | pillars | system-gdd | ux-spec | art-spec | lore-import | design-bridge-import | adr | agent-instructions | checklist | gate | epic | story | spike | playtest | qa | milestone | registry
+type: concept | pillars | system-gdd | ux-spec | art-spec | lore-import | design-bridge-import | research-note | adr | agent-instructions | checklist | gate | epic | story | spike | playtest | qa | milestone | registry
 status: draft | in-review | approved | accepted-with-risk | implemented | deprecated
 phase: concept | systems-design | technical-setup | pre-production | production | polish | release
 owner: human | agent | shared

@@ -15,13 +15,29 @@
 ## Concept and GDDs
 
 - [[design/gdd/README]] — GDD reading guide for humans and LLM agents.
-- [[design/gdd/game-concept]] — current draft concept: HoMM3-inspired cyberpunk strategy/RPG beginning with Greenland during Blue Week.
+- [[design/gdd/game-concept]] — current draft concept: HoMM3-inspired cyberpunk strategy/RPG beginning with Greenland during Blue Monday, later remembered as the start of Blue Week.
 - [[design/gdd/game-pillars]] — current draft pillars and anti-pillars, including Intel, infrastructure power, dirty information, and wilderness without escapism.
 - [[design/gdd/systems-index]] — system map scaffold.
 - [[design/gdd/intel-resource]] — draft system GDD for Intel as Neon Champions' Alchemical Dust analogue.
 - [[design/gdd/faction-unit-rosters]] — draft unit roster concepts and faction tactical identities for the Greenland campaign.
 - [[design/gdd/tactical-combat]] — concise active tactical combat GDD for first-read design and AI implementation planning.
 - [[design/gdd/tactical-combat/section-map]] — preservation map for the tactical-combat split; confirms every original top-level section is still present in smaller articles.
+
+
+### Tactical Combat Detailed Articles
+
+- [[design/gdd/tactical-combat/overview-and-scope]]
+- [[design/gdd/tactical-combat/army-deployment-and-stacks]]
+- [[design/gdd/tactical-combat/ap-actions-and-reactions]]
+- [[design/gdd/tactical-combat/targeting-damage-and-defense]]
+- [[design/gdd/tactical-combat/statuses-terrain-and-objectives]]
+- [[design/gdd/tactical-combat/morale-rout-and-cohesion]]
+- [[design/gdd/tactical-combat/post-battle-resolution]]
+- [[design/gdd/tactical-combat/ammo-capacity-and-logistics]]
+- [[design/gdd/tactical-combat/champion-operations-and-progression]]
+- [[design/gdd/tactical-combat/implementation-contracts]]
+- [[design/gdd/tactical-combat/mvp-content-and-faction-rosters]]
+- [[design/gdd/tactical-combat/deferred-and-open-questions]]
 
 ## Research / Deep Reference
 

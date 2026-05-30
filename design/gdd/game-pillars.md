@@ -5,8 +5,8 @@ status: draft
 phase: concept
 owner: shared
 created: 2026-05-22
-updated: 2026-05-22
-source_lore: [greenland, blue-week, digital-net, white-sky, champions]
+updated: 2026-05-30
+source_lore: [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
 related: [design/gdd/game-concept, design/game-design-principles]
 approval: pending
 ---
@@ -87,4 +87,4 @@ Agents may propose and critique but may not silently turn exploratory ideas into
 
 ## Gate Status
 
-Draft, stronger than prior scaffold, not yet approved. Needs user decision on first campaign name, faction start, Blue Week cause framing, and MVP combat scope.
+Draft, stronger than prior scaffold, not yet approved. Needs user decision on first campaign name, faction start, Blue Monday / Blue Week cause framing, and remaining MVP scope boundaries. Current naming direction: Blue Monday is the initial sky-break event; Blue Week is later/retrospective framing.

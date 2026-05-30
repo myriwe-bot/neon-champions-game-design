@@ -147,3 +147,17 @@
 - Added `design/gdd/tactical-combat/section-map.md` to verify that every original top-level tactical-combat section is mapped to a split article.
 - Kept `design/research/tactical-combat-deep-reference.md` as the raw backup while making the split articles the readable detailed layer.
 - Updated `design/gdd/tactical-combat.md`, `design/gdd/README.md`, and `index.md` so humans and LLM agents can find both the concise overview and the preserved detailed material.
+
+## [2026-05-30] fix | Design wiki interlink and legacy cleanup
+
+- Added tactical-combat split articles directly to `index.md` so durable detailed GDD artifacts are visible from the main wiki index.
+- Corrected active concept/pillar wording from Blue Week-as-initial-event toward the current Blue Monday initial event with Blue Week as later/retrospective framing.
+- Fixed malformed open-question table rows in `design/gdd/game-concept.md`.
+- Updated `design/gdd/systems-index.md` status/deferred wording so it no longer implies stale concept-approval blocking.
+- Updated `SCHEMA.md` to recognize `research-note`, matching existing research artifacts.
+
+## [2026-05-30] fix | Faction roster metadata and Blue Monday naming
+
+- Normalized `design/gdd/faction-unit-rosters.md` frontmatter to the repository schema.
+- Updated active faction-roster naming from Open Sky / Blue Week Cells to Open Sky / Blue Monday Cells while preserving Blue Week as later public framing.
+- Updated Intel resource source-lore tags to include Blue Monday alongside Blue Week.

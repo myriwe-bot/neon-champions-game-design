@@ -5,8 +5,8 @@ status: draft
 phase: systems-design
 owner: shared
 created: 2026-05-22
-updated: 2026-05-22
-source_lore: [digital-net, greenland, blue-week]
+updated: 2026-05-30
+source_lore: [digital-net, greenland, blue-monday, blue-week]
 related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index]
 approval: pending
 ---

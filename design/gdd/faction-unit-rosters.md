@@ -2,12 +2,13 @@
 title: Greenland Faction Unit Rosters
 type: system-gdd
 status: draft
-tags: [greenland, factions, units, tactical-combat, heroes-like, blue-week]
-sources: [user-session-2026-05-22, greenland-blue-week-campaign]
-related: [greenland-blue-week-campaign, greenland, blue-week, champions, digital-net, qxz-meridian, barents-research-group, united-nations-and-persons]
-approval: pending
+phase: systems-design
+owner: shared
 created: 2026-05-22
-updated: 2026-05-22
+updated: 2026-05-30
+source_lore: [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
+related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index, design/gdd/tactical-combat]
+approval: pending
 ---
 
 # Greenland Faction Unit Rosters
@@ -27,7 +28,7 @@ Yes, the current faction set still makes sense. The strongest playable core is:
 
 The best antagonist/side-faction layer is:
 
-5. **Open Sky / Blue Week Cells** — atmospheric commons, leaks, sabotage, direct action, risky truth.
+5. **Open Sky / Blue Monday Cells** — atmospheric commons, leaks, sabotage, direct action, risky truth around the initial sky-break event; later public memory may fold them into Blue Week narratives.
 6. **Janus-Kestrel Mining-Logistics Consortium** — ports, cargo identity, extraction finance, private security, concession contracts.
 7. **Tundra Biosecurity / Wildlife Control Program** — better as neutral dwelling chain or subfaction first; full faction later if the animal-control fantasy proves strong.
 
@@ -203,7 +204,7 @@ Defensive control, nonlethal options, anti-hack, proof stabilization, emergency 
 - **Protected Relief Column**: a “caravan” unit that is tactically awkward but strategically valuable.
 - **Blue Mandate Executors**: elite force that feels scary because it arrives with legal inevitability.
 
-## Open Sky / Blue Week Cells
+## Open Sky / Blue Monday Cells
 
 ### Fantasy
 

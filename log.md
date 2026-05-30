@@ -182,3 +182,11 @@
 - Defined MVP mechanical categories: Start Hub, Resource Site, Recruitment Site, Upgrade/Intel Site, Neutral Guard Site, Central Objective, and One-Shot Visit Site.
 - Defined MVP theme types including mining/extraction, fishery/cold-chain, sensor/White Sky node, clinic/bodytech, recruitment contractor/local ally, Treaty-Net infrastructure, cache/salvage/black site, and starting hub.
 - Recorded reusable site state and ownership/control draft rules while deferring full town trees, deep infrastructure simulation, diplomacy/consent mechanics, complex provenance ownership, and full fog/feed misinformation.
+
+## [2026-05-30] approve | Strategic resource model packet
+
+- Recorded Packet E in `design/gdd/strategic-map.md`: use a phased hybrid resource model for MVP.
+- Approved active MVP stockpiles: Credits, Materials, and Intel.
+- Kept Compute, Medical Capacity, Energy, Legitimacy, Favors, and White Sky Access as future-facing flavor/tags rather than separate MVP stockpiles.
+- Defined one-time and recurring reward support, with first implementation allowed to start from one-time rewards if turn-income timing is not yet implemented.
+- Defined recruitment/reinforcement as predefined offers with fixed costs/stock, while deferring full town trees, dynamic pricing, supply chains, upkeep, and deep Intel operation systems.

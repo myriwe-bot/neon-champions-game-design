@@ -318,16 +318,89 @@ Out of scope for MVP site model:
 - multi-turn construction or upgrades;
 - final site editor UX.
 
-## 11. Open Design Packets
+## 11. Resources, Intel, and Recruitment/Reinforcement Minimum
+
+### Packet E Decision: D Phased Hybrid Resource Model
+
+Approved direction: use the simple mechanical resource set from Packet E option B for the first hotseat MVP, while keeping resource/theme metadata flexible enough for later infrastructure-flavored resources from option C.
+
+This means the MVP economy has three active strategic resources:
+
+1. **Credits** — payment, recruitment, contracts, and general operational spending.
+2. **Materials** — equipment, reinforcement, repair, infrastructure-like growth, and future upgrade hooks.
+3. **Intel** — special information power used for upgrade, operation, reveal, or unlock hooks; Intel is not generic money.
+
+Future resource identities such as Compute, Medical Capacity, Energy, Legitimacy, Favors, or White Sky Access may appear as site flavor, tags, reward labels, or future expansion hooks, but they are not separate MVP stockpiles unless a later approved packet promotes them.
+
+Rules:
+
+1. Each faction has its own resource stockpiles.
+2. MVP faction stockpiles must include `Credits`, `Materials`, and `Intel`.
+3. Resource changes are applied by strategic-layer systems after site interaction, turn income, recruitment, or battle-result resolution.
+4. Tactical combat must not directly mutate resource stockpiles; it returns a `BattleResult`, and the strategic layer applies rewards/losses.
+5. Resource rewards and costs must be previewable before commitment where practical.
+6. Resource definitions need stable IDs and localization keys.
+7. Site definitions may carry future-facing economy tags, but MVP rules must ignore unsupported stockpile types rather than creating hidden currencies.
+
+MVP resource roles:
+
+| Resource | MVP Role | Typical Sources | Typical Sinks |
+|---|---|---|---|
+| Credits | Broad spending resource. | Start hub income, resource sites, one-shot caches, central objective rewards. | Recruitment, reinforcement, basic site actions, future operation costs. |
+| Materials | Growth and recovery resource. | Mining/extraction sites, salvage/black sites, guarded infrastructure sites. | Reinforcement, equipment/upgrade hooks, future repair/build hooks. |
+| Intel | Special strategic leverage. | Sensor/White Sky nodes, Treaty-Net nodes, black sites, objective rewards. | Upgrade/intel-site effects, reveal/operation hooks, future information actions. |
+
+MVP income/reward contract:
+
+1. The MVP supports both one-time rewards and recurring income, but first implementation stories may start with one-time rewards if recurring-income timing is not yet implemented.
+2. Recurring income, when enabled, is evaluated at a deterministic strategic-turn timing selected in the turn/scenario packet.
+3. Site definitions declare whether they grant one-time reward, recurring income, both, or neither.
+4. One-shot visit sites mark their reward as consumed after successful application.
+5. Guarded sites grant rewards only after guards are defeated and the strategic result is applied.
+6. Enemy-faction site capture does not duplicate already-consumed one-shot rewards unless a site definition explicitly allows recapture rewards.
+
+Recruitment/reinforcement minimum:
+
+1. MVP recruitment/reinforcement uses predefined unit offers, not full town-building trees.
+2. Recruitment Site definitions may expose one or more recruit/reinforcement offers.
+3. Offers have stable IDs, unit/stack references, cost in Credits/Materials/Intel as needed, and availability/stock rules.
+4. The first implementation may use fixed offers and fixed stock counts.
+5. Recruitment adds units to the active Champion's army or faction reserve, depending on the approved Champion/army packet.
+6. Reinforcement should be able to restore or add units after losses, but detailed casualty recovery rules are deferred to the Champion/army packet.
+
+Implementation-facing data implications:
+
+| Concept | Required Fields / Behavior |
+|---|---|
+| ResourceDefinition | stable resource ID, display/localization key, category, icon/color hint. |
+| FactionResourceState | faction ID, resource stockpile values for Credits, Materials, Intel. |
+| ResourceDelta | resource ID, signed amount, source reason, preview/apply mode. |
+| SiteRewardDefinition | one-time and/or recurring resource deltas, optional Intel reward, consumed/claim rules. |
+| RecruitmentOfferDefinition | stable offer ID, unit/stack reference, resource cost, stock/availability, source site ID. |
+| RecruitmentRuntimeState | remaining stock, claimed/available state, optional refresh timing. |
+
+Out of scope for MVP economy:
+
+- full HoMM-style multi-resource economy;
+- separate Compute, Energy, Medical, Legitimacy, or Favor stockpiles;
+- market exchange/trading;
+- loans, debt, subscriptions, or upkeep simulation;
+- complex supply chains;
+- faction-specific economy rules;
+- dynamic pricing;
+- full town construction/building trees;
+- population/workforce simulation;
+- deep Intel operation deck/system.
+
+## 12. Open Design Packets
 
 | Packet | Topic | Why It Blocks Implementation |
 |---|---|---|
-| Packet E | Resources, Intel, recruitment/reinforcement minimum. | Required for reward and spending loop. |
 | Packet F | Champion/army strategic state and movement allowance. | Required for movement, army handoff, losses, and growth. |
 | Packet G | Turn/scenario/victory structure. | Required for hotseat and win/loss loop. |
 | Packet H | Strategy-to-tactical DTOs. | Required before implementation connects map and combat. |
 
-## 10. Acceptance Criteria Draft
+## 13. Acceptance Criteria Draft
 
 This GDD is implementation-ready only when later packets define enough detail that stories can test:
 
@@ -341,14 +414,15 @@ This GDD is implementation-ready only when later packets define enough detail th
 - [ ] All strategic runtime state is serializable.
 - [ ] No production story requires strategic AI, networking, simultaneous turns, or unapproved full economy systems.
 
-## 12. Next Packet
+## 14. Next Packet
 
-Next decision packet: **Packet E — Resources, Intel, and Recruitment/Reinforcement Minimum**.
+Next decision packet: **Packet F — Champion/Army Strategic State and Movement Allowance**.
 
 It should decide:
 
-- which resources exist in the first hotseat MVP;
-- whether resource sites grant one-time rewards, recurring income, or both;
-- what Intel does in the first playable loop;
-- how recruitment/reinforcement sites add units;
-- what spending choices must exist before implementation stories become READY.
+- what strategic state a Champion tracks;
+- how movement allowance works on the node-route map;
+- whether Champions can act after moving;
+- how army stacks attach to Champions and sites;
+- how battle losses return to the strategic layer;
+- whether recruitment adds directly to the Champion army or a faction reserve first.

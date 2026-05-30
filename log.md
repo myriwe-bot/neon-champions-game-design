@@ -175,3 +175,10 @@
 - Approved an authored node-route graph as the gameplay rules model, presented over a visual Greenland map.
 - Required stable node/route/map IDs, presentation coordinates separate from domain graph rules, and an abstract enough model to allow richer tile/grid/region topology later.
 - Deferred strategic tile movement, freeform pathfinding, procedural map generation, route construction/destruction, and final map editor format.
+
+## [2026-05-30] approve | Strategic site model packet
+
+- Recorded Packet D in `design/gdd/strategic-map.md`: use a hybrid site model with HoMM-like mechanical categories and Neon-flavored infrastructure themes.
+- Defined MVP mechanical categories: Start Hub, Resource Site, Recruitment Site, Upgrade/Intel Site, Neutral Guard Site, Central Objective, and One-Shot Visit Site.
+- Defined MVP theme types including mining/extraction, fishery/cold-chain, sensor/White Sky node, clinic/bodytech, recruitment contractor/local ally, Treaty-Net infrastructure, cache/salvage/black site, and starting hub.
+- Recorded reusable site state and ownership/control draft rules while deferring full town trees, deep infrastructure simulation, diplomacy/consent mechanics, complex provenance ownership, and full fog/feed misinformation.

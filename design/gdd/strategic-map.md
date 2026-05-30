@@ -227,11 +227,101 @@ Out of scope for MVP topology:
 - route construction/destruction systems;
 - final map editor format.
 
-## 10. Open Design Packets
+## 10. Site and Infrastructure States
+
+### Packet D Decision: D Hybrid Site Model
+
+Approved direction: use HoMM-like mechanical site categories from Packet D option B, expressed through Neon-flavored infrastructure types from option C. For MVP, site mechanics stay simple and reusable; each site carries theme/type metadata so later systems can add richer infrastructure-specific rules.
+
+This means MVP sites are designed in two layers:
+
+1. **Mechanical category** — what the site does in the rules.
+2. **Infrastructure theme/type** — what the place is in the world and UI.
+
+Rules:
+
+1. Every interactive strategic location with gameplay state is a `Site` attached to a strategic node.
+2. A site has one primary mechanical category for MVP implementation.
+3. A site also has one infrastructure/theme type for fiction, labels, icons, rewards, and later specialization.
+4. Site mechanics must be reusable across many themes. Example: a `Resource Site` can be a mine, cold-chain fishery, compute outpost, or salvage cache.
+5. MVP implementation must not hardcode one bespoke rule system per infrastructure theme.
+6. Site definitions need stable IDs and localization keys.
+7. Site runtime state tracks ownership/control/cleared/visited/guarded state separately from the static definition.
+8. Site interactions must be previewable before commitment: the player should know whether the site will trigger battle, grant reward, recruit/reinforce, or contest ownership.
+
+MVP mechanical site categories:
+
+| Category | MVP Purpose | Typical Interaction |
+|---|---|---|
+| Start Hub | Faction anchor, starting position, safe/base identity. | Own from scenario start; may support reinforcement/recruitment if enabled. |
+| Resource Site | Provides one-time reward or recurring income, depending on later resource packet. | Defeat guards or control site, then gain/claim resource. |
+| Recruitment Site | Adds units/reinforcements to faction/Champion army. | Control or visit, then recruit/reinforce within approved limits. |
+| Upgrade / Intel Site | Gives Intel, operation unlock hooks, or asset-upgrade material. | Defeat guards/claim site, then gain Intel or upgrade currency. |
+| Neutral Guard Site | Battle-focused encounter site, usually protecting reward/control. | Start tactical battle against neutral guard side. |
+| Central Objective | Main contested victory/score/pressure anchor. | Control, hold, contest, or battle for scenario progress. |
+| One-Shot Visit Site | Single-use map reward, scouting, event, or utility. | Visit once, apply effect, mark visited/consumed. |
+
+MVP infrastructure/theme types:
+
+| Theme Type | Can Use Categories | Notes |
+|---|---|---|
+| Mining / Extraction Site | Resource, Guard, Objective | Good for material resources and faction conflict. |
+| Fishery / Cold-Chain Site | Resource, Objective, Visit | Grounds Greenland economy and logistics. |
+| Sensor / White Sky Node | Intel, Objective, Guard, Visit | Connects climate/geoengineering and information control. |
+| Clinic / Bodytech Site | Recruitment, Upgrade, Visit | Supports bodies, recovery, legitimacy, later Champion/army consequences. |
+| Recruitment Contractor / Local Ally Site | Recruitment, Visit, Guard | Provides units or reinforcement access without a full town system. |
+| Treaty-Net / Infrastructure Node | Central Objective, Intel, Guard | Strong first central-objective candidate. |
+| Cache / Salvage / Black Site | Resource, Intel, Guard, One-Shot | Flexible early reward site. |
+| Starting Hub | Start Hub, Recruitment, Resource | Faction base and scenario anchor. |
+
+MVP site runtime states:
+
+| State | Meaning | Notes |
+|---|---|---|
+| Hidden / Undiscovered | Site not yet revealed or not interactable in UI. | Optional for first MVP; can be omitted if no fog/scouting yet. |
+| Revealed | Site is visible but not necessarily controlled/visited. | Default for simple MVP maps. |
+| Guarded | Site has neutral guards or enemy defenders requiring battle before claim/use. | Generates tactical `BattleSetup`. |
+| Uncontrolled | Site has no faction owner. | Common after guards are defeated if control is not automatic. |
+| Controlled | Site is owned/controlled by a faction. | Drives ownership, income, recruitment, objective progress. |
+| Contested | Site contains or is targeted by opposing faction presence. | Can trigger faction-vs-faction battle. |
+| Visited / Consumed | One-shot reward or visit effect has already been used. | Prevents repeat farming. |
+| Disabled / Locked | Site exists but cannot currently be used. | Reserved for future scenario conditions; not needed for first pass unless useful. |
+
+Ownership/control contract draft:
+
+1. Start hubs begin controlled by their assigned faction.
+2. Neutral guarded sites begin uncontrolled and guarded.
+3. Defeating neutral guards may either immediately control the site or leave it claimable; exact default is a later subdecision if needed.
+4. Enemy-controlled sites can be contested by moving an opposing Champion onto/into the site interaction.
+5. Site control changes only through explicit site interaction or battle result application.
+6. Tactical combat must not directly mutate site state; it returns a `BattleResult`, and the strategic layer applies site consequences.
+
+First scenario site mix target:
+
+| Site | Count | Suggested Category/Theme |
+|---|---:|---|
+| Faction start hubs | 2 | Start Hub / Starting Hub |
+| Early resource sites | 2-3 | Resource / Mining, Fishery, Cache |
+| Recruitment/reinforcement sites | 1-2 | Recruitment / Contractor, Clinic, Local Ally |
+| Intel/upgrade site | 1 | Upgrade/Intel / Sensor, White Sky Node, Black Site |
+| Central contested site | 1 | Central Objective / Treaty-Net or White Sky Infrastructure Node |
+| Optional one-shot visit sites | 1-2 | Visit / Cache, Sensor, Local Ally |
+
+Out of scope for MVP site model:
+
+- full town building trees;
+- deep infrastructure maintenance simulation;
+- unique bespoke rules for every infrastructure type;
+- diplomacy/consent systems as separate mechanics;
+- complex legal/provenance ownership states;
+- full fog/feed misinformation around site identity;
+- multi-turn construction or upgrades;
+- final site editor UX.
+
+## 11. Open Design Packets
 
 | Packet | Topic | Why It Blocks Implementation |
 |---|---|---|
-| Packet D | Site and infrastructure states, rewards, ownership, guards. | Required for site interaction and battle trigger stories. |
 | Packet E | Resources, Intel, recruitment/reinforcement minimum. | Required for reward and spending loop. |
 | Packet F | Champion/army strategic state and movement allowance. | Required for movement, army handoff, losses, and growth. |
 | Packet G | Turn/scenario/victory structure. | Required for hotseat and win/loss loop. |
@@ -251,14 +341,14 @@ This GDD is implementation-ready only when later packets define enough detail th
 - [ ] All strategic runtime state is serializable.
 - [ ] No production story requires strategic AI, networking, simultaneous turns, or unapproved full economy systems.
 
-## 11. Next Packet
+## 12. Next Packet
 
-Next decision packet: **Packet D — Site and Infrastructure States**.
+Next decision packet: **Packet E — Resources, Intel, and Recruitment/Reinforcement Minimum**.
 
-It should decide the MVP site model:
+It should decide:
 
-- what site categories exist;
-- which states a site can be in;
-- how ownership/control works;
-- how guarded neutral sites differ from enemy-contested sites;
-- what rewards and interactions are allowed in the first hotseat scenario.
+- which resources exist in the first hotseat MVP;
+- whether resource sites grant one-time rewards, recurring income, or both;
+- what Intel does in the first playable loop;
+- how recruitment/reinforcement sites add units;
+- what spending choices must exist before implementation stories become READY.

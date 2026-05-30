@@ -133,3 +133,10 @@
 - Expanded `design/gdd/tactical-combat.md` with the latest F.67-F.92 tactical packet work: AP limits, tactical MVP scope, implementation contracts, ability/effect schema, status schema, information model, objective schema, save/replay contracts, MVP content matrix, and Barents unit roster packets.
 - Selected the first working canonical MVP faction pair as Barents Research Group / Polar Certification Combine versus Janus-Kestrel Continuity Group / Mining-Logistics Consortium.
 - Added `design/gdd/tactical-combat.md` to the public index so the GDD is visible from the game-design site.
+
+## [2026-05-30] revise | Tactical combat readability pass
+
+- Reworked `design/gdd/tactical-combat.md` from a long packet transcript into a concise first-read GDD for humans and LLM agents.
+- Preserved the previous long-form tactical packet history in `design/research/tactical-combat-deep-reference.md` as reference material, not the primary implementation contract.
+- Added `design/gdd/README.md` as a GDD reading guide with explicit LLM rules, reading order, and active GDD expectations.
+- Updated `design/gdd/systems-index.md` and `index.md` to point readers to the concise tactical GDD and deep reference split.

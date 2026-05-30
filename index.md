@@ -12,14 +12,20 @@
 - [[design/game-design-principles]] — design principles and workflow lenses.
 - [[design/workflow]] — phase workflow adapted from Claude Code Game Studios.
 
-## Concept
+## Concept and GDDs
 
+- [[design/gdd/README]] — GDD reading guide for humans and LLM agents.
 - [[design/gdd/game-concept]] — current draft concept: HoMM3-inspired cyberpunk strategy/RPG beginning with Greenland during Blue Week.
 - [[design/gdd/game-pillars]] — current draft pillars and anti-pillars, including Intel, infrastructure power, dirty information, and wilderness without escapism.
 - [[design/gdd/systems-index]] — system map scaffold.
 - [[design/gdd/intel-resource]] — draft system GDD for Intel as Neon Champions' Alchemical Dust analogue.
 - [[design/gdd/faction-unit-rosters]] — draft unit roster concepts and faction tactical identities for the Greenland campaign.
-- [[design/gdd/tactical-combat]] — active tactical combat GDD, including AP/morale/Signal contracts, MVP scope, save/replay rules, and the provisional Barents vs Janus-Kestrel faction-pair work.
+- [[design/gdd/tactical-combat]] — concise active tactical combat GDD for first-read design and AI implementation planning.
+
+## Research / Deep Reference
+
+- [[design/research/commander-spellbook-reference]] — commander/spellbook/operations reference research.
+- [[design/research/tactical-combat-deep-reference]] — preserved long-form tactical-combat packet history and rationale; reference only, not first-read implementation contract.
 
 ## World Import Layer
 

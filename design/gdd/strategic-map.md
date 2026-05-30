@@ -476,14 +476,108 @@ Out of scope for MVP Champion/army movement:
 - simultaneous Champion movement;
 - strategic AI movement planning.
 
-## 13. Open Design Packets
+## 13. Turn/Scenario/Victory Structure
+
+### Packet G Decision: D Phased Hybrid Scenario Structure
+
+Approved direction: implement an objective-duel hotseat structure now, while keeping scenario data ready for later score/race victory modes.
+
+This is a phased hybrid of:
+
+- **B: objective duel now** — fixed alternating faction turns, start-of-turn refresh/income, and victory by defeating the enemy Champion or holding the central objective.
+- **C: score/race later** — scenario data may include score values, turn limits, and objective counters, but these are not required active MVP rules unless a later packet promotes them.
+
+Rules:
+
+1. The first MVP scenario has exactly two active factions.
+2. Strategic turns are sequential and local hotseat: Faction 1, then Faction 2, repeating.
+3. There is no simultaneous turn resolution in MVP.
+4. There is no strategic AI controller in MVP.
+5. A faction turn begins with a deterministic start-of-turn phase.
+6. A faction turn ends when the player manually ends turn, or when a future implementation chooses to auto-end after no legal movement/action remains.
+7. The first implementation should support manual end turn as the reliable baseline.
+8. Scenario state must track active faction, turn number/round number, objective hold state, victory state, and defeat state.
+
+Start-of-faction-turn sequence:
+
+1. Set active faction/controller.
+2. Increment turn/round counters as defined by scenario state.
+3. Reset the active Champion's movement points.
+4. Reset the active Champion's major interaction availability.
+5. Apply recurring income for sites controlled by the active faction, if recurring income is enabled.
+6. Evaluate central-objective hold progress for the active faction.
+7. Check victory/loss state before allowing actions, so objective wins resolve cleanly.
+8. Present start-of-turn summary to the player.
+
+End-of-faction-turn sequence:
+
+1. Validate no modal interaction or battle is unresolved.
+2. Apply any end-turn effects approved by scenario rules.
+3. Check victory/loss state.
+4. Advance active faction to the next faction in turn order.
+5. If turn order wraps back to Faction 1, increment the round counter if using round tracking.
+
+MVP victory conditions:
+
+1. **Champion defeat victory** — if a faction's only Champion army is defeated and the Champion enters the approved defeated/loss state, the opposing faction wins unless a later rule explicitly allows recovery.
+2. **Central objective hold victory** — if a faction controls the central objective for the required number of its own start-of-turn checks, that faction wins.
+3. The working default for the first scenario is holding the central objective for **2 consecutive own turns**.
+4. Scenario definitions should store the required hold count rather than hardcoding `2`.
+5. If both victory conditions could resolve in one sequence, Champion defeat takes priority immediately after battle; objective hold resolves at start-of-turn checks.
+
+Scenario state minimum:
+
+| Field | MVP Meaning | Future-Proofing Note |
+|---|---|---|
+| scenarioId | Stable scenario definition reference. | Supports multiple scenarios/campaign later. |
+| activeFactionId | Faction whose strategic turn is active. | Allows hotseat now, future strategic AI later. |
+| turnOrder | Ordered faction IDs. | MVP length is two. |
+| turnNumber | Count of faction turns taken. | Useful for logs/replays/tests. |
+| roundNumber | Count of full cycles through turn order. | Useful for future turn limits/scoring. |
+| victoryState | None, faction win, draw/abort if ever needed. | Must be explicit and serializable. |
+| centralObjectiveSiteId | Site used for objective hold victory. | Future scenarios may have multiple objective sites. |
+| objectiveHoldFactionId | Faction currently building hold progress. | Resets when control changes. |
+| objectiveHoldProgress | Consecutive own-turn checks held. | Can generalize into objective score later. |
+| objectiveHoldRequired | Required hold progress for victory. | Working default: 2. |
+
+Champion defeat contract:
+
+1. Tactical `BattleResult` reports whether an army was defeated.
+2. The strategic layer applies army losses and then evaluates Champion defeat.
+3. For MVP, a defeated only-Champion faction loses the scenario.
+4. More complex outcomes such as wounded recovery, ransom, clinic revival, backup bodies, retreats, or Echo continuation are deferred.
+5. Defeat handling should still use explicit state rather than deleting the Champion from runtime data.
+
+Objective control contract:
+
+1. The central objective is a Site with the Central Objective mechanical category.
+2. Site control changes through site interaction or battle-result application.
+3. Objective hold progress is checked at the start of the controlling faction's own turn.
+4. If another faction controls or contests the objective before the check, prior hold progress resets or transfers according to scenario rules; MVP default is reset.
+5. Objective hold progress and reset behavior must be visible in the UI.
+
+Out of scope for MVP turn/scenario/victory:
+
+- online multiplayer;
+- simultaneous turns;
+- strategic AI turns;
+- diplomacy or alliances;
+- more than two active factions;
+- score-threshold victory as an active rule;
+- turn-limit victory as an active rule;
+- multiple central objectives;
+- campaign persistence across scenarios;
+- complex Champion recovery/revival systems;
+- hidden victory conditions;
+- crisis-clock/endgame systems.
+
+## 14. Open Design Packets
 
 | Packet | Topic | Why It Blocks Implementation |
 |---|---|---|
-| Packet G | Turn/scenario/victory structure. | Required for hotseat and win/loss loop. |
 | Packet H | Strategy-to-tactical DTOs. | Required before implementation connects map and combat. |
 
-## 14. Acceptance Criteria Draft
+## 15. Acceptance Criteria Draft
 
 This GDD is implementation-ready only when later packets define enough detail that stories can test:
 
@@ -497,15 +591,14 @@ This GDD is implementation-ready only when later packets define enough detail th
 - [ ] All strategic runtime state is serializable.
 - [ ] No production story requires strategic AI, networking, simultaneous turns, or unapproved full economy systems.
 
-## 15. Next Packet
+## 16. Next Packet
 
-Next decision packet: **Packet G — Turn/Scenario/Victory Structure**.
+Next decision packet: **Packet H — Strategy-to-Tactical DTOs**.
 
 It should decide:
 
-- faction turn order for hotseat;
-- when resources/income refresh;
-- when Champion movement and interactions reset;
-- what ends a turn;
-- first MVP victory/loss conditions;
-- what happens when a Champion is defeated.
+- what fields `BattleSetup` must carry from strategy to tactics;
+- what fields `BattleResult` must return;
+- how site, Champion, army, controller, reward, and victory consequences are referenced;
+- what tactical combat is allowed to decide versus what only strategy may apply;
+- minimum test cases for the strategic loop stories.

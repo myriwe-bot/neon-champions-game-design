@@ -198,3 +198,10 @@
 - Required the data model to support later richer logistics such as route types, weather, supply, fatigue, faction movement modifiers, and movement-type differences without implementing them now.
 - Defined minimum Champion, army, movement command, site interaction command, and battle-result army-delta concepts for future implementation stories.
 - Deferred multiple Champions, freeform/tile movement, caravans/reserves, garrison management, Champion progression/equipment, supply/fatigue/weather, complex defeat handling, and strategic AI movement planning.
+## [2026-05-30] approve | Strategic turn and victory packet
+
+- Recorded Packet G in `design/gdd/strategic-map.md`: use a phased hybrid turn/scenario/victory structure.
+- Approved objective-duel MVP rules: fixed two-faction local hotseat turn order, deterministic start/end turn phases, start-of-turn refresh/income, and manual end turn baseline.
+- Approved MVP victory conditions: defeat the enemy only-Champion faction, or hold the central objective for a scenario-defined number of own start-of-turn checks; working default is 2 consecutive own turns.
+- Required scenario state to track active faction, turn/round counters, objective hold state, victory state, and defeat state while remaining ready for later score/race modes.
+- Deferred online/simultaneous turns, strategic AI, diplomacy, more than two factions, active score/turn-limit victory, multiple objectives, campaign persistence, complex Champion recovery, hidden victory conditions, and crisis-clock systems.

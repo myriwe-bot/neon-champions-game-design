@@ -214,3 +214,9 @@
 - Approved `BattleResult` as the tactical-owned outcome payload carrying winner/outcome, survivors/losses, defeated flags, optional retreat/cancel state, summary, result flags, and diagnostics.
 - Locked the boundary rule: tactical combat resolves battles, but strategy applies site ownership, rewards, resources, objective progress, Champion defeat, turn, and victory consequences.
 - Added minimum strategic-loop test cases for guarded sites, site contests, reward gating, Champion defeat victory, and no pre-result mutation.
+
+## [2026-05-30] draft | STORY-STRAT-001 scenario map graph state
+
+- Created `production/stories/story-strat-001-scenario-map-graph-state.md` as the first READY-candidate strategic MVP implementation story.
+- Scope covers pure strategic scenario/map graph definitions, runtime initialization state, MVP validation rules, test-local sample data allowance, and EditMode/data validation evidence.
+- Story remains Draft pending human approval and parent epic handling before it can be marked READY.

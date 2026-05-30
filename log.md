@@ -220,3 +220,7 @@
 - Created `production/stories/story-strat-001-scenario-map-graph-state.md` as the first READY-candidate strategic MVP implementation story.
 - Scope covers pure strategic scenario/map graph definitions, runtime initialization state, MVP validation rules, test-local sample data allowance, and EditMode/data validation evidence.
 - Story remains Draft pending human approval and parent epic handling before it can be marked READY.
+
+## [2026-05-30] publish | Add STORY-STRAT-001 to site index
+
+- Added `production/stories/story-strat-001-scenario-map-graph-state.md` to `index.md` so the generated game-design website exposes the new READY-candidate story directly from Production Planning.

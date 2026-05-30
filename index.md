@@ -55,6 +55,7 @@
 
 - [[production/epics/epic-template]] — epic template.
 - [[production/stories/story-template]] — story template.
+- [[production/stories/story-strat-001-scenario-map-graph-state]] — READY-candidate first strategic MVP implementation story for scenario/map graph state.
 - [[production/gates/gate-template]] — phase/artifact/story gate template.
 - [[production/spikes/spike-001-unity-project-ci-foundation]] — approved first Unity technical foundation spike.
 - [[production/checklists/codex-pr-review-checklist]] — future implementation PR review checklist for Codex/agents.

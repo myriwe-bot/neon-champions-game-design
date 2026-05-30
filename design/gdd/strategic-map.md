@@ -571,11 +571,111 @@ Out of scope for MVP turn/scenario/victory:
 - hidden victory conditions;
 - crisis-clock/endgame systems.
 
-## 14. Open Design Packets
+## 14. Strategy-to-Tactical DTOs
 
-| Packet | Topic | Why It Blocks Implementation |
-|---|---|---|
-| Packet H | Strategy-to-tactical DTOs. | Required before implementation connects map and combat. |
+### Packet H Decision: D Phased Hybrid Explicit DTO Model
+
+Approved direction: use explicit boundary DTOs for the first implementation, but keep the result payload simpler than a full tactical event stream.
+
+This is a phased hybrid of:
+
+- **B: full explicit DTO now** — `BattleSetup` carries enough context for tactical combat to run without reading or mutating strategic world state; `BattleResult` returns clear outcome data for strategy to apply.
+- **C: event stream later** — detailed tactical event logs, replays, morale chains, and granular causal interpretation can be added later without replacing the core setup/result boundary.
+
+Boundary rule:
+
+Tactical combat resolves battles. Strategic systems own world consequences.
+
+Tactical combat may decide:
+
+1. battle winner/loser/no-contest result;
+2. surviving unit stacks;
+3. unit losses;
+4. defeated/routed flags;
+5. optional retreat/cancel outcome if supported by the battle mode.
+
+Tactical combat must not directly decide or mutate:
+
+1. site ownership/control;
+2. site consumed/visited state;
+3. resource stockpiles;
+4. recruitment offer state;
+5. objective hold progress;
+6. Champion movement/interactions beyond returned outcome flags;
+7. turn advancement;
+8. scenario victory state.
+
+`BattleSetup` minimum:
+
+| Field | Meaning |
+|---|---|
+| battleId | Stable ID for this battle instance. |
+| scenarioId | Scenario runtime/source reference. |
+| sourceInteractionId | Strategic command/interaction that created the battle. |
+| sourceSiteId | Site that triggered the battle, if any. |
+| sourceNodeId | Strategic node where the battle occurs. |
+| battleType | GuardedSite, SiteContest, ChampionVsChampion, or future extension. |
+| attackingFactionId | Faction initiating the battle. |
+| defendingFactionId | Defending faction, neutral faction, or guard-side reference. |
+| attackingChampionId | Attacking Champion if present. |
+| defendingChampionId | Defending Champion if present; optional for neutral guards. |
+| attackerController | Tactical controller for attacking side: HumanLocal or CombatAI. |
+| defenderController | Tactical controller for defending side: HumanLocal or CombatAI. |
+| attackingArmy | Snapshot/copy of attacking army stacks. |
+| defendingArmy | Snapshot/copy of defending army stacks or guard template. |
+| tacticalObjectiveId | Tactical battle objective/mode reference. |
+| allowedOutcomeFlags | Which outcomes the strategy layer expects, such as canRetreat or canClaimSite. |
+| rewardContextId | Optional reference to strategic reward context; tactics does not grant it directly. |
+
+`BattleResult` minimum:
+
+| Field | Meaning |
+|---|---|
+| battleId | Matches the setup battle ID. |
+| battleOutcome | AttackerWin, DefenderWin, Retreat, Cancelled, Draw, or Error/Invalid if needed. |
+| winningSide | Attacker, Defender, None. |
+| attackerArmyResult | Surviving/lost stacks and defeated flag for attacker. |
+| defenderArmyResult | Surviving/lost stacks and defeated flag for defender. |
+| attackerChampionDefeated | Whether the attacking Champion is defeated by battle outcome. |
+| defenderChampionDefeated | Whether the defending Champion is defeated by battle outcome. |
+| retreatingSide | Optional side if retreat exists. |
+| tacticalSummary | Short player-facing summary text/key or structured summary facts. |
+| resultFlags | Simple flags such as guardsClearedEligible, siteClaimEligible, rewardEligible. |
+| diagnostics | Optional validation/debug info for tests and agent evidence. |
+
+Strategic application contract:
+
+1. The strategy layer creates `BattleSetup` from scenario, Champion, army, site, controller, and interaction state.
+2. The tactical layer consumes `BattleSetup` as an input snapshot.
+3. The tactical layer returns `BattleResult` without writing strategic runtime state.
+4. The strategy layer validates that `BattleResult.battleId` matches an unresolved battle.
+5. The strategy layer applies army losses/survivors to Champion or site/guard state.
+6. The strategy layer evaluates Champion defeat and scenario loss.
+7. The strategy layer applies site control/guard clearing/reward eligibility according to site and scenario rules.
+8. The strategy layer applies resource/reward changes.
+9. The strategy layer checks victory/loss state after applying battle consequences.
+10. The strategy layer emits the player-facing strategic battle summary.
+
+Minimum strategic loop test cases:
+
+1. Guarded resource site creates `BattleSetup` with player Champion army vs neutral guard army.
+2. Attacker victory against guards clears guard state and grants/marks eligible reward through strategy application.
+3. Defender/guard victory damages or defeats attacking Champion army without granting the reward.
+4. Enemy-controlled central objective contest creates faction-vs-faction `BattleSetup`.
+5. Battle result can change site control only through strategic application, not tactical mutation.
+6. Defeating the enemy only-Champion faction triggers scenario victory through strategy rules.
+7. `BattleSetup` preview/generation does not consume site rewards or mutate resources before `BattleResult` is applied.
+
+Out of scope for MVP DTOs:
+
+- full tactical event stream;
+- deterministic replay log as a required feature;
+- granular per-action tactical audit beyond summary/results;
+- multi-side battles beyond attacker/defender;
+- diplomacy, alliances, or temporary coalitions;
+- complex retreat/capture/ransom systems;
+- direct tactical writes into strategic state;
+- hidden battle outcome manipulation by feed/misinformation systems.
 
 ## 15. Acceptance Criteria Draft
 
@@ -591,14 +691,15 @@ This GDD is implementation-ready only when later packets define enough detail th
 - [ ] All strategic runtime state is serializable.
 - [ ] No production story requires strategic AI, networking, simultaneous turns, or unapproved full economy systems.
 
-## 16. Next Packet
+## 16. Next Step
 
-Next decision packet: **Packet H — Strategy-to-Tactical DTOs**.
+The strategic-map GDD now has the minimum packet decisions needed to draft first implementation stories.
 
-It should decide:
+Next step: create READY-candidate stories for the first strategic MVP slice:
 
-- what fields `BattleSetup` must carry from strategy to tactics;
-- what fields `BattleResult` must return;
-- how site, Champion, army, controller, reward, and victory consequences are referenced;
-- what tactical combat is allowed to decide versus what only strategy may apply;
-- minimum test cases for the strategic loop stories.
+- `STORY-STRAT-001` scenario/map graph state;
+- `STORY-STRAT-002` hotseat turn ownership;
+- `STORY-STRAT-003` Champion movement;
+- `STORY-STRAT-004` site interaction and guarded battle trigger;
+- `STORY-TAC-001` battle setup/result DTO contracts;
+- `STORY-LOOP-001` playable strategy-to-battle-to-result loop.

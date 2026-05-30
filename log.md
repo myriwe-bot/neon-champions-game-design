@@ -190,3 +190,11 @@
 - Kept Compute, Medical Capacity, Energy, Legitimacy, Favors, and White Sky Access as future-facing flavor/tags rather than separate MVP stockpiles.
 - Defined one-time and recurring reward support, with first implementation allowed to start from one-time rewards if turn-income timing is not yet implemented.
 - Defined recruitment/reinforcement as predefined offers with fixed costs/stock, while deferring full town trees, dynamic pricing, supply chains, upkeep, and deep Intel operation systems.
+
+## [2026-05-30] approve | Strategic Champion movement packet
+
+- Recorded Packet F in `design/gdd/strategic-map.md`: use a phased hybrid Champion/army movement model.
+- Approved HoMM-lite MVP rules: one Champion per faction, node-route movement points, one attached army, one major strategic interaction per turn, and explicit movement/site-interaction commands.
+- Required the data model to support later richer logistics such as route types, weather, supply, fatigue, faction movement modifiers, and movement-type differences without implementing them now.
+- Defined minimum Champion, army, movement command, site interaction command, and battle-result army-delta concepts for future implementation stories.
+- Deferred multiple Champions, freeform/tile movement, caravans/reserves, garrison management, Champion progression/equipment, supply/fatigue/weather, complex defeat handling, and strategic AI movement planning.

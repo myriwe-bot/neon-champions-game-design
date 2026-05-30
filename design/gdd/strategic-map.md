@@ -392,15 +392,98 @@ Out of scope for MVP economy:
 - population/workforce simulation;
 - deep Intel operation deck/system.
 
-## 12. Open Design Packets
+## 12. Champion/Army Strategic State and Movement Allowance
+
+### Packet F Decision: D Phased Hybrid Champion Movement Model
+
+Approved direction: implement a HoMM-lite Champion model now, while keeping the data model ready for richer logistics later.
+
+This is a phased hybrid of:
+
+- **B: HoMM-lite now** — Champions have movement points, move along routes with costs, carry one army, and use one major site interaction per turn.
+- **C: richer logistics later** — future route types, weather, supply, fatigue, faction modifiers, and movement-type differences should fit without rewriting core Champion/site/faction state.
+
+Rules:
+
+1. Each faction begins the first MVP scenario with one Champion.
+2. A Champion belongs to exactly one faction.
+3. A Champion occupies exactly one strategic node at a time.
+4. A Champion has one attached army for MVP.
+5. A Champion has movement points that reset at the start of that Champion's faction turn.
+6. Moving along a route spends movement points equal to the route movement cost.
+7. A Champion may move through multiple connected nodes in one turn if movement points allow.
+8. A Champion cannot move along a route if remaining movement points are below that route's cost, unless a later rule explicitly allows partial/provisional movement.
+9. A Champion has one major strategic interaction per turn for MVP.
+10. Major strategic interactions include claiming a site, recruiting/reinforcing, collecting a guarded/owned reward, initiating a guarded battle, initiating an enemy-site contest, or using a one-shot visit effect.
+11. Previewing movement, site effects, battle risk, and recruitment costs does not consume movement or interaction.
+12. Tactical combat must not directly mutate Champion, army, or movement state; it returns a `BattleResult`, and the strategic layer applies consequences.
+13. MVP implementation should keep fields for future logistics modifiers, but not implement supply/fatigue/weather as active rules yet.
+
+Champion strategic state minimum:
+
+| Field | MVP Meaning | Future-Proofing Note |
+|---|---|---|
+| championId | Stable runtime/definition reference. | Supports multiple Champions later. |
+| factionId | Owning faction. | Controller remains separate from faction. |
+| currentNodeId | Current strategic graph node. | Can later map to tile/region position adapter. |
+| armyState | Attached stack collection. | May later split into reserves/caravans/garrisons. |
+| movementPointsRemaining | Remaining movement this turn. | Can later be modified by route/weather/status. |
+| hasMajorInteractionAvailable | Whether the Champion can still perform a major interaction this turn. | Allows later action systems without hardcoding one action forever. |
+| championStatusFlags | Minimal status flags such as active, defeated, wounded, locked. | Future logistics/status effects can extend this. |
+
+Army strategic state minimum:
+
+1. MVP armies are stack collections attached directly to Champions or defensive site/guard definitions.
+2. A Champion army is the source for that faction's tactical battle side unless a specific site/encounter overrides it.
+3. Neutral guards may use static army templates from site definitions.
+4. Enemy-controlled site defenders may use the occupying/contesting Champion army for MVP; separate garrisons are future scope unless explicitly added later.
+5. Battle losses return as stack deltas in `BattleResult` and are applied by the strategic layer.
+6. If a Champion's army is defeated, the Champion enters a defeated/wounded/loss state to be finalized in the turn/scenario/victory packet.
+
+Movement and interaction contract:
+
+1. Start of faction turn resets that faction Champion's movement points and major interaction availability.
+2. Route movement spends points and updates `currentNodeId` only after validation.
+3. Moving onto a node does not automatically claim, recruit, collect, or start battle without an explicit interaction command, unless a later UX decision chooses auto-prompt/auto-trigger behavior.
+4. Major site interaction consumes the Champion's major interaction availability.
+5. A battle-triggering interaction consumes the major interaction when the battle is launched.
+6. After battle, remaining movement may persist if the Champion survives and movement remains, but the major interaction is spent. This can be tuned later if playtests show cleanup movement feels wrong.
+7. Recruitment adds to the active Champion army for MVP if the army has capacity and the offer is valid. Faction reserve/caravan recruitment is deferred.
+
+Implementation-facing data implications:
+
+| Concept | Required Fields / Behavior |
+|---|---|
+| ChampionDefinition | stable champion ID, display/localization key, faction/archetype references, base movement allowance, starting army reference. |
+| ChampionStrategicState | champion ID, faction ID, current node ID, army state reference/value, movement points remaining, interaction availability, status flags. |
+| ArmyStackState | unit definition ID, current count, optional max/cap metadata. |
+| ArmyState | owner reference, stack list, validation for empty/defeated state. |
+| MovementCommand | champion ID, from node ID, to node ID or route/path, preview/apply mode. |
+| SiteInteractionCommand | champion ID, site ID, interaction type, preview/apply mode. |
+| BattleResultArmyDelta | side/champion/site references, stack losses/survivors, defeated flags. |
+
+Out of scope for MVP Champion/army movement:
+
+- multiple Champions per faction;
+- freeform movement between nodes;
+- strategic tile/hex movement;
+- caravans, detached armies, and separate faction reserves;
+- full garrison management;
+- Champion equipment/progression trees;
+- supply, fatigue, weather, route ownership taxes, and logistics attrition;
+- faction-specific movement rules;
+- complex retreat, capture, resurrection, or hospital systems;
+- simultaneous Champion movement;
+- strategic AI movement planning.
+
+## 13. Open Design Packets
 
 | Packet | Topic | Why It Blocks Implementation |
 |---|---|---|
-| Packet F | Champion/army strategic state and movement allowance. | Required for movement, army handoff, losses, and growth. |
 | Packet G | Turn/scenario/victory structure. | Required for hotseat and win/loss loop. |
 | Packet H | Strategy-to-tactical DTOs. | Required before implementation connects map and combat. |
 
-## 13. Acceptance Criteria Draft
+## 14. Acceptance Criteria Draft
 
 This GDD is implementation-ready only when later packets define enough detail that stories can test:
 
@@ -414,15 +497,15 @@ This GDD is implementation-ready only when later packets define enough detail th
 - [ ] All strategic runtime state is serializable.
 - [ ] No production story requires strategic AI, networking, simultaneous turns, or unapproved full economy systems.
 
-## 14. Next Packet
+## 15. Next Packet
 
-Next decision packet: **Packet F — Champion/Army Strategic State and Movement Allowance**.
+Next decision packet: **Packet G — Turn/Scenario/Victory Structure**.
 
 It should decide:
 
-- what strategic state a Champion tracks;
-- how movement allowance works on the node-route map;
-- whether Champions can act after moving;
-- how army stacks attach to Champions and sites;
-- how battle losses return to the strategic layer;
-- whether recruitment adds directly to the Champion army or a faction reserve first.
+- faction turn order for hotseat;
+- when resources/income refresh;
+- when Champion movement and interactions reset;
+- what ends a turn;
+- first MVP victory/loss conditions;
+- what happens when a Champion is defeated.

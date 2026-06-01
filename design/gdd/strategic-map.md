@@ -1,19 +1,19 @@
 ---
 title: Strategic Map
 type: system-gdd
-status: draft
+status: approved
 phase: systems-design
 owner: shared
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-01
 source_lore: [greenland, blue-monday, blue-week, white-sky, digital-net]
 related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index, design/gdd/tactical-combat, design/gdd/faction-unit-rosters, design/gdd/intel-resource]
-approval: pending
+approval: approved
 ---
 
 # Strategic Map
 
-> Status: Draft. Packet A/B direction is approved as the current MVP target: **C3-H two-faction hotseat strategy MVP**, using a **B1 duel map with B2 race-map pacing**. Further packets must define exact rules before implementation stories become READY.
+> Status: Approved. Packet A/B direction is approved as the current MVP target: **C3-H two-faction hotseat strategy MVP**, using a **B1 duel map with B2 race-map pacing**. The sections cited by READY implementation stories are approved implementation sources; future packets still require exact READY stories before implementation.
 
 ## 1. Summary
 

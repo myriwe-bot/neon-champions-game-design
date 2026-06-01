@@ -238,3 +238,9 @@
 - Defined gate checks for branch hygiene, source authority, scope compliance, architecture/Unity asset safety, TDD evidence, local verification, CI/branch protection, independent review, documentation sync, and final merge decision.
 - Added a standard gate verdict template and exception policy requiring human approval for merge-blocking exceptions.
 - Updated `index.md` so the workflow is visible from Architecture.
+
+## [2026-06-01] approve | Merge-to-main gate workflow
+
+- Recorded human approval for `docs/architecture/merge-to-main-gate.md`.
+- Marked the merge-to-main gate as an approved, binding workflow for Unity implementation branches landing on `main`.
+- Updated `index.md` to show the workflow as approved.

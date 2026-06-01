@@ -70,7 +70,7 @@
 - [[docs/architecture/data-authoring-options]] — data authoring options and phased-hybrid decision.
 - [[docs/architecture/testing-strategy]] — strict layered testing ADR.
 - [[docs/architecture/ci-build-automation]] — strict CI/build automation ADR.
-- [[docs/architecture/merge-to-main-gate]] — in-review workflow for rigorous PR merge gates before implementation branches land on main.
+- [[docs/architecture/merge-to-main-gate]] — approved workflow for rigorous PR merge gates before implementation branches land on main.
 - [[docs/architecture/codex-agent-instructions]] — researched Codex/AGENTS.md instruction strategy.
 - [[docs/architecture/unity-repo-agents-template]] — approved starting template for future Unity repo AGENTS.md files.
 - [[docs/architecture/multi-agent-operating-model]] — role/gate/worktree model for using many agents safely.

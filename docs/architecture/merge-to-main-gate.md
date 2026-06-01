@@ -1,23 +1,23 @@
 ---
 title: Merge to Main Gate
 type: adr
-status: in-review
+status: approved
 phase: technical-setup
 owner: shared
 created: 2026-06-01
 updated: 2026-06-01
 source_lore: []
 related: [docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, docs/architecture/multi-agent-operating-model, production/checklists/codex-pr-review-checklist]
-approval: pending
+approval: approved
 ---
 
 # Merge to Main Gate
 
 ## Status
 
-In review / pending human approval.
+Approved.
 
-This workflow defines the required gate sequence before any Unity implementation branch merges into `main`. It is intended to become binding after human approval.
+This workflow defines the required gate sequence before any Unity implementation branch merges into `main`. It is binding after human approval on 2026-06-01.
 
 ## Decision
 
@@ -333,4 +333,4 @@ A PR can merge only when all of this is true:
 8. Human approval exists for any exception.
 9. Merge happens via PR, preferably squash merge.
 
-Current verdict: IN REVIEW.
+Current verdict: APPROVED.

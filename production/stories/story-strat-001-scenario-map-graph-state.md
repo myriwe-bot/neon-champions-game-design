@@ -1,23 +1,23 @@
 ---
 title: STORY-STRAT-001 Scenario Map Graph State
 type: story
-status: draft
+status: approved
 phase: production
 owner: shared
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-01
 source_lore: [greenland, blue-monday, white-sky, digital-net]
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/stories/story-template]
-approval: pending
+related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-template]
+approval: approved
 ---
 
 # Story: STORY-STRAT-001 Scenario Map Graph State
 
 ## Status
 
-Draft / READY-candidate.
+READY.
 
-This story is intended as the first strategic MVP implementation story, but should not be assigned until the human approves it as READY and the implementation repo branch/PR plan is confirmed.
+This story is approved as the first strategic MVP implementation story. It may be assigned once the implementation repo branch/PR plan is confirmed and the implementer has read the Unity repo `AGENTS.md` and relevant source/test assembly layout.
 
 ## Story type
 
@@ -27,8 +27,8 @@ Primary layer: pure strategic-domain data/state, with validation tests.
 
 ## Parent epic
 
-- Epic ID/path: TBD — recommended new epic `EPIC-STRAT-MVP-001 Strategic MVP Core Loop`.
-- Blocking? Not for drafting, but a parent epic path should be created or explicitly marked N/A before READY.
+- Epic ID/path: [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop|EPIC-STRAT-MVP-001 Strategic MVP Core Loop]].
+- Blocking? No. Parent epic exists and is approved.
 
 ## User/player/system value
 
@@ -64,7 +64,7 @@ Exact source references:
 - Worldbuilding or design-bridge source, if lore-facing:
   - N/A for implementation behavior. Placeholder IDs/names may reference Greenland/White Sky flavor only if already present in GDD; no new lore decisions authorized.
 - Parent epic:
-  - TBD as above.
+  - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop|EPIC-STRAT-MVP-001 Strategic MVP Core Loop]].
 
 ## In scope
 
@@ -204,10 +204,9 @@ Use `docs/architecture/testing-strategy.md` to select required evidence by story
 
 ## Ambiguity Check
 
-Status: PASS with one pre-READY housekeeping item.
+Status: PASS.
 
 Open questions:
-- Parent epic file/path is not yet created. This should be created before or alongside marking the story READY, or explicitly marked N/A by human approval.
 - Exact Unity repo source/test paths must be discovered by the implementer from existing AGENTS.md and assembly definitions before coding. This is implementation discovery, not a design ambiguity.
 
 Assumptions:
@@ -221,10 +220,13 @@ Out of scope:
 Allowed stubs/mocks:
 - Same as Allowed stubs section.
 
-Human-approved exceptions:
-- None yet.
+Human approval:
+- Approved by human on 2026-06-01 with note: "Story 001 is good".
 
-If status is FAIL, this story is not READY. Current status is PASS for design ambiguity, but story remains Draft until human approval and parent epic handling.
+Human-approved exceptions:
+- None.
+
+If status is FAIL, this story is not READY. Current status is PASS and the story is READY after human approval and parent epic handling.
 
 ## Branch / PR requirements
 
@@ -258,7 +260,6 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 A story may be marked READY only when all items are true:
 
 - [x] Story has stable ID, title, type, status, and parent epic.
-  - Parent epic is identified as TBD/recommended, but file/path is not yet created.
 - [x] User/player/system value is clear.
 - [x] Exact GDD source section is linked or explicitly N/A.
 - [x] Exact ADR/architecture/control-manifest source is linked or explicitly N/A.
@@ -267,14 +268,14 @@ A story may be marked READY only when all items are true:
 - [x] In-scope work is concrete and bounded.
 - [x] Out-of-scope work is explicit.
 - [x] Stubs/mocks/placeholders are either disallowed or explicitly listed.
-- [ ] Dependencies are listed and satisfied or marked blocking.
-  - Parent epic handling remains open.
+- [x] Dependencies are listed and satisfied or marked blocking.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
 - [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
+  - Approved by human on 2026-06-01.
 
 ## DONE gate
 
@@ -292,16 +293,15 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-Draft / READY-candidate.
+READY.
 
 Gate assessment:
 
 - Blockers before READY:
-  - Parent epic path should be created or explicitly marked N/A.
-  - Human approval required.
+  - None.
 - Concerns:
   - Exact Unity source/test paths must be discovered in the implementation repo at execution time.
 - Required fixes before implementation:
-  - Mark story READY only after the parent epic handling and human approval are recorded.
+  - None before READY. Implementer must still confirm implementation repo branch/PR plan and source/test paths before coding.
 - Optional improvements:
   - Add a tiny scenario fixture name once the Unity repo folder/assembly names are inspected.

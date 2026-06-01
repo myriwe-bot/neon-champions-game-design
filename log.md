@@ -224,3 +224,10 @@
 ## [2026-05-30] publish | Add STORY-STRAT-001 to site index
 
 - Added `production/stories/story-strat-001-scenario-map-graph-state.md` to `index.md` so the generated game-design website exposes the new READY-candidate story directly from Production Planning.
+
+## [2026-06-01] approve | STORY-STRAT-001 and parent strategic MVP epic
+
+- Created `production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md` as the approved parent epic for the first strategic MVP core loop.
+- Recorded human approval for `production/stories/story-strat-001-scenario-map-graph-state.md` and marked it READY.
+- Cleared the parent-epic READY blocker; remaining implementation discovery is limited to Unity repo source/test paths, branch/PR setup, and assembly layout.
+- Updated `index.md` so the epic and READY story are visible from Production Planning.

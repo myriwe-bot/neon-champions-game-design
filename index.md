@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-05-30
+> Last updated: 2026-06-01
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -54,8 +54,9 @@
 ## Production Planning
 
 - [[production/epics/epic-template]] — epic template.
+- [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — approved parent epic for the first strategic MVP core loop stories.
 - [[production/stories/story-template]] — story template.
-- [[production/stories/story-strat-001-scenario-map-graph-state]] — READY-candidate first strategic MVP implementation story for scenario/map graph state.
+- [[production/stories/story-strat-001-scenario-map-graph-state]] — READY first strategic MVP implementation story for scenario/map graph state.
 - [[production/gates/gate-template]] — phase/artifact/story gate template.
 - [[production/spikes/spike-001-unity-project-ci-foundation]] — approved first Unity technical foundation spike.
 - [[production/checklists/codex-pr-review-checklist]] — future implementation PR review checklist for Codex/agents.

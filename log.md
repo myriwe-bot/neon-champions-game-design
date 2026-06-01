@@ -231,3 +231,10 @@
 - Recorded human approval for `production/stories/story-strat-001-scenario-map-graph-state.md` and marked it READY.
 - Cleared the parent-epic READY blocker; remaining implementation discovery is limited to Unity repo source/test paths, branch/PR setup, and assembly layout.
 - Updated `index.md` so the epic and READY story are visible from Production Planning.
+
+## [2026-06-01] draft | Merge-to-main gate workflow
+
+- Created `docs/architecture/merge-to-main-gate.md` as an in-review workflow for rigorous PR merge gates before implementation branches land on `main`.
+- Defined gate checks for branch hygiene, source authority, scope compliance, architecture/Unity asset safety, TDD evidence, local verification, CI/branch protection, independent review, documentation sync, and final merge decision.
+- Added a standard gate verdict template and exception policy requiring human approval for merge-blocking exceptions.
+- Updated `index.md` so the workflow is visible from Architecture.

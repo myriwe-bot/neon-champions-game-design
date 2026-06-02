@@ -15,9 +15,9 @@ approval: approved
 
 ## Recommended mode
 
-Start with `STORY-STRAT-002` only. If it passes tests and opens a PR, review/merge it, then run `STORY-STRAT-003`.
+`STORY-STRAT-002` is merged. Start the next Codex run with `STORY-STRAT-003` only.
 
-A multi-story Codex run is allowed only for the logic pair `STORY-STRAT-002` + `STORY-STRAT-003`, because both are pure domain/EditMode stories. Codex must still commit them separately and may not continue into visual/input/UI/loop stories in the same run.
+A multi-story Codex run for `STORY-STRAT-002` + `STORY-STRAT-003` is now obsolete for normal execution. Keep story work sequential: implement `STORY-STRAT-003`, review/merge it, then continue to the visual/input/UI loop stories one at a time.
 
 
 ## Copy-safe prompt-file mode
@@ -36,7 +36,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-003.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -81,7 +81,23 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Prompt A — preferred single-story start
 
-Use this first:
+Use this now for `STORY-STRAT-003`:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-003.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+If Codex errors with Windows sandbox setup/spawn issues, rerun only after reviewing trust/scope:
+
+```powershell
+codex exec --sandbox danger-full-access $prompt
+```
+
+## Legacy Prompt A — STORY-STRAT-002 single-story start
+
+Historical prompt retained for audit only; `STORY-STRAT-002` is already merged.
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity

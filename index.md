@@ -66,6 +66,7 @@
 - [[production/stories/story-tac-001-battle-setup-result-dto-contracts]] — READY-candidate tactical boundary DTO story with clarified strategic-map §14 authority.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.
+- [[production/sprints/strategic-mvp-codex-run-prompts]] — exact PowerShell commands and Codex prompts for running the next strategic MVP implementation stories.
 - [[production/gates/gate-template]] — phase/artifact/story gate template.
 - [[production/spikes/spike-001-unity-project-ci-foundation]] — approved first Unity technical foundation spike.
 - [[production/checklists/codex-pr-review-checklist]] — future implementation PR review checklist for Codex/agents.

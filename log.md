@@ -260,3 +260,10 @@
 - Clarified STORY-TAC-001 authority: strategic-map §14 is binding; draft tactical-combat docs are compatibility-only and must not expand/block the DTO minimum unless they contradict §14.
 - Approved `production/sprints/strategic-mvp-story-train-001.md` and created `production/sprints/strategic-mvp-codex-execution-system.md` with Codex queue, preflight, prompt wrappers, PR evidence template, and merge/continue rule.
 - Updated `index.md` with the newly READY story links and Codex execution system.
+
+
+## [2026-06-02] add | Strategic MVP Codex run prompts
+
+- Created `production/sprints/strategic-mvp-codex-run-prompts.md` with exact Windows PowerShell commands for Codex.
+- Added preferred single-story prompt for STORY-STRAT-002 and optional two-story logic batch prompt for STORY-STRAT-002 plus STORY-STRAT-003.
+- Updated `index.md` with the run-prompt document.

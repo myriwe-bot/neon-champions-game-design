@@ -19,6 +19,49 @@ Start with `STORY-STRAT-002` only. If it passes tests and opens a PR, review/mer
 
 A multi-story Codex run is allowed only for the logic pair `STORY-STRAT-002` + `STORY-STRAT-003`, because both are pure domain/EditMode stories. Codex must still commit them separately and may not continue into visual/input/UI/loop stories in the same run.
 
+
+## Copy-safe prompt-file mode
+
+If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
+
+Preferred single-story run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git fetch origin
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-002.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+Optional two-story logic batch:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git fetch origin
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-strat-002-003-batch.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+If Codex errors with Windows sandbox setup/spawn issues, rerun the last command with:
+
+```powershell
+codex exec --sandbox danger-full-access $prompt
+```
+
 ## Windows PowerShell preflight
 
 Run this in PowerShell:

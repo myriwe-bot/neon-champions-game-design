@@ -1,0 +1,33 @@
+Implement exactly one READY story: STORY-STRAT-002.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-strat-002-hotseat-turn-ownership.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - all GDD and architecture/control docs linked by the story
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - existing assembly definitions, test layout, and STORY-STRAT-001 implementation patterns
+2. Start from updated main and create/use branch:
+   story/STORY-STRAT-002-hotseat-turn-ownership
+3. Implement only pure domain hotseat turn ownership:
+   - turn begin/start service behavior
+   - active faction Champion movement/action reset
+   - end-turn advancement
+   - turn/round increment/wrap behavior
+   - invalid-state diagnostics
+   - required EditMode tests
+4. Use TDD: RED test, minimal implementation, GREEN test, refactor only under green tests.
+5. Do not implement UI, scene, input, camera, movement execution, income, site interaction, rewards, battle handoff, strategic AI, save/load, package/settings changes, lore/content, or final data-authoring decisions.
+6. Run relevant EditMode tests and any repo validators available. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+7. Commit and push if sandbox permits.
+8. Open a PR titled:
+   STORY-STRAT-002 Hotseat turn ownership
+9. PR body must include summary, source docs read, RED/GREEN evidence, tests/checks, CI status/link if available, and omissions/stubs/mocks/assumptions/deferred work.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, or implementation would require scope expansion.

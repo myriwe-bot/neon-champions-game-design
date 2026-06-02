@@ -1,0 +1,62 @@
+Implement a sequential two-story logic batch: STORY-STRAT-002, then STORY-STRAT-003.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Hard rules:
+- Read all required source docs before coding each story.
+- Keep story work separable by commit and, if possible, by PR.
+- Do not proceed to STORY-STRAT-003 unless STORY-STRAT-002 tests are green and its commit is complete.
+- Do not implement STORY-STRAT-VIS-001, STORY-STRAT-INPUT-001, STORY-STRAT-UI-001, STORY-LOOP-001, or STORY-TAC-001 in this run.
+- Stop on ambiguity, dirty repo, missing/draft/contradictory authority, test failure you cannot fix story-locally, CI failure, or scope expansion.
+
+Required reading order before STORY-STRAT-002:
+1. production/stories/story-strat-002-hotseat-turn-ownership.md
+2. production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+3. all GDD/architecture/control docs linked by STORY-STRAT-002
+4. production/sprints/strategic-mvp-story-train-001.md
+5. production/sprints/strategic-mvp-codex-execution-system.md
+6. production/sprints/strategic-mvp-codex-run-prompts.md
+7. Unity AGENTS.md and scoped AGENTS.md files
+8. existing source/test layout and STORY-STRAT-001 implementation patterns
+
+STORY-STRAT-002 branch:
+story/STORY-STRAT-002-hotseat-turn-ownership
+
+STORY-STRAT-002 scope:
+- pure domain turn begin/end service/controller
+- active faction Champion movement/action reset
+- turn/round advancement and wrap
+- invalid-state diagnostics
+- EditMode tests with RED/GREEN evidence
+No UI, scene, input, movement execution, income, site, rewards, battle handoff, packages/settings, save/load, lore/content, or AI.
+
+After STORY-STRAT-002 is green and committed, decide how to continue:
+- Preferred: push/open PR for STORY-STRAT-002 and stop.
+- If local process allows stacked work and no merge is required yet, create/use branch:
+  story/STORY-STRAT-003-champion-route-movement
+  based on the completed STORY-STRAT-002 branch, and clearly report it as stacked.
+
+Required reading order before STORY-STRAT-003:
+1. production/stories/story-strat-003-champion-route-movement.md
+2. parent epic and all linked GDD/architecture/control docs
+3. same sprint/execution docs and AGENTS.md files
+4. existing STRAT-001/STRAT-002 source/test patterns
+
+STORY-STRAT-003 scope:
+- pure domain route movement request/preview/apply service
+- validation for Champion existence, active faction ownership if available, origin/current node, connected route, positive/affordable route cost, defeated/locked Champion restrictions
+- preview must not mutate runtime state
+- apply updates current node and movement points only after validation passes
+- EditMode tests with RED/GREEN evidence
+No pathfinding, UI/input, scene, camera, site interaction, auto-claim, rewards, turn automation, movement modifiers, packages/settings, save/load, lore/content, or AI.
+
+Finish report must include:
+- branches/commits created
+- whether STORY-STRAT-003 is stacked on STORY-STRAT-002
+- files changed per story
+- tests/checks run and results
+- RED/GREEN evidence per story
+- PR URLs if opened
+- omissions/stubs/mocks/assumptions/deferred work
+- any stop-condition risks

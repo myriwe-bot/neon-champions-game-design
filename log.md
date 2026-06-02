@@ -267,3 +267,9 @@
 - Created `production/sprints/strategic-mvp-codex-run-prompts.md` with exact Windows PowerShell commands for Codex.
 - Added preferred single-story prompt for STORY-STRAT-002 and optional two-story logic batch prompt for STORY-STRAT-002 plus STORY-STRAT-003.
 - Updated `index.md` with the run-prompt document.
+
+
+## [2026-06-02] revise | Copy-safe Codex prompt files
+
+- Added `production/sprints/codex-story-strat-002.prompt.txt` and `production/sprints/codex-strat-002-003-batch.prompt.txt` so PowerShell can pass prompts via `Get-Content -Raw` without here-string continuation prompts.
+- Updated `production/sprints/strategic-mvp-codex-run-prompts.md` with copy-safe prompt-file commands.

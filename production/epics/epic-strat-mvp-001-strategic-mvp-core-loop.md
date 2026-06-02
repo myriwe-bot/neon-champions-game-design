@@ -7,7 +7,7 @@ owner: shared
 created: 2026-06-01
 updated: 2026-06-01
 source_lore: [greenland, blue-monday, white-sky, digital-net]
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/stories/story-strat-001-scenario-map-graph-state]
+related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-tac-001-battle-setup-result-dto-contracts, production/sprints/strategic-mvp-story-train-001]
 approval: approved
 ---
 
@@ -126,12 +126,13 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 |---|---|---|---|---|
-| [[production/stories/story-strat-001-scenario-map-graph-state|STORY-STRAT-001 Scenario Map Graph State]] | READY | Logic + Config/Data | SPIKE-001 foundation, approved strategic-map GDD, approved technical controls | EditMode/domain validation tests, serialization round-trip proxy, TDD/CI evidence |
-| STORY-STRAT-002 Champion Route Movement | Draft placeholder | Logic | STORY-STRAT-001 | Movement validation and state-transition tests |
-| STORY-STRAT-003 Turn Refresh and Objective Hold State | Draft placeholder | Logic | STORY-STRAT-001 | Turn/objective/victory state tests |
-| STORY-STRAT-004 Site Interaction and Rewards | Draft placeholder | Logic + Config/Data | STORY-STRAT-001, STORY-STRAT-003 | Site reward/control validation tests |
-| STORY-STRAT-005 Guarded Site Battle Handoff | Draft placeholder | Integration | STORY-STRAT-001, tactical DTO contract | BattleSetup/BattleResult integration tests |
-| STORY-STRAT-006 Minimal Local Hotseat Strategic Loop Smoke | Draft placeholder | Integration + UX/Smoke | Prior loop stories | PlayMode/smoke evidence and CI |
+| [[production/stories/story-strat-001-scenario-map-graph-state|STORY-STRAT-001 Scenario Map Graph State]] | READY / implementation verified for merge | Logic + Config/Data | SPIKE-001 foundation, approved strategic-map GDD, approved technical controls | EditMode/domain validation tests, serialization round-trip proxy, TDD/CI evidence |
+| [[production/stories/story-strat-002-hotseat-turn-ownership|STORY-STRAT-002 Hotseat Turn Ownership]] | READY-candidate | Logic | STORY-STRAT-001 | Turn validation, start-turn reset, end-turn advancement, round increment tests |
+| [[production/stories/story-strat-003-champion-route-movement|STORY-STRAT-003 Champion Route Movement]] | READY-candidate | Logic | STORY-STRAT-001, preferably STORY-STRAT-002 | Movement validation, preview non-mutation, state-transition tests |
+| [[production/stories/story-tac-001-battle-setup-result-dto-contracts|STORY-TAC-001 Battle Setup Result DTO Contracts]] | READY-candidate | Logic + Integration contract | STORY-STRAT-001, strategic-map §14 | DTO validation, setup/result matching, snapshot immutability tests |
+| STORY-STRAT-004 Site Interaction and Guarded Battle Trigger | Draft placeholder | Logic + Integration | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-TAC-001 | Interaction preview/apply and BattleSetup creation tests |
+| STORY-STRAT-005 Strategic Battle Result Application | Draft placeholder | Logic + Integration | STORY-TAC-001, STORY-STRAT-004 | BattleResult application, losses, guard clearing, rewards, control, victory tests |
+| STORY-LOOP-001 Minimal Local Hotseat Strategic Loop Smoke | Draft placeholder | Integration + UX/Smoke | Prior loop stories | PlayMode/smoke evidence and CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 

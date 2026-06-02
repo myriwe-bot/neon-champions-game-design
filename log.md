@@ -244,3 +244,12 @@
 - Recorded human approval for `docs/architecture/merge-to-main-gate.md`.
 - Marked the merge-to-main gate as an approved, binding workflow for Unity implementation branches landing on `main`.
 - Updated `index.md` to show the workflow as approved.
+
+## [2026-06-02] plan | Strategic MVP story train 001
+
+- Created `production/stories/story-strat-002-hotseat-turn-ownership.md` as a READY-candidate domain story for deterministic local-hotseat turn ownership.
+- Created `production/stories/story-strat-003-champion-route-movement.md` as a READY-candidate domain story for single-route Champion movement over authored graph routes.
+- Created `production/stories/story-tac-001-battle-setup-result-dto-contracts.md` as a READY-candidate contract story for strategy-to-tactics DTOs.
+- Created `production/sprints/strategic-mvp-story-train-001.md` to sequence Codex implementation one approved story/branch/PR at a time.
+- Updated `production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md` and `index.md` with the new story train.
+- Approval remains pending; the new stories are not READY for implementation until human approval is recorded.

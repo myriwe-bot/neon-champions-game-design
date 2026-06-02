@@ -1,0 +1,42 @@
+Implement exactly one READY story: STORY-STRAT-VIS-001.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-strat-vis-001-minimal-strategic-map-presentation.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§2, 3, 6, 8, 9
+     - docs/architecture/unity-technical-scheme.md §Core Technical Principle, §Project Layout Standard, §Assembly Boundary Standard
+     - docs/architecture/control-manifest.md §§1, 2, 3, 4, 5, 6, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - existing assembly definitions, test layout, scene layout, STORY-STRAT-001/002/003 implementations, and any existing presentation/infrastructure patterns
+2. Start from updated main and create/use branch:
+   story/strat-vis-001-minimal-map-presentation
+3. Implement only the approved crude strategic-map presentation:
+   - one minimal strategic-map Unity scene suitable for PlayMode/manual smoke testing
+   - thin presentation adapter/bootstrap reading existing scenario definition/runtime state
+   - visible placeholder nodes using presentation coordinates from existing graph data
+   - visible placeholder route connectors between authored endpoint nodes
+   - one Champion marker per faction at current node
+   - visible active faction / active Champion indication
+   - crude placeholder site state indication only if current domain data exposes it; otherwise record omission and do not invent rules
+   - PlayMode/smoke automation, where feasible, proving scene loads and expected node/route/Champion marker counts exist
+   - manual screenshot or short video evidence showing crude map, nodes/routes, Champion markers, and active faction display
+4. Keep domain/application ownership intact. Presentation may read/adapt domain state, but must not own movement, turn, site, reward, battle, or victory rules.
+5. Use TDD where production helpers/mapping logic are added: RED test, minimal implementation, GREEN test, refactor only under green tests. For scene wiring, provide PlayMode/smoke and manual visual evidence.
+6. Do not implement player movement input, click/drag/keyboard controls, End Turn HUD/control, tactical battle, site interaction, rewards, recruitment, victory, final art, final Greenland map, terrain, animations, VFX/audio, camera polish, localization implementation, UI skinning, save/load, map editor, package/settings changes, strategic AI, lore/content expansion, or final data-authoring architecture.
+7. Run story-required PlayMode/smoke checks, relevant EditMode checks if helpers are added, placeholder validator, and CI-triggering checks where available. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+8. Commit and push if sandbox permits.
+9. Open a PR titled:
+   STORY-STRAT-VIS-001 Minimal strategic map presentation
+10. PR body must include summary, source docs read, RED/GREEN evidence where applicable, PlayMode/smoke evidence, manual screenshot/video evidence path, tests/checks, CI status/link if available, and omissions/stubs/mocks/assumptions/deferred work.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, scene/prefab wiring is unsafe, implementation requires unapproved packages/settings/final art/final UI architecture/content/lore/gameplay rules, or scope expands into input/HUD/site/battle behavior.

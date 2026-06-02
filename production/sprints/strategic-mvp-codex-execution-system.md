@@ -37,8 +37,8 @@ If paths differ, locate repositories by name and keep the same relative paths.
 | Order | Story | Branch | Estimate | Start condition |
 |---:|---|---|---|---|
 | 1 | `STORY-STRAT-002` Hotseat Turn Ownership | `story/STORY-STRAT-002-hotseat-turn-ownership` | S | MERGED — PR #4, merge commit `5312dba3709daeb99bee4371626a6121896b69ba` |
-| 2 | `STORY-STRAT-003` Champion Route Movement | `story/STORY-STRAT-003-champion-route-movement` | S/M | READY to start from updated `main` after STORY-STRAT-002 merge |
-| 3 | `STORY-STRAT-VIS-001` Minimal Strategic Map Presentation | `story/strat-vis-001-minimal-map-presentation` | M | STORY-STRAT-003 merged or consciously implemented against current domain branch |
+| 2 | `STORY-STRAT-003` Champion Route Movement | `story/STORY-STRAT-003-champion-route-movement` | S/M | MERGED — PR #5, merge commit `9472d927d7cb505b0cc4f8772b0129395880d61d` |
+| 3 | `STORY-STRAT-VIS-001` Minimal Strategic Map Presentation | `story/strat-vis-001-minimal-map-presentation` | M | READY to start from updated `main` after STORY-STRAT-003 merge |
 | 4 | `STORY-STRAT-INPUT-001` Select Champion and Route Move | `story/strat-input-001-select-route-move` | M | VIS plus STRAT-003 movement service available |
 | 5 | `STORY-STRAT-UI-001` Minimal Hotseat HUD | `story/strat-ui-001-minimal-hotseat-hud` | M | STRAT-002 turn service and VIS scene available; INPUT recommended |
 | 6 | `STORY-LOOP-001` Minimal Local Hotseat Strategic Loop Smoke | `story/loop-001-hotseat-strategic-smoke` | S/M | STRAT-002, STRAT-003, VIS, INPUT, and UI merged |

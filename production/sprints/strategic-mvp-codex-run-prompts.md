@@ -15,9 +15,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-STRAT-002` is merged. Start the next Codex run with `STORY-STRAT-003` only.
+`STORY-STRAT-003` is merged. Start the next Codex run with `STORY-STRAT-VIS-001` only.
 
-A multi-story Codex run for `STORY-STRAT-002` + `STORY-STRAT-003` is now obsolete for normal execution. Keep story work sequential: implement `STORY-STRAT-003`, review/merge it, then continue to the visual/input/UI loop stories one at a time.
+Keep story work sequential: implement `STORY-STRAT-VIS-001`, review/merge it, then continue to input/UI/loop stories one at a time.
 
 
 ## Copy-safe prompt-file mode
@@ -36,25 +36,11 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-vis-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-Optional two-story logic batch:
-
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git pull --ff-only origin main
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git fetch origin
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-strat-002-003-batch.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-```
+Historical prompt-file runs for `STORY-STRAT-002` and `STORY-STRAT-003` are retained in this folder for audit only.
 
 If Codex errors with Windows sandbox setup/spawn issues, rerun the last command with:
 
@@ -81,11 +67,11 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Prompt A — preferred single-story start
 
-Use this now for `STORY-STRAT-003`:
+Use this now for `STORY-STRAT-VIS-001`:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-vis-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -93,6 +79,16 @@ If Codex errors with Windows sandbox setup/spawn issues, rerun only after review
 
 ```powershell
 codex exec --sandbox danger-full-access $prompt
+```
+
+## Legacy Prompt A — STORY-STRAT-003 single-story start
+
+Historical prompt retained for audit only; `STORY-STRAT-003` is already merged.
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-003.prompt.txt"
+codex exec --sandbox workspace-write $prompt
 ```
 
 ## Legacy Prompt A — STORY-STRAT-002 single-story start

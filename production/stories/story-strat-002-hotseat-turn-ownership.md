@@ -1,27 +1,32 @@
 ---
 title: STORY-STRAT-002 Hotseat Turn Ownership
 type: story
-status: in-review
+status: approved
 phase: production
 owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
 related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-STRAT-002 Hotseat Turn Ownership
 
 ## Status
 
-READY-candidate. Requires explicit human approval before Codex implementation.
+READY. Human approval recorded; this story may be assigned to Codex under the story train execution contract.
 
 ## Story type
 
 Logic.
 
 Primary layer: pure strategic-domain turn state and deterministic turn advancement.
+
+## Estimate
+
+- Size: S.
+- Basis: readiness review on 2026-06-02; estimate covers story-scoped implementation and required evidence only.
 
 ## Parent epic
 
@@ -133,6 +138,9 @@ Out of scope:
 Allowed stubs/mocks:
 - Same as Allowed stubs section.
 
+Human approval:
+- Approved by human on 2026-06-02 in response to readiness review.
+
 Human-approved exceptions:
 - None.
 
@@ -167,7 +175,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Required automated tests/validators/PlayMode evidence are listed or N/A.
 - [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Estimate is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
+  - Approved by human on 2026-06-02 in response to readiness review.
 
 ## DONE gate
 
@@ -182,4 +192,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate. Gate blockers: human approval pending.
+READY. Gate blockers: none.

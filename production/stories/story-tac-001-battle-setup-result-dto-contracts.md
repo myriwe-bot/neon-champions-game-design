@@ -23,6 +23,11 @@ Logic + Integration contract.
 
 Primary layer: pure DTO boundary between strategic state and future tactical combat.
 
+## Estimate
+
+- Size: M.
+- Basis: readiness review on 2026-06-02; estimate covers story-scoped implementation and required evidence only.
+
 ## Parent epic
 
 - Epic ID/path: [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop|EPIC-STRAT-MVP-001 Strategic MVP Core Loop]].
@@ -41,7 +46,7 @@ Exact source references:
   - `design/gdd/strategic-map.md` §10 Site and Infrastructure States, ownership/control contract rule 6.
   - `design/gdd/strategic-map.md` §12 Champion/Army Strategic State and Movement Allowance, movement and interaction contract rule 12 and army strategic state rules 2-5.
   - `design/gdd/strategic-map.md` §14 Strategy-to-Tactical DTOs, boundary rule, BattleSetup minimum, BattleResult minimum, strategic application contract, and minimum strategic loop test cases.
-  - `design/gdd/tactical-combat.md` and split tactical implementation contracts may be read for compatibility, but this story may not implement tactical combat rules beyond DTO shape.
+  - Binding implementation authority is `design/gdd/strategic-map.md` §14 plus the strategic-map sections above. `design/gdd/tactical-combat.md` and split tactical implementation contracts may be read only for compatibility; because they remain draft/pending, they must not add scope or block the DTO minimum unless they directly contradict strategic-map §14.
 - ADR / architecture section / control-manifest rule:
   - `docs/architecture/unity-technical-scheme.md` — domain logic separate from Unity presentation and explicit module boundaries.
   - `docs/architecture/control-manifest.md` §§1, 2, 4, 5, 6, 7, 9, 10.
@@ -88,7 +93,7 @@ Not allowed:
 - Required architecture decisions:
   - Approved Unity technical scheme, control manifest, testing strategy, and CI/build automation.
 - Required tactical design:
-  - Strategic-map §14 is the binding source for this DTO story. Tactical GDD compatibility should be checked, but unresolved tactical combat details must not block the DTO minimum unless they contradict §14.
+  - Strategic-map §14 is the binding source for this DTO story. Tactical GDD compatibility should be checked, but unresolved draft tactical combat details must not block the DTO minimum unless they contradict §14. Codex must not implement tactical combat internals from draft tactical sources.
 
 ## Acceptance criteria
 
@@ -166,6 +171,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Required automated tests/validators/PlayMode evidence are listed or N/A.
 - [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
+- [x] Estimate is recorded.
 - [ ] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate

@@ -57,10 +57,15 @@
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — approved parent epic for the first strategic MVP core loop stories.
 - [[production/stories/story-template]] — story template.
 - [[production/stories/story-strat-001-scenario-map-graph-state]] — READY first strategic MVP implementation story for scenario/map graph state.
-- [[production/stories/story-strat-002-hotseat-turn-ownership]] — READY-candidate next story for deterministic local-hotseat turn ownership.
-- [[production/stories/story-strat-003-champion-route-movement]] — READY-candidate next story for single-route Champion movement.
-- [[production/stories/story-tac-001-battle-setup-result-dto-contracts]] — READY-candidate tactical boundary DTO story.
+- [[production/stories/story-strat-002-hotseat-turn-ownership]] — READY next story for deterministic local-hotseat turn ownership.
+- [[production/stories/story-strat-003-champion-route-movement]] — READY next story for single-route Champion movement.
+- [[production/stories/story-strat-vis-001-minimal-strategic-map-presentation]] — READY minimal strategic map presentation story.
+- [[production/stories/story-strat-input-001-select-champion-and-route-move]] — READY select-and-route-move input story.
+- [[production/stories/story-strat-ui-001-minimal-hotseat-hud]] — READY minimal hotseat HUD story.
+- [[production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke]] — READY local hotseat strategic loop smoke story.
+- [[production/stories/story-tac-001-battle-setup-result-dto-contracts]] — READY-candidate tactical boundary DTO story with clarified strategic-map §14 authority.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
+- [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.
 - [[production/gates/gate-template]] — phase/artifact/story gate template.
 - [[production/spikes/spike-001-unity-project-ci-foundation]] — approved first Unity technical foundation spike.
 - [[production/checklists/codex-pr-review-checklist]] — future implementation PR review checklist for Codex/agents.

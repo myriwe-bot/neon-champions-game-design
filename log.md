@@ -253,3 +253,10 @@
 - Created `production/sprints/strategic-mvp-story-train-001.md` to sequence Codex implementation one approved story/branch/PR at a time.
 - Updated `production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md` and `index.md` with the new story train.
 - Approval remains pending; the new stories are not READY for implementation until human approval is recorded.
+
+## [2026-06-02] approve | Strategic MVP Codex story train READY
+
+- Added estimates and marked READY/approved: STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001, STORY-STRAT-INPUT-001, STORY-STRAT-UI-001, and STORY-LOOP-001.
+- Clarified STORY-TAC-001 authority: strategic-map §14 is binding; draft tactical-combat docs are compatibility-only and must not expand/block the DTO minimum unless they contradict §14.
+- Approved `production/sprints/strategic-mvp-story-train-001.md` and created `production/sprints/strategic-mvp-codex-execution-system.md` with Codex queue, preflight, prompt wrappers, PR evidence template, and merge/continue rule.
+- Updated `index.md` with the newly READY story links and Codex execution system.

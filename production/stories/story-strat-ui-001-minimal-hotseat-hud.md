@@ -1,27 +1,32 @@
 ---
 title: STORY-STRAT-UI-001 Minimal Hotseat HUD
 type: story
-status: in-review
+status: approved
 phase: production
 owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
 related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-STRAT-UI-001 Minimal Hotseat HUD
 
 ## Status
 
-READY-candidate. Requires explicit human approval before Codex implementation.
+READY. Human approval recorded; this story may be assigned to Codex under the story train execution contract.
 
 ## Story type
 
 UI + Integration.
 
 Primary layer: minimal Unity HUD adapter for hotseat turn state and selected Champion movement state.
+
+## Estimate
+
+- Size: M.
+- Basis: readiness review on 2026-06-02; estimate covers story-scoped implementation and required evidence only.
 
 ## Parent epic
 
@@ -141,3 +146,50 @@ Out of scope:
 
 - Branch suggestion: `story/strat-ui-001-minimal-hotseat-hud`.
 - Stop if the task requires final UI architecture, asset/style decisions, localization framework, or new gameplay rules.
+
+## Branch / PR requirements
+
+- Branch name: `story/strat-ui-001-minimal-hotseat-hud`
+- PR title: `STORY-STRAT-UI-001 Minimal hotseat HUD`
+- Required linked story ID: `STORY-STRAT-UI-001`
+- Required linked GDD/ADR/control docs: use the exact source references listed above.
+- Required root/scoped AGENTS.md instructions: Unity repo root `AGENTS.md` and scoped source/test `AGENTS.md` under touched paths.
+- Required evidence summary: RED/GREEN TDD summary where applicable, tests added/changed, CI link/status, manual evidence where required, and omissions section.
+
+PR must explicitly list known omissions, stubs, mocks, assumptions, deferred work, or state `No known omissions`.
+
+## Story readiness gate
+
+- [x] Story has stable ID, title, type, status, and parent epic.
+- [x] User/player/system value is clear.
+- [x] Exact GDD source section is linked or explicitly N/A.
+- [x] Exact ADR/architecture/control-manifest source is linked or explicitly N/A.
+- [x] Relevant root/scoped AGENTS.md instructions are identified.
+- [x] UX/content/art/worldbuilding references are linked if relevant or explicitly N/A.
+- [x] In-scope work is concrete and bounded.
+- [x] Out-of-scope work is explicit.
+- [x] Stubs/mocks/placeholders are either disallowed or explicitly listed.
+- [x] Dependencies are listed.
+- [x] Acceptance criteria are observable and testable.
+- [x] Verification requirements are defined.
+- [x] Required automated tests/validators/PlayMode evidence are listed or N/A.
+- [x] Ambiguity Check status is PASS.
+- [x] Branch / PR / CI traceability requirements are stated.
+- [x] Estimate is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
+  - Approved by human on 2026-06-02 in response to readiness review.
+
+## DONE gate
+
+- [ ] Implementation matches approved story scope.
+- [ ] Acceptance criteria pass.
+- [ ] Required verification evidence exists.
+- [ ] Required automated tests and CI pass or approved exceptions are documented.
+- [ ] No unauthorized design or architecture decisions were introduced.
+- [ ] Omissions/stubs/mocks/deferred work are documented.
+- [ ] PR/code review is complete.
+- [ ] Required docs were updated in the correct source-of-truth layer.
+
+## Verdict
+
+READY. Gate blockers: none.

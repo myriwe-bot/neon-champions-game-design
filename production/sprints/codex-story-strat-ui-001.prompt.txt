@@ -1,0 +1,44 @@
+Implement exactly one READY story: STORY-STRAT-UI-001.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-strat-ui-001-minimal-hotseat-hud.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§2, 6, 8, 13
+     - docs/architecture/unity-technical-scheme.md §Project Layout Standard and §Assembly Boundary Standard
+     - docs/architecture/control-manifest.md §§1, 2, 3, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - existing STORY-STRAT-001/002/003/VIS-001/INPUT-001 implementations, especially the turn service, movement/input session, strategic-map scene, and presentation/test conventions.
+2. Start from updated main and create/use branch:
+   story/strat-ui-001-minimal-hotseat-hud
+3. Implement only the approved crude minimal hotseat HUD:
+   - show active faction ID/display key
+   - show current turn number and round number
+   - show next faction if available
+   - show selected Champion ID/display key and remaining movement points when a Champion is selected
+   - update remaining movement points after successful STORY-STRAT-INPUT-001 movement
+   - show a crude visible diagnostic/status line for rejected or successful basic actions
+   - add an End Turn button/control that calls STORY-STRAT-002's approved turn service
+   - after End Turn, update active faction, turn/round display, next faction display, and Champion movement/action state according to existing domain/application rules
+   - clear or update selected Champion state after End Turn in a documented, test-covered way
+4. Keep ownership boundaries intact. UI/presentation may adapt Unity events into approved application/domain services, but must not directly own canonical turn, movement, site, reward, battle, victory, or AI rules.
+5. Use TDD where helper/application/presenter behavior is added: RED test, minimal implementation, GREEN test, refactor only under green tests. For Unity HUD wiring, add PlayMode/smoke and manual visual evidence.
+6. Use only the smallest built-in UI approach already available in the repo. Stop before adding packages, changing ProjectSettings, choosing final UI architecture/art, or introducing localization/content decisions.
+7. Do not implement full resource panels, site interaction panels, battle previews, victory screens, options menus, remapping, accessibility polish, localization implementation, final UI skin, animation/audio polish, new movement rules, economy/reward/site/recruitment behavior, tactical transitions, strategic AI, networking, save/load, or new scenario content.
+8. Run story-required PlayMode/smoke checks for HUD startup, selected Champion movement-point display update, End Turn state update including round wrap if feasible, relevant EditMode checks if helpers are added, placeholder validator, and CI-triggering checks where available. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+9. Capture required screenshot/video/manual evidence showing HUD before and after End Turn.
+10. Commit and push if sandbox permits.
+11. Open a PR titled:
+    STORY-STRAT-UI-001 Minimal hotseat HUD
+12. PR body must include summary, source docs read, RED/GREEN evidence where applicable, PlayMode/smoke evidence, manual screenshot/video evidence path, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, existing Unity UI setup is absent and package/settings changes would be required, End Turn would bypass domain services, HUD state would need new gameplay rules, scene/prefab wiring is unsafe, or scope expands into site/battle/final-art/new-rule behavior.

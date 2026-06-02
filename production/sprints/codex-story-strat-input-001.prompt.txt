@@ -1,0 +1,40 @@
+Implement exactly one READY story: STORY-STRAT-INPUT-001.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-strat-input-001-select-champion-and-route-move.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§2, 6, 8, 9, 12
+     - docs/architecture/unity-technical-scheme.md §Initial Unity Defaults, §Project Layout Standard, §Assembly Boundary Standard
+     - docs/architecture/control-manifest.md §§1, 2, 3, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - existing assembly definitions, test layout, scene layout, and STORY-STRAT-001/002/003/VIS-001 implementations
+2. Start from updated main and create/use branch:
+   story/strat-input-001-select-route-move
+3. Implement only the approved crude select-and-route-move input:
+   - select the active faction's Champion marker in the minimal strategic-map scene
+   - visibly indicate selected Champion
+   - visibly indicate adjacent reachable destination nodes/routes from the selected Champion's current node
+   - choose one reachable adjacent destination by clicking/tapping/selecting its node or route using the approved Unity input approach already present in the repo
+   - call STORY-STRAT-003's domain movement preview/apply service for validation and mutation
+   - update the visual Champion marker position after successful movement
+   - reject disconnected, unaffordable, inactive-faction, or otherwise invalid attempts with a crude visible/debug diagnostic and no visual/state mutation
+4. Keep ownership boundaries intact. Presentation/input may adapt Unity events into approved application/domain services, but must not own canonical movement, turn, site, reward, battle, victory, or AI rules.
+5. Use TDD where helper/application behavior is added: RED test, minimal implementation, GREEN test, refactor only under green tests. For Unity input/scene wiring, add PlayMode/smoke and manual visual evidence.
+6. Do not implement End Turn button/HUD, multi-step pathfinding, drag routes, route optimization, movement animation/tween polish, terrain movement, camera polish, input remapping polish, site interaction, auto-claim, auto-battle, rewards, recruitment, victory checks, tactical scene transition, strategic AI, networking, save/load, final UI skin, localization implementation, final map art, new scenario content, new movement rules, movement modifiers, balance changes, package/settings changes, lore/content expansion, or final data-authoring architecture.
+7. Run story-required PlayMode/smoke checks for valid select/move and at least one invalid rejection, relevant EditMode checks if helpers are added, placeholder validator, and CI-triggering checks where available. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+8. Commit and push if sandbox permits.
+9. Open a PR titled:
+   STORY-STRAT-INPUT-001 Select Champion and route move
+10. PR body must include summary, source docs read, RED/GREEN evidence where applicable, PlayMode/smoke evidence, manual screenshot/video evidence path, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, existing Unity input setup is absent and package/settings changes would be required, invalid moves would bypass domain services, scene/prefab wiring is unsafe, or scope expands into HUD/end-turn/site/battle/final-art/new-rule behavior.

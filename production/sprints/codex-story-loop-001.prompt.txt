@@ -1,0 +1,41 @@
+Implement exactly one READY story: STORY-LOOP-001.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§2, 3, 6, 8, 9, 12
+     - docs/architecture/unity-technical-scheme.md §Core Technical Principle, §Project Layout Standard, and §Assembly Boundary Standard
+     - docs/architecture/control-manifest.md §§1, 2, 3, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - existing implementations for STORY-STRAT-001/002/003/VIS-001/INPUT-001/UI-001, especially scenario graph state, turn ownership, champion movement, selection/input, strategic-map scene, HUD, presentation snapshots, PlayMode smoke, and manual evidence conventions.
+2. Start from updated main and create/use branch:
+   story/loop-001-hotseat-strategic-smoke
+3. Implement only the approved crude integration smoke loop:
+   - verify and, only if necessary, lightly wire the existing visual/input/HUD pieces into one smoke scene
+   - human smoke path: launch scene, confirm Faction 1 active, select Faction 1 Champion, move one authored adjacent route, observe movement/status update, end turn, confirm Faction 2 active, select/move Faction 2 Champion, end turn, confirm round increment
+   - automated PlayMode/smoke coverage for the same loop where feasible
+   - evidence checklist/report location following existing Unity repo conventions
+   - explicit known omissions: no site interaction, no battle trigger, no rewards, no victory condition, no final art
+4. Keep ownership boundaries intact. Scene/presentation/input/HUD may adapt Unity events into approved application/domain services, but must not own canonical turn, movement, site, reward, battle, victory, AI, or save/load rules.
+5. Use TDD where helper/application/presenter behavior is added: RED test, minimal implementation, GREEN test, refactor only under green tests. For scene/manual smoke wiring, add PlayMode/smoke evidence and manual visual evidence.
+6. Do not add packages, change ProjectSettings, choose final UI/visual architecture, expand scenario content, change balance/tuning, or introduce new lore/content decisions.
+7. Do not implement site interaction, guarded battle trigger, tactical battle, battle result application, rewards, recruitment, victory/loss, resource economy, strategic AI, save/load, networking, final art, or polish.
+8. Run story-required PlayMode/smoke checks for the full local hotseat strategic loop, relevant EditMode checks if helpers are added, placeholder validator, and CI-triggering checks where available. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+9. Capture required screenshot/video/manual evidence for the filled smoke checklist. If any portion must remain manual-only, document the exception clearly and explain why automation is not feasible.
+10. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report the exact command/error; do not leave only a terminal summary.
+11. Open a PR titled:
+    STORY-LOOP-001 Minimal local hotseat strategic loop smoke
+12. PR body must include summary, source docs read, acceptance/evidence mapping, RED/GREEN evidence where applicable, PlayMode/smoke evidence, manual screenshot/video/checklist evidence path, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+13. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, existing scene/input/HUD setup is absent and package/settings changes would be required, End Turn or movement would bypass domain services, smoke success would require fake domain state, scene/prefab wiring is unsafe, or scope expands into site/battle/reward/victory/final-art/new-rule behavior.

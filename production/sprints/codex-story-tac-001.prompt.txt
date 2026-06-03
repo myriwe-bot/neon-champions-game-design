@@ -1,0 +1,55 @@
+Implement exactly one APPROVED story: STORY-TAC-001.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-tac-001-battle-setup-result-dto-contracts.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§6, 7, 10, 12, 14
+     - design/gdd/tactical-combat.md for compatibility only; it is not extra implementation authority
+     - docs/architecture/unity-technical-scheme.md
+     - docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - existing strategic domain models, army/champion state, validators, factories, asmdef/test layout, and prior story implementation patterns on Unity main.
+2. Start from updated Unity main and create/use the exact branch:
+   story/STORY-TAC-001-battle-setup-result-dto-contracts
+3. Implement only pure serializable-friendly DTO boundary contracts for BattleSetup and BattleResult:
+   - battle setup/result DTOs or equivalent names;
+   - battle type/outcome/side/controller/result flag enums or equivalent value objects;
+   - side snapshots containing faction ID, optional Champion ID, controller, and copied army state;
+   - setup/result validation diagnostics;
+   - helper for matching BattleResult battle ID to BattleSetup/unresolved battle if appropriate.
+4. DTOs must be snapshots/copies of strategic state, not direct mutable references into runtime strategic objects.
+5. Use TDD for all production domain logic: RED test, run it and verify expected failure, minimal implementation, GREEN test, refactor only while green.
+6. Required tests/evidence:
+   - valid guarded-site BattleSetup with player Champion army vs neutral guard army;
+   - valid faction-vs-faction/site-contest setup with HumanLocal/CombatAI controller assignments as data;
+   - missing/blank battle ID, side, controller, and army snapshot fail validation with clear diagnostics;
+   - BattleResult validates matching battle ID and valid outcome without applying strategic consequences;
+   - mismatched BattleResult battle ID, invalid outcome, or missing army result fails validation;
+   - DTO snapshots remain unchanged after source strategic army state mutates;
+   - DTO/domain code compiles without UnityEngine, MonoBehaviour, ScriptableObject, scene, prefab, input, camera, UI, or tactical-combat-engine references.
+7. Do not implement tactical combat, tactical map/grid, AP/actions, damage simulation, tactical AI, objectives, morale, UI, animation, scene/prefab/camera, site interaction trigger, strategic BattleResult application, rewards, recruitment, victory/loss, player-facing final copy, or content/balance decisions.
+8. Do not add packages, change ProjectSettings, migrate architecture, or make final tactical/strategic design decisions beyond the approved DTO minimum.
+9. Run relevant EditMode/domain tests, placeholder validator, compile checks, and any CI-triggering checks available locally. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+10. Capture required evidence under Unity repo production/evidence/STORY-TAC-001/:
+    - RED/GREEN TDD summary;
+    - DTOs/enums/validators added;
+    - tests/checks run and results;
+    - CI link/status when available;
+    - omissions/stubs/mocks/assumptions/deferred work.
+11. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report the exact command/error; do not leave only a terminal summary.
+12. Open a PR titled:
+    STORY-TAC-001 Battle setup result DTO contracts
+13. PR body must include summary, source docs read, acceptance/evidence mapping, RED/GREEN TDD evidence, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+14. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, DTO shape would require tactical internals, existing army/champion models cannot be copied safely without design clarification, or scope expands into site interaction, battle resolution, result application, rewards, recruitment, victory/loss, UI, scene, package/settings, or content decisions.

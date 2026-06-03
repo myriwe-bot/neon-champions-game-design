@@ -5,9 +5,9 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-02
+updated: 2026-06-03
 source_lore: []
-related: [production/sprints/strategic-mvp-story-train-001, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move, production/stories/story-strat-ui-001-minimal-hotseat-hud, production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke]
+related: [production/sprints/strategic-mvp-story-train-001, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move, production/stories/story-strat-ui-001-minimal-hotseat-hud, production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke, production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass, production/stories/story-tac-001-battle-setup-result-dto-contracts]
 approval: approved
 ---
 
@@ -41,9 +41,11 @@ If paths differ, locate repositories by name and keep the same relative paths.
 | 3 | `STORY-STRAT-VIS-001` Minimal Strategic Map Presentation | `story/strat-vis-001-minimal-map-presentation` | M | READY to start from updated `main` after STORY-STRAT-003 merge |
 | 4 | `STORY-STRAT-INPUT-001` Select Champion and Route Move | `story/strat-input-001-select-route-move` | M | VIS plus STRAT-003 movement service available |
 | 5 | `STORY-STRAT-UI-001` Minimal Hotseat HUD | `story/strat-ui-001-minimal-hotseat-hud` | M | STRAT-002 turn service and VIS scene available; INPUT recommended |
-| 6 | `STORY-LOOP-001` Minimal Local Hotseat Strategic Loop Smoke | `story/loop-001-hotseat-strategic-smoke` | S/M | STRAT-002, STRAT-003, VIS, INPUT, and UI merged |
+| 6 | `STORY-LOOP-001` Minimal Local Hotseat Strategic Loop Smoke | `story/loop-001-hotseat-strategic-smoke` | S/M | MERGED — PR #9 |
+| 7 | `STORY-QA-001` Strategic Smoke Cleanup, Readability, and Bugfix Pass | `story/qa-001-strategic-smoke-cleanup-readability` | M | MERGED — PR #10 |
+| 8 | `STORY-TAC-001` Battle Setup Result DTO Contracts | `story/STORY-TAC-001-battle-setup-result-dto-contracts` | M | APPROVED — start from updated `main` after STORY-QA-001 merge |
 
-`STORY-TAC-001` is not in this immediate implementation queue. Its source authority is clarified, but it remains separate from the first visible strategic loop train unless explicitly approved later.
+`STORY-TAC-001` is now approved as the next sequential implementation packet. It authorizes only pure BattleSetup/BattleResult DTO boundary contracts and EditMode/domain tests; site interaction, tactical combat, and strategic result application remain later stories.
 
 ## Required preflight for every story
 
@@ -160,6 +162,16 @@ Story file: production/stories/story-loop-001-minimal-local-hotseat-strategic-lo
 Branch: story/loop-001-hotseat-strategic-smoke
 Primary output: integrated smoke scene/checklist/evidence for selecting, moving, ending turn, switching faction, moving, and wrapping round.
 Do not add site interaction, battle trigger, rewards, victory, final art, or new architecture beyond light smoke wiring.
+```
+
+### STORY-TAC-001
+
+```text
+Implement exactly one APPROVED story: STORY-TAC-001.
+Story file: production/stories/story-tac-001-battle-setup-result-dto-contracts.md
+Branch: story/STORY-TAC-001-battle-setup-result-dto-contracts
+Primary output: pure serializable-friendly BattleSetup/BattleResult DTO contracts, validation diagnostics, setup/result matching helper where appropriate, and EditMode/domain tests proving snapshot immutability and no tactical/Unity presentation dependencies.
+Do not implement tactical combat, site interaction triggers, strategic BattleResult application, rewards, recruitment, victory/loss, UI, scenes, prefabs, packages, settings, or final tactical/content decisions.
 ```
 
 ## PR evidence template

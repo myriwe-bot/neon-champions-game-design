@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-02
+updated: 2026-06-03
 source_lore: []
 related:
   [
@@ -43,7 +43,7 @@ The goal is to increase Codex utilization without giving it a broad, drift-prone
 |     5 | [STORY-STRAT-UI-001 Minimal Hotseat HUD](../stories/story-strat-ui-001-minimal-hotseat-hud.md)                                                   | READY                                                               | Make hotseat turns understandable and add End Turn so a human can play without developer guidance                     | CI fails, UI requires final UI architecture/art/localization decisions, or End Turn bypasses domain rules                     |
 |     6 | [STORY-LOOP-001 Minimal Local Hotseat Strategic Loop Smoke](../stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke.md)             | Implemented/merged in Unity PR #9                                   | Confirm the crude two-faction movement/end-turn loop is actually player-testable in Unity                             | Smoke cannot be completed, domain/visual/HUD state disagree, or manual/PlayMode evidence is missing                           |
 |     7 | [STORY-QA-001 Strategic Smoke Cleanup, Readability, and Bugfix Pass](../stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass.md) | Implemented/merged in Unity PR #10                                  | First playable loop exposed readability/layout/map-feedback problems; fix those before deeper systems hide the issues | Fixes require final UI architecture/art, scope leaks into new gameplay systems, or evidence is missing                        |
-|     8 | [STORY-TAC-001 Battle Setup Result DTO Contracts](../stories/story-tac-001-battle-setup-result-dto-contracts.md)                                 | READY-candidate                                                     | DTO boundary unblocks guarded-site and result-application stories after the first visible loop is testable            | CI fails or tactical internals are required beyond DTO shape                                                                  |
+|     8 | [STORY-TAC-001 Battle Setup Result DTO Contracts](../stories/story-tac-001-battle-setup-result-dto-contracts.md)                                 | APPROVED / READY                                                    | DTO boundary unblocks guarded-site and result-application stories after the first visible loop is testable            | CI fails or tactical internals are required beyond DTO shape                                                                  |
 
 ## Codex execution contract
 
@@ -75,4 +75,4 @@ Stop on ambiguity, draft/pending sources, unrelated dirty files, failed CI, or s
 
 ## Gate status
 
-READY for completed train through STORY-QA-001. Human approval recorded on 2026-06-02 for STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001, STORY-STRAT-INPUT-001, STORY-STRAT-UI-001, and STORY-LOOP-001. Human approval recorded on 2026-06-03 for STORY-QA-001; Unity PR #10 merged on 2026-06-03. Next candidate remains STORY-TAC-001 pending explicit human approval.
+READY for completed train through STORY-QA-001. Human approval recorded on 2026-06-02 for STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001, STORY-STRAT-INPUT-001, STORY-STRAT-UI-001, and STORY-LOOP-001. Human approval recorded on 2026-06-03 for STORY-QA-001; Unity PR #10 merged on 2026-06-03. Human approval recorded on 2026-06-03 for STORY-TAC-001; Codex may implement STORY-TAC-001 next from updated Unity `main`.

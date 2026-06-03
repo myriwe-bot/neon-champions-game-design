@@ -1,21 +1,21 @@
 ---
 title: STORY-TAC-001 Battle Setup Result DTO Contracts
 type: story
-status: in-review
+status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-02
+updated: 2026-06-03
 source_lore: []
 related: [design/gdd/strategic-map, design/gdd/tactical-combat, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-TAC-001 Battle Setup Result DTO Contracts
 
 ## Status
 
-READY-candidate. Requires explicit human approval before Codex implementation.
+APPROVED. Human approval recorded on 2026-06-03. Codex may implement this story now using branch `story/STORY-TAC-001-battle-setup-result-dto-contracts`.
 
 ## Story type
 
@@ -172,7 +172,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Estimate is recorded.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -187,4 +187,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate. Gate blockers: human approval pending.
+APPROVED. Human approval recorded on 2026-06-03. Codex may implement this story now using branch `story/STORY-TAC-001-battle-setup-result-dto-contracts` and prompt `production/sprints/codex-story-tac-001.prompt.txt`.

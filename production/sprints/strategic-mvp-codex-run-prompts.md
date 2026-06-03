@@ -7,7 +7,18 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
-related: [production/sprints/strategic-mvp-story-train-001, production/sprints/strategic-mvp-codex-execution-system, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move, production/stories/story-strat-ui-001-minimal-hotseat-hud, production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke]
+related:
+  [
+    production/sprints/strategic-mvp-story-train-001,
+    production/sprints/strategic-mvp-codex-execution-system,
+    production/stories/story-strat-002-hotseat-turn-ownership,
+    production/stories/story-strat-003-champion-route-movement,
+    production/stories/story-strat-vis-001-minimal-strategic-map-presentation,
+    production/stories/story-strat-input-001-select-champion-and-route-move,
+    production/stories/story-strat-ui-001-minimal-hotseat-hud,
+    production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke,
+    production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass,
+  ]
 approval: approved
 ---
 
@@ -15,9 +26,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-STRAT-UI-001` is merged. Start the next Codex run with `STORY-LOOP-001` only.
+`STORY-LOOP-001` is merged. Start the next Codex run with `STORY-QA-001` only.
 
-Keep story work sequential: implement `STORY-LOOP-001`, review/merge it, then continue to tactical/site stories one at a time.
+Keep story work sequential: implement `STORY-QA-001`, review/merge it, then continue to tactical/site stories one at a time.
 
 ## Copy-safe prompt-file mode
 
@@ -35,7 +46,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -64,11 +75,11 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — preferred single-story start
 
-Use this now for `STORY-LOOP-001`:
+Use this now for `STORY-QA-001`:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -87,6 +98,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-strat-vis-001.prompt.txt`
 - `production/sprints/codex-story-strat-input-001.prompt.txt`
 - `production/sprints/codex-story-strat-ui-001.prompt.txt`
+- `production/sprints/codex-story-loop-001.prompt.txt`
 
 Do not rerun historical prompts unless intentionally reproducing old work.
 
@@ -109,5 +121,5 @@ git push -u origin HEAD
 If Codex did not create a PR and GitHub CLI is available:
 
 ```powershell
-gh pr create --title "STORY-LOOP-001 Minimal local hotseat strategic loop smoke" --body-file .\PR_BODY.md
+gh pr create --title "STORY-QA-001 Strategic smoke cleanup and readability pass" --body-file .\PR_BODY.md
 ```

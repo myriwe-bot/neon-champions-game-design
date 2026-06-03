@@ -1,0 +1,46 @@
+Implement exactly one APPROVED story: STORY-QA-001.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - prior implementation evidence: Unity repo production/evidence/STORY-LOOP-001/README.md
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§2, 6, 8, 9, 12
+     - docs/architecture/unity-technical-scheme.md §Project Layout Standard and §Assembly Boundary Standard
+     - docs/architecture/control-manifest.md §§1, 2, 3, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - current StrategicMap scene/bootstrap/presentation/input/HUD PlayMode smoke implementation on Unity main.
+2. Start from updated Unity main and create/use branch:
+   story/qa-001-strategic-smoke-cleanup-readability
+3. Implement only the approved placeholder cleanup/fix pass:
+   - prevent End Turn and HUD/status labels from visually overlapping at the default test resolution;
+   - separate top HUD, map area, selected Champion info, and status/deferred-system feedback;
+   - improve crude placeholder contrast, scale, spacing, or camera/map framing where directly needed for readability;
+   - make active faction/controller, acting Champion, selected Champion, reachable route/node, invalid action, successful movement, End Turn, round increment, and deferred systems readable without console logs;
+   - preserve raw IDs/display keys if useful; do not make final copy/lore/UI decisions.
+4. Keep the pass placeholder-only. A small formal presentation layout helper is allowed only if it is the cleanest way to prevent overlap, is covered by tests, and does not introduce architecture drift.
+5. Use TDD for bug fixes and helper/application/presenter behavior: RED test, run it and verify expected failure, minimal implementation, GREEN test, refactor only while green. For scene/manual smoke wiring, add PlayMode/smoke coverage and screenshot/video/checklist evidence.
+6. Do not add packages, change ProjectSettings unless unavoidable and explicitly justified, migrate UI architecture, add final art/animation/audio/localization, expand map content, change balance/tuning, or introduce new lore/content decisions.
+7. Do not implement site interaction, guarded battle trigger, tactical battle, battle result application, rewards, recruitment, victory/loss, resource economy, strategic AI, save/load, networking, final art, or polish beyond minimal readability.
+8. Run story-required PlayMode/smoke checks for layout/feedback invariants, relevant EditMode checks if helpers are added, placeholder validator, and CI-triggering checks where available. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+9. Capture required evidence under Unity repo production/evidence/STORY-QA-001/:
+   - issue list found;
+   - before/after or current-state screenshots/video/checklist for initial state, selection/reachable state, movement result, invalid action, and after End Turn;
+   - tests/checks run and results;
+   - remaining known issues/follow-up candidates.
+10. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report the exact command/error; do not leave only a terminal summary.
+11. Open a PR titled:
+    STORY-QA-001 Strategic smoke cleanup and readability pass
+12. PR body must include summary, source docs read, acceptance/evidence mapping, RED/GREEN evidence where applicable, PlayMode/smoke evidence, manual screenshot/video/checklist evidence path, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+13. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, fixes require final UI architecture/art/localization/new packages, End Turn or movement would bypass domain services, smoke success would require fake domain state, scene/prefab wiring is unsafe, or scope expands into site/battle/reward/victory/new-rule behavior.

@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-001 Strategic Smoke Cleanup, Readability, and Bugfix Pass
 type: story
-status: ready-candidate
+status: approved
 phase: production
 owner: shared
 created: 2026-06-03
@@ -17,14 +17,14 @@ related:
     production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
     production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-QA-001 Strategic Smoke Cleanup, Readability, and Bugfix Pass
 
 ## Status
 
-READY-candidate. Prepared after STORY-LOOP-001 merge because the first playable smoke exposed usability and clarity problems. Requires explicit human approval before Codex implementation.
+APPROVED. Human approval recorded on 2026-06-03 after STORY-LOOP-001 merge because the first playable smoke exposed usability and clarity problems. Codex may implement this story now.
 
 ## Story type
 
@@ -149,11 +149,11 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: PASS as READY-candidate.
+Status: APPROVED.
 
-Open questions before approval:
+Open question resolved on 2026-06-03:
 
-- Should this pass remain a placeholder readability cleanup only, or may it introduce a small formal presentation layout helper if that is the cleanest way to prevent overlap? Default: placeholder readability cleanup only; helper allowed only if covered by tests and no architecture drift.
+- This pass remains a placeholder readability cleanup only. A small formal presentation layout helper is allowed only if it is the cleanest way to prevent overlap, is covered by tests, and does not introduce architecture drift.
 
 Assumptions:
 
@@ -200,7 +200,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Ambiguity Check status is PASS as candidate.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Estimate is recorded.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -215,4 +215,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate. Gate blocker: explicit human approval is still required before implementation.
+APPROVED. Human approval recorded on 2026-06-03. Codex may implement this story now using branch `story/qa-001-strategic-smoke-cleanup-readability`.

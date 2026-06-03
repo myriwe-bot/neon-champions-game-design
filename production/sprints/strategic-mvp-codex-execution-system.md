@@ -45,13 +45,13 @@ If paths differ, locate repositories by name and keep the same relative paths.
 | 7 | `STORY-QA-001` Strategic Smoke Cleanup, Readability, and Bugfix Pass | `story/qa-001-strategic-smoke-cleanup-readability` | M | MERGED — PR #10 |
 | 8 | `STORY-TAC-001` Battle Setup Result DTO Contracts | `story/STORY-TAC-001-battle-setup-result-dto-contracts` | M | MERGED — PR #11 |
 
-`STORY-QA-002` is drafted as the next cleanup candidate after TAC-001 because the current smoke is still too crumpled and unclear for useful playtesting. It is not in the approved implementation queue until human approval is recorded.
+`STORY-QA-002` is approved as the next cleanup packet after TAC-001 because the current smoke is still too crumpled and unclear for useful playtesting.
 
-## Candidate next packet
+## Approved next packet
 
 | Story | Branch | Estimate | Approval state | Start condition |
 |---|---|---|---|---|
-| `STORY-QA-002` Strategic Map Readability and Actor-Clarity Fix Pass | `story/qa-002-strategic-map-readability-actor-clarity` | M | READY-candidate / approval pending | Start only after explicit human approval, from updated Unity `main` after PR #11 |
+| `STORY-QA-002` Strategic Map Readability and Actor-Clarity Fix Pass | `story/qa-002-strategic-map-readability-actor-clarity` | M | APPROVED / READY | Start from updated Unity `main` after PR #11 |
 
 ## Required preflight for every story
 

@@ -28,9 +28,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-001` is merged. The next proposed packet is `STORY-QA-002`, but it is approval-pending. Use the QA-002 prompt only after the story is explicitly approved.
+`STORY-TAC-001` is merged. The next approved packet is `STORY-QA-002`. Use the QA-002 prompt file below.
 
-Keep story work sequential: approve and implement `STORY-QA-002` first if readability remains the priority, then continue to guarded-site/battle/result stories one at a time.
+Keep story work sequential: implement `STORY-QA-002`, review/merge it, then continue to guarded-site/battle/result stories one at a time.
 
 ## Copy-safe prompt-file mode
 
@@ -77,7 +77,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — preferred single-story start
 
-Use this after approving `STORY-QA-002`:
+Use this now for `STORY-QA-002`:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
@@ -104,7 +104,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-001.prompt.txt`
 - `production/sprints/codex-story-tac-001.prompt.txt`
 
-Current candidate prompt:
+Current approved prompt:
 
 - `production/sprints/codex-story-qa-002.prompt.txt`
 

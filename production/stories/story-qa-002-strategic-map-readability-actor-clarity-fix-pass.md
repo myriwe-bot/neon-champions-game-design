@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-002 Strategic Map Readability and Actor-Clarity Fix Pass
 type: story
-status: ready-candidate
+status: approved
 phase: production
 owner: shared
 created: 2026-06-03
@@ -19,16 +19,16 @@ related:
     production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass,
     production/stories/story-tac-001-battle-setup-result-dto-contracts,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-QA-002 Strategic Map Readability and Actor-Clarity Fix Pass
 
 ## Status
 
-READY-candidate. Drafted in response to human feedback after TAC-001 merge that the current strategic smoke remains too crumpled and hard to read: buttons overlap, screen elements crowd together, and it is unclear who is acting or what is happening on the map.
+APPROVED. Human approval recorded on 2026-06-03. Codex may implement only this story on branch `story/qa-002-strategic-map-readability-actor-clarity`.
 
-This packet is intentionally detailed but not implementation-authorizing until human approval is recorded. If approved, Codex may implement only this story on the branch below.
+This packet was drafted in response to human feedback after TAC-001 merge that the current strategic smoke remains too crumpled and hard to read: buttons overlap, screen elements crowd together, and it is unclear who is acting or what is happening on the map.
 
 ## Story type
 
@@ -321,11 +321,11 @@ Prompt file prepared at:
 
 `production/sprints/codex-story-qa-002.prompt.txt`
 
-Codex may use it only after this story is approved.
+Codex may use it now that this story is approved.
 
 ## Ambiguity Check
 
-Status: PASS as READY-candidate.
+Status: PASS.
 
 Open questions:
 
@@ -347,7 +347,7 @@ Allowed stubs/mocks/placeholders:
 
 Human-approved exceptions:
 
-- None recorded yet.
+- None.
 
 ## Story readiness gate
 
@@ -364,10 +364,11 @@ Human-approved exceptions:
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined.
 - [x] Required automated tests/validators/PlayMode evidence are listed or N/A.
-- [x] Ambiguity Check status is PASS as candidate.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Estimate is recorded.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
+  - Approved by human on 2026-06-03 in response to the READY-candidate packet.
 
 ## DONE gate
 
@@ -382,4 +383,4 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY-candidate. Gate blockers: human approval pending. Once approved, implement before guarded-site/battle/result stories unless the human explicitly defers this cleanup.
+APPROVED / READY. Gate blockers: none. Implement before guarded-site/battle/result stories unless the human explicitly defers this cleanup.

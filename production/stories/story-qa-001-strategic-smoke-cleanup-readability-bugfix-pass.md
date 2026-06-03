@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-001 Strategic Smoke Cleanup, Readability, and Bugfix Pass
 type: story
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-06-03
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-APPROVED. Human approval recorded on 2026-06-03 after STORY-LOOP-001 merge because the first playable smoke exposed usability and clarity problems. Codex may implement this story now.
+DONE. Implemented and merged in Unity PR #10 on 2026-06-03 after STORY-LOOP-001 exposed placeholder readability/layout/map-feedback problems.
 
 ## Story type
 
@@ -204,15 +204,15 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests and CI pass or approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are documented.
-- [ ] PR/code review is complete.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests and CI pass or approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are documented.
+- [x] PR/code review is complete.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-APPROVED. Human approval recorded on 2026-06-03. Codex may implement this story now using branch `story/qa-001-strategic-smoke-cleanup-readability`.
+DONE. Unity PR #10 merged on 2026-06-03. Evidence lives in `neon-champions-unity/production/evidence/STORY-QA-001/`; required Unity Foundation CI passed on the PR head and post-merge `main`.

@@ -1,0 +1,58 @@
+Implement exactly one READY story: STORY-QA-002.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - prior evidence:
+     - Unity repo production/evidence/STORY-LOOP-001/README.md if present
+     - Unity repo production/evidence/STORY-QA-001/README.md
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§2, 6, 8, 9, 12, and §14 as background only
+     - docs/architecture/unity-technical-scheme.md §Core Technical Principle, §Project Layout Standard, and §Assembly Boundary Standard
+     - docs/architecture/control-manifest.md §§1, 2, 3, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - production/sprints/strategic-mvp-story-train-001.md
+   - production/sprints/strategic-mvp-codex-execution-system.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths
+   - current StrategicMap scene/bootstrap/presentation/input/HUD PlayMode smoke implementation on Unity main.
+2. Start from updated Unity main after PR #11 / TAC-001 merge and create/use branch:
+   story/qa-002-strategic-map-readability-actor-clarity
+3. Capture baseline current-main evidence before changing layout:
+   - create production/evidence/STORY-QA-002/README.md
+   - create production/evidence/STORY-QA-002/baseline-before-cleanup/
+   - capture at least the current initial smoke screen, and more states if existing tests already make this cheap.
+4. Implement only the approved placeholder readability and actor-clarity pass:
+   - prevent buttons/controls, HUD labels, status rows, map labels, Champion markers, and reachable indicators from visually overlapping at the default evidence/test resolution;
+   - separate top actor/turn info, End Turn control, central map, selected Champion info, status/action feedback, and deferred-system note;
+   - make active faction/controller, acting Champion, selected Champion, turn/round, next faction, reachable route/node, valid movement, invalid action, and End Turn state readable without console logs;
+   - preserve raw IDs/display keys if useful for evidence/debugging, but keep labels compact enough to read.
+5. Keep the pass placeholder-only. A small named `StrategicMapPlaceholderLayout` expansion/helper is allowed only if it is the cleanest way to prevent overlap, is covered by tests, and does not introduce architecture drift.
+6. Use TDD for bug fixes and helper/application/presenter behavior: RED test, run it and verify expected failure, minimal implementation, GREEN test, refactor only while green. For visual scene placement, add objective layout/PlayMode checks and screenshot evidence; do not rely only on vibes.
+7. Add or update tests where feasible:
+   - EditMode layout/spacing invariants for named zones and non-overlap;
+   - PlayMode checks for exactly one active actor display/marker, selected-vs-acting distinction, reachable indicators, valid move feedback, invalid move feedback, and End Turn actor update;
+   - screenshot existence checks when evidence capture is enabled.
+8. Do not add packages, change ProjectSettings unless unavoidable and explicitly justified, migrate UI architecture, add final art/animation/audio/localization, expand map content, change balance/tuning, or introduce new lore/content decisions.
+9. Do not implement site interaction, guarded battle trigger, tactical battle, battle result application, rewards, recruitment, victory/loss, resource economy, strategic AI, save/load, networking, final UI framework, or polish beyond minimum readability.
+10. Run story-required PlayMode/smoke checks, relevant EditMode checks, placeholder validator, whitespace diff check, and CI-triggering checks where available. If Unity CLI cannot run, report the exact blocker and do not claim tests passed.
+11. Capture required after-cleanup evidence under Unity repo production/evidence/STORY-QA-002/:
+    - initial state;
+    - active Champion selected / reachable routes or nodes visible;
+    - valid move result;
+    - invalid move result;
+    - after End Turn / next faction active;
+    - round-wrap state if cheap.
+12. Fill production/evidence/STORY-QA-002/README.md with source docs read, baseline problems, fixes made, acceptance/evidence mapping, tests/checks run, screenshot inventory, known issues/follow-ups, and omissions/deferred systems.
+13. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report the exact command/error; do not leave only a terminal summary.
+14. Open a PR titled:
+    STORY-QA-002 Strategic map readability and actor clarity fix pass
+15. PR body must include summary, story ID, source docs read, acceptance/evidence mapping, RED/GREEN evidence where applicable, PlayMode/smoke evidence, manual screenshot/video/checklist evidence path, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+16. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if sources are missing, draft/pending/contradictory, the repo is dirty, tests fail, CI fails, fixes require final UI architecture/art/localization/new packages, End Turn or movement would bypass domain services, smoke success would require fake domain state, scene/prefab wiring is unsafe, or scope expands into site/battle/reward/victory/new-rule behavior.

@@ -7,7 +7,7 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-03
 source_lore: []
-related: [production/sprints/strategic-mvp-story-train-001, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move, production/stories/story-strat-ui-001-minimal-hotseat-hud, production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke, production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass, production/stories/story-tac-001-battle-setup-result-dto-contracts]
+related: [production/sprints/strategic-mvp-story-train-001, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move, production/stories/story-strat-ui-001-minimal-hotseat-hud, production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke, production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass, production/stories/story-tac-001-battle-setup-result-dto-contracts, production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass]
 approval: approved
 ---
 
@@ -43,9 +43,15 @@ If paths differ, locate repositories by name and keep the same relative paths.
 | 5 | `STORY-STRAT-UI-001` Minimal Hotseat HUD | `story/strat-ui-001-minimal-hotseat-hud` | M | STRAT-002 turn service and VIS scene available; INPUT recommended |
 | 6 | `STORY-LOOP-001` Minimal Local Hotseat Strategic Loop Smoke | `story/loop-001-hotseat-strategic-smoke` | S/M | MERGED — PR #9 |
 | 7 | `STORY-QA-001` Strategic Smoke Cleanup, Readability, and Bugfix Pass | `story/qa-001-strategic-smoke-cleanup-readability` | M | MERGED — PR #10 |
-| 8 | `STORY-TAC-001` Battle Setup Result DTO Contracts | `story/STORY-TAC-001-battle-setup-result-dto-contracts` | M | APPROVED — start from updated `main` after STORY-QA-001 merge |
+| 8 | `STORY-TAC-001` Battle Setup Result DTO Contracts | `story/STORY-TAC-001-battle-setup-result-dto-contracts` | M | MERGED — PR #11 |
 
-`STORY-TAC-001` is now approved as the next sequential implementation packet. It authorizes only pure BattleSetup/BattleResult DTO boundary contracts and EditMode/domain tests; site interaction, tactical combat, and strategic result application remain later stories.
+`STORY-QA-002` is drafted as the next cleanup candidate after TAC-001 because the current smoke is still too crumpled and unclear for useful playtesting. It is not in the approved implementation queue until human approval is recorded.
+
+## Candidate next packet
+
+| Story | Branch | Estimate | Approval state | Start condition |
+|---|---|---|---|---|
+| `STORY-QA-002` Strategic Map Readability and Actor-Clarity Fix Pass | `story/qa-002-strategic-map-readability-actor-clarity` | M | READY-candidate / approval pending | Start only after explicit human approval, from updated Unity `main` after PR #11 |
 
 ## Required preflight for every story
 
@@ -167,11 +173,21 @@ Do not add site interaction, battle trigger, rewards, victory, final art, or new
 ### STORY-TAC-001
 
 ```text
-Implement exactly one APPROVED story: STORY-TAC-001.
+Implement exactly one DONE story for audit/reference only: STORY-TAC-001.
 Story file: production/stories/story-tac-001-battle-setup-result-dto-contracts.md
 Branch: story/STORY-TAC-001-battle-setup-result-dto-contracts
 Primary output: pure serializable-friendly BattleSetup/BattleResult DTO contracts, validation diagnostics, setup/result matching helper where appropriate, and EditMode/domain tests proving snapshot immutability and no tactical/Unity presentation dependencies.
 Do not implement tactical combat, site interaction triggers, strategic BattleResult application, rewards, recruitment, victory/loss, UI, scenes, prefabs, packages, settings, or final tactical/content decisions.
+```
+
+### STORY-QA-002
+
+```text
+Implement exactly one READY story: STORY-QA-002.
+Story file: production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass.md
+Branch: story/qa-002-strategic-map-readability-actor-clarity
+Primary output: placeholder strategic-map readability and actor-clarity pass with non-overlap layout checks, clear active/selected Champion state, map action feedback, before/after screenshots, and CI evidence.
+Do not implement final UI architecture/art/localization, site interaction, battle trigger, tactical combat, result application, rewards, victory/loss, new gameplay systems, packages, or settings changes.
 ```
 
 ## PR evidence template

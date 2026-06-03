@@ -7,7 +7,7 @@ owner: shared
 created: 2026-06-01
 updated: 2026-06-03
 source_lore: [greenland, blue-monday, white-sky, digital-net]
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-tac-001-battle-setup-result-dto-contracts, production/sprints/strategic-mvp-story-train-001]
+related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass, production/stories/story-tac-001-battle-setup-result-dto-contracts, production/sprints/strategic-mvp-story-train-001]
 approval: approved
 ---
 
@@ -134,7 +134,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [[production/stories/story-strat-ui-001-minimal-hotseat-hud|STORY-STRAT-UI-001 Minimal Hotseat HUD]] | READY-candidate | UI + Integration | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001, STORY-STRAT-INPUT-001 recommended | HUD startup, movement-point display, End Turn update, screenshot/video |
 | [[production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke|STORY-LOOP-001 Minimal Local Hotseat Strategic Loop Smoke]] | DONE / merged in Unity PR #9 | Playtest + Integration + UX/Smoke | STORY-STRAT-001/002/003, VIS-001, INPUT-001, UI-001 | End-to-end two-faction movement/end-turn smoke, checklist, screenshot/video, CI |
 | [STORY-QA-001 Strategic Smoke Cleanup, Readability, and Bugfix Pass](../stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass.md) | DONE / merged in Unity PR #10 | QA + UI/UX Readability + Bugfix | STORY-LOOP-001 | Readability/layout fixes, map/HUD feedback clarity, screenshots/checklist, CI |
-| [STORY-TAC-001 Battle Setup Result DTO Contracts](../stories/story-tac-001-battle-setup-result-dto-contracts.md) | APPROVED / READY | Logic + Integration contract | STORY-STRAT-001, strategic-map §14 | DTO validation, setup/result matching, snapshot immutability tests |
+| [STORY-TAC-001 Battle Setup Result DTO Contracts](../stories/story-tac-001-battle-setup-result-dto-contracts.md) | DONE / merged in Unity PR #11 | Logic + Integration contract | STORY-STRAT-001, strategic-map §14 | DTO validation, setup/result matching, snapshot immutability tests |
+| [STORY-QA-002 Strategic Map Readability and Actor-Clarity Fix Pass](../stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass.md) | READY-candidate / approval pending | QA + UI/UX Readability + Bugfix | STORY-LOOP-001, STORY-QA-001, STORY-TAC-001 | Non-overlap layout checks, actor clarity, map feedback, before/after screenshots, CI |
 | STORY-STRAT-004 Site Interaction and Guarded Battle Trigger | Draft placeholder | Logic + Integration | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-TAC-001 | Interaction preview/apply and BattleSetup creation tests |
 | STORY-STRAT-005 Strategic Battle Result Application | Draft placeholder | Logic + Integration | STORY-TAC-001, STORY-STRAT-004 | BattleResult application, losses, guard clearing, rewards, control, victory tests |
 

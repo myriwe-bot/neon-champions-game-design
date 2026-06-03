@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-001 Battle Setup Result DTO Contracts
 type: story
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-06-02
@@ -15,7 +15,7 @@ approval: approved
 
 ## Status
 
-APPROVED. Human approval recorded on 2026-06-03. Codex may implement this story now using branch `story/STORY-TAC-001-battle-setup-result-dto-contracts`.
+DONE. Implemented and merged in Unity PR #11 on 2026-06-03. This story established the pure strategy-to-tactics BattleSetup/BattleResult DTO contract boundary; site interaction, tactical combat, and strategic result application remain later stories.
 
 ## Story type
 
@@ -176,15 +176,15 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests and CI pass or approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are documented.
-- [ ] PR/code review is complete.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests and CI pass or approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are documented.
+- [x] PR/code review is complete.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-APPROVED. Human approval recorded on 2026-06-03. Codex may implement this story now using branch `story/STORY-TAC-001-battle-setup-result-dto-contracts` and prompt `production/sprints/codex-story-tac-001.prompt.txt`.
+DONE. Unity PR #11 merged on 2026-06-03. Required Unity Foundation CI passed on PR head and post-merge `main`.

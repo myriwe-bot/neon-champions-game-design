@@ -1,7 +1,7 @@
 ---
 title: EPIC-STRAT-MVP-001 Strategic MVP Core Loop
 type: epic
-status: approved
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-01
@@ -29,9 +29,9 @@ approval: approved
 
 ## Status
 
-Story Ready.
+Implementation complete for the first guarded-site capture loop. All required child stories through `STORY-LOOP-002` are DONE / merged; formal deeper tactical usability continues under `EPIC-VSLICE-MVP-002` via `STORY-TAC-005`.
 
-This epic is a production planning container. It does not authorize implementation directly. Implementation is authorized only by READY child stories that trace to approved GDD and technical-control docs.
+This epic remains a production planning container. It does not authorize implementation directly. Implementation is authorized only by READY child stories that trace to approved GDD and technical-control docs.
 
 ## Priority tier
 
@@ -157,7 +157,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TAC-003 Minimal Tactical Movement and Attack Resolution](../stories/story-tac-003-minimal-tactical-movement-and-attack-resolution.md)     | DONE / merged in Unity PR #15             | Logic + Integration               | STORY-TAC-002                                                                                             | Movement, occupancy, attack, damage, defeat tests                                    |
 | [STORY-TAC-VIS-001 Minimal Tactical Board Presentation and Handoff Switch](../stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md) | DONE / merged in Unity PR #16    | Visual/Feel + Integration + Smoke | STORY-STRAT-004, STORY-TAC-002, STORY-TAC-003                                                             | Tactical handoff/switch smoke, visible hex/stack markers, screenshot/video, CI       |
 | [STORY-TAC-004 Minimal Battle End and BattleResult Return](../stories/story-tac-004-minimal-battle-end-and-result-return.md)                     | DONE / merged in Unity PR #17            | Logic + Integration               | STORY-TAC-003, STORY-TAC-001                                                                              | End-condition tests, valid BattleResult DTO, no strategic mutation                   |
-| [STORY-LOOP-002 Visible Guarded Site Capture Smoke](../stories/story-loop-002-visible-guarded-site-capture-smoke.md)                             | READY                                    | Playtest + Integration + UX/Smoke | STORY-STRAT-004, STORY-TAC-004, STORY-STRAT-005                                                           | Real hex tactical capture smoke, screenshot/video, CI, omissions checklist           |
+| [STORY-LOOP-002 Visible Guarded Site Capture Smoke](../stories/story-loop-002-visible-guarded-site-capture-smoke.md)                             | DONE / merged in Unity PR #19            | Playtest + Integration + UX/Smoke | STORY-STRAT-004, STORY-TAC-004, STORY-STRAT-005                                                           | Real hex tactical capture smoke, screenshot/video, CI, omissions checklist           |
 
 Allowed story statuses: Draft, NEEDS WORK, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -223,14 +223,14 @@ An epic may enter production only when all items are true:
 
 An epic may be marked Complete only when all items are true:
 
-- [ ] All required child stories are DONE.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] All required child stories are DONE.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the strategic smoke as sufficient to move follow-up tactical usability into the next epic.
 
 ## Anti-pattern check
 

@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-002 Visible Guarded Site Capture Smoke
 type: story
-status: ready
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-04
@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-READY. Prepared for implementation after STORY-STRAT-005 merged in Unity PR #18 on 2026-06-04 with post-merge Unity main CI passing. Human/delegated approval for this immediate next train packet is recorded by the merge/prep request on 2026-06-04.
+DONE / merged. Implemented in Unity PR #19 and squash-merged on 2026-06-04 as `b202750bf631c6683ff2e3262d045fcd83c5383f`; branch `story/STORY-LOOP-002-visible-guarded-site-capture-smoke` was deleted. PR-head CI passed on final branch head `7abb28d3d14def465b26d96c2922675d85e4b66d`; post-merge Unity main CI passed on merge commit `b202750bf631c6683ff2e3262d045fcd83c5383f`.
 
 ## Story type
 
@@ -127,4 +127,4 @@ Assumption for human approval:
 
 ## Verdict
 
-READY for implementation. Human/delegated approval recorded on 2026-06-04 after STORY-STRAT-005 merge; this packet is the vertical-slice closeout smoke for `EPIC-STRAT-MVP-001` and must use the real tactical battle path rather than a deterministic result injector.
+DONE / merged in Unity PR #19. The guarded-site capture smoke now uses the real minimal tactical battle path and strategic result application rather than a deterministic result injector. Known follow-up from human review: the tactical view is still not meaningfully player-controllable; deeper tactics work should add movement/attack/pass/defend controls before relying on tactical battles for playtesting.

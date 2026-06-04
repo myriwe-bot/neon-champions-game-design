@@ -1,0 +1,45 @@
+You are implementing exactly one READY Neon Champions Unity story: STORY-TAC-005 Basic Tactical Player Controls.
+
+Repository roles:
+- Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Hard rules:
+- Implement only STORY-TAC-005. Do not implement larger map, bases, recruitment, full AP economy, final initiative, abilities, morale, cover, LOS sophistication, final art/UI/audio, hotkeys, strategic AI, or content naming.
+- Do not hide control behind a one-button auto-resolve. The tactical board must accept minimal player commands.
+- Use TDD for new tactical command/activation logic and bug fixes.
+- Preserve the existing strategic-to-tactical-to-strategic result path: player-driven tactical win returns a real BattleResult and applies site control.
+- Include omissions/stubs explicitly in PR body and evidence.
+
+Before coding, read in order:
+1. Game-design repo AGENTS.md.
+2. Unity repo AGENTS.md and scoped AGENTS.md files for touched paths.
+3. production/stories/story-tac-005-basic-tactical-player-controls.md.
+4. design/gdd/tactical-combat.md §§3, 4, 5, 6.0, 6.3, 6.10.
+5. docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10.
+6. docs/architecture/testing-strategy.md and docs/architecture/ci-build-automation.md.
+7. Existing Unity tactical domain, presentation, and tests touched by STORY-TAC-002/003/004/TAC-VIS-001/LOOP-002.
+
+Implementation scope:
+- Create branch: story/STORY-TAC-005-basic-tactical-player-controls
+- Add minimal tactical player controls for the existing guarded-site battle path:
+  - visible acting side/stack;
+  - legal movement destination indication or clear command target;
+  - command current stack to move to a legal empty hex;
+  - command current stack to attack a legal enemy target;
+  - pass/wait/defend as a minimal activation-ending no-damage fallback;
+  - deterministic next-activation advancement for the current tiny two-side MVP battle;
+  - visible feedback for illegal movement/attack with no unintended mutation.
+- Keep temporary labels/markers clearly documented as placeholder/minimal.
+
+Required tests/evidence:
+- EditMode tests for movement command validation, occupancy/no-mutation rejection, attack command behavior, pass/wait/defend activation advancement, and BattleResult return after player-driven win.
+- PlayMode smoke for the guarded-site tactical-control path if feasible. If not feasible, document exact blocker and add manual screenshot/video evidence.
+- git diff --check and Unity .meta pairing check.
+- CI passing on PR.
+- Evidence package under production/evidence/STORY-TAC-005/README.md with controls checklist, tests, CI, screenshot/video status, and omissions.
+
+After implementation:
+- Commit and push the branch.
+- Open PR titled: STORY-TAC-005 Basic tactical player controls
+- PR body must link STORY-TAC-005, summarize changes, tests/evidence, CI status, and omissions/stubs.

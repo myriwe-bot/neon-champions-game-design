@@ -53,7 +53,8 @@
 ## Production Planning
 
 - [[production/epics/epic-template]] — epic template.
-- [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — approved parent epic for the first strategic MVP core loop stories.
+- [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.
+- [[production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat]] — approved next vertical-slice epic for larger map/bases/recruitment/minimal tactical combat.
 - [[production/stories/story-template]] — story template.
 - [[production/stories/story-strat-001-scenario-map-graph-state]] — READY first strategic MVP implementation story for scenario/map graph state.
 - [[production/stories/story-strat-002-hotseat-turn-ownership]] — READY next story for deterministic local-hotseat turn ownership.
@@ -67,7 +68,9 @@
 - [[production/stories/story-tac-002-minimal-hex-board-and-stack-placement]] — DONE/merged minimal hex board and stack placement story.
 - [[production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution]] — DONE/merged minimal tactical movement and attack resolution story.
 - [[production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch]] — DONE/merged visible tactical board presentation and handoff switch story.
-- [[production/stories/story-tac-004-minimal-battle-end-and-result-return]] — READY minimal battle end and BattleResult return story.
+- [[production/stories/story-tac-004-minimal-battle-end-and-result-return]] — DONE/merged minimal battle end and BattleResult return story.
+- [[production/stories/story-loop-002-visible-guarded-site-capture-smoke]] — DONE/merged visible guarded-site capture smoke story.
+- [[production/stories/story-tac-005-basic-tactical-player-controls]] — READY basic tactical player controls story.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

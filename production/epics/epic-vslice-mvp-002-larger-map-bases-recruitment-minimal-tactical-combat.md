@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-002 Larger Map, Bases, Recruitment, and Minimal Tactical Combat
 type: epic
-status: draft
+status: approved
 phase: production
 owner: shared
 created: 2026-06-04
@@ -14,14 +14,14 @@ related:
     design/gdd/faction-unit-rosters,
     production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
   ]
-approval: pending
+approval: approved
 ---
 
 # Epic: EPIC-VSLICE-MVP-002 Larger Map, Bases, Recruitment, and Minimal Tactical Combat
 
 ## Status
 
-Draft. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site.
+Approved / Story Ready. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. After `STORY-LOOP-002`, human review identified tactical-board usability as the next tactical-deepening concern, so the first READY child story is `STORY-TAC-005 Basic Tactical Player Controls`.
 
 ## Priority tier
 
@@ -109,6 +109,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story                                                                    | Status            | Type                              | Depends On                                   | Evidence                                                   |
 | ------------------------------------------------------------------------ | ----------------- | --------------------------------- | -------------------------------------------- | ---------------------------------------------------------- |
+| [STORY-TAC-005 Basic Tactical Player Controls](../stories/story-tac-005-basic-tactical-player-controls.md) | READY | Tactical UI/Input + Integration + UX/Smoke | STORY-LOOP-002, existing minimal tactical domain | Command tests, PlayMode smoke, screenshot/video, CI |
 | STORY-MAP-001 Larger Two-Base Strategic Map Slice                        | Draft placeholder | Config/Data + Visual/Feel         | EPIC-STRAT-MVP-001 closed or compatible main | Map validation, scene smoke, screenshot/video              |
 | STORY-TAC-002 Minimal Hex Tactical Board and Stack Placement             | Draft placeholder | Logic + Visual/Feel               | STORY-TAC-001, tactical-combat hex decision  | Hex coordinate tests, placement tests, scene smoke         |
 | STORY-TAC-003 Minimal Tactical Movement and Attack Resolution            | Draft placeholder | Logic + Integration               | STORY-TAC-002                                | Movement/attack/damage/defeat tests, CI                    |
@@ -163,7 +164,7 @@ An epic may enter production only when all items are true:
 - [x] Child stories are identified as placeholders.
 - [x] Dependencies are known.
 - [x] Major risks are documented.
-- [ ] At least one child story can pass the Story Readiness Standard.
+- [x] At least one child story can pass the Story Readiness Standard: `STORY-TAC-005`.
 
 If no child story can become READY, the epic is not production-ready.
 
@@ -192,4 +193,4 @@ If any box above is checked, the epic needs revision.
 
 ## Verdict
 
-Draft / Design Ready-candidate. Child stories still need drafting before implementation.
+Approved / Story Ready. `STORY-TAC-005` is the next implementation packet; other child stories remain placeholders until drafted and approved individually.

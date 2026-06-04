@@ -295,3 +295,12 @@
 - Confirmed linked GDD/ADR/control sources are approved for the narrow battle-end/BattleResult-return scope.
 - Added `production/sprints/codex-story-tac-004.prompt.txt` as the copy-safe Codex implementation prompt.
 - Updated closeout train, epic traceability, run prompts, and index discoverability.
+
+
+## [2026-06-04] approve | STORY-TAC-005 tactical player controls
+
+- Marked `STORY-LOOP-002` DONE / merged after Unity PR #19 and post-merge main CI passed.
+- Recorded human review note that the current tactical view is not yet usable enough because it lacks basic movement/pass-style controls.
+- Marked `EPIC-STRAT-MVP-001` implemented for the first guarded-site capture loop and moved tactical usability follow-up into `EPIC-VSLICE-MVP-002`.
+- Approved `EPIC-VSLICE-MVP-002` for the next production packet and created READY story `STORY-TAC-005 Basic Tactical Player Controls`.
+- Created checked-in Codex prompt `production/sprints/codex-story-tac-005.prompt.txt` and updated run-prompt instructions.

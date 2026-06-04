@@ -7,7 +7,17 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership]
+related:
+  [
+    design/gdd/strategic-map,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
+    production/stories/story-strat-001-scenario-map-graph-state,
+    production/stories/story-strat-002-hotseat-turn-ownership,
+  ]
 approval: approved
 ---
 
@@ -78,10 +88,12 @@ Exact source references:
 ## Allowed stubs, mocks, placeholders, or temporary data
 
 Allowed:
+
 - Test-local graph fixtures from STORY-STRAT-001.
 - A simple movement result/diagnostic object for tests and future UI use.
 
 Not allowed:
+
 - Hidden automatic site interaction after movement.
 - New movement modifiers not approved by this story.
 
@@ -124,22 +136,28 @@ Not allowed:
 Status: PASS.
 
 Open questions:
+
 - None if implementation remains single-route domain movement.
 
 Assumptions:
+
 - Route movement cost is read from `StrategicRouteDefinition.MovementCost`.
 - Movement applies one authored route per command; richer pathing is deferred.
 
 Out of scope:
+
 - Same as story Out of scope section.
 
 Allowed stubs/mocks:
+
 - Same as Allowed stubs section.
 
 Human approval:
+
 - Approved by human on 2026-06-02 in response to readiness review.
 
 Human-approved exceptions:
+
 - None.
 
 ## Branch / PR requirements

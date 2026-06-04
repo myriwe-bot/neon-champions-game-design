@@ -7,13 +7,14 @@ owner: shared
 created: 2026-05-22
 updated: 2026-05-30
 source_lore: [digital-net, greenland, blue-monday, blue-week]
-related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index]
+related:
+  [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index]
 approval: pending
 ---
 
 # Intel Resource System
 
-> Status: Draft. Direction based on *Heroes of Might and Magic: Olden Era* Alchemical Dust, but translated diegetically into Neon Champions.
+> Status: Draft. Direction based on _Heroes of Might and Magic: Olden Era_ Alchemical Dust, but translated diegetically into Neon Champions.
 
 ## Summary
 
@@ -24,6 +25,7 @@ Intel is Neon Champions' special cross-system upgrade resource. Like Olden Era's
 ## Design Reference: Alchemical Dust
 
 Olden Era's Alchemical Dust is acquired by:
+
 - trading rare resources in Alchemical Labs;
 - disenchanting items in hero inventory;
 - finding it in the wild;
@@ -31,11 +33,13 @@ Olden Era's Alchemical Dust is acquired by:
 - likely weekly map objects and guarded reward sites, based on community reports.
 
 It is spent on:
+
 - upgrading town dwellings;
 - leveling up spells;
 - empowering artifacts.
 
 Neon Champions translation:
+
 - Alchemical Labs -> Intel Exchanges / Analysis Cells.
 - Disenchanting items -> debriefing, reverse-engineering, burning, or leaking assets.
 - Wild pickups -> data caches / field dossiers / dead drops.
@@ -49,6 +53,7 @@ Neon Champions translation:
 Intel should feel like turning secrets into operational superiority.
 
 The player should think:
+
 - “I stole their research, so my gear improves.”
 - “I burned an asset for what it taught me.”
 - “I know how this site works now, so my units can be upgraded.”
@@ -73,31 +78,32 @@ The player should think:
 
 ## Acquisition Modes
 
-| Mode | Olden Era Analogue | Neon Champions Implementation | Renewable? |
-|---|---|---|---|
-| Data cache | wild dust pile | map pickup, dead drop, black box, leaked archive | No |
-| Guarded data site | guarded reward object | server bunker, wrecked convoy, archive, dark-net mirror | Usually no |
-| Intel Exchange | Alchemical Lab | trade Compute/Proof/Credits/rare resources for Intel | Yes if inputs renewable |
-| Analysis Cell | Alchemical Dust Storage | weekly Intel from controlled analysis site | Yes, weekly |
-| Reverse-engineering | disenchant artifact | dismantle asset, burn contact, debrief captured gear | No, converts item to Intel |
-| Specialist skill | subskill generation | Analyst/Fixer/Signals Champion produces Intel/day | Yes |
-| Tactical outcome | battle reward | capture VIP, hack tactical objective, recover prototype | Event-based |
-| Public scandal | unique cyberpunk source | convert Proof/legitimacy win into Intel or damage rival | Event-based |
+| Mode                | Olden Era Analogue      | Neon Champions Implementation                           | Renewable?                 |
+| ------------------- | ----------------------- | ------------------------------------------------------- | -------------------------- |
+| Data cache          | wild dust pile          | map pickup, dead drop, black box, leaked archive        | No                         |
+| Guarded data site   | guarded reward object   | server bunker, wrecked convoy, archive, dark-net mirror | Usually no                 |
+| Intel Exchange      | Alchemical Lab          | trade Compute/Proof/Credits/rare resources for Intel    | Yes if inputs renewable    |
+| Analysis Cell       | Alchemical Dust Storage | weekly Intel from controlled analysis site              | Yes, weekly                |
+| Reverse-engineering | disenchant artifact     | dismantle asset, burn contact, debrief captured gear    | No, converts item to Intel |
+| Specialist skill    | subskill generation     | Analyst/Fixer/Signals Champion produces Intel/day       | Yes                        |
+| Tactical outcome    | battle reward           | capture VIP, hack tactical objective, recover prototype | Event-based                |
+| Public scandal      | unique cyberpunk source | convert Proof/legitimacy win into Intel or damage rival | Event-based                |
 
 ## Spending Modes
 
-| Sink | Olden Era Analogue | Neon Champions Translation | Notes |
-|---|---|---|---|
-| Asset empowerment | artifact empowerment | upgrade Champion gear/assets | Core MVP use |
-| Operation leveling | spell leveling | upgrade hacks, media ops, legal strikes, climate-system actions | Vertical Slice |
-| Recruitment-site upgrade | town dwelling upgrade | upgrade drone depot, clinic, hunter council, merc lodge, animal-control station | Vertical Slice |
-| Elite unit unlock | dwelling/unit upgrade | unlock advanced squad variants | Alpha unless MVP needs it |
-| Map-layer reveal | none/direct adaptation | reveal hidden Digital-Net/proof/route state | Use sparingly |
-| Counter-intel cleanup | none/direct adaptation | remove spoofed/polluted info from region | Supports dirty-info pillar |
+| Sink                     | Olden Era Analogue     | Neon Champions Translation                                                      | Notes                      |
+| ------------------------ | ---------------------- | ------------------------------------------------------------------------------- | -------------------------- |
+| Asset empowerment        | artifact empowerment   | upgrade Champion gear/assets                                                    | Core MVP use               |
+| Operation leveling       | spell leveling         | upgrade hacks, media ops, legal strikes, climate-system actions                 | Vertical Slice             |
+| Recruitment-site upgrade | town dwelling upgrade  | upgrade drone depot, clinic, hunter council, merc lodge, animal-control station | Vertical Slice             |
+| Elite unit unlock        | dwelling/unit upgrade  | unlock advanced squad variants                                                  | Alpha unless MVP needs it  |
+| Map-layer reveal         | none/direct adaptation | reveal hidden Digital-Net/proof/route state                                     | Use sparingly              |
+| Counter-intel cleanup    | none/direct adaptation | remove spoofed/polluted info from region                                        | Supports dirty-info pillar |
 
 ## Prototype Values
 
 Use placeholder values until playtested:
+
 - Small cache: 5 Intel.
 - Standard guarded cache: 10 Intel.
 - Major data vault: 25 Intel.
@@ -116,6 +122,7 @@ These are intentionally lower-granularity than Olden Era until the resource econ
 Full tactical battles are in scope.
 
 Intel can enter tactical battles through optional objectives:
+
 - capture a server rack before destroying defenders;
 - prevent enemy data wipe for +Intel;
 - extract a VIP alive;
@@ -127,24 +134,24 @@ This makes Intel more interesting than post-battle loot and reinforces the cyber
 
 ## Edge Cases
 
-| Scenario | Expected Behavior | Rationale |
-|---|---|---|
-| Player spends all Intel early | Core map remains playable; high-end upgrades slow down | Avoid hard fail through experimentation |
-| Player hoards Intel | Unspent Intel has no passive value by default | Encourage use |
-| Map lacks recurring Intel | Scenario UI should show it is a scarcity map | Avoid hidden frustration |
-| Asset is dismantled | Asset is permanently destroyed unless scenario marks it as recoverable | Preserve opportunity cost |
-| Captured Intel exceeds storage cap | No cap in MVP | Avoid bookkeeping until needed |
-| Intel from local community | Should require consent/trust, not extraction-only framing | Avoid colonial resource logic |
+| Scenario                           | Expected Behavior                                                      | Rationale                               |
+| ---------------------------------- | ---------------------------------------------------------------------- | --------------------------------------- |
+| Player spends all Intel early      | Core map remains playable; high-end upgrades slow down                 | Avoid hard fail through experimentation |
+| Player hoards Intel                | Unspent Intel has no passive value by default                          | Encourage use                           |
+| Map lacks recurring Intel          | Scenario UI should show it is a scarcity map                           | Avoid hidden frustration                |
+| Asset is dismantled                | Asset is permanently destroyed unless scenario marks it as recoverable | Preserve opportunity cost               |
+| Captured Intel exceeds storage cap | No cap in MVP                                                          | Avoid bookkeeping until needed          |
+| Intel from local community         | Should require consent/trust, not extraction-only framing              | Avoid colonial resource logic           |
 
 ## Tuning Knobs
 
-| Parameter | Current Value | Safe Range | Effect of Increase | Effect of Decrease |
-|---|---:|---:|---|---|
-| Basic asset upgrade cost | 10 | 5-20 | Slower Champion growth | Faster experimentation |
-| Major asset upgrade cost | 25 | 15-50 | More specialization | More frequent power spikes |
-| Analysis Cell weekly yield | 10 | 5-25 | More renewable Intel | More map scarcity |
-| Specialist daily yield | 1 | 0-3 | Stronger economy builds | Less snowball |
-| Dismantle common asset yield | 5 | 0-10 | More salvage economy | More attachment to assets |
+| Parameter                    | Current Value | Safe Range | Effect of Increase      | Effect of Decrease         |
+| ---------------------------- | ------------: | ---------: | ----------------------- | -------------------------- |
+| Basic asset upgrade cost     |            10 |       5-20 | Slower Champion growth  | Faster experimentation     |
+| Major asset upgrade cost     |            25 |      15-50 | More specialization     | More frequent power spikes |
+| Analysis Cell weekly yield   |            10 |       5-25 | More renewable Intel    | More map scarcity          |
+| Specialist daily yield       |             1 |        0-3 | Stronger economy builds | Less snowball              |
+| Dismantle common asset yield |             5 |       0-10 | More salvage economy    | More attachment to assets  |
 
 ## Acceptance Criteria
 
@@ -157,8 +164,8 @@ This makes Intel more interesting than post-battle loot and reinforces the cyber
 
 ## Open Questions
 
-| Question | Owner | Deadline | Resolution |
-|---|---|---|---|
-| Should Intel be stored globally, Champion-local, or hybrid? | Human/shared | Before resource implementation | Recommended: global pool plus Champion-local discounts/special caches. |
-| Should Intel have subtypes, e.g. HUMINT/SIGINT/Research/Proof? | Human/shared | After MVP | Recommended: no for MVP. |
-| Can Intel be traded on markets? | Human/shared | Before economy GDD | Recommended: only through controlled Intel Exchanges, not open market. |
+| Question                                                       | Owner        | Deadline                       | Resolution                                                             |
+| -------------------------------------------------------------- | ------------ | ------------------------------ | ---------------------------------------------------------------------- |
+| Should Intel be stored globally, Champion-local, or hybrid?    | Human/shared | Before resource implementation | Recommended: global pool plus Champion-local discounts/special caches. |
+| Should Intel have subtypes, e.g. HUMINT/SIGINT/Research/Proof? | Human/shared | After MVP                      | Recommended: no for MVP.                                               |
+| Can Intel be traded on markets?                                | Human/shared | Before economy GDD             | Recommended: only through controlled Intel Exchanges, not open market. |

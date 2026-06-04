@@ -7,7 +7,14 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-27
 source_lore: []
-related: [docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/data-authoring-options, docs/architecture/testing-strategy, docs/architecture/ci-build-automation]
+related:
+  [
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/data-authoring-options,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+  ]
 approval: pending
 ---
 

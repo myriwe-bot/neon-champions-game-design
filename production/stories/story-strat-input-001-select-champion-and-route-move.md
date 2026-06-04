@@ -7,7 +7,19 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation]
+related:
+  [
+    design/gdd/strategic-map,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
+    production/stories/story-strat-001-scenario-map-graph-state,
+    production/stories/story-strat-002-hotseat-turn-ownership,
+    production/stories/story-strat-003-champion-route-movement,
+    production/stories/story-strat-vis-001-minimal-strategic-map-presentation,
+  ]
 approval: approved
 ---
 
@@ -130,13 +142,16 @@ Not allowed:
 Status: PASS.
 
 Open questions:
+
 - None for single-step adjacent-route input.
 
 Assumptions:
+
 - The first playable goal favors crude, testable click/select behavior over polished controls.
 - Only one Champion per faction exists in MVP, so selection can remain simple.
 
 Out of scope:
+
 - Same as story Out of scope section.
 
 ## Codex implementation notes

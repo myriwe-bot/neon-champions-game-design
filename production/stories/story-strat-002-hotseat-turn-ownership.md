@@ -7,7 +7,16 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state]
+related:
+  [
+    design/gdd/strategic-map,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
+    production/stories/story-strat-001-scenario-map-graph-state,
+  ]
 approval: approved
 ---
 
@@ -82,10 +91,12 @@ Exact source references:
 ## Allowed stubs, mocks, placeholders, or temporary data
 
 Allowed:
+
 - Test-local scenario fixture from STORY-STRAT-001 or equivalent test-local data.
 - No-op extension point for future recurring income only if clearly named/tested as not implemented.
 
 Not allowed:
+
 - Hidden automatic site rewards, movement, AI decisions, or UI behavior.
 
 ## Dependencies
@@ -127,21 +138,27 @@ Not allowed:
 Status: PASS.
 
 Open questions:
+
 - None for domain turn ownership.
 
 Assumptions:
+
 - STORY-STRAT-001 runtime fields remain the state source: `ActiveFactionId`, `TurnOrder`, `TurnNumber`, `RoundNumber`, Champion movement and interaction fields, and `Victory`.
 
 Out of scope:
+
 - Same as story Out of scope section.
 
 Allowed stubs/mocks:
+
 - Same as Allowed stubs section.
 
 Human approval:
+
 - Approved by human on 2026-06-02 in response to readiness review.
 
 Human-approved exceptions:
+
 - None.
 
 ## Branch / PR requirements

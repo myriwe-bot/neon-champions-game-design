@@ -7,7 +7,15 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-27
 source_lore: []
-related: [docs/architecture/architecture, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/technical-decision-priorities, production/stories/story-template, production/epics/epic-template]
+related:
+  [
+    docs/architecture/architecture,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/technical-decision-priorities,
+    production/stories/story-template,
+    production/epics/epic-template,
+  ]
 approval: approved
 ---
 

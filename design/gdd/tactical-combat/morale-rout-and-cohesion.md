@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -77,6 +78,7 @@ Design notes:
 - Extraction missions should reward positional play rather than letting the player press a universal Retreat command to save everyone.
 - Champion consequences should be battle-authored. Routine tactical defeat should not casually kill or capture Champions because Champions are not baseline board units.
 - Asset risk should follow commitment. If a drone wing, safehouse uplink, Operator channel, transport, or special support asset was committed to the fight, it can be lost, damaged, exposed, or captured according to scenario rules.
+
 ## Morale, Routing, and Stack Collapse
 
 Approved direction:
@@ -108,6 +110,7 @@ Design notes:
 - Effect-specific rout behavior keeps room for faction identity: propaganda panic, Hacked command loops, cult discipline breaks, drone swarm desync, biotech shock, or corporate surrender protocols can all read differently.
 - The global morale model should be visible and readable, not a hidden dicey subsystem.
 - Morale must not become a second HP bar for every stack unless later packets justify that complexity.
+
 ## Global Morale Model
 
 Approved direction:
@@ -142,6 +145,7 @@ Design notes:
 - Event-based morale makes the system legible: players should know why morale changed.
 - High morale should be active/identity-driven rather than generic win-more damage or defense.
 - Low morale should create pressure and rout risk, but avoid irreversible death spirals unless a faction/scenario is explicitly built around morale collapse.
+
 ## Morale Scale, Thresholds, and Rout Checks
 
 Approved direction:
@@ -195,6 +199,7 @@ Design notes:
 - Weighted chance preserves uncertainty; event severity and banding prevent it from feeling arbitrary.
 - Broad stack traits give unit identity without adding a mandatory morale-resistance stat to every roster entry.
 - Traits should be sparse and meaningful. Do not tag every unit unless the trait changes a real rule.
+
 ## Morale Recovery and Rally Actions
 
 Approved direction:
@@ -227,6 +232,7 @@ Design notes:
 - Unit/faction-specific rally abilities can still exist, but they are exceptions and identity tools, not the default recovery UI.
 - Rally should be strong enough to create comeback decisions but not erase rout as a meaningful failure state.
 - Removed-rout states should be clearly labeled so the player knows when recovery is impossible.
+
 ## Morale Event Sources and Strategic Links
 
 Approved direction:
@@ -273,6 +279,7 @@ Design notes:
 - Strategic starting Morale gives map-layer decisions tactical consequences without adding per-turn overhead.
 - Faction morale hooks should be sparse and legible. The goal is identity, not a bespoke morale minigame for every faction.
 - Morale rules should expose why morale changed: “Elite stack destroyed,” “Upload secured,” “Fighting in home territory,” “Supply exhausted,” etc.
+
 ## Morale UI, Prediction, and Player Readability
 
 Approved direction:
@@ -311,6 +318,7 @@ Design notes:
 - Rout risk preview should focus on major foreseeable events, not every tiny action, to avoid UI noise and over-mechanization.
 - Optional exact values support clarity, accessibility, testing, and strategy-minded players without forcing spreadsheet UI on everyone.
 - The trend indicator helps players understand direction even when the band has not changed yet.
+
 ## Morale Complexity Boundary and MVP Cut
 
 Approved direction:
@@ -352,6 +360,7 @@ Design notes:
 - Strategic/faction morale depth should return after the base combat loop is playable and understandable.
 - Deterministic rout is easier to test, explain, balance, and debug than hidden random checks.
 - If randomness is ever added later, the UI must still preview risk clearly and explain causes.
+
 ## End of Morale Block — Integration Check
 
 Approved direction:
@@ -368,6 +377,7 @@ Integration notes:
 - Retreat and surrender remain battle-type/scenario systems, not morale-driven systems for MVP.
 - Routed/removed stacks can still matter for battle-loss checks according to the rout rules, but no extra retreat/surrender morale coupling is being added here.
 - Post-battle resolution is the natural next packet because retreat, surrender, rout, tactical loss, and asset commitment now need consequence handling.
+
 ## Morale / Cohesion
 
 ### Core Cohesion Model

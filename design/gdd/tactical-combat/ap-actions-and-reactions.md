@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -73,20 +74,22 @@ Design notes:
 - Defend does not universally reduce Cohesion damage by itself; Cohesion protection comes through Leadership / Cohesion, Doctrine, traits, or specific defensive effects.
 - A Defending stack can retaliate / make opportunity attacks normally.
 - Defend lasts until the stack's next activation unless removed by displacement, stun, disruption, or a specific anti-defense ability.
+
 ## Base Actions
 
-| Action | AP Cost | Notes |
-|---|---:|---|
-| Move | 1 | Move up to the stack's Move value. |
-| Disengage | 1 | Leave hostile Zone of Control without triggering Retaliation. |
-| Basic Attack | 1 | Standard melee or ranged attack. |
-| Heavy / Signature Attack | 2 | Stronger attack, burst, charge, artillery strike, etc. |
-| Reload / Recharge | 1 | Refills magazine, charge, heat capacity, or equivalent. |
-| Defend | End activation | HoMM-like defensive action; consumes remaining activation and grants defensive bonus. |
-| Overwatch | 1 | Not universal; only available to units/stacks with the relevant trait. |
-| Simple Ability | 1 | Tactical utility, light faction ability, minor Champion-granted action. |
-| Major Ability | 2 | High-impact tactical ability. |
-| Interact / Objective | 1 | Capture, extract, activate, sabotage, loot, or mission-specific action. |
+| Action                   |        AP Cost | Notes                                                                                 |
+| ------------------------ | -------------: | ------------------------------------------------------------------------------------- |
+| Move                     |              1 | Move up to the stack's Move value.                                                    |
+| Disengage                |              1 | Leave hostile Zone of Control without triggering Retaliation.                         |
+| Basic Attack             |              1 | Standard melee or ranged attack.                                                      |
+| Heavy / Signature Attack |              2 | Stronger attack, burst, charge, artillery strike, etc.                                |
+| Reload / Recharge        |              1 | Refills magazine, charge, heat capacity, or equivalent.                               |
+| Defend                   | End activation | HoMM-like defensive action; consumes remaining activation and grants defensive bonus. |
+| Overwatch                |              1 | Not universal; only available to units/stacks with the relevant trait.                |
+| Simple Ability           |              1 | Tactical utility, light faction ability, minor Champion-granted action.               |
+| Major Ability            |              2 | High-impact tactical ability.                                                         |
+| Interact / Objective     |              1 | Capture, extract, activate, sabotage, loot, or mission-specific action.               |
+
 ## Defend / Brace Direction
 
 Use one clean player-facing action: **Defend**. Defend ends the stack's activation and grants a defensive bonus until its next activation.
@@ -112,6 +115,7 @@ Approved interactions:
 - Defend does not automatically reduce Cohesion damage. Cohesion protection is provided by Leadership / Cohesion, Doctrine, unit traits, or specific defensive effects.
 - Defending stacks can retaliate and make opportunity attacks normally.
 - Defend can be stripped before the next activation by displacement, stun, disruption, or specific anti-defense abilities.
+
 ## Counterattacks, Zone of Control, and Overwatch
 
 ### Counterattack / Retaliation

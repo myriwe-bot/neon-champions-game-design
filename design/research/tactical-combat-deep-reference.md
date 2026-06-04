@@ -6,7 +6,12 @@ phase: systems-design
 owner: shared
 created: 2026-05-30
 updated: 2026-05-30
-related: [design/gdd/tactical-combat, design/gdd/faction-unit-rosters, design/gdd/systems-index]
+related:
+  [
+    design/gdd/tactical-combat,
+    design/gdd/faction-unit-rosters,
+    design/gdd/systems-index,
+  ]
 approval: pending
 ---
 
@@ -394,18 +399,18 @@ Design notes:
 
 ## Base Actions
 
-| Action | AP Cost | Notes |
-|---|---:|---|
-| Move | 1 | Move up to the stack's Move value. |
-| Disengage | 1 | Leave hostile Zone of Control without triggering Retaliation. |
-| Basic Attack | 1 | Standard melee or ranged attack. |
-| Heavy / Signature Attack | 2 | Stronger attack, burst, charge, artillery strike, etc. |
-| Reload / Recharge | 1 | Refills magazine, charge, heat capacity, or equivalent. |
-| Defend | End activation | HoMM-like defensive action; consumes remaining activation and grants defensive bonus. |
-| Overwatch | 1 | Not universal; only available to units/stacks with the relevant trait. |
-| Simple Ability | 1 | Tactical utility, light faction ability, minor Champion-granted action. |
-| Major Ability | 2 | High-impact tactical ability. |
-| Interact / Objective | 1 | Capture, extract, activate, sabotage, loot, or mission-specific action. |
+| Action                   |        AP Cost | Notes                                                                                 |
+| ------------------------ | -------------: | ------------------------------------------------------------------------------------- |
+| Move                     |              1 | Move up to the stack's Move value.                                                    |
+| Disengage                |              1 | Leave hostile Zone of Control without triggering Retaliation.                         |
+| Basic Attack             |              1 | Standard melee or ranged attack.                                                      |
+| Heavy / Signature Attack |              2 | Stronger attack, burst, charge, artillery strike, etc.                                |
+| Reload / Recharge        |              1 | Refills magazine, charge, heat capacity, or equivalent.                               |
+| Defend                   | End activation | HoMM-like defensive action; consumes remaining activation and grants defensive bonus. |
+| Overwatch                |              1 | Not universal; only available to units/stacks with the relevant trait.                |
+| Simple Ability           |              1 | Tactical utility, light faction ability, minor Champion-granted action.               |
+| Major Ability            |              2 | High-impact tactical ability.                                                         |
+| Interact / Objective     |              1 | Capture, extract, activate, sabotage, loot, or mission-specific action.               |
 
 ## Defend / Brace Direction
 
@@ -2171,73 +2176,73 @@ These examples are provisional vocabulary, not final balance specs.
 
 #### Signal Operations
 
-| Operation | Scope | Type | Concept |
-|---|---|---|---|
-| Sensor Lock | Tactical | Minor Command / Major Operation variant | Mark an enemy stack; allied ranged/indirect attacks gain accuracy or targeting access against it. |
-| Spoof Targeting | Tactical | Major Operation | Enemy stack's next ranged or indirect attack suffers accuracy penalty, target restriction, or may be redirected to invalid/decoy target. |
-| Blackout Pulse | Tactical | Major Operation | Temporarily disables Overwatch, targeting assists, and some networked bonuses in an area. |
-| Counter-Intrusion | Tactical/Strategic | Minor Command / Reaction | Cancel or reduce an enemy Signal Operation; strategic version protects army/site from hostile feed manipulation. |
-| Feed Poisoning | Strategic | Major Operation | Corrupt local information state before battle: enemy starts with worse Cohesion, false scouting, or reduced starting Command. |
+| Operation         | Scope              | Type                                    | Concept                                                                                                                                  |
+| ----------------- | ------------------ | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Sensor Lock       | Tactical           | Minor Command / Major Operation variant | Mark an enemy stack; allied ranged/indirect attacks gain accuracy or targeting access against it.                                        |
+| Spoof Targeting   | Tactical           | Major Operation                         | Enemy stack's next ranged or indirect attack suffers accuracy penalty, target restriction, or may be redirected to invalid/decoy target. |
+| Blackout Pulse    | Tactical           | Major Operation                         | Temporarily disables Overwatch, targeting assists, and some networked bonuses in an area.                                                |
+| Counter-Intrusion | Tactical/Strategic | Minor Command / Reaction                | Cancel or reduce an enemy Signal Operation; strategic version protects army/site from hostile feed manipulation.                         |
+| Feed Poisoning    | Strategic          | Major Operation                         | Corrupt local information state before battle: enemy starts with worse Cohesion, false scouting, or reduced starting Command.            |
 
 #### Logistics Operations
 
-| Operation | Scope | Type | Concept |
-|---|---|---|---|
-| Emergency Resupply | Tactical | Major Operation | Restore Capacity to one or more allied stacks, especially ranged/heavy units. |
-| Field Repair | Tactical | Major Operation | Restore HP to mechanical/cybernetic/armored stacks or repair Shield/Armor state. |
-| Rapid Redeploy | Tactical | Major Operation | Move an allied stack without spending its AP, or reposition a limited distance under restrictions. |
-| Supply Corridor | Strategic/Tactical | Major Operation | Improve battle Supply State or negate Cut Off/Strained penalties for a limited time. |
-| Extraction Window | Tactical/Strategic | Major Operation | Enable safe retreat, partial casualty recovery, evacuation of objective unit, or reduced post-battle losses. |
+| Operation          | Scope              | Type            | Concept                                                                                                      |
+| ------------------ | ------------------ | --------------- | ------------------------------------------------------------------------------------------------------------ |
+| Emergency Resupply | Tactical           | Major Operation | Restore Capacity to one or more allied stacks, especially ranged/heavy units.                                |
+| Field Repair       | Tactical           | Major Operation | Restore HP to mechanical/cybernetic/armored stacks or repair Shield/Armor state.                             |
+| Rapid Redeploy     | Tactical           | Major Operation | Move an allied stack without spending its AP, or reposition a limited distance under restrictions.           |
+| Supply Corridor    | Strategic/Tactical | Major Operation | Improve battle Supply State or negate Cut Off/Strained penalties for a limited time.                         |
+| Extraction Window  | Tactical/Strategic | Major Operation | Enable safe retreat, partial casualty recovery, evacuation of objective unit, or reduced post-battle losses. |
 
 #### Fire Support Operations
 
-| Operation | Scope | Type | Concept |
-|---|---|---|---|
-| Drone Strike | Tactical | Major Operation | Direct or semi-indirect strike against a marked/visible target; moderate damage, high precision. |
-| Suppression Barrage | Tactical | Major Operation | Area pressure that applies Suppressed, damages lightly, and punishes clumping. |
-| Delayed Missile Call | Tactical | Major Operation | Telegraph a high-impact strike resolving later; enemies can move, jam, shield, or disable spotters. |
-| Area Denial Pattern | Tactical | Major Operation | Create temporary danger tiles that discourage movement or protect a flank. |
+| Operation            | Scope              | Type            | Concept                                                                                                             |
+| -------------------- | ------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Drone Strike         | Tactical           | Major Operation | Direct or semi-indirect strike against a marked/visible target; moderate damage, high precision.                    |
+| Suppression Barrage  | Tactical           | Major Operation | Area pressure that applies Suppressed, damages lightly, and punishes clumping.                                      |
+| Delayed Missile Call | Tactical           | Major Operation | Telegraph a high-impact strike resolving later; enemies can move, jam, shield, or disable spotters.                 |
+| Area Denial Pattern  | Tactical           | Major Operation | Create temporary danger tiles that discourage movement or protect a flank.                                          |
 | Pre-Battle Fire Plan | Strategic/Tactical | Major Operation | Strategic preparation that starts combat with damaged cover, exposed enemies, or a first-round targeting advantage. |
 
 #### Doctrine Operations
 
-| Operation | Scope | Type | Concept |
-|---|---|---|---|
-| Rally | Tactical | Minor Command / Major Operation variant | Restore Cohesion or remove a low-Cohesion penalty from selected allied stacks. |
-| Forced March | Tactical/Strategic | Minor Command / Major Operation | Tactical version grants movement/reposition; strategic version improves campaign movement or battle entry position. |
-| Hold the Line | Tactical | Minor Command / Major Operation variant | Boost Defend, Retaliation readiness, ZoC reliability, or Shield/Armor for a defensive turn. |
-| Coordinated Assault | Tactical | Major Operation | One target becomes vulnerable to follow-up attacks from multiple allied stacks this round. |
-| Battle Rhythm | Tactical | Major Operation | Adjust initiative timing, recover Wait positioning, or let a stack act earlier under constraints. |
+| Operation           | Scope              | Type                                    | Concept                                                                                                             |
+| ------------------- | ------------------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Rally               | Tactical           | Minor Command / Major Operation variant | Restore Cohesion or remove a low-Cohesion penalty from selected allied stacks.                                      |
+| Forced March        | Tactical/Strategic | Minor Command / Major Operation         | Tactical version grants movement/reposition; strategic version improves campaign movement or battle entry position. |
+| Hold the Line       | Tactical           | Minor Command / Major Operation variant | Boost Defend, Retaliation readiness, ZoC reliability, or Shield/Armor for a defensive turn.                         |
+| Coordinated Assault | Tactical           | Major Operation                         | One target becomes vulnerable to follow-up attacks from multiple allied stacks this round.                          |
+| Battle Rhythm       | Tactical           | Major Operation                         | Adjust initiative timing, recover Wait positioning, or let a stack act earlier under constraints.                   |
 
 #### Covert Operations
 
-| Operation | Scope | Type | Concept |
-|---|---|---|---|
-| Smoke Break | Tactical | Major Operation | Create smoke/obscurement that blocks line of sight, weakens Overwatch, and enables disengage. |
-| Ambush Cell | Tactical/Strategic | Major Operation | Reveal hidden allied asset/stack, or start battle with a flanking/hidden position if prepared strategically. |
-| Sabotage Kit | Tactical/Strategic | Major Operation | Disable a battlefield object, enemy supply source, turret, door, or heavy weapon for a limited time. |
-| False Flag | Strategic | Major Operation | Manipulate feed/legitimacy before or after battle; may alter enemy response, reinforcements, or public accounting. |
-| Decoy Signature | Tactical | Minor Command / Major Operation variant | Create false target/heat/signal/visual signature that soaks targeting or enables repositioning. |
+| Operation       | Scope              | Type                                    | Concept                                                                                                            |
+| --------------- | ------------------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Smoke Break     | Tactical           | Major Operation                         | Create smoke/obscurement that blocks line of sight, weakens Overwatch, and enables disengage.                      |
+| Ambush Cell     | Tactical/Strategic | Major Operation                         | Reveal hidden allied asset/stack, or start battle with a flanking/hidden position if prepared strategically.       |
+| Sabotage Kit    | Tactical/Strategic | Major Operation                         | Disable a battlefield object, enemy supply source, turret, door, or heavy weapon for a limited time.               |
+| False Flag      | Strategic          | Major Operation                         | Manipulate feed/legitimacy before or after battle; may alter enemy response, reinforcements, or public accounting. |
+| Decoy Signature | Tactical           | Minor Command / Major Operation variant | Create false target/heat/signal/visual signature that soaks targeting or enables repositioning.                    |
 
 #### Bio Operations — special/factional
 
-| Operation | Scope | Type | Concept |
-|---|---|---|---|
-| Growth Surge | Tactical | Major Operation | Temporarily bolster a Bio stack's HP, Armor-like tissue, movement, or damage; may have post-effect decay. |
-| Spore Bloom | Tactical | Major Operation | Area contamination that pressures cover, applies Chemical risk, or punishes enemies who remain clustered. |
-| Tissue Reclamation | Tactical/Post-Battle | Major Operation | Recover losses from nearby organic casualties or convert battlefield biomass into healing/reinforcement. |
-| Forced Adaptation | Tactical/Strategic | Major Operation | Grant temporary resistance or trait response after taking a damage type; strategic version prepares adaptation before battle. |
-| Brood Signal | Tactical | Major Operation | Coordinate organic/swarm units: extra movement, Cohesion stabilization, or synchronized attack. |
+| Operation          | Scope                | Type            | Concept                                                                                                                       |
+| ------------------ | -------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Growth Surge       | Tactical             | Major Operation | Temporarily bolster a Bio stack's HP, Armor-like tissue, movement, or damage; may have post-effect decay.                     |
+| Spore Bloom        | Tactical             | Major Operation | Area contamination that pressures cover, applies Chemical risk, or punishes enemies who remain clustered.                     |
+| Tissue Reclamation | Tactical/Post-Battle | Major Operation | Recover losses from nearby organic casualties or convert battlefield biomass into healing/reinforcement.                      |
+| Forced Adaptation  | Tactical/Strategic   | Major Operation | Grant temporary resistance or trait response after taking a damage type; strategic version prepares adaptation before battle. |
+| Brood Signal       | Tactical             | Major Operation | Coordinate organic/swarm units: extra movement, Cohesion stabilization, or synchronized attack.                               |
 
 #### Echo Operations — special/factional
 
-| Operation | Scope | Type | Concept |
-|---|---|---|---|
-| Afterimage Action | Tactical | Major Operation | A recently damaged or destroyed stack leaves an Echo trace that performs a limited final action. |
-| Continuity Anchor | Tactical/Strategic | Major Operation | Reduce casualty permanence, stabilize Cohesion after losses, or preserve command identity through disruption. |
-| Ghost Command | Tactical | Minor Command / Major Operation variant | Issue an order through an Echo trace, allowing a stack to ignore some Signal/Cohesion disruption or act from memory-pattern discipline. |
-| Identity Fracture | Tactical | Major Operation | Disrupt enemy Echo/networked/command-linked units; may reduce Cohesion, initiative, or Retaliation reliability. |
-| Memorial Protocol | Strategic/Tactical | Major Operation | Convert fallen-unit memory into morale/Cohesion, recruitment legitimacy, or a battle-start Doctrine bonus. |
+| Operation         | Scope              | Type                                    | Concept                                                                                                                                 |
+| ----------------- | ------------------ | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Afterimage Action | Tactical           | Major Operation                         | A recently damaged or destroyed stack leaves an Echo trace that performs a limited final action.                                        |
+| Continuity Anchor | Tactical/Strategic | Major Operation                         | Reduce casualty permanence, stabilize Cohesion after losses, or preserve command identity through disruption.                           |
+| Ghost Command     | Tactical           | Minor Command / Major Operation variant | Issue an order through an Echo trace, allowing a stack to ignore some Signal/Cohesion disruption or act from memory-pattern discipline. |
+| Identity Fracture | Tactical           | Major Operation                         | Disrupt enemy Echo/networked/command-linked units; may reduce Cohesion, initiative, or Retaliation reliability.                         |
+| Memorial Protocol | Strategic/Tactical | Major Operation                         | Convert fallen-unit memory into morale/Cohesion, recruitment legitimacy, or a battle-start Doctrine bonus.                              |
 
 ## Champion Progression Stats
 
@@ -2249,13 +2254,13 @@ Neon Champions uses **5 primary Champion stats** for now.
 
 The stat model preserves the functional readability of HoMM's classic stat split while using setting-appropriate terms.
 
-| Neon Champion Stat | HoMM Analogue | Primary Role |
-|---|---|---|
-| **Attack** | Attack | Improves army offensive performance. |
-| **Defense** | Defense | Improves army durability and defensive performance. |
-| **Control** | Spell Power | Improves Operation strength, duration, radius, reliability, or penetration across all channels. |
-| **Command** | Knowledge | Increases starting Command pool and/or prepared operation capacity. |
-| **Logistics** | Logistics / campaign skill elevated to primary | Improves supply, movement, capacity recovery, battle preparation, strategic reach, and post-battle recovery. |
+| Neon Champion Stat | HoMM Analogue                                  | Primary Role                                                                                                 |
+| ------------------ | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Attack**         | Attack                                         | Improves army offensive performance.                                                                         |
+| **Defense**        | Defense                                        | Improves army durability and defensive performance.                                                          |
+| **Control**        | Spell Power                                    | Improves Operation strength, duration, radius, reliability, or penetration across all channels.              |
+| **Command**        | Knowledge                                      | Increases starting Command pool and/or prepared operation capacity.                                          |
+| **Logistics**      | Logistics / campaign skill elevated to primary | Improves supply, movement, capacity recovery, battle preparation, strategic reach, and post-battle recovery. |
 
 Design rationale:
 
@@ -2682,18 +2687,18 @@ Approved direction:
 
 Design-doc build grammar:
 
-| Field | Purpose |
-|---|---|
-| **Archetype pole** | Marshal, Operator, or Hybrid. |
-| **Stat lean** | Top stats, secondary stats, and weak stats. |
-| **Primary channels** | Doctrine, Signal, Logistics, Fire Support, Covert, Bio, Echo, or special/factional channels. |
-| **Army preference** | Soft preference: melee, ranged, fast, armored, swarm, elite, expendable, mixed, etc. |
-| **Unit specialization** | Optional explicit synergy with a creature/unit line, role, tier, faction roster segment, or upgrade family. |
-| **Signature Doctrine** | Passive/conditional army-shaping identity. |
-| **Core Minor Commands** | Repeated active tools that keep the Champion tactically present. |
-| **Signature Major Operations** | High-impact prepared interventions. |
-| **Strategic-map specialty** | Map movement, supply, scouting, site control, recruitment, recovery, political accounting, etc. |
-| **Weakness / counterplay** | What opponents can exploit; what this Champion is bad at. |
+| Field                          | Purpose                                                                                                     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| **Archetype pole**             | Marshal, Operator, or Hybrid.                                                                               |
+| **Stat lean**                  | Top stats, secondary stats, and weak stats.                                                                 |
+| **Primary channels**           | Doctrine, Signal, Logistics, Fire Support, Covert, Bio, Echo, or special/factional channels.                |
+| **Army preference**            | Soft preference: melee, ranged, fast, armored, swarm, elite, expendable, mixed, etc.                        |
+| **Unit specialization**        | Optional explicit synergy with a creature/unit line, role, tier, faction roster segment, or upgrade family. |
+| **Signature Doctrine**         | Passive/conditional army-shaping identity.                                                                  |
+| **Core Minor Commands**        | Repeated active tools that keep the Champion tactically present.                                            |
+| **Signature Major Operations** | High-impact prepared interventions.                                                                         |
+| **Strategic-map specialty**    | Map movement, supply, scouting, site control, recruitment, recovery, political accounting, etc.             |
+| **Weakness / counterplay**     | What opponents can exploit; what this Champion is bad at.                                                   |
 
 Design notes:
 
@@ -2773,12 +2778,12 @@ Approved direction:
 
 Outcome model:
 
-| Outcome | Trigger | Consequence |
-|---|---|---|
-| **Extracted / Retreated** | Player retreats, surrenders, or uses valid extraction before total defeat. | Champion returns to a valid recruitment/base point. Army/supplies/tempo may be lost, but Champion control is preserved. |
-| **Defeated / Lost** | Army loses and Champion does not successfully extract. | Champion leaves player's roster and enters a lost/missing/random/capture-style pool. They may later reappear through recruitment, events, ransom, or even enemy availability. |
-| **Captured / Burned / Disavowed** | Special defeat condition, enemy ability, site rule, or campaign event. | Champion becomes a recovery objective, bargaining chip, intelligence risk, or temporarily unavailable asset. |
-| **Permanently Dead / Gone** | Rare special condition. | Champion is permanently removed. Use sparingly to avoid save-scumming and narrative breakage. |
+| Outcome                           | Trigger                                                                    | Consequence                                                                                                                                                                   |
+| --------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Extracted / Retreated**         | Player retreats, surrenders, or uses valid extraction before total defeat. | Champion returns to a valid recruitment/base point. Army/supplies/tempo may be lost, but Champion control is preserved.                                                       |
+| **Defeated / Lost**               | Army loses and Champion does not successfully extract.                     | Champion leaves player's roster and enters a lost/missing/random/capture-style pool. They may later reappear through recruitment, events, ransom, or even enemy availability. |
+| **Captured / Burned / Disavowed** | Special defeat condition, enemy ability, site rule, or campaign event.     | Champion becomes a recovery objective, bargaining chip, intelligence risk, or temporarily unavailable asset.                                                                  |
+| **Permanently Dead / Gone**       | Rare special condition.                                                    | Champion is permanently removed. Use sparingly to avoid save-scumming and narrative breakage.                                                                                 |
 
 Design notes:
 
@@ -3332,14 +3337,14 @@ AP is stable by default. Breaking AP rules is a Champion, faction, or rare elite
 
 ### Candidate Abilities
 
-| Ability | Source | Draft Effect | Design Notes |
-|---|---|---|---|
-| Command Burst | Champion | Target allied stack gains +1 AP this turn. | Clean, readable, very strong. Needs cooldown/charge limit. |
-| Tactical Uplink | Champion / network faction | Networked allied stacks in radius gain +1 AP; affected stacks become more vulnerable to EMP/hacking. | Strong cyberpunk tradeoff: tempo for network exposure. |
-| Overclock | Champion / cybernetic or biotech faction | Target gains +1 AP and possibly damage; suffers heat, stress, self-damage, or vulnerability afterward. | Good for body-subscription/cybernetic themes. |
-| Emergency Protocol | Champion / doctrine trait | A stack that kills an enemy refunds 1 AP once per turn. | Snowball-prone; use carefully. |
-| Drone Relay | Champion / drone faction | Champion spends command resource or AP to let a drone stack act immediately or gain +1 AP. | Makes command infrastructure tactically meaningful. |
-| Echo Possession / Continuity Override | Champion / Echo faction | Temporarily grants AP to a wounded, disabled, or collapsing stack so it can act before destruction. | Strong Neon Champions identity; links combat to death/Echo themes. |
+| Ability                               | Source                                   | Draft Effect                                                                                           | Design Notes                                                       |
+| ------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Command Burst                         | Champion                                 | Target allied stack gains +1 AP this turn.                                                             | Clean, readable, very strong. Needs cooldown/charge limit.         |
+| Tactical Uplink                       | Champion / network faction               | Networked allied stacks in radius gain +1 AP; affected stacks become more vulnerable to EMP/hacking.   | Strong cyberpunk tradeoff: tempo for network exposure.             |
+| Overclock                             | Champion / cybernetic or biotech faction | Target gains +1 AP and possibly damage; suffers heat, stress, self-damage, or vulnerability afterward. | Good for body-subscription/cybernetic themes.                      |
+| Emergency Protocol                    | Champion / doctrine trait                | A stack that kills an enemy refunds 1 AP once per turn.                                                | Snowball-prone; use carefully.                                     |
+| Drone Relay                           | Champion / drone faction                 | Champion spends command resource or AP to let a drone stack act immediately or gain +1 AP.             | Makes command infrastructure tactically meaningful.                |
+| Echo Possession / Continuity Override | Champion / Echo faction                  | Temporarily grants AP to a wounded, disabled, or collapsing stack so it can act before destruction.    | Strong Neon Champions identity; links combat to death/Echo themes. |
 
 ### Balance Constraints
 
@@ -4227,8 +4232,8 @@ Janus-Kestrel fit:
 Matchup meaning:
 
 - The first MVP faction pair becomes **certification versus concession** as much as **sensors versus steel**.
-- Barents asks: *what is safe, legal, visible, measurable, and certified?*
-- Janus-Kestrel asks: *what is cleared, routed, extracted, delivered, bonded, and enforced?*
+- Barents asks: _what is safe, legal, visible, measurable, and certified?_
+- Janus-Kestrel asks: _what is cleared, routed, extracted, delivered, bonded, and enforced?_
 - This gives the MVP matchup a grounded corporate conflict over Arctic/Greenland logistics, extraction, data, route truth, and physical control.
 
 Naming notes:
@@ -4318,15 +4323,15 @@ This section turns the Barents Research Group / Polar Certification Combine role
 
 Approved provisional unit lines:
 
-| Tier | Basic Unit | Upgraded Unit | Primary Role | Core Function |
-|---:|---|---|---|---|
-| 1 | Field Surveyors | Certified Route Team | Scout/support | Identify routes, hazards, and objective metadata. |
-| 2 | Ice Radar Operators | Cryo-Mapping Cell | Reveal/mark | Reveal hidden/suspected targets, apply Sensor Lock, improve targeting. |
-| 3 | Research Drones | Boreal Sensor Net | Drone recon/harass | Extend sensor coverage, contest weak objectives, enable marks. |
-| 4 | Rescue Contractors | Denied-Zone Responders | Midline combat/security | Credible combat stack with rescue/security dual use. |
-| 5 | Cable Divers | Under-Ice Saboteurs | Infrastructure/objective specialist | Disable or restore relays, cable nodes, pickup/extraction systems, and map infrastructure. |
-| 6 | Risk Actuaries | Certification Board | Command/support | Apply Risk Score, certify/decertify routes and objectives, manipulate eligibility/progress. |
-| 7 | Polar Exclusion Team | Black-Ice Wardens | Elite control | Area denial, anti-stealth, anti-drone, corridor protection, exclusion enforcement. |
+| Tier | Basic Unit           | Upgraded Unit          | Primary Role                        | Core Function                                                                               |
+| ---: | -------------------- | ---------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------- |
+|    1 | Field Surveyors      | Certified Route Team   | Scout/support                       | Identify routes, hazards, and objective metadata.                                           |
+|    2 | Ice Radar Operators  | Cryo-Mapping Cell      | Reveal/mark                         | Reveal hidden/suspected targets, apply Sensor Lock, improve targeting.                      |
+|    3 | Research Drones      | Boreal Sensor Net      | Drone recon/harass                  | Extend sensor coverage, contest weak objectives, enable marks.                              |
+|    4 | Rescue Contractors   | Denied-Zone Responders | Midline combat/security             | Credible combat stack with rescue/security dual use.                                        |
+|    5 | Cable Divers         | Under-Ice Saboteurs    | Infrastructure/objective specialist | Disable or restore relays, cable nodes, pickup/extraction systems, and map infrastructure.  |
+|    6 | Risk Actuaries       | Certification Board    | Command/support                     | Apply Risk Score, certify/decertify routes and objectives, manipulate eligibility/progress. |
+|    7 | Polar Exclusion Team | Black-Ice Wardens      | Elite control                       | Area denial, anti-stealth, anti-drone, corridor protection, exclusion enforcement.          |
 
 Roster principles:
 
@@ -4385,15 +4390,15 @@ This section defines provisional tactical stat-role profiles for each Barents Re
 
 Approved provisional profiles:
 
-| Tier | Unit Line | Profile | Tactical Contract |
-|---:|---|---|---|
-| 1 | Field Surveyors → Certified Route Team | Weak combat, strong certification/objective interaction | Teaches route/objective certification from tier 1. |
-| 2 | Ice Radar Operators → Cryo-Mapping Cell | Ranged support with reveal/mark and light damage | Useful in normal fights while carrying reveal/Sensor Lock duties. |
-| 3 | Research Drones → Boreal Sensor Net | Fast fragile ranged harass + sensor extender | Extends Barents sensor coverage and creates low-damage pressure. |
-| 4 | Rescue Contractors → Denied-Zone Responders | Medium infantry with sustain/extraction utility | Gives Barents a credible midline without becoming heavy industrial infantry. |
-| 5 | Cable Divers → Under-Ice Saboteurs | Mobile sabotage/objective unit with modest combat | Infrastructure flavor remains central, but the line is broadly playable. |
-| 6 | Risk Actuaries → Certification Board | Fragile backline command unit with strong Risk/Certification effects | Powerful battlefield bureaucracy that opponents can punish if exposed. |
-| 7 | Polar Exclusion Team → Black-Ice Wardens | Elite area-denial bruiser with control tools | Closes Barents' durability gap while remaining control-first, not a plain tank. |
+| Tier | Unit Line                                   | Profile                                                              | Tactical Contract                                                               |
+| ---: | ------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+|    1 | Field Surveyors → Certified Route Team      | Weak combat, strong certification/objective interaction              | Teaches route/objective certification from tier 1.                              |
+|    2 | Ice Radar Operators → Cryo-Mapping Cell     | Ranged support with reveal/mark and light damage                     | Useful in normal fights while carrying reveal/Sensor Lock duties.               |
+|    3 | Research Drones → Boreal Sensor Net         | Fast fragile ranged harass + sensor extender                         | Extends Barents sensor coverage and creates low-damage pressure.                |
+|    4 | Rescue Contractors → Denied-Zone Responders | Medium infantry with sustain/extraction utility                      | Gives Barents a credible midline without becoming heavy industrial infantry.    |
+|    5 | Cable Divers → Under-Ice Saboteurs          | Mobile sabotage/objective unit with modest combat                    | Infrastructure flavor remains central, but the line is broadly playable.        |
+|    6 | Risk Actuaries → Certification Board        | Fragile backline command unit with strong Risk/Certification effects | Powerful battlefield bureaucracy that opponents can punish if exposed.          |
+|    7 | Polar Exclusion Team → Black-Ice Wardens    | Elite area-denial bruiser with control tools                         | Closes Barents' durability gap while remaining control-first, not a plain tank. |
 
 Profile principles:
 
@@ -4476,12 +4481,12 @@ Complexity rule:
 
 Mechanic ownership:
 
-| Mechanic | Primary Owner | Secondary / Exploiters | Notes |
-|---|---|---|---|
-| Certified Route | Field Surveyors, Risk Actuaries | Black-Ice Wardens as zone protectors | Field Surveyors teach the mechanic; Risk Actuaries make it powerful. |
-| Sensor Lock | Ice Radar Operators | Research Drones | Keep access common enough for play, but not universal. |
-| Risk Score | Risk Actuaries | Ice Radar, Research Drones, Black-Ice Wardens, possibly Cable Divers as exploiters | Application should be controlled; exploitation can feel faction-wide. |
-| Objective manipulation | Field Surveyors, Cable Divers, Risk Actuaries | Rescue Contractors for extraction/sustain support | Three specialist lines give depth without making all units scenario tools. |
+| Mechanic               | Primary Owner                                 | Secondary / Exploiters                                                             | Notes                                                                      |
+| ---------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Certified Route        | Field Surveyors, Risk Actuaries               | Black-Ice Wardens as zone protectors                                               | Field Surveyors teach the mechanic; Risk Actuaries make it powerful.       |
+| Sensor Lock            | Ice Radar Operators                           | Research Drones                                                                    | Keep access common enough for play, but not universal.                     |
+| Risk Score             | Risk Actuaries                                | Ice Radar, Research Drones, Black-Ice Wardens, possibly Cable Divers as exploiters | Application should be controlled; exploitation can feel faction-wide.      |
+| Objective manipulation | Field Surveyors, Cable Divers, Risk Actuaries | Rescue Contractors for extraction/sustain support                                  | Three specialist lines give depth without making all units scenario tools. |
 
 Provisional per-line ability structure:
 
@@ -4547,15 +4552,15 @@ This section defines preliminary first-pass ability names and effects for Barent
 
 Approved preliminary ability sets:
 
-| Tier | Unit Line | Passive | Active | Core Effect |
-|---:|---|---|---|---|
-| 1 | Field Surveyors → Certified Route Team | Route Literacy | Preliminary Certification | Basic route/objective certification and safer movement/metadata use. |
-| 2 | Ice Radar Operators → Cryo-Mapping Cell | Cold Read | Ice Radar Sweep | Reveal/clarify hidden or suspected targets; apply Sensor Lock rider. |
-| 3 | Research Drones → Boreal Sensor Net | Relay Coverage | Tagging Pass | Extend sensor coverage and apply/refresh constrained Sensor Lock. |
-| 4 | Rescue Contractors → Denied-Zone Responders | Rescue Mandate | Emergency Extraction | Stabilize or reposition endangered stacks/objective carriers. |
-| 5 | Cable Divers → Under-Ice Saboteurs | Wetline Specialist | Restore/Cut Cable | Restore or sabotage relays, cable nodes, extraction systems, and objective infrastructure. |
-| 6 | Risk Actuaries → Certification Board | Risk Ledger | Certify/Decertify | Manipulate Certified Route state and Risk Score / objective eligibility. |
-| 7 | Polar Exclusion Team → Black-Ice Wardens | Wardens' Mandate | Exclusion Zone | Create/control exclusion space; upgrade riders can add anti-stealth/anti-drone. |
+| Tier | Unit Line                                   | Passive            | Active                    | Core Effect                                                                                |
+| ---: | ------------------------------------------- | ------------------ | ------------------------- | ------------------------------------------------------------------------------------------ |
+|    1 | Field Surveyors → Certified Route Team      | Route Literacy     | Preliminary Certification | Basic route/objective certification and safer movement/metadata use.                       |
+|    2 | Ice Radar Operators → Cryo-Mapping Cell     | Cold Read          | Ice Radar Sweep           | Reveal/clarify hidden or suspected targets; apply Sensor Lock rider.                       |
+|    3 | Research Drones → Boreal Sensor Net         | Relay Coverage     | Tagging Pass              | Extend sensor coverage and apply/refresh constrained Sensor Lock.                          |
+|    4 | Rescue Contractors → Denied-Zone Responders | Rescue Mandate     | Emergency Extraction      | Stabilize or reposition endangered stacks/objective carriers.                              |
+|    5 | Cable Divers → Under-Ice Saboteurs          | Wetline Specialist | Restore/Cut Cable         | Restore or sabotage relays, cable nodes, extraction systems, and objective infrastructure. |
+|    6 | Risk Actuaries → Certification Board        | Risk Ledger        | Certify/Decertify         | Manipulate Certified Route state and Risk Score / objective eligibility.                   |
+|    7 | Polar Exclusion Team → Black-Ice Wardens    | Wardens' Mandate   | Exclusion Zone            | Create/control exclusion space; upgrade riders can add anti-stealth/anti-drone.            |
 
 Line details:
 
@@ -4650,8 +4655,8 @@ If revisited later, use a simple abstract rule before considering true vertical 
 
 ## Open Questions
 
-| Question | Owner | Deadline | Resolution |
-|---|---|---|---|
-| Does Move consume AP, or is there separate free movement plus AP? | shared | TBD | Current draft assumes Move costs 1 AP. |
-| Which AP abilities belong to Champions versus faction/unit traits? | shared | TBD | Current draft favors Champions/faction identity. |
-| How often should normal battles occur on the strategy map? | shared | TBD | Impacts combat complexity budget. |
+| Question                                                           | Owner  | Deadline | Resolution                                       |
+| ------------------------------------------------------------------ | ------ | -------- | ------------------------------------------------ |
+| Does Move consume AP, or is there separate free movement plus AP?  | shared | TBD      | Current draft assumes Move costs 1 AP.           |
+| Which AP abilities belong to Champions versus faction/unit traits? | shared | TBD      | Current draft favors Champions/faction identity. |
+| How often should normal battles occur on the strategy map?         | shared | TBD      | Impacts combat complexity budget.                |

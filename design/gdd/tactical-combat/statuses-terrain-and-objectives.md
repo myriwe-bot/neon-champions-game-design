@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -74,6 +75,7 @@ Design notes:
 - Avoid generic full-turn Stun because it is too blunt for stack combat and undermines counterplay.
 - Suppression gives fire-support and ranged-control units a clean role without relying on hit/miss accuracy.
 - Jammed vs Hacked preserves cyberpunk nuance: interference is not the same as hostile control.
+
 ## Suppression
 
 Approved direction:
@@ -98,6 +100,7 @@ Design notes:
 - Suppression is anti-ranged/control, not a generic weakness state.
 - Matching the 50% engaged-ranged penalty keeps the mental model simple: if your ranged unit is under immediate pressure, its shooting is halved.
 - Defend is not a universal cleanse; command-layer systems and disciplined-unit traits are the proper counterplay space.
+
 ## Jammed
 
 Approved direction:
@@ -130,6 +133,7 @@ Design notes:
 - Jammed is precision interference, not a generic shutdown.
 - This preserves the high-tech vs analogue tradeoff: advanced systems create power and vulnerability; simpler units are less jammable.
 - Suppressed remains the general anti-Overwatch/ranged-pressure status; Jammed only blocks Overwatch when it hits the relevant system.
+
 ## Hacked
 
 Approved direction:
@@ -164,6 +168,7 @@ Design notes:
 - The default shape is “disable + hostile rider,” not “you lose your turn.”
 - Setup requirements keep hacking tactical and counterable instead of spammy.
 - Different hack families should advertise different counters; do not collapse all answers into one generic cleanse.
+
 ## Marked and Sensor Lock
 
 Approved direction:
@@ -191,6 +196,7 @@ Design notes:
 - Revealing stealth while active gives both statuses strong tactical value, but duration keeps them temporary.
 - Sensor Lock should be more vulnerable to Jammed, Signal counterplay, smoke, decoys, and sensor disruption.
 - Marked should be more vulnerable to line-of-sight denial, killing/pressuring spotters, smoke/visibility breaks, and command confusion.
+
 ## Stealth and Reveal
 
 Approved direction:
@@ -225,6 +231,7 @@ Design notes:
 - Attacking breaks Stealth to avoid permanent invisible damage dealers.
 - Adjacency reveal makes melee pressure and scouting movement useful against Stealth.
 - Reveal lasting 1 round matches Marked/Sensor Lock and gives enough time for follow-up.
+
 ## Smoke and Vision Blocking
 
 Approved direction:
@@ -249,6 +256,7 @@ Design notes:
 - Existing Marked or Sensor Lock persists for its normal duration; Smoke does not cleanse it by default.
 - Sensor bypass should be explicit and can be provided by units, allied spotters, Champion abilities, Operations, map infrastructure, or faction systems.
 - Area attacks remain the intuitive counter to obscured positions.
+
 ## Terrain Hazards
 
 Approved direction:
@@ -280,6 +288,7 @@ Design notes:
 - “Affects all by default, exceptions explicit” keeps the rules readable and prevents hidden category complexity.
 - Enter + start-of-activation timing makes hazards matter immediately and prevents easy abuse by stepping through danger for free.
 - 1 round is the default duration for ability-created hazards, matching Smoke/Reveal/Marked timing, but persistent map hazards and special abilities can override it.
+
 ## Forced Movement
 
 Approved direction:
@@ -316,6 +325,7 @@ Design notes:
 - Collision damage gives blocked pushes some value without requiring automatic secondary displacement.
 - Defend resisting 1 tile is deterministic and readable.
 - Objective displacement is allowed so battlefield positioning matters for control play.
+
 ## Tactical Objectives and Interactions
 
 Approved direction:

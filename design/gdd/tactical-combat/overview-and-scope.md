@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -29,6 +30,7 @@ approval: pending
 Neon Champions tactical combat is intended to combine HoMM-style army/faction identity with cyberpunk XCOM-lite tactical choices. The MVP combat board is flat: no elevation or multi-level terrain. Tactical depth should come from brutally simple AP, movement, ranged/melee roles, ammo/charge pressure, basic morale/rout/Rally, Champion command abilities, and faction-specific rule bending.
 
 > Quick reference — Layer: Core · Priority: MVP · Key deps: Champions, Factions, Faction Unit Rosters, Strategic Map, Resources
+
 ## Current Design Direction
 
 - Avoid full XCOM complexity for MVP.
@@ -36,6 +38,7 @@ Neon Champions tactical combat is intended to combine HoMM-style army/faction id
 - AP is stable by default; breaking AP rules is a Champion/faction identity moment.
 - Elevation/high ground is explicitly deferred.
 - Combat should remain fast enough for repeated strategy-map encounters.
+
 ## MVP Scope Constraints
 
 ### In Scope
@@ -60,6 +63,7 @@ Neon Champions tactical combat is intended to combine HoMM-style army/faction id
 - Deep hacking minigame inside every battle.
 - General capture/prisoner economy; rare authored/faction-specific capture can still exist.
 - Global recovery/resurrection/return mechanics; faction-specific return mechanics are decided during roster design.
+
 ## Tactical Entity Model
 
 Approved direction:

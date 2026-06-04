@@ -7,7 +7,13 @@ owner: shared
 created: 2026-05-22
 updated: 2026-05-25
 source_lore: []
-related: [design/workflow, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/stories/story-template]
+related:
+  [
+    design/workflow,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/stories/story-template,
+  ]
 approval: pending
 ---
 
@@ -45,6 +51,7 @@ Example:
 Why this epic matters to the game.
 
 Relevant pillars:
+
 - [ ] Cyberpunk strategy/RPG
 - [ ] Infrastructure-first conflict
 - [ ] Champions as legitimacy and force projection
@@ -89,11 +96,12 @@ Known future work not part of this epic:
 
 Agents and Codex may not implement this epic directly. They may only implement READY child stories.
 
-| Story | Status | Type | Depends On | Evidence |
-|---|---|---|---|---|
-| [STORY-ID] [Name] | Draft | Logic | ... | ... |
+| Story             | Status | Type  | Depends On | Evidence |
+| ----------------- | ------ | ----- | ---------- | -------- |
+| [STORY-ID] [Name] | Draft  | Logic | ...        | ...      |
 
 Allowed story statuses:
+
 - Draft
 - NEEDS WORK
 - READY
@@ -116,9 +124,9 @@ Allowed story statuses:
 
 ## Risks
 
-| Risk | Type | Impact | Mitigation / Owner |
-|---|---|---|---|
-| ... | Design / Technical / UX / Scope / Lore-Cultural-IP / Testing | ... | ... |
+| Risk | Type                                                         | Impact | Mitigation / Owner |
+| ---- | ------------------------------------------------------------ | ------ | ------------------ |
+| ...  | Design / Technical / UX / Scope / Lore-Cultural-IP / Testing | ...    | ...                |
 
 ## Epic readiness gate
 
@@ -154,6 +162,7 @@ An epic may be marked Complete only when all items are true:
 ## Anti-pattern check
 
 Invalid epic behavior:
+
 - [ ] This epic authorizes production implementation directly.
 - [ ] This epic replaces READY stories.
 - [ ] This epic hides ambiguous design decisions.

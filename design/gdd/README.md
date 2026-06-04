@@ -6,7 +6,14 @@ phase: systems-design
 owner: shared
 created: 2026-05-30
 updated: 2026-05-30
-related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index, design/gdd/strategic-map, design/gdd/tactical-combat]
+related:
+  [
+    design/gdd/game-concept,
+    design/gdd/game-pillars,
+    design/gdd/systems-index,
+    design/gdd/strategic-map,
+    design/gdd/tactical-combat,
+  ]
 approval: pending
 ---
 
@@ -52,13 +59,13 @@ Each active system GDD should include:
 
 ## Current GDD Map
 
-| GDD | Use For | Notes |
-|---|---|---|
-| [[design/gdd/game-concept]] | North-star concept. | Draft. |
-| [[design/gdd/game-pillars]] | Design filters. | Draft. |
-| [[design/gdd/systems-index]] | Dependency and priority map. | Draft. |
-| [[design/gdd/strategic-map]] | Strategic-map MVP scope and hotseat duel/race scenario contract. | Draft; current target is C3-H two-faction local hotseat with B1 duel map plus B2 pacing. |
-| [[design/gdd/intel-resource]] | Intel as resource/upgrade material. | Draft. |
-| [[design/gdd/faction-unit-rosters]] | Faction tactical identities and roster concepts. | Draft. |
-| [[design/gdd/tactical-combat]] | Active tactical combat overview and implementation-facing first-read contract. | Concise source-of-truth entry point; detailed preserved design-session material is split under `design/gdd/tactical-combat/`. |
-| [[design/gdd/tactical-combat/section-map]] | Preservation map for tactical-combat split articles. | Confirms every original top-level section is still present and mapped. |
+| GDD                                        | Use For                                                                        | Notes                                                                                                                         |
+| ------------------------------------------ | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| [[design/gdd/game-concept]]                | North-star concept.                                                            | Draft.                                                                                                                        |
+| [[design/gdd/game-pillars]]                | Design filters.                                                                | Draft.                                                                                                                        |
+| [[design/gdd/systems-index]]               | Dependency and priority map.                                                   | Draft.                                                                                                                        |
+| [[design/gdd/strategic-map]]               | Strategic-map MVP scope and hotseat duel/race scenario contract.               | Draft; current target is C3-H two-faction local hotseat with B1 duel map plus B2 pacing.                                      |
+| [[design/gdd/intel-resource]]              | Intel as resource/upgrade material.                                            | Draft.                                                                                                                        |
+| [[design/gdd/faction-unit-rosters]]        | Faction tactical identities and roster concepts.                               | Draft.                                                                                                                        |
+| [[design/gdd/tactical-combat]]             | Active tactical combat overview and implementation-facing first-read contract. | Concise source-of-truth entry point; detailed preserved design-session material is split under `design/gdd/tactical-combat/`. |
+| [[design/gdd/tactical-combat/section-map]] | Preservation map for tactical-combat split articles.                           | Confirms every original top-level section is still present and mapped.                                                        |

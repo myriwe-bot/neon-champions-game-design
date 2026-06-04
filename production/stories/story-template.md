@@ -7,7 +7,13 @@ owner: shared
 created: 2026-05-22
 updated: 2026-05-25
 source_lore: []
-related: [design/workflow, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, docs/architecture/control-manifest]
+related:
+  [
+    design/workflow,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    docs/architecture/control-manifest,
+  ]
 approval: pending
 ---
 
@@ -93,18 +99,23 @@ If a verification type is N/A, explain why.
 Status: PASS | FAIL
 
 Open questions:
+
 - None
 
 Assumptions:
+
 - None
 
 Out of scope:
+
 - ...
 
 Allowed stubs/mocks:
+
 - ...
 
 Human-approved exceptions:
+
 - None
 
 If status is FAIL, this story is not READY.

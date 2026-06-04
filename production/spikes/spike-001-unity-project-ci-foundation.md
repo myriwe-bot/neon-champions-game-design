@@ -7,7 +7,16 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-27
 source_lore: []
-related: [docs/architecture/unity-technical-scheme, docs/architecture/technical-decision-priorities, docs/architecture/ci-build-automation, docs/architecture/testing-strategy, docs/architecture/control-manifest, docs/architecture/codex-agent-instructions, docs/architecture/unity-repo-agents-template]
+related:
+  [
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/technical-decision-priorities,
+    docs/architecture/ci-build-automation,
+    docs/architecture/testing-strategy,
+    docs/architecture/control-manifest,
+    docs/architecture/codex-agent-instructions,
+    docs/architecture/unity-repo-agents-template,
+  ]
 approval: approved
 ---
 

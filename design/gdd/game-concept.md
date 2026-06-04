@@ -6,8 +6,14 @@ phase: concept
 owner: shared
 created: 2026-05-22
 updated: 2026-05-30
-source_lore: [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
-related: [design/gdd/game-pillars, design/gdd/systems-index, design/world/approved-world-slice]
+source_lore:
+  [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
+related:
+  [
+    design/gdd/game-pillars,
+    design/gdd/systems-index,
+    design/world/approved-world-slice,
+  ]
 approval: pending
 ---
 
@@ -74,6 +80,7 @@ Develop Champions, asset sets, faction hubs, recruitment networks, Intel upgrade
 ### MVP
 
 One Greenland region map with:
+
 - 2 playable factions;
 - 2 Champions;
 - 3 hubs/outposts;
@@ -88,6 +95,7 @@ One Greenland region map with:
 ### Vertical Slice
 
 A polished Blue Monday / Blue Week scenario with:
+
 - 3-4 factions;
 - 4-6 Champions;
 - hub building trees;
@@ -112,23 +120,23 @@ White daylight cyberpunk: pale engineered sky, hard Arctic terrain, neon against
 
 ## Risks
 
-| Risk | Type | Severity | Mitigation |
-|---|---|---:|---|
-| Core fun hypothesis untested | Design | High | Build MVP prototype before production. |
-| Greenland becomes exotic scenery | Narrative/design | High | Make local consent, sovereignty, and infrastructure dependency mechanically visible. |
-| Too many resources | Systems | High | Prototype with Credits, Energy, Proof, Intel only. |
-| Intel becomes generic mana | Systems/theme | Medium | Tie sources/sinks to secrets, proof, research, and asset upgrades. |
-| No-magic cyberpunk loses HoMM readability | UX/design | High | Preserve towns, guarded sites, resources, routes, dwellings, hero assets, and turn clarity. |
-| UNP Net authority cleans up the setting | Worldbuilding | Medium | Keep it treaty-bound, partial, contested, and dependent on corporate/state cooperation. |
-| Animal-control fantasy becomes silly | Tone | Medium | Ground in telemetry, biosecurity, wildlife management, and hacked sensor networks. |
+| Risk                                      | Type             | Severity | Mitigation                                                                                  |
+| ----------------------------------------- | ---------------- | -------: | ------------------------------------------------------------------------------------------- |
+| Core fun hypothesis untested              | Design           |     High | Build MVP prototype before production.                                                      |
+| Greenland becomes exotic scenery          | Narrative/design |     High | Make local consent, sovereignty, and infrastructure dependency mechanically visible.        |
+| Too many resources                        | Systems          |     High | Prototype with Credits, Energy, Proof, Intel only.                                          |
+| Intel becomes generic mana                | Systems/theme    |   Medium | Tie sources/sinks to secrets, proof, research, and asset upgrades.                          |
+| No-magic cyberpunk loses HoMM readability | UX/design        |     High | Preserve towns, guarded sites, resources, routes, dwellings, hero assets, and turn clarity. |
+| UNP Net authority cleans up the setting   | Worldbuilding    |   Medium | Keep it treaty-bound, partial, contested, and dependent on corporate/state cooperation.     |
+| Animal-control fantasy becomes silly      | Tone             |   Medium | Ground in telemetry, biosecurity, wildlife management, and hacked sensor networks.          |
 
 ## Open Questions
 
-| Question | Owner | Deadline | Resolution |
-|---|---|---|---|
-| Should the first campaign use real Greenland/Kalaallit Nunaat or a fictionalized Arctic autonomy? | Human | Before concept approval | Pending |
-| Is Blue Monday primarily the initial sky-break event, with Blue Week as the later/retrospective crisis period? | Human | Before concept approval | Current direction: Blue Monday is the initial event; Blue Week is later/retrospective framing. |
-| What is the first player faction? | Human | Before systems design | Pending |
-| What should the UNP Net security body be called? | Human | Before world slice approval | Digital Peacekeeping Directorate; commonly the Blue / the Blues. |
-| Is Intel global, Champion-local, or hybrid? | Shared | Before resource GDD | Pending |
-| Does combat use full tactical battles in MVP or guarded-site autoresolution first? | Human | Before MVP plan | Full tactical battles. |
+| Question                                                                                                       | Owner  | Deadline                    | Resolution                                                                                     |
+| -------------------------------------------------------------------------------------------------------------- | ------ | --------------------------- | ---------------------------------------------------------------------------------------------- |
+| Should the first campaign use real Greenland/Kalaallit Nunaat or a fictionalized Arctic autonomy?              | Human  | Before concept approval     | Pending                                                                                        |
+| Is Blue Monday primarily the initial sky-break event, with Blue Week as the later/retrospective crisis period? | Human  | Before concept approval     | Current direction: Blue Monday is the initial event; Blue Week is later/retrospective framing. |
+| What is the first player faction?                                                                              | Human  | Before systems design       | Pending                                                                                        |
+| What should the UNP Net security body be called?                                                               | Human  | Before world slice approval | Digital Peacekeeping Directorate; commonly the Blue / the Blues.                               |
+| Is Intel global, Champion-local, or hybrid?                                                                    | Shared | Before resource GDD         | Pending                                                                                        |
+| Does combat use full tactical battles in MVP or guarded-site autoresolution first?                             | Human  | Before MVP plan             | Full tactical battles.                                                                         |

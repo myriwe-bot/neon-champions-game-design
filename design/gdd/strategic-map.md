@@ -7,7 +7,15 @@ owner: shared
 created: 2026-05-30
 updated: 2026-06-01
 source_lore: [greenland, blue-monday, blue-week, white-sky, digital-net]
-related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index, design/gdd/tactical-combat, design/gdd/faction-unit-rosters, design/gdd/intel-resource]
+related:
+  [
+    design/gdd/game-concept,
+    design/gdd/game-pillars,
+    design/gdd/systems-index,
+    design/gdd/tactical-combat,
+    design/gdd/faction-unit-rosters,
+    design/gdd/intel-resource,
+  ]
 approval: approved
 ---
 
@@ -21,15 +29,15 @@ The strategic map is the main HoMM-like decision surface for Neon Champions. The
 
 Quick reference:
 
-| Field | Value |
-|---|---|
-| Layer | Core |
-| Priority | MVP |
-| Player fantasy | Command a public Champion across a contested cyberpunk Arctic map where infrastructure, routes, guarded sites, and faction pressure shape every fight. |
-| MVP target | C3-H: two-faction local hotseat strategy MVP. |
-| First scenario shape | B1 duel map with B2 pacing: direct contest plus early race for neutral sites/resources before the central clash. |
-| Main dependencies | Data Registry, Turn/Time, Factions, Champions, Resources, Intel, Tactical Combat, UX/HUD. |
-| Main risk | Building a full strategy game before the core loop is playable. |
+| Field                | Value                                                                                                                                                  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Layer                | Core                                                                                                                                                   |
+| Priority             | MVP                                                                                                                                                    |
+| Player fantasy       | Command a public Champion across a contested cyberpunk Arctic map where infrastructure, routes, guarded sites, and faction pressure shape every fight. |
+| MVP target           | C3-H: two-faction local hotseat strategy MVP.                                                                                                          |
+| First scenario shape | B1 duel map with B2 pacing: direct contest plus early race for neutral sites/resources before the central clash.                                       |
+| Main dependencies    | Data Registry, Turn/Time, Factions, Champions, Resources, Intel, Tactical Combat, UX/HUD.                                                              |
+| Main risk            | Building a full strategy game before the core loop is playable.                                                                                        |
 
 ## 2. Approved MVP Direction
 
@@ -74,16 +82,16 @@ Rules:
 
 Working first-map content budget:
 
-| Element | MVP Working Range | Purpose |
-|---|---:|---|
-| Factions | 2 | Hotseat strategic contest. |
-| Champions | 1 per faction | Keep strategic control readable. |
-| Starting hubs | 1 per faction | Spawn, ownership anchor, possible recruitment/reinforcement point. |
-| Neutral sites | 6-10 | Exploration, resources, recruitment, pacing choices. |
-| Guarded resource sites | 2-3 | Tactical battle entry and resource reward test. |
-| Recruitment/reinforcement sites | 1-2 | Army growth loop. |
-| Central objective site | 1 | Midgame contest and win-pressure anchor. |
-| Tactical battle types | Guarded site, faction-vs-faction site contest | Minimum proof that strategy hands off into combat. |
+| Element                         |                             MVP Working Range | Purpose                                                            |
+| ------------------------------- | --------------------------------------------: | ------------------------------------------------------------------ |
+| Factions                        |                                             2 | Hotseat strategic contest.                                         |
+| Champions                       |                                 1 per faction | Keep strategic control readable.                                   |
+| Starting hubs                   |                                 1 per faction | Spawn, ownership anchor, possible recruitment/reinforcement point. |
+| Neutral sites                   |                                          6-10 | Exploration, resources, recruitment, pacing choices.               |
+| Guarded resource sites          |                                           2-3 | Tactical battle entry and resource reward test.                    |
+| Recruitment/reinforcement sites |                                           1-2 | Army growth loop.                                                  |
+| Central objective site          |                                             1 | Midgame contest and win-pressure anchor.                           |
+| Tactical battle types           | Guarded site, faction-vs-faction site contest | Minimum proof that strategy hands off into combat.                 |
 
 ## 4. MVP In Scope
 
@@ -139,18 +147,18 @@ Working first-map content budget:
 
 The exact schemas remain a later packet, but implementation stories should expect these concepts:
 
-| Concept | Static Definition? | Runtime State? | Notes |
-|---|---|---|---|
-| Scenario | Yes | Yes | Defines map, factions, starts, sites, objectives; runtime tracks progress. |
-| Faction | Yes | Yes | Definition owns identity; runtime tracks resources, ownership, controller. |
-| Controller | Yes/config | Runtime assignment | `HumanLocal` for hotseat MVP; future strategic AI should fit without rewriting faction model. |
-| Champion | Yes | Yes | Definition owns identity/archetype; runtime tracks position, army, movement, state. |
-| Army | Possibly template | Yes | Runtime stack collection; must hand off to tactical battle. |
-| Site | Yes | Yes | Definition owns type/rewards/guards; runtime tracks owner/cleared/visited/state. |
-| Route/Map Link | Yes | Maybe | Movement cost/topology. |
-| Resource | Yes | Yes | Stockpile and rewards. |
-| BattleSetup | DTO | Per battle | Generated by strategy, consumed by tactics. |
-| BattleResult | DTO | Per battle | Generated by tactics, consumed by strategy. |
+| Concept        | Static Definition? | Runtime State?     | Notes                                                                                         |
+| -------------- | ------------------ | ------------------ | --------------------------------------------------------------------------------------------- |
+| Scenario       | Yes                | Yes                | Defines map, factions, starts, sites, objectives; runtime tracks progress.                    |
+| Faction        | Yes                | Yes                | Definition owns identity; runtime tracks resources, ownership, controller.                    |
+| Controller     | Yes/config         | Runtime assignment | `HumanLocal` for hotseat MVP; future strategic AI should fit without rewriting faction model. |
+| Champion       | Yes                | Yes                | Definition owns identity/archetype; runtime tracks position, army, movement, state.           |
+| Army           | Possibly template  | Yes                | Runtime stack collection; must hand off to tactical battle.                                   |
+| Site           | Yes                | Yes                | Definition owns type/rewards/guards; runtime tracks owner/cleared/visited/state.              |
+| Route/Map Link | Yes                | Maybe              | Movement cost/topology.                                                                       |
+| Resource       | Yes                | Yes                | Stockpile and rewards.                                                                        |
+| BattleSetup    | DTO                | Per battle         | Generated by strategy, consumed by tactics.                                                   |
+| BattleResult   | DTO                | Per battle         | Generated by tactics, consumed by strategy.                                                   |
 
 All runtime state must be serializable even before final save/load format is approved.
 
@@ -192,14 +200,14 @@ Rules:
 
 MVP data implications:
 
-| Concept | Required Fields / Behavior |
-|---|---|
-| StrategicNodeDefinition | stable node ID, node type, display/localization key, presentation position, optional site ID, optional owner/start state. |
-| StrategicRouteDefinition | stable route ID, from node ID, to node ID, movement cost, route type, traversal flags/requirements if any. |
-| StrategicMapDefinition | stable map ID, node list, route list, starting faction placements, optional visual map reference. |
-| ChampionStrategicState | champion ID, faction ID, current node ID, movement points/state. |
-| NodeRuntimeState | owner/control/cleared/visited/guarded state as defined by later site packet. |
-| RouteRuntimeState | open/blocked/contested state if later needed; default route state is open. |
+| Concept                  | Required Fields / Behavior                                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| StrategicNodeDefinition  | stable node ID, node type, display/localization key, presentation position, optional site ID, optional owner/start state. |
+| StrategicRouteDefinition | stable route ID, from node ID, to node ID, movement cost, route type, traversal flags/requirements if any.                |
+| StrategicMapDefinition   | stable map ID, node list, route list, starting faction placements, optional visual map reference.                         |
+| ChampionStrategicState   | champion ID, faction ID, current node ID, movement points/state.                                                          |
+| NodeRuntimeState         | owner/control/cleared/visited/guarded state as defined by later site packet.                                              |
+| RouteRuntimeState        | open/blocked/contested state if later needed; default route state is open.                                                |
 
 MVP movement contract draft:
 
@@ -251,41 +259,41 @@ Rules:
 
 MVP mechanical site categories:
 
-| Category | MVP Purpose | Typical Interaction |
-|---|---|---|
-| Start Hub | Faction anchor, starting position, safe/base identity. | Own from scenario start; may support reinforcement/recruitment if enabled. |
-| Resource Site | Provides one-time reward or recurring income, depending on later resource packet. | Defeat guards or control site, then gain/claim resource. |
-| Recruitment Site | Adds units/reinforcements to faction/Champion army. | Control or visit, then recruit/reinforce within approved limits. |
-| Upgrade / Intel Site | Gives Intel, operation unlock hooks, or asset-upgrade material. | Defeat guards/claim site, then gain Intel or upgrade currency. |
-| Neutral Guard Site | Battle-focused encounter site, usually protecting reward/control. | Start tactical battle against neutral guard side. |
-| Central Objective | Main contested victory/score/pressure anchor. | Control, hold, contest, or battle for scenario progress. |
-| One-Shot Visit Site | Single-use map reward, scouting, event, or utility. | Visit once, apply effect, mark visited/consumed. |
+| Category             | MVP Purpose                                                                       | Typical Interaction                                                        |
+| -------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Start Hub            | Faction anchor, starting position, safe/base identity.                            | Own from scenario start; may support reinforcement/recruitment if enabled. |
+| Resource Site        | Provides one-time reward or recurring income, depending on later resource packet. | Defeat guards or control site, then gain/claim resource.                   |
+| Recruitment Site     | Adds units/reinforcements to faction/Champion army.                               | Control or visit, then recruit/reinforce within approved limits.           |
+| Upgrade / Intel Site | Gives Intel, operation unlock hooks, or asset-upgrade material.                   | Defeat guards/claim site, then gain Intel or upgrade currency.             |
+| Neutral Guard Site   | Battle-focused encounter site, usually protecting reward/control.                 | Start tactical battle against neutral guard side.                          |
+| Central Objective    | Main contested victory/score/pressure anchor.                                     | Control, hold, contest, or battle for scenario progress.                   |
+| One-Shot Visit Site  | Single-use map reward, scouting, event, or utility.                               | Visit once, apply effect, mark visited/consumed.                           |
 
 MVP infrastructure/theme types:
 
-| Theme Type | Can Use Categories | Notes |
-|---|---|---|
-| Mining / Extraction Site | Resource, Guard, Objective | Good for material resources and faction conflict. |
-| Fishery / Cold-Chain Site | Resource, Objective, Visit | Grounds Greenland economy and logistics. |
-| Sensor / White Sky Node | Intel, Objective, Guard, Visit | Connects climate/geoengineering and information control. |
-| Clinic / Bodytech Site | Recruitment, Upgrade, Visit | Supports bodies, recovery, legitimacy, later Champion/army consequences. |
-| Recruitment Contractor / Local Ally Site | Recruitment, Visit, Guard | Provides units or reinforcement access without a full town system. |
-| Treaty-Net / Infrastructure Node | Central Objective, Intel, Guard | Strong first central-objective candidate. |
-| Cache / Salvage / Black Site | Resource, Intel, Guard, One-Shot | Flexible early reward site. |
-| Starting Hub | Start Hub, Recruitment, Resource | Faction base and scenario anchor. |
+| Theme Type                               | Can Use Categories               | Notes                                                                    |
+| ---------------------------------------- | -------------------------------- | ------------------------------------------------------------------------ |
+| Mining / Extraction Site                 | Resource, Guard, Objective       | Good for material resources and faction conflict.                        |
+| Fishery / Cold-Chain Site                | Resource, Objective, Visit       | Grounds Greenland economy and logistics.                                 |
+| Sensor / White Sky Node                  | Intel, Objective, Guard, Visit   | Connects climate/geoengineering and information control.                 |
+| Clinic / Bodytech Site                   | Recruitment, Upgrade, Visit      | Supports bodies, recovery, legitimacy, later Champion/army consequences. |
+| Recruitment Contractor / Local Ally Site | Recruitment, Visit, Guard        | Provides units or reinforcement access without a full town system.       |
+| Treaty-Net / Infrastructure Node         | Central Objective, Intel, Guard  | Strong first central-objective candidate.                                |
+| Cache / Salvage / Black Site             | Resource, Intel, Guard, One-Shot | Flexible early reward site.                                              |
+| Starting Hub                             | Start Hub, Recruitment, Resource | Faction base and scenario anchor.                                        |
 
 MVP site runtime states:
 
-| State | Meaning | Notes |
-|---|---|---|
-| Hidden / Undiscovered | Site not yet revealed or not interactable in UI. | Optional for first MVP; can be omitted if no fog/scouting yet. |
-| Revealed | Site is visible but not necessarily controlled/visited. | Default for simple MVP maps. |
-| Guarded | Site has neutral guards or enemy defenders requiring battle before claim/use. | Generates tactical `BattleSetup`. |
-| Uncontrolled | Site has no faction owner. | Common after guards are defeated if control is not automatic. |
-| Controlled | Site is owned/controlled by a faction. | Drives ownership, income, recruitment, objective progress. |
-| Contested | Site contains or is targeted by opposing faction presence. | Can trigger faction-vs-faction battle. |
-| Visited / Consumed | One-shot reward or visit effect has already been used. | Prevents repeat farming. |
-| Disabled / Locked | Site exists but cannot currently be used. | Reserved for future scenario conditions; not needed for first pass unless useful. |
+| State                 | Meaning                                                                       | Notes                                                                             |
+| --------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Hidden / Undiscovered | Site not yet revealed or not interactable in UI.                              | Optional for first MVP; can be omitted if no fog/scouting yet.                    |
+| Revealed              | Site is visible but not necessarily controlled/visited.                       | Default for simple MVP maps.                                                      |
+| Guarded               | Site has neutral guards or enemy defenders requiring battle before claim/use. | Generates tactical `BattleSetup`.                                                 |
+| Uncontrolled          | Site has no faction owner.                                                    | Common after guards are defeated if control is not automatic.                     |
+| Controlled            | Site is owned/controlled by a faction.                                        | Drives ownership, income, recruitment, objective progress.                        |
+| Contested             | Site contains or is targeted by opposing faction presence.                    | Can trigger faction-vs-faction battle.                                            |
+| Visited / Consumed    | One-shot reward or visit effect has already been used.                        | Prevents repeat farming.                                                          |
+| Disabled / Locked     | Site exists but cannot currently be used.                                     | Reserved for future scenario conditions; not needed for first pass unless useful. |
 
 Ownership/control contract draft:
 
@@ -298,14 +306,14 @@ Ownership/control contract draft:
 
 First scenario site mix target:
 
-| Site | Count | Suggested Category/Theme |
-|---|---:|---|
-| Faction start hubs | 2 | Start Hub / Starting Hub |
-| Early resource sites | 2-3 | Resource / Mining, Fishery, Cache |
-| Recruitment/reinforcement sites | 1-2 | Recruitment / Contractor, Clinic, Local Ally |
-| Intel/upgrade site | 1 | Upgrade/Intel / Sensor, White Sky Node, Black Site |
-| Central contested site | 1 | Central Objective / Treaty-Net or White Sky Infrastructure Node |
-| Optional one-shot visit sites | 1-2 | Visit / Cache, Sensor, Local Ally |
+| Site                            | Count | Suggested Category/Theme                                        |
+| ------------------------------- | ----: | --------------------------------------------------------------- |
+| Faction start hubs              |     2 | Start Hub / Starting Hub                                        |
+| Early resource sites            |   2-3 | Resource / Mining, Fishery, Cache                               |
+| Recruitment/reinforcement sites |   1-2 | Recruitment / Contractor, Clinic, Local Ally                    |
+| Intel/upgrade site              |     1 | Upgrade/Intel / Sensor, White Sky Node, Black Site              |
+| Central contested site          |     1 | Central Objective / Treaty-Net or White Sky Infrastructure Node |
+| Optional one-shot visit sites   |   1-2 | Visit / Cache, Sensor, Local Ally                               |
 
 Out of scope for MVP site model:
 
@@ -344,11 +352,11 @@ Rules:
 
 MVP resource roles:
 
-| Resource | MVP Role | Typical Sources | Typical Sinks |
-|---|---|---|---|
-| Credits | Broad spending resource. | Start hub income, resource sites, one-shot caches, central objective rewards. | Recruitment, reinforcement, basic site actions, future operation costs. |
-| Materials | Growth and recovery resource. | Mining/extraction sites, salvage/black sites, guarded infrastructure sites. | Reinforcement, equipment/upgrade hooks, future repair/build hooks. |
-| Intel | Special strategic leverage. | Sensor/White Sky nodes, Treaty-Net nodes, black sites, objective rewards. | Upgrade/intel-site effects, reveal/operation hooks, future information actions. |
+| Resource  | MVP Role                      | Typical Sources                                                               | Typical Sinks                                                                   |
+| --------- | ----------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Credits   | Broad spending resource.      | Start hub income, resource sites, one-shot caches, central objective rewards. | Recruitment, reinforcement, basic site actions, future operation costs.         |
+| Materials | Growth and recovery resource. | Mining/extraction sites, salvage/black sites, guarded infrastructure sites.   | Reinforcement, equipment/upgrade hooks, future repair/build hooks.              |
+| Intel     | Special strategic leverage.   | Sensor/White Sky nodes, Treaty-Net nodes, black sites, objective rewards.     | Upgrade/intel-site effects, reveal/operation hooks, future information actions. |
 
 MVP income/reward contract:
 
@@ -370,14 +378,14 @@ Recruitment/reinforcement minimum:
 
 Implementation-facing data implications:
 
-| Concept | Required Fields / Behavior |
-|---|---|
-| ResourceDefinition | stable resource ID, display/localization key, category, icon/color hint. |
-| FactionResourceState | faction ID, resource stockpile values for Credits, Materials, Intel. |
-| ResourceDelta | resource ID, signed amount, source reason, preview/apply mode. |
-| SiteRewardDefinition | one-time and/or recurring resource deltas, optional Intel reward, consumed/claim rules. |
+| Concept                    | Required Fields / Behavior                                                                |
+| -------------------------- | ----------------------------------------------------------------------------------------- |
+| ResourceDefinition         | stable resource ID, display/localization key, category, icon/color hint.                  |
+| FactionResourceState       | faction ID, resource stockpile values for Credits, Materials, Intel.                      |
+| ResourceDelta              | resource ID, signed amount, source reason, preview/apply mode.                            |
+| SiteRewardDefinition       | one-time and/or recurring resource deltas, optional Intel reward, consumed/claim rules.   |
 | RecruitmentOfferDefinition | stable offer ID, unit/stack reference, resource cost, stock/availability, source site ID. |
-| RecruitmentRuntimeState | remaining stock, claimed/available state, optional refresh timing. |
+| RecruitmentRuntimeState    | remaining stock, claimed/available state, optional refresh timing.                        |
 
 Out of scope for MVP economy:
 
@@ -421,15 +429,15 @@ Rules:
 
 Champion strategic state minimum:
 
-| Field | MVP Meaning | Future-Proofing Note |
-|---|---|---|
-| championId | Stable runtime/definition reference. | Supports multiple Champions later. |
-| factionId | Owning faction. | Controller remains separate from faction. |
-| currentNodeId | Current strategic graph node. | Can later map to tile/region position adapter. |
-| armyState | Attached stack collection. | May later split into reserves/caravans/garrisons. |
-| movementPointsRemaining | Remaining movement this turn. | Can later be modified by route/weather/status. |
+| Field                        | MVP Meaning                                                           | Future-Proofing Note                                               |
+| ---------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| championId                   | Stable runtime/definition reference.                                  | Supports multiple Champions later.                                 |
+| factionId                    | Owning faction.                                                       | Controller remains separate from faction.                          |
+| currentNodeId                | Current strategic graph node.                                         | Can later map to tile/region position adapter.                     |
+| armyState                    | Attached stack collection.                                            | May later split into reserves/caravans/garrisons.                  |
+| movementPointsRemaining      | Remaining movement this turn.                                         | Can later be modified by route/weather/status.                     |
 | hasMajorInteractionAvailable | Whether the Champion can still perform a major interaction this turn. | Allows later action systems without hardcoding one action forever. |
-| championStatusFlags | Minimal status flags such as active, defeated, wounded, locked. | Future logistics/status effects can extend this. |
+| championStatusFlags          | Minimal status flags such as active, defeated, wounded, locked.       | Future logistics/status effects can extend this.                   |
 
 Army strategic state minimum:
 
@@ -452,15 +460,15 @@ Movement and interaction contract:
 
 Implementation-facing data implications:
 
-| Concept | Required Fields / Behavior |
-|---|---|
-| ChampionDefinition | stable champion ID, display/localization key, faction/archetype references, base movement allowance, starting army reference. |
+| Concept                | Required Fields / Behavior                                                                                                               |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| ChampionDefinition     | stable champion ID, display/localization key, faction/archetype references, base movement allowance, starting army reference.            |
 | ChampionStrategicState | champion ID, faction ID, current node ID, army state reference/value, movement points remaining, interaction availability, status flags. |
-| ArmyStackState | unit definition ID, current count, optional max/cap metadata. |
-| ArmyState | owner reference, stack list, validation for empty/defeated state. |
-| MovementCommand | champion ID, from node ID, to node ID or route/path, preview/apply mode. |
-| SiteInteractionCommand | champion ID, site ID, interaction type, preview/apply mode. |
-| BattleResultArmyDelta | side/champion/site references, stack losses/survivors, defeated flags. |
+| ArmyStackState         | unit definition ID, current count, optional max/cap metadata.                                                                            |
+| ArmyState              | owner reference, stack list, validation for empty/defeated state.                                                                        |
+| MovementCommand        | champion ID, from node ID, to node ID or route/path, preview/apply mode.                                                                 |
+| SiteInteractionCommand | champion ID, site ID, interaction type, preview/apply mode.                                                                              |
+| BattleResultArmyDelta  | side/champion/site references, stack losses/survivors, defeated flags.                                                                   |
 
 Out of scope for MVP Champion/army movement:
 
@@ -527,18 +535,18 @@ MVP victory conditions:
 
 Scenario state minimum:
 
-| Field | MVP Meaning | Future-Proofing Note |
-|---|---|---|
-| scenarioId | Stable scenario definition reference. | Supports multiple scenarios/campaign later. |
-| activeFactionId | Faction whose strategic turn is active. | Allows hotseat now, future strategic AI later. |
-| turnOrder | Ordered faction IDs. | MVP length is two. |
-| turnNumber | Count of faction turns taken. | Useful for logs/replays/tests. |
-| roundNumber | Count of full cycles through turn order. | Useful for future turn limits/scoring. |
-| victoryState | None, faction win, draw/abort if ever needed. | Must be explicit and serializable. |
-| centralObjectiveSiteId | Site used for objective hold victory. | Future scenarios may have multiple objective sites. |
-| objectiveHoldFactionId | Faction currently building hold progress. | Resets when control changes. |
-| objectiveHoldProgress | Consecutive own-turn checks held. | Can generalize into objective score later. |
-| objectiveHoldRequired | Required hold progress for victory. | Working default: 2. |
+| Field                  | MVP Meaning                                   | Future-Proofing Note                                |
+| ---------------------- | --------------------------------------------- | --------------------------------------------------- |
+| scenarioId             | Stable scenario definition reference.         | Supports multiple scenarios/campaign later.         |
+| activeFactionId        | Faction whose strategic turn is active.       | Allows hotseat now, future strategic AI later.      |
+| turnOrder              | Ordered faction IDs.                          | MVP length is two.                                  |
+| turnNumber             | Count of faction turns taken.                 | Useful for logs/replays/tests.                      |
+| roundNumber            | Count of full cycles through turn order.      | Useful for future turn limits/scoring.              |
+| victoryState           | None, faction win, draw/abort if ever needed. | Must be explicit and serializable.                  |
+| centralObjectiveSiteId | Site used for objective hold victory.         | Future scenarios may have multiple objective sites. |
+| objectiveHoldFactionId | Faction currently building hold progress.     | Resets when control changes.                        |
+| objectiveHoldProgress  | Consecutive own-turn checks held.             | Can generalize into objective score later.          |
+| objectiveHoldRequired  | Required hold progress for victory.           | Working default: 2.                                 |
 
 Champion defeat contract:
 
@@ -607,41 +615,41 @@ Tactical combat must not directly decide or mutate:
 
 `BattleSetup` minimum:
 
-| Field | Meaning |
-|---|---|
-| battleId | Stable ID for this battle instance. |
-| scenarioId | Scenario runtime/source reference. |
-| sourceInteractionId | Strategic command/interaction that created the battle. |
-| sourceSiteId | Site that triggered the battle, if any. |
-| sourceNodeId | Strategic node where the battle occurs. |
-| battleType | GuardedSite, SiteContest, ChampionVsChampion, or future extension. |
-| attackingFactionId | Faction initiating the battle. |
-| defendingFactionId | Defending faction, neutral faction, or guard-side reference. |
-| attackingChampionId | Attacking Champion if present. |
-| defendingChampionId | Defending Champion if present; optional for neutral guards. |
-| attackerController | Tactical controller for attacking side: HumanLocal or CombatAI. |
-| defenderController | Tactical controller for defending side: HumanLocal or CombatAI. |
-| attackingArmy | Snapshot/copy of attacking army stacks. |
-| defendingArmy | Snapshot/copy of defending army stacks or guard template. |
-| tacticalObjectiveId | Tactical battle objective/mode reference. |
-| allowedOutcomeFlags | Which outcomes the strategy layer expects, such as canRetreat or canClaimSite. |
-| rewardContextId | Optional reference to strategic reward context; tactics does not grant it directly. |
+| Field               | Meaning                                                                             |
+| ------------------- | ----------------------------------------------------------------------------------- |
+| battleId            | Stable ID for this battle instance.                                                 |
+| scenarioId          | Scenario runtime/source reference.                                                  |
+| sourceInteractionId | Strategic command/interaction that created the battle.                              |
+| sourceSiteId        | Site that triggered the battle, if any.                                             |
+| sourceNodeId        | Strategic node where the battle occurs.                                             |
+| battleType          | GuardedSite, SiteContest, ChampionVsChampion, or future extension.                  |
+| attackingFactionId  | Faction initiating the battle.                                                      |
+| defendingFactionId  | Defending faction, neutral faction, or guard-side reference.                        |
+| attackingChampionId | Attacking Champion if present.                                                      |
+| defendingChampionId | Defending Champion if present; optional for neutral guards.                         |
+| attackerController  | Tactical controller for attacking side: HumanLocal or CombatAI.                     |
+| defenderController  | Tactical controller for defending side: HumanLocal or CombatAI.                     |
+| attackingArmy       | Snapshot/copy of attacking army stacks.                                             |
+| defendingArmy       | Snapshot/copy of defending army stacks or guard template.                           |
+| tacticalObjectiveId | Tactical battle objective/mode reference.                                           |
+| allowedOutcomeFlags | Which outcomes the strategy layer expects, such as canRetreat or canClaimSite.      |
+| rewardContextId     | Optional reference to strategic reward context; tactics does not grant it directly. |
 
 `BattleResult` minimum:
 
-| Field | Meaning |
-|---|---|
-| battleId | Matches the setup battle ID. |
-| battleOutcome | AttackerWin, DefenderWin, Retreat, Cancelled, Draw, or Error/Invalid if needed. |
-| winningSide | Attacker, Defender, None. |
-| attackerArmyResult | Surviving/lost stacks and defeated flag for attacker. |
-| defenderArmyResult | Surviving/lost stacks and defeated flag for defender. |
-| attackerChampionDefeated | Whether the attacking Champion is defeated by battle outcome. |
-| defenderChampionDefeated | Whether the defending Champion is defeated by battle outcome. |
-| retreatingSide | Optional side if retreat exists. |
-| tacticalSummary | Short player-facing summary text/key or structured summary facts. |
-| resultFlags | Simple flags such as guardsClearedEligible, siteClaimEligible, rewardEligible. |
-| diagnostics | Optional validation/debug info for tests and agent evidence. |
+| Field                    | Meaning                                                                         |
+| ------------------------ | ------------------------------------------------------------------------------- |
+| battleId                 | Matches the setup battle ID.                                                    |
+| battleOutcome            | AttackerWin, DefenderWin, Retreat, Cancelled, Draw, or Error/Invalid if needed. |
+| winningSide              | Attacker, Defender, None.                                                       |
+| attackerArmyResult       | Surviving/lost stacks and defeated flag for attacker.                           |
+| defenderArmyResult       | Surviving/lost stacks and defeated flag for defender.                           |
+| attackerChampionDefeated | Whether the attacking Champion is defeated by battle outcome.                   |
+| defenderChampionDefeated | Whether the defending Champion is defeated by battle outcome.                   |
+| retreatingSide           | Optional side if retreat exists.                                                |
+| tacticalSummary          | Short player-facing summary text/key or structured summary facts.               |
+| resultFlags              | Simple flags such as guardsClearedEligible, siteClaimEligible, rewardEligible.  |
+| diagnostics              | Optional validation/debug info for tests and agent evidence.                    |
 
 Strategic application contract:
 

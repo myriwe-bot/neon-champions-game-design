@@ -7,7 +7,19 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-03
 source_lore: []
-related: [production/sprints/strategic-mvp-story-train-001, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move, production/stories/story-strat-ui-001-minimal-hotseat-hud, production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke, production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass, production/stories/story-tac-001-battle-setup-result-dto-contracts, production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass]
+related:
+  [
+    production/sprints/strategic-mvp-story-train-001,
+    production/stories/story-strat-002-hotseat-turn-ownership,
+    production/stories/story-strat-003-champion-route-movement,
+    production/stories/story-strat-vis-001-minimal-strategic-map-presentation,
+    production/stories/story-strat-input-001-select-champion-and-route-move,
+    production/stories/story-strat-ui-001-minimal-hotseat-hud,
+    production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke,
+    production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass,
+    production/stories/story-tac-001-battle-setup-result-dto-contracts,
+    production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass,
+  ]
 approval: approved
 ---
 
@@ -34,24 +46,24 @@ If paths differ, locate repositories by name and keep the same relative paths.
 
 ## Approved implementation queue
 
-| Order | Story | Branch | Estimate | Start condition |
-|---:|---|---|---|---|
-| 1 | `STORY-STRAT-002` Hotseat Turn Ownership | `story/STORY-STRAT-002-hotseat-turn-ownership` | S | MERGED — PR #4, merge commit `5312dba3709daeb99bee4371626a6121896b69ba` |
-| 2 | `STORY-STRAT-003` Champion Route Movement | `story/STORY-STRAT-003-champion-route-movement` | S/M | MERGED — PR #5, merge commit `9472d927d7cb505b0cc4f8772b0129395880d61d` |
-| 3 | `STORY-STRAT-VIS-001` Minimal Strategic Map Presentation | `story/strat-vis-001-minimal-map-presentation` | M | READY to start from updated `main` after STORY-STRAT-003 merge |
-| 4 | `STORY-STRAT-INPUT-001` Select Champion and Route Move | `story/strat-input-001-select-route-move` | M | VIS plus STRAT-003 movement service available |
-| 5 | `STORY-STRAT-UI-001` Minimal Hotseat HUD | `story/strat-ui-001-minimal-hotseat-hud` | M | STRAT-002 turn service and VIS scene available; INPUT recommended |
-| 6 | `STORY-LOOP-001` Minimal Local Hotseat Strategic Loop Smoke | `story/loop-001-hotseat-strategic-smoke` | S/M | MERGED — PR #9 |
-| 7 | `STORY-QA-001` Strategic Smoke Cleanup, Readability, and Bugfix Pass | `story/qa-001-strategic-smoke-cleanup-readability` | M | MERGED — PR #10 |
-| 8 | `STORY-TAC-001` Battle Setup Result DTO Contracts | `story/STORY-TAC-001-battle-setup-result-dto-contracts` | M | MERGED — PR #11 |
+| Order | Story                                                                | Branch                                                  | Estimate | Start condition                                                         |
+| ----: | -------------------------------------------------------------------- | ------------------------------------------------------- | -------- | ----------------------------------------------------------------------- |
+|     1 | `STORY-STRAT-002` Hotseat Turn Ownership                             | `story/STORY-STRAT-002-hotseat-turn-ownership`          | S        | MERGED — PR #4, merge commit `5312dba3709daeb99bee4371626a6121896b69ba` |
+|     2 | `STORY-STRAT-003` Champion Route Movement                            | `story/STORY-STRAT-003-champion-route-movement`         | S/M      | MERGED — PR #5, merge commit `9472d927d7cb505b0cc4f8772b0129395880d61d` |
+|     3 | `STORY-STRAT-VIS-001` Minimal Strategic Map Presentation             | `story/strat-vis-001-minimal-map-presentation`          | M        | READY to start from updated `main` after STORY-STRAT-003 merge          |
+|     4 | `STORY-STRAT-INPUT-001` Select Champion and Route Move               | `story/strat-input-001-select-route-move`               | M        | VIS plus STRAT-003 movement service available                           |
+|     5 | `STORY-STRAT-UI-001` Minimal Hotseat HUD                             | `story/strat-ui-001-minimal-hotseat-hud`                | M        | STRAT-002 turn service and VIS scene available; INPUT recommended       |
+|     6 | `STORY-LOOP-001` Minimal Local Hotseat Strategic Loop Smoke          | `story/loop-001-hotseat-strategic-smoke`                | S/M      | MERGED — PR #9                                                          |
+|     7 | `STORY-QA-001` Strategic Smoke Cleanup, Readability, and Bugfix Pass | `story/qa-001-strategic-smoke-cleanup-readability`      | M        | MERGED — PR #10                                                         |
+|     8 | `STORY-TAC-001` Battle Setup Result DTO Contracts                    | `story/STORY-TAC-001-battle-setup-result-dto-contracts` | M        | MERGED — PR #11                                                         |
 
 `STORY-QA-002` is approved as the next cleanup packet after TAC-001 because the current smoke is still too crumpled and unclear for useful playtesting.
 
 ## Approved next packet
 
-| Story | Branch | Estimate | Approval state | Start condition |
-|---|---|---|---|---|
-| `STORY-QA-002` Strategic Map Readability and Actor-Clarity Fix Pass | `story/qa-002-strategic-map-readability-actor-clarity` | M | APPROVED / READY | Start from updated Unity `main` after PR #11 |
+| Story                                                               | Branch                                                 | Estimate | Approval state   | Start condition                              |
+| ------------------------------------------------------------------- | ------------------------------------------------------ | -------- | ---------------- | -------------------------------------------- |
+| `STORY-QA-002` Strategic Map Readability and Actor-Clarity Fix Pass | `story/qa-002-strategic-map-readability-actor-clarity` | M        | APPROVED / READY | Start from updated Unity `main` after PR #11 |
 
 ## Required preflight for every story
 
@@ -196,31 +208,38 @@ Every implementation PR body must include:
 
 ```markdown
 ## Story
+
 - <STORY-ID> <title>
 
 ## Source docs read
+
 - <story file>
 - <GDD sections>
 - <architecture/control docs>
 - Unity AGENTS.md and scoped AGENTS.md files
 
 ## Summary
+
 - ...
 
 ## Tests / checks
+
 - RED: ...
 - GREEN: ...
 - Regression: ...
 - CI: ...
 
 ## Manual evidence
+
 - Required? yes/no
 - Link/path/screenshots/video/checklist: ...
 
 ## Omissions / stubs / mocks / assumptions / deferred work
+
 - ... or `No known omissions`
 
 ## Scope-control confirmation
+
 - No unauthorized packages/settings/final content/lore/architecture/gameplay systems added.
 ```
 

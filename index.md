@@ -24,7 +24,6 @@
 - [[design/gdd/tactical-combat]] — concise active tactical combat GDD for first-read design and AI implementation planning.
 - [[design/gdd/tactical-combat/section-map]] — preservation map for the tactical-combat split; confirms every original top-level section is still present in smaller articles.
 
-
 ### Tactical Combat Detailed Articles
 
 - [[design/gdd/tactical-combat/overview-and-scope]]
@@ -88,5 +87,3 @@
 ## Logs
 
 - [[log]] — chronological repository log.
-
-

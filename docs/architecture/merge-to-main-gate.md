@@ -7,7 +7,14 @@ owner: shared
 created: 2026-06-01
 updated: 2026-06-01
 source_lore: []
-related: [docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, docs/architecture/multi-agent-operating-model, production/checklists/codex-pr-review-checklist]
+related:
+  [
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    docs/architecture/multi-agent-operating-model,
+    production/checklists/codex-pr-review-checklist,
+  ]
 approval: approved
 ---
 

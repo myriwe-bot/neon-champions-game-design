@@ -7,7 +7,15 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-27
 source_lore: []
-related: [docs/architecture/control-manifest, docs/architecture/unity-technical-scheme, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, docs/architecture/multi-agent-operating-model, docs/architecture/unity-repo-agents-template]
+related:
+  [
+    docs/architecture/control-manifest,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    docs/architecture/multi-agent-operating-model,
+    docs/architecture/unity-repo-agents-template,
+  ]
 approval: approved
 ---
 

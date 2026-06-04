@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -87,6 +88,7 @@ Implementation readiness gates:
 - All MVP statuses have visible icons/tooltips and deterministic turn resolution.
 - The AP/morale/Signal ability triad is implemented through a reusable ability/effect framework.
 - Tiny-stack objective, ZOC, retaliation, and AP edge cases have automated tests or explicit QA scenarios.
+
 ## Tactical Implementation Contracts
 
 This section turns MVP tactical scope into implementation-safe data contracts. The intent is to let the first tactical slice validate design risk while avoiding hardcoded one-offs that would block later Operation, status, and objective expansion.
@@ -160,6 +162,7 @@ Implementation readiness gates:
 - Objective logic can run field, control-zone, and extraction/pickup battles without custom battle-mode classes for each case.
 - Regression scenarios cover the known exploit surfaces before the tactical MVP is considered stable.
 - The ability schema can represent inactive/future Operation channel metadata without changing save format or ability identity.
+
 ## Ability / Effect Schema Primitives
 
 This section defines the minimum reusable ability/effect schema needed for tactical MVP and later Operation-channel expansion. The design should keep ordinary ability authoring data-driven while leaving a path toward deeper rules-engine behavior for rare or full-vision effects.
@@ -259,6 +262,7 @@ Implementation readiness gates:
 - Combat logs can show trigger, targeting, cost, effect order, status application, reaction, and cleanup.
 - Save/load preserves stable ability ids, status ids, cooldowns, charges, channel metadata, and created-entity ownership.
 - Regression tests cover effect ordering, fizzle behavior, AP caps/refunds, target filters, status priority, and objective eligibility.
+
 ## Status Schema and Resolution
 
 This section defines the minimum status-effect contract for deterministic tactical play while preserving Neon Champions' emphasis on Signal, deception, hidden information, morale, hacking, and counterplay.
@@ -367,6 +371,7 @@ Implementation readiness gates:
 - Hidden/partial status information can be represented separately from true simulation state.
 - Cleanse/resist/counterplay abilities can target status tags instead of specific status ids only.
 - Automated or explicit QA scenarios cover phase order, hidden visibility, reveal/decode, cleanse/removal, stacking, rout/death interactions, and save/load.
+
 ## Tactical Information Model
 
 This section defines how hidden, partial, suspected, false, and revealed tactical information works. The goal is to support Signal/Intel, scouting, deception, hidden statuses, traps, mines, created entities, and later Operation-channel play without making tactical outcomes feel arbitrary.
@@ -446,6 +451,7 @@ Implementation readiness gates:
 - False/decoy objects have explicit reveal and counterplay rules.
 - Combat logs/replay can display player-visible, opponent-visible, and all-truth views.
 - The model avoids unfair hidden outcomes by ensuring major hidden threats are inferable, scoutable, revealable, or deliberately framed as deception.
+
 ## Objective System Schema
 
 This section defines objective components so field battles, control zones, extraction/pickup missions, exploit tests, and later campaign-slice objectives do not become isolated custom scripts.
@@ -543,6 +549,7 @@ Implementation readiness gates:
 - Objective progress and contesting are deterministic and loggable.
 - Objective visibility integrates with the tactical information model.
 - Scenario overrides cannot bypass generic component contracts without declaring and testing the exception.
+
 ## Tactical Data / Save / Replay Contracts
 
 This section defines what tactical state must be serializable, replayable, and testable so hidden information, statuses, objectives, ability effects, and AP/morale/Signal interactions remain debuggable.

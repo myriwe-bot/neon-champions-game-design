@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -49,6 +50,7 @@ Design notes:
 - Cover mostly represents hard surfaces, barricades, vehicles, corners, terrain breaks, and urban clutter.
 - Cover should be visually obvious and should not require tile-by-tile ambiguity.
 - Special objects can define exceptions later, such as Faraday cover against Signal, sealed cover against Chemical, or insulated cover against Shock.
+
 ## Range Bands and Minimum Range
 
 Approved direction:
@@ -81,6 +83,7 @@ Design notes:
 - Minimum range is not universal; it is a weapon identity rule for heavy/indirect/specialist attacks.
 - Indirect fire should create artillery/drone/mortar identity, but it must remain counterable through scouting denial, jamming, stealth, smoke, sensor disruption, or killing/pressuring spotters.
 - Reach beyond adjacency is an exception, not a melee baseline.
+
 ## Damage Types, Weapon Tags, and Defense Tags
 
 ### Damage Types

@@ -7,7 +7,21 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-strat-vis-001-minimal-strategic-map-presentation, production/stories/story-strat-input-001-select-champion-and-route-move, production/stories/story-strat-ui-001-minimal-hotseat-hud]
+related:
+  [
+    design/gdd/strategic-map,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
+    production/stories/story-strat-001-scenario-map-graph-state,
+    production/stories/story-strat-002-hotseat-turn-ownership,
+    production/stories/story-strat-003-champion-route-movement,
+    production/stories/story-strat-vis-001-minimal-strategic-map-presentation,
+    production/stories/story-strat-input-001-select-champion-and-route-move,
+    production/stories/story-strat-ui-001-minimal-hotseat-hud,
+  ]
 approval: approved
 ---
 
@@ -134,13 +148,16 @@ Not allowed:
 Status: PASS.
 
 Open questions:
+
 - None for the first crude hotseat movement smoke.
 
 Assumptions:
+
 - Testing the player loop early is more valuable than waiting for site/battle systems.
 - This story is a smoke/integration gate, not a feature expansion story.
 
 Out of scope:
+
 - Same as story Out of scope section.
 
 ## Codex implementation notes

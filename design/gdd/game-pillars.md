@@ -6,7 +6,8 @@ phase: concept
 owner: shared
 created: 2026-05-22
 updated: 2026-05-30
-source_lore: [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
+source_lore:
+  [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
 related: [design/gdd/game-concept, design/game-design-principles]
 approval: pending
 ---

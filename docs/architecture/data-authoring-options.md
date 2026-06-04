@@ -7,7 +7,11 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-27
 source_lore: []
-related: [docs/architecture/unity-technical-scheme, docs/architecture/technical-decision-priorities]
+related:
+  [
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/technical-decision-priorities,
+  ]
 approval: approved
 ---
 

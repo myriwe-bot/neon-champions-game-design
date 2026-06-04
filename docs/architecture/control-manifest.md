@@ -7,7 +7,15 @@ owner: shared
 created: 2026-05-22
 updated: 2026-05-28
 source_lore: []
-related: [docs/architecture/architecture, docs/architecture/unity-technical-scheme, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, design/workflow, production/stories/story-template]
+related:
+  [
+    docs/architecture/architecture,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    design/workflow,
+    production/stories/story-template,
+  ]
 approval: approved
 approval_scope: Technical setup, SPIKE-001 foundation work, and future implementation control gates.
 ---

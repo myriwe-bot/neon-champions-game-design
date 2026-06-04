@@ -7,7 +7,17 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-03
 source_lore: []
-related: [design/gdd/strategic-map, design/gdd/tactical-combat, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state]
+related:
+  [
+    design/gdd/strategic-map,
+    design/gdd/tactical-combat,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
+    production/stories/story-strat-001-scenario-map-graph-state,
+  ]
 approval: approved
 ---
 
@@ -78,11 +88,13 @@ Exact source references:
 ## Allowed stubs, mocks, placeholders, or temporary data
 
 Allowed:
+
 - Placeholder enum values explicitly listed in strategic-map §14 such as `GuardedSite`, `SiteContest`, `ChampionVsChampion`, `AttackerWin`, `DefenderWin`, `Retreat`, `Cancelled`, `Draw`.
 - Test-local army snapshots and placeholder IDs.
 - Placeholder summary key/string only for structured testing, not final copy.
 
 Not allowed:
+
 - Tactical resolution logic.
 - Direct mutation of strategic state from DTOs.
 
@@ -124,19 +136,24 @@ Not allowed:
 Status: PASS.
 
 Open questions:
+
 - None for the minimum DTO contract. Tactical combat internals remain deliberately out of scope.
 
 Assumptions:
+
 - DTO shape follows strategic-map §14 even if tactical combat internals evolve later.
 - Army snapshots can reuse or copy existing STORY-STRAT-001 army runtime/stack state shapes unless an equivalent pure DTO copy is cleaner.
 
 Out of scope:
+
 - Same as story Out of scope section.
 
 Allowed stubs/mocks:
+
 - Same as Allowed stubs section.
 
 Human-approved exceptions:
+
 - None.
 
 ## Branch / PR requirements

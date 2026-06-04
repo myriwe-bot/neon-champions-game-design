@@ -7,7 +7,15 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-27
 source_lore: []
-related: [docs/architecture/architecture, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/ci-build-automation, production/stories/story-template, production/epics/epic-template]
+related:
+  [
+    docs/architecture/architecture,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/ci-build-automation,
+    production/stories/story-template,
+    production/epics/epic-template,
+  ]
 approval: approved
 ---
 
@@ -132,17 +140,17 @@ Required for every implementation story:
 
 ## Story Type to Required Evidence Matrix
 
-| Story type | Required evidence |
-|---|---|
-| Logic | Domain/EditMode tests. Data validation if definitions are touched. |
-| Config/Data | Validator tests. Representative load/parse test. Localization validation if player-facing strings exist. |
-| Integration | EditMode or integration tests plus PlayMode/smoke tests for Unity-facing behavior. |
-| UI | PlayMode/smoke tests for flow and wiring; screenshot/video evidence for layout/readability. |
-| Visual/Feel | Screenshot/video/review protocol; PlayMode/smoke tests if Unity wiring changes. |
-| Content | Data validation; localization validation; lore/design source traceability; review evidence if player-facing. |
-| Tooling | Automated tests or script-level verification; sample input/output evidence. |
-| Test | Demonstrates the intended failing/passing behavior or improves coverage with evidence. |
-| Playtest | Playtest protocol, notes, findings, and resulting decisions: keep, revise, reject, or retest. |
+| Story type  | Required evidence                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------------ |
+| Logic       | Domain/EditMode tests. Data validation if definitions are touched.                                           |
+| Config/Data | Validator tests. Representative load/parse test. Localization validation if player-facing strings exist.     |
+| Integration | EditMode or integration tests plus PlayMode/smoke tests for Unity-facing behavior.                           |
+| UI          | PlayMode/smoke tests for flow and wiring; screenshot/video evidence for layout/readability.                  |
+| Visual/Feel | Screenshot/video/review protocol; PlayMode/smoke tests if Unity wiring changes.                              |
+| Content     | Data validation; localization validation; lore/design source traceability; review evidence if player-facing. |
+| Tooling     | Automated tests or script-level verification; sample input/output evidence.                                  |
+| Test        | Demonstrates the intended failing/passing behavior or improves coverage with evidence.                       |
+| Playtest    | Playtest protocol, notes, findings, and resulting decisions: keep, revise, reject, or retest.                |
 
 ## TDD Requirement
 

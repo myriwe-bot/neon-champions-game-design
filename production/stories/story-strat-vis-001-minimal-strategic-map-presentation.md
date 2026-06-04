@@ -7,7 +7,18 @@ owner: shared
 created: 2026-06-02
 updated: 2026-06-02
 source_lore: []
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement]
+related:
+  [
+    design/gdd/strategic-map,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
+    production/stories/story-strat-001-scenario-map-graph-state,
+    production/stories/story-strat-002-hotseat-turn-ownership,
+    production/stories/story-strat-003-champion-route-movement,
+  ]
 approval: approved
 ---
 
@@ -131,13 +142,16 @@ Not allowed:
 Status: PASS.
 
 Open questions:
+
 - None for crude placeholder visualization.
 
 Assumptions:
+
 - The goal is early loop visibility, not final map art.
 - Placeholder visual encoding is acceptable if it is readable and documented as temporary.
 
 Out of scope:
+
 - Same as story Out of scope section.
 
 ## Codex implementation notes

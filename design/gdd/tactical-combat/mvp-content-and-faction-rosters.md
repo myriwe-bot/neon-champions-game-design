@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -99,6 +100,7 @@ Implementation readiness gates:
 - Full-roster unit data exercises stack splitting, duplicate stacks, objective roles, counters, and 7-slot composition pressure.
 - Six Champion/Operation abilities prove AP, morale, and Signal/Intel ability families through the shared ability schema.
 - 8-10 statuses prove resolution order, stacking, counterplay, hidden information, objective interaction, and save/replay behavior.
+
 ## MVP Faction Pair Selection Criteria
 
 This section defines what the first two MVP tactical factions should prove before exact faction names and rosters are locked. The goal is to choose a matchup that validates Neon Champions' tactical identity rather than merely testing generic damage exchange.
@@ -171,6 +173,7 @@ Implementation readiness gates:
 - The matchup includes explicit scenarios for damage/range balance, stack splitting/objective play, and hidden information/Signal/counterplay.
 - Each faction has a representative roster expressing canonical identity.
 - The third faction candidate is chosen by what untested major system it stresses.
+
 ## First MVP Faction Pair Candidates
 
 This section selects the first actual MVP faction-pair archetype for representative tactical roster development. The purpose is to give the MVP combat slice a concrete matchup that tests Signal/Intel, hidden information, hardening, objectives, stack splitting, and physical board control while remaining readable.
@@ -263,6 +266,7 @@ Implementation readiness gates:
 - Each faction has a provisional full-roster theme list ready for unit-role decomposition.
 - The first three validation battles can be framed around “Sensors vs steel.”
 - The pair can test Signal/Intel versus hardening/redundancy without relying on final campaign lore.
+
 ## Working Names for First MVP Faction Pair
 
 This section selects working canonical names for the first MVP tactical faction pair. The names are lore-derived from existing Neon Champions worldbuilding rather than newly invented placeholders.
@@ -300,8 +304,8 @@ Janus-Kestrel fit:
 Matchup meaning:
 
 - The first MVP faction pair becomes **certification versus concession** as much as **sensors versus steel**.
-- Barents asks: *what is safe, legal, visible, measurable, and certified?*
-- Janus-Kestrel asks: *what is cleared, routed, extracted, delivered, bonded, and enforced?*
+- Barents asks: _what is safe, legal, visible, measurable, and certified?_
+- Janus-Kestrel asks: _what is cleared, routed, extracted, delivered, bonded, and enforced?_
 - This gives the MVP matchup a grounded corporate conflict over Arctic/Greenland logistics, extraction, data, route truth, and physical control.
 
 Naming notes:
@@ -317,6 +321,7 @@ Implementation readiness gates:
 - The next roster packet can derive Barents unit roles from certification, sensors, route truth, and polar exclusion.
 - The next roster packet can derive Janus-Kestrel unit roles from concessions, cargo identity, extraction, bonded logistics, and hardened movement.
 - The first three validation battles can frame their objectives around disputed route certification, server/sensor capture, concession-zone control, and extraction/pickup logistics.
+
 ## Barents Roster Role Skeleton
 
 This section defines the Barents Research Group / Polar Certification Combine roster role skeleton before final unit names, stats, or ability values are locked. The goal is to keep Barents grounded in existing lore: polar data, route certification, sensor truth, risk scoring, scientific neutrality, and exclusion authority.
@@ -383,21 +388,22 @@ Implementation readiness gates:
 - The next packet can define concrete Barents unit lines and upgrade names from this skeleton.
 - Ability design should prioritize Sensor Lock, Certified Route, Risk Score, reveal/mark, route denial, and objective certification.
 - Validation battles should include at least one objective where Barents can certify a route or decertify a Janus-Kestrel concession zone.
+
 ## Barents Unit-Line Skeleton
 
 This section turns the Barents Research Group / Polar Certification Combine role skeleton into seven provisional HoMM-style unit lines. These names are approved as **provisional**: strong enough for roster/ability packets, but not final lore or UI lock.
 
 Approved provisional unit lines:
 
-| Tier | Basic Unit | Upgraded Unit | Primary Role | Core Function |
-|---:|---|---|---|---|
-| 1 | Field Surveyors | Certified Route Team | Scout/support | Identify routes, hazards, and objective metadata. |
-| 2 | Ice Radar Operators | Cryo-Mapping Cell | Reveal/mark | Reveal hidden/suspected targets, apply Sensor Lock, improve targeting. |
-| 3 | Research Drones | Boreal Sensor Net | Drone recon/harass | Extend sensor coverage, contest weak objectives, enable marks. |
-| 4 | Rescue Contractors | Denied-Zone Responders | Midline combat/security | Credible combat stack with rescue/security dual use. |
-| 5 | Cable Divers | Under-Ice Saboteurs | Infrastructure/objective specialist | Disable or restore relays, cable nodes, pickup/extraction systems, and map infrastructure. |
-| 6 | Risk Actuaries | Certification Board | Command/support | Apply Risk Score, certify/decertify routes and objectives, manipulate eligibility/progress. |
-| 7 | Polar Exclusion Team | Black-Ice Wardens | Elite control | Area denial, anti-stealth, anti-drone, corridor protection, exclusion enforcement. |
+| Tier | Basic Unit           | Upgraded Unit          | Primary Role                        | Core Function                                                                               |
+| ---: | -------------------- | ---------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------- |
+|    1 | Field Surveyors      | Certified Route Team   | Scout/support                       | Identify routes, hazards, and objective metadata.                                           |
+|    2 | Ice Radar Operators  | Cryo-Mapping Cell      | Reveal/mark                         | Reveal hidden/suspected targets, apply Sensor Lock, improve targeting.                      |
+|    3 | Research Drones      | Boreal Sensor Net      | Drone recon/harass                  | Extend sensor coverage, contest weak objectives, enable marks.                              |
+|    4 | Rescue Contractors   | Denied-Zone Responders | Midline combat/security             | Credible combat stack with rescue/security dual use.                                        |
+|    5 | Cable Divers         | Under-Ice Saboteurs    | Infrastructure/objective specialist | Disable or restore relays, cable nodes, pickup/extraction systems, and map infrastructure.  |
+|    6 | Risk Actuaries       | Certification Board    | Command/support                     | Apply Risk Score, certify/decertify routes and objectives, manipulate eligibility/progress. |
+|    7 | Polar Exclusion Team | Black-Ice Wardens      | Elite control                       | Area denial, anti-stealth, anti-drone, corridor protection, exclusion enforcement.          |
 
 Roster principles:
 
@@ -449,21 +455,22 @@ Implementation readiness gates:
 - Next Barents packet should define unit stat profiles and combat roles: melee/ranged/support/control, speed, durability, damage posture, AP costs, and objective utility.
 - Ability packets should avoid overloading every unit with all Barents mechanics; distribute Sensor Lock, Certified Route, and Risk Score cleanly across the roster.
 - Names remain provisional until roster feel, faction fantasy, and opponent matchup are tested against Janus-Kestrel.
+
 ## Barents Unit Stat-Role Profiles
 
 This section defines provisional tactical stat-role profiles for each Barents Research Group / Polar Certification Combine unit line before detailed values, final abilities, or balance numbers are locked. These are **provisional role contracts**: enough to guide ability design and matchup testing, not final tuning.
 
 Approved provisional profiles:
 
-| Tier | Unit Line | Profile | Tactical Contract |
-|---:|---|---|---|
-| 1 | Field Surveyors → Certified Route Team | Weak combat, strong certification/objective interaction | Teaches route/objective certification from tier 1. |
-| 2 | Ice Radar Operators → Cryo-Mapping Cell | Ranged support with reveal/mark and light damage | Useful in normal fights while carrying reveal/Sensor Lock duties. |
-| 3 | Research Drones → Boreal Sensor Net | Fast fragile ranged harass + sensor extender | Extends Barents sensor coverage and creates low-damage pressure. |
-| 4 | Rescue Contractors → Denied-Zone Responders | Medium infantry with sustain/extraction utility | Gives Barents a credible midline without becoming heavy industrial infantry. |
-| 5 | Cable Divers → Under-Ice Saboteurs | Mobile sabotage/objective unit with modest combat | Infrastructure flavor remains central, but the line is broadly playable. |
-| 6 | Risk Actuaries → Certification Board | Fragile backline command unit with strong Risk/Certification effects | Powerful battlefield bureaucracy that opponents can punish if exposed. |
-| 7 | Polar Exclusion Team → Black-Ice Wardens | Elite area-denial bruiser with control tools | Closes Barents' durability gap while remaining control-first, not a plain tank. |
+| Tier | Unit Line                                   | Profile                                                              | Tactical Contract                                                               |
+| ---: | ------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+|    1 | Field Surveyors → Certified Route Team      | Weak combat, strong certification/objective interaction              | Teaches route/objective certification from tier 1.                              |
+|    2 | Ice Radar Operators → Cryo-Mapping Cell     | Ranged support with reveal/mark and light damage                     | Useful in normal fights while carrying reveal/Sensor Lock duties.               |
+|    3 | Research Drones → Boreal Sensor Net         | Fast fragile ranged harass + sensor extender                         | Extends Barents sensor coverage and creates low-damage pressure.                |
+|    4 | Rescue Contractors → Denied-Zone Responders | Medium infantry with sustain/extraction utility                      | Gives Barents a credible midline without becoming heavy industrial infantry.    |
+|    5 | Cable Divers → Under-Ice Saboteurs          | Mobile sabotage/objective unit with modest combat                    | Infrastructure flavor remains central, but the line is broadly playable.        |
+|    6 | Risk Actuaries → Certification Board        | Fragile backline command unit with strong Risk/Certification effects | Powerful battlefield bureaucracy that opponents can punish if exposed.          |
+|    7 | Polar Exclusion Team → Black-Ice Wardens    | Elite area-denial bruiser with control tools                         | Closes Barents' durability gap while remaining control-first, not a plain tank. |
 
 Profile principles:
 
@@ -524,6 +531,7 @@ Implementation readiness gates:
 - Next Barents packet should define per-line ability slots: passive, active, upgrade delta, and signature interaction.
 - Unit stat tuning should keep Barents' average durability below Janus-Kestrel while giving Barents superior information and route leverage.
 - Objective validation should include at least one battle where Field Surveyors, Cable Divers, and Risk Actuaries each matter in different ways.
+
 ## Barents Unit Ability-Slot Contracts
 
 This section defines provisional ability-slot contracts for each Barents Research Group / Polar Certification Combine unit line. The goal is to preserve strong faction identity without turning every unit into a spellcaster or making every Barents stack carry every faction mechanic.
@@ -545,12 +553,12 @@ Complexity rule:
 
 Mechanic ownership:
 
-| Mechanic | Primary Owner | Secondary / Exploiters | Notes |
-|---|---|---|---|
-| Certified Route | Field Surveyors, Risk Actuaries | Black-Ice Wardens as zone protectors | Field Surveyors teach the mechanic; Risk Actuaries make it powerful. |
-| Sensor Lock | Ice Radar Operators | Research Drones | Keep access common enough for play, but not universal. |
-| Risk Score | Risk Actuaries | Ice Radar, Research Drones, Black-Ice Wardens, possibly Cable Divers as exploiters | Application should be controlled; exploitation can feel faction-wide. |
-| Objective manipulation | Field Surveyors, Cable Divers, Risk Actuaries | Rescue Contractors for extraction/sustain support | Three specialist lines give depth without making all units scenario tools. |
+| Mechanic               | Primary Owner                                 | Secondary / Exploiters                                                             | Notes                                                                      |
+| ---------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Certified Route        | Field Surveyors, Risk Actuaries               | Black-Ice Wardens as zone protectors                                               | Field Surveyors teach the mechanic; Risk Actuaries make it powerful.       |
+| Sensor Lock            | Ice Radar Operators                           | Research Drones                                                                    | Keep access common enough for play, but not universal.                     |
+| Risk Score             | Risk Actuaries                                | Ice Radar, Research Drones, Black-Ice Wardens, possibly Cable Divers as exploiters | Application should be controlled; exploitation can feel faction-wide.      |
+| Objective manipulation | Field Surveyors, Cable Divers, Risk Actuaries | Rescue Contractors for extraction/sustain support                                  | Three specialist lines give depth without making all units scenario tools. |
 
 Provisional per-line ability structure:
 
@@ -609,21 +617,22 @@ Implementation readiness gates:
 - Next packet can define the actual first-pass ability names/effects per Barents unit line.
 - Ability implementation should map each active/passive to the generic ability/effect schema already defined in the tactical implementation contracts.
 - Validation scenarios should test whether Barents has enough combat presence when objective/information tools are less relevant.
+
 ## Barents First-Pass Unit Abilities
 
 This section defines preliminary first-pass ability names and effects for Barents Research Group / Polar Certification Combine unit lines. These are **preliminary/provisional**: they should be used to test faction feel and implementation shape, not treated as final balance or final UI copy.
 
 Approved preliminary ability sets:
 
-| Tier | Unit Line | Passive | Active | Core Effect |
-|---:|---|---|---|---|
-| 1 | Field Surveyors → Certified Route Team | Route Literacy | Preliminary Certification | Basic route/objective certification and safer movement/metadata use. |
-| 2 | Ice Radar Operators → Cryo-Mapping Cell | Cold Read | Ice Radar Sweep | Reveal/clarify hidden or suspected targets; apply Sensor Lock rider. |
-| 3 | Research Drones → Boreal Sensor Net | Relay Coverage | Tagging Pass | Extend sensor coverage and apply/refresh constrained Sensor Lock. |
-| 4 | Rescue Contractors → Denied-Zone Responders | Rescue Mandate | Emergency Extraction | Stabilize or reposition endangered stacks/objective carriers. |
-| 5 | Cable Divers → Under-Ice Saboteurs | Wetline Specialist | Restore/Cut Cable | Restore or sabotage relays, cable nodes, extraction systems, and objective infrastructure. |
-| 6 | Risk Actuaries → Certification Board | Risk Ledger | Certify/Decertify | Manipulate Certified Route state and Risk Score / objective eligibility. |
-| 7 | Polar Exclusion Team → Black-Ice Wardens | Wardens' Mandate | Exclusion Zone | Create/control exclusion space; upgrade riders can add anti-stealth/anti-drone. |
+| Tier | Unit Line                                   | Passive            | Active                    | Core Effect                                                                                |
+| ---: | ------------------------------------------- | ------------------ | ------------------------- | ------------------------------------------------------------------------------------------ |
+|    1 | Field Surveyors → Certified Route Team      | Route Literacy     | Preliminary Certification | Basic route/objective certification and safer movement/metadata use.                       |
+|    2 | Ice Radar Operators → Cryo-Mapping Cell     | Cold Read          | Ice Radar Sweep           | Reveal/clarify hidden or suspected targets; apply Sensor Lock rider.                       |
+|    3 | Research Drones → Boreal Sensor Net         | Relay Coverage     | Tagging Pass              | Extend sensor coverage and apply/refresh constrained Sensor Lock.                          |
+|    4 | Rescue Contractors → Denied-Zone Responders | Rescue Mandate     | Emergency Extraction      | Stabilize or reposition endangered stacks/objective carriers.                              |
+|    5 | Cable Divers → Under-Ice Saboteurs          | Wetline Specialist | Restore/Cut Cable         | Restore or sabotage relays, cable nodes, extraction systems, and objective infrastructure. |
+|    6 | Risk Actuaries → Certification Board        | Risk Ledger        | Certify/Decertify         | Manipulate Certified Route state and Risk Score / objective eligibility.                   |
+|    7 | Polar Exclusion Team → Black-Ice Wardens    | Wardens' Mandate   | Exclusion Zone            | Create/control exclusion space; upgrade riders can add anti-stealth/anti-drone.            |
 
 Line details:
 

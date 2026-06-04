@@ -7,7 +7,16 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-28
 source_lore: []
-related: [docs/architecture/architecture, docs/architecture/control-manifest, docs/architecture/technical-decision-priorities, docs/architecture/data-authoring-options, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, design/workflow]
+related:
+  [
+    docs/architecture/architecture,
+    docs/architecture/control-manifest,
+    docs/architecture/technical-decision-priorities,
+    docs/architecture/data-authoring-options,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    design/workflow,
+  ]
 approval: approved
 approval_scope: SPIKE-001 foundation scaffold and technical setup boundaries; unresolved architecture areas remain explicit blockers for later production stories.
 ---

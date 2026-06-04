@@ -20,18 +20,21 @@ This project follows a Claude Code Game Studios-style flow adapted for strict hu
 Neon Champions uses a human-led, agent-assisted workflow.
 
 Humans own:
+
 - creative direction;
 - game design decisions;
 - final approval;
 - scope calls.
 
 Documents own:
+
 - approved lore imports;
 - GDD rules;
 - Unity architecture;
 - production story requirements.
 
 Agents and Codex may:
+
 - research;
 - propose options;
 - draft docs;
@@ -40,6 +43,7 @@ Agents and Codex may:
 - verify with evidence.
 
 Agents and Codex may not:
+
 - implement from chat memory;
 - turn unapproved lore into gameplay rules;
 - invent missing mechanics during coding;
@@ -135,12 +139,14 @@ Git / GitHub records what actually changed. It does not decide what the game is.
 Every production implementation change must be traceable through Git / GitHub to an approved READY story.
 
 Implementation PRs must link to:
+
 - story ID;
 - relevant GDD section;
 - relevant ADR or control-manifest section;
 - tests and verification evidence.
 
 Implementation PRs must explicitly state:
+
 - what changed;
 - why it changed;
 - what was intentionally not changed;
@@ -244,18 +250,23 @@ Required story field:
 Status: PASS | FAIL
 
 Open questions:
+
 - None
 
 Assumptions:
+
 - None
 
 Out of scope:
+
 - ...
 
 Allowed stubs/mocks:
+
 - ...
 
 Human-approved exceptions:
+
 - None
 ```
 
@@ -630,14 +641,15 @@ The control manifest must define:
    - no direct push to main for production work.
 
 10. Stop Conditions
-   - story is not READY;
-   - work is an epic, not a story;
-   - ambiguity check is FAIL;
-   - linked docs are missing or conflicting;
-   - gameplay behavior or Unity architecture is ambiguous;
-   - implementation would require inventing design or architecture;
-   - required tests or verification cannot be performed;
-   - unrelated Git changes, legal/IP/cultural risk, or asset-provenance risk appears.
+
+- story is not READY;
+- work is an epic, not a story;
+- ambiguity check is FAIL;
+- linked docs are missing or conflicting;
+- gameplay behavior or Unity architecture is ambiguous;
+- implementation would require inventing design or architecture;
+- required tests or verification cannot be performed;
+- unrelated Git changes, legal/IP/cultural risk, or asset-provenance risk appears.
 
 Control Manifest DONE standard:
 
@@ -689,6 +701,7 @@ Control Manifest DONE standard:
 
 Default: Lean.
 Use Full for:
+
 - game concept approval;
 - systems index approval;
 - MVP GDD approval;

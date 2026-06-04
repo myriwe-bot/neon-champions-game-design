@@ -7,7 +7,16 @@ owner: shared
 created: 2026-05-30
 updated: 2026-06-01
 source_lore: [greenland, blue-monday, white-sky, digital-net]
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/epics/epic-strat-mvp-001-strategic-mvp-core-loop, production/stories/story-template]
+related:
+  [
+    design/gdd/strategic-map,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
+    production/stories/story-template,
+  ]
 approval: approved
 ---
 
@@ -207,23 +216,29 @@ Use `docs/architecture/testing-strategy.md` to select required evidence by story
 Status: PASS.
 
 Open questions:
+
 - Exact Unity repo source/test paths must be discovered by the implementer from existing AGENTS.md and assembly definitions before coding. This is implementation discovery, not a design ambiguity.
 
 Assumptions:
+
 - The implementation repo already has SPIKE-001 foundation available.
 - Data-authoring pipeline remains phased hybrid; this story may use test-local data and plain domain models without deciding the final authoring route.
 - The first production code should prefer pure domain classes/records and EditMode tests.
 
 Out of scope:
+
 - Same as story Out of scope section.
 
 Allowed stubs/mocks:
+
 - Same as Allowed stubs section.
 
 Human approval:
+
 - Approved by human on 2026-06-01 with note: "Story 001 is good".
 
 Human-approved exceptions:
+
 - None.
 
 If status is FAIL, this story is not READY. Current status is PASS and the story is READY after human approval and parent epic handling.

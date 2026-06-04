@@ -7,7 +7,15 @@ owner: shared
 created: 2026-05-27
 updated: 2026-05-27
 source_lore: []
-related: [docs/architecture/codex-agent-instructions, docs/architecture/control-manifest, docs/architecture/unity-technical-scheme, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/spikes/spike-001-unity-project-ci-foundation]
+related:
+  [
+    docs/architecture/codex-agent-instructions,
+    docs/architecture/control-manifest,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/spikes/spike-001-unity-project-ci-foundation,
+  ]
 approval: approved
 ---
 
@@ -25,7 +33,7 @@ Recommended future path:
 
 Recommended content:
 
-```markdown
+````markdown
 # AGENTS.md — Neon Champions Unity Repo
 
 This repository contains the Unity implementation of Neon Champions.
@@ -87,6 +95,7 @@ Infrastructure -> Application / Domain where approved
 Tests -> tested assemblies
 Domain -> no UnityEngine dependency unless explicitly approved
 ```
+````
 
 Do not add global state, event buses, service locators, dependency injection containers, save/load systems, serialization systems, asset-loading architecture, or data-authoring pipelines without approved ADR/story scope.
 
@@ -188,7 +197,8 @@ Report:
 - manual evidence paths if applicable;
 - omissions/stubs/mocks/assumptions/deferred work or `No known omissions`;
 - any stop-condition risks.
-```
+
+````
 
 ## Scoped `AGENTS.md` Templates
 
@@ -198,7 +208,7 @@ Future path:
 
 ```text
 Assets/NeonChampions/Runtime/Domain/AGENTS.md
-```
+````
 
 ```markdown
 # Domain Agent Rules

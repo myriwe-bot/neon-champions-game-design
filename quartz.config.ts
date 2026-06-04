@@ -1,5 +1,5 @@
-import { QuartzConfig } from "./quartz/cfg"
-import * as Plugin from "./quartz/plugins"
+import { QuartzConfig } from "./quartz/cfg";
+import * as Plugin from "./quartz/plugins";
 
 const config: QuartzConfig = {
   configuration: {
@@ -71,8 +71,13 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-      Plugin.CreatedModifiedDate({ priority: ["frontmatter", "git", "filesystem"] }),
-      Plugin.SyntaxHighlighting({ theme: { light: "github-light", dark: "github-dark" }, keepBackground: false }),
+      Plugin.CreatedModifiedDate({
+        priority: ["frontmatter", "git", "filesystem"],
+      }),
+      Plugin.SyntaxHighlighting({
+        theme: { light: "github-light", dark: "github-dark" },
+        keepBackground: false,
+      }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
@@ -95,6 +100,6 @@ const config: QuartzConfig = {
       Plugin.CustomOgImages(),
     ],
   },
-}
+};
 
-export default config
+export default config;

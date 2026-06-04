@@ -6,8 +6,15 @@ phase: systems-design
 owner: shared
 created: 2026-05-22
 updated: 2026-05-30
-source_lore: [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
-related: [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index, design/gdd/tactical-combat]
+source_lore:
+  [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
+related:
+  [
+    design/gdd/game-concept,
+    design/gdd/game-pillars,
+    design/gdd/systems-index,
+    design/gdd/tactical-combat,
+  ]
 approval: pending
 ---
 
@@ -49,12 +56,14 @@ Safer current placeholder: **Home Rule Coalition**. It describes a political for
 ## Roster Scale Proposal
 
 For MVP, each playable faction needs only:
+
 - 3 recruitable unit lines;
 - 1 Champion;
 - 1 neutral/shared recruit line;
 - 1 signature tactical mechanic.
 
 For vertical slice, expand each faction to:
+
 - 6-7 unit lines, HoMM-style;
 - basic and upgraded variants;
 - one faction-specific recruitment site;
@@ -76,15 +85,15 @@ Defensive mobility, terrain bonuses, rescue/sustain, ambushes, legitimacy/proof 
 
 ### Unit Lines
 
-| Tier | Basic Unit | Upgraded Unit | Role | Notes |
-|---:|---|---|---|---|
-| 1 | Settlement Watch | Council Guard | Defensive infantry | Local militia, good in settlements/outposts, weak in open elite fights. |
-| 2 | Sled Logistics Team | Whiteout Couriers | Support/mobility | Improves movement, extraction, supply, can evacuate wounded or Intel. |
-| 3 | Hunter-Scouts | Fjord Stalkers | Recon/skirmisher | Terrain stealth, marks targets, strong in snow/fjord maps. |
-| 4 | SAR Drone Crew | Rescue Mesh Wing | Support drones | Heals/stabilizes, reveals terrain, can recover proof from battlefield. |
-| 5 | Fishery Hardhats | Harbor Defense Union | Tough melee/riot line | Industrial workers with exosuits/tools; strong near ports/factories. |
-| 6 | Compact Negotiators | Consent Wardens | Soft-control/support | Buffs allies, debuffs corporate units, generates Proof/Legitimacy on objectives. |
-| 7 | Heritage Ranger Team | Civic Vanguard | Elite adaptive squad | High morale, terrain mastery, anti-drone tools; politically costly if lost. |
+| Tier | Basic Unit           | Upgraded Unit        | Role                  | Notes                                                                            |
+| ---: | -------------------- | -------------------- | --------------------- | -------------------------------------------------------------------------------- |
+|    1 | Settlement Watch     | Council Guard        | Defensive infantry    | Local militia, good in settlements/outposts, weak in open elite fights.          |
+|    2 | Sled Logistics Team  | Whiteout Couriers    | Support/mobility      | Improves movement, extraction, supply, can evacuate wounded or Intel.            |
+|    3 | Hunter-Scouts        | Fjord Stalkers       | Recon/skirmisher      | Terrain stealth, marks targets, strong in snow/fjord maps.                       |
+|    4 | SAR Drone Crew       | Rescue Mesh Wing     | Support drones        | Heals/stabilizes, reveals terrain, can recover proof from battlefield.           |
+|    5 | Fishery Hardhats     | Harbor Defense Union | Tough melee/riot line | Industrial workers with exosuits/tools; strong near ports/factories.             |
+|    6 | Compact Negotiators  | Consent Wardens      | Soft-control/support  | Buffs allies, debuffs corporate units, generates Proof/Legitimacy on objectives. |
+|    7 | Heritage Ranger Team | Civic Vanguard       | Elite adaptive squad  | High morale, terrain mastery, anti-drone tools; politically costly if lost.      |
 
 ### Signature Mechanic
 
@@ -112,15 +121,15 @@ High-tech combined arms, hazard control, shields/barriers, climate-station buffs
 
 ### Unit Lines
 
-| Tier | Basic Unit | Upgraded Unit | Role | Notes |
-|---:|---|---|---|---|
-| 1 | Meridian Security | Mandate Response Team | Infantry | Clean corporate security, disciplined, costly. |
-| 2 | Aerosol Techs | Skyline Engineers | Support/repair | Repairs drones/structures, deploys cover, stabilizes climate hazards. |
-| 3 | Liability Medics | Continuity Clinicians | Heal/cleanse | Medical support with insurance/protocol flavor; may “stabilize” enemies for capture. |
-| 4 | Strato Sensor Swarm | Meridian Eye Swarm | Recon/drone | Reveals stealth, marks targets, improves ranged accuracy. |
-| 5 | Climate Bulwark | Albedo Bastion | Heavy defender | Shield unit, area denial, protects infrastructure. |
-| 6 | Termination-Risk Team | Emergency Suppression Unit | Control/anti-sabotage | Locks down zones, counters Open Sky/Free-Net actions. |
-| 7 | White Sky Custodians | Meridian Paladins | Elite | Iconic corporate knight analogue; terrifying because they really may be preventing catastrophe. |
+| Tier | Basic Unit            | Upgraded Unit              | Role                  | Notes                                                                                           |
+| ---: | --------------------- | -------------------------- | --------------------- | ----------------------------------------------------------------------------------------------- |
+|    1 | Meridian Security     | Mandate Response Team      | Infantry              | Clean corporate security, disciplined, costly.                                                  |
+|    2 | Aerosol Techs         | Skyline Engineers          | Support/repair        | Repairs drones/structures, deploys cover, stabilizes climate hazards.                           |
+|    3 | Liability Medics      | Continuity Clinicians      | Heal/cleanse          | Medical support with insurance/protocol flavor; may “stabilize” enemies for capture.            |
+|    4 | Strato Sensor Swarm   | Meridian Eye Swarm         | Recon/drone           | Reveals stealth, marks targets, improves ranged accuracy.                                       |
+|    5 | Climate Bulwark       | Albedo Bastion             | Heavy defender        | Shield unit, area denial, protects infrastructure.                                              |
+|    6 | Termination-Risk Team | Emergency Suppression Unit | Control/anti-sabotage | Locks down zones, counters Open Sky/Free-Net actions.                                           |
+|    7 | White Sky Custodians  | Meridian Paladins          | Elite                 | Iconic corporate knight analogue; terrifying because they really may be preventing catastrophe. |
 
 ### Signature Mechanic
 
@@ -148,15 +157,15 @@ Scouting, targeting, route control, drones, debuffs through sensor superiority, 
 
 ### Unit Lines
 
-| Tier | Basic Unit | Upgraded Unit | Role | Notes |
-|---:|---|---|---|---|
-| 1 | Field Surveyors | Certified Route Team | Scout/support | Finds hidden paths and hazards; weak combat. |
-| 2 | Ice Radar Operators | Cryo-Mapping Cell | Reveal/debuff | Exposes stealth, reduces enemy mobility. |
-| 3 | Research Drones | Boreal Sensor Net | Drone swarm | Cheap recon/harass; enables precision attacks. |
-| 4 | Rescue Contractors | Denied-Zone Responders | Mobile infantry | SAR with private-security edge. |
-| 5 | Cable Divers | Under-Ice Saboteurs | Specialist | Coastal/under-ice maps; disables Net/energy nodes. |
-| 6 | Risk Actuaries | Certification Board | Command/support | Rewrites tactical risk: buffs allies, debuffs enemies, manipulates initiative. |
-| 7 | Polar Exclusion Team | Black-Ice Wardens | Elite control squad | Area denial, sensor dominance, anti-stealth/anti-drone. |
+| Tier | Basic Unit           | Upgraded Unit          | Role                | Notes                                                                          |
+| ---: | -------------------- | ---------------------- | ------------------- | ------------------------------------------------------------------------------ |
+|    1 | Field Surveyors      | Certified Route Team   | Scout/support       | Finds hidden paths and hazards; weak combat.                                   |
+|    2 | Ice Radar Operators  | Cryo-Mapping Cell      | Reveal/debuff       | Exposes stealth, reduces enemy mobility.                                       |
+|    3 | Research Drones      | Boreal Sensor Net      | Drone swarm         | Cheap recon/harass; enables precision attacks.                                 |
+|    4 | Rescue Contractors   | Denied-Zone Responders | Mobile infantry     | SAR with private-security edge.                                                |
+|    5 | Cable Divers         | Under-Ice Saboteurs    | Specialist          | Coastal/under-ice maps; disables Net/energy nodes.                             |
+|    6 | Risk Actuaries       | Certification Board    | Command/support     | Rewrites tactical risk: buffs allies, debuffs enemies, manipulates initiative. |
+|    7 | Polar Exclusion Team | Black-Ice Wardens      | Elite control squad | Area denial, sensor dominance, anti-stealth/anti-drone.                        |
 
 ### Signature Mechanic
 
@@ -184,15 +193,15 @@ Defensive control, nonlethal options, anti-hack, proof stabilization, emergency 
 
 ### Unit Lines
 
-| Tier | Basic Unit | Upgraded Unit | Role | Notes |
-|---:|---|---|---|---|
-| 1 | Blue Line Operators | Treaty Net Guards | Basic infantry/security | Protects nodes, modest combat, strong near civic infrastructure. |
-| 2 | Civic Relay Techs | Blue-Lane Engineers | Support | Deploys relays, restores comms, repairs Net objectives. |
-| 3 | Mandate Observers | Evidentiary Officers | Proof/support | Records actions, protects evidence, punishes unlawful attacks. |
-| 4 | Cyber Peacekeepers | Quarantine Breach Team | Anti-hack specialist | Counters Digital-Net actions and rogue systems. |
-| 5 | Humanitarian Convoy | Protected Relief Column | Sustain/objective | Heals, supplies, shields civilians; slow but hard to ignore. |
-| 6 | Blue Shield Squad | Directorate Intervention Unit | Control infantry | Riot/nonlethal tools, shields, zone control. |
-| 7 | AGI Compact Wardens | Blue Mandate Executors | Elite | Anti-rogue-model / quarantine unit; legally terrifying when unleashed. |
+| Tier | Basic Unit          | Upgraded Unit                 | Role                    | Notes                                                                  |
+| ---: | ------------------- | ----------------------------- | ----------------------- | ---------------------------------------------------------------------- |
+|    1 | Blue Line Operators | Treaty Net Guards             | Basic infantry/security | Protects nodes, modest combat, strong near civic infrastructure.       |
+|    2 | Civic Relay Techs   | Blue-Lane Engineers           | Support                 | Deploys relays, restores comms, repairs Net objectives.                |
+|    3 | Mandate Observers   | Evidentiary Officers          | Proof/support           | Records actions, protects evidence, punishes unlawful attacks.         |
+|    4 | Cyber Peacekeepers  | Quarantine Breach Team        | Anti-hack specialist    | Counters Digital-Net actions and rogue systems.                        |
+|    5 | Humanitarian Convoy | Protected Relief Column       | Sustain/objective       | Heals, supplies, shields civilians; slow but hard to ignore.           |
+|    6 | Blue Shield Squad   | Directorate Intervention Unit | Control infantry        | Riot/nonlethal tools, shields, zone control.                           |
+|    7 | AGI Compact Wardens | Blue Mandate Executors        | Elite                   | Anti-rogue-model / quarantine unit; legally terrifying when unleashed. |
 
 ### Signature Mechanic
 
@@ -220,15 +229,15 @@ Ambush, sabotage, mobility, morale shocks, leaks, fragile units with high disrup
 
 ### Unit Lines
 
-| Tier | Basic Unit | Upgraded Unit | Role | Notes |
-|---:|---|---|---|---|
-| 1 | Protest Line | Direct Action Bloc | Cheap infantry/control | Weak damage, can block/occupy objectives. |
-| 2 | Free-Net Runners | Pirate Relay Ghosts | Hacker/scout | Moves through Net layer, reveals hidden proof. |
-| 3 | Banner Drones | Sky Graffiti Swarm | Morale/media | Debuffs enemy legitimacy, spreads visibility. |
-| 4 | Climber-Saboteurs | Meridian Cutters | Infrastructure damage | Strong vs stations, relays, vehicles. |
-| 5 | Leak Lawyers | Commons Advocates | Support/control | Turns captured Intel/Proof into public penalties. |
-| 6 | Weather Hack Cell | Blue Break Cell | Risky special | Can trigger environmental chaos; may backfire. |
-| 7 | Unceiling Vanguard | Open Sky Martyrs | Elite irregular | High disruption, morale effect, politically explosive casualties. |
+| Tier | Basic Unit         | Upgraded Unit       | Role                   | Notes                                                             |
+| ---: | ------------------ | ------------------- | ---------------------- | ----------------------------------------------------------------- |
+|    1 | Protest Line       | Direct Action Bloc  | Cheap infantry/control | Weak damage, can block/occupy objectives.                         |
+|    2 | Free-Net Runners   | Pirate Relay Ghosts | Hacker/scout           | Moves through Net layer, reveals hidden proof.                    |
+|    3 | Banner Drones      | Sky Graffiti Swarm  | Morale/media           | Debuffs enemy legitimacy, spreads visibility.                     |
+|    4 | Climber-Saboteurs  | Meridian Cutters    | Infrastructure damage  | Strong vs stations, relays, vehicles.                             |
+|    5 | Leak Lawyers       | Commons Advocates   | Support/control        | Turns captured Intel/Proof into public penalties.                 |
+|    6 | Weather Hack Cell  | Blue Break Cell     | Risky special          | Can trigger environmental chaos; may backfire.                    |
+|    7 | Unceiling Vanguard | Open Sky Martyrs    | Elite irregular        | High disruption, morale effect, politically explosive casualties. |
 
 ### Signature Mechanic
 
@@ -254,15 +263,15 @@ Build tempo, armored workers, private security, logistics buffs, resource extrac
 
 ### Unit Lines
 
-| Tier | Basic Unit | Upgraded Unit | Role | Notes |
-|---:|---|---|---|---|
-| 1 | Site Security | Concession Guards | Infantry | Cheap private guards tied to claims. |
-| 2 | Cargo Handlers | Bonded Logistics Crew | Support | Improves movement/supply; can fortify objectives. |
-| 3 | Prospecting Teams | Claim Engineers | Economy/scout | Marks resource sites; weak combat. |
-| 4 | Mining Exosuits | Heavy Extraction Frames | Heavy melee/utility | Durable, can damage terrain/cover. |
-| 5 | Customs Brokers | Contract Enforcers | Control/support | Slows enemy movement, taxes routes, manipulates objectives. |
-| 6 | Port Drones | Kestrel Cargo Swarm | Ranged/drone | Mobile ranged pressure; stronger near supply lines. |
-| 7 | Concession Breakers | Janus Black Ledger Unit | Elite | Private military/accounting hybrid; punishes enemies economically and tactically. |
+| Tier | Basic Unit          | Upgraded Unit           | Role                | Notes                                                                             |
+| ---: | ------------------- | ----------------------- | ------------------- | --------------------------------------------------------------------------------- |
+|    1 | Site Security       | Concession Guards       | Infantry            | Cheap private guards tied to claims.                                              |
+|    2 | Cargo Handlers      | Bonded Logistics Crew   | Support             | Improves movement/supply; can fortify objectives.                                 |
+|    3 | Prospecting Teams   | Claim Engineers         | Economy/scout       | Marks resource sites; weak combat.                                                |
+|    4 | Mining Exosuits     | Heavy Extraction Frames | Heavy melee/utility | Durable, can damage terrain/cover.                                                |
+|    5 | Customs Brokers     | Contract Enforcers      | Control/support     | Slows enemy movement, taxes routes, manipulates objectives.                       |
+|    6 | Port Drones         | Kestrel Cargo Swarm     | Ranged/drone        | Mobile ranged pressure; stronger near supply lines.                               |
+|    7 | Concession Breakers | Janus Black Ledger Unit | Elite               | Private military/accounting hybrid; punishes enemies economically and tactically. |
 
 ### Signature Mechanic
 
@@ -280,14 +289,14 @@ Wildlife management turned into command infrastructure. The horror is not animal
 
 ### Unit / Dwelling Ideas
 
-| Site | Recruit / Effect | Role |
-|---|---|---|
-| Wildlife Patrol Station | Sled Dog Logistics Team | Movement/rescue support |
-| Bioacoustic Tower | Musk Ox Stampede Rig | Area denial / disruption |
-| Raven Tagging Lab | Raven Sensor Swarm | Scouting / signal spoofing |
-| Polar Bear Collar Facility | Polar Bear Bio-Tag Alpha | Rare elite beast / ethical scandal |
-| Coastal Buoy Nursery | Seal/Narwhal Buoy Network | Coastal detection / route control |
-| Quarantine Blind | Parasite Panic Event | Scenario hazard, not normal recruit |
+| Site                       | Recruit / Effect          | Role                                |
+| -------------------------- | ------------------------- | ----------------------------------- |
+| Wildlife Patrol Station    | Sled Dog Logistics Team   | Movement/rescue support             |
+| Bioacoustic Tower          | Musk Ox Stampede Rig      | Area denial / disruption            |
+| Raven Tagging Lab          | Raven Sensor Swarm        | Scouting / signal spoofing          |
+| Polar Bear Collar Facility | Polar Bear Bio-Tag Alpha  | Rare elite beast / ethical scandal  |
+| Coastal Buoy Nursery       | Seal/Narwhal Buoy Network | Coastal detection / route control   |
+| Quarantine Blind           | Parasite Panic Event      | Scenario hazard, not normal recruit |
 
 ### Pushback
 
@@ -297,16 +306,16 @@ Use polar bears sparingly. They should be rare, frightening, and reputationally 
 
 These can appear as dwellings, mercenary sites, map rewards, or local recruitment:
 
-| Unit | Role | Good For |
-|---|---|---|
-| Arctic Freelancers | flexible infantry | common neutral guard/recruit |
-| Smuggler-SAR Crew | mobile support | medicine, evacuation, dark routes |
-| Black Clinic Medics | risky healing/body mods | biotech events |
-| Free-Net Cell | hacker/support | Intel and map reveal |
-| Weather Station Staff | objective support | White Sky / hazard missions |
-| Port Militia | defensive infantry | ports/fish plants |
-| Drone Salvagers | economy/recon | wrecks, caches, Intel |
-| Echo Witness | morale/proof anomaly | rare story unit, use carefully |
+| Unit                  | Role                    | Good For                          |
+| --------------------- | ----------------------- | --------------------------------- |
+| Arctic Freelancers    | flexible infantry       | common neutral guard/recruit      |
+| Smuggler-SAR Crew     | mobile support          | medicine, evacuation, dark routes |
+| Black Clinic Medics   | risky healing/body mods | biotech events                    |
+| Free-Net Cell         | hacker/support          | Intel and map reveal              |
+| Weather Station Staff | objective support       | White Sky / hazard missions       |
+| Port Militia          | defensive infantry      | ports/fish plants                 |
+| Drone Salvagers       | economy/recon           | wrecks, caches, Intel             |
+| Echo Witness          | morale/proof anomaly    | rare story unit, use carefully    |
 
 ## Tactical Battle Feel
 
@@ -323,6 +332,7 @@ A Neon Champions tactical battle should not look like two modern armies lining u
 - under-ice cable landing.
 
 Objects matter:
+
 - server racks can be captured for Intel;
 - relay masts can change Net visibility;
 - civilians/proof witnesses can constrain attacks;
@@ -335,11 +345,13 @@ Objects matter:
 For the first tactical prototype, use two factions and six units total:
 
 ### Home Rule Coalition
+
 - Settlement Watch / Council Guard
 - Hunter-Scouts / Fjord Stalkers
 - SAR Drone Crew / Rescue Mesh Wing
 
 ### QXZ Meridian
+
 - Meridian Security / Mandate Response Team
 - Aerosol Techs / Skyline Engineers
 - Climate Bulwark / Albedo Bastion

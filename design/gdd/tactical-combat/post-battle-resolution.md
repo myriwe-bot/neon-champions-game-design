@@ -7,7 +7,8 @@ owner: shared
 created: 2026-05-30
 updated: 2026-05-30
 source_lore: []
-related: [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
+related:
+  [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
 approval: pending
 ---
 
@@ -81,6 +82,7 @@ Design notes:
 - Victory should not require universal Decisive/Standard/Pyrrhic grading; scenarios can express nuance in subtitles and rewards.
 - Defeat grades are not universal. If a scenario needs Rout, Catastrophic Defeat, Asset Captured, or Target Escaped, it should express that as a scenario subtitle or override.
 - Systemic rules handle default rewards/losses first; scenarios may override or add specific consequences.
+
 ## Post-Battle Losses and Preservation
 
 Approved direction:
@@ -112,6 +114,7 @@ Design notes:
 - Surrender must preserve enough to be tempting, but its cost should be visible: resources, reputation, prisoners, leverage, access, legal exposure, contracts, or strategic debt.
 - Recovery/repair systems fit the cyberpunk setting, but should be strategic investments and faction identity tools rather than automatic forgiveness.
 - This preserves battle stakes while leaving room for medbay, repair bay, insurance, body subscription, drone salvage, and biotech faction mechanics later.
+
 ## Post-Battle Rewards and Spoils
 
 Approved direction:
@@ -145,6 +148,7 @@ Design notes:
 - Casualty penalties should be objective-authored, not a blanket punishment for hard-won battles.
 - Retreat/surrender can still recognize partial objective success, but should not become a safe way to farm battlefield spoils.
 - Recovery capacity creates design space for factions, buildings, assets, Champion operations, and strategic preparation.
+
 ## Rare Capture, Resurrection, and Post-Battle Control
 
 Approved direction:
@@ -182,6 +186,7 @@ Design notes:
 - Cyberpunk recovery fantasy still has room: drone salvage, backup bodies, Echo continuity, biotech regrowth, contractual body replacement, or resurrection-like faction mechanics can exist where appropriate.
 - The key distinction: salvage/intel/data can be common post-battle rewards; captured living units should be rare.
 - Champion capture remains separate and only happens by explicit scenario rule.
+
 ## Rare Recovery, Resurrection, and Faction Return Mechanics
 
 Approved direction:
@@ -221,6 +226,7 @@ Design notes:
 - True restoration should feel special and may matter more for elite/special units than ordinary stacks.
 - Strong return mechanics need strong bottlenecks or they will flatten post-battle consequences.
 - Examples: drone repair pool, corporate body-insurance replacement, biotech regrowth, Echo-backed continuity shell, re-keyed autonomous unit, medbay survival protocol, faction-specific resurrection analogue.
+
 ## Post-Battle Resolution Summary UI
 
 Approved direction:
@@ -268,6 +274,7 @@ Design notes:
 - Always explain why important consequences happened. This prevents retreat, salvage, surrender, and recovery systems from feeling arbitrary.
 - Show major missed rewards as teaching moments, but avoid spam for tiny salvage fragments.
 - Follow-up actions should be actionable, not encyclopedic. If the player cannot do it now, hide it or put it in a detail tooltip.
+
 ## Post-Battle Block MVP Cut
 
 Approved direction:
@@ -308,6 +315,7 @@ Design notes:
 - Numeric salvage capacity gives more tuning control than a binary support flag, but should stay simple.
 - Rare capture remains explicitly outside the normal MVP reward loop to avoid snowballing.
 - Recovery/resurrection remains faction-driven, not a global tactical-combat requirement.
+
 ## End of Post-Battle Block — Integration Check
 
 Approved direction:

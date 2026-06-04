@@ -7,7 +7,20 @@ owner: shared
 created: 2026-06-01
 updated: 2026-06-03
 source_lore: [greenland, blue-monday, white-sky, digital-net]
-related: [design/gdd/strategic-map, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, production/stories/story-strat-001-scenario-map-graph-state, production/stories/story-strat-002-hotseat-turn-ownership, production/stories/story-strat-003-champion-route-movement, production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass, production/stories/story-tac-001-battle-setup-result-dto-contracts, production/sprints/strategic-mvp-story-train-001]
+related:
+  [
+    design/gdd/strategic-map,
+    docs/architecture/unity-technical-scheme,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+    production/stories/story-strat-001-scenario-map-graph-state,
+    production/stories/story-strat-002-hotseat-turn-ownership,
+    production/stories/story-strat-003-champion-route-movement,
+    production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass,
+    production/stories/story-tac-001-battle-setup-result-dto-contracts,
+    production/sprints/strategic-mvp-story-train-001,
+  ]
 approval: approved
 ---
 
@@ -50,6 +63,7 @@ Create the first playable strategic MVP loop foundation: a two-faction local-hot
 This epic turns the approved strategic-map GDD into the minimum playable HoMM-like overworld layer for Neon Champions: two opposing Champions competing over infrastructure, resources, guarded sites, and a central objective without requiring strategic AI in the first MVP.
 
 Relevant pillars:
+
 - [x] Cyberpunk strategy/RPG
 - [x] Infrastructure-first conflict
 - [x] Champions as legitimacy and force projection
@@ -124,20 +138,20 @@ Known future work not part of the current first loop slice:
 
 Agents and Codex may not implement this epic directly. They may only implement READY child stories.
 
-| Story | Status | Type | Depends On | Evidence |
-|---|---|---|---|---|
-| [[production/stories/story-strat-001-scenario-map-graph-state|STORY-STRAT-001 Scenario Map Graph State]] | READY / implementation verified for merge | Logic + Config/Data | SPIKE-001 foundation, approved strategic-map GDD, approved technical controls | EditMode/domain validation tests, serialization round-trip proxy, TDD/CI evidence |
-| [[production/stories/story-strat-002-hotseat-turn-ownership|STORY-STRAT-002 Hotseat Turn Ownership]] | READY-candidate | Logic | STORY-STRAT-001 | Turn validation, start-turn reset, end-turn advancement, round increment tests |
-| [[production/stories/story-strat-003-champion-route-movement|STORY-STRAT-003 Champion Route Movement]] | READY-candidate | Logic | STORY-STRAT-001, preferably STORY-STRAT-002 | Movement validation, preview non-mutation, state-transition tests |
-| [[production/stories/story-strat-vis-001-minimal-strategic-map-presentation|STORY-STRAT-VIS-001 Minimal Strategic Map Presentation]] | READY-candidate | Visual/Feel + Integration | STORY-STRAT-001, STORY-STRAT-002 recommended | Scene load, node/route/Champion markers, active faction display, screenshot/video |
-| [[production/stories/story-strat-input-001-select-champion-and-route-move|STORY-STRAT-INPUT-001 Select Champion and Route Move]] | READY-candidate | Integration + UI/Input | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001 | Select/move/reject PlayMode smoke, visual marker update, screenshot/video |
-| [[production/stories/story-strat-ui-001-minimal-hotseat-hud|STORY-STRAT-UI-001 Minimal Hotseat HUD]] | READY-candidate | UI + Integration | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001, STORY-STRAT-INPUT-001 recommended | HUD startup, movement-point display, End Turn update, screenshot/video |
-| [[production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke|STORY-LOOP-001 Minimal Local Hotseat Strategic Loop Smoke]] | DONE / merged in Unity PR #9 | Playtest + Integration + UX/Smoke | STORY-STRAT-001/002/003, VIS-001, INPUT-001, UI-001 | End-to-end two-faction movement/end-turn smoke, checklist, screenshot/video, CI |
-| [STORY-QA-001 Strategic Smoke Cleanup, Readability, and Bugfix Pass](../stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass.md) | DONE / merged in Unity PR #10 | QA + UI/UX Readability + Bugfix | STORY-LOOP-001 | Readability/layout fixes, map/HUD feedback clarity, screenshots/checklist, CI |
-| [STORY-TAC-001 Battle Setup Result DTO Contracts](../stories/story-tac-001-battle-setup-result-dto-contracts.md) | DONE / merged in Unity PR #11 | Logic + Integration contract | STORY-STRAT-001, strategic-map §14 | DTO validation, setup/result matching, snapshot immutability tests |
-| [STORY-QA-002 Strategic Map Readability and Actor-Clarity Fix Pass](../stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass.md) | DONE / merged in Unity PR #12 | QA + UI/UX Readability + Bugfix | STORY-LOOP-001, STORY-QA-001, STORY-TAC-001 | Non-overlap layout checks, actor clarity, map feedback, before/after screenshots, CI |
-| STORY-STRAT-004 Site Interaction and Guarded Battle Trigger | Draft placeholder | Logic + Integration | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-TAC-001 | Interaction preview/apply and BattleSetup creation tests |
-| STORY-STRAT-005 Strategic Battle Result Application | Draft placeholder | Logic + Integration | STORY-TAC-001, STORY-STRAT-004 | BattleResult application, losses, guard clearing, rewards, control, victory tests |
+| Story                                                                                                                                            | Status                                    | Type                              | Depends On                                                                                                | Evidence                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [STORY-STRAT-001 Scenario Map Graph State](../stories/story-strat-001-scenario-map-graph-state.md)                                               | READY / implementation verified for merge | Logic + Config/Data               | SPIKE-001 foundation, approved strategic-map GDD, approved technical controls                             | EditMode/domain validation tests, serialization round-trip proxy, TDD/CI evidence    |
+| [STORY-STRAT-002 Hotseat Turn Ownership](../stories/story-strat-002-hotseat-turn-ownership.md)                                                   | READY-candidate                           | Logic                             | STORY-STRAT-001                                                                                           | Turn validation, start-turn reset, end-turn advancement, round increment tests       |
+| [STORY-STRAT-003 Champion Route Movement](../stories/story-strat-003-champion-route-movement.md)                                                 | READY-candidate                           | Logic                             | STORY-STRAT-001, preferably STORY-STRAT-002                                                               | Movement validation, preview non-mutation, state-transition tests                    |
+| [STORY-STRAT-VIS-001 Minimal Strategic Map Presentation](../stories/story-strat-vis-001-minimal-strategic-map-presentation.md)                   | READY-candidate                           | Visual/Feel + Integration         | STORY-STRAT-001, STORY-STRAT-002 recommended                                                              | Scene load, node/route/Champion markers, active faction display, screenshot/video    |
+| [STORY-STRAT-INPUT-001 Select Champion and Route Move](../stories/story-strat-input-001-select-champion-and-route-move.md)                       | READY-candidate                           | Integration + UI/Input            | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001                                    | Select/move/reject PlayMode smoke, visual marker update, screenshot/video            |
+| [STORY-STRAT-UI-001 Minimal Hotseat HUD](../stories/story-strat-ui-001-minimal-hotseat-hud.md)                                                   | READY-candidate                           | UI + Integration                  | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-STRAT-VIS-001, STORY-STRAT-INPUT-001 recommended | HUD startup, movement-point display, End Turn update, screenshot/video               |
+| [STORY-LOOP-001 Minimal Local Hotseat Strategic Loop Smoke](../stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke.md)             | DONE / merged in Unity PR #9              | Playtest + Integration + UX/Smoke | STORY-STRAT-001/002/003, VIS-001, INPUT-001, UI-001                                                       | End-to-end two-faction movement/end-turn smoke, checklist, screenshot/video, CI      |
+| [STORY-QA-001 Strategic Smoke Cleanup, Readability, and Bugfix Pass](../stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass.md) | DONE / merged in Unity PR #10             | QA + UI/UX Readability + Bugfix   | STORY-LOOP-001                                                                                            | Readability/layout fixes, map/HUD feedback clarity, screenshots/checklist, CI        |
+| [STORY-TAC-001 Battle Setup Result DTO Contracts](../stories/story-tac-001-battle-setup-result-dto-contracts.md)                                 | DONE / merged in Unity PR #11             | Logic + Integration contract      | STORY-STRAT-001, strategic-map §14                                                                        | DTO validation, setup/result matching, snapshot immutability tests                   |
+| [STORY-QA-002 Strategic Map Readability and Actor-Clarity Fix Pass](../stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass.md) | DONE / merged in Unity PR #12             | QA + UI/UX Readability + Bugfix   | STORY-LOOP-001, STORY-QA-001, STORY-TAC-001                                                               | Non-overlap layout checks, actor clarity, map feedback, before/after screenshots, CI |
+| STORY-STRAT-004 Site Interaction and Guarded Battle Trigger                                                                                      | Draft placeholder                         | Logic + Integration               | STORY-STRAT-001, STORY-STRAT-002, STORY-STRAT-003, STORY-TAC-001                                          | Interaction preview/apply and BattleSetup creation tests                             |
+| STORY-STRAT-005 Strategic Battle Result Application                                                                                              | Draft placeholder                         | Logic + Integration               | STORY-TAC-001, STORY-STRAT-004                                                                            | BattleResult application, losses, guard clearing, rewards, control, victory tests    |
 
 Allowed story statuses: Draft, NEEDS WORK, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -174,14 +188,14 @@ Allowed story statuses: Draft, NEEDS WORK, READY, IN PROGRESS, REVIEW, DONE, BLO
 
 ## Risks
 
-| Risk | Type | Impact | Mitigation / Owner |
-|---|---|---|---|
-| Epic scope expands into "implement strategic map" | Scope | Agents may overbuild beyond first loop | Keep implementation authority in READY child stories only / shared |
-| Data models accidentally decide final authoring pipeline | Technical | Premature tooling lock-in | STORY-STRAT-001 permits serializable-friendly domain models and test-local data only / implementer |
-| Placeholder IDs become player-facing lore | Lore-Cultural-IP / Content | Unapproved names leak into game | Keep placeholders test-local and non-player-facing / implementer + reviewer |
-| Tactical handoff stories outpace tactical implementation | Technical / Dependency | Battle integration blocks loop completion | Use explicit DTO contracts and story-level stubs only when authorized / shared |
-| Testing burden weakens under time pressure | Testing | Strategic rules become fragile | Enforce TDD, EditMode tests, CI evidence, and omissions section / reviewer |
-| Local-hotseat MVP is mistaken for strategic AI readiness | Design | False expectation of autonomous opponent | State strategic AI out of scope until separate epic/story / shared |
+| Risk                                                     | Type                       | Impact                                    | Mitigation / Owner                                                                                 |
+| -------------------------------------------------------- | -------------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Epic scope expands into "implement strategic map"        | Scope                      | Agents may overbuild beyond first loop    | Keep implementation authority in READY child stories only / shared                                 |
+| Data models accidentally decide final authoring pipeline | Technical                  | Premature tooling lock-in                 | STORY-STRAT-001 permits serializable-friendly domain models and test-local data only / implementer |
+| Placeholder IDs become player-facing lore                | Lore-Cultural-IP / Content | Unapproved names leak into game           | Keep placeholders test-local and non-player-facing / implementer + reviewer                        |
+| Tactical handoff stories outpace tactical implementation | Technical / Dependency     | Battle integration blocks loop completion | Use explicit DTO contracts and story-level stubs only when authorized / shared                     |
+| Testing burden weakens under time pressure               | Testing                    | Strategic rules become fragile            | Enforce TDD, EditMode tests, CI evidence, and omissions section / reviewer                         |
+| Local-hotseat MVP is mistaken for strategic AI readiness | Design                     | False expectation of autonomous opponent  | State strategic AI out of scope until separate epic/story / shared                                 |
 
 ## Epic readiness gate
 
@@ -215,6 +229,7 @@ An epic may be marked Complete only when all items are true:
 ## Anti-pattern check
 
 Invalid epic behavior:
+
 - [ ] This epic authorizes production implementation directly.
 - [ ] This epic replaces READY stories.
 - [ ] This epic hides ambiguous design decisions.

@@ -1,0 +1,72 @@
+Implement exactly one READY story: STORY-TAC-002.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-tac-002-minimal-hex-board-and-stack-placement.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - closeout train: production/sprints/strategic-mvp-closeout-story-train-002.md
+   - prior required story: production/stories/story-tac-001-battle-setup-result-dto-contracts.md
+   - all linked GDD and architecture/control docs, especially:
+     - design/gdd/tactical-combat.md §§3, 4, 5, 6.0, 6.1, 6.2
+     - design/gdd/strategic-map.md §14
+     - docs/architecture/unity-technical-scheme.md
+     - docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths.
+2. Start from updated Unity main after STORY-STRAT-004 / PR #13 merge and create/use branch:
+   story/STORY-TAC-002-minimal-hex-board-stack-placement
+3. Stop immediately if the Unity repo is dirty with unrelated changes, required source docs are missing/draft/pending/contradictory, or main is not up to date. Do not weaken source authority; report the blocker.
+4. Implement only the STORY-TAC-002 scope:
+   - add a minimal pure-domain flat hex coordinate model;
+   - add deterministic six-neighbor lookup for the chosen coordinate representation;
+   - add a tiny authored/test tactical board definition sufficient for one guarded-site battle;
+   - create tactical placed stack entities from BattleSetup attacker/defender army snapshots;
+   - support exactly one attacker-side stack and one neutral-guard defender stack by default;
+   - define legal attacker and defender spawn/placement hexes;
+   - validate occupied, missing, invalid, duplicate, or side-inappropriate placements with clear diagnostics;
+   - reject invalid placement without accepting partial board state;
+   - preserve placed tactical stack snapshots even if the source BattleSetup/army snapshots mutate after board creation;
+   - keep domain logic free of UnityEngine, scene, prefab, camera, input, final UI, and presentation dependencies.
+5. Preferred implementation shape, unless existing code strongly suggests a smaller equivalent:
+   - create `Assets/NeonChampions/Runtime/Domain/Tactical/` for pure domain tactical board code;
+   - add scoped `AGENTS.md` if needed only to restate domain rules;
+   - create `Assets/NeonChampions/Tests/EditMode/Tactical/` for EditMode tests;
+   - use the existing `NeonChampions.Domain` and `NeonChampions.Tests.EditMode` assemblies; update asmdef references only if required by Unity folder placement.
+6. Keep strict out-of-scope:
+   - no movement/pathfinding beyond neighbor/range basics required for placement;
+   - no attacks, damage, AP economy, initiative, abilities, morale, LOS, cover, tactical AI, objectives, operations, status effects;
+   - no battle end, BattleResult return, fake combat result, deterministic auto-win, or strategic state mutation;
+   - no strategic site control, rewards, resources, recruitment, larger map content, final unit/faction/site content;
+   - no final tactical scene, final UI/art/icons/animation/audio/copy, new package choices, save/load, or data-authoring architecture.
+7. Allowed placeholders only:
+   - placeholder tactical board ID, hex coordinates, stack IDs, guard-side IDs, and localization keys;
+   - test-local BattleSetup fixtures matching STORY-TAC-001;
+   - minimal stack stat fields required only for placement and identity.
+8. Use TDD for production domain logic: RED test, verify failure, minimal implementation, GREEN test, refactor only while green.
+9. Add or update EditMode tests for all story acceptance criteria:
+   - valid BattleSetup initializes a tactical board with attacker and defender stacks on legal unoccupied hexes;
+   - occupied, missing, invalid, duplicate, or side-inappropriate coordinates fail with clear diagnostics and no partial accepted board state;
+   - representative hex coordinates return the exact deterministic six-neighbor set;
+   - placed tactical stack snapshots remain stable after the source BattleSetup/army snapshots mutate;
+   - tactical domain code does not reference UnityEngine/presentation dependencies.
+10. Do not touch scenes/prefabs/presentation unless a tiny placeholder visual proof is genuinely safer than domain/test-only proof. If any scene/presentation is touched, add PlayMode/manual scene evidence and screenshot/video inventory. Otherwise explicitly mark PlayMode/manual/screenshot evidence N/A with reason: story stayed domain/test-focused.
+11. Create or update Unity repo production/evidence/STORY-TAC-002/README.md with:
+    - source docs read;
+    - acceptance/evidence mapping;
+    - RED/GREEN TDD notes;
+    - tests/checks run and exact results;
+    - scene/presentation evidence N/A reason or screenshot/video inventory if touched;
+    - changed files/assets/settings/packages;
+    - known omissions/stubs/mocks/assumptions/deferred work, or No known omissions.
+12. Run story-required EditMode tests, relevant validators/checks used by the repo, PlayMode/smoke checks only if presentation is touched, whitespace/diff checks, and CI-triggering checks where available. If Unity CLI or a required check cannot run, report the exact command/blocker and do not claim it passed.
+13. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report exact commands/errors; do not leave only a terminal summary.
+14. Open a PR titled:
+    STORY-TAC-002 Minimal hex board and stack placement
+15. PR body must include summary, story ID, source docs read, acceptance/evidence mapping, RED/GREEN evidence, EditMode/PlayMode/manual evidence or N/A reasons, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+16. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if implementation would require tactical movement/attacks/results, strategic result application, economy/rewards/site control, final UI/art/copy, new content/lore, package/settings changes, architecture drift, bypassing domain services, fake tactical results, or weakening tests/evidence.

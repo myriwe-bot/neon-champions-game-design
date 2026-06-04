@@ -63,7 +63,8 @@
 - [[production/stories/story-strat-ui-001-minimal-hotseat-hud]] — READY minimal hotseat HUD story.
 - [[production/stories/story-loop-001-minimal-local-hotseat-strategic-loop-smoke]] — READY local hotseat strategic loop smoke story.
 - [[production/stories/story-tac-001-battle-setup-result-dto-contracts]] — DONE/merged tactical boundary DTO story with clarified strategic-map §14 authority.
-- [[production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger]] — READY guarded-site interaction and BattleSetup launch story.
+- [[production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger]] — DONE/merged guarded-site interaction and BattleSetup launch story.
+- [[production/stories/story-tac-002-minimal-hex-board-and-stack-placement]] — READY minimal hex board and stack placement story.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

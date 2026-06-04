@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-002 Minimal Hex Board and Stack Placement
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-04
@@ -19,14 +19,14 @@ related:
     production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
     production/stories/story-tac-001-battle-setup-result-dto-contracts,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-TAC-002 Minimal Hex Board and Stack Placement
 
 ## Status
 
-READY-candidate. User approved minimal real tactical combat on a hex grid on 2026-06-04. This is the first tactical implementation packet for the current epic closeout and should remain deliberately tiny.
+READY. User approved STORY-TAC-002 for implementation on 2026-06-04, including the tiny fixed hex board assumption and exactly one attacker stack + one neutral guard stack. This is the first tactical implementation packet for the current epic closeout and must remain deliberately tiny.
 
 ## Story type
 
@@ -136,19 +136,17 @@ If a verification type is N/A, the PR must say why.
 
 ## Ambiguity Check
 
-Status: PASS-candidate.
+Status: PASS.
 
 Resolved by user on 2026-06-04:
 
 - Minimal real tactical combat should be built for the current closeout slice.
 - Tactical combat should use a hex grid.
 
-Assumptions for human approval:
+Human-approved assumptions:
 
 - A tiny fixed board and exactly one attacker stack + one guard stack are acceptable for this story.
 - No final tactical scene is required unless implementer can add a safe placeholder view without scope drift.
-
-If these assumptions are rejected, revise before marking READY.
 
 ## Branch / PR requirements
 
@@ -171,9 +169,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Dependencies are listed.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined.
-- [x] Ambiguity Check is PASS-candidate.
+- [x] Ambiguity Check is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -189,4 +187,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate pending human approval.
+READY for implementation. Human approval recorded on 2026-06-04.

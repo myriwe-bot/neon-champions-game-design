@@ -264,3 +264,11 @@
 - Promoted `production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md` from READY-candidate to READY with approved defaults for pending battle record, major-interaction spend, and neutral guard CombatAI controller metadata.
 - Added `production/sprints/codex-story-strat-004.prompt.txt` as the copy-safe Codex prompt for the first closeout implementation story.
 - Updated Codex run prompts, epic traceability, and index discoverability.
+
+
+## [2026-06-04] approve | STORY-TAC-002 implementation packet
+
+- Recorded human approval for `production/stories/story-tac-002-minimal-hex-board-and-stack-placement.md`.
+- Promoted STORY-TAC-002 from READY-candidate to READY with approved assumptions: tiny fixed hex board, exactly one attacker stack, exactly one neutral guard stack, and domain/test focus unless safe placeholder visual proof is needed.
+- Added `production/sprints/codex-story-tac-002.prompt.txt` as the copy-safe Codex implementation prompt.
+- Updated closeout train, epic traceability, run prompts, and index discoverability.

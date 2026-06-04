@@ -22,6 +22,7 @@ related:
     production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass,
     production/sprints/strategic-mvp-closeout-story-train-002,
     production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger,
+    production/stories/story-tac-002-minimal-hex-board-and-stack-placement,
   ]
 approval: approved
 ---
@@ -30,9 +31,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-002` is merged. The next approved packet is `STORY-STRAT-004`. Use the STRAT-004 prompt file below.
+`STORY-STRAT-004` is merged. The next approved packet is `STORY-TAC-002`. Use the TAC-002 prompt file below.
 
-Keep closeout story work sequential: implement `STORY-STRAT-004`, review/merge it, then continue through the approved closeout train one READY story/PR at a time.
+Keep closeout story work sequential: implement `STORY-TAC-002`, review/merge it, then continue through the approved closeout train one READY story/PR at a time.
 
 ## Copy-safe prompt-file mode
 
@@ -50,7 +51,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-004.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-002.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -79,11 +80,11 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — preferred single-story start
 
-Use this now for `STORY-STRAT-004`:
+Use this now for `STORY-TAC-002`:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-004.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-002.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -106,10 +107,11 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-001.prompt.txt`
 - `production/sprints/codex-story-tac-001.prompt.txt`
 - `production/sprints/codex-story-qa-002.prompt.txt`
+- `production/sprints/codex-story-strat-004.prompt.txt`
 
 Current approved prompt:
 
-- `production/sprints/codex-story-strat-004.prompt.txt`
+- `production/sprints/codex-story-tac-002.prompt.txt`
 
 ## After Codex finishes
 
@@ -130,5 +132,5 @@ git push -u origin HEAD
 If Codex did not create a PR and GitHub CLI is available:
 
 ```powershell
-gh pr create --title "STORY-STRAT-004 Site interaction and guarded battle trigger" --body-file .\PR_BODY.md
+gh pr create --title "STORY-TAC-002 Minimal hex board and stack placement" --body-file .\PR_BODY.md
 ```

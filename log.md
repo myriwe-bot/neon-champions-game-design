@@ -287,3 +287,11 @@
 - Promoted STORY-TAC-VIS-001 from READY-candidate to READY with approved assumptions: crude placeholder tactical board, visible guarded-site handoff/switch, attacker/neutral guard stack markers, tactical-mode status labels, no battle result or strategic mutation.
 - Confirmed linked GDD/ADR/control sources are approved for the narrow visual handoff scope.
 - Updated closeout train, epic traceability, run prompts, prompt guard, and index discoverability.
+
+## [2026-06-04] approve | STORY-TAC-004 implementation packet
+
+- Recorded human approval for `production/stories/story-tac-004-minimal-battle-end-and-result-return.md`.
+- Promoted STORY-TAC-004 from READY-candidate to READY with approved assumptions: attacker-win/defender-win only, retreat/draw/cancel/rout deferred, and no strategic result application inside tactical result creation.
+- Confirmed linked GDD/ADR/control sources are approved for the narrow battle-end/BattleResult-return scope.
+- Added `production/sprints/codex-story-tac-004.prompt.txt` as the copy-safe Codex implementation prompt.
+- Updated closeout train, epic traceability, run prompts, and index discoverability.

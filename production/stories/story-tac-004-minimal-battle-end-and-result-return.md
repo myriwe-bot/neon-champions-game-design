@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-004 Minimal Battle End and BattleResult Return
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-04
@@ -19,14 +19,14 @@ related:
     production/stories/story-tac-001-battle-setup-result-dto-contracts,
     production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-TAC-004 Minimal Battle End and BattleResult Return
 
 ## Status
 
-READY-candidate. Depends on STORY-TAC-003. This packet connects minimal tactical combat back to the existing DTO boundary without applying strategic control/rewards.
+READY. Human approved on 2026-06-04. Depends on STORY-TAC-003. This packet connects minimal tactical combat back to the existing DTO boundary without applying strategic control/rewards.
 
 ## Story type
 
@@ -118,9 +118,9 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: PASS-candidate.
+Status: PASS.
 
-Assumptions for human approval:
+Human-approved assumptions:
 
 - Attacker-win and defender-win are the only required outcomes for this first slice.
 - Retreat, draw, cancel, morale rout, and result-screen polish are deferred.
@@ -139,8 +139,8 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Stable ID, title, type, status, and parent epic.
 - [x] Exact GDD and architecture/control sources are linked.
 - [x] Scope, out-of-scope, allowed placeholders, dependencies, acceptance criteria, and evidence are explicit.
-- [x] Ambiguity Check is PASS-candidate.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Ambiguity Check is PASS.
+- [x] Human approval has been given and recorded on 2026-06-04.
 
 ## DONE gate
 
@@ -155,4 +155,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate pending human approval.
+READY for implementation. Human approval recorded on 2026-06-04; source-authority check passed for linked approved GDD/ADR/control documents.

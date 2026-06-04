@@ -1,0 +1,73 @@
+Implement exactly one READY story: STORY-TAC-004.
+
+If `production/stories/story-tac-004-minimal-battle-end-and-result-return.md` is not `status: ready` with `approval: approved`, stop and report that a stale or unapproved design checkout is blocking implementation.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-tac-004-minimal-battle-end-and-result-return.md
+   - prior required stories:
+     - production/stories/story-tac-001-battle-setup-result-dto-contracts.md
+     - production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution.md
+     - production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - closeout train: production/sprints/strategic-mvp-closeout-story-train-002.md
+   - all linked GDD and architecture/control docs, especially:
+     - design/gdd/tactical-combat.md §5 Core Combat Loop steps 8-10
+     - design/gdd/tactical-combat.md §4 MVP Scope, post-battle summary/result boundary
+     - design/gdd/strategic-map.md §14 Strategy-to-Tactical DTOs, BattleResult minimum and strategic application contract
+     - docs/architecture/unity-technical-scheme.md
+     - docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths.
+2. Start from updated Unity main after STORY-TAC-VIS-001 / PR #16 merge and create/use branch:
+   story/STORY-TAC-004-minimal-battle-end-result-return
+3. Stop immediately if the Unity repo is dirty with unrelated changes, required source docs are missing/draft/pending/contradictory, or main is not up to date. Do not weaken source authority; report the blocker.
+4. Implement only the STORY-TAC-004 scope:
+   - detect battle end when all stacks on one side are defeated in the minimal two-side battle;
+   - return attacker-win when neutral guards are defeated;
+   - return defender-win when attacker stack is defeated;
+   - produce a valid BattleResult matching the input BattleSetup.BattleId;
+   - include side result facts needed by STORY-STRAT-005: side IDs/controllers, surviving/defeated stack snapshots, loss/survivor counts sufficient for strategic army/guard update, and outcome;
+   - keep tactical result generation separate from strategic site control/reward mutation.
+5. Preferred implementation shape, unless existing code strongly suggests a smaller equivalent:
+   - add/extend pure-domain tactical battle end/result evaluation under Assets/NeonChampions/Runtime/Domain/Tactical/;
+   - reuse the existing STORY-TAC-001 BattleResult DTO and validator contracts rather than inventing a parallel result type;
+   - add focused EditMode tests under Assets/NeonChampions/Tests/EditMode/Tactical/ and/or the existing DTO test area.
+6. Keep strict out-of-scope:
+   - no strategic result application, site control, rewards, resources, recruitment, victory mutation, or Champion strategic-state mutation;
+   - no retreat, surrender, draw, cancellation, rout, morale, rewards, post-battle UI polish, replay/event stream, tactical AI sophistication, or automatic playthrough beyond existing story support;
+   - no final UI/art/audio/copy, save/load, new packages, ProjectSettings changes, data-authoring architecture, or broad CI changes unless strictly required and documented as a blocker fix.
+7. Allowed placeholders only:
+   - placeholder result summary facts/keys;
+   - attacker-win/defender-win only for this slice;
+   - test-local BattleSetup/board fixtures matching prior stories.
+8. Use TDD for production logic: RED test, verify failure, minimal implementation, GREEN test, refactor only while green.
+9. Add or update EditMode tests for all story acceptance criteria:
+   - defender defeated produces attacker-win BattleResult with matching battle ID and valid side results;
+   - attacker defeated produces defender-win BattleResult with matching battle ID and valid side results;
+   - no defeated side produces no final result and tactical state remains in-progress;
+   - produced BattleResult passes the STORY-TAC-001 DTO validator;
+   - result creation does not mutate strategic site, resource, control, Champion strategic state, turn, or victory state.
+10. PlayMode/manual/screenshot evidence is required only if scene/presentation is touched. If this stays pure domain/integration logic, explicitly mark PlayMode/manual/screenshot evidence N/A with reason.
+11. Create or update Unity repo production/evidence/STORY-TAC-004/README.md with:
+    - source docs read;
+    - acceptance/evidence mapping;
+    - RED/GREEN TDD notes;
+    - tests/checks run and exact results;
+    - DTO validator evidence;
+    - no-strategic-mutation evidence;
+    - scene/presentation evidence N/A reason or screenshot/video inventory if touched;
+    - changed files/assets/settings/packages;
+    - known omissions/stubs/mocks/assumptions/deferred work, or No known omissions.
+12. Run story-required EditMode tests, relevant validators/checks used by the repo, PlayMode/smoke checks only if presentation is touched, whitespace/diff checks, and CI-triggering checks where available. If Unity CLI or a required check cannot run, report the exact command/blocker and do not claim it passed.
+13. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report exact commands/errors; do not leave only a terminal summary.
+14. Open a PR titled:
+    STORY-TAC-004 Minimal battle end and BattleResult return
+15. PR body must include summary, story ID, source docs read, acceptance/evidence mapping, RED/GREEN evidence, EditMode/PlayMode/manual evidence or N/A reasons, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+16. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if implementation would require strategic result application, economy/rewards/site control, final UI/art/copy, tactical AI, AP/initiative/ability expansion, new content/lore, package/settings changes, architecture drift, bypassing DTO validation, fake tactical results, or weakening tests/evidence.

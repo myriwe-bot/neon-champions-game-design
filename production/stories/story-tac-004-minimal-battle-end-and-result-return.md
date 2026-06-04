@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-004 Minimal Battle End and BattleResult Return
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-04
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY. Human approved on 2026-06-04. Depends on STORY-TAC-003. This packet connects minimal tactical combat back to the existing DTO boundary without applying strategic control/rewards.
+DONE / merged. Implemented in Unity PR #17 and merged as `a56d56f4d346e0289b1d292c6706949cc1913530`; post-merge Unity main CI passed on 2026-06-04. This packet connects minimal tactical combat back to the existing DTO boundary without applying strategic control/rewards.
 
 ## Story type
 
@@ -144,15 +144,15 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are documented.
+- [x] PR/code review is complete.
+- [x] CI passes.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation. Human approval recorded on 2026-06-04; source-authority check passed for linked approved GDD/ADR/control documents.
+DONE / merged. Unity PR #17 was reviewed, merged, branch-deleted, and verified on post-merge main CI on 2026-06-04.

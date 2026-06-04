@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-005 Strategic Battle Result Application
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-04
@@ -17,15 +17,16 @@ related:
     production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
     production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger,
     production/stories/story-tac-001-battle-setup-result-dto-contracts,
+    production/stories/story-tac-004-minimal-battle-end-and-result-return,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-STRAT-005 Strategic Battle Result Application
 
 ## Status
 
-READY-candidate. Direction clarified on 2026-06-04: winning a guarded neutral-site battle immediately controls the site. It remains pending human approval and depends on STORY-STRAT-004/TAC-004 implementation.
+READY. Prepared for implementation after STORY-TAC-004 merged in Unity PR #17 on 2026-06-04. Direction clarified on 2026-06-04: winning a guarded neutral-site battle immediately controls the site. Human approval for implementation is recorded by the merge/prep request on 2026-06-04; depends on STORY-STRAT-004/TAC-004 implementation.
 
 ## Story type
 
@@ -208,7 +209,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
 - [x] Ambiguity Check status is PASS-candidate.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -224,4 +225,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate pending human approval.
+READY for implementation. Human approval recorded on 2026-06-04 after STORY-TAC-004 merge; source-authority check passed for linked approved GDD/ADR/control documents.

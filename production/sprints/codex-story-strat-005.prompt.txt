@@ -1,0 +1,79 @@
+Implement exactly one READY story: STORY-STRAT-005.
+
+If `production/stories/story-strat-005-strategic-battle-result-application.md` is not `status: ready` with `approval: approved`, stop and report that a stale or unapproved design checkout is blocking implementation.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-strat-005-strategic-battle-result-application.md
+   - prior required stories:
+     - production/stories/story-tac-001-battle-setup-result-dto-contracts.md
+     - production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md
+     - production/stories/story-tac-004-minimal-battle-end-and-result-return.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - closeout train: production/sprints/strategic-mvp-closeout-story-train-002.md
+   - all linked GDD and architecture/control docs, especially:
+     - design/gdd/strategic-map.md §§6, 10, 11, 12, 13, 14
+     - docs/architecture/unity-technical-scheme.md
+     - docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths.
+2. Start from updated Unity main after STORY-TAC-004 / PR #17 merge and create/use branch:
+   story/STORY-STRAT-005-strategic-battle-result-application
+3. Stop immediately if the Unity repo is dirty with unrelated changes, required source docs are missing/draft/pending/contradictory, or main is not up to date. Do not weaken source authority; report the blocker.
+4. Implement only the STORY-STRAT-005 scope:
+   - add or extend a strategic battle-result application service/command that consumes a valid `BattleResult` for a pending/unresolved battle created by STORY-STRAT-004;
+   - validate battle ID, source site/node, expected guarded-site battle type, required side results, and unresolved pending battle state before applying;
+   - apply attacker and defender army survivor/loss data back to strategic Champion/guard/site state;
+   - for guarded neutral sites: attacker win clears guards and immediately controls the site; defender win leaves guards active if surviving, grants no rewards/control, and closes/marks the pending battle resolved;
+   - apply one-time guarded-site rewards immediately on attacker win if resource stockpiles already exist; otherwise mark reward application explicitly deferred without hidden economy behavior;
+   - evaluate only-Champion defeat and scenario victory only where existing state supports it cleanly;
+   - emit a structured strategic result summary suitable for a later UI layer;
+   - keep tactical DTOs as input payloads only; strategic mutation must live only inside strategic result application.
+5. Preferred implementation shape, unless existing code strongly suggests a smaller equivalent:
+   - add/extend pure strategic-domain result application code under Assets/NeonChampions/Runtime/Domain/Strategic/;
+   - reuse STORY-TAC-001 BattleSetup/BattleResult DTO validators and STORY-TAC-004 side result facts;
+   - add focused EditMode tests under Assets/NeonChampions/Tests/EditMode/Strategic/ or the existing strategic test area.
+6. Keep strict out-of-scope:
+   - no tactical combat execution, tactical scene, battle simulation, AI, animation, tactical UI, or fake tactical gameplay;
+   - no full recruitment/reinforcement UI or offer purchase flow;
+   - no recurring income timing unless already supported and necessary for existing reward structures;
+   - no enemy-controlled site contests unless explicitly promoted before READY;
+   - no central objective hold victory UI unless existing state can be tested domain-only;
+   - no full save/load, campaign persistence, strategic AI, networking, fog/feed misinformation, final copy/art/audio, package/settings changes, data-authoring architecture, or broad CI changes unless strictly required and documented as a blocker fix.
+7. Allowed placeholders only:
+   - test-local BattleSetup/BattleResult payloads matching STORY-TAC-001/TAC-004;
+   - test-local guarded resource site and neutral guard army fixtures;
+   - placeholder structured result summary keys/facts;
+   - minimal reward deltas using existing resource IDs if stockpiles already exist, otherwise an explicit deferred reward marker.
+8. Use TDD for production logic: RED test, verify failure, minimal implementation, GREEN test, refactor only while green.
+9. Add or update EditMode tests for all story acceptance criteria:
+   - attacker-win guarded-site result with matching battle ID updates attacking Champion army survivors/losses, clears guards, and immediately controls the site for the attacking faction;
+   - defender-win result updates attacking Champion army survivors/losses, leaves surviving guards active, grants no site control/reward, and resolves/closes the pending battle;
+   - mismatched battle ID, missing side result, invalid source site, or already-resolved battle fails with clear diagnostics and no strategic state mutation;
+   - attacker-win with reward eligibility applies Credits/Materials/Intel deltas immediately if existing stockpiles support them, or records an explicit deferred marker without hidden economy mutation;
+   - result defeating the opposing faction's only Champion sets scenario victory/loss state according to the existing champion defeat contract if supported cleanly;
+   - tactical DTOs remain input-only and all site/control/reward/Champion/victory changes happen inside strategic result application.
+10. PlayMode/manual/screenshot evidence is required only if scene/presentation is touched. If this stays pure strategic-domain/integration logic, explicitly mark PlayMode/manual/screenshot evidence N/A with reason.
+11. Create or update Unity repo production/evidence/STORY-STRAT-005/README.md with:
+    - source docs read;
+    - acceptance/evidence mapping;
+    - RED/GREEN TDD notes;
+    - tests/checks run and exact results;
+    - DTO validator / result-validation evidence;
+    - mutation/no-mutation evidence;
+    - reward/control/victory behavior evidence;
+    - scene/presentation evidence N/A reason or screenshot/video inventory if touched;
+    - changed files/assets/settings/packages;
+    - known omissions/stubs/mocks/assumptions/deferred work, or No known omissions.
+12. Run story-required EditMode tests, relevant validators/checks used by the repo, PlayMode/smoke checks only if presentation is touched, whitespace/diff checks, and CI-triggering checks where available. If Unity CLI or a required check cannot run, report the exact command/blocker and do not claim it passed.
+13. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report exact commands/errors; do not leave only a terminal summary.
+14. Open a PR titled:
+    STORY-STRAT-005 Strategic battle result application
+15. PR body must include summary, story ID, source docs read, acceptance/evidence mapping, RED/GREEN evidence, EditMode/PlayMode/manual evidence or N/A reasons, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+16. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if implementation would require tactical gameplay simulation, enemy-controlled site contests, final UI/art/copy, new economy/recruitment design, hidden resource mutation, strategic AI, save/load, new content/lore, package/settings changes, architecture drift, bypassing DTO validation, fake tactical results, or weakening tests/evidence.

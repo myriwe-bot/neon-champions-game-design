@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-003 Minimal Tactical Movement and Attack Resolution
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-04
@@ -17,14 +17,14 @@ related:
     production/epics/epic-strat-mvp-001-strategic-mvp-core-loop,
     production/stories/story-tac-002-minimal-hex-board-and-stack-placement,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-TAC-003 Minimal Tactical Movement and Attack Resolution
 
 ## Status
 
-READY-candidate. Depends on STORY-TAC-002. This packet makes the hex board minimally playable without expanding into the full tactical GDD.
+READY. Human approval recorded on 2026-06-04 after STORY-TAC-002 merged in Unity PR #14 and post-merge `main` CI passed. This packet makes the hex board minimally playable without expanding into the full tactical GDD.
 
 ## Story type
 
@@ -122,13 +122,13 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: PASS-candidate.
+Status: PASS.
 
 Resolved by user on 2026-06-04:
 
 - Minimal real tactical combat on a hex grid is required for the current closeout slice.
 
-Assumptions for human approval:
+Human-approved assumptions:
 
 - Deterministic minimal damage is acceptable for the first slice; balance-realistic formulas are deferred.
 - Only movement and a basic attack are required here; battle result return waits for STORY-TAC-004.
@@ -147,8 +147,8 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Stable ID, title, type, status, and parent epic.
 - [x] Exact GDD and architecture/control sources are linked.
 - [x] Scope, out-of-scope, allowed placeholders, dependencies, acceptance criteria, and evidence are explicit.
-- [x] Ambiguity Check is PASS-candidate.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Ambiguity Check is PASS.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -163,4 +163,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate pending human approval.
+READY for implementation. Human approval recorded on 2026-06-04 after STORY-TAC-002 merge verification.

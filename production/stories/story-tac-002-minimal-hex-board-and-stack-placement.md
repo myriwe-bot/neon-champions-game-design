@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-002 Minimal Hex Board and Stack Placement
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-04
@@ -26,7 +26,9 @@ approval: approved
 
 ## Status
 
-READY. User approved STORY-TAC-002 for implementation on 2026-06-04, including the tiny fixed hex board assumption and exactly one attacker stack + one neutral guard stack. This is the first tactical implementation packet for the current epic closeout and must remain deliberately tiny.
+DONE / merged in Unity PR #14 on 2026-06-04. Merge commit: `e5aa5d14d5ec8510d88d3128b8faf45392b9a3e9`.
+
+STORY-TAC-002 added the tiny fixed hex board, exactly one attacker stack plus one neutral guard stack, placement validation, and current CI evidence. Follow-up implementation authority moves to STORY-TAC-003.
 
 ## Story type
 
@@ -177,16 +179,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests/validators/PlayMode evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests/validators/PlayMode evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation. Human approval recorded on 2026-06-04.
+DONE / merged. Unity PR #14 merged on 2026-06-04; post-merge `main` CI passed.

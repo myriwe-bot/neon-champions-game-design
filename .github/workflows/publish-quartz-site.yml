@@ -28,13 +28,41 @@ jobs:
       - name: Build Quartz
         run: npx quartz build -d .
       - name: Publish generated site repo
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.SITE_DEPLOY_KEY }}
-          external_repository: myriwe-bot/neon-champions-game-design-site
-          publish_branch: main
-          publish_dir: ./public
-          force_orphan: true
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          commit_message: Deploy game design Quartz site from ${{ github.sha }}
+        shell: pwsh
+        env:
+          SITE_DEPLOY_KEY: ${{ secrets.SITE_DEPLOY_KEY }}
+        run: |
+          $ErrorActionPreference = "Stop"
+
+          if (-not $env:SITE_DEPLOY_KEY) {
+            throw "SITE_DEPLOY_KEY secret is missing"
+          }
+
+          $sshDir = Join-Path $env:USERPROFILE ".ssh"
+          New-Item -ItemType Directory -Force -Path $sshDir | Out-Null
+          $keyPath = Join-Path $sshDir "neon_champions_game_design_site_deploy_key"
+          Set-Content -Path $keyPath -Value $env:SITE_DEPLOY_KEY -NoNewline -Encoding ascii
+
+          $env:GIT_SSH_COMMAND = "ssh -i `"$keyPath`" -o StrictHostKeyChecking=accept-new"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          $publishWork = Join-Path $env:RUNNER_TEMP "game-design-site-publish"
+          Remove-Item -Recurse -Force -Path $publishWork -ErrorAction SilentlyContinue
+          New-Item -ItemType Directory -Force -Path $publishWork | Out-Null
+
+          Get-ChildItem -Force -Path "public" | Copy-Item -Destination $publishWork -Recurse -Force
+
+          Push-Location $publishWork
+          try {
+            git init
+            git checkout -B main
+            git add -A
+            git commit -m "Deploy game design Quartz site from $env:GITHUB_SHA"
+            git remote add origin "git@github.com:myriwe-bot/neon-champions-game-design-site.git"
+            git push --force origin main
+          }
+          finally {
+            Pop-Location
+            Remove-Item -Force -Path $keyPath -ErrorAction SilentlyContinue
+          }

@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-004 Site Interaction and Guarded Battle Trigger
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-04
@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY. Human approval recorded on 2026-06-04 as first story in the approved Strategic MVP Closeout Story Train 002. Direction clarified: this packet includes a visible strategic-map interaction path using guarded site marker selection plus a HUD Attack/Interact button.
+DONE / merged in Unity PR #13. Merge commit: `9e0276a24069c2bd7056ced5029d01d714a37f1c`. Post-merge Unity main CI passed on 2026-06-04.
 
 ## Story type
 
@@ -216,16 +216,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY.
+DONE. Unity PR #13 merged on 2026-06-04 with post-merge main CI green.

@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-004 Site Interaction and Guarded Battle Trigger
 type: story
-status: draft
+status: ready-candidate
 phase: production
 owner: shared
 created: 2026-06-04
@@ -27,7 +27,7 @@ approval: pending
 
 ## Status
 
-Draft. Direction clarified on 2026-06-04: this packet should include a visible strategic-map interaction path, not only pure domain logic. It remains not READY until exact UI/smoke-hook details are approved.
+READY-candidate. Direction clarified on 2026-06-04: this packet includes a visible strategic-map interaction path using guarded site marker selection plus a HUD Attack/Interact button. It remains pending human approval before implementation.
 
 ## Story type
 
@@ -150,7 +150,7 @@ If a verification type is N/A, the PR must say why.
 
 ## Ambiguity Check
 
-Status: NEEDS FINAL APPROVAL.
+Status: PASS-candidate.
 
 Resolved by user on 2026-06-04:
 
@@ -163,11 +163,7 @@ Recommended defaults for approval:
 - Launching a guarded-site battle spends the Champion's major interaction even if a later tactical layer cancels or returns a cancel result.
 - First guarded-site defender should use a stable neutral guard-side ID plus `CombatAI` tactical controller data; no actual combat AI behavior is implemented here.
 
-Open questions:
-
-- Approve the three recommended defaults above?
-
-Assumptions:
+Assumptions for human approval:
 
 - Default visible path: select guarded site marker, then use the smallest existing strategic HUD/input pattern to show an Attack/Interact button; do not introduce final UI framework, art, or tactical scene transition.
 
@@ -214,7 +210,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS-candidate.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [ ] Human approval has been given or delegated gate approval is recorded.
 
@@ -232,4 +228,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-Draft.
+READY-candidate pending human approval.

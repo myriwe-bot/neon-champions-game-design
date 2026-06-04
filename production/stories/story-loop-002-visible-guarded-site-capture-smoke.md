@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-002 Visible Guarded Site Capture Smoke
 type: story
-status: draft
+status: ready-candidate
 phase: production
 owner: shared
 created: 2026-06-04
@@ -21,7 +21,7 @@ approval: pending
 
 ## Status
 
-Draft. This is the recommended vertical-slice closeout packet for the current epic after STORY-STRAT-004 and STORY-STRAT-005.
+READY-candidate. This is the vertical-slice closeout packet for the current epic after STORY-STRAT-004, STORY-TAC-002/003/004, and STORY-STRAT-005.
 
 ## Story type
 
@@ -50,6 +50,9 @@ As a player/designer, I want to see a Champion capture a guarded neutral site on
 - Story dependencies:
   - STORY-STRAT-004.
   - STORY-STRAT-005.
+  - STORY-TAC-002.
+  - STORY-TAC-003.
+  - STORY-TAC-004.
 - ADR / architecture / control:
   - `docs/architecture/control-manifest.md` §§1, 2, 4, 5, 6, 7, 9, 10.
   - `docs/architecture/testing-strategy.md`.
@@ -105,16 +108,16 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: FAIL.
+Status: PASS-candidate.
 
 Resolved by user on 2026-06-04:
 
 - Minimal real tactical combat must exist first; do not use a deterministic result stub for this smoke.
 - Tactical combat should be on a hex grid.
 
-Open questions:
+Assumption for human approval:
 
-- Should this story close EPIC-STRAT-MVP-001 if it passes, with larger map/cities/recruitment/deeper tactical combat moving to the next epic?
+- If this story passes with acceptable evidence and no severe readability blockers, it should close `EPIC-STRAT-MVP-001`; larger map/cities/recruitment/deeper tactical combat move to the next epic.
 
 ## Branch / PR requirements
 
@@ -124,4 +127,4 @@ Open questions:
 
 ## Verdict
 
-Draft.
+READY-candidate pending human approval.

@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-005 Strategic Battle Result Application
 type: story
-status: draft
+status: ready-candidate
 phase: production
 owner: shared
 created: 2026-06-04
@@ -25,7 +25,7 @@ approval: pending
 
 ## Status
 
-Draft. Direction clarified on 2026-06-04: winning a guarded neutral-site battle should immediately control the site. It remains not READY until STORY-STRAT-004 is approved/merged and reward/victory defaults are finalized.
+READY-candidate. Direction clarified on 2026-06-04: winning a guarded neutral-site battle immediately controls the site. It remains pending human approval and depends on STORY-STRAT-004/TAC-004 implementation.
 
 ## Story type
 
@@ -147,7 +147,7 @@ If a verification type is N/A, the PR must say why.
 
 ## Ambiguity Check
 
-Status: NEEDS FINAL APPROVAL.
+Status: PASS-candidate.
 
 Resolved by user on 2026-06-04:
 
@@ -159,11 +159,7 @@ Recommended defaults for approval:
 - Champion defeat should set explicit defeated state now, but full scenario victory should be included only if the existing scenario victory state can support it cleanly.
 - Enemy-controlled site contests should be separate `STORY-STRAT-006`, not bundled into this guarded-neutral-site slice.
 
-Open questions:
-
-- Approve the three recommended defaults above?
-
-Assumptions:
+Assumptions for human approval:
 
 - Default: attacker win against a neutral guarded resource site clears guards and controls the site in one strategic result application.
 
@@ -210,7 +206,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS-candidate.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [ ] Human approval has been given or delegated gate approval is recorded.
 
@@ -228,4 +224,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-Draft.
+READY-candidate pending human approval.

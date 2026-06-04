@@ -31,16 +31,17 @@ approval: pending
 - two QA/readability passes;
 - battle setup/result DTO boundary.
 
-The remaining approved placeholders in this epic are now drafted as:
+The user clarified the next desired direction on 2026-06-04:
 
-1. `STORY-STRAT-004` — site interaction and guarded battle trigger.
-2. `STORY-STRAT-005` — strategic battle result application.
+- next work should be a visible vertical slice, not a domain-only packet;
+- guarded neutral site victory should immediately control the site;
+- the desired near-future demo should move toward a larger map with cities/bases, recruitment, tactical combat, and neutral-site capture.
 
-Those two stories likely finish the current epic only if we define the epic goal as:
+Clarification of earlier option A:
 
-> Prove the strategic layer can move from map interaction to battle handoff to strategic consequence with deterministic domain tests.
+> "Strategic battle consequence works" means the player can interact with a guarded neutral site on the visible strategic map, launch a battle handoff, receive/apply a battle result, and then see the strategic map change: the site becomes controlled, rewards/result summary update, and the Champion/army state reflects the outcome. It does not necessarily mean a full tactical battle is playable yet.
 
-They do not finish the broader playable MVP. The broader MVP still needs some combination of tactical battle execution/stub strategy, rewards/economy visibility, recruitment/reinforcement, central objective victory, and a more complete playtest loop.
+The current epic should therefore be treated as a vertical-slice bridge, not just architecture. It should close only after a visible guarded-site capture loop is demonstrable.
 
 ## Proposed epic sizing rule
 
@@ -139,16 +140,25 @@ Best if the next milestone is: "a small match can be won or lost."
 
 7. What is the next meaningful demo you want to see before we build more infrastructure?
 
-## Default recommendation if no other preference
+## Recommendation after user clarification
 
-Close `EPIC-STRAT-MVP-001` after:
+Recommended current vertical slice:
 
-1. STORY-STRAT-004;
-2. STORY-STRAT-005;
-3. STORY-LOOP-002 guarded-site consequence smoke;
-4. STORY-QA-003 handoff/result readability pass if the smoke is hard to read.
+> A player uses the visible strategic map to select a Champion, move to a guarded neutral site, choose an explicit site interaction, launch the battle handoff, apply a test/stubbed battle result, and see the neutral site become controlled.
 
-Then open the next epic as either:
+Recommended remaining stories for `EPIC-STRAT-MVP-001`:
 
-- `EPIC-TAC-MVP-001 Minimal Tactical Battle Execution`, if you want real battles next; or
-- `EPIC-ECON-MVP-001 Strategic Rewards and Reinforcement`, if you want map incentives next.
+1. `STORY-STRAT-004` — visible guarded-site interaction and battle handoff.
+2. `STORY-STRAT-005` — apply guarded-site battle result; attacker win immediately controls the site.
+3. `STORY-LOOP-002` — visible guarded neutral site capture smoke, using the smallest acceptable tactical/result stub until real tactical combat exists.
+4. Optional `STORY-QA-003` — readability/feedback pass only if the smoke is hard to understand.
+
+Recommended next epic after that:
+
+> `EPIC-VSLICE-MVP-002 Larger Map, Bases, Recruitment, and Minimal Tactical Combat`
+
+Proposed promise:
+
+> A player can play a small but legible two-faction map with bases/cities, recruit/reinforce at a site, capture neutral sites through tactical combat, and see enough strategic consequences that the HoMM-like MVP loop is testable.
+
+This should include tactical combat before deep economy polish, because neutral-site capture without a real fight will feel fake quickly. Recruitment should be simple and visible, not a full town system.

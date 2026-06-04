@@ -27,7 +27,7 @@ approval: pending
 
 ## Status
 
-Draft. Not READY until the planning questions in this packet are answered or explicitly deferred.
+Draft. Direction clarified on 2026-06-04: this packet should include a visible strategic-map interaction path, not only pure domain logic. It remains not READY until exact UI/smoke-hook details are approved.
 
 ## Story type
 
@@ -81,6 +81,7 @@ Concrete implementation tasks authorized by this story:
 - Add apply behavior that creates a valid `BattleSetup` for a guarded neutral site using the DTO contract from STORY-TAC-001.
 - Mark or expose an unresolved/pending battle reference only as needed to prevent duplicate launch from the same command.
 - Consume the Champion's major interaction when the battle is launched.
+- Add a visible Unity path using the existing strategic map scene/HUD/input patterns: the player can select or focus a guarded site, see an interaction affordance/summary, and launch the guarded-site battle handoff.
 - Add tests proving preview is non-mutating and apply creates a valid guarded-site `BattleSetup`.
 
 ## Out of scope
@@ -135,10 +136,10 @@ Not allowed:
 
 - Unit tests: N/A unless a non-Unity pure C# runner exists.
 - Unity edit-mode tests: Required for validation, preview non-mutation, apply `BattleSetup` creation, major-interaction consumption, duplicate prevention, and invalid diagnostics.
-- Unity play-mode tests: Optional/N/A for this draft unless existing smoke scene can exercise interaction without tactical loading.
+- Unity play-mode tests: Required for the visible strategic-map path if existing scene/test harness can support it; otherwise document the exact blocker and provide manual screenshot/video evidence as a temporary exception.
 - Integration/data validation tests: Required if implementation adds serialized site fixtures or validators.
-- Manual Unity scene/prefab checks: N/A unless implementation touches scene/presentation.
-- Screenshot/video evidence: N/A unless implementation touches scene/presentation.
+- Manual Unity scene/prefab checks: Required if scene/HUD/input is touched.
+- Screenshot/video evidence: Required for visible interaction/handoff evidence.
 - Performance budget or N/A: N/A for small domain command validation.
 - CI evidence: Required on implementation PR.
 - Playtest evidence: N/A.
@@ -149,20 +150,26 @@ If a verification type is N/A, the PR must say why.
 
 ## Ambiguity Check
 
-Status: FAIL.
+Status: NEEDS FINAL APPROVAL.
+
+Resolved by user on 2026-06-04:
+
+- Include a visible path. This is not domain-only.
+
+Recommended defaults for approval:
+
+- Strategic state should hold an explicit pending battle record after launch so duplicate launch/result-application can be validated.
+- Launching a guarded-site battle spends the Champion's major interaction even if a later tactical layer cancels or returns a cancel result.
+- First guarded-site defender should use a stable neutral guard-side ID plus `CombatAI` tactical controller data; no actual combat AI behavior is implemented here.
 
 Open questions:
 
-- Should this story include a tiny visible UI/button path for launching the guarded-site handoff, or stay pure domain plus existing UI smoke hooks only?
-- When a battle is launched but unresolved, should strategic state hold an explicit pending battle record, or should the caller own the returned `BattleSetup` until STORY-STRAT-005?
-- Does launching a guarded-site battle always spend the major interaction even if tactical battle is cancelled later?
-- Should the first guarded-site defender be modeled as a neutral faction ID, a guard-side ID, or a site-owned defender ID?
+- Approve the three recommended defaults above?
+- Should the visible path be a minimal button/prompt in the existing HUD, or direct click/select on a guarded-site marker with a confirm action?
 
 Assumptions:
 
-- Default: pure domain first, no tactical scene transition.
-- Default: launching battle spends the major interaction.
-- Default: defender controller for neutral guards is `CombatAI` data only; no combat AI behavior is implemented here.
+- Default visible path: use the smallest existing strategic HUD/input pattern; do not introduce final UI framework, art, or tactical scene transition.
 
 Out of scope:
 

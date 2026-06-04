@@ -25,7 +25,7 @@ approval: pending
 
 ## Status
 
-Draft. Not READY until STORY-STRAT-004 is approved/merged and the result-application planning questions are answered.
+Draft. Direction clarified on 2026-06-04: winning a guarded neutral-site battle should immediately control the site. It remains not READY until STORY-STRAT-004 is approved/merged and reward/victory defaults are finalized.
 
 ## Story type
 
@@ -77,7 +77,8 @@ Concrete implementation tasks authorized by this story:
   - attacker win makes site claim/reward eligible or controlled according to the approved default;
   - defender win leaves guards active and does not grant rewards;
   - invalid/mismatched/cancelled results do not silently mutate strategic state.
-- Apply one-time guarded-site reward eligibility or reward consumption only if approved by the chosen default in this story's planning questions.
+- Apply guarded neutral-site attacker-win control immediately.
+- Apply one-time guarded-site rewards immediately on attacker win if resource stockpiles already exist; otherwise mark reward application as explicitly deferred without inventing hidden economy behavior.
 - Evaluate only-Champion defeat and scenario victory when the battle result defeats a faction's only Champion.
 - Emit a structured strategic result summary suitable for a later UI layer.
 - Add tests for attacker win, defender/guard win, invalid result, duplicate application, reward/control consequences, and Champion defeat victory.
@@ -121,10 +122,10 @@ Not allowed:
 
 ## Acceptance criteria
 
-- [ ] Given a pending guarded-site battle and an attacker-win `BattleResult` with matching battle ID, when the strategy layer applies the result, then attacking Champion army survivors/losses are updated from the result, guard state is cleared/defeated, and the site becomes claim/reward eligible or controlled according to the approved default.
+- [ ] Given a pending guarded-site battle and an attacker-win `BattleResult` with matching battle ID, when the strategy layer applies the result, then attacking Champion army survivors/losses are updated from the result, guard state is cleared/defeated, and the site immediately becomes controlled by the attacking faction.
 - [ ] Given a pending guarded-site battle and a defender-win `BattleResult`, when the result is applied, then attacking Champion army survivors/losses are updated, guards remain active if surviving, no site reward/control is granted, and the pending battle is closed or marked resolved.
 - [ ] Given a mismatched battle ID, missing side result, invalid source site, or already-resolved battle, when result application is attempted, then validation fails with clear diagnostics and no strategic state mutation occurs.
-- [ ] Given an attacker-win guarded-site result with reward eligibility enabled, when result application succeeds, then Credits/Materials/Intel deltas are applied or explicitly marked eligible/consumed according to the approved reward default.
+- [ ] Given an attacker-win guarded-site result with reward eligibility enabled, when result application succeeds, then Credits/Materials/Intel deltas are applied immediately if stockpiles exist, or explicitly marked deferred without changing hidden economy state.
 - [ ] Given a result that defeats the opposing faction's only Champion, when result application completes, then scenario victory/loss state is set according to the champion defeat contract.
 - [ ] Given any applied battle result, tactical DTOs remain input payloads only; site control, rewards, Champion state, and victory changes occur only inside strategic result application.
 
@@ -146,20 +147,25 @@ If a verification type is N/A, the PR must say why.
 
 ## Ambiguity Check
 
-Status: FAIL.
+Status: NEEDS FINAL APPROVAL.
+
+Resolved by user on 2026-06-04:
+
+- On neutral guarded-site attacker win, control is automatic: win battle, site controlled.
+
+Recommended defaults for approval:
+
+- One-time rewards apply immediately on attacker win if resource stockpiles exist; if not, result summary says reward application is deferred rather than inventing economy behavior.
+- Champion defeat should set explicit defeated state now, but full scenario victory should be included only if the existing scenario victory state can support it cleanly.
+- Enemy-controlled site contests should be separate `STORY-STRAT-006`, not bundled into this guarded-neutral-site slice.
 
 Open questions:
 
-- On neutral guarded-site attacker win, should control be automatic, or should the site become unguarded/claimable and require a separate interaction?
-- Should one-time rewards be immediately granted on attacker win, or only after a separate claim/collect interaction?
-- For first MVP feel, is Champion defeat an immediate scenario loss now, or should this story only set `ChampionDefeated` and leave victory to a later packet?
-- Should STORY-STRAT-005 include enemy-controlled site contests, or keep that as a separate STORY-STRAT-006?
+- Approve the three recommended defaults above?
 
 Assumptions:
 
-- Default: attacker win against a neutral guarded resource site clears guards and grants/claims the site in one strategic result application.
-- Default: one-time guarded-site reward is applied immediately on attacker win if resource stockpiles already exist; otherwise result marks reward eligible without inventing economy behavior.
-- Default: only-Champion defeat can set scenario victory if the relevant state already exists cleanly.
+- Default: attacker win against a neutral guarded resource site clears guards and controls the site in one strategic result application.
 
 Out of scope:
 

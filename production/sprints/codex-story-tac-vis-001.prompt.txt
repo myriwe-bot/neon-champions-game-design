@@ -1,6 +1,6 @@
 Implement exactly one READY story only after human approval: STORY-TAC-VIS-001.
 
-If `production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md` is still `status: ready-candidate` or `approval: pending`, stop and report that human approval is required before implementation.
+If `production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md` is not `status: ready` with `approval: approved`, stop and report that a stale or unapproved design checkout is blocking implementation.
 
 Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design

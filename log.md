@@ -280,3 +280,10 @@
 - Promoted `design/gdd/tactical-combat.md` and `design/gdd/tactical-combat/overview-and-scope.md` from stale draft/pending front matter to approved source status for MVP tactical-combat implementation planning.
 - Added a STORY-TAC-002 source-authority reconciliation note clarifying that approval authorizes only the story-scoped sections and does not expand implementation scope into broader tactical systems.
 - Updated the TAC-002 Codex prompt to tell implementers to pull the design repo if stale local front matter is still visible.
+
+## [2026-06-04] approve | STORY-TAC-VIS-001 implementation packet
+
+- Recorded human approval for `production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md`.
+- Promoted STORY-TAC-VIS-001 from READY-candidate to READY with approved assumptions: crude placeholder tactical board, visible guarded-site handoff/switch, attacker/neutral guard stack markers, tactical-mode status labels, no battle result or strategic mutation.
+- Confirmed linked GDD/ADR/control sources are approved for the narrow visual handoff scope.
+- Updated closeout train, epic traceability, run prompts, prompt guard, and index discoverability.

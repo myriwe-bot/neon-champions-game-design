@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-VIS-001 Minimal Tactical Board Presentation and Handoff Switch
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-04
@@ -20,14 +20,14 @@ related:
     production/stories/story-tac-002-minimal-hex-board-and-stack-placement,
     production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-TAC-VIS-001 Minimal Tactical Board Presentation and Handoff Switch
 
 ## Status
 
-READY-candidate. Proposed after STORY-TAC-003 because the tactical rules now exist but the player still cannot see a tactical map or clearly switch from strategic guarded-site handoff into a tactical board. This deliberately pulls crude visibility forward before STORY-TAC-004 battle-result plumbing.
+READY. Human approved on 2026-06-04. Approved after STORY-TAC-003 because the tactical rules now exist but the player still cannot see a tactical map or clearly switch from strategic guarded-site handoff into a tactical board. This deliberately pulls crude visibility forward before STORY-TAC-004 battle-result plumbing.
 
 ## Story type
 
@@ -130,11 +130,11 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: PASS-candidate.
+Status: PASS.
 
 Resolved by user on 2026-06-04:
 
-- User does not currently see a way to view the tactical map and wants this to become an early priority.
+- User does not currently see a way to view the tactical map and wants this to become an early priority. Human approved this implementation packet on 2026-06-04.
 
 Assumptions for human approval:
 
@@ -156,8 +156,8 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Stable ID, title, type, status, and parent epic.
 - [x] Exact GDD and architecture/control sources are linked.
 - [x] Scope, out-of-scope, allowed placeholders, dependencies, acceptance criteria, and evidence are explicit.
-- [x] Ambiguity Check is PASS-candidate.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Ambiguity Check is PASS.
+- [x] Human approval has been given and recorded on 2026-06-04.
 
 ## DONE gate
 
@@ -172,4 +172,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate pending human approval.
+READY for implementation. Human approval recorded on 2026-06-04; source-authority check passed for linked approved GDD/ADR/control documents.

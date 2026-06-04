@@ -33,7 +33,7 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-003` is merged. The proposed next packet is `STORY-TAC-VIS-001`, pending human approval. Do not run the TAC-VIS-001 prompt until the story is promoted from READY-candidate to READY.
+`STORY-TAC-003` is merged. The next approved implementation packet is `STORY-TAC-VIS-001`; use the checked-in prompt file below.
 
 This intentionally prioritizes a crude visible tactical board/handoff switch before deeper `STORY-TAC-004` battle-result plumbing.
 
@@ -82,7 +82,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — preferred single-story start
 
-Use this only after `STORY-TAC-VIS-001` is approved/promoted to READY:
+Use this for the approved `STORY-TAC-VIS-001` implementation packet:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
@@ -113,7 +113,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-tac-002.prompt.txt`
 - `production/sprints/codex-story-tac-003.prompt.txt`
 
-Next candidate prompt, gated on human approval:
+Current approved prompt:
 
 - `production/sprints/codex-story-tac-vis-001.prompt.txt`
 

@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-VIS-001 Minimal Tactical Board Presentation and Handoff Switch
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-04
@@ -21,13 +21,18 @@ related:
     production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution,
   ]
 approval: approved
+implementation:
+  repo: myriwe-bot/neon-champions-unity
+  pr: 16
+  merge_commit: 969e0ddefcb174e831691c1bee84503a8930127b
+  merged_at: 2026-06-04T14:46:37Z
 ---
 
 # Story: STORY-TAC-VIS-001 Minimal Tactical Board Presentation and Handoff Switch
 
 ## Status
 
-READY. Human approved on 2026-06-04. Approved after STORY-TAC-003 because the tactical rules now exist but the player still cannot see a tactical map or clearly switch from strategic guarded-site handoff into a tactical board. This deliberately pulls crude visibility forward before STORY-TAC-004 battle-result plumbing.
+DONE / merged. Human approved on 2026-06-04 and merged in Unity PR #16 on 2026-06-04. Approved after STORY-TAC-003 because the tactical rules existed but the player still could not see a tactical map or clearly switch from strategic guarded-site handoff into a tactical board. This deliberately pulled crude visibility forward before STORY-TAC-004 battle-result plumbing.
 
 ## Story type
 
@@ -170,6 +175,14 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [ ] CI passes.
 - [ ] Required docs were updated in the correct source-of-truth layer.
 
+## Merge evidence
+
+- Unity repo: `myriwe-bot/neon-champions-unity`.
+- PR: `#16 STORY-TAC-VIS-001 Minimal tactical board presentation and handoff switch`.
+- Merge commit: `969e0ddefcb174e831691c1bee84503a8930127b`.
+- Final PR-head CI: Unity Foundation CI runs `26958651836` and `26958655406`, both completed successfully.
+- Merge-gate note: reviewer found trailing whitespace in new `.meta` files; fixed before merge.
+
 ## Verdict
 
-READY for implementation. Human approval recorded on 2026-06-04; source-authority check passed for linked approved GDD/ADR/control documents.
+DONE / merged. Source-authority check passed for linked approved GDD/ADR/control documents; required evidence was captured in the Unity repo under `production/evidence/STORY-TAC-VIS-001/`.

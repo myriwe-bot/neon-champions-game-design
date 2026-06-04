@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-APPROVED. Human approval recorded on 2026-06-03. Codex may implement only this story on branch `story/qa-002-strategic-map-readability-actor-clarity`.
+DONE. Human approval recorded on 2026-06-03. Implemented in Unity PR #12 and merged on 2026-06-04.
 
 This packet was drafted in response to human feedback after TAC-001 merge that the current strategic smoke remains too crumpled and hard to read: buttons overlap, screen elements crowd together, and it is unclear who is acting or what is happening on the map.
 

@@ -1,0 +1,64 @@
+Implement exactly one READY story: STORY-LOOP-002.
+
+If `production/stories/story-loop-002-visible-guarded-site-capture-smoke.md` is not `status: ready` with `approval: approved`, stop and report that a stale or unapproved design checkout is blocking implementation.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-loop-002-visible-guarded-site-capture-smoke.md
+   - required prior stories:
+     - production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md
+     - production/stories/story-tac-002-minimal-hex-board-and-stack-placement.md
+     - production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution.md
+     - production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md
+     - production/stories/story-tac-004-minimal-battle-end-and-result-return.md
+     - production/stories/story-strat-005-strategic-battle-result-application.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - closeout train: production/sprints/strategic-mvp-closeout-story-train-002.md
+   - linked GDD and architecture/control docs, especially:
+     - design/gdd/strategic-map.md §§6, 8, 10, 14
+     - docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths.
+2. Start from updated Unity main after STORY-STRAT-005 / PR #18 merge and create/use branch:
+   story/STORY-LOOP-002-visible-guarded-site-capture-smoke
+3. Stop immediately if the Unity repo is dirty with unrelated changes, required source docs are missing/draft/pending/contradictory, or main is not up to date. Do not weaken source authority; report the blocker.
+4. Implement only the STORY-LOOP-002 scope:
+   - visible smoke path where the player can select the active Champion, move to or start near a guarded neutral site, see that it is guarded/interactable, launch the guarded-site handoff, enter and resolve a minimal real hex-grid tactical battle, and see the site become controlled by the attacking faction;
+   - clear on-screen feedback for guarded state, interaction type, battle launched/result applied, and new site owner;
+   - use the real tactical path from TAC-002/TAC-003/TAC-VIS-001/TAC-004 and the real strategic result application from STRAT-005;
+   - add or update automated PlayMode smoke if the existing harness supports it; otherwise document the blocker and provide manual screenshot/video evidence as the temporary exception;
+   - add evidence package documenting the visible smoke path and deliberately minimal tactical omissions.
+5. Keep strict out-of-scope:
+   - no deterministic result injector replacing the real battle path;
+   - no larger map expansion, cities/bases, recruitment, central objective victory, enemy-site contests, final art/UI/copy, balance, strategic AI, networking, package/settings changes, data-authoring architecture, or broad CI changes unless strictly required and documented as a blocker fix.
+6. Allowed placeholders only:
+   - placeholder guarded site IDs, labels, and guard army fixture data;
+   - minimal tactical content already authorized by prior stories: tiny hex board, one attacking stack, one neutral guard stack, simple movement/attack/end condition, no final art;
+   - temporary UI text/keys for smoke evidence.
+7. Use TDD for any new production logic. For smoke wiring, follow existing PlayMode/manual evidence patterns and keep changes minimal.
+8. Add or update verification for all story acceptance criteria:
+   - guarded-site battle handoff is visible from the strategic smoke scene;
+   - winning the minimal real hex-grid tactical battle returns a real `BattleResult`, applies it through strategy, controls the guarded site for the attacking faction, and visibly reflects the new owner/state;
+   - evidence includes screenshot/video and a checklist of tactical combat included vs deliberately omitted;
+   - omissions state that tactical combat is minimal hex-grid MVP combat, not final combat;
+   - CI passes.
+9. Create or update Unity repo production/evidence/STORY-LOOP-002/README.md with:
+   - source docs read;
+   - acceptance/evidence mapping;
+   - test/check commands and exact results;
+   - PlayMode/manual/screenshot/video evidence inventory;
+   - before/after or path evidence showing guarded handoff, tactical resolution, and post-result site control;
+   - changed Unity assets/settings/packages;
+   - known omissions/stubs/mocks/assumptions/deferred work, or No known omissions.
+10. Run story-required PlayMode/manual/smoke checks, relevant EditMode regression checks for STRAT-004/STRAT-005/TAC-004 integration if touched, validators/checks used by the repo, whitespace/diff checks, and CI-triggering checks where available. If Unity CLI or a required check cannot run, report the exact command/blocker and do not claim it passed.
+11. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report exact commands/errors; do not leave only a terminal summary.
+12. Open a PR titled:
+    STORY-LOOP-002 Visible guarded site capture smoke
+13. PR body must include summary, story ID, source docs read, acceptance/evidence mapping, TDD or smoke evidence, PlayMode/manual/screenshot/video evidence, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+14. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if implementation would require replacing the real tactical battle with a fake result, enemy-controlled site contests, final UI/art/copy, new economy/recruitment design, strategic AI, save/load, new content/lore, package/settings changes, architecture drift, bypassing DTO validation, or weakening tests/evidence.

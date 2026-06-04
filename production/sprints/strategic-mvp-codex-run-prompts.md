@@ -27,6 +27,7 @@ related:
     production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch,
     production/stories/story-tac-004-minimal-battle-end-and-result-return,
     production/stories/story-strat-005-strategic-battle-result-application,
+    production/stories/story-loop-002-visible-guarded-site-capture-smoke,
   ]
 approval: approved
 ---
@@ -35,9 +36,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-004` is merged. The next approved implementation packet is `STORY-STRAT-005`; use the checked-in prompt file below.
+`STORY-STRAT-005` is merged. The next approved implementation packet is `STORY-LOOP-002`; use the checked-in prompt file below.
 
-This applies the real tactical `BattleResult` back into strategic guarded-site control/reward/army/victory state before the visible end-to-end guarded-site capture smoke in `STORY-LOOP-002`.
+This proves the full visible guarded-site capture loop end-to-end using the real tactical hex battle path and the real strategic `BattleResult` application, not a deterministic result injector.
 
 ## Copy-safe prompt-file mode
 
@@ -55,7 +56,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-005.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-002.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -84,11 +85,11 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — preferred single-story start
 
-Use this for the approved `STORY-STRAT-005` implementation packet:
+Use this for the approved `STORY-LOOP-002` implementation packet:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-005.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-002.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -116,10 +117,11 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-tac-003.prompt.txt`
 - `production/sprints/codex-story-tac-vis-001.prompt.txt`
 - `production/sprints/codex-story-tac-004.prompt.txt`
+- `production/sprints/codex-story-strat-005.prompt.txt`
 
 Current approved prompt:
 
-- `production/sprints/codex-story-strat-005.prompt.txt`
+- `production/sprints/codex-story-loop-002.prompt.txt`
 
 ## After Codex finishes
 
@@ -140,5 +142,5 @@ git push -u origin HEAD
 If Codex did not create a PR and GitHub CLI is available:
 
 ```powershell
-gh pr create --title "STORY-STRAT-005 Strategic battle result application" --body-file .\PR_BODY.md
+gh pr create --title "STORY-LOOP-002 Visible guarded site capture smoke" --body-file .\PR_BODY.md
 ```

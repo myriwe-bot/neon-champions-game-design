@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-005 Strategic Battle Result Application
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-04
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY. Prepared for implementation after STORY-TAC-004 merged in Unity PR #17 on 2026-06-04. Direction clarified on 2026-06-04: winning a guarded neutral-site battle immediately controls the site. Human approval for implementation is recorded by the merge/prep request on 2026-06-04; depends on STORY-STRAT-004/TAC-004 implementation.
+DONE / merged. Implemented in Unity PR #18 and merged on 2026-06-04 as `e1380a51c94ca2811d0fd5838e390ee001653e95`. Merge gate passed after hardening result-side validation, outcome/defeat consistency, and pending Champion/faction consistency; post-merge Unity `main` CI passed on 2026-06-04.
 
 ## Story type
 
@@ -213,16 +213,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation. Human approval recorded on 2026-06-04 after STORY-TAC-004 merge; source-authority check passed for linked approved GDD/ADR/control documents.
+DONE. Unity PR #18 implemented and merged `STORY-STRAT-005` as `e1380a51c94ca2811d0fd5838e390ee001653e95`. Post-merge Unity main CI passed; next train packet is `STORY-LOOP-002`.

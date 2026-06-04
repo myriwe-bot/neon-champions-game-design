@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-002 Visible Guarded Site Capture Smoke
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-04
@@ -14,14 +14,14 @@ related:
     production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger,
     production/stories/story-strat-005-strategic-battle-result-application,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-LOOP-002 Visible Guarded Site Capture Smoke
 
 ## Status
 
-READY-candidate. This is the vertical-slice closeout packet for the current epic after STORY-STRAT-004, STORY-TAC-002/003/004, and STORY-STRAT-005.
+READY. Prepared for implementation after STORY-STRAT-005 merged in Unity PR #18 on 2026-06-04 with post-merge Unity main CI passing. Human/delegated approval for this immediate next train packet is recorded by the merge/prep request on 2026-06-04.
 
 ## Story type
 
@@ -127,4 +127,4 @@ Assumption for human approval:
 
 ## Verdict
 
-READY-candidate pending human approval.
+READY for implementation. Human/delegated approval recorded on 2026-06-04 after STORY-STRAT-005 merge; this packet is the vertical-slice closeout smoke for `EPIC-STRAT-MVP-001` and must use the real tactical battle path rather than a deterministic result injector.

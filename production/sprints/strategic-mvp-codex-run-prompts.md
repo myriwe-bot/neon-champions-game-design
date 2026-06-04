@@ -24,6 +24,7 @@ related:
     production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger,
     production/stories/story-tac-002-minimal-hex-board-and-stack-placement,
     production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution,
+    production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch,
   ]
 approval: approved
 ---
@@ -32,9 +33,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-002` is merged. The next approved packet is `STORY-TAC-003`. Use the TAC-003 prompt file below.
+`STORY-TAC-003` is merged. The proposed next packet is `STORY-TAC-VIS-001`, pending human approval. Do not run the TAC-VIS-001 prompt until the story is promoted from READY-candidate to READY.
 
-Keep closeout story work sequential: implement `STORY-TAC-003`, review/merge it, then continue through the approved closeout train one READY story/PR at a time.
+This intentionally prioritizes a crude visible tactical board/handoff switch before deeper `STORY-TAC-004` battle-result plumbing.
 
 ## Copy-safe prompt-file mode
 
@@ -52,7 +53,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-vis-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -81,11 +82,11 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — preferred single-story start
 
-Use this now for `STORY-TAC-003`:
+Use this only after `STORY-TAC-VIS-001` is approved/promoted to READY:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-vis-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -110,10 +111,11 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-002.prompt.txt`
 - `production/sprints/codex-story-strat-004.prompt.txt`
 - `production/sprints/codex-story-tac-002.prompt.txt`
-
-Current approved prompt:
-
 - `production/sprints/codex-story-tac-003.prompt.txt`
+
+Next candidate prompt, gated on human approval:
+
+- `production/sprints/codex-story-tac-vis-001.prompt.txt`
 
 ## After Codex finishes
 
@@ -134,5 +136,5 @@ git push -u origin HEAD
 If Codex did not create a PR and GitHub CLI is available:
 
 ```powershell
-gh pr create --title "STORY-TAC-003 Minimal tactical movement and attack resolution" --body-file .\PR_BODY.md
+gh pr create --title "STORY-TAC-VIS-001 Minimal tactical board presentation and handoff switch" --body-file .\PR_BODY.md
 ```

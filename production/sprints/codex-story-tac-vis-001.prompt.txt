@@ -1,0 +1,35 @@
+Implement exactly one READY story only after human approval: STORY-TAC-VIS-001.
+
+If `production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md` is still `status: ready-candidate` or `approval: pending`, stop and report that human approval is required before implementation.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md
+   - production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md
+   - production/stories/story-tac-002-minimal-hex-board-and-stack-placement.md
+   - production/stories/story-tac-003-minimal-tactical-movement-and-attack-resolution.md
+   - production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - production/sprints/strategic-mvp-closeout-story-train-002.md
+   - linked GDD and architecture/control docs from the story
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths.
+2. Start from updated Unity main after STORY-TAC-003 / PR #15 merge and create/use branch:
+   story/STORY-TAC-VIS-001-minimal-tactical-board-presentation-handoff-switch
+3. Stop if source story is not READY/approved, repo has unrelated dirty changes, source docs are missing/draft/pending/contradictory, or scope would require final tactical UI/art, battle results, or strategic mutation.
+4. Implement only the story scope:
+   - visible guarded-site handoff/switch into a crude tactical board view;
+   - placeholder hex markers for the minimal board;
+   - attacker and neutral guard defender stack markers at TacticalBoardState coordinates;
+   - status/labels identifying tactical mode and active side/current stack context;
+   - thin presentation adapter over existing domain/application state.
+5. Keep strict out-of-scope:
+   - no battle end, BattleResult creation, strategic result application, site control/rewards/resources/recruitment/victory mutation;
+   - no full tactical input/action controls unless needed only for smoke wiring and explicitly story-safe;
+   - no AP/initiative UI, abilities, morale, AI, final art/UI/audio/copy, save/load, packages, data-authoring architecture, or broad scene framework rewrite.
+6. Add PlayMode/smoke coverage where feasible for the handoff/switch and expected hex/stack marker counts. Add manual screenshot/video evidence for the crude tactical board.
+7. Create/update production/evidence/STORY-TAC-VIS-001/README.md with sources read, acceptance/evidence mapping, tests/checks, PlayMode/manual/screenshot evidence, changed assets/settings/packages, omissions/deferred work, and CI expectations.
+8. Run required Unity checks locally where available and rely on GitHub Actions for final CI if local tooling is unavailable. Do not claim unavailable checks passed.
+9. Commit, push, and open PR titled:
+   STORY-TAC-VIS-001 Minimal tactical board presentation and handoff switch

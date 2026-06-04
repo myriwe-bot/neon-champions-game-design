@@ -35,11 +35,12 @@ The train remains intentionally narrow: select guarded site, launch handoff, fig
 | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 |     1 | [STORY-STRAT-004 Site Interaction and Guarded Battle Trigger](../stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md)         | DONE / merged    | Adds visible site-marker selection and HUD Attack/Interact handoff      | Handoff is not visible, duplicate launch unresolved, or BattleSetup contract is ambiguous |
 |     2 | [STORY-TAC-002 Minimal Hex Board and Stack Placement](../stories/story-tac-002-minimal-hex-board-and-stack-placement.md)                         | DONE / merged    | Establishes tiny real hex board and stack placement from BattleSetup    | Hex/placement model needs full tactical design invention or DTO mismatch appears          |
-|     3 | [STORY-TAC-003 Minimal Tactical Movement and Attack Resolution](../stories/story-tac-003-minimal-tactical-movement-and-attack-resolution.md)     | READY            | Makes the tiny board playable enough to resolve a fight through actions | Movement/attack needs AP/initiative/ability complexity beyond the slice                   |
-|     4 | [STORY-TAC-004 Minimal Battle End and BattleResult Return](../stories/story-tac-004-minimal-battle-end-and-result-return.md)                     | READY-candidate  | Produces real BattleResult from tactical outcome                        | Result DTO cannot validate or tactical layer starts mutating strategic state              |
-|     5 | [STORY-STRAT-005 Strategic Battle Result Application](../stories/story-strat-005-strategic-battle-result-application.md)                         | READY-candidate  | Applies attacker-win: site immediately controlled                       | Reward/victory defaults require broader economy/scenario design                           |
-|     6 | [STORY-LOOP-002 Visible Guarded Site Capture Smoke](../stories/story-loop-002-visible-guarded-site-capture-smoke.md)                             | READY-candidate  | Proves the full visible loop end-to-end                                 | Smoke cannot be completed, evidence is missing, or player cannot understand what happened |
-|     7 | [STORY-QA-003 Guarded Site Capture Readability and Evidence Pass](../stories/story-qa-003-guarded-site-capture-readability-and-evidence-pass.md) | Draft / optional | Use only if LOOP-002 is technically complete but hard to read/judge     | N/A; this is optional closeout polish/evidence                                            |
+|     3 | [STORY-TAC-003 Minimal Tactical Movement and Attack Resolution](../stories/story-tac-003-minimal-tactical-movement-and-attack-resolution.md)     | DONE / merged    | Makes the tiny board playable enough to resolve a fight through actions | Movement/attack needs AP/initiative/ability complexity beyond the slice                   |
+|     4 | [STORY-TAC-VIS-001 Minimal Tactical Board Presentation and Handoff Switch](../stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch.md) | READY-candidate | Makes the tactical layer visible before deeper result plumbing          | Handoff/switch needs final tactical UI/art or architecture expansion                      |
+|     5 | [STORY-TAC-004 Minimal Battle End and BattleResult Return](../stories/story-tac-004-minimal-battle-end-and-result-return.md)                     | READY-candidate  | Produces real BattleResult from tactical outcome                        | Result DTO cannot validate or tactical layer starts mutating strategic state              |
+|     6 | [STORY-STRAT-005 Strategic Battle Result Application](../stories/story-strat-005-strategic-battle-result-application.md)                         | READY-candidate  | Applies attacker-win: site immediately controlled                       | Reward/victory defaults require broader economy/scenario design                           |
+|     7 | [STORY-LOOP-002 Visible Guarded Site Capture Smoke](../stories/story-loop-002-visible-guarded-site-capture-smoke.md)                             | READY-candidate  | Proves the full visible loop end-to-end                                 | Smoke cannot be completed, evidence is missing, or player cannot understand what happened |
+|     8 | [STORY-QA-003 Guarded Site Capture Readability and Evidence Pass](../stories/story-qa-003-guarded-site-capture-readability-and-evidence-pass.md) | Draft / optional | Use only if LOOP-002 is technically complete but hard to read/judge     | N/A; this is optional closeout polish/evidence                                            |
 
 ## Implementation contract
 
@@ -56,7 +57,7 @@ The train remains intentionally narrow: select guarded site, launch handoff, fig
 
 `EPIC-STRAT-MVP-001` can close when:
 
-- STORY-STRAT-004, STORY-TAC-002, STORY-TAC-003, STORY-TAC-004, STORY-STRAT-005, and STORY-LOOP-002 are DONE/merged;
+- STORY-STRAT-004, STORY-TAC-002, STORY-TAC-003, STORY-TAC-VIS-001, STORY-TAC-004, STORY-STRAT-005, and STORY-LOOP-002 are DONE/merged;
 - CI passes on the final merged Unity main;
 - evidence shows the guarded-site capture loop from strategic map to tactical battle to site control;
 - omissions are documented;
@@ -64,4 +65,4 @@ The train remains intentionally narrow: select guarded site, launch handoff, fig
 
 ## Gate status
 
-Approved story train. Human approval recorded on 2026-06-04. `STORY-STRAT-004` is DONE / merged in Unity PR #13. `STORY-TAC-002 Minimal Hex Board and Stack Placement` is DONE / merged in Unity PR #14 with post-merge main CI passing. `STORY-TAC-003 Minimal Tactical Movement and Attack Resolution` is individually approved and READY for implementation. Next implementation packet: `STORY-TAC-003`.
+Approved story train. Human approval recorded on 2026-06-04. `STORY-STRAT-004` is DONE / merged in Unity PR #13. `STORY-TAC-002` is DONE / merged in Unity PR #14. `STORY-TAC-003` is DONE / merged in Unity PR #15 with post-merge main CI passing. Proposed next early-playable priority: `STORY-TAC-VIS-001 Minimal Tactical Board Presentation and Handoff Switch` as READY-candidate pending human approval, inserted before `STORY-TAC-004` so tactical visibility does not lag behind backend battle-result plumbing.

@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-003 Minimal Tactical Movement and Attack Resolution
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-04
@@ -24,7 +24,9 @@ approval: approved
 
 ## Status
 
-READY. Human approval recorded on 2026-06-04 after STORY-TAC-002 merged in Unity PR #14 and post-merge `main` CI passed. This packet makes the hex board minimally playable without expanding into the full tactical GDD.
+DONE / merged in Unity PR #15 on 2026-06-04. Merge commit: `bc8b1f8257c3bdb131013c22e8b99d30246e10fa`.
+
+STORY-TAC-003 added domain-only tactical activation, movement, attack, deterministic damage, and defeated-state handling. Follow-up priority is a crude visible tactical board/handoff switch before deeper battle-result plumbing.
 
 ## Story type
 
@@ -152,15 +154,15 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are documented.
+- [x] PR/code review is complete.
+- [x] CI passes.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation. Human approval recorded on 2026-06-04 after STORY-TAC-002 merge verification.
+DONE / merged. Unity PR #15 merged on 2026-06-04; post-merge `main` CI passed.

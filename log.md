@@ -257,3 +257,10 @@
 
 - Added `production/sprints/codex-story-strat-002.prompt.txt` and `production/sprints/codex-strat-002-003-batch.prompt.txt` so PowerShell can pass prompts via `Get-Content -Raw` without here-string continuation prompts.
 - Updated `production/sprints/strategic-mvp-codex-run-prompts.md` with copy-safe prompt-file commands.
+
+## [2026-06-04] approve | Strategic MVP closeout train and STORY-STRAT-004
+
+- Recorded human approval for `production/sprints/strategic-mvp-closeout-story-train-002.md`.
+- Promoted `production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md` from READY-candidate to READY with approved defaults for pending battle record, major-interaction spend, and neutral guard CombatAI controller metadata.
+- Added `production/sprints/codex-story-strat-004.prompt.txt` as the copy-safe Codex prompt for the first closeout implementation story.
+- Updated Codex run prompts, epic traceability, and index discoverability.

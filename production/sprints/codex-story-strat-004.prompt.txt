@@ -1,0 +1,73 @@
+Implement exactly one READY story: STORY-STRAT-004.
+
+Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Required process:
+1. Read, in order:
+   - design/control story file: production/stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md
+   - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
+   - closeout train: production/sprints/strategic-mvp-closeout-story-train-002.md
+   - prior train/evidence docs as needed:
+     - production/sprints/strategic-mvp-story-train-001.md
+     - production/sprints/strategic-mvp-codex-execution-system.md
+     - production/sprints/strategic-mvp-codex-run-prompts.md
+     - Unity repo production/evidence/STORY-QA-002/README.md if present
+     - Unity repo production/evidence/STORY-TAC-001/README.md if present
+   - all GDD and architecture/control docs linked by the story, especially:
+     - design/gdd/strategic-map.md §§6, 10, 12, 14
+     - docs/architecture/unity-technical-scheme.md
+     - docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+     - docs/architecture/testing-strategy.md
+     - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and every scoped AGENTS.md under touched paths.
+2. Start from updated Unity main after STORY-QA-002 / PR #12 merge and create/use branch:
+   story/STORY-STRAT-004-site-interaction-guarded-battle-trigger
+3. Stop immediately if the Unity repo is dirty with unrelated changes, required source docs are missing/draft/pending/contradictory, or main is not up to date. Do not weaken source authority; report the blocker.
+4. Implement only the STORY-STRAT-004 scope:
+   - add or extend pure domain models for guarded neutral site definition/runtime state attached to a strategic node;
+   - add SiteInteractionCommand or equivalent with preview/apply behavior;
+   - validate Champion at site node, active owner turn, major interaction availability, guarded/interactable site state, required IDs, and guard army data;
+   - preview guarded-site battle handoff without mutating Champion/site/resource/army/turn/battle state;
+   - apply guarded-site interaction by creating a valid BattleSetup using STORY-TAC-001 DTO contracts;
+   - record/expose a pending unresolved battle as needed to prevent duplicate launch and support later STORY-STRAT-005 result application;
+   - consume the Champion major interaction when battle is launched;
+   - add a visible strategic-map path using existing scene/HUD/input patterns: select guarded site marker, show guarded-site Attack/Interact affordance/summary, launch guarded-site battle handoff.
+5. Use the approved defaults from the story:
+   - strategic state may hold an explicit pending battle record after launch;
+   - launching guarded-site battle spends the Champion major interaction even if a later tactical layer cancels or returns cancel;
+   - first guarded-site defender uses a stable neutral guard-side ID plus CombatAI tactical controller data; this story does not implement combat AI behavior.
+6. Keep strict out-of-scope:
+   - no tactical combat execution, tactical scene loading, grid, combat AI behavior, AP/actions, damage, morale, tactical UI, or animation;
+   - no BattleResult application, guard clearing, site control, rewards, resources, recruitment, income, objective/victory evaluation;
+   - no enemy site contests, Champion-vs-Champion battles, garrisons, retreats, capture/wounded/recovery, save/load, strategic AI, networking, final art/UI/copy, or new Greenland scenario content/final site names.
+7. Allowed placeholders only:
+   - test-local guarded site definitions and guard army templates;
+   - stable placeholder IDs/localization keys;
+   - existing DTO placeholder battle types/controllers/outcome flags from STORY-TAC-001;
+   - minimal pending-battle marker if needed for validation.
+8. Use TDD for production domain logic: RED test, verify failure, minimal implementation, GREEN test, refactor only while green.
+9. Add or update tests for all story acceptance criteria:
+   - valid preview is non-mutating and reports guarded-site battle handoff facts;
+   - valid apply creates DTO-valid BattleSetup with battle/scenario/source/site/node IDs, GuardedSite battle type, HumanLocal attacker, CombatAI/guard defender, attacker/defender army snapshots;
+   - launch consumes major interaction and duplicate launch is rejected/reported while pending;
+   - invalid location/turn/interaction/site/guard data fail with diagnostics and no mutation;
+   - BattleSetup snapshots remain stable after source state changes;
+   - domain logic stays free of UnityEngine/presentation dependencies.
+10. Add PlayMode/manual visible-path evidence if the existing strategic map scene/test harness supports it. If automated PlayMode coverage is blocked, document the exact blocker and provide manual screenshot/video evidence as a temporary exception.
+11. Create or update Unity repo production/evidence/STORY-STRAT-004/README.md with:
+    - source docs read;
+    - acceptance/evidence mapping;
+    - RED/GREEN TDD notes;
+    - tests/checks run and exact results;
+    - screenshot/video inventory for visible path, or exact PlayMode/manual-evidence blocker;
+    - changed files/assets/settings/packages;
+    - known omissions/stubs/mocks/assumptions/deferred work, or No known omissions.
+12. Run story-required EditMode tests, relevant PlayMode/smoke checks if touched, validators/checks used by the repo, whitespace/diff checks, and CI-triggering checks where available. If Unity CLI or a required check cannot run, report the exact command/blocker and do not claim it passed.
+13. Commit all story changes on the story branch and push the branch. If commit or push is impossible, stop and report exact commands/errors; do not leave only a terminal summary.
+14. Open a PR titled:
+    STORY-STRAT-004 Site interaction and guarded battle trigger
+15. PR body must include summary, story ID, source docs read, acceptance/evidence mapping, RED/GREEN evidence, EditMode/PlayMode/manual evidence, tests/checks, CI status/link if available, changed Unity assets/settings/packages, and omissions/stubs/mocks/assumptions/deferred work.
+16. If GitHub CLI is unavailable or PR creation fails, create a durable PR_BODY.md on the story branch with the same required sections, commit/push it with the implementation, and report the exact PR creation blocker.
+
+Stop and report instead of guessing if implementation would require tactical combat, result application, economy/rewards/site control, final UI/art/copy, new content/lore, package/settings changes, architecture drift, bypassing domain services, fake tactical results, or weakening tests/evidence.

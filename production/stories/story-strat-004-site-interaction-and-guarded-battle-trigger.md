@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-004 Site Interaction and Guarded Battle Trigger
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-04
@@ -20,14 +20,14 @@ related:
     production/stories/story-strat-003-champion-route-movement,
     production/stories/story-tac-001-battle-setup-result-dto-contracts,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-STRAT-004 Site Interaction and Guarded Battle Trigger
 
 ## Status
 
-READY-candidate. Direction clarified on 2026-06-04: this packet includes a visible strategic-map interaction path using guarded site marker selection plus a HUD Attack/Interact button. It remains pending human approval before implementation.
+READY. Human approval recorded on 2026-06-04 as first story in the approved Strategic MVP Closeout Story Train 002. Direction clarified: this packet includes a visible strategic-map interaction path using guarded site marker selection plus a HUD Attack/Interact button.
 
 ## Story type
 
@@ -150,20 +150,20 @@ If a verification type is N/A, the PR must say why.
 
 ## Ambiguity Check
 
-Status: PASS-candidate.
+Status: PASS.
 
 Resolved by user on 2026-06-04:
 
 - Include a visible path. This is not domain-only.
 - Use interaction style A: select guarded site marker, then HUD shows Attack/Interact button for that specific site.
 
-Recommended defaults for approval:
+Approved defaults:
 
 - Strategic state should hold an explicit pending battle record after launch so duplicate launch/result-application can be validated.
 - Launching a guarded-site battle spends the Champion's major interaction even if a later tactical layer cancels or returns a cancel result.
 - First guarded-site defender should use a stable neutral guard-side ID plus `CombatAI` tactical controller data; no actual combat AI behavior is implemented here.
 
-Assumptions for human approval:
+Approved implementation assumptions:
 
 - Default visible path: select guarded site marker, then use the smallest existing strategic HUD/input pattern to show an Attack/Interact button; do not introduce final UI framework, art, or tactical scene transition.
 
@@ -210,9 +210,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
-- [x] Ambiguity Check status is PASS-candidate.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded: user approved the train and started with STORY-STRAT-004 on 2026-06-04.
 
 ## DONE gate
 
@@ -228,4 +228,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate pending human approval.
+READY.

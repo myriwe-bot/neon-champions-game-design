@@ -1,7 +1,7 @@
 ---
 title: Strategic MVP Closeout Story Train 002
 type: milestone
-status: draft
+status: approved
 phase: production
 owner: shared
 created: 2026-06-04
@@ -18,7 +18,7 @@ related:
     production/stories/story-loop-002-visible-guarded-site-capture-smoke,
     production/stories/story-qa-003-guarded-site-capture-readability-and-evidence-pass,
   ]
-approval: pending
+approval: approved
 ---
 
 # Strategic MVP Closeout Story Train 002
@@ -33,7 +33,7 @@ The train remains intentionally narrow: select guarded site, launch handoff, fig
 
 | Order | Story                                                                                                                                            | Status           | Why now                                                                 | Stop before next if                                                                       |
 | ----: | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-|     1 | [STORY-STRAT-004 Site Interaction and Guarded Battle Trigger](../stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md)         | READY-candidate  | Adds visible site-marker selection and HUD Attack/Interact handoff      | Handoff is not visible, duplicate launch unresolved, or BattleSetup contract is ambiguous |
+|     1 | [STORY-STRAT-004 Site Interaction and Guarded Battle Trigger](../stories/story-strat-004-site-interaction-and-guarded-battle-trigger.md)         | READY            | Adds visible site-marker selection and HUD Attack/Interact handoff      | Handoff is not visible, duplicate launch unresolved, or BattleSetup contract is ambiguous |
 |     2 | [STORY-TAC-002 Minimal Hex Board and Stack Placement](../stories/story-tac-002-minimal-hex-board-and-stack-placement.md)                         | READY-candidate  | Establishes tiny real hex board and stack placement from BattleSetup    | Hex/placement model needs full tactical design invention or DTO mismatch appears          |
 |     3 | [STORY-TAC-003 Minimal Tactical Movement and Attack Resolution](../stories/story-tac-003-minimal-tactical-movement-and-attack-resolution.md)     | READY-candidate  | Makes the tiny board playable enough to resolve a fight through actions | Movement/attack needs AP/initiative/ability complexity beyond the slice                   |
 |     4 | [STORY-TAC-004 Minimal Battle End and BattleResult Return](../stories/story-tac-004-minimal-battle-end-and-result-return.md)                     | READY-candidate  | Produces real BattleResult from tactical outcome                        | Result DTO cannot validate or tactical layer starts mutating strategic state              |
@@ -64,4 +64,4 @@ The train remains intentionally narrow: select guarded site, launch handoff, fig
 
 ## Gate status
 
-Draft story train. Candidate stories are ready for human review but not implementation authority until the user approves them or they are individually marked READY.
+Approved story train. Human approval recorded on 2026-06-04. `STORY-STRAT-004` is READY and may be implemented first. Later candidate stories remain approval-pending until individually promoted or explicitly approved.

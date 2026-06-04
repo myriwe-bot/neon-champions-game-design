@@ -30,7 +30,7 @@ Playtest + Integration + UX/Smoke.
 ## Estimate
 
 - Size: M.
-- Basis: connects existing strategic map UI/input, guarded-site handoff, and result application into one visible smoke path. It should use the smallest acceptable tactical/result stub until real tactical combat exists.
+- Basis: connects existing strategic map UI/input, guarded-site handoff, and result application into one visible smoke path. It must use minimal real tactical combat on a hex grid rather than a deterministic result stub.
 
 ## Parent epic
 
@@ -62,37 +62,36 @@ As a player/designer, I want to see a Champion capture a guarded neutral site on
   - move to or start near a guarded neutral site;
   - see that the site is guarded and interactable;
   - launch the guarded-site handoff;
-  - apply a deterministic test/stub attacker-win result if real tactical combat is not available;
+  - enter and resolve a minimal real hex-grid tactical battle;
   - see the site become controlled by the attacking faction.
 - Clear on-screen feedback for guarded state, interaction type, battle launched/result applied, and new site owner.
 - Automated PlayMode smoke if feasible; otherwise documented blocker plus screenshot/video evidence.
-- Evidence package documenting omissions and the temporary tactical/result stub.
+- Evidence package documenting the real tactical path and any deliberately minimal tactical omissions.
 
 ## Out of scope
 
-- Real tactical combat implementation, unless already available from another story.
 - Larger map expansion, cities/bases, recruitment, central objective victory, enemy-site contests, final art/UI/copy, balance, strategic AI, networking.
-- Hiding the tactical stub. If a stub is used, the PR must call it out plainly.
+- Any tactical result stub that replaces the real battle path.
 
 ## Allowed stubs, mocks, placeholders, or temporary data
 
 Allowed:
 
-- A deterministic attacker-win test/stub result path if real tactical combat is not implemented yet.
 - Placeholder guarded site IDs, labels, and guard army fixture data.
+- Minimal tactical content: tiny hex board, one attacking stack, one neutral guard stack, simple movement/attack/end condition, no final art.
 - Temporary UI text/keys for smoke evidence.
 
 Not allowed:
 
-- Claiming tactical combat is implemented when only a stub/result injector exists.
+- Replacing the smoke with a deterministic result injector.
 - Expanding into recruitment, cities/bases, or larger map content in this story.
 
 ## Acceptance criteria
 
 - [ ] Given the visible strategic smoke scene, when the active Champion interacts with a guarded neutral site, then the UI clearly shows a guarded-site battle handoff.
-- [ ] Given the smoke applies an attacker-win result, then the guarded site becomes controlled by the attacking faction and the UI visibly reflects the new owner/state.
-- [ ] Given the smoke path completes, then evidence includes screenshot/video and a checklist of what was real versus stubbed.
-- [ ] Given the story PR, then omissions explicitly state whether tactical combat was real or stubbed.
+- [ ] Given the player wins the minimal real hex-grid tactical battle, then a real `BattleResult` returns to strategy, the guarded site becomes controlled by the attacking faction, and the UI visibly reflects the new owner/state.
+- [ ] Given the smoke path completes, then evidence includes screenshot/video and a checklist of what tactical combat includes versus what remains deliberately omitted.
+- [ ] Given the story PR, then omissions explicitly state that tactical combat is minimal hex-grid MVP combat, not final combat.
 - [ ] CI passes.
 
 ## Verification requirements
@@ -108,10 +107,14 @@ Not allowed:
 
 Status: FAIL.
 
+Resolved by user on 2026-06-04:
+
+- Minimal real tactical combat must exist first; do not use a deterministic result stub for this smoke.
+- Tactical combat should be on a hex grid.
+
 Open questions:
 
-- Is a deterministic attacker-win result stub acceptable for this smoke, or must minimal tactical combat exist first?
-- Should this story close EPIC-STRAT-MVP-001 if it passes, with larger map/cities/recruitment/tactical combat moving to the next epic?
+- Should this story close EPIC-STRAT-MVP-001 if it passes, with larger map/cities/recruitment/deeper tactical combat moving to the next epic?
 
 ## Branch / PR requirements
 

@@ -41,9 +41,11 @@ Neon Champions tactical combat is intended to combine HoMM-style army/faction id
 
 ## MVP Scope Constraints
 
+MVP grid decision: tactical combat uses a flat **hex grid**. The first implementation should be minimal and readable: hex coordinates, neighbors, movement range, occupancy, and basic target/range checks only. Elevation and multi-floor maps remain out of scope.
+
 ### In Scope
 
-- Flat grid battlefield.
+- Flat hex grid battlefield.
 - Simple action point economy.
 - Different movement values by unit/stack.
 - Melee and ranged attacks.

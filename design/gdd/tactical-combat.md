@@ -72,7 +72,7 @@ For LLM/agent work:
 
 ### In Scope
 
-- Flat square or hex grid battlefield; final grid type remains a technical/design decision.
+- Flat hex grid battlefield for MVP tactical combat; square grid is no longer the working default.
 - HoMM-style active army stacks as tactical entities.
 - 7 active army slots as the working baseline.
 - All surviving active-army stacks deploy by default.
@@ -114,6 +114,10 @@ For LLM/agent work:
 10. Post-battle resolution updates losses, rewards, assets, morale consequences, and strategic map state.
 
 ## 6. Core Rules
+
+### 6.0 Grid Decision
+
+Approved on 2026-06-04: MVP tactical combat uses a flat **hex grid**. The first implementation should keep hex rules minimal: board coordinates, neighbor lookup, movement range, occupancy, legal target/range checks, and clear visual hex cells. No elevation/high-ground or multi-floor rules are in MVP scope.
 
 ### 6.1 Tactical Entities
 

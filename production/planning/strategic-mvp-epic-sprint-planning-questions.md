@@ -35,7 +35,11 @@ The user clarified the next desired direction on 2026-06-04:
 
 - next work should be a visible vertical slice, not a domain-only packet;
 - guarded neutral site victory should immediately control the site;
-- the desired near-future demo should move toward a larger map with cities/bases, recruitment, tactical combat, and neutral-site capture.
+- the desired near-future demo should move toward a larger map with cities/bases, recruitment, tactical combat, and neutral-site capture;
+- minimal real tactical combat should be built before the guarded-site smoke instead of using a deterministic tactical/result stub;
+- tactical combat should use a hex grid;
+- guarded-site UI should use site-specific selection: select guarded site marker, then HUD shows an Attack/Interact button;
+- the next epic should be option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site.
 
 Clarification of earlier option A:
 
@@ -142,18 +146,19 @@ Best if the next milestone is: "a small match can be won or lost."
 
 ## Recommendation after user clarification
 
-Recommended current vertical slice:
+Recommended current vertical slice after user approval:
 
-> A player uses the visible strategic map to select a Champion, move to a guarded neutral site, choose an explicit site interaction, launch the battle handoff, apply a test/stubbed battle result, and see the neutral site become controlled.
+> A player uses the visible strategic map to select a Champion, move to a guarded neutral site, select the guarded site marker, click a HUD Attack/Interact action, enter a minimal real hex-grid tactical battle, resolve it, return to the strategic map, and see the neutral site become controlled.
 
 Recommended remaining stories for `EPIC-STRAT-MVP-001`:
 
-1. `STORY-STRAT-004` — visible guarded-site interaction and battle handoff.
-2. `STORY-STRAT-005` — apply guarded-site battle result; attacker win immediately controls the site.
-3. `STORY-LOOP-002` — visible guarded neutral site capture smoke, using the smallest acceptable tactical/result stub until real tactical combat exists.
-4. Optional `STORY-QA-003` — readability/feedback pass only if the smoke is hard to understand.
+1. `STORY-STRAT-004` — visible guarded-site interaction and battle handoff using site marker selection plus HUD Attack/Interact.
+2. Minimal real hex-grid tactical combat packets sufficient to produce a real `BattleResult`.
+3. `STORY-STRAT-005` — apply guarded-site battle result; attacker win immediately controls the site.
+4. `STORY-LOOP-002` — visible guarded neutral site capture smoke using real minimal tactical combat, not a result stub.
+5. Optional `STORY-QA-003` — readability/feedback pass only if the smoke is hard to understand.
 
-Recommended next epic after that:
+Recommended next epic after that, approved direction:
 
 > `EPIC-VSLICE-MVP-002 Larger Map, Bases, Recruitment, and Minimal Tactical Combat`
 

@@ -81,7 +81,7 @@ Concrete implementation tasks authorized by this story:
 - Add apply behavior that creates a valid `BattleSetup` for a guarded neutral site using the DTO contract from STORY-TAC-001.
 - Mark or expose an unresolved/pending battle reference only as needed to prevent duplicate launch from the same command.
 - Consume the Champion's major interaction when the battle is launched.
-- Add a visible Unity path using the existing strategic map scene/HUD/input patterns: the player can select or focus a guarded site, see an interaction affordance/summary, and launch the guarded-site battle handoff.
+- Add a visible Unity path using the existing strategic map scene/HUD/input patterns: the player selects a guarded site marker, the HUD shows a guarded-site Attack/Interact affordance/summary, and the player launches the guarded-site battle handoff.
 - Add tests proving preview is non-mutating and apply creates a valid guarded-site `BattleSetup`.
 
 ## Out of scope
@@ -155,6 +155,7 @@ Status: NEEDS FINAL APPROVAL.
 Resolved by user on 2026-06-04:
 
 - Include a visible path. This is not domain-only.
+- Use interaction style A: select guarded site marker, then HUD shows Attack/Interact button for that specific site.
 
 Recommended defaults for approval:
 
@@ -165,11 +166,10 @@ Recommended defaults for approval:
 Open questions:
 
 - Approve the three recommended defaults above?
-- Should the visible path be a minimal button/prompt in the existing HUD, or direct click/select on a guarded-site marker with a confirm action?
 
 Assumptions:
 
-- Default visible path: use the smallest existing strategic HUD/input pattern; do not introduce final UI framework, art, or tactical scene transition.
+- Default visible path: select guarded site marker, then use the smallest existing strategic HUD/input pattern to show an Attack/Interact button; do not introduce final UI framework, art, or tactical scene transition.
 
 Out of scope:
 

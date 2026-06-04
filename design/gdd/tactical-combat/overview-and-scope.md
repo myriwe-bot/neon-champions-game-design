@@ -1,20 +1,20 @@
 ---
 title: Tactical Combat — Overview and Scope
 type: system-gdd
-status: draft
+status: approved
 phase: systems-design
 owner: shared
 created: 2026-05-30
-updated: 2026-05-30
+updated: 2026-06-04
 source_lore: []
 related:
   [design/gdd/tactical-combat, design/research/tactical-combat-deep-reference]
-approval: pending
+approval: approved
 ---
 
 # Tactical Combat — Overview and Scope
 
-> This article preserves and reorganizes design-session content from [[design/research/tactical-combat-deep-reference]]. It is part of the tactical combat GDD split for readability. Do not treat missing context as permission to invent rules; check the active overview at [[design/gdd/tactical-combat]].
+> Status: Approved support article for the MVP tactical-combat GDD. This article preserves and reorganizes design-session content from [[design/research/tactical-combat-deep-reference]]. It is part of the tactical combat GDD split for readability. Do not treat missing context as permission to invent rules; check the active overview at [[design/gdd/tactical-combat]].
 
 ## Article Contents
 

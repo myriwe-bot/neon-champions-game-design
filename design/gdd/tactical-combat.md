@@ -1,11 +1,11 @@
 ---
 title: Tactical Combat
 type: system-gdd
-status: draft
+status: approved
 phase: systems-design
 owner: shared
 created: 2026-05-28
-updated: 2026-05-30
+updated: 2026-06-04
 source_lore: []
 related:
   [
@@ -17,12 +17,12 @@ related:
     design/research/tactical-combat-deep-reference,
     design/research/commander-spellbook-reference,
   ]
-approval: pending
+approval: approved
 ---
 
 # Tactical Combat
 
-> Status: Draft. Use this as the active first-read GDD for design and AI implementation planning. The older long-form packet notes are preserved in [[design/research/tactical-combat-deep-reference]].
+> Status: Approved for MVP tactical-combat implementation planning. Use this as the active first-read GDD for design and AI implementation planning. The older long-form packet notes are preserved in [[design/research/tactical-combat-deep-reference]].
 
 ## 1. Summary
 
@@ -40,6 +40,10 @@ Quick reference:
 | Main references  | HoMM active stacks + Shadowrun Returns tactical simplicity + limited non-magic commander operations.    |
 | Key dependencies | Champions, faction rosters, strategic map, resources, Intel, objectives, UI/HUD, save/load.             |
 | Main risk        | Scope explosion from too many tactical subsystems.                                                      |
+
+## Source Authority Note
+
+This GDD is approved as the current MVP tactical-combat implementation authority. Full-vision details remain out of scope unless a READY story explicitly authorizes them. For `STORY-TAC-002`, the binding sections are §§3, 4, 5, 6.0, 6.1, and 6.2; later tactical systems must still be story-scoped and may require additional approval packets.
 
 ## 2. Readability Rules for This GDD
 

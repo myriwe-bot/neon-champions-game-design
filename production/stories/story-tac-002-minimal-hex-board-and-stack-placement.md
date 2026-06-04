@@ -47,6 +47,8 @@ As a player/system, I want a tiny real hex tactical board that can place attacke
 
 ## Source requirements
 
+Source authority reconciliation: `design/gdd/tactical-combat.md` and `design/gdd/tactical-combat/overview-and-scope.md` were promoted to approved on 2026-06-04 after Codex correctly stopped on their stale draft/pending front matter. STORY-TAC-002 remains limited to the exact sections and scope below; this does not authorize broader tactical systems.
+
 Exact source references:
 
 - GDD path + section/rule:

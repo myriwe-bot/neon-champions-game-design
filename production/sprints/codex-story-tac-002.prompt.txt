@@ -6,6 +6,7 @@ Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-desi
 Required process:
 1. Read, in order:
    - design/control story file: production/stories/story-tac-002-minimal-hex-board-and-stack-placement.md
+   - source-authority fix note: tactical-combat.md and tactical-combat/overview-and-scope.md are approved; if your local design repo still shows them as draft/pending, run `git pull --ff-only origin main` in the design repo before continuing.
    - parent epic: production/epics/epic-strat-mvp-001-strategic-mvp-core-loop.md
    - closeout train: production/sprints/strategic-mvp-closeout-story-train-002.md
    - prior required story: production/stories/story-tac-001-battle-setup-result-dto-contracts.md

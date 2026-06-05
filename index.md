@@ -71,7 +71,7 @@
 - [[production/stories/story-tac-004-minimal-battle-end-and-result-return]] — DONE/merged minimal battle end and BattleResult return story.
 - [[production/stories/story-loop-002-visible-guarded-site-capture-smoke]] — DONE/merged visible guarded-site capture smoke story.
 - [[production/stories/story-tac-005-basic-tactical-player-controls]] — DONE/merged basic tactical player controls story.
-- [[production/stories/story-map-001-larger-two-base-strategic-map-slice]] — draft next candidate for larger two-base strategic map slice; not READY until human approval.
+- [[production/stories/story-map-001-larger-two-base-strategic-map-slice]] — READY-candidate for larger two-base strategic map slice; ambiguity resolved, approval pending before implementation.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

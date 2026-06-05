@@ -37,7 +37,7 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-005` is merged. There is no new READY implementation packet yet. The next drafted candidate is `STORY-MAP-001 Larger Two-Base Strategic Map Slice`; review and resolve its ambiguity check before running Codex.
+`STORY-TAC-005` is merged. There is no new READY implementation packet yet. `STORY-MAP-001 Larger Two-Base Strategic Map Slice` is now READY-candidate with ambiguity resolved; it still needs explicit implementation approval before Codex runs.
 
 Do not run an implementation agent from this document until a story is explicitly marked READY/approved.
 
@@ -53,7 +53,7 @@ git pull --ff-only origin main
 code .\production\stories\story-map-001-larger-two-base-strategic-map-slice.md
 ```
 
-Only after human approval promotes `STORY-MAP-001` to READY should a checked-in Codex prompt be created and run.
+Only after explicit human implementation approval promotes `STORY-MAP-001` to READY should a checked-in Codex prompt be created and run.
 
 ## Windows PowerShell preflight
 
@@ -74,7 +74,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — no approved implementation packet
 
-`STORY-MAP-001` is drafted but not READY. Do not run Codex yet.
+`STORY-MAP-001` is READY-candidate but not READY. Do not run Codex yet.
 
 Review this file first:
 
@@ -107,7 +107,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None. `STORY-MAP-001` is a draft candidate and has no implementation prompt yet.
+- None. `STORY-MAP-001` is a READY-candidate and has no implementation prompt yet.
 
 ## After Codex finishes
 

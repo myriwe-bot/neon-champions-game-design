@@ -311,3 +311,8 @@
 - Recorded final PR-head CI and post-merge main verification evidence; post-merge push run was replaced by workflow-dispatch verification run `27016431640`, which passed Compile, EditMode, Placeholder Validator, and PlayMode.
 - Updated `EPIC-VSLICE-MVP-002`, closeout train, index, and run-prompt instructions so no stale TAC-005 implementation prompt is presented as current.
 - Drafted `production/stories/story-map-001-larger-two-base-strategic-map-slice.md` as the next candidate; it remains draft/pending with ambiguity questions and is not READY until human approval.
+
+## 2026-06-05 — STORY-MAP-001 ambiguity resolved
+
+- Updated `production/stories/story-map-001-larger-two-base-strategic-map-slice.md` to READY-candidate after user decisions: central objective gets a minimal non-victory interaction, base/hub is a real minimal site type, and PlayMode smoke must prove two possible guarded neutral choices.
+- Updated epic, story train, run prompts, and index traceability. `STORY-MAP-001` remains approval-pending and must not be implemented until explicitly promoted to READY.

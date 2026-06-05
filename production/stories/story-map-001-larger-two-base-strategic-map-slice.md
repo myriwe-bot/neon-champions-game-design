@@ -1,7 +1,7 @@
 ---
 title: STORY-MAP-001 Larger Two-Base Strategic Map Slice
 type: story
-status: draft
+status: ready-candidate
 phase: production
 owner: shared
 created: 2026-06-05
@@ -23,7 +23,7 @@ approval: pending
 
 ## Status
 
-Draft next implementation candidate after `STORY-TAC-005` merged in Unity PR #20. Not READY until human approval is recorded.
+Ready-candidate next implementation packet after `STORY-TAC-005` merged in Unity PR #20. Ambiguity questions were resolved by user direction on 2026-06-05; not READY until explicit implementation approval is recorded.
 
 ## Story type
 
@@ -57,29 +57,31 @@ As a player/designer, I want the prototype to move from a tiny guarded-site lane
 ## In scope
 
 - Replace or extend the current minimal strategic graph into a modest two-faction test map with:
-  - two visible starting hub/base-anchor nodes, one per faction;
+  - two visible real hub/base site nodes, one per faction;
   - one Champion per faction placed at the correct starting anchor;
   - 6-10 total strategic nodes;
   - multiple route choices between starts and neutral sites;
   - at least two guarded neutral sites that reuse the existing guarded-site tactical handoff path;
-  - one clearly marked central/high-value placeholder site or objective node.
+  - one clearly marked central/high-value objective site with a minimal non-victory interaction.
 - Use stable placeholder IDs/localization keys only; no final city, faction, base, or site names.
 - Preserve current hotseat turn ownership, route movement, site interaction, guarded battle trigger, player-driven tactical controls, BattleResult return, and site-control application.
 - Update strategic presentation/HUD enough that the larger map is readable: active faction/champion, reachable routes/sites, owned/neutral/guarded states, and recent capture/result feedback.
+- Implement base/hub as a real site type in the data/domain model at the minimum needed for ownership, placement, and UI/state display; do not add recruitment, production, construction, or economy behavior in this story.
 - Keep map data deterministic and serializable through the current domain/runtime structures.
 - Add evidence package under `production/evidence/STORY-MAP-001/README.md`.
 
 ## Out of scope
 
 - Recruitment/reinforcement rules, stock, costs, base production, town buildings, market/economy depth, victory-condition completion, strategic AI, enemy Champion tactical contests, final map art, final names, save/load format, map editor, fog/intel systems, route blocking/weather/logistics, and tactical mechanics beyond what already exists.
+- Any base/hub behavior beyond minimal real site typing, ownership display, starting placement, and stable interaction/readability hooks.
 - Adding new final data-authoring architecture or replacing the approved graph topology model.
 
 ## Allowed stubs, mocks, placeholders, or temporary data
 
 Allowed:
 
-- Placeholder node/site/base labels and localization keys.
-- Placeholder central objective with no final victory rule yet.
+- Placeholder node/site/base/objective labels and localization keys.
+- Placeholder central objective interaction with no final victory rule yet.
 - Simple fixed route costs if current movement code needs them.
 - Reuse of existing minimal guarded-site fixtures and tactical battle setup.
 
@@ -88,6 +90,7 @@ Not allowed:
 - Final lore names or final balance values.
 - Hidden deterministic auto-capture that bypasses existing tactical handoff where a guarded site is in scope.
 - Implementing recruitment/base systems inside this map story.
+- Treating base/hub as only a visual label; it must be a real minimal site type.
 
 ## Dependencies
 
@@ -95,7 +98,7 @@ Not allowed:
   - `STORY-TAC-005` DONE / merged in Unity PR #20.
   - Existing strategic map graph, hotseat turn, route input, guarded-site battle trigger, tactical handoff, BattleResult application, visible loop, and basic tactical controls must remain on Unity `main`.
 - Required data/assets:
-  - Placeholder-only map/site/base IDs are sufficient.
+  - Placeholder-only map/site/base/objective IDs are sufficient.
 - Required architecture decisions:
   - Strategic-map §9 graph topology remains binding.
   - Current Unity data/runtime/presentation boundaries remain binding.
@@ -104,19 +107,22 @@ Not allowed:
 
 ## Acceptance criteria
 
-- [ ] Given a new scenario starts, both factions have visible starting hub/base-anchor nodes and one Champion each at their own start.
+- [ ] Given a new scenario starts, both factions have visible starting hub/base sites and one Champion each at their own start.
 - [ ] Given the strategic map is displayed, 6-10 total nodes and their route choices are visible/readable enough for screenshot review.
 - [ ] Given the active Champion selects routes/sites, reachable destinations and ownership/guarded states are clear before committing movement or interaction.
 - [ ] Given the active Champion reaches a guarded neutral site, the existing tactical handoff launches and the player can resolve the fight using the STORY-TAC-005 controls.
 - [ ] Given the player wins the guarded fight, the real `BattleResult` returns and the correct site becomes controlled without corrupting other sites or faction ownership.
-- [ ] Given the map has two starting anchors and multiple neutral choices, existing hotseat turn ownership and route movement remain deterministic across turns.
-- [ ] Given placeholder map/base/site labels are used, they are explicitly documented as non-final and stable enough for tests/evidence.
+- [ ] Given the map has two starting bases and multiple neutral choices, existing hotseat turn ownership and route movement remain deterministic across turns.
+- [ ] Given a Champion reaches the central objective site, the player can perform a minimal non-victory interaction and receives readable state/feedback without ending the scenario.
+- [ ] Given base/hub nodes exist, they are represented as a real minimal site type in data/domain state and presentation, not only as visual labels.
+- [ ] Given two possible guarded neutral choices exist, PlayMode smoke proves both are reachable/legible and that guarded-site tactical handoff remains valid from the larger map.
+- [ ] Given placeholder map/base/site/objective labels are used, they are explicitly documented as non-final and stable enough for tests/evidence.
 - [ ] CI passes.
 
 ## Verification requirements
 
-- Unity EditMode tests: Required for map definition validation, starting hub/champion placement, route connectivity/reachability, guarded-site preservation, and no unintended ownership corruption after BattleResult application.
-- Unity PlayMode tests: Required for visible larger-map smoke covering route selection/readability and at least one guarded-site capture on the larger map.
+- Unity EditMode tests: Required for map definition validation, real base/hub site typing, starting base/champion placement, central objective minimal interaction, route connectivity/reachability, guarded-site preservation, and no unintended ownership corruption after BattleResult application.
+- Unity PlayMode tests: Required for visible larger-map smoke covering route selection/readability, both possible guarded neutral choices, and at least one guarded-site capture on the larger map.
 - Integration/data validation tests: Required if new map fixture/schema validation is added.
 - Manual Unity scene/prefab checks: Required if presentation wiring or scene layout changes.
 - Screenshot/video evidence: Required for larger-map readability and post-capture state.
@@ -126,17 +132,17 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: FAIL until human review.
+Status: PASS.
 
-Open questions:
+Resolved user decisions, 2026-06-05:
 
-- Is the next map allowed to introduce a placeholder central objective with no victory condition, or should the central site be purely visual/guarded for now?
-- Should this packet create literal base/hub site types, or only visually labeled starting anchor nodes until the recruitment/base story follows?
-- Is one guarded-site capture enough for this story's smoke, or should the PlayMode smoke prove two possible neutral choices?
+- Central objective: include at least a minimal non-victory interaction; do not leave it purely visual.
+- Base/hub: implement as a real minimal site type now, not only a labeled starting anchor.
+- Guarded neutral choices: PlayMode smoke should prove two possible neutral choices.
 
 Assumptions:
 
-- The next safe step is map expansion only; recruitment/base mechanics remain a later story.
+- The next safe step is map expansion plus minimal site typing/interaction only; recruitment/base mechanics remain a later story.
 - Placeholder labels are acceptable if clearly non-final.
 
 Out of scope:
@@ -145,11 +151,11 @@ Out of scope:
 
 Allowed stubs/mocks:
 
-- Placeholder labels, central objective marker, and fixed tiny map fixture data.
+- Placeholder labels, minimal central objective interaction, real minimal base/hub site type, and fixed map fixture data.
 
 Human-approved exceptions:
 
-- None.
+- User explicitly approved the central objective as minimal non-victory interaction, base/hub as a real site type, and two possible neutral choices in PlayMode smoke on 2026-06-05.
 
 ## Branch / PR requirements
 
@@ -159,7 +165,7 @@ Human-approved exceptions:
 - Required linked GDD/ADR/control docs: strategic-map §§2, 3, 4, 6, 8, 9; control-manifest; testing strategy; CI/build automation.
 - Required root/scoped AGENTS.md instructions: game-design repo `AGENTS.md`; Unity root/scoped `AGENTS.md` files for touched runtime, presentation, tests, and evidence paths.
 - Required evidence summary: map checklist, tests, screenshot/video status, CI, omissions/stubs.
-- Required omissions section: placeholder map/site/base labels, no recruitment/base mechanics, no final victory rule unless separately approved.
+- Required omissions section: placeholder map/site/base/objective labels, no recruitment/base mechanics beyond minimal real base/hub site type, no final victory rule unless separately approved.
 
 PR must explicitly list known omissions, stubs, mocks, assumptions, deferred work, or state `No known omissions`.
 
@@ -178,7 +184,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [ ] Human approval has been given or delegated gate approval is recorded.
 
@@ -198,4 +204,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-DRAFT next candidate. Not READY for implementation until the ambiguity questions are resolved and human approval is recorded.
+READY-candidate. Ambiguity questions are resolved; not READY for implementation until explicit implementation approval is recorded.

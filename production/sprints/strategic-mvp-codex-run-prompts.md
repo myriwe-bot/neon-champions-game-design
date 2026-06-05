@@ -37,35 +37,23 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-LOOP-002` is merged. The next approved implementation packet is `STORY-TAC-005`; use the checked-in prompt file below.
+`STORY-TAC-005` is merged. There is no new READY implementation packet yet. The next drafted candidate is `STORY-MAP-001 Larger Two-Base Strategic Map Slice`; review and resolve its ambiguity check before running Codex.
 
-This addresses the immediate tactical usability gap: the tactical view must allow basic player movement, attack, and pass/wait/defend control before deeper tactics are useful.
+Do not run an implementation agent from this document until a story is explicitly marked READY/approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Preferred single-story run:
+Preferred next-step review:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git fetch origin
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-005.prompt.txt"
-codex exec --sandbox workspace-write $prompt
+code .\production\stories\story-map-001-larger-two-base-strategic-map-slice.md
 ```
 
-If Codex errors with Windows sandbox setup/spawn issues, rerun the last command with:
-
-```powershell
-codex exec --sandbox danger-full-access $prompt
-```
+Only after human approval promotes `STORY-MAP-001` to READY should a checked-in Codex prompt be created and run.
 
 ## Windows PowerShell preflight
 
@@ -84,20 +72,15 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — preferred single-story start
+## Current Prompt A — no approved implementation packet
 
-Use this for the approved `STORY-TAC-005` implementation packet:
+`STORY-MAP-001` is drafted but not READY. Do not run Codex yet.
 
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-005.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-```
-
-If Codex errors with Windows sandbox setup/spawn issues, rerun only after reviewing trust/scope:
+Review this file first:
 
 ```powershell
-codex exec --sandbox danger-full-access $prompt
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+code .\production\stories\story-map-001-larger-two-base-strategic-map-slice.md
 ```
 
 ## Historical prompt-file runs
@@ -120,29 +103,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-tac-004.prompt.txt`
 - `production/sprints/codex-story-strat-005.prompt.txt`
 - `production/sprints/codex-story-loop-002.prompt.txt`
+- `production/sprints/codex-story-tac-005.prompt.txt`
 
 Current approved prompt:
 
-- `production/sprints/codex-story-tac-005.prompt.txt`
+- None. `STORY-MAP-001` is a draft candidate and has no implementation prompt yet.
 
 ## After Codex finishes
 
-Run this from the Unity repo:
-
-```powershell
-git status --short
-git log --oneline -5
-git branch --show-current
-```
-
-If Codex created a branch but did not push:
-
-```powershell
-git push -u origin HEAD
-```
-
-If Codex did not create a PR and GitHub CLI is available:
-
-```powershell
-gh pr create --title "STORY-TAC-005 Basic tactical player controls" --body-file .\PR_BODY.md
-```
+N/A until a next story is promoted to READY and this document is updated with a checked-in prompt.

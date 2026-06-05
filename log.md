@@ -304,3 +304,10 @@
 - Marked `EPIC-STRAT-MVP-001` implemented for the first guarded-site capture loop and moved tactical usability follow-up into `EPIC-VSLICE-MVP-002`.
 - Approved `EPIC-VSLICE-MVP-002` for the next production packet and created READY story `STORY-TAC-005 Basic Tactical Player Controls`.
 - Created checked-in Codex prompt `production/sprints/codex-story-tac-005.prompt.txt` and updated run-prompt instructions.
+
+## [2026-06-05] close | STORY-TAC-005 merged and MAP-001 drafted
+
+- Marked `STORY-TAC-005 Basic Tactical Player Controls` DONE / merged after Unity PR #20 squash-merged as `4bd753cfbb861a49f96daf90378a674d27be5d4f`.
+- Recorded final PR-head CI and post-merge main verification evidence; post-merge push run was replaced by workflow-dispatch verification run `27016431640`, which passed Compile, EditMode, Placeholder Validator, and PlayMode.
+- Updated `EPIC-VSLICE-MVP-002`, closeout train, index, and run-prompt instructions so no stale TAC-005 implementation prompt is presented as current.
+- Drafted `production/stories/story-map-001-larger-two-base-strategic-map-slice.md` as the next candidate; it remains draft/pending with ambiguity questions and is not READY until human approval.

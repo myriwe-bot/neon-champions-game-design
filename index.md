@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-04
+> Last updated: 2026-06-05
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -70,7 +70,8 @@
 - [[production/stories/story-tac-vis-001-minimal-tactical-board-presentation-and-handoff-switch]] — DONE/merged visible tactical board presentation and handoff switch story.
 - [[production/stories/story-tac-004-minimal-battle-end-and-result-return]] — DONE/merged minimal battle end and BattleResult return story.
 - [[production/stories/story-loop-002-visible-guarded-site-capture-smoke]] — DONE/merged visible guarded-site capture smoke story.
-- [[production/stories/story-tac-005-basic-tactical-player-controls]] — READY basic tactical player controls story.
+- [[production/stories/story-tac-005-basic-tactical-player-controls]] — DONE/merged basic tactical player controls story.
+- [[production/stories/story-map-001-larger-two-base-strategic-map-slice]] — draft next candidate for larger two-base strategic map slice; not READY until human approval.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

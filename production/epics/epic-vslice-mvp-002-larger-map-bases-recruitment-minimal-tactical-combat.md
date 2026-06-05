@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-Approved / Story Ready. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. After `STORY-LOOP-002`, human review identified tactical-board usability as the next tactical-deepening concern, so the first READY child story is `STORY-TAC-005 Basic Tactical Player Controls`.
+Approved / Next Candidate Drafted. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005 Basic Tactical Player Controls` is DONE / merged in Unity PR #20. The next drafted candidate is `STORY-MAP-001 Larger Two-Base Strategic Map Slice`, but it remains draft/pending until human review resolves its ambiguity check.
 
 ## Priority tier
 
@@ -109,13 +109,10 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story                                                                    | Status            | Type                              | Depends On                                   | Evidence                                                   |
 | ------------------------------------------------------------------------ | ----------------- | --------------------------------- | -------------------------------------------- | ---------------------------------------------------------- |
-| [STORY-TAC-005 Basic Tactical Player Controls](../stories/story-tac-005-basic-tactical-player-controls.md) | READY | Tactical UI/Input + Integration + UX/Smoke | STORY-LOOP-002, existing minimal tactical domain | Command tests, PlayMode smoke, screenshot/video, CI |
-| STORY-MAP-001 Larger Two-Base Strategic Map Slice                        | Draft placeholder | Config/Data + Visual/Feel         | EPIC-STRAT-MVP-001 closed or compatible main | Map validation, scene smoke, screenshot/video              |
-| STORY-TAC-002 Minimal Hex Tactical Board and Stack Placement             | Draft placeholder | Logic + Visual/Feel               | STORY-TAC-001, tactical-combat hex decision  | Hex coordinate tests, placement tests, scene smoke         |
-| STORY-TAC-003 Minimal Tactical Movement and Attack Resolution            | Draft placeholder | Logic + Integration               | STORY-TAC-002                                | Movement/attack/damage/defeat tests, CI                    |
-| STORY-TAC-004 Minimal Battle End and BattleResult Return                 | Draft placeholder | Logic + Integration               | STORY-TAC-003, STORY-STRAT-005               | BattleResult validation, strategy handoff smoke            |
+| [STORY-TAC-005 Basic Tactical Player Controls](../stories/story-tac-005-basic-tactical-player-controls.md) | DONE / merged | Tactical UI/Input + Integration + UX/Smoke | STORY-LOOP-002, existing minimal tactical domain | Unity PR #20, command tests, PlayMode smoke, screenshot artifact, CI |
+| [STORY-MAP-001 Larger Two-Base Strategic Map Slice](../stories/story-map-001-larger-two-base-strategic-map-slice.md) | Draft / next candidate | Config/Data + Visual/Feel + Strategic Integration | STORY-TAC-005, strategic-map §§2/3/4/6/8/9 | Map validation, route/readability PlayMode smoke, screenshot/video, CI |
 | STORY-STRAT-006 Simple Recruitment Site and Fixed Offer                  | Draft placeholder | Logic + UI/Integration            | strategic-map §11, current strategic map UI  | offer validation, cost/stock/apply tests, screenshot/video |
-| STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice | Draft placeholder | Playtest + Integration + UX/Smoke | MAP-001, TAC-002/003/004, STRAT-006          | end-to-end smoke, screenshot/video, checklist, CI          |
+| STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice | Draft placeholder | Playtest + Integration + UX/Smoke | MAP-001, STRAT-006, existing tactical controls | end-to-end smoke, screenshot/video, checklist, CI          |
 
 Allowed story statuses: Draft, NEEDS WORK, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 

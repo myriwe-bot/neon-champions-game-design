@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-005 Basic Tactical Player Controls
 type: story
-status: ready
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-04
@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-READY. Prepared after `STORY-LOOP-002` merged in Unity PR #19. Human direction recorded on 2026-06-04: the tactical view is currently unusable because it does not allow movement, passing turns, or similar player actions; this should receive attention when tactics deepen further. This story is the smallest approved tactical-usability step.
+DONE / merged. Implemented in Unity PR #20 and squash-merged on 2026-06-05 as `4bd753cfbb861a49f96daf90378a674d27be5d4f`; branch `story/STORY-TAC-005-basic-tactical-player-controls` was deleted. Final PR-head CI passed on head `6824bacd1a239bf2c82b4dbfec1f96a5b8cfa797`; post-merge Unity main verification passed on merge commit `4bd753cfbb861a49f96daf90378a674d27be5d4f` via workflow dispatch run https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27016431640.
 
 ## Story type
 
@@ -132,4 +132,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY for implementation. This authorizes only the minimal player-control layer needed to make the existing tactical board usable for movement, attack, pass/wait/defend, and result return.
+DONE. Implementation matched the minimal player-control layer needed to make the existing tactical board usable for movement, attack, pass/wait/defend, and result return. Remaining tactical depth is deferred to later approved stories.

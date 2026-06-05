@@ -17,6 +17,7 @@ related:
     production/stories/story-strat-005-strategic-battle-result-application,
     production/stories/story-loop-002-visible-guarded-site-capture-smoke,
     production/stories/story-qa-003-guarded-site-capture-readability-and-evidence-pass,
+    production/stories/story-tac-005-basic-tactical-player-controls,
   ]
 approval: approved
 ---
@@ -40,7 +41,8 @@ The train remains intentionally narrow: select guarded site, launch handoff, fig
 |     5 | [STORY-TAC-004 Minimal Battle End and BattleResult Return](../stories/story-tac-004-minimal-battle-end-and-result-return.md)                     | DONE / merged    | Produces real BattleResult from tactical outcome                        | Result DTO cannot validate or tactical layer starts mutating strategic state              |
 |     6 | [STORY-STRAT-005 Strategic Battle Result Application](../stories/story-strat-005-strategic-battle-result-application.md)                         | DONE / merged    | Applies attacker-win: site immediately controlled                       | Reward/victory defaults require broader economy/scenario design                           |
 |     7 | [STORY-LOOP-002 Visible Guarded Site Capture Smoke](../stories/story-loop-002-visible-guarded-site-capture-smoke.md)                             | DONE / merged    | Proves the full visible loop end-to-end                                 | Smoke cannot be completed, evidence is missing, or player cannot understand what happened |
-|     8 | [STORY-QA-003 Guarded Site Capture Readability and Evidence Pass](../stories/story-qa-003-guarded-site-capture-readability-and-evidence-pass.md) | Draft / optional | Use only if LOOP-002 is technically complete but hard to read/judge     | N/A; this is optional closeout polish/evidence                                            |
+|     8 | [STORY-TAC-005 Basic Tactical Player Controls](../stories/story-tac-005-basic-tactical-player-controls.md)                                   | DONE / merged    | Adds minimal movement, attack, pass/wait/defend controls to the visible tactical board | Control smoke/evidence fails or tactical loop regresses                                |
+|     9 | [STORY-QA-003 Guarded Site Capture Readability and Evidence Pass](../stories/story-qa-003-guarded-site-capture-readability-and-evidence-pass.md) | Draft / optional | Use only if current smoke is technically complete but hard to read/judge               | N/A; this is optional closeout polish/evidence                                        |
 
 ## Implementation contract
 
@@ -65,4 +67,4 @@ The train remains intentionally narrow: select guarded site, launch handoff, fig
 
 ## Gate status
 
-Approved story train. Human approval recorded on 2026-06-04. `STORY-STRAT-004` is DONE / merged in Unity PR #13. `STORY-TAC-002` is DONE / merged in Unity PR #14. `STORY-TAC-003` is DONE / merged in Unity PR #15 with post-merge main CI passing. `STORY-TAC-VIS-001` is DONE / merged in Unity PR #16 with final PR-head CI passing. `STORY-TAC-004` is DONE / merged in Unity PR #17 with post-merge main CI passing. `STORY-STRAT-005` is DONE / merged in Unity PR #18 with post-merge main CI passing. `STORY-LOOP-002` is DONE / merged in Unity PR #19 with post-merge main CI passing. Follow-up from human review: tactical view still needs basic player controls before deeper tactics.
+Approved story train. Human approval recorded on 2026-06-04. `STORY-STRAT-004` is DONE / merged in Unity PR #13. `STORY-TAC-002` is DONE / merged in Unity PR #14. `STORY-TAC-003` is DONE / merged in Unity PR #15 with post-merge main CI passing. `STORY-TAC-VIS-001` is DONE / merged in Unity PR #16 with final PR-head CI passing. `STORY-TAC-004` is DONE / merged in Unity PR #17 with post-merge main CI passing. `STORY-STRAT-005` is DONE / merged in Unity PR #18 with post-merge main CI passing. `STORY-LOOP-002` is DONE / merged in Unity PR #19 with post-merge main CI passing. `STORY-TAC-005` is DONE / merged in Unity PR #20 with post-merge main verification passing. The next vertical-slice candidate is drafted as `STORY-MAP-001` under `EPIC-VSLICE-MVP-002`.

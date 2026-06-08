@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-04
+updated: 2026-06-08
 source_lore: []
 related:
   [
@@ -29,6 +29,7 @@ related:
     production/stories/story-strat-005-strategic-battle-result-application,
     production/stories/story-loop-002-visible-guarded-site-capture-smoke,
     production/stories/story-tac-005-basic-tactical-player-controls,
+    production/stories/story-map-001-larger-two-base-strategic-map-slice,
   ]
 approval: approved
 ---
@@ -37,23 +38,27 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-005` is merged. There is no new READY implementation packet yet. `STORY-MAP-001 Larger Two-Base Strategic Map Slice` is now READY-candidate with ambiguity resolved; it still needs explicit implementation approval before Codex runs.
-
-Do not run an implementation agent from this document until a story is explicitly marked READY/approved.
+`STORY-TAC-005` is merged. The current READY implementation packet is `STORY-MAP-001 Larger Two-Base Strategic Map Slice`. Run exactly the checked-in prompt file below; do not implement later recruitment/base-production stories yet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Preferred next-step review:
+Current prompt-file command:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
-code .\production\stories\story-map-001-larger-two-base-strategic-map-slice.md
-```
 
-Only after explicit human implementation approval promotes `STORY-MAP-001` to READY should a checked-in Codex prompt be created and run.
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git fetch origin
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
 
 ## Windows PowerShell preflight
 
@@ -72,15 +77,13 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — no approved implementation packet
+## Current Prompt A — STORY-MAP-001 larger two-base map slice
 
-`STORY-MAP-001` is READY-candidate but not READY. Do not run Codex yet.
-
-Review this file first:
+Use the checked-in prompt file:
 
 ```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-code .\production\stories\story-map-001-larger-two-base-strategic-map-slice.md
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
 ```
 
 ## Historical prompt-file runs
@@ -107,8 +110,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None. `STORY-MAP-001` is a READY-candidate and has no implementation prompt yet.
+- `production/sprints/codex-story-map-001.prompt.txt`
 
 ## After Codex finishes
 
-N/A until a next story is promoted to READY and this document is updated with a checked-in prompt.
+Codex should commit and push `story/STORY-MAP-001-larger-two-base-strategic-map-slice`, then open or prepare a PR titled `STORY-MAP-001 Larger two-base strategic map slice`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

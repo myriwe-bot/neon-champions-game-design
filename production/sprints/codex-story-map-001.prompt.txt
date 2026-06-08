@@ -1,0 +1,58 @@
+You are implementing exactly one READY Neon Champions Unity story: STORY-MAP-001 Larger Two-Base Strategic Map Slice.
+
+Repository roles:
+- Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Hard rules:
+- Implement only STORY-MAP-001. Do not implement recruitment, reinforcement offers, base production, town buildings, economy depth, final victory-condition completion, strategic AI, enemy Champion tactical contests, final map art/names, save/load, map editor, fog/intel systems, route blocking/weather/logistics, or new tactical mechanics beyond the existing guarded-site tactical path.
+- Base/hub must be a real minimal site type in data/domain/presentation state, not merely a visual label; however, no recruitment/production/construction/economy behavior is allowed in this story.
+- The central objective must have a minimal non-victory interaction with readable feedback/state; it must not end the scenario or introduce final victory rules.
+- Use stable placeholder IDs/localization keys only. Do not invent final city, faction, base, site, or lore names.
+- Preserve current hotseat turn ownership, route movement, guarded-site tactical handoff, STORY-TAC-005 player controls, BattleResult return, and site-control application.
+- Use TDD for new map/state validation and regression fixes.
+- Include omissions/stubs explicitly in PR body and evidence.
+
+Before coding, read in order:
+1. Game-design repo AGENTS.md.
+2. Unity repo AGENTS.md and scoped AGENTS.md files for touched runtime, presentation, tests, and evidence paths.
+3. production/stories/story-map-001-larger-two-base-strategic-map-slice.md.
+4. design/gdd/strategic-map.md §§2, 3, 4, 6, 8, 9.
+5. docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10.
+6. docs/architecture/testing-strategy.md and docs/architecture/ci-build-automation.md.
+7. Existing Unity strategic map graph/runtime/presentation/tests and guarded-site tactical handoff/result-application paths from STORY-STRAT-004, STORY-STRAT-005, STORY-LOOP-002, and STORY-TAC-005.
+
+Implementation scope:
+- Create branch: story/STORY-MAP-001-larger-two-base-strategic-map-slice
+- Replace or extend the current minimal strategic graph into a deterministic modest two-faction test map with:
+  - 6-10 total strategic nodes;
+  - two visible real hub/base site nodes, one per faction;
+  - one Champion per faction placed at the correct starting base;
+  - multiple route choices between starts and neutral sites;
+  - at least two guarded neutral sites that reuse the existing guarded-site tactical handoff path;
+  - one clearly marked central/high-value objective site with a minimal non-victory interaction.
+- Update strategic presentation/HUD enough that the larger map is readable: active faction/champion, reachable routes/sites, owned/neutral/guarded states, and recent capture/objective feedback.
+- Keep map data deterministic and serializable through the current domain/runtime structures.
+- Keep placeholders clearly documented as non-final.
+- Add evidence package under production/evidence/STORY-MAP-001/README.md in the Unity repo.
+
+Required tests/evidence:
+- EditMode tests for map definition validation, real base/hub site typing, starting base/champion placement, central objective minimal interaction, route connectivity/reachability, guarded-site preservation, and no unintended ownership corruption after BattleResult application.
+- PlayMode smoke for visible larger-map readability, both possible guarded neutral choices being reachable/legible, guarded-site tactical handoff from the larger map, and at least one guarded-site capture.
+- Manual Unity scene/prefab checks if presentation wiring or scene layout changes.
+- Screenshot/video evidence for larger-map readability and post-capture/objective state, or a documented blocker if impossible.
+- git diff --check and Unity .meta pairing check.
+- CI passing on PR.
+- Evidence package must include map checklist, tests, screenshot/video status, CI status, omissions/stubs, and any deferred work.
+
+Stop conditions:
+- Stop if a required source doc appears draft/pending/contradictory after pulling latest game-design main.
+- Stop if Unity main has unrelated dirty files.
+- Stop if implementing STORY-MAP-001 requires recruitment/base production/economy/victory systems or final content naming.
+- Stop rather than weakening test/evidence requirements without human approval.
+
+After implementation:
+- Commit and push the branch.
+- Open PR titled: STORY-MAP-001 Larger two-base strategic map slice
+- PR body must link STORY-MAP-001, list source/contract docs, summarize changed files, map acceptance checklist, tests/evidence, CI status, screenshots/video status, and omissions/stubs/deferred work.
+- If Codex cannot commit/push/open PR, provide exact PowerShell/git/gh commands for the human to run and leave the working tree clean except for intended story changes.

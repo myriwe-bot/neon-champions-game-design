@@ -1,11 +1,11 @@
 ---
 title: STORY-MAP-001 Larger Two-Base Strategic Map Slice
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 source_lore: []
 related:
   [
@@ -16,14 +16,14 @@ related:
     production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat,
     production/stories/story-tac-005-basic-tactical-player-controls,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-MAP-001 Larger Two-Base Strategic Map Slice
 
 ## Status
 
-Ready-candidate next implementation packet after `STORY-TAC-005` merged in Unity PR #20. Ambiguity questions were resolved by user direction on 2026-06-05; not READY until explicit implementation approval is recorded.
+READY implementation packet after `STORY-TAC-005` merged in Unity PR #20. Ambiguity questions were resolved by user direction on 2026-06-05; explicit implementation approval recorded on 2026-06-08.
 
 ## Story type
 
@@ -186,7 +186,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Required automated tests/validators/PlayMode evidence are listed.
 - [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded on 2026-06-08.
 
 ## DONE gate
 
@@ -204,4 +204,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-READY-candidate. Ambiguity questions are resolved; not READY for implementation until explicit implementation approval is recorded.
+READY. Human implementation approval recorded on 2026-06-08. No known story-readiness blockers; implement exactly this story scope.

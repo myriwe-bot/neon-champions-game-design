@@ -316,3 +316,11 @@
 
 - Updated `production/stories/story-map-001-larger-two-base-strategic-map-slice.md` to READY-candidate after user decisions: central objective gets a minimal non-victory interaction, base/hub is a real minimal site type, and PlayMode smoke must prove two possible guarded neutral choices.
 - Updated epic, story train, run prompts, and index traceability. `STORY-MAP-001` remains approval-pending and must not be implemented until explicitly promoted to READY.
+
+
+## [2026-06-08] approve | STORY-MAP-001 implementation packet
+
+- Recorded explicit human implementation approval for `production/stories/story-map-001-larger-two-base-strategic-map-slice.md`.
+- Promoted STORY-MAP-001 from READY-candidate to READY with approved scope: larger deterministic two-base map, real minimal base/hub site type, minimal non-victory central objective interaction, and two guarded neutral choices in PlayMode smoke.
+- Added `production/sprints/codex-story-map-001.prompt.txt` as the copy-safe Codex implementation prompt.
+- Updated `EPIC-VSLICE-MVP-002`, closeout train, run prompts, and index discoverability.

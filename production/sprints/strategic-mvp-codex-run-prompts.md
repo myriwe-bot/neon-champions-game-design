@@ -58,6 +58,9 @@ git status --short
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
+
+# If the Windows sandbox is blocking trusted repo work, use the danger-full-access variant:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -84,6 +87,9 @@ Use the checked-in prompt file:
 ```powershell
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Historical prompt-file runs

@@ -333,3 +333,11 @@
 - Recorded final PR-head CI and post-merge main CI run `27127890489`, which passed Compile, EditMode, Placeholder Validator, and PlayMode.
 - Drafted `production/stories/story-strat-006-simple-recruitment-site-fixed-offer.md` as the next candidate; it remains READY-candidate / approval pending with ambiguity questions before implementation.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability.
+
+
+## [2026-06-08] approve | STORY-STRAT-006 implementation packet
+
+- Recorded human approval for `production/stories/story-strat-006-simple-recruitment-site-fixed-offer.md`.
+- Promoted STORY-STRAT-006 from READY-candidate to READY with approved scope: one unguarded dwelling/recruitment site, two player-choice fixed offers, normal costing Credits only, upgraded costing Credits + Materials, and both adding new placeholder stacks.
+- Added `production/sprints/codex-story-strat-006.prompt.txt` as the copy-safe Codex implementation prompt with workspace-write and danger-full-access command variants.
+- Updated `EPIC-VSLICE-MVP-002`, run prompts, and index discoverability.

@@ -39,19 +39,29 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-MAP-001` is merged. There is no new READY implementation packet yet. The next drafted candidate is `STORY-STRAT-006 Simple Recruitment Site and Fixed Offer`; review and resolve its ambiguity questions before running Codex.
+`STORY-MAP-001` is merged. The current READY implementation packet is `STORY-STRAT-006 Simple Recruitment Site and Fixed Offers`. Run exactly the checked-in prompt file below; do not implement town/base production or larger-loop smoke yet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Preferred next-step review:
+Current prompt-file command:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-code .\production\stories\story-strat-006-simple-recruitment-site-fixed-offer.md
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git fetch origin
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-006.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+
+# If the Windows sandbox is blocking trusted repo work, use the danger-full-access variant:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -71,15 +81,16 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — no approved implementation packet
+## Current Prompt A — STORY-STRAT-006 simple recruitment site and fixed offers
 
-`STORY-STRAT-006` is READY-candidate but not READY. Do not run Codex yet.
-
-Review this file first:
+Use the checked-in prompt file:
 
 ```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-code .\production\stories\story-strat-006-simple-recruitment-site-fixed-offer.md
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-006.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Historical prompt-file runs
@@ -104,11 +115,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-loop-002.prompt.txt`
 - `production/sprints/codex-story-tac-005.prompt.txt`
 - `production/sprints/codex-story-map-001.prompt.txt`
+- `production/sprints/codex-story-strat-006.prompt.txt`
 
 Current approved prompt:
 
-- None. `STORY-STRAT-006` is a READY-candidate and has no implementation prompt yet.
+- `production/sprints/codex-story-strat-006.prompt.txt`
 
 ## After Codex finishes
 
-N/A until a next story is promoted to READY and this document is updated with a checked-in prompt.
+Codex should commit and push `story/STORY-STRAT-006-simple-recruitment-site-fixed-offer`, then open or prepare a PR titled `STORY-STRAT-006 Simple recruitment site and fixed offers`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

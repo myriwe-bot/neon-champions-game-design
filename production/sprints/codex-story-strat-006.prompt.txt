@@ -1,0 +1,62 @@
+You are implementing exactly one READY Neon Champions Unity story: STORY-STRAT-006 Simple Recruitment Site and Fixed Offers.
+
+Repository roles:
+- Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Hard rules:
+- Implement only STORY-STRAT-006. Do not implement town/base production, building trees, full economy, dynamic pricing, recurring stock refresh, faction-specific recruitment economies, reserves, caravans, garrisons, multiple recruitment sites, more than the two approved offers, final unit/site names, final unit balance, final UI art, strategic AI, save/load format changes, or tactical mechanics changes.
+- The site is a dwelling/recruitment site with exactly two player-choice fixed offers:
+  - normal offer: Credits-only cost;
+  - upgraded offer: Credits + Materials cost.
+- Both offers add a new placeholder stack to the active Champion army. Do not merge/reinforce existing stacks in this story.
+- The recruitment site is unguarded for now. Do not gate this story's recruitment by tactical battle.
+- Use stable placeholder IDs/localization keys only. Do not invent final city, faction, dwelling, site, unit, or lore names.
+- Recruitment must be an explicit preview/apply interaction. Do not auto-recruit on movement/visit.
+- Deduct resources and decrement stock only on successful apply of the selected offer.
+- Failed recruitment must not mutate resources, army, either offer's stock, movement, site control, turn ownership, or tactical state.
+- Preserve current larger-map route movement, hotseat turn ownership, guarded-site tactical handoff, BattleResult application, central objective interaction, STORY-TAC-005 controls, and map readability.
+- Use TDD for recruitment validation/application and regression fixes.
+- Include omissions/stubs explicitly in PR body and evidence.
+
+Before coding, read in order:
+1. Game-design repo AGENTS.md.
+2. Unity repo AGENTS.md and scoped AGENTS.md files for touched runtime, presentation, tests, and evidence paths.
+3. production/stories/story-strat-006-simple-recruitment-site-fixed-offer.md.
+4. design/gdd/strategic-map.md §§4, 6, 8, 10, 11, 12.
+5. docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10.
+6. docs/architecture/testing-strategy.md and docs/architecture/ci-build-automation.md.
+7. Existing Unity larger-map runtime/presentation/tests from STORY-MAP-001 and guarded-site/central-objective/site-interaction paths.
+
+Implementation scope:
+- Create branch: story/STORY-STRAT-006-simple-recruitment-site-fixed-offer
+- Add exactly one visible unguarded dwelling/recruitment site to the current deterministic STORY-MAP-001 map fixture.
+- Represent it as a real recruitment/dwelling site category or approved equivalent in domain data/runtime/presentation, not only as a label.
+- Add exactly two fixed placeholder offers with stable IDs, placeholder unit/stack references, fixed finite stock, and fixed costs:
+  - normal: Credits only;
+  - upgraded: Credits + Materials.
+- Preview both offers before commitment: offer ID/unit label, cost, remaining stock, and affordability for the active faction.
+- Apply exactly the selected offer after validation: deduct correct resources, add correct new placeholder stack/count to active Champion army, decrement only selected offer stock, consume Champion major interaction, and show readable feedback.
+- Reject unaffordable, exhausted-stock, inactive-faction/Champion, invalid-site, and invalid-selection cases with readable feedback and no unintended mutation.
+- Add evidence package under production/evidence/STORY-STRAT-006/README.md in the Unity repo.
+
+Required tests/evidence:
+- EditMode tests for recruitment offer definition validation, normal Credits-only cost/stock validation, upgraded Credits+Materials cost/stock validation, successful selected-offer resource/army/stock mutation, unaffordable rejection/no mutation, exhausted-stock rejection/no mutation, inactive-faction rejection/no mutation, and guarded-site/central-objective regression preservation.
+- PlayMode smoke for visible recruitment site readability, both-offer preview, successful normal or upgraded recruitment feedback, and at least one rejection case if feasible.
+- Manual Unity scene/prefab checks if presentation wiring or scene layout changes.
+- Screenshot/video evidence for both-offer preview and successful recruitment state; rejection screenshot preferred if feasible.
+- git diff --check and Unity .meta pairing check.
+- CI passing on PR.
+- Evidence package must include recruitment checklist, tests, screenshot/video status, CI status, omissions/stubs, and deferred work.
+
+Stop conditions:
+- Stop if a required source doc appears draft/pending/contradictory after pulling latest game-design main.
+- Stop if Unity main has unrelated dirty files.
+- Stop if implementing STORY-STRAT-006 requires town/base production, full economy, more recruitment offers/sites, reserves/garrisons, tactical changes, final content naming, or save/load format changes.
+- Stop rather than weakening test/evidence requirements without human approval.
+
+After implementation:
+- Commit and push the branch.
+- Open PR titled: STORY-STRAT-006 Simple recruitment site and fixed offers
+- PR body must link STORY-STRAT-006, list source/contract docs, summarize changed files, normal/upgraded offer acceptance checklist, tests/evidence, CI status, screenshots/video status, and omissions/stubs/deferred work.
+- If Codex cannot commit/push/open PR, provide exact PowerShell/git/gh commands for the human to run and leave the working tree clean except for intended story changes.

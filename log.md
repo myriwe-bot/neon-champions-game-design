@@ -324,3 +324,12 @@
 - Promoted STORY-MAP-001 from READY-candidate to READY with approved scope: larger deterministic two-base map, real minimal base/hub site type, minimal non-victory central objective interaction, and two guarded neutral choices in PlayMode smoke.
 - Added `production/sprints/codex-story-map-001.prompt.txt` as the copy-safe Codex implementation prompt.
 - Updated `EPIC-VSLICE-MVP-002`, closeout train, run prompts, and index discoverability.
+
+
+## [2026-06-08] close | STORY-MAP-001 merged and STRAT-006 drafted
+
+- Marked `STORY-MAP-001 Larger Two-Base Strategic Map Slice` DONE / merged after Unity PR #21 squash-merged as `6e3e5efdda81d46b4b2080ba0a9c06c2f356d2f6`.
+- Recorded merge-gate fix commit `49ad163a52cb7921df7e15cab0770b7a3d5bf44e`: stale evidence CI text removed and central-objective interaction validation tightened to the authored runtime objective ID.
+- Recorded final PR-head CI and post-merge main CI run `27127890489`, which passed Compile, EditMode, Placeholder Validator, and PlayMode.
+- Drafted `production/stories/story-strat-006-simple-recruitment-site-fixed-offer.md` as the next candidate; it remains READY-candidate / approval pending with ambiguity questions before implementation.
+- Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability.

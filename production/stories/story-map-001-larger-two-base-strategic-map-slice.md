@@ -1,7 +1,7 @@
 ---
 title: STORY-MAP-001 Larger Two-Base Strategic Map Slice
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-05
@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-READY implementation packet after `STORY-TAC-005` merged in Unity PR #20. Ambiguity questions were resolved by user direction on 2026-06-05; explicit implementation approval recorded on 2026-06-08.
+DONE / merged. Implemented in Unity PR #21, squash merge commit `6e3e5efdda81d46b4b2080ba0a9c06c2f356d2f6`; post-merge main CI run `27127890489` passed Compile, EditMode, Placeholder Validator, and PlayMode on 2026-06-08.
 
 ## Story type
 
@@ -192,16 +192,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 A story may be marked DONE only when all items are true:
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists in Unity `production/evidence/STORY-MAP-001/README.md`.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass; final PR head `49ad163a52cb7921df7e15cab0770b7a3d5bf44e` and post-merge main run `27127890489` passed.
+- [x] No unauthorized design or architecture decisions were introduced; merge-gate fix tightened central-objective validation to the authored runtime objective ID.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY. Human implementation approval recorded on 2026-06-08. No known story-readiness blockers; implement exactly this story scope.
+DONE. Unity PR #21 merged and post-merge main CI passed. Follow-up implementation candidate is `STORY-STRAT-006 Simple Recruitment Site and Fixed Offer`, drafted as READY-candidate / approval pending.

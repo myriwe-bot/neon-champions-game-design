@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-09
@@ -19,14 +19,14 @@ related:
     production/stories/story-qa-001-strategic-smoke-cleanup-readability-bugfix-pass,
     production/stories/story-qa-002-strategic-map-readability-actor-clarity-fix-pass,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass
 
 ## Status
 
-READY-candidate / approval pending. Drafted after `STORY-LOOP-003` merged and proved the connected recruitment-to-capture loop, but human review flagged the current visual layer as too hard to read and interact with: BMP evidence is difficult to parse, layout does not use the screen well, buttons/controls need to be clearer and clickable, and all views should open and function cleanly.
+READY. Human approval recorded on 2026-06-09. Drafted after `STORY-LOOP-003` merged and proved the connected recruitment-to-capture loop, but human review flagged the current visual layer as too hard to read and interact with: BMP evidence is difficult to parse, layout does not use the screen well, buttons/controls need to be clearer and clickable, and all views should open and function cleanly.
 
 This packet is intentionally a visual/readability pass over the existing connected slice, not a new gameplay-system packet.
 
@@ -178,7 +178,7 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: NEEDS APPROVAL.
+Status: PASS.
 
 Resolved user direction, 2026-06-09:
 
@@ -189,9 +189,7 @@ Resolved user direction, 2026-06-09:
 - Layout should be cleaner, scale with the screen, and use more of the screen.
 - All views should properly open and remain functional.
 
-Open approval item:
-
-- Human must approve this exact packet as READY before Codex runs it.
+Human approval recorded on 2026-06-09: implement this exact packet next as the visual/readability/clickability pass for the connected loop slice.
 
 Assumptions:
 
@@ -223,9 +221,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -243,4 +241,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-READY-candidate. Strongly recommended next slice after LOOP-003, but not implementation-authorized until human approval promotes it to READY.
+READY. Human approval recorded on 2026-06-09. Implement exactly this visual/readability/clickability pass and do not expand into new gameplay systems or final UI/art architecture.

@@ -42,7 +42,7 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-LOOP-003` is merged and post-merge Unity `main` CI passed. The next prepared packet is `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass`, currently READY-candidate / approval pending. Do not run Codex for QA-003 until a human promotes it to READY / approved.
+`STORY-LOOP-003` is merged and post-merge Unity `main` CI passed. The current READY implementation packet is `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass`. Run exactly the checked-in prompt file below; keep the packet focused on visual readability, scalable screen use, and clickable controls/views for the existing connected loop slice.
 
 ## Copy-safe prompt-file mode
 
@@ -87,9 +87,9 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Prepared Prompt A — STORY-QA-003 loop slice visual readability and clickable layout
+## Current Prompt A — STORY-QA-003 loop slice visual readability and clickable layout
 
-Prepared prompt file, not runnable until human approval promotes STORY-QA-003 to READY:
+Use the checked-in prompt file:
 
 ```powershell
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-003.prompt.txt"
@@ -128,8 +128,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None. `STORY-QA-003` is not approved yet.
+- `production/sprints/codex-story-qa-003.prompt.txt`
 
 ## After Codex finishes
 
-After STORY-QA-003 is approved and implemented, Codex should commit and push `story/STORY-QA-003-loop-slice-visual-readability-clickable-layout`, then open or prepare a PR titled `STORY-QA-003 Loop slice visual readability and clickable layout pass`. Review the PR against the story contract, before/after evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-QA-003-loop-slice-visual-readability-clickable-layout`, then open or prepare a PR titled `STORY-QA-003 Loop slice visual readability and clickable layout pass`. Review the PR against the story contract, before/after evidence package, CI, and omissions before merging.

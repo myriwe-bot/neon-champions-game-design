@@ -1,6 +1,4 @@
-DO NOT RUN YET: STORY-QA-003 is currently READY-candidate / approval pending and is not implementation authority until the game-design repo marks it READY with approval: approved.
-
-When approved, implement exactly one Neon Champions Unity story: STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass.
+Implement exactly one READY Neon Champions Unity story: STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass.
 
 Repository roles:
 - Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -11,7 +9,7 @@ Hard stop before coding:
 - Read production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md.
 - Confirm frontmatter says status: ready and approval: approved.
 - Confirm Ambiguity Check says PASS.
-- If not, stop and report that STORY-QA-003 is not approved.
+- If not, stop and report that STORY-QA-003 is not approved in the pulled game-design repo.
 - Implement only STORY-QA-003.
 
 Hard rules:

@@ -380,3 +380,11 @@
 - Drafted `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass` from human feedback that current BMP/layout evidence is hard to read and controls/views need clearer clickable scalable layout.
 - Added guarded prompt file `production/sprints/codex-story-qa-003.prompt.txt`; it stops unless QA-003 is promoted to READY/approved.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, index, and story verdicts.
+
+## [2026-06-09] approve | STORY-QA-003 implementation packet
+
+- Recorded human approval for `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass` and promoted it from READY-candidate / pending to READY / approved.
+- Updated Ambiguity Check to PASS with the approved visual/readability/clickability scope.
+- Activated `production/sprints/codex-story-qa-003.prompt.txt` by removing stale DO NOT RUN / approval-pending language while keeping the preflight check for READY/approved/PASS.
+- Repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to QA-003 as the current approved prompt.
+- Updated `EPIC-VSLICE-MVP-002` and index traceability.

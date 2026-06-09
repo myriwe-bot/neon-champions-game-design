@@ -75,7 +75,7 @@
 - [[production/stories/story-strat-006-simple-recruitment-site-fixed-offer]] — DONE/merged simple recruitment site and fixed normal/upgraded offers implementation packet.
 - [[production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice]] — DONE/merged larger-map recruitment and neutral-capture connected smoke story.
 - [[production/stories/story-tac-006-multi-stack-attacker-tactical-setup]] — DONE/merged tactical setup prerequisite for recruited multi-stack attacker armies.
-- [[production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass]] — READY-candidate visual/readability and clickable-layout pass for the connected loop slice.
+- [[production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass]] — READY visual/readability and clickable-layout pass for the connected loop slice.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

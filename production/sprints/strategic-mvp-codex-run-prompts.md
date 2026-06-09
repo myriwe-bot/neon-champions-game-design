@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-08
+updated: 2026-06-09
 source_lore: []
 related:
   [
@@ -31,6 +31,7 @@ related:
     production/stories/story-tac-005-basic-tactical-player-controls,
     production/stories/story-map-001-larger-two-base-strategic-map-slice,
     production/stories/story-strat-006-simple-recruitment-site-fixed-offer,
+    production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice,
   ]
 approval: approved
 ---
@@ -39,17 +40,20 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-MAP-001` is merged. The current READY implementation packet is `STORY-STRAT-006 Simple Recruitment Site and Fixed Offers`. Run exactly the checked-in prompt file below; do not implement town/base production or larger-loop smoke yet.
+`STORY-STRAT-006` is merged. The next prepared packet is `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice`, currently DRAFT / READY-candidate pending human approval. Do not run Codex for LOOP-003 until its story frontmatter says `status: ready`, `approval: approved`, and Ambiguity Check is PASS.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current prompt-file command:
+Current prompt-file command after human approval:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
+
+# Verify STORY-LOOP-003 is READY/approved before running Codex.
+Select-String -Path production\stories\story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -57,7 +61,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-006.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-003.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # If the Windows sandbox is blocking trusted repo work, use the danger-full-access variant:
@@ -81,12 +85,12 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — STORY-STRAT-006 simple recruitment site and fixed offers
+## Current Prompt A — STORY-LOOP-003 larger map recruitment and neutral capture smoke
 
-Use the checked-in prompt file:
+Prepared prompt file, not runnable until human approval promotes STORY-LOOP-003 to READY:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-006.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-003.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -117,10 +121,14 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-map-001.prompt.txt`
 - `production/sprints/codex-story-strat-006.prompt.txt`
 
+Prepared next prompt, pending human approval:
+
+- `production/sprints/codex-story-loop-003.prompt.txt`
+
 Current approved prompt:
 
-- `production/sprints/codex-story-strat-006.prompt.txt`
+- None. `STORY-LOOP-003` is not approved yet.
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-STRAT-006-simple-recruitment-site-fixed-offer`, then open or prepare a PR titled `STORY-STRAT-006 Simple recruitment site and fixed offers`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+After STORY-LOOP-003 is approved and implemented, Codex should commit and push `story/STORY-LOOP-003-larger-map-recruitment-neutral-capture-smoke`, then open or prepare a PR titled `STORY-LOOP-003 Larger map recruitment and neutral capture vertical slice`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

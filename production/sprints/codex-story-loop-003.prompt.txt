@@ -1,0 +1,72 @@
+DO NOT RUN YET: STORY-LOOP-003 is currently draft / READY-candidate and is not implementation authority until the game-design repo marks it READY with approval: approved.
+
+When the story is approved, this file becomes the checked-in Codex prompt for exactly one Neon Champions Unity story: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice.
+
+Repository roles:
+- Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Hard stop before coding:
+- Pull latest game-design main.
+- Read production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md.
+- Confirm frontmatter says status: ready and approval: approved.
+- Confirm Ambiguity Check says PASS.
+- If not, stop and report that STORY-LOOP-003 is not approved.
+
+If approved, implement only STORY-LOOP-003.
+
+Hard rules:
+- Compose the existing larger-map, recruitment, guarded-site handoff, tactical controls, BattleResult application, and capture feedback into one connected PlayMode smoke path.
+- Do not implement town/base production, building trees, full economy, dynamic pricing, recurring stock refresh, faction-specific recruitment economies, reserves, caravans, garrisons, more recruitment sites/offers, final content naming, final balance, strategic AI, save/load format changes, tactical mechanics changes, tactical AI improvements, ability systems, animation/audio/art polish, or campaign victory polish.
+- Use existing placeholder IDs/localization keys only.
+- Do not fake screenshots or mutate state through hidden test-only shortcuts that bypass public runtime/domain/application paths.
+- Preserve existing route movement, hotseat turn ownership, recruitment offer behavior, guarded-site tactical handoff, BattleResult application, central objective interaction, STORY-TAC-005 controls, and map readability.
+- Use TDD for any new domain/application behavior or regression fix.
+- Include omissions/stubs explicitly in PR body and evidence.
+
+Before coding, read in order:
+1. Game-design repo AGENTS.md.
+2. Unity repo AGENTS.md and scoped AGENTS.md files for touched runtime, presentation, tests, and evidence paths.
+3. production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md.
+4. design/gdd/strategic-map.md §§2, 3, 4, 6, 8, 10, 11, 12, 14.
+5. tactical-combat MVP implementation contract sections referenced by the story.
+6. docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10.
+7. docs/architecture/testing-strategy.md and docs/architecture/ci-build-automation.md.
+8. Existing Unity larger-map, recruitment, guarded-site, tactical controls, BattleResult, and smoke/evidence code.
+
+Implementation scope:
+- Create branch: story/STORY-LOOP-003-larger-map-recruitment-neutral-capture-smoke
+- Add or update exactly one connected PlayMode smoke path:
+  1. start deterministic two-base larger-map scenario;
+  2. show active faction/controller/Champion/resources and reachable route;
+  3. move to the existing recruitment site;
+  4. preview both fixed recruitment offers;
+  5. apply one selected affordable offer;
+  6. show selected cost deduction, new placeholder stack, selected stock decrement, and feedback;
+  7. continue to an existing neutral guarded site;
+  8. launch tactical handoff through existing DTO path;
+  9. resolve through existing minimal tactical controls;
+  10. return BattleResult to the strategic layer and show guarded-site capture/reward feedback.
+- Add evidence package under production/evidence/STORY-LOOP-003/README.md in the Unity repo.
+
+Required tests/evidence:
+- PlayMode smoke for the connected recruitment-then-neutral-capture path.
+- Existing EditMode/PlayMode regression suites still passing.
+- Add targeted EditMode/domain tests only if you fix a new domain/application edge case.
+- Screenshot evidence for: recruitment preview, successful recruitment state, tactical handoff, post-capture strategic result.
+- git diff --check and Unity .meta pairing check.
+- CI passing on PR.
+- Evidence README must include connected smoke checklist, tests, screenshot/video status, CI status, omissions/stubs, and a short design/playtest note about what the path proves and what remains thin.
+
+Stop conditions:
+- Stop if STORY-LOOP-003 is not READY/approved after pulling latest game-design main.
+- Stop if Unity main has unrelated dirty files.
+- Stop if the connected smoke requires a new gameplay system rather than narrow integration/readability glue.
+- Stop if scope pressures you toward town/base production, full economy, new tactical mechanics, strategic AI, save/load, final naming/balance, or enemy-faction contests.
+- Stop rather than weakening test/evidence requirements without human approval.
+
+After implementation:
+- Commit and push the branch.
+- Open PR titled: STORY-LOOP-003 Larger map recruitment and neutral capture vertical slice
+- PR body must link STORY-LOOP-003, list source/contract docs, summarize changed files, connected-smoke acceptance checklist, tests/evidence, CI status, screenshots/video status, design/playtest note, and omissions/stubs/deferred work.
+- If Codex cannot commit/push/open PR, provide exact PowerShell/git/gh commands for the human to run and leave the working tree clean except intended story changes.

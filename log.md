@@ -341,3 +341,11 @@
 - Promoted STORY-STRAT-006 from READY-candidate to READY with approved scope: one unguarded dwelling/recruitment site, two player-choice fixed offers, normal costing Credits only, upgraded costing Credits + Materials, and both adding new placeholder stacks.
 - Added `production/sprints/codex-story-strat-006.prompt.txt` as the copy-safe Codex implementation prompt with workspace-write and danger-full-access command variants.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, and index discoverability.
+
+## [2026-06-09] done | STORY-STRAT-006 merge and LOOP-003 prep
+
+- Marked `STORY-STRAT-006 Simple Recruitment Site and Fixed Offers` DONE / merged after Unity PR #22 squash-merged as `a699055d67087821a5e6fdcb0f2e84c7d5891b28`.
+- Recorded post-merge Unity `main` CI success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
+- Drafted `production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md` as the next READY-candidate / approval pending connected-smoke packet.
+- Added guarded prompt file `production/sprints/codex-story-loop-003.prompt.txt`; it explicitly stops unless STORY-LOOP-003 is promoted to READY/approved.
+- Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability.

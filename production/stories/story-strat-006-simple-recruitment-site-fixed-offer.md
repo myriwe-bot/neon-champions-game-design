@@ -1,11 +1,11 @@
 ---
 title: STORY-STRAT-006 Simple Recruitment Site and Fixed Offers
 type: story
-status: ready
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-08
-updated: 2026-06-08
+updated: 2026-06-09
 source_lore: []
 related:
   [
@@ -23,7 +23,9 @@ approval: approved
 
 ## Status
 
-READY implementation packet after `STORY-MAP-001` merged in Unity PR #21. Human approval recorded on 2026-06-08: the dwelling/recruitment site provides two player-choice offers, normal and upgraded; normal costs Credits only, upgraded costs Credits + Materials; both add placeholder stacks; the site is unguarded for now.
+DONE / merged. Unity PR #22 merged on 2026-06-09 as commit `a699055d67087821a5e6fdcb0f2e84c7d5891b28`; post-merge `main` CI passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
+
+Implementation delivered the approved dwelling/recruitment site direction: two player-choice offers, normal and upgraded; normal costs Credits only, upgraded costs Credits + Materials; both add placeholder stacks; the site is unguarded for now.
 
 ## Story type
 
@@ -195,16 +197,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 A story may be marked DONE only when all items are true:
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY. Human implementation approval recorded on 2026-06-08. No known story-readiness blockers; implement exactly this story scope.
+DONE. Unity PR #22 merged and post-merge main CI passed on 2026-06-09. Follow-up implementation candidate is `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice`, drafted as READY-candidate / approval pending.

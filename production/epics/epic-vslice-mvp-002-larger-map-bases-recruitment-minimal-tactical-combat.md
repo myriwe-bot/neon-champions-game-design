@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-Approved / Story Ready. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, and `STORY-TAC-006` are DONE / merged. `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice` is READY again after TAC-006 removed the tactical setup blocker.
+Approved / Story Prep. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, `STORY-TAC-006`, and `STORY-LOOP-003` are DONE / merged. `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass` is drafted as the next READY-candidate after human review flagged the current layout/BMP evidence as hard to read and interact with.
 
 ## Priority tier
 
@@ -112,8 +112,9 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TAC-005 Basic Tactical Player Controls](../stories/story-tac-005-basic-tactical-player-controls.md) | DONE / merged | Tactical UI/Input + Integration + UX/Smoke | STORY-LOOP-002, existing minimal tactical domain | Unity PR #20, command tests, PlayMode smoke, screenshot artifact, CI |
 | [STORY-MAP-001 Larger Two-Base Strategic Map Slice](../stories/story-map-001-larger-two-base-strategic-map-slice.md) | DONE / merged | Config/Data + Visual/Feel + Strategic Integration | STORY-TAC-005, strategic-map §§2/3/4/6/8/9 | Unity PR #21, map validation, real base/hub site type, central objective interaction, two-choice PlayMode smoke, screenshot/video, CI |
 | [STORY-STRAT-006 Simple Recruitment Site and Fixed Offers](../stories/story-strat-006-simple-recruitment-site-fixed-offer.md) | DONE / merged | Logic + UI/Integration + Config/Data | MAP-001, strategic-map §§4/6/8/10/11/12 | Unity PR #22, normal/upgraded offer validation, cost/stock/apply tests, screenshot evidence, CI |
-| [STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice](../stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md) | READY | Playtest + Integration + UX/Smoke | MAP-001, STRAT-006, TAC-006 | connected recruitment-to-capture smoke, screenshot/video, checklist, CI |
+| [STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice](../stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md) | DONE / merged | Playtest + Integration + UX/Smoke | MAP-001, STRAT-006, TAC-006 | Unity PR #24, connected recruitment-to-capture smoke, screenshots, checklist, CI |
 | [STORY-TAC-006 Multi-Stack Attacker Tactical Setup](../stories/story-tac-006-multi-stack-attacker-tactical-setup.md) | DONE / merged | Logic + Integration + Tactical UI/Smoke | TAC-002, TAC-005, STRAT-006 | Unity PR #23, two-stack attacker placement tests, invalid setup rejection, recruited-army handoff smoke, CI |
+| [STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass](../stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md) | READY-candidate / approval pending | QA + UI/UX Readability + Visual/Feel | LOOP-003 | before/after screenshots, clickable controls/views, layout/readability checklist, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -191,4 +192,4 @@ If any box above is checked, the epic needs revision.
 
 ## Verdict
 
-Approved / Story Ready. `STORY-STRAT-006` and `STORY-TAC-006` are DONE / merged. `STORY-LOOP-003` is the current READY implementation packet again; later larger-loop child stories remain placeholders until drafted and approved individually.
+Approved / Story Prep. `STORY-LOOP-003` is DONE / merged. `STORY-QA-003` is drafted as the next visual/readability READY-candidate; implementation requires explicit human approval before Codex runs it.

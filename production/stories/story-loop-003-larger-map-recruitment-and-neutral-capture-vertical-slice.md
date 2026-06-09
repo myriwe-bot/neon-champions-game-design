@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice
 type: story
-status: ready
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-09
@@ -27,9 +27,9 @@ approval: approved
 
 ## Status
 
-READY again after `STORY-TAC-006` merged in Unity PR #23 on 2026-06-09 and post-merge main CI passed. TAC-006 verified that the recruited two-stack attacker army can initialize/render tactical board setup without `tactical-board-unsupported-stack-count`.
+DONE / merged. Unity PR #24 squash-merged on 2026-06-09 as commit `2c0f64039f828d2b973ec4d1d10e8f25694f9361`; post-merge `main` CI passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
 
-Retry this connected-smoke scope without weakening recruitment or tactical handoff. Keep the packet focused on the connected smoke path, with the existing human-approved valve: one small usability blocker fix is allowed only if necessary for judging the connected loop.
+The connected recruitment-to-capture loop now passes as an evidence-backed vertical-slice smoke. Human review immediately after merge identified the next slice: a visual/readability and clickability pass because the current BMP/layout presentation is hard to read and interact with.
 
 ## Story type
 
@@ -196,16 +196,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 A story may be marked DONE only when all items are true:
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY. Human implementation approval recorded on 2026-06-09. TAC-006 has landed and verified the prior recruited two-stack tactical setup blocker. Implement exactly this connected-smoke scope, with at most one necessary usability blocker fix.
+DONE. Unity PR #24 merged and post-merge main CI passed on 2026-06-09. Next recommended packet is `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass`, drafted as READY-candidate / approval pending.

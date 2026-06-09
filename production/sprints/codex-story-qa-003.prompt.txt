@@ -1,0 +1,81 @@
+DO NOT RUN YET: STORY-QA-003 is currently READY-candidate / approval pending and is not implementation authority until the game-design repo marks it READY with approval: approved.
+
+When approved, implement exactly one Neon Champions Unity story: STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass.
+
+Repository roles:
+- Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Hard stop before coding:
+- Pull latest game-design main.
+- Read production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md.
+- Confirm frontmatter says status: ready and approval: approved.
+- Confirm Ambiguity Check says PASS.
+- If not, stop and report that STORY-QA-003 is not approved.
+- Implement only STORY-QA-003.
+
+Hard rules:
+- This is a visual/readability/clickability pass over the existing connected loop slice.
+- Preserve existing LOOP-003 gameplay behavior and evidence path through public runtime/domain/application services.
+- Do not add new gameplay mechanics, new tactical mechanics, new recruitment/economy/base systems, strategic AI, save/load, final content, final balance, final art, UI Toolkit/Canvas migration, new packages, or render-pipeline changes.
+- Do not move canonical gameplay rules into presentation code.
+- Placeholder UI is allowed: primitive shapes, TextMesh labels, debug panels, simple colors, simple hit boxes/buttons, simple layout helpers.
+- Raw IDs are acceptable if arranged readably; do not invent final names/lore copy.
+- Use TDD for new helper logic or input/clickability regressions.
+- Include omissions/stubs explicitly in PR body and evidence.
+
+Before coding, read in order:
+1. Game-design repo AGENTS.md.
+2. Unity repo AGENTS.md and scoped AGENTS.md files for touched runtime, presentation, tests, scenes/prefabs if any, and evidence paths.
+3. production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md.
+4. design/gdd/strategic-map.md §§2, 6, 8, 9, 10, 11, 12, 14.
+5. tactical-combat MVP visual/handoff/control sections referenced by the story.
+6. docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10.
+7. docs/architecture/testing-strategy.md and docs/architecture/ci-build-automation.md.
+8. Existing Unity LOOP-003 strategic/recruitment/tactical/result presentation, controls, PlayMode tests, and evidence capture.
+
+Implementation scope:
+- Create branch: story/STORY-QA-003-loop-slice-visual-readability-clickable-layout
+- Capture or preserve LOOP-003 baseline evidence before changes where feasible.
+- Improve layout/readability for:
+  1. strategic map initial/selected state;
+  2. recruitment offer preview/apply;
+  3. guarded-site interaction/attack affordance;
+  4. tactical handoff/control state;
+  5. post-capture strategic result.
+- Make currently implemented controls clear and clickable through public input/application paths:
+  - End Turn;
+  - Champion selection;
+  - route/node movement selection where implemented;
+  - site interaction / attack / recruitment affordances;
+  - recruitment offer controls;
+  - tactical move/attack/pass/wait/defend controls where currently implemented.
+- Improve screen usage, spacing, contrast, text scale, grouping, and scaling at the 1280x720 evidence resolution.
+- Add evidence package under production/evidence/STORY-QA-003/README.md.
+
+Required tests/evidence:
+- Existing LOOP-003 connected PlayMode smoke still passes.
+- Add/update PlayMode checks for view/control presence and activation where feasible.
+- Add EditMode tests only for pure layout/hit-target helper logic if introduced.
+- Screenshot evidence before/after or baseline/after for:
+  - strategic map initial/selected state;
+  - recruitment preview/apply;
+  - tactical handoff/control state;
+  - post-capture result.
+- git diff --check and Unity .meta pairing check.
+- CI passing on PR.
+- Evidence README must include user-observed issues, fixes, tests, screenshots, CI status, omissions/stubs, and remaining UX debt.
+
+Stop conditions:
+- Stop if STORY-QA-003 is not READY/approved after pulling latest game-design main.
+- Stop if Unity main has unrelated dirty files.
+- Stop if the requested cleanup requires a new UI framework/package/render pipeline or final UI/art direction.
+- Stop if controls require new gameplay mechanics rather than clickable affordances for existing actions.
+- Stop if more than a focused layout/input/readability pass is necessary; report the blockers instead of expanding scope.
+- Stop rather than weakening LOOP-003 regression/evidence requirements without human approval.
+
+After implementation:
+- Commit and push the branch.
+- Open PR titled: STORY-QA-003 Loop slice visual readability and clickable layout pass
+- PR body must link STORY-QA-003, list source/contract docs, summarize changed files, include before/after screenshot evidence, tests/checks, CI status, omissions/stubs/deferred work, and remaining UX debt.
+- If Codex cannot commit/push/open PR, provide exact PowerShell/git/gh commands for the human to run and leave the working tree clean except intended story changes.

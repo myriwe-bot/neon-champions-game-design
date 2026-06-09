@@ -372,3 +372,11 @@
 - Promoted `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice` back to READY after TAC-006 verified recruited two-stack attacker tactical setup.
 - Repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to the existing LOOP-003 prompt file.
 - Updated `EPIC-VSLICE-MVP-002`, index, and story verdicts.
+
+## [2026-06-09] done | STORY-LOOP-003 merge and QA-003 prep
+
+- Marked `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice` DONE / merged after Unity PR #24 squash-merged as `2c0f64039f828d2b973ec4d1d10e8f25694f9361`.
+- Recorded post-merge Unity `main` CI success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
+- Drafted `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass` from human feedback that current BMP/layout evidence is hard to read and controls/views need clearer clickable scalable layout.
+- Added guarded prompt file `production/sprints/codex-story-qa-003.prompt.txt`; it stops unless QA-003 is promoted to READY/approved.
+- Updated `EPIC-VSLICE-MVP-002`, run prompts, index, and story verdicts.

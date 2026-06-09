@@ -28,7 +28,9 @@ approval: approved
 
 DONE. Unity PR #25 merged on 2026-06-09 as merge commit `a45af12a565d6e2006f15539de6fedd2df67d36d`; post-merge Unity `main` CI passed in run https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27224591398.
 
-This packet was intentionally a visual/readability pass over the existing connected slice, not a new gameplay-system packet. Human review during the merge gate confirmed the original TextMesh-only pass was still too tiny/unreadable, so the final merged implementation adds camera-rendered large readability panels that appear in the BMP evidence path.
+Follow-up human playtest still found the prototype UI confusing/hard to click and tactical move/attack not practically usable. Hotfix PR #26 merged on 2026-06-09 as merge commit `08802ad45b415aac525114bc1ab3629dc3842b35`; post-merge Unity `main` CI passed in run https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27230363541. The hotfix reorganized the strategic/tactical command overlays, made tactical hex clicks reliable with larger BoxColliders, ignored inactive tactical target clicks, and added PlayMode regressions for visible click move -> click attack plus direct tactical move/attack commands.
+
+This packet was intentionally a visual/readability pass over the existing connected slice, not a new gameplay-system packet. It remains prototype IMGUI/world placeholder UI, not final UI architecture/art.
 
 ## Story type
 
@@ -241,4 +243,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-DONE. Unity PR #25 merged and post-merge `main` CI passed. Remaining UX debt stays explicitly deferred: final UI/art direction, UI Toolkit/Canvas architecture, accessibility, localization, animation, and non-placeholder presentation/content polish.
+DONE. Unity PR #25 plus hotfix PR #26 merged and post-merge `main` CI passed. The current prototype is materially more readable/clickable and tactical move/attack paths are regression-tested. Remaining UX debt stays explicitly deferred: final UI/art direction, UI Toolkit/Canvas architecture, accessibility, localization, animation, and non-placeholder presentation/content polish.

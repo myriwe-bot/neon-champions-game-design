@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice
 type: story
-status: ready
+status: blocked
 phase: production
 owner: shared
 created: 2026-06-09
@@ -18,6 +18,7 @@ related:
     production/stories/story-map-001-larger-two-base-strategic-map-slice,
     production/stories/story-strat-006-simple-recruitment-site-fixed-offer,
     production/stories/story-tac-005-basic-tactical-player-controls,
+    production/stories/story-tac-006-multi-stack-attacker-tactical-setup,
   ]
 approval: approved
 ---
@@ -26,7 +27,9 @@ approval: approved
 
 ## Status
 
-READY implementation packet after Unity PR #22 merged `STORY-STRAT-006` and post-merge main CI passed on 2026-06-09. Human approval recorded on 2026-06-09: keep the packet focused on the connected smoke path, but allow one small usability blocker fix if it is necessary for judging the connected loop.
+BLOCKED after implementation probe on 2026-06-09. Codex correctly stopped at the approved stop condition: the connected path recruits a new placeholder stack, then existing tactical setup rejects the resulting two-stack attacker army with `tactical-board-unsupported-stack-count` / `STORY-TAC-002 tactical board supports exactly one attacker stack`.
+
+Prerequisite packet `STORY-TAC-006 Multi-Stack Attacker Tactical Setup` is READY to remove that tactical setup blocker. Do not retry LOOP-003 until TAC-006 is merged and verified.
 
 ## Story type
 
@@ -98,6 +101,7 @@ Not allowed:
   - `STORY-TAC-005` DONE / merged in Unity PR #20.
   - `STORY-MAP-001` DONE / merged in Unity PR #21.
   - `STORY-STRAT-006` DONE / merged in Unity PR #22.
+  - `STORY-TAC-006` READY / prerequisite after LOOP-003 implementation probe found the recruited two-stack attacker army cannot enter current tactical setup.
   - Existing tactical handoff/result chain through `STORY-STRAT-004`, `STORY-TAC-002`, `STORY-TAC-003`, `STORY-TAC-VIS-001`, `STORY-TAC-004`, `STORY-STRAT-005`, and `STORY-LOOP-002`.
 - Required data/assets:
   - Existing deterministic larger-map fixture and placeholder recruitment/tactical data.
@@ -204,4 +208,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-READY. Human implementation approval recorded on 2026-06-09. Implement exactly this connected-smoke scope, with at most one necessary usability blocker fix.
+BLOCKED. Approved scope remains valid, but implementation is deferred until `STORY-TAC-006` lands and verifies multi-stack attacker tactical setup. Do not weaken recruitment or tactical handoff to make LOOP-003 pass.

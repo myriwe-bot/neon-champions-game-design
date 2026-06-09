@@ -357,3 +357,11 @@
 - Recorded approved scope valve: Codex may fix one small usability/readability blocker only if necessary for judging the connected loop; otherwise no usability fix should be added.
 - Updated `production/sprints/codex-story-loop-003.prompt.txt` as the active checked-in Codex implementation prompt.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, and index discoverability.
+
+## [2026-06-09] blocked | STORY-LOOP-003 tactical setup prerequisite
+
+- Recorded Codex's correct STORY-LOOP-003 stop condition: recruited two-stack attacker army hits `tactical-board-unsupported-stack-count` because current STORY-TAC-002 tactical board setup supports exactly one attacker stack.
+- Marked `STORY-LOOP-003` BLOCKED until multi-stack attacker tactical setup lands; explicitly preserved the rule not to hide, merge, bench, or ignore the recruited stack.
+- Created and approved `production/stories/story-tac-006-multi-stack-attacker-tactical-setup.md` as the narrow prerequisite implementation packet.
+- Added `production/sprints/codex-story-tac-006.prompt.txt` and repointed run prompts to TAC-006.
+- Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability.

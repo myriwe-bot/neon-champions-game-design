@@ -73,7 +73,8 @@
 - [[production/stories/story-tac-005-basic-tactical-player-controls]] — DONE/merged basic tactical player controls story.
 - [[production/stories/story-map-001-larger-two-base-strategic-map-slice]] — DONE/merged larger two-base strategic map slice.
 - [[production/stories/story-strat-006-simple-recruitment-site-fixed-offer]] — DONE/merged simple recruitment site and fixed normal/upgraded offers implementation packet.
-- [[production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice]] — READY larger-map recruitment and neutral-capture connected smoke story.
+- [[production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice]] — BLOCKED larger-map recruitment and neutral-capture connected smoke story; waiting on TAC-006 multi-stack attacker setup.
+- [[production/stories/story-tac-006-multi-stack-attacker-tactical-setup]] — READY tactical setup prerequisite for recruited multi-stack attacker armies.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

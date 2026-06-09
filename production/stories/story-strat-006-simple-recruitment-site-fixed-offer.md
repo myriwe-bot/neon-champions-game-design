@@ -209,4 +209,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-DONE. Unity PR #22 merged and post-merge main CI passed on 2026-06-09. Follow-up implementation candidate is `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice`, drafted as READY-candidate / approval pending.
+DONE. Unity PR #22 merged and post-merge main CI passed on 2026-06-09. Follow-up `STORY-LOOP-003` was approved, then blocked during implementation by the one-attacker-stack tactical setup limitation; `STORY-TAC-006` is the active prerequisite packet.

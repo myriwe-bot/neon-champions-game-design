@@ -32,6 +32,7 @@ related:
     production/stories/story-map-001-larger-two-base-strategic-map-slice,
     production/stories/story-strat-006-simple-recruitment-site-fixed-offer,
     production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice,
+    production/stories/story-tac-006-multi-stack-attacker-tactical-setup,
   ]
 approval: approved
 ---
@@ -40,7 +41,7 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-STRAT-006` is merged. The current READY implementation packet is `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice`. Run exactly the checked-in prompt file below; keep the packet focused on connected smoke/evidence composition, with at most one necessary usability blocker fix.
+`STORY-LOOP-003` is blocked by the current one-attacker-stack tactical setup after recruitment adds a second attacker stack. The current READY implementation packet is `STORY-TAC-006 Multi-Stack Attacker Tactical Setup`. Run exactly the checked-in prompt file below; do not implement LOOP-003 in this branch.
 
 ## Copy-safe prompt-file mode
 
@@ -52,8 +53,8 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-LOOP-003 is READY/approved before running Codex.
-Select-String -Path production\stories\story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md -Pattern "status: ready","approval: approved","Status: PASS"
+# Verify STORY-TAC-006 is READY/approved before running Codex.
+Select-String -Path production\stories\story-tac-006-multi-stack-attacker-tactical-setup.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -61,7 +62,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-006.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # If the Windows sandbox is blocking trusted repo work, use the danger-full-access variant:
@@ -85,12 +86,12 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — STORY-LOOP-003 larger map recruitment and neutral capture smoke
+## Current Prompt A — STORY-TAC-006 multi-stack attacker tactical setup
 
 Use the checked-in prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-006.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -120,11 +121,13 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-tac-005.prompt.txt`
 - `production/sprints/codex-story-map-001.prompt.txt`
 - `production/sprints/codex-story-strat-006.prompt.txt`
+- `production/sprints/codex-story-loop-003.prompt.txt`
+- `production/sprints/codex-story-tac-006.prompt.txt`
 
 Current approved prompt:
 
-- `production/sprints/codex-story-loop-003.prompt.txt`
+- `production/sprints/codex-story-tac-006.prompt.txt`
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-LOOP-003-larger-map-recruitment-neutral-capture-smoke`, then open or prepare a PR titled `STORY-LOOP-003 Larger map recruitment and neutral capture vertical slice`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-TAC-006-multi-stack-attacker-tactical-setup`, then open or prepare a PR titled `STORY-TAC-006 Multi-stack attacker tactical setup`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

@@ -1,0 +1,93 @@
+You are implementing exactly one READY Neon Champions Unity story: STORY-TAC-006 Multi-Stack Attacker Tactical Setup.
+
+Repository roles:
+- Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Why this story exists:
+- STORY-LOOP-003 correctly stopped at a story stop-condition.
+- The connected loop recruits a new placeholder stack, then attempts a guarded-site tactical handoff.
+- Current tactical setup rejects the recruited two-stack attacker army with:
+  - tactical-board-unsupported-stack-count
+  - The STORY-TAC-002 tactical board supports exactly one attacker stack.
+- Do not weaken LOOP-003 by hiding, merging, benching, or ignoring the recruited stack. Fix the narrow tactical setup prerequisite instead.
+
+Hard stop before coding:
+- Pull latest game-design main.
+- Read production/stories/story-tac-006-multi-stack-attacker-tactical-setup.md.
+- Confirm frontmatter says status: ready and approval: approved.
+- Confirm Ambiguity Check says PASS.
+- If not, stop and report that STORY-TAC-006 is not approved.
+- Implement only STORY-TAC-006.
+
+Hard rules:
+- Support deterministic tactical board setup for a valid multi-stack attacker army, at minimum the two-stack shape produced by STORY-STRAT-006 recruitment: existing starting attacker stack + one recruited placeholder stack.
+- Preserve existing one-attacker-stack behavior and tests.
+- Preserve existing defender/guard setup behavior.
+- Reject invalid or unsupported multi-stack setup cleanly with readable diagnostics and no partial accepted board state.
+- Do not implement LOOP-003 in this branch.
+- Do not implement full deployment/reorder UI, Tactics skill, scouting preview, reserves/bench, garrisons, reinforcements, new tactical actions, new abilities, tactical AI changes, combat balance, final content, save/load changes, or tactical mechanics expansion.
+- Do not change recruitment behavior to merge/suppress/drop the new stack.
+- Use TDD for new setup/placement logic and regression fixes.
+- Include omissions/stubs explicitly in PR body and evidence.
+
+Before coding, read in order:
+1. Game-design repo AGENTS.md.
+2. Unity repo AGENTS.md and scoped AGENTS.md files for touched tactical runtime, strategic handoff, tests, and evidence paths.
+3. production/stories/story-tac-006-multi-stack-attacker-tactical-setup.md.
+4. design/gdd/tactical-combat.md §§3, 4, 5, 6.0, 6.1, 6.2.
+5. design/gdd/strategic-map.md §§4, 6, 12, 14.
+6. docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10.
+7. docs/architecture/testing-strategy.md and docs/architecture/ci-build-automation.md.
+8. Existing Unity tactical board/setup/placement code, strategic guarded-site handoff code, recruitment tests, tactical PlayMode smoke tests, and evidence conventions.
+
+Implementation scope:
+- Create branch: story/STORY-TAC-006-multi-stack-attacker-tactical-setup
+- Remove the one-attacker-stack tactical setup blocker for valid attacker armies with multiple active stacks.
+- Support deterministic placement of multiple attacker stacks onto legal attacker deployment hexes using existing board/deployment concepts.
+- At minimum, support two attacker stacks.
+- If the current deployment-slot model naturally supports more than two, generalize only to available deterministic attacker deployment slots; do not add a deployment UI/system.
+- Add or update EditMode tests for:
+  - valid two-stack attacker setup creates two attacker tactical entities on distinct legal attacker deployment hexes;
+  - one-stack attacker setup still works;
+  - defender/guard setup still works;
+  - null/empty attacker army rejects;
+  - null stack entries reject;
+  - blank/missing stack IDs or unit references reject;
+  - too many attacker stacks for available deployment slots reject;
+  - duplicate tactical entity IDs reject if existing model requires uniqueness;
+  - invalid input does not leave partial accepted board state.
+- Add or update PlayMode smoke coverage proving a recruited two-stack attacker army can reach tactical board initialization/rendering through the existing strategic guarded-site handoff without tactical-board-unsupported-stack-count.
+- Add evidence package under production/evidence/STORY-TAC-006/README.md in the Unity repo.
+
+Required tests/evidence:
+- Focused RED/GREEN evidence for the two-stack setup blocker.
+- EditMode tests for valid and invalid multi-stack setup cases.
+- PlayMode smoke for recruited two-stack guarded-site handoff reaching tactical board initialization/rendering.
+- Existing EditMode/PlayMode regression suites still passing.
+- Placeholder validator passing.
+- Standalone build check passing.
+- git diff --check and Unity .meta pairing check.
+- CI passing on PR.
+- Evidence README must include:
+  - source docs read;
+  - two-stack setup checklist;
+  - tests/checks run;
+  - screenshot/video status if visual board evidence changed;
+  - CI status;
+  - omissions/stubs/deferred work;
+  - explicit note that LOOP-003 remains deferred until STORY-TAC-006 lands and is verified.
+
+Stop conditions:
+- Stop if STORY-TAC-006 is not READY/approved after pulling latest game-design main.
+- Stop if Unity main has unrelated dirty files.
+- Stop if fixing the blocker requires new tactical gameplay systems rather than deterministic setup/placement plumbing.
+- Stop if the work requires deployment UI, formation selection, strategic recruitment changes, save/load schema changes, new tactical actions/abilities, tactical AI, final content, or balance decisions.
+- Stop if more than deterministic placement support is needed for more than two attacker stacks; report the blocker rather than expanding scope.
+- Stop rather than weakening test/evidence requirements without human approval.
+
+After implementation:
+- Commit and push the branch.
+- Open PR titled: STORY-TAC-006 Multi-stack attacker tactical setup
+- PR body must link STORY-TAC-006, list source/contract docs, summarize changed files, two-stack setup acceptance checklist, tests/evidence, CI status, screenshots/video status if applicable, omissions/stubs/deferred work, and explicit statement that LOOP-003 is not implemented in this branch.
+- If Codex cannot commit/push/open PR, provide exact PowerShell/git/gh commands for the human to run and leave the working tree clean except intended story changes.

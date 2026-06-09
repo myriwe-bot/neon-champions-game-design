@@ -42,32 +42,22 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-LOOP-003` is merged and post-merge Unity `main` CI passed. The current READY implementation packet is `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass`. Run exactly the checked-in prompt file below; keep the packet focused on visual readability, scalable screen use, and clickable controls/views for the existing connected loop slice.
+No Unity implementation story is currently READY after `STORY-QA-003`. EPIC-VSLICE-MVP-002 has all currently formed child implementation stories DONE / merged through QA-003, with post-merge Unity `main` CI green. The next step is a human closeout/playtest decision: either accept the epic as complete or choose/draft the next epic/story direction.
+
+Use the checked-in guarded decision-brief prompt below only for planning. It must not create a Unity implementation branch or run Codex against a new runtime story.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current prompt-file command:
+Current guarded planning prompt-file command:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-QA-003 is READY/approved before running Codex.
-Select-String -Path production\stories\story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md -Pattern "status: ready","approval: approved","Status: PASS"
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git fetch origin
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
 codex exec --sandbox workspace-write $prompt
-
-# If the Windows sandbox is blocking trusted repo work, use the danger-full-access variant:
-codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -87,17 +77,16 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — STORY-QA-003 loop slice visual readability and clickable layout
+## Current Prompt A — next-step epic closeout decision brief
 
-Use the checked-in prompt file:
+Use the checked-in guarded planning prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
 codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
 ```
+
+This is not an implementation prompt. It exists to prepare the human decision for the next epic/story direction after QA-003.
 
 ## Historical prompt-file runs
 
@@ -126,10 +115,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-tac-006.prompt.txt`
 - `production/sprints/codex-story-qa-003.prompt.txt`
 
-Current approved prompt:
+Current guarded planning prompt:
 
-- `production/sprints/codex-story-qa-003.prompt.txt`
+- `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-QA-003-loop-slice-visual-readability-clickable-layout`, then open or prepare a PR titled `STORY-QA-003 Loop slice visual readability and clickable layout pass`. Review the PR against the story contract, before/after evidence package, CI, and omissions before merging.
+Codex should return a decision brief only. Do not create a Unity branch, do not open a PR, and do not mark a new story READY unless the human explicitly approves an implementation direction.

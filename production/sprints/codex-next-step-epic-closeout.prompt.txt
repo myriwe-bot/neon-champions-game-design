@@ -1,0 +1,31 @@
+Prepare the next Neon Champions implementation step, but do not implement Unity runtime changes yet.
+
+Current state:
+- EPIC-VSLICE-MVP-002 has all currently formed child implementation stories DONE / merged through STORY-QA-003.
+- Unity PR #25 merged as a45af12a565d6e2006f15539de6fedd2df67d36d.
+- Post-merge Unity main CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27224591398.
+- Game-design publish CI passed after marking STORY-QA-003 done: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27225167567.
+
+Stop condition:
+- Do not create a Unity implementation branch.
+- Do not run Codex against neon-champions-unity for a new story.
+- There is no next READY implementation story in the current epic as formed.
+
+Task:
+1. Pull latest game-design and Unity main.
+2. Read:
+   - production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat.md
+   - production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md
+   - production/planning/strategic-mvp-epic-sprint-planning-questions.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+3. Prepare a short human decision brief for the next implementation direction:
+   - confirm EPIC-VSLICE-MVP-002 has zero remaining implementation child stories as currently formed;
+   - identify the remaining non-implementation closeout gate: human playtest/review before marking the epic fully DONE;
+   - propose 2-4 possible next epic/story directions, clearly marked as not yet READY unless human approves one;
+   - recommend one default next direction and explain why in 3-5 bullets.
+4. If asked to draft the next story after human chooses a direction, create it as DRAFT / READY-candidate first unless the human explicitly approves implementation.
+
+Output format:
+- No runtime changes.
+- No PR.
+- A concise decision brief only.

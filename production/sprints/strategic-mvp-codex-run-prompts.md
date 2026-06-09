@@ -40,13 +40,13 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-STRAT-006` is merged. The next prepared packet is `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice`, currently DRAFT / READY-candidate pending human approval. Do not run Codex for LOOP-003 until its story frontmatter says `status: ready`, `approval: approved`, and Ambiguity Check is PASS.
+`STORY-STRAT-006` is merged. The current READY implementation packet is `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice`. Run exactly the checked-in prompt file below; keep the packet focused on connected smoke/evidence composition, with at most one necessary usability blocker fix.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current prompt-file command after human approval:
+Current prompt-file command:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -87,7 +87,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current Prompt A — STORY-LOOP-003 larger map recruitment and neutral capture smoke
 
-Prepared prompt file, not runnable until human approval promotes STORY-LOOP-003 to READY:
+Use the checked-in prompt file:
 
 ```powershell
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-003.prompt.txt"
@@ -121,14 +121,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-map-001.prompt.txt`
 - `production/sprints/codex-story-strat-006.prompt.txt`
 
-Prepared next prompt, pending human approval:
+Current approved prompt:
 
 - `production/sprints/codex-story-loop-003.prompt.txt`
 
-Current approved prompt:
-
-- None. `STORY-LOOP-003` is not approved yet.
-
 ## After Codex finishes
 
-After STORY-LOOP-003 is approved and implemented, Codex should commit and push `story/STORY-LOOP-003-larger-map-recruitment-neutral-capture-smoke`, then open or prepare a PR titled `STORY-LOOP-003 Larger map recruitment and neutral capture vertical slice`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-LOOP-003-larger-map-recruitment-neutral-capture-smoke`, then open or prepare a PR titled `STORY-LOOP-003 Larger map recruitment and neutral capture vertical slice`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

@@ -349,3 +349,11 @@
 - Drafted `production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md` as the next READY-candidate / approval pending connected-smoke packet.
 - Added guarded prompt file `production/sprints/codex-story-loop-003.prompt.txt`; it explicitly stops unless STORY-LOOP-003 is promoted to READY/approved.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability.
+
+## [2026-06-09] approve | STORY-LOOP-003 implementation packet
+
+- Recorded human approval for `production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md`.
+- Promoted STORY-LOOP-003 from READY-candidate to READY with approved scope: connected larger-map smoke from recruitment preview/apply through guarded-site tactical handoff, tactical resolution, BattleResult return, and strategic capture feedback.
+- Recorded approved scope valve: Codex may fix one small usability/readability blocker only if necessary for judging the connected loop; otherwise no usability fix should be added.
+- Updated `production/sprints/codex-story-loop-003.prompt.txt` as the active checked-in Codex implementation prompt.
+- Updated `EPIC-VSLICE-MVP-002`, run prompts, and index discoverability.

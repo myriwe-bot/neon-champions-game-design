@@ -1,6 +1,4 @@
-DO NOT RUN YET: STORY-LOOP-003 is currently draft / READY-candidate and is not implementation authority until the game-design repo marks it READY with approval: approved.
-
-When the story is approved, this file becomes the checked-in Codex prompt for exactly one Neon Champions Unity story: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice.
+You are implementing exactly one READY Neon Champions Unity story: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice.
 
 Repository roles:
 - Game-design source of truth: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -12,8 +10,7 @@ Hard stop before coding:
 - Confirm frontmatter says status: ready and approval: approved.
 - Confirm Ambiguity Check says PASS.
 - If not, stop and report that STORY-LOOP-003 is not approved.
-
-If approved, implement only STORY-LOOP-003.
+- Implement only STORY-LOOP-003.
 
 Hard rules:
 - Compose the existing larger-map, recruitment, guarded-site handoff, tactical controls, BattleResult application, and capture feedback into one connected PlayMode smoke path.
@@ -21,6 +18,7 @@ Hard rules:
 - Use existing placeholder IDs/localization keys only.
 - Do not fake screenshots or mutate state through hidden test-only shortcuts that bypass public runtime/domain/application paths.
 - Preserve existing route movement, hotseat turn ownership, recruitment offer behavior, guarded-site tactical handoff, BattleResult application, central objective interaction, STORY-TAC-005 controls, and map readability.
+- Keep the packet focused on connected smoke/evidence composition. You may fix one small usability/readability blocker only if it is necessary for judging the connected loop; otherwise do not add a usability fix. If used, document the blocker, fix, and before/after evidence.
 - Use TDD for any new domain/application behavior or regression fix.
 - Include omissions/stubs explicitly in PR body and evidence.
 
@@ -57,11 +55,13 @@ Required tests/evidence:
 - git diff --check and Unity .meta pairing check.
 - CI passing on PR.
 - Evidence README must include connected smoke checklist, tests, screenshot/video status, CI status, omissions/stubs, and a short design/playtest note about what the path proves and what remains thin.
+- If the one allowed usability/readability fix is used, Evidence README must identify why it was necessary for judging the loop and list the exact changed files/screenshots.
 
 Stop conditions:
 - Stop if STORY-LOOP-003 is not READY/approved after pulling latest game-design main.
 - Stop if Unity main has unrelated dirty files.
 - Stop if the connected smoke requires a new gameplay system rather than narrow integration/readability glue.
+- Stop if more than one usability/readability blocker appears necessary; report the blockers instead of expanding scope.
 - Stop if scope pressures you toward town/base production, full economy, new tactical mechanics, strategic AI, save/load, final naming/balance, or enemy-faction contests.
 - Stop rather than weakening test/evidence requirements without human approval.
 

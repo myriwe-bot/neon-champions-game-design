@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-09
@@ -19,16 +19,14 @@ related:
     production/stories/story-strat-006-simple-recruitment-site-fixed-offer,
     production/stories/story-tac-005-basic-tactical-player-controls,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice
 
 ## Status
 
-DRAFT / READY-candidate for human review after Unity PR #22 merged `STORY-STRAT-006` and post-merge main CI passed on 2026-06-09.
-
-This story is not implementation authority until explicitly approved and promoted to READY.
+READY implementation packet after Unity PR #22 merged `STORY-STRAT-006` and post-merge main CI passed on 2026-06-09. Human approval recorded on 2026-06-09: keep the packet focused on the connected smoke path, but allow one small usability blocker fix if it is necessary for judging the connected loop.
 
 ## Story type
 
@@ -71,7 +69,7 @@ As a designer/player, I want one evidence-backed smoke path that recruits from t
   10. return a `BattleResult` to the strategic layer and show guarded-site capture/reward feedback.
 - Capture screenshot evidence for the connected path: pre-recruit preview, post-recruit state, tactical handoff, post-capture strategic result.
 - Add an evidence package under `production/evidence/STORY-LOOP-003/README.md`.
-- Fix only narrow integration/readability issues found while composing the existing path, if required for the smoke path to be trustworthy.
+- Fix at most one small usability/readability blocker found while composing the existing path, only if that blocker is necessary for judging the connected loop. Document the blocker, fix, and before/after evidence in `production/evidence/STORY-LOOP-003/README.md`.
 - Preserve existing standalone tests for recruitment, guarded-site battle handoff, tactical controls, BattleResult application, central objective interaction, hotseat turn ownership, route movement, and map readability.
 
 ## Out of scope
@@ -134,11 +132,13 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: FAIL until human approves this as the next READY packet.
+Status: PASS.
 
-Open questions:
+Resolved user decision, 2026-06-09:
 
-- Should this next packet remain a smoke/evidence composition story only, or should it also fix one small usability blocker if the connected path reveals it?
+- `STORY-LOOP-003` is approved as READY.
+- The packet should remain a connected-smoke/evidence composition story.
+- It may fix one small usability blocker if that blocker is necessary for judging the connected loop; otherwise no usability fix should be added.
 
 Assumptions:
 
@@ -155,9 +155,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None.
-
-If this story is approved as the next step, change Ambiguity Check to PASS, `status` to `ready`, and `approval` to `approved` before implementation.
+- One small usability/readability fix is permitted only if needed to make the connected loop judgeable; it must be documented and evidenced.
 
 ## Branch / PR requirements
 
@@ -186,9 +184,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -206,4 +204,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-DRAFT / READY-candidate. Prepared as the next likely packet, but not yet approved for implementation.
+READY. Human implementation approval recorded on 2026-06-09. Implement exactly this connected-smoke scope, with at most one necessary usability blocker fix.

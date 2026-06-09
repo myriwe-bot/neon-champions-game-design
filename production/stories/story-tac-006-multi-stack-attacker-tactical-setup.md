@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-006 Multi-Stack Attacker Tactical Setup
 type: story
-status: ready
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-09
@@ -27,9 +27,9 @@ approval: approved
 
 ## Status
 
-READY implementation packet. Human approval recorded on 2026-06-09 after `STORY-LOOP-003` stopped at the approved stop condition: the connected recruitment-to-capture loop creates a recruited two-stack attacker army, but current tactical board creation rejects attacker armies with more than one stack (`tactical-board-unsupported-stack-count`).
+DONE / merged. Unity PR #23 squash-merged on 2026-06-09 as commit `ca41ca3d4d0f3ccfac3fc31b154cb19eeffbe8ee`; post-merge `main` CI passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
 
-This story is the narrow prerequisite needed before retrying `STORY-LOOP-003`.
+This removes the tactical setup prerequisite blocker for `STORY-LOOP-003`; LOOP-003 can be retried without weakening recruitment or tactical handoff.
 
 ## Story type
 
@@ -197,16 +197,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 A story may be marked DONE only when all items are true:
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY. Human implementation approval recorded on 2026-06-09. Implement exactly this tactical setup prerequisite; do not implement LOOP-003 in this branch.
+DONE. Unity PR #23 merged and post-merge main CI passed on 2026-06-09. This verified recruited two-stack attacker armies can initialize/render tactical board setup, unblocking `STORY-LOOP-003`.

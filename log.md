@@ -363,5 +363,12 @@
 - Recorded Codex's correct STORY-LOOP-003 stop condition: recruited two-stack attacker army hits `tactical-board-unsupported-stack-count` because current STORY-TAC-002 tactical board setup supports exactly one attacker stack.
 - Marked `STORY-LOOP-003` BLOCKED until multi-stack attacker tactical setup lands; explicitly preserved the rule not to hide, merge, bench, or ignore the recruited stack.
 - Created and approved `production/stories/story-tac-006-multi-stack-attacker-tactical-setup.md` as the narrow prerequisite implementation packet.
-- Added `production/sprints/codex-story-tac-006.prompt.txt` and repointed run prompts to TAC-006.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability.
+
+## [2026-06-09] done | STORY-TAC-006 merge and LOOP-003 retry prep
+
+- Marked `STORY-TAC-006 Multi-Stack Attacker Tactical Setup` DONE / merged after Unity PR #23 squash-merged as `ca41ca3d4d0f3ccfac3fc31b154cb19eeffbe8ee`.
+- Recorded post-merge Unity `main` CI success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
+- Promoted `STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice` back to READY after TAC-006 verified recruited two-stack attacker tactical setup.
+- Repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to the existing LOOP-003 prompt file.
+- Updated `EPIC-VSLICE-MVP-002`, index, and story verdicts.

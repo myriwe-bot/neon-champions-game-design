@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice
 type: story
-status: blocked
+status: ready
 phase: production
 owner: shared
 created: 2026-06-09
@@ -27,9 +27,9 @@ approval: approved
 
 ## Status
 
-BLOCKED after implementation probe on 2026-06-09. Codex correctly stopped at the approved stop condition: the connected path recruits a new placeholder stack, then existing tactical setup rejects the resulting two-stack attacker army with `tactical-board-unsupported-stack-count` / `STORY-TAC-002 tactical board supports exactly one attacker stack`.
+READY again after `STORY-TAC-006` merged in Unity PR #23 on 2026-06-09 and post-merge main CI passed. TAC-006 verified that the recruited two-stack attacker army can initialize/render tactical board setup without `tactical-board-unsupported-stack-count`.
 
-Prerequisite packet `STORY-TAC-006 Multi-Stack Attacker Tactical Setup` is READY to remove that tactical setup blocker. Do not retry LOOP-003 until TAC-006 is merged and verified.
+Retry this connected-smoke scope without weakening recruitment or tactical handoff. Keep the packet focused on the connected smoke path, with the existing human-approved valve: one small usability blocker fix is allowed only if necessary for judging the connected loop.
 
 ## Story type
 
@@ -101,7 +101,7 @@ Not allowed:
   - `STORY-TAC-005` DONE / merged in Unity PR #20.
   - `STORY-MAP-001` DONE / merged in Unity PR #21.
   - `STORY-STRAT-006` DONE / merged in Unity PR #22.
-  - `STORY-TAC-006` READY / prerequisite after LOOP-003 implementation probe found the recruited two-stack attacker army cannot enter current tactical setup.
+  - `STORY-TAC-006` DONE / merged in Unity PR #23; verified recruited two-stack attacker armies can initialize/render tactical board setup without `tactical-board-unsupported-stack-count`.
   - Existing tactical handoff/result chain through `STORY-STRAT-004`, `STORY-TAC-002`, `STORY-TAC-003`, `STORY-TAC-VIS-001`, `STORY-TAC-004`, `STORY-STRAT-005`, and `STORY-LOOP-002`.
 - Required data/assets:
   - Existing deterministic larger-map fixture and placeholder recruitment/tactical data.
@@ -208,4 +208,4 @@ A story may be marked DONE only when all items are true:
 
 ## Verdict
 
-BLOCKED. Approved scope remains valid, but implementation is deferred until `STORY-TAC-006` lands and verifies multi-stack attacker tactical setup. Do not weaken recruitment or tactical handoff to make LOOP-003 pass.
+READY. Human implementation approval recorded on 2026-06-09. TAC-006 has landed and verified the prior recruited two-stack tactical setup blocker. Implement exactly this connected-smoke scope, with at most one necessary usability blocker fix.

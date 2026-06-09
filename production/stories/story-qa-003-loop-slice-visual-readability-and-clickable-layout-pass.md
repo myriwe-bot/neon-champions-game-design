@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-09
@@ -26,9 +26,9 @@ approval: approved
 
 ## Status
 
-READY. Human approval recorded on 2026-06-09. Drafted after `STORY-LOOP-003` merged and proved the connected recruitment-to-capture loop, but human review flagged the current visual layer as too hard to read and interact with: BMP evidence is difficult to parse, layout does not use the screen well, buttons/controls need to be clearer and clickable, and all views should open and function cleanly.
+DONE. Unity PR #25 merged on 2026-06-09 as merge commit `a45af12a565d6e2006f15539de6fedd2df67d36d`; post-merge Unity `main` CI passed in run https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27224591398.
 
-This packet is intentionally a visual/readability pass over the existing connected slice, not a new gameplay-system packet.
+This packet was intentionally a visual/readability pass over the existing connected slice, not a new gameplay-system packet. Human review during the merge gate confirmed the original TextMesh-only pass was still too tiny/unreadable, so the final merged implementation adds camera-rendered large readability panels that appear in the BMP evidence path.
 
 ## Story type
 
@@ -154,17 +154,17 @@ Not allowed:
 
 ## Acceptance criteria
 
-- [ ] Given the connected loop starts at the target/default evidence resolution, the strategic map/HUD uses the screen coherently and key labels are readable without console logs.
-- [ ] Given the active Champion is selected, reachable route/node information is visible without hiding the map topology or active actor state.
-- [ ] Given the recruitment site is selected, both offers and their action controls are readable, spatially separated, and clickable.
-- [ ] Given a recruitment offer is applied, the resource, stock, army, and feedback changes are visible in a cleaner layout.
-- [ ] Given a guarded-site interaction is available, the attack/site interaction control is clear, clickable, and does not overlap other controls.
-- [ ] Given tactical mode opens, the tactical board, current stack, available controls, and feedback are readable and use more of the screen.
-- [ ] Given tactical controls are used, existing move/attack/pass/wait/defend controls remain functional through public input/application paths.
-- [ ] Given the battle resolves, the post-capture strategic result view opens and clearly communicates capture/guard/reward-deferred status.
-- [ ] Existing LOOP-003 connected PlayMode smoke still passes.
-- [ ] Before/after screenshot evidence demonstrates improved readability and clickability.
-- [ ] CI passes.
+- [x] Given the connected loop starts at the target/default evidence resolution, the strategic map/HUD uses the screen coherently and key labels are readable without console logs.
+- [x] Given the active Champion is selected, reachable route/node information is visible without hiding the map topology or active actor state.
+- [x] Given the recruitment site is selected, both offers and their action controls are readable, spatially separated, and clickable.
+- [x] Given a recruitment offer is applied, the resource, stock, army, and feedback changes are visible in a cleaner layout.
+- [x] Given a guarded-site interaction is available, the attack/site interaction control is clear, clickable, and does not overlap other controls.
+- [x] Given tactical mode opens, the tactical board, current stack, available controls, and feedback are readable and use more of the screen.
+- [x] Given tactical controls are used, existing move/attack/pass/wait/defend controls remain functional through public input/application paths.
+- [x] Given the battle resolves, the post-capture strategic result view opens and clearly communicates capture/guard/reward-deferred status.
+- [x] Existing LOOP-003 connected PlayMode smoke still passes.
+- [x] Before/after screenshot evidence demonstrates improved readability and clickability.
+- [x] CI passes.
 
 ## Verification requirements
 
@@ -229,16 +229,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 A story may be marked DONE only when all items are true:
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY. Human approval recorded on 2026-06-09. Implement exactly this visual/readability/clickability pass and do not expand into new gameplay systems or final UI/art architecture.
+DONE. Unity PR #25 merged and post-merge `main` CI passed. Remaining UX debt stays explicitly deferred: final UI/art direction, UI Toolkit/Canvas architecture, accessibility, localization, animation, and non-placeholder presentation/content polish.

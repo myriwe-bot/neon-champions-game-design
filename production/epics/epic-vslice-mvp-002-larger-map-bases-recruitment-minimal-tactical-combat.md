@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-Approved / Story Ready. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, `STORY-TAC-006`, and `STORY-LOOP-003` are DONE / merged. `STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass` is the current READY implementation packet after human review flagged the current layout/BMP evidence as hard to read and interact with.
+Approved / MVP closeout review. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, `STORY-TAC-006`, `STORY-LOOP-003`, and `STORY-QA-003` are DONE / merged. Post-merge Unity `main` CI passed for QA-003 on 2026-06-09.
 
 ## Priority tier
 
@@ -114,7 +114,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-STRAT-006 Simple Recruitment Site and Fixed Offers](../stories/story-strat-006-simple-recruitment-site-fixed-offer.md) | DONE / merged | Logic + UI/Integration + Config/Data | MAP-001, strategic-map §§4/6/8/10/11/12 | Unity PR #22, normal/upgraded offer validation, cost/stock/apply tests, screenshot evidence, CI |
 | [STORY-LOOP-003 Larger Map Recruitment and Neutral Capture Vertical Slice](../stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice.md) | DONE / merged | Playtest + Integration + UX/Smoke | MAP-001, STRAT-006, TAC-006 | Unity PR #24, connected recruitment-to-capture smoke, screenshots, checklist, CI |
 | [STORY-TAC-006 Multi-Stack Attacker Tactical Setup](../stories/story-tac-006-multi-stack-attacker-tactical-setup.md) | DONE / merged | Logic + Integration + Tactical UI/Smoke | TAC-002, TAC-005, STRAT-006 | Unity PR #23, two-stack attacker placement tests, invalid setup rejection, recruited-army handoff smoke, CI |
-| [STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass](../stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md) | READY | QA + UI/UX Readability + Visual/Feel | LOOP-003 | before/after screenshots, clickable controls/views, layout/readability checklist, CI |
+| [STORY-QA-003 Loop Slice Visual Readability and Clickable Layout Pass](../stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md) | DONE / merged | QA + UI/UX Readability + Visual/Feel | LOOP-003 | Unity PR #25, before/after screenshots, clickable controls/views, layout/readability checklist, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -192,4 +192,4 @@ If any box above is checked, the epic needs revision.
 
 ## Verdict
 
-Approved / Story Ready. `STORY-LOOP-003` is DONE / merged. `STORY-QA-003` is the current READY implementation packet for the visual/readability/clickability pass.
+Approved / MVP closeout review. All required child stories through `STORY-QA-003` are DONE / merged, with post-merge Unity `main` CI green. Human review is still required before declaring the epic fully DONE.

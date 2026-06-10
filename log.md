@@ -388,3 +388,10 @@
 - Activated `production/sprints/codex-story-qa-003.prompt.txt` by removing stale DO NOT RUN / approval-pending language while keeping the preflight check for READY/approved/PASS.
 - Repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to QA-003 as the current approved prompt.
 - Updated `EPIC-VSLICE-MVP-002` and index traceability.
+
+## [2026-06-10] draft | STORY-QA-004 playability map scale and UI clarity pass
+
+- Recorded human closeout feedback after QA-003 and hotfix PR #26: the map is still tiny/unreadable, text labels overlap, buttons are obstructed by text, there is no zoom/focus, clicked objects are unclear, and button meanings are unclear.
+- Drafted `production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md` as READY-candidate / approval pending.
+- Updated `EPIC-VSLICE-MVP-002` verdict to CONCERNS / closeout blocked until QA-004 is approved/implemented/verified or the user explicitly accepts the current usability risk.
+- Updated `production/sprints/strategic-mvp-codex-run-prompts.md` and `index.md` so no Unity implementation prompt is active for QA-004 before human approval.

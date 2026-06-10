@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-04
-updated: 2026-06-09
+updated: 2026-06-10
 source_lore: []
 related:
   [
@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-Approved / MVP closeout review. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, `STORY-TAC-006`, `STORY-LOOP-003`, and `STORY-QA-003` are DONE / merged. Post-merge Unity `main` CI passed for QA-003 on 2026-06-09.
+Approved / MVP closeout review with open usability blocker. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, `STORY-TAC-006`, `STORY-LOOP-003`, and `STORY-QA-003` are DONE / merged, followed by Unity hotfix PR #26. Human closeout review on 2026-06-10 still found blocker-level readability/playability issues: map tiny/unreadable, overlapping labels, text obstructing buttons, no zoom/focus, unclear clicked object, and unclear button meaning. `STORY-QA-004` is drafted as READY-candidate / approval pending.
 
 ## Priority tier
 
@@ -174,7 +174,7 @@ If no child story can become READY, the epic is not production-ready.
 - [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence are complete or accepted as documented exceptions.
 - [ ] Unresolved omissions are documented.
 - [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
+- [ ] Playtest/QA evidence exists if required. Human closeout review currently rejects usability/readability; QA-004 is drafted to resolve this.
 - [ ] No open blocker remains hidden.
 - [ ] Human review accepts the epic as complete.
 
@@ -192,4 +192,4 @@ If any box above is checked, the epic needs revision.
 
 ## Verdict
 
-Approved / MVP closeout review. All required child stories through `STORY-QA-003` are DONE / merged, with post-merge Unity `main` CI green. Human review is still required before declaring the epic fully DONE.
+CONCERNS / closeout blocked by human usability review. All formed implementation stories through `STORY-QA-003` are DONE / merged and Unity hotfix PR #26 is on `main`, but the human tester still reports blocker-level readability/playability issues. Do not mark the epic DONE or move to the next epic until `STORY-QA-004` is either approved/implemented/verified or the user explicitly accepts the current usability risk.

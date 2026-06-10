@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-09
+updated: 2026-06-10
 source_lore: []
 related:
   [
@@ -34,6 +34,7 @@ related:
     production/stories/story-loop-003-larger-map-recruitment-and-neutral-capture-vertical-slice,
     production/stories/story-tac-006-multi-stack-attacker-tactical-setup,
     production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass,
+    production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass,
   ]
 approval: approved
 ---
@@ -42,9 +43,9 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation story is currently READY after `STORY-QA-003`. EPIC-VSLICE-MVP-002 has all currently formed child implementation stories DONE / merged through QA-003, with post-merge Unity `main` CI green. The next step is a human closeout/playtest decision: either accept the epic as complete or choose/draft the next epic/story direction.
+No Unity implementation story is currently READY after `STORY-QA-003` and hotfix PR #26. Human closeout review rejected the current usability/readability state: map still tiny/unreadable, labels overlap, text obstructs buttons, no zoom/focus, clicked object is unclear, and button meaning is unclear.
 
-Use the checked-in guarded decision-brief prompt below only for planning. It must not create a Unity implementation branch or run Codex against a new runtime story.
+`STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass` is drafted as READY-candidate / approval pending. Do not create a Unity branch or run Codex for QA-004 until the user explicitly approves implementation.
 
 ## Copy-safe prompt-file mode
 
@@ -118,6 +119,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 Current guarded planning prompt:
 
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
+
+Current next candidate, not approved for implementation:
+
+- `production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md`
 
 ## After Codex finishes
 

@@ -410,3 +410,9 @@
 - Added `production/sprints/codex-story-qa-004-remediation.prompt.txt` to direct remediation on the existing PR branch.
 - Remediation direction: replace fragile world-space/debug action UI with a real uGUI Canvas using built-in layout groups, move controls/status/action lists out of map TextMesh clutter, fix guarded-site/Champion marker slots, make Focus actually center the selection, and produce PNG evidence that includes the actual tester UI.
 - Updated `production/sprints/strategic-mvp-codex-run-prompts.md` to point at the remediation prompt and explicitly prohibit merging PR #27 before human visual review passes.
+
+## [2026-06-10] done | STORY-QA-004 merge and epic closeout review
+
+- Marked `STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass` DONE / merged after Unity PR #27 squash-merged as `d7661bf0e1fe7edca0704ac928994489e93ad337`.
+- Recorded human visual acceptance before merge and post-merge Unity `main` CI success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests in run https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27278547989.
+- Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability; no next Unity implementation story is READY until the human chooses closeout or another follow-up direction.

@@ -66,7 +66,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004-remediation.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -90,12 +90,12 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — STORY-QA-004 remediation: real readable UI layout
+## Current Prompt A — next-step epic closeout decision brief
 
-Use the checked-in remediation prompt file:
+Use the checked-in guarded planning prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004-remediation.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -130,11 +130,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-003.prompt.txt`
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 
-Current approved prompt:
+Current guarded planning prompt:
 
-- `production/sprints/codex-story-qa-004.prompt.txt`
-- `production/sprints/codex-story-qa-004-remediation.prompt.txt`
+- `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 
 ## After Codex finishes
 
-Codex should commit and push fixes to existing branch `story/STORY-QA-004-playability-map-scale-zoom-ui-clarity` / PR #27. Review must fail closed until PNG evidence and human visual inspection confirm readable map, non-overlapping labels, unobstructed buttons, guarded-site/Champion separation, and clear tactical move/attack affordances.
+Codex should return a decision brief only. Do not create a Unity branch, do not open a PR, and do not mark a new story READY unless the human explicitly approves an implementation direction.

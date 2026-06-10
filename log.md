@@ -424,3 +424,10 @@
 - Recorded user direction: central guarded objective capture, allow Champion-vs-Champion combat as a later path, defender tiers named `weak / standard / strong`, and simple per-stack HP/strength persistence.
 - Drafted `STORY-OBJ-001 Scenario Objective State and Victory Feedback` as READY-candidate only; later OBJ/TAC/LOOP stories remain Draft placeholders until promoted by explicit approval.
 - Updated run prompts to state no Unity implementation story is currently READY.
+
+## [2026-06-10] approve | STORY-OBJ-001 implementation prep
+
+- Promoted `EPIC-VSLICE-MVP-003 Scenario Objective, Champion Combat, and Casualty Stakes` to approved.
+- Promoted `STORY-OBJ-001 Scenario Objective State and Victory Feedback` to READY / approved after explicit human approval.
+- Added checked-in Codex prompt `production/sprints/codex-story-obj-001.prompt.txt` and repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to it.
+- Adjacent EPIC-003 stories remain Draft and out of implementation scope: defender tiers, HP/strength persistence, Champion-vs-Champion encounter path, and connected objective/casualty smoke.

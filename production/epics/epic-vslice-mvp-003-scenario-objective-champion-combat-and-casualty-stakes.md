@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-003 Scenario Objective, Champion Combat, and Casualty Stakes
 type: epic
-status: approved-candidate
+status: approved
 phase: production
 owner: shared
 created: 2026-06-10
@@ -14,16 +14,16 @@ related:
     design/gdd/faction-unit-rosters,
     production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat,
   ]
-approval: pending
+approval: approved
 ---
 
 # Epic: EPIC-VSLICE-MVP-003 Scenario Objective, Champion Combat, and Casualty Stakes
 
 ## Status
 
-APPROVED-CANDIDATE / pending final human approval. Direction was selected by the user on 2026-06-10 after closing `EPIC-VSLICE-MVP-002`: central guarded objective capture, allow Champion-vs-Champion combat, defender tiers named `weak / standard / strong`, and simple per-stack HP/strength persistence.
+APPROVED. Direction was selected by the user on 2026-06-10 after closing `EPIC-VSLICE-MVP-002`: central guarded objective capture, allow Champion-vs-Champion combat, defender tiers named `weak / standard / strong`, and simple per-stack HP/strength persistence. The user approved implementation prep for the first child story, `STORY-OBJ-001`, on 2026-06-10.
 
-No child story in this epic is READY yet. Agents and Codex may not implement this epic or its stories until a child story is explicitly promoted to READY / approved.
+`STORY-OBJ-001` is READY / approved as the next implementation packet. Other child stories remain Draft and do not authorize implementation.
 
 ## Priority tier
 
@@ -130,7 +130,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-OBJ-001 Scenario Objective State and Victory Feedback](../stories/story-obj-001-scenario-objective-state-and-victory-feedback.md) | READY-candidate / approval pending | Logic + UI/Integration + UX/Smoke | EPIC-002 closed, current readable vertical slice | Objective-state tests, PlayMode smoke, PNG evidence, CI |
+| [STORY-OBJ-001 Scenario Objective State and Victory Feedback](../stories/story-obj-001-scenario-objective-state-and-victory-feedback.md) | READY / approved | Logic + UI/Integration + UX/Smoke | EPIC-002 closed, current readable vertical slice | Objective-state tests, PlayMode smoke, PNG evidence, CI |
 | [STORY-OBJ-002 Guarded Site Defender Strength Tiers](../stories/story-obj-002-guarded-site-defender-strength-tiers.md) | Draft | Logic + Config/Data + UI/Integration | OBJ-001 | Tier validation, deterministic defender setup tests, evidence |
 | [STORY-TAC-007 Simple Stack HP/Strength Persistence](../stories/story-tac-007-simple-stack-strength-persistence.md) | Draft | Tactical Logic + Strategic Result Integration | OBJ-002 | Battle-result persistence tests, army summary evidence, CI |
 | [STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path](../stories/story-tac-008-champion-vs-champion-tactical-encounter-path.md) | Draft | Tactical Integration + Strategic Encounter Routing | TAC-007 | Deterministic Champion encounter smoke, result persistence evidence |
@@ -207,4 +207,4 @@ If any box above is checked, the epic needs revision.
 
 ## Verdict
 
-READY-CANDIDATE / approval pending. The human approved this direction in chat on 2026-06-10, but this epic and its first child story still require explicit artifact approval before implementation. Recommended next approval target: promote `STORY-OBJ-001` to READY after reviewing its packet.
+APPROVED for production story train. `STORY-OBJ-001` is READY / approved for implementation. Adjacent stories remain Draft until separately promoted.

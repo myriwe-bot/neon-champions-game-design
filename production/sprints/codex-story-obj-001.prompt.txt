@@ -1,0 +1,106 @@
+Implement STORY-OBJ-001 Scenario Objective State and Victory Feedback in the Neon Champions Unity repo.
+
+This is an approved READY story. Implement exactly this packet; do not expand into later EPIC-003 stories.
+
+Repos and paths:
+- Game-design/source-authority repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Story: production/stories/story-obj-001-scenario-objective-state-and-victory-feedback.md
+- Parent epic: production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes.md
+- Baseline Unity main: after PR #27 / merge commit d7661bf0e1fe7edca0704ac928994489e93ad337
+
+Preflight:
+1. In game-design repo, pull main and read the story, parent epic, and source docs listed below.
+2. In Unity repo, checkout main and pull latest.
+3. Create branch: story/STORY-OBJ-001-scenario-objective-victory-feedback
+4. Verify story front matter before coding:
+   - status: ready
+   - approval: approved
+   - Ambiguity Check status: PASS
+5. Stop if the repo is dirty before you start, unless the dirt is your own new branch work.
+
+Required source docs:
+- production/stories/story-obj-001-scenario-objective-state-and-victory-feedback.md
+- production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes.md
+- design/gdd/strategic-map.md §§6, 8, 10, 11, 12, 13, 14
+- design/gdd/tactical-combat.md existing MVP handoff/result expectations only; no new tactical mechanics in this story
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files in scope
+
+Goal:
+Add a minimal scenario objective state and visible victory feedback so the existing vertical slice clearly tells the player what they are trying to accomplish and when they have won.
+
+In scope:
+- Add one central guarded objective site or mark an existing central guarded site as the objective target.
+- Add minimal objective state, e.g. incomplete / complete.
+- Show objective status in the prototype UI, using the existing readable Canvas approach from QA-004 where applicable.
+- Completing/capturing the objective target marks the objective complete.
+- Show visible victory/success feedback when complete.
+- Add tests for objective incomplete/complete state and victory feedback path.
+- Add PlayMode smoke evidence and PNG screenshot evidence.
+
+Out of scope / hard stop conditions:
+- Do NOT implement defender strength tiers (`weak / standard / strong`) in this story.
+- Do NOT implement simple HP/strength persistence.
+- Do NOT implement Champion-vs-Champion combat.
+- Do NOT add strategic AI or enemy autonomous objective contest.
+- Do NOT add multiple objective archetypes.
+- Do NOT add campaign progression or save/load.
+- Do NOT add full victory/loss framework.
+- Do NOT make final UI/art/accessibility decisions.
+- Do NOT add new final names/content/lore.
+- Do NOT fake objective completion by bypassing runtime/application state.
+- Do NOT let presentation code directly mutate canonical gameplay state.
+- If completing the story appears to require any out-of-scope item, stop and report the blocker.
+
+Allowed placeholders:
+- Placeholder objective ID such as objective_central_site or localization key.
+- Existing placeholder site/champion/unit IDs.
+- Primitive objective tracker panel and victory text.
+- Deterministic test/setup path.
+
+Acceptance criteria:
+- Given the scenario starts, the UI visibly shows the current objective.
+- Given the central objective site is not captured/complete, objective state is visibly incomplete.
+- Given the player captures/completes the central objective site through the existing battle/capture path, objective state becomes complete.
+- Given objective state becomes complete, the UI shows clear victory/success feedback.
+- Existing larger-map recruitment-to-capture loop behavior still works.
+- Existing tactical handoff/result path remains intact; no new tactical mechanics are introduced.
+- Objective state and victory feedback are covered by automated tests where feasible.
+- PlayMode smoke and PNG evidence show objective start, objective completion, and victory feedback.
+- CI passes.
+
+Testing and evidence requirements:
+- Use TDD for objective state/result logic where practical.
+- Add Unit/EditMode tests for objective state transitions and validation helpers.
+- Add/extend PlayMode tests for visible objective/victory smoke path.
+- Existing validators must remain passing.
+- Produce PNG evidence under production/evidence/STORY-OBJ-001/ or equivalent story evidence path.
+- Update evidence README/checklist with objective start/incomplete, objective completion, and victory feedback.
+- Run local verification available in repo:
+  - EditMode tests
+  - PlayMode tests
+  - Placeholder validator
+  - Standalone build if available
+  - git diff --check
+
+PR requirements:
+- Branch: story/STORY-OBJ-001-scenario-objective-victory-feedback
+- PR title: STORY-OBJ-001 Scenario objective state and victory feedback
+- PR body must link:
+  - STORY-OBJ-001
+  - EPIC-VSLICE-MVP-003
+  - relevant GDD/ADR/control docs
+- PR body must include:
+  - changed files summary
+  - tests/checks run with results
+  - evidence paths
+  - omissions/deferred work: no defender tiers, no HP/strength persistence, no Champion-vs-Champion implementation, no strategic AI, no final UI/art, no final content
+  - explicit known omissions/stubs/mocks/assumptions or `No known omissions`
+
+When done:
+- Commit and push branch.
+- Open PR against main.
+- Report PR URL, branch head SHA, tests run, evidence paths, and any omissions/blockers.

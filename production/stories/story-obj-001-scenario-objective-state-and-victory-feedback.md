@@ -1,7 +1,7 @@
 ---
 title: STORY-OBJ-001 Scenario Objective State and Victory Feedback
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-10
@@ -16,14 +16,14 @@ related:
     docs/architecture/ci-build-automation,
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-OBJ-001 Scenario Objective State and Victory Feedback
 
 ## Status
 
-READY-CANDIDATE / approval pending. Drafted after human selected the next epic direction on 2026-06-10: central guarded objective capture, Champion-vs-Champion allowed later, defender tiers `weak / standard / strong`, and simple per-stack HP/strength persistence later.
+READY / approved for implementation. Drafted after human selected the next epic direction on 2026-06-10: central guarded objective capture, Champion-vs-Champion allowed later, defender tiers `weak / standard / strong`, and simple per-stack HP/strength persistence later. Human approval to promote this story and prepare implementation recorded on 2026-06-10.
 
 This story is intentionally first and narrow: it establishes the scenario objective spine only. It does not implement defender tiers, HP/strength persistence, or Champion-vs-Champion combat.
 
@@ -133,7 +133,7 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate review; pending human artifact approval before READY.
+Status: PASS.
 
 Open questions:
 
@@ -187,7 +187,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
 - [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given for implementation / READY promotion.
+- [x] Human approval has been given for implementation / READY promotion.
 
 ## DONE gate
 
@@ -203,4 +203,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-CANDIDATE / approval pending. Promote to READY only after the user explicitly approves this story packet for implementation.
+READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-obj-001.prompt.txt`.

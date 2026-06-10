@@ -35,6 +35,8 @@ related:
     production/stories/story-tac-006-multi-stack-attacker-tactical-setup,
     production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass,
     production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass,
+    production/stories/story-obj-001-scenario-objective-state-and-victory-feedback,
+    production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
   ]
 approval: approved
 ---
@@ -43,9 +45,9 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation story is currently READY. `EPIC-VSLICE-MVP-002` is closed, and `EPIC-VSLICE-MVP-003 Scenario Objective, Champion Combat, and Casualty Stakes` plus `STORY-OBJ-001 Scenario Objective State and Victory Feedback` are drafted as approval-pending candidates.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback` is the current READY / approved Unity implementation packet.
 
-Do not run Codex against Unity yet. The next human gate is artifact approval: approve/revise the EPIC-003 packet and decide whether to promote `STORY-OBJ-001` from READY-candidate to READY.
+Run exactly the checked-in prompt file below. Keep the packet focused on visible objective state and victory feedback. Do not implement defender tiers, HP/strength persistence, Champion-vs-Champion combat, strategic AI, multiple objective archetypes, full victory/loss framework, final UI/art, or final content.
 
 ## Copy-safe prompt-file mode
 
@@ -57,14 +59,25 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Inspect the candidate packet; do not run Unity implementation yet.
-Get-Content production\epics\epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes.md
-Get-Content production\stories\story-obj-001-scenario-objective-state-and-victory-feedback.md
+# Verify STORY-OBJ-001 is READY/approved before running Codex.
+Select-String -Path production\stories\story-obj-001-scenario-objective-state-and-victory-feedback.md -Pattern "status: ready","approval: approved","Status: PASS"
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git fetch origin
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-obj-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
 
-Run this in PowerShell before any future approved implementation:
+Run this in PowerShell:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -79,9 +92,17 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — none / pending approval
+## Current Prompt A — STORY-OBJ-001 scenario objective state and victory feedback
 
-No checked-in Unity implementation prompt is active. `STORY-OBJ-001` is only READY-candidate.
+Use the checked-in prompt file:
+
+```powershell
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-obj-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
+```
 
 ## Historical prompt-file runs
 
@@ -110,7 +131,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-tac-006.prompt.txt`
 - `production/sprints/codex-story-qa-003.prompt.txt`
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
+- `production/sprints/codex-story-obj-001.prompt.txt`
 
-## After approval
+Current approved prompt:
 
-If the user approves `STORY-OBJ-001` for implementation, promote exactly that story to READY, create a checked-in Codex prompt for it, repoint this file to that prompt, and keep adjacent OBJ/TAC/LOOP stories in Draft.
+- `production/sprints/codex-story-obj-001.prompt.txt`
+
+## After Codex finishes
+
+Codex should commit and push `story/STORY-OBJ-001-scenario-objective-victory-feedback`, then open or prepare a PR titled `STORY-OBJ-001 Scenario objective state and victory feedback`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

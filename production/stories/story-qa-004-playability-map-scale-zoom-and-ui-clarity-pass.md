@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-10
@@ -17,16 +17,16 @@ related:
     production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat,
     production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass
 
 ## Status
 
-READY-candidate / approval pending. Drafted from human closeout feedback on 2026-06-10: the map is still tiny and unreadable; text overlaps itself; buttons are obstructed by text; the prototype is confusing; there is no zoom; it is hard to understand what is clicked and what buttons do.
+READY / approved for implementation. Human approval recorded on 2026-06-10 after closeout feedback: the map is still tiny and unreadable; text overlaps itself; buttons are obstructed by text; the prototype is confusing; there is no zoom; it is hard to understand what is clicked and what buttons do.
 
-This is the recommended next packet before closing `EPIC-VSLICE-MVP-002` or starting a new objective/victory epic.
+This is the current approved implementation packet before closing `EPIC-VSLICE-MVP-002` or starting a new objective/victory epic.
 
 ## Story type
 
@@ -169,7 +169,7 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: PASS-candidate.
+Status: PASS.
 
 Open questions:
 
@@ -190,7 +190,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- Pending. This story is not READY until the user explicitly approves implementation.
+- Human approval recorded on 2026-06-10: implement this exact QA-004 playability/readability packet next. Exact zoom/focus control may be chosen by the implementer from the allowed forms, prioritizing smallest reliable implementation.
 
 ## Branch / PR requirements
 
@@ -219,9 +219,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
-- [x] Ambiguity Check status is PASS-candidate; becomes PASS on approval.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -237,4 +237,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate / approval pending. Do not implement until the user explicitly approves this packet.
+READY for implementation. Implement exactly this packet next; do not expand into new gameplay systems or final UI/art architecture.

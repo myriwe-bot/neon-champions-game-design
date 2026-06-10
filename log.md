@@ -395,3 +395,11 @@
 - Drafted `production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md` as READY-candidate / approval pending.
 - Updated `EPIC-VSLICE-MVP-002` verdict to CONCERNS / closeout blocked until QA-004 is approved/implemented/verified or the user explicitly accepts the current usability risk.
 - Updated `production/sprints/strategic-mvp-codex-run-prompts.md` and `index.md` so no Unity implementation prompt is active for QA-004 before human approval.
+
+## [2026-06-10] approve | STORY-QA-004 implementation packet
+
+- Recorded human approval for `STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass` and promoted it from READY-candidate / pending to READY / approved.
+- Updated Ambiguity Check to PASS with the approved scope: map scale/readability, zoom/focus, non-overlapping labels, unobstructed buttons, selected/clicked feedback, and tactical move/attack clarity.
+- Added `production/sprints/codex-story-qa-004.prompt.txt` as the checked-in copy-safe Codex implementation prompt with workspace-write and danger-full-access command variants.
+- Repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to QA-004 as the current approved prompt.
+- Updated `EPIC-VSLICE-MVP-002` and index traceability.

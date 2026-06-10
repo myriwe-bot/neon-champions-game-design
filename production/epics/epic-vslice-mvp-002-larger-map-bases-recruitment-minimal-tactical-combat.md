@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-Approved / MVP closeout review with open usability blocker. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, `STORY-TAC-006`, `STORY-LOOP-003`, and `STORY-QA-003` are DONE / merged, followed by Unity hotfix PR #26. Human closeout review on 2026-06-10 still found blocker-level readability/playability issues: map tiny/unreadable, overlapping labels, text obstructing buttons, no zoom/focus, unclear clicked object, and unclear button meaning. `STORY-QA-004` is drafted as READY-candidate / approval pending.
+Approved / MVP closeout review with open usability blocker. Direction approved by user on 2026-06-04 as option C, tightly scoped: modest larger map + one simple real tactical battle + one recruitment site. `STORY-TAC-005`, `STORY-MAP-001`, `STORY-STRAT-006`, `STORY-TAC-006`, `STORY-LOOP-003`, and `STORY-QA-003` are DONE / merged, followed by Unity hotfix PR #26. Human closeout review on 2026-06-10 still found blocker-level readability/playability issues: map tiny/unreadable, overlapping labels, text obstructing buttons, no zoom/focus, unclear clicked object, and unclear button meaning. `STORY-QA-004` is READY / approved for implementation.
 
 ## Priority tier
 
@@ -192,4 +192,4 @@ If any box above is checked, the epic needs revision.
 
 ## Verdict
 
-CONCERNS / closeout blocked by human usability review. All formed implementation stories through `STORY-QA-003` are DONE / merged and Unity hotfix PR #26 is on `main`, but the human tester still reports blocker-level readability/playability issues. Do not mark the epic DONE or move to the next epic until `STORY-QA-004` is either approved/implemented/verified or the user explicitly accepts the current usability risk.
+CONCERNS / closeout blocked by human usability review. All formed implementation stories through `STORY-QA-003` are DONE / merged and Unity hotfix PR #26 is on `main`, but the human tester still reports blocker-level readability/playability issues. Do not mark the epic DONE or move to the next epic until `STORY-QA-004` is implemented and verified, or the user explicitly accepts the current usability risk.

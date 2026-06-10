@@ -43,22 +43,34 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation story is currently READY after `STORY-QA-003` and hotfix PR #26. Human closeout review rejected the current usability/readability state: map still tiny/unreadable, labels overlap, text obstructs buttons, no zoom/focus, clicked object is unclear, and button meaning is unclear.
+`STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass` is the current READY / approved Unity implementation packet. Human closeout review rejected the current usability/readability state after QA-003 and hotfix PR #26: map still tiny/unreadable, labels overlap, text obstructs buttons, no zoom/focus, clicked object is unclear, and button meaning is unclear.
 
-`STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass` is drafted as READY-candidate / approval pending. Do not create a Unity branch or run Codex for QA-004 until the user explicitly approves implementation.
+Run exactly the checked-in prompt file below; keep the packet focused on map scale/readability, zoom/focus, non-overlapping labels, unobstructed action controls, selected/clicked feedback, and tactical move/attack clarity. Do not add new gameplay systems or final UI/art.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded planning prompt-file command:
+Current prompt-file command:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
+# Verify STORY-QA-004 is READY/approved before running Codex.
+Select-String -Path production\stories\story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md -Pattern "status: ready","approval: approved","Status: PASS"
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git fetch origin
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004.prompt.txt"
 codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -78,16 +90,17 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — next-step epic closeout decision brief
+## Current Prompt A — STORY-QA-004 playability map scale, zoom, and UI clarity
 
-Use the checked-in guarded planning prompt file:
+Use the checked-in prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004.prompt.txt"
 codex exec --sandbox workspace-write $prompt
-```
 
-This is not an implementation prompt. It exists to prepare the human decision for the next epic/story direction after QA-003.
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
+```
 
 ## Historical prompt-file runs
 
@@ -115,15 +128,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-loop-003.prompt.txt`
 - `production/sprints/codex-story-tac-006.prompt.txt`
 - `production/sprints/codex-story-qa-003.prompt.txt`
-
-Current guarded planning prompt:
-
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 
-Current next candidate, not approved for implementation:
+Current approved prompt:
 
-- `production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md`
+- `production/sprints/codex-story-qa-004.prompt.txt`
 
 ## After Codex finishes
 
-Codex should return a decision brief only. Do not create a Unity branch, do not open a PR, and do not mark a new story READY unless the human explicitly approves an implementation direction.
+Codex should commit and push `story/STORY-QA-004-playability-map-scale-zoom-ui-clarity`, then open or prepare a PR titled `STORY-QA-004 Playability map scale, zoom, and UI clarity pass`. Review the PR against the story contract, before/after evidence package, CI, and omissions before merging.

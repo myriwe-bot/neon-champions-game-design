@@ -1,0 +1,122 @@
+Implement STORY-QA-004 for Neon Champions Unity. This is the current approved READY implementation packet.
+
+Repos and paths:
+- Game-design/source-authority repo on Windows: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo on Windows: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Story source: production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md
+- Parent epic: production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat.md
+
+Preflight stop conditions:
+1. In the game-design repo, pull main and verify the story has:
+   - status: ready
+   - approval: approved
+   - Ambiguity Check: PASS
+2. In the Unity repo, fetch/pull main and verify a clean working tree before branching.
+3. If any required source file is missing, draft, pending, contradictory, or not approved where the story requires approval, STOP and report the blocker. Do not weaken this prompt.
+4. If the implementation would require new gameplay rules, final UI/art architecture, new content, strategic AI, save/load, new tactical abilities, or final accessibility work, STOP and report the needed follow-up story instead.
+
+Required reading before coding:
+- production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md
+- production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass.md
+- production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat.md
+- design/gdd/strategic-map.md §§2, 6, 8, 9, 10, 11, 12, 14
+- design/gdd/tactical-combat.md MVP visual/handoff/control sections relevant to current tactical presentation
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files that apply to changed paths
+
+Branch and PR:
+- Branch: story/STORY-QA-004-playability-map-scale-zoom-ui-clarity
+- PR title: STORY-QA-004 Playability map scale, zoom, and UI clarity pass
+
+Task:
+Fix the current prototype usability/readability blocker reported by the human closeout review after PR #26:
+- map still tiny and unreadable;
+- text labels overlap themselves;
+- buttons are obstructed by text;
+- prototype is confusing;
+- no zoom/focus;
+- unclear what is clicked/selected;
+- unclear what buttons do;
+- tactical move/attack fixes are not enough if targets/actions/feedback are not readable.
+
+In scope:
+1. Baseline audit/evidence
+   - Start from Unity main after PR #26.
+   - Capture/preserve baseline screenshots at target evidence resolution before changes.
+   - Audit connected slice for map scale, overlap, obstruction, selected/clicked feedback, and button meaning.
+2. Map scale and zoom/focus
+   - Make strategic map substantially larger/readable at default evidence resolution.
+   - Add a narrow prototype zoom/focus affordance if needed: camera zoom buttons, scroll-wheel zoom, keyboard zoom, or focused selected-site/node view are acceptable.
+   - Zoom/focus must not hide required HUD/action state or break click targets.
+3. Text/button layout
+   - Remove or sharply reduce overlapping TextMesh/label clutter.
+   - Separate button text from world labels so buttons are not obstructed.
+   - Prefer fewer, larger, clearer labels over raw debug clutter.
+   - Use explicit verb labels: Select, Move, Recruit, Attack, End Turn, Pass, Wait, Defend.
+   - Raw IDs may remain only where useful for debug evidence; they must not dominate the playable view.
+4. Click/action feedback
+   - Clearly show what is selected/clicked.
+   - Clearly show available actions for the selected object.
+   - Clearly show success/invalid feedback.
+   - Make tactical move/attack targets visually distinct and understandable.
+5. Evidence/regression
+   - Add/update PlayMode checks for map zoom/focus affordance, visible selection feedback, and non-overlapping/available action groups where feasible.
+   - Add evidence under production/evidence/STORY-QA-004/ with before/after screenshots or video for:
+     - initial strategic map readability;
+     - selected Champion/site/node state;
+     - recruitment action area;
+     - tactical move/attack target state;
+     - post-action feedback.
+   - Add a checklist answering each human-observed issue directly.
+
+Out of scope:
+- New gameplay systems or victory conditions.
+- Strategic AI.
+- Save/load.
+- Final map content, final names, final UI art, animation, audio, VFX, balance, economy expansion, recruitment expansion.
+- New tactical abilities or tactical-system expansion.
+- Final accessibility pass.
+- UI Toolkit/Canvas migration unless a tiny local change is demonstrably lower risk than continuing current placeholder UI.
+- Presentation code directly mutating canonical gameplay/domain state.
+- Hiding labels/buttons instead of making playable information understandable.
+
+Implementation constraints:
+- Keep gameplay rules in existing domain/application layers.
+- UI/presentation may call existing public application paths but must not directly mutate canonical gameplay state.
+- Primitive prototype visuals are allowed: panels, hit boxes, zoom/focus controls, highlights, TextMesh labels, line/marker changes.
+- Fake screenshots/evidence are forbidden.
+- If a screenshot capture path misses screen-space overlays, fix evidence capture or use camera-rendered evidence overlays; do not claim invisible evidence proves readability.
+
+Acceptance criteria to satisfy:
+- Strategic map is large enough to read/judge at default evidence resolution without external image zoom.
+- Map labels do not overlap themselves or obstruct primary buttons.
+- Clicking/selecting Champion/site/route/node/tactical stack/tactical target visibly identifies the selected object.
+- Available action controls use clear verb labels and are not hidden under text/map labels.
+- Invalid/unavailable actions give visible feedback.
+- Zoom/focus exists if default density requires it and remains usable without breaking click targets.
+- Tactical move/attack targets are visually distinguishable, clickable, and produce visible success/invalid feedback.
+- Existing connected-loop PlayMode smoke still passes.
+- Before/after evidence visibly demonstrates the improvement.
+- CI passes.
+
+Required verification before PR/finish:
+- Run relevant Unity tests locally if available in the environment.
+- Run existing validators/checks available in repo.
+- Run PlayMode smoke/regression tests relevant to QA-004.
+- Run git diff --check.
+- Add/update production/evidence/STORY-QA-004/README.md with exact commands/results, before/after artifacts, checklist, known omissions/deferred work, and CI expectations.
+- Commit and push the branch.
+- Open or prepare a PR with the required title.
+
+PR body must include:
+- Story ID and source links.
+- User-observed issues checklist and how each was addressed.
+- Screenshots/video evidence links or artifact paths.
+- Tests/checks run with results.
+- Known omissions/stubs/mocks/assumptions/deferred work, or explicit No known omissions.
+- Confirmation that no new gameplay systems/final UI/art/content/balance were added.
+
+If blocked:
+- Stop and report exact blocker, file/path, command output, and the narrow prerequisite needed. Do not broaden the story.

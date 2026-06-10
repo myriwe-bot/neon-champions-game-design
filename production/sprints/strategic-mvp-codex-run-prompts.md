@@ -43,9 +43,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass` is the current READY / approved Unity implementation packet. Human closeout review rejected the current usability/readability state after QA-003 and hotfix PR #26: map still tiny/unreadable, labels overlap, text obstructs buttons, no zoom/focus, clicked object is unclear, and button meaning is unclear.
+`STORY-QA-004` PR #27 is BLOCKED by human readability/playability review. Green CI is not sufficient: the BMP evidence is not useful, labels still overlap, buttons/text obstruct each other, guarded-site/Champion markers overlap, and the map is still hard to test.
 
-Run exactly the checked-in prompt file below; keep the packet focused on map scale/readability, zoom/focus, non-overlapping labels, unobstructed action controls, selected/clicked feedback, and tactical move/attack clarity. Do not add new gameplay systems or final UI/art.
+Run the checked-in remediation prompt below on the existing PR branch. It directs Codex to replace the fragile world-space/debug control layout with a real uGUI Canvas + layout groups, produce PNG evidence that includes the actual UI, and add overlap/layout regression checks. Do not merge PR #27 until this remediation passes human visual review.
 
 ## Copy-safe prompt-file mode
 
@@ -66,7 +66,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004-remediation.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -90,12 +90,12 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — STORY-QA-004 playability map scale, zoom, and UI clarity
+## Current Prompt A — STORY-QA-004 remediation: real readable UI layout
 
-Use the checked-in prompt file:
+Use the checked-in remediation prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-004-remediation.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -133,7 +133,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 Current approved prompt:
 
 - `production/sprints/codex-story-qa-004.prompt.txt`
+- `production/sprints/codex-story-qa-004-remediation.prompt.txt`
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-QA-004-playability-map-scale-zoom-ui-clarity`, then open or prepare a PR titled `STORY-QA-004 Playability map scale, zoom, and UI clarity pass`. Review the PR against the story contract, before/after evidence package, CI, and omissions before merging.
+Codex should commit and push fixes to existing branch `story/STORY-QA-004-playability-map-scale-zoom-ui-clarity` / PR #27. Review must fail closed until PNG evidence and human visual inspection confirm readable map, non-overlapping labels, unobstructed buttons, guarded-site/Champion separation, and clear tactical move/attack affordances.

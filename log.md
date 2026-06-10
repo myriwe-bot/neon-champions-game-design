@@ -403,3 +403,10 @@
 - Added `production/sprints/codex-story-qa-004.prompt.txt` as the checked-in copy-safe Codex implementation prompt with workspace-write and danger-full-access command variants.
 - Repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to QA-004 as the current approved prompt.
 - Updated `EPIC-VSLICE-MVP-002` and index traceability.
+
+## [2026-06-10] blocked | STORY-QA-004 PR #27 readability remediation
+
+- Recorded merge-gate verdict for Unity PR #27 as BLOCKED despite green CI because human review still reports blocker-level usability: BMP evidence is not useful, labels overlap, buttons are obstructed by text, guarded-site and Champion markers overlap, and the map remains hard to test.
+- Added `production/sprints/codex-story-qa-004-remediation.prompt.txt` to direct remediation on the existing PR branch.
+- Remediation direction: replace fragile world-space/debug action UI with a real uGUI Canvas using built-in layout groups, move controls/status/action lists out of map TextMesh clutter, fix guarded-site/Champion marker slots, make Focus actually center the selection, and produce PNG evidence that includes the actual tester UI.
+- Updated `production/sprints/strategic-mvp-codex-run-prompts.md` to point at the remediation prompt and explicitly prohibit merging PR #27 before human visual review passes.

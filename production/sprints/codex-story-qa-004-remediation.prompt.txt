@@ -1,0 +1,126 @@
+Continue PR #27 / STORY-QA-004 remediation. Do not merge the current PR as-is.
+
+Current verdict from human review and merge gate:
+- BLOCKED. The branch may have green CI, but the prototype is still not usable/readable.
+- Human-observed blockers: BMP evidence is not useful; labels still overlap; buttons are overlaid/obstructed by text; guarded-site guard icon overlaps the Champion sprite; map is hard/impossible to test; there is no actually clear readable button layout.
+- This is not a request for another small label tweak. Replace the fragile world-space/debug UI layout with a real readable prototype UI layout.
+
+Repos and paths:
+- Game-design/source-authority repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Current PR branch: story/STORY-QA-004-playability-map-scale-zoom-ui-clarity
+- PR: https://github.com/myriwe-bot/neon-champions-unity/pull/27
+- Story source: production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md
+
+Preflight:
+1. Pull game-design main and Unity PR branch.
+2. Verify the story remains `status: ready`, `approval: approved`, Ambiguity Check PASS.
+3. Inspect current PR evidence under `production/evidence/STORY-QA-004/` and confirm the current BMP/evidence path does not prove the actual usable UI.
+4. Do not broaden gameplay scope. This remains a QA/playability UI remediation for STORY-QA-004.
+
+Research-backed UI direction:
+Use Unity's built-in uGUI layout system rather than hand-positioned map TextMesh/buttons.
+- Unity uGUI Auto Layout provides Horizontal/Vertical/Grid layout groups and layout elements to place children in structured layouts with padding/spacing and content sizing.
+- VerticalLayoutGroup stacks child elements with spacing/padding and sizes from min/preferred/flexible dimensions.
+- GridLayoutGroup places child elements into fixed cells and supports spacing/constraints.
+This is the appropriate out-of-the-box solution for prototype command panels and button groups.
+
+Required architecture change:
+1. Add a runtime-created or prefabbed uGUI Canvas for player controls/status.
+   - Prefer `Canvas` with Screen Space - Camera attached to the evidence/main camera, or Screen Space - Overlay if evidence capture is fixed to include it.
+   - Add `CanvasScaler` with Scale With Screen Size, reference resolution 1280x720.
+   - Add `GraphicRaycaster`.
+   - Ensure an EventSystem exists.
+2. Use real uGUI panels and layout groups:
+   - Top HUD: HorizontalLayoutGroup, fixed height, active faction/turn/resources/end turn/zoom/focus.
+   - Left panel: VerticalLayoutGroup for selected Champion and available movement.
+   - Right panel: VerticalLayoutGroup for selected site/result/status/recruitment offers.
+   - Bottom command bar: HorizontalLayoutGroup with grouped button areas.
+   - Movement/recruitment/tactical action lists: GridLayoutGroup or VerticalLayoutGroup.
+3. Use normal `Button` controls wired to existing public methods only:
+   - SelectChampion
+   - CommitDestinationNode / CommitRoute
+   - SelectSite
+   - CommitSelectedSiteInteraction
+   - CommitSelectedRecruitmentOffer
+   - CommandCurrentTacticalMove / CommandCurrentTacticalAttack
+   - CommandCurrentTacticalPass / Wait / Defend
+   - EndTurn
+   - Zoom In / Zoom Out / Focus Selected
+4. Remove or gate duplicate world-space action/HUD text.
+   - The board/map can remain world-space.
+   - Action labels, status text, selected info, diagnostics, recruitment offers, tactical command bar, end turn, zoom/focus must be in Canvas UI, not repeated as TextMesh over the map.
+   - Disable/remove from normal render path unless explicitly behind a debug flag:
+     - CreateActiveFactionDisplay
+     - CreateTurnRoundDisplay
+     - CreateNextFactionDisplay
+     - CreateSelectedChampionDisplay
+     - CreateSiteInteractionDisplay
+     - CreateEndTurnControl
+     - CreateZoomFocusControls
+     - CreateDiagnosticDisplay
+     - CreateDeferredSystemsDisplay
+     - CreateStrategicReadableOverlay
+     - CreateTacticalReadableOverlay
+5. Fix map marker overlap deterministically.
+   - Add marker slots around a node: node center, site/guard slot, champion faction A slot, champion faction B slot.
+   - Guarded-site guard icon must not occupy the same screen/world slot as Champion sprite.
+   - Prefer putting detailed IDs/status in side panel, leaving map markers minimal.
+6. Make focus actually focus.
+   - Focus Selected should pan/center camera or map root toward the selected Champion/site, not just reduce orthographic size.
+   - HUD/Canvas must remain visible.
+
+Evidence requirements:
+1. BMP is not acceptable as the primary reviewer artifact anymore.
+2. Produce PNG evidence that a human can open directly.
+3. Ensure screenshots include the actual UI that the tester sees.
+   - If using Screen Space - Overlay, use a capture path that includes overlay UI, e.g. ScreenCapture/CaptureScreenshotAsTexture if available in this Unity config.
+   - If camera RenderTexture capture is kept, use Screen Space - Camera or World Space Canvas attached/rendered by the evidence camera.
+4. Update `production/evidence/STORY-QA-004/README.md` with PNG paths, exact commands, and checklist mapping.
+5. Include before/after evidence for:
+   - initial strategic map readability;
+   - selected Champion/site/node state;
+   - recruitment action area;
+   - guarded site + Champion non-overlap;
+   - tactical move/attack target state;
+   - post-action feedback.
+
+Test requirements:
+1. Add PlayMode tests that verify real UI structure, not just TextMesh labels exist:
+   - Canvas exists with CanvasScaler reference resolution 1280x720.
+   - Top HUD, left panel, right panel, bottom command bar exist.
+   - Buttons with clear verb labels exist and are interactable where appropriate: Select, Move, Recruit, Attack, End Turn, Pass, Wait, Defend, Zoom In, Zoom Out, Focus Selected.
+2. Add overlap/layout assertions at 1280x720:
+   - command buttons do not overlap text labels;
+   - bottom command bar does not overlap map labels;
+   - guarded site marker/icon does not overlap Champion marker/sprite;
+   - tactical action buttons do not overlap explanatory text.
+3. Add Focus Selected test:
+   - after focus, selected Champion/site screen position is closer to center or within a defined focus region.
+4. Add evidence tests/checks:
+   - PNG files are generated and non-empty;
+   - evidence README references PNGs, not only BMPs.
+5. Run full local verification available in repo:
+   - EditMode tests
+   - PlayMode tests
+   - Placeholder validator
+   - Standalone build if available
+   - git diff --check
+
+Out of scope remains:
+- New gameplay systems.
+- Strategic AI.
+- Save/load.
+- Final art/UI style pass.
+- New tactical abilities.
+- Content/balance/final names.
+
+PR update requirements:
+- Push fixes to the existing branch `story/STORY-QA-004-playability-map-scale-zoom-ui-clarity`.
+- Update PR body/evidence with the blocker response.
+- Include screenshots/PNGs that answer the latest human complaint directly.
+- State known omissions/deferred work honestly.
+- Do not request merge until a human can inspect the PNG screenshots and see: readable map, non-overlapping labels, unobstructed buttons, guard icon not under Champion, clear clicked/selected feedback, clear tactical move/attack affordances.
+
+If blocked:
+- Stop and report the exact blocker. Do not claim green CI is enough.

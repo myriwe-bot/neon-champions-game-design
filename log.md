@@ -416,3 +416,11 @@
 - Marked `STORY-QA-004 Playability Map Scale, Zoom, and UI Clarity Pass` DONE / merged after Unity PR #27 squash-merged as `d7661bf0e1fe7edca0704ac928994489e93ad337`.
 - Recorded human visual acceptance before merge and post-merge Unity `main` CI success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests in run https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27278547989.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability; no next Unity implementation story is READY until the human chooses closeout or another follow-up direction.
+
+## [2026-06-10] approve-candidate | EPIC-003 objective and tactical stakes packet
+
+- Formally closed `EPIC-VSLICE-MVP-002` as DONE after user chose closeout option A and accepted the current visual state.
+- Drafted `EPIC-VSLICE-MVP-003 Scenario Objective, Champion Combat, and Casualty Stakes` as an approved-candidate next epic.
+- Recorded user direction: central guarded objective capture, allow Champion-vs-Champion combat as a later path, defender tiers named `weak / standard / strong`, and simple per-stack HP/strength persistence.
+- Drafted `STORY-OBJ-001 Scenario Objective State and Victory Feedback` as READY-candidate only; later OBJ/TAC/LOOP stories remain Draft placeholders until promoted by explicit approval.
+- Updated run prompts to state no Unity implementation story is currently READY.

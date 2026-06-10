@@ -54,7 +54,7 @@
 
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.
-- [[production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat]] — approved next vertical-slice epic for larger map/bases/recruitment/minimal tactical combat.
+- [[production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat]] — DONE larger map/bases/recruitment/minimal tactical combat vertical slice.
 - [[production/stories/story-template]] — story template.
 - [[production/stories/story-strat-001-scenario-map-graph-state]] — READY first strategic MVP implementation story for scenario/map graph state.
 - [[production/stories/story-strat-002-hotseat-turn-ownership]] — READY next story for deterministic local-hotseat turn ownership.
@@ -77,6 +77,12 @@
 - [[production/stories/story-tac-006-multi-stack-attacker-tactical-setup]] — DONE/merged tactical setup prerequisite for recruited multi-stack attacker armies.
 - [[production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass]] — DONE/merged visual/readability and clickable-layout pass for the connected loop slice.
 - [[production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass]] — DONE/merged playability pass for map scale, zoom/focus, overlapping labels, unobstructed buttons, and click/action clarity.
+- [[production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes]] — approved-candidate next epic for scenario objective, Champion combat path, defender tiers, and simple HP/strength casualty stakes.
+- [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — READY-candidate first story for visible objective state and victory feedback.
+- [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — Draft follow-up for weak/standard/strong defender tiers.
+- [[production/stories/story-tac-007-simple-stack-strength-persistence]] — Draft follow-up for simple stack HP/strength persistence.
+- [[production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path]] — Draft follow-up for Champion-vs-Champion tactical encounters.
+- [[production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke]] — Draft connected smoke for objective, Champion combat, and casualty stakes.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

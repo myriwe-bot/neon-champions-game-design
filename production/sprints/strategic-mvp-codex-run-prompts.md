@@ -43,9 +43,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-004` PR #27 is BLOCKED by human readability/playability review. Green CI is not sufficient: the BMP evidence is not useful, labels still overlap, buttons/text obstruct each other, guarded-site/Champion markers overlap, and the map is still hard to test.
+No Unity implementation story is currently READY. `EPIC-VSLICE-MVP-002` is closed, and `EPIC-VSLICE-MVP-003 Scenario Objective, Champion Combat, and Casualty Stakes` plus `STORY-OBJ-001 Scenario Objective State and Victory Feedback` are drafted as approval-pending candidates.
 
-Run the checked-in remediation prompt below on the existing PR branch. It directs Codex to replace the fragile world-space/debug control layout with a real uGUI Canvas + layout groups, produce PNG evidence that includes the actual UI, and add overlap/layout regression checks. Do not merge PR #27 until this remediation passes human visual review.
+Do not run Codex against Unity yet. The next human gate is artifact approval: approve/revise the EPIC-003 packet and decide whether to promote `STORY-OBJ-001` from READY-candidate to READY.
 
 ## Copy-safe prompt-file mode
 
@@ -57,25 +57,14 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-QA-004 is READY/approved before running Codex.
-Select-String -Path production\stories\story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass.md -Pattern "status: ready","approval: approved","Status: PASS"
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git fetch origin
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
+# Inspect the candidate packet; do not run Unity implementation yet.
+Get-Content production\epics\epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes.md
+Get-Content production\stories\story-obj-001-scenario-objective-state-and-victory-feedback.md
 ```
 
 ## Windows PowerShell preflight
 
-Run this in PowerShell:
+Run this in PowerShell before any future approved implementation:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -90,17 +79,9 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current Prompt A — next-step epic closeout decision brief
+## Current Prompt A — none / pending approval
 
-Use the checked-in guarded planning prompt file:
-
-```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-step-epic-closeout.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
-```
+No checked-in Unity implementation prompt is active. `STORY-OBJ-001` is only READY-candidate.
 
 ## Historical prompt-file runs
 
@@ -130,10 +111,6 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-003.prompt.txt`
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 
-Current guarded planning prompt:
+## After approval
 
-- `production/sprints/codex-next-step-epic-closeout.prompt.txt`
-
-## After Codex finishes
-
-Codex should return a decision brief only. Do not create a Unity branch, do not open a PR, and do not mark a new story READY unless the human explicitly approves an implementation direction.
+If the user approves `STORY-OBJ-001` for implementation, promote exactly that story to READY, create a checked-in Codex prompt for it, repoint this file to that prompt, and keep adjacent OBJ/TAC/LOOP stories in Draft.

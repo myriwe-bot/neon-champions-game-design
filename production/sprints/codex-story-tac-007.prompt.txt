@@ -14,7 +14,8 @@ Implementation scope:
 
 1. Read these sources in order:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-tac-007-simple-stack-strength-persistence.md
-   - linked GDD sections: tactical-combat, strategic-map, faction-unit-rosters
+   - linked GDD sections: tactical-combat and strategic-map
+   - design/gdd/faction-unit-rosters.md ONLY under the story's human-approved exception: it is draft/pending and may be read only as a non-authoritative placeholder fixture reference. Do not treat it as approved roster/content/balance authority.
    - docs/architecture/control-manifest.md
    - docs/architecture/testing-strategy.md
    - docs/architecture/ci-build-automation.md
@@ -41,6 +42,7 @@ Implementation scope:
    - Strategic AI.
    - New tactical mechanics, abilities, cover, LOS, morale, ammo/status systems, or final combat balance.
    - Final roster/balance/content/lore names.
+   - Any implementation from draft roster GDD content beyond existing placeholder unit/stack fixture compatibility.
    - Final UI/art/accessibility beyond the minimal placeholder stack/battle-result feedback required by this story.
    - Save/load, campaign progression, final UI/art/accessibility.
 
@@ -64,4 +66,4 @@ Implementation scope:
 8. Commit and push the story branch. Open or prepare PR titled:
    STORY-TAC-007 Simple stack strength persistence
 
-If implementation needs a design decision not present in the approved story, stop and report instead of inventing it.
+If implementation needs a design decision not present in the approved story, or needs roster/content/balance authority beyond existing placeholder fixtures, stop and report instead of inventing it or using the draft roster GDD as authority.

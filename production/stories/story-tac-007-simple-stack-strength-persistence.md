@@ -48,7 +48,7 @@ As a player testing the vertical slice, I need tactical losses to remain visible
 
 - `design/gdd/tactical-combat.md` §§3, 4, 5, 6.1, 6.2, 6.5, and 5.10/post-battle resolution language for stacks-first combat, battle end, losses, and strategic result update.
 - `design/gdd/strategic-map.md` §§8, 10, 11, 12, 13, 14 for site control, objective hooks, army/status readability, and tactical battle result application.
-- `design/gdd/faction-unit-rosters.md` for placeholder unit/stack fixture constraints; do not invent final roster, names, balance, recovery, or casualty lore.
+- `design/gdd/faction-unit-rosters.md` is a draft/pending source and is allowed by human-approved exception only as a non-authoritative placeholder/unit-fixture reference. Do not implement final roster, names, balance, recovery, or casualty lore from it.
 - `docs/architecture/control-manifest.md` §§1, 2, 4, 5, 6, 7, 9, 10.
 - `docs/architecture/testing-strategy.md`.
 - `docs/architecture/ci-build-automation.md`.
@@ -87,7 +87,7 @@ As a player testing the vertical slice, I need tactical losses to remain visible
 Allowed:
 
 - Simple integer surviving stack count/strength per attacker stack.
-- Existing placeholder unit IDs/localization keys and stack IDs.
+- Existing placeholder unit IDs/localization keys and stack IDs. Use the draft roster GDD only to avoid contradicting placeholder unit/stack fixture direction; it does not authorize final roster/content implementation.
 - Deterministic tactical smoke outcomes that reduce one participating stack enough to prove persistence.
 - Primitive Canvas/HUD summary text such as `unit_placeholder_infantry 7`.
 - Minimal battle-result feedback text/panel that reports stack count changes, e.g. `Infantry 10 -> 7` using placeholder localization/IDs where final copy is unavailable.
@@ -151,6 +151,7 @@ Human decisions recorded on 2026-06-11:
 - Approved as next implementation packet.
 - Zero-count stack handling: remove zero-count stacks from the active army.
 - Include a minimal visual layer for stack strength and battle-result feedback so the player can see stack changes and understand that the battle result caused them.
+- Human-approved source-status exception: `design/gdd/faction-unit-rosters.md` is still `status: draft` / `approval: pending`, but TAC-007 may read it only as a non-authoritative placeholder fixture reference. It may not be used to implement final roster names, balance, recovery, lore, faction identity, or content.
 
 Assumptions for review:
 
@@ -171,13 +172,14 @@ Allowed stubs/mocks:
 Human-approved exceptions:
 
 - Human approved this story for implementation on 2026-06-11 with zero-count stack removal and minimal visual stack/battle-result feedback included.
+- Human-approved exception: `design/gdd/faction-unit-rosters.md` remains draft/pending and is permitted only as a non-authoritative placeholder fixture reference for existing unit/stack IDs. If implementation needs roster/balance/content authority beyond placeholder fixtures, stop instead of using the draft GDD as authority.
 
 ## Branch / PR requirements
 
 - Branch name: `story/STORY-TAC-007-simple-stack-strength-persistence`
 - PR title: `STORY-TAC-007 Simple stack strength persistence`
 - Required linked story ID: `STORY-TAC-007`
-- Required linked GDD/ADR/control docs: strategic-map, tactical-combat, faction-unit-rosters, control-manifest, testing-strategy, CI/build automation.
+- Required linked GDD/ADR/control docs: strategic-map, tactical-combat, control-manifest, testing-strategy, CI/build automation. `faction-unit-rosters` is linked under the human-approved draft-source exception above and may be read only as a placeholder fixture reference.
 - Required root/scoped AGENTS.md instructions: Unity repo root/scoped AGENTS.md.
 - Required evidence summary: stack persistence contract, invalid-result rejection, zero-count stack removal, visible army summary update, visual battle-result feedback, tests/checks, CI, omissions.
 - Required omissions section: no healing/recovery economy, no defender persistence, no Champion-vs-Champion routing, no strategic AI, no final balance/content/lore, no final UI/art.
@@ -188,7 +190,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 - [x] Story has stable ID, title, type, status, and parent epic.
 - [x] User/player/system value is clear.
-- [x] Exact GDD source sections are linked.
+- [x] Exact GDD source sections are linked; the only draft/pending source (`faction-unit-rosters`) has a narrow human-approved exception for placeholder fixture reference only.
 - [x] Exact ADR/architecture/control-manifest sources are linked.
 - [x] Relevant root/scoped AGENTS.md instructions are identified.
 - [x] UX/content/art/worldbuilding references are linked if relevant or explicitly N/A.

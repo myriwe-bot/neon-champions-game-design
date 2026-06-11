@@ -460,3 +460,10 @@
 - Captured zero-count stack decision: remove zero-count stacks from the active strategic army, document and test the rule.
 - Added explicit minimal visual-layer requirement for stack strength and battle-result feedback so the player can see stack-count changes and understand the battle result caused them.
 - Promoted TAC-007 to READY / approved and activated `production/sprints/codex-story-tac-007.prompt.txt` as the current implementation prompt.
+
+## [2026-06-11] unblock | STORY-TAC-007 roster-source exception
+
+- Codex correctly stopped because `design/gdd/faction-unit-rosters.md` is `status: draft` / `approval: pending` while TAC-007 linked it as a required source.
+- Recorded a narrow human-approved exception: TAC-007 may read the draft roster GDD only as a non-authoritative placeholder fixture reference for existing unit/stack IDs.
+- Clarified that final roster names, balance, recovery, lore, faction identity, and content remain unauthorized; implementation must stop if it needs those decisions.
+- Updated the TAC-007 prompt and run prompts so Codex can proceed without weakening source-control rules.

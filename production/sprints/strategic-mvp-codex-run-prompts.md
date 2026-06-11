@@ -49,7 +49,7 @@ approval: approved
 
 `STORY-TAC-007 Simple Stack HP/Strength Persistence` is the current READY / approved Unity implementation packet.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback` and `STORY-OBJ-002 Guarded Site Defender Strength Tiers` are DONE / merged. TAC-007 was approved on 2026-06-11 with zero-count stack removal and minimal visual stack/battle-result feedback included.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback` and `STORY-OBJ-002 Guarded Site Defender Strength Tiers` are DONE / merged. TAC-007 was approved on 2026-06-11 with zero-count stack removal and minimal visual stack/battle-result feedback included. TAC-007 also includes a human-approved source-status exception: `design/gdd/faction-unit-rosters.md` is draft/pending but may be read only as a non-authoritative placeholder fixture reference; it does not authorize final roster/content/balance implementation.
 
 ## Copy-safe prompt-file mode
 

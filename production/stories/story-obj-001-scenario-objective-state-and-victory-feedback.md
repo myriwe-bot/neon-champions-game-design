@@ -1,11 +1,11 @@
 ---
 title: STORY-OBJ-001 Scenario Objective State and Victory Feedback
 type: story
-status: ready
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-06-11
 source_lore: []
 related:
   [
@@ -23,9 +23,9 @@ approval: approved
 
 ## Status
 
-READY / approved for implementation. Drafted after human selected the next epic direction on 2026-06-10: central guarded objective capture, Champion-vs-Champion allowed later, defender tiers `weak / standard / strong`, and simple per-stack HP/strength persistence later. Human approval to promote this story and prepare implementation recorded on 2026-06-10.
+DONE / merged. Implemented in Unity PR #28 and merged to `main` as `69be356e2f0a4dbbb2d9cd1789b9c101dc1ab034` on 2026-06-11. Post-merge main CI passed: Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
 
-This story is intentionally first and narrow: it establishes the scenario objective spine only. It does not implement defender tiers, HP/strength persistence, or Champion-vs-Champion combat.
+This story was intentionally first and narrow: it established the scenario objective spine only. It did not implement defender tiers, HP/strength persistence, or Champion-vs-Champion combat.
 
 ## Story type
 
@@ -191,16 +191,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-obj-001.prompt.txt`.
+DONE / merged. Unity implementation is complete in PR #28; the checked-in prompt file is retained for audit only.

@@ -1,0 +1,62 @@
+Prepare to implement STORY-OBJ-002 Guarded Site Defender Strength Tiers in the Neon Champions Unity repo.
+
+STOP PREFLIGHT — DO NOT IMPLEMENT unless all of these are true in the design/control repo:
+
+- production/stories/story-obj-002-guarded-site-defender-strength-tiers.md has frontmatter `status: ready`.
+- The same file has `approval: approved`.
+- Its Ambiguity Check says `Status: PASS`.
+
+As checked in on 2026-06-11, this prompt is a guarded handoff artifact only because STORY-OBJ-002 is DRAFT / READY-candidate with approval pending. If the preflight fails, report exactly:
+
+BLOCKED: STORY-OBJ-002 is not READY / approved. Do not create a Unity branch or edit runtime code.
+
+When the human later approves and the preflight passes, use this implementation scope:
+
+1. Read these sources in order:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-obj-002-guarded-site-defender-strength-tiers.md
+   - linked GDD sections: strategic-map, tactical-combat, faction-unit-rosters
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and nearest scoped instructions
+   - existing guarded-site, battle-setup, validation, presentation, and smoke-test code
+
+2. In the Unity repo, create branch:
+   story/STORY-OBJ-002-guarded-site-defender-strength-tiers
+
+3. Implement only this story:
+   - Add exact defender tiers `weak`, `standard`, `strong` for guarded sites.
+   - Assign deterministic placeholder tiers in the current smoke scenario, including the central objective.
+   - Map tiers to deterministic placeholder defender setup using existing guarded-site/tactical setup plumbing.
+   - Show the tier in the existing readable strategic preview/HUD path.
+   - Validate missing/blank/unsupported tier data for guarded sites and objective guarded sites.
+
+4. Keep out of scope:
+   - HP/strength persistence.
+   - Champion-vs-Champion encounter routing.
+   - Strategic AI.
+   - New tactical mechanics, abilities, cover, LOS, morale, healing, reinforcement, casualty economy.
+   - Final roster/balance/content/lore names.
+   - Save/load, campaign victory/loss, final UI/art/accessibility.
+
+5. Use TDD:
+   - Add failing EditMode tests for tier validation and tier-to-defender setup mapping.
+   - Add/extend PlayMode smoke coverage for visible tier preview/status.
+   - Keep existing objective completion/victory flow and recruitment-to-capture loop tests green.
+
+6. Evidence:
+   - Produce PNG evidence under production/evidence/STORY-OBJ-002/ or equivalent story evidence path.
+   - Evidence must show visible tier feedback before guarded interaction.
+   - PR body must link story ID, source docs, evidence path, test commands, CI runs, and omissions.
+
+7. Required checks before PR/merge:
+   - EditMode Tests
+   - PlayMode Smoke Tests
+   - Placeholder Validator
+   - Compile / Standalone Check
+   - git diff --check
+
+8. Commit and push the story branch. Open or prepare PR titled:
+   STORY-OBJ-002 Guarded site defender strength tiers
+
+If implementation needs a design decision not present in the approved story, stop and report instead of inventing it.

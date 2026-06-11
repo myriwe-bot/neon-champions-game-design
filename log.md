@@ -431,3 +431,11 @@
 - Promoted `STORY-OBJ-001 Scenario Objective State and Victory Feedback` to READY / approved after explicit human approval.
 - Added checked-in Codex prompt `production/sprints/codex-story-obj-001.prompt.txt` and repointed `production/sprints/strategic-mvp-codex-run-prompts.md` to it.
 - Adjacent EPIC-003 stories remain Draft and out of implementation scope: defender tiers, HP/strength persistence, Champion-vs-Champion encounter path, and connected objective/casualty smoke.
+
+## [2026-06-11] merge-and-prepare | STORY-OBJ-001 closeout and OBJ-002 candidate
+
+- Verified and merged Unity PR #28 for `STORY-OBJ-001 Scenario Objective State and Victory Feedback` after fixing merge-gate blockers.
+- Recorded merge commit `69be356e2f0a4dbbb2d9cd1789b9c101dc1ab034` and post-merge main CI success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
+- Marked `STORY-OBJ-001` DONE / merged and updated `EPIC-VSLICE-MVP-003` child status.
+- Expanded `STORY-OBJ-002 Guarded Site Defender Strength Tiers` into a DRAFT / READY-candidate packet with approval pending; it is not implementation-authorizing yet.
+- Added guarded prompt `production/sprints/codex-story-obj-002.prompt.txt` and repointed run prompts to stop until human approval promotes OBJ-002 to READY / approved.

@@ -1,0 +1,49 @@
+Prepare to implement STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path in the Neon Champions Unity repo.
+
+PREFLIGHT — implement only if all of these are true in the design/control repo:
+
+- production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path.md has frontmatter `status: ready`.
+- The same file has `approval: approved`.
+- Its Ambiguity Check says `Status: PASS`.
+
+If the preflight fails, report exactly:
+
+BLOCKED: STORY-TAC-008 is not READY / approved. Do not create a Unity branch or edit runtime code.
+
+Current state:
+
+- STORY-TAC-008 is currently a READY-candidate / approval-pending packet.
+- This prompt is checked in only as a guarded handoff artifact for later use after human approval.
+
+Implementation scope after approval:
+
+1. Read these sources in order:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-tac-008-champion-vs-champion-tactical-encounter-path.md
+   - linked GDD sections: tactical-combat and strategic-map
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and nearest scoped instructions
+   - existing Champion state, battle setup/result DTOs, tactical handoff, result application, and smoke-test code
+
+2. In the Unity repo, create branch:
+   story/STORY-TAC-008-champion-vs-champion-tactical-encounter-path
+
+3. Implement only the approved story.
+
+4. Keep out of scope:
+   - Strategic AI or enemy autonomous pursuit.
+   - Full encounter system or PvP UX.
+   - Healing/recovery/casualty economy.
+   - New tactical abilities, cover, LOS, morale, ammo/status systems, or final combat balance.
+   - Final Champion names/content/lore/art/accessibility.
+   - Save/load or campaign progression.
+
+5. Required checks before PR/merge:
+   - EditMode Tests
+   - PlayMode Smoke Tests
+   - Placeholder Validator
+   - Compile / Standalone Check
+   - git diff --check
+
+If implementation needs a design decision not present in the approved story, stop and report instead of inventing it.

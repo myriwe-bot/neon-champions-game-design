@@ -38,6 +38,7 @@ related:
     production/stories/story-obj-001-scenario-objective-state-and-victory-feedback,
     production/stories/story-obj-002-guarded-site-defender-strength-tiers,
     production/stories/story-tac-007-simple-stack-strength-persistence,
+    production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path,
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
   ]
 approval: approved
@@ -47,9 +48,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-007 Simple Stack HP/Strength Persistence` is the current READY / approved Unity implementation packet.
+No Unity implementation packet is currently READY / approved. `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` is the next READY-candidate / approval-pending review packet.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback` and `STORY-OBJ-002 Guarded Site Defender Strength Tiers` are DONE / merged. TAC-007 was approved on 2026-06-11 with zero-count stack removal and minimal visual stack/battle-result feedback included. TAC-007 also includes a human-approved source-status exception: `design/gdd/faction-unit-rosters.md` is draft/pending but may be read only as a non-authoritative placeholder fixture reference; it does not authorize final roster/content/balance implementation.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, and `STORY-TAC-007 Simple Stack HP/Strength Persistence` are DONE / merged. TAC-008 is prepared for human review but remains blocked from implementation until approval is recorded and its Ambiguity Check passes.
 
 ## Copy-safe prompt-file mode
 
@@ -61,8 +62,8 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-TAC-007 is READY/approved before running Codex.
-Select-String -Path production\stories\story-tac-007-simple-stack-strength-persistence.md -Pattern "status: ready","approval: approved","Status: PASS"
+# STORY-TAC-008 is not yet runnable. It is a READY-candidate for human review.
+Select-String -Path production\stories\story-tac-008-champion-vs-champion-tactical-encounter-path.md -Pattern "status: ready-candidate","approval: pending","Status: FAIL"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -70,11 +71,10 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-007.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
+# Do not run Codex for TAC-008 until the story is promoted to READY / approved.
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-008.prompt.txt"
+# codex exec --sandbox workspace-write $prompt
+# codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -94,16 +94,15 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-TAC-007 simple stack strength persistence
+## Current guarded prompt — STORY-TAC-008 Champion-vs-Champion review packet
 
-Use the checked-in prompt file:
+TAC-008 is approval-pending. The checked-in prompt file is guarded and will block Codex until the story is promoted to READY / approved:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-007.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
+# Do not run Codex for TAC-008 until the story is promoted to READY / approved.
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-008.prompt.txt"
+# codex exec --sandbox workspace-write $prompt
+# codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Historical prompt-file runs
@@ -136,11 +135,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-obj-001.prompt.txt`
 - `production/sprints/codex-story-obj-002.prompt.txt`
 - `production/sprints/codex-story-tac-007.prompt.txt`
+- `production/sprints/codex-story-tac-008.prompt.txt`
 
 Current approved prompt:
 
-- `production/sprints/codex-story-tac-007.prompt.txt`
+- None. TAC-008 is a guarded approval-pending prompt and must not be run until promoted to READY / approved.
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-TAC-007-simple-stack-strength-persistence`, then open or prepare a PR titled `STORY-TAC-007 Simple stack strength persistence`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+After human approval promotes TAC-008 to READY, Codex should commit and push `story/STORY-TAC-008-champion-vs-champion-tactical-encounter-path`, then open or prepare a PR titled `STORY-TAC-008 Champion-vs-Champion tactical encounter path`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

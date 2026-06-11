@@ -39,6 +39,7 @@ related:
     production/stories/story-obj-002-guarded-site-defender-strength-tiers,
     production/stories/story-tac-007-simple-stack-strength-persistence,
     production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path,
+    production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke,
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
   ]
 approval: approved
@@ -48,9 +49,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` is the current READY / approved Unity implementation packet.
+No Unity implementation packet is currently READY / approved. `STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` is the next READY-candidate / approval-pending review packet.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, and `STORY-TAC-007 Simple Stack HP/Strength Persistence` are DONE / merged. TAC-008 was approved on 2026-06-11 with same-node-only Champion-vs-Champion encounter semantics.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, `STORY-TAC-007 Simple Stack HP/Strength Persistence`, and `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` are DONE / merged. LOOP-004 is prepared for human review but remains blocked from implementation until approval is recorded and its Ambiguity Check passes.
 
 ## Copy-safe prompt-file mode
 
@@ -62,8 +63,8 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-TAC-008 is READY/approved before running Codex.
-Select-String -Path production\stories\story-tac-008-champion-vs-champion-tactical-encounter-path.md -Pattern "status: ready","approval: approved","Status: PASS"
+# STORY-LOOP-004 is not yet runnable. It is a READY-candidate for human review.
+Select-String -Path production\stories\story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md -Pattern "status: ready-candidate","approval: pending","Status: FAIL"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -71,11 +72,10 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-008.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
+# Do not run Codex for LOOP-004 until the story is promoted to READY / approved.
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-004.prompt.txt"
+# codex exec --sandbox workspace-write $prompt
+# codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -95,16 +95,15 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-TAC-008 Champion-vs-Champion same-node encounter
+## Current guarded prompt — STORY-LOOP-004 connected smoke review packet
 
-Use the checked-in prompt file:
+LOOP-004 is approval-pending. The checked-in prompt file is guarded and will block Codex until the story is promoted to READY / approved:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-008.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
+# Do not run Codex for LOOP-004 until the story is promoted to READY / approved.
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-004.prompt.txt"
+# codex exec --sandbox workspace-write $prompt
+# codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Historical prompt-file runs
@@ -138,11 +137,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-obj-002.prompt.txt`
 - `production/sprints/codex-story-tac-007.prompt.txt`
 - `production/sprints/codex-story-tac-008.prompt.txt`
+- `production/sprints/codex-story-loop-004.prompt.txt`
 
 Current approved prompt:
 
-- `production/sprints/codex-story-tac-008.prompt.txt`
+- None. LOOP-004 is a guarded approval-pending prompt.
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-TAC-008-champion-vs-champion-tactical-encounter-path`, then open or prepare a PR titled `STORY-TAC-008 Champion-vs-Champion tactical encounter path`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+After human approval promotes LOOP-004 to READY, Codex should commit and push `story/STORY-LOOP-004-objective-champion-combat-casualty-smoke`, then open or prepare a PR titled `STORY-LOOP-004 Objective, Champion combat, and casualty stakes smoke`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

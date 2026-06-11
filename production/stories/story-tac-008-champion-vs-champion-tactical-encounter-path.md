@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-10
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved for implementation. Human approved on 2026-06-11 with same-node-only Champion-vs-Champion encounter semantics: the MVP trigger is two active opposing Champions occupying the same strategic node. No adjacent-target selection, strategic AI, pursuit, or broad encounter system is authorized.
+DONE / merged. Unity PR #31 merged on 2026-06-11 at merge commit `1d1aa0473af6683ca4625a23eb7e0a0d240cc44d`. Post-merge `main` Unity CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27351109416.
 
 ## Story type
 
@@ -172,16 +172,23 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes on PR branch and post-merge `main`.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
+## Merge evidence
+
+- Unity PR: #31 — https://github.com/myriwe-bot/neon-champions-unity/pull/31
+- Merge commit: `1d1aa0473af6683ca4625a23eb7e0a0d240cc44d`
+- Post-merge main CI: passed — https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27351109416
+- Evidence package: `production/evidence/STORY-TAC-008/README.md` in the Unity repo.
 
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-tac-008.prompt.txt` after preflight confirms status/approval/PASS.
+DONE / merged. STORY-TAC-008 is closed; it is no longer the current implementation packet.

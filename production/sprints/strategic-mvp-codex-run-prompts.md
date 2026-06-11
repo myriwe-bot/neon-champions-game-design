@@ -37,6 +37,7 @@ related:
     production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass,
     production/stories/story-obj-001-scenario-objective-state-and-victory-feedback,
     production/stories/story-obj-002-guarded-site-defender-strength-tiers,
+    production/stories/story-tac-007-simple-stack-strength-persistence,
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
   ]
 approval: approved
@@ -46,9 +47,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-OBJ-002 Guarded Site Defender Strength Tiers` is the current READY / approved Unity implementation packet.
+No Unity implementation packet is currently READY / approved.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback` is DONE / merged in Unity PR #28. OBJ-002 was approved on 2026-06-11 with placeholder weak/standard/strong defender mappings and central objective tier `standard`.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback` and `STORY-OBJ-002 Guarded Site Defender Strength Tiers` are DONE / merged. `STORY-TAC-007 Simple Stack HP/Strength Persistence` is prepared as the next DRAFT / READY-candidate packet, but approval is pending. The checked-in TAC-007 prompt is guarded and must stop unless the story is explicitly promoted to READY / approved.
 
 ## Copy-safe prompt-file mode
 
@@ -60,8 +61,8 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-OBJ-002 is READY/approved before running Codex.
-Select-String -Path production\stories\story-obj-002-guarded-site-defender-strength-tiers.md -Pattern "status: ready","approval: approved","Status: PASS"
+# Verify STORY-TAC-007 is READY/approved before running Codex. This currently fails by design until human approval.
+Select-String -Path production\stories\story-tac-007-simple-stack-strength-persistence.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -69,7 +70,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-obj-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-007.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -93,12 +94,12 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current prompt — STORY-OBJ-002 guarded site defender strength tiers
+## Current guarded prompt — STORY-TAC-007 simple stack strength persistence
 
 Use the checked-in prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-obj-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-007.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -134,11 +135,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 - `production/sprints/codex-story-obj-001.prompt.txt`
 - `production/sprints/codex-story-obj-002.prompt.txt`
+- `production/sprints/codex-story-tac-007.prompt.txt` (guarded; not runnable until approval)
 
 Current approved prompt:
 
-- `production/sprints/codex-story-obj-002.prompt.txt`
+- None. Next prepared guarded prompt: `production/sprints/codex-story-tac-007.prompt.txt`
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-OBJ-002-guarded-site-defender-strength-tiers`, then open or prepare a PR titled `STORY-OBJ-002 Guarded site defender strength tiers`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Do not run Codex for TAC-007 until human approval promotes the story to READY / approved. After approval, Codex should commit and push `story/STORY-TAC-007-simple-stack-strength-persistence`, then open or prepare a PR titled `STORY-TAC-007 Simple stack strength persistence`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

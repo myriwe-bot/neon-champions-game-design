@@ -1,7 +1,7 @@
 ---
 title: STORY-OBJ-002 Guarded Site Defender Strength Tiers
 type: story
-status: ready
+status: implemented
 phase: production
 owner: shared
 created: 2026-06-10
@@ -25,7 +25,9 @@ approval: approved
 
 ## Status
 
-READY / approved for implementation. Human approved on 2026-06-11 with placeholder weak/standard/strong defender mappings and the central objective set to `standard` for now.
+DONE / merged. Implemented in Unity PR #29 and merged to `main` as `7b6807b5fe3b0b231102d293d12abd54e98acafd` on 2026-06-11. Post-merge main CI passed: Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
+
+Implementation retained placeholder weak/standard/strong tier mappings, central objective tier `standard`, and deterministic placeholder defender setup only; no final balance was approved.
 
 ## Story type
 
@@ -192,16 +194,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-obj-002.prompt.txt` after preflight confirms status/approval/PASS.
+DONE / merged. Unity implementation is complete in PR #29; the checked-in prompt file is retained for audit only.

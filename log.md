@@ -445,3 +445,11 @@
 - Human approved `STORY-OBJ-002 Guarded Site Defender Strength Tiers` as the next implementation story.
 - Recorded approved scope: placeholder `weak` / `standard` / `strong` defender mappings, no final balance claims, central objective tier `standard` for now.
 - Promoted story frontmatter to `status: ready` / `approval: approved`, Ambiguity Check PASS, and activated `production/sprints/codex-story-obj-002.prompt.txt` as the current approved prompt.
+
+## [2026-06-11] merge-and-prepare | STORY-OBJ-002 closeout and TAC-007 candidate
+
+- Verified and merged Unity PR #29 for `STORY-OBJ-002 Guarded Site Defender Strength Tiers` after fixing merge-gate blockers around tier/setup consistency.
+- Recorded merge commit `7b6807b5fe3b0b231102d293d12abd54e98acafd` and post-merge main CI success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests.
+- Marked `STORY-OBJ-002` DONE / merged and updated `EPIC-VSLICE-MVP-003` child status.
+- Expanded `STORY-TAC-007 Simple Stack HP/Strength Persistence` into a DRAFT / READY-candidate packet with approval pending; it is not implementation-authorizing yet.
+- Added guarded prompt `production/sprints/codex-story-tac-007.prompt.txt` and repointed run prompts to stop until human approval promotes TAC-007 to READY / approved.

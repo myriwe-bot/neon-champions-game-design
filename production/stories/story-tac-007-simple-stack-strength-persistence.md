@@ -5,16 +5,18 @@ status: draft
 phase: production
 owner: shared
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-06-11
 source_lore: []
 related:
   [
     design/gdd/strategic-map,
     design/gdd/tactical-combat,
+    design/gdd/faction-unit-rosters,
     docs/architecture/control-manifest,
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
+    production/stories/story-obj-002-guarded-site-defender-strength-tiers,
   ]
 approval: pending
 ---
@@ -23,31 +25,186 @@ approval: pending
 
 ## Status
 
-DRAFT / placeholder. This story records the approved direction for `EPIC-VSLICE-MVP-003` but is not READY and does not authorize implementation.
+DRAFT / READY-candidate, approval pending. This is the prepared next implementation packet after `STORY-OBJ-002`, but it does not authorize Codex or Unity implementation until a human explicitly promotes it to READY / approved.
 
-## Purpose
+## Story type
 
-Persist simple per-stack HP/strength after tactical battle and show changed strategic army summaries.
+Tactical Logic + Strategic Result Integration + UI/Smoke + Data/Validation.
+
+## Estimate
+
+- Size: M.
+- Basis: persists simple stack count/strength deltas through existing tactical result/application plumbing, updates strategic army summaries, adds tests and evidence, but does not add a full casualty/healing economy.
 
 ## Parent epic
 
 - Epic ID/path: `production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes.md`.
 
-## Dependency note
+## User/player/system value
 
-Expected dependency before promotion: `OBJ-002`.
+As a player testing the vertical slice, I need tactical losses to remain visible after battle so attacking guarded sites feels consequential instead of resetting to a disposable fight scene.
 
-## Scope placeholder
+## Source requirements
 
-This packet must be expanded into a full READY-candidate story before implementation. It must include exact source references, in/out of scope, allowed placeholders, acceptance criteria, verification requirements, Ambiguity Check, branch/PR requirements, and readiness gate.
+- `design/gdd/tactical-combat.md` §§3, 4, 5, 6.1, 6.2, 6.5, and 5.10/post-battle resolution language for stacks-first combat, battle end, losses, and strategic result update.
+- `design/gdd/strategic-map.md` §§8, 10, 11, 12, 13, 14 for site control, objective hooks, army/status readability, and tactical battle result application.
+- `design/gdd/faction-unit-rosters.md` for placeholder unit/stack fixture constraints; do not invent final roster, names, balance, recovery, or casualty lore.
+- `docs/architecture/control-manifest.md` §§1, 2, 4, 5, 6, 7, 9, 10.
+- `docs/architecture/testing-strategy.md`.
+- `docs/architecture/ci-build-automation.md`.
+- Parent epic: `EPIC-VSLICE-MVP-003`.
+- Baseline: Unity `main` after PR #29 / merge commit `7b6807b5fe3b0b231102d293d12abd54e98acafd`.
 
-## Current guardrails
+## Problem statement
 
-- Do not add strategic AI.
-- Do not add final content/names/balance.
-- Do not add full tactical ability, cover, LOS, morale, healing, or campaign systems.
-- Keep all changes traceable to the parent epic and approved GDD/ADR/control sources.
+`STORY-OBJ-002` makes guarded-site difficulty visible and deterministic, but tactical casualties still do not persist as meaningful strategic state. The player can win or lose the site, yet surviving stack strength is not clearly carried forward as a visible consequence.
+
+## In scope
+
+- Add a minimal post-battle stack strength persistence contract for participating attacker stacks.
+- Persist simple surviving stack count/strength from tactical result back onto the strategic Champion army when a guarded-site battle result is applied.
+- Preserve stack identity by stable stack/unit IDs already present in the setup/result path; if an existing result lacks enough identity, add only the minimal DTO field needed for this story.
+- Clamp or reject invalid surviving counts so persistence never creates negative, over-maximum, unknown, or duplicate stack state.
+- Update readable strategic army summaries/status feedback after battle result application so the changed stack count is visible.
+- Cover objective-site and non-objective guarded-site result application where the current path supports both.
+- Add automated tests for attacker stack persistence, invalid result rejection, objective victory regression, and existing recruitment-to-capture loop regression.
+- Add PlayMode smoke and PNG evidence showing changed strategic army strength after resolving a guarded battle.
+
+## Out of scope
+
+- Defender army persistence after site capture.
+- Healing, resurrection, replacement, reinforcement, recovery timers, hospitals, reserves, caravan logistics, or casualty economy.
+- Per-unit HP bars, wounds, morale, rout, ammo, status effects, or detailed damage model changes.
+- Champion-vs-Champion encounter routing.
+- Strategic AI or enemy autonomous contest.
+- New tactical abilities, cover, LOS, healing, morale, or final combat balance.
+- Final unit names/content/lore, faction-specific casualty rules, or final UI/art/accessibility.
+- Save/load or campaign progression.
+
+## Allowed stubs, mocks, placeholders, or temporary data
+
+Allowed:
+
+- Simple integer surviving stack count/strength per attacker stack.
+- Existing placeholder unit IDs/localization keys and stack IDs.
+- Deterministic tactical smoke outcomes that reduce one participating stack enough to prove persistence.
+- Primitive Canvas/HUD summary text such as `unit_placeholder_infantry 7`.
+
+Not allowed:
+
+- Hidden reset/default behavior that discards battle casualties while claiming persistence.
+- Invented final casualty, healing, or replacement economy.
+- Presentation code directly mutating canonical strategic army state.
+- Allowing invalid result data to partially mutate strategic state.
+- Broad BattleResult/DTO redesign beyond the minimal fields needed for stable stack persistence.
+
+## Dependencies
+
+- Required prior story:
+  - `STORY-OBJ-002` DONE / merged in Unity PR #29.
+- Required data/assets:
+  - Existing larger-map guarded-site/objective smoke scenario and placeholder stack fixtures.
+- Required architecture decisions:
+  - Current Unity data/runtime/presentation boundaries remain binding.
+  - Existing battle setup/result/application path remains the integration seam.
+
+## Acceptance criteria
+
+- [ ] Given a guarded-site battle resolves with reduced surviving attacker stack count, applying the battle result updates the matching strategic Champion army stack count.
+- [ ] Given a battle result references an unknown attacker stack, unknown unit, duplicate stack entry, negative count, or count above maximum, result application fails with diagnostics and does not partially mutate strategic state.
+- [ ] Given a battle result removes a stack to zero, the strategic army state handles it deterministically according to the implemented placeholder rule: keep a zero-count visible stack or remove it, but document and test the rule.
+- [ ] Given the central objective battle is won, objective completion/victory flow from `STORY-OBJ-001` still works after stack persistence is applied.
+- [ ] Given non-objective guarded-site battle is won, site capture and reward/result feedback still work after stack persistence is applied.
+- [ ] Given the larger-map recruitment-to-capture loop runs, recruited multi-stack attacker armies persist post-battle stack counts without losing unrelated stacks.
+- [ ] Given strategic UI/readable summaries refresh after battle result application, the player can see the changed army strength/count after returning from tactical view.
+- [ ] Existing defender tier behavior from `STORY-OBJ-002` still works.
+- [ ] Persistence contract and invalid-result rejection are covered by automated tests where feasible.
+- [ ] PlayMode smoke and PNG evidence show changed strategic army strength after battle.
+- [ ] CI passes.
+
+## Verification requirements
+
+- Unit/EditMode tests: Required for stack persistence, invalid result rejection/no partial mutation, objective victory regression, and recruitment/multi-stack regression.
+- Unity PlayMode tests: Required for visible changed army summary after a guarded battle result.
+- Integration/data validation tests: Existing validators must remain passing.
+- Manual Unity scene/prefab checks: Required if scene/prefab assets change.
+- Screenshot/video evidence: PNG evidence required under `production/evidence/STORY-TAC-007/` or equivalent story evidence path.
+- Performance budget: N/A; no expensive simulation or rendering changes.
+- CI evidence: Required on PR branch and post-merge main if merged.
+- Playtest evidence: Supplemental checklist that a tester can see army strength changed after battle.
+- TDD evidence required? Yes for persistence and invalid-result rejection.
+- Automation deferred? No, except manual visual judgment is supplemental and must be documented.
+
+## Ambiguity Check
+
+Status: FAIL until human approval promotes this packet to READY / approved.
+
+Open questions:
+
+- Human approval is still pending for this specific child story.
+- Zero-count stack handling is intentionally left as a narrow implementation choice: keep visible zero-count stack or remove it, but the chosen rule must be documented and tested inside this story.
+
+Assumptions for review:
+
+- "HP/strength" for this story means simple stack count/strength persistence, not a per-unit HP model.
+- Persistence applies first to attacker/Champion army stacks because that is the player-visible vertical-slice consequence.
+- Defender persistence is deferred because captured neutral guards do not become a continuing army in the current slice.
+
+Out of scope:
+
+- Healing/recovery economy, Champion-vs-Champion, strategic AI, final balance/content/lore, detailed damage model.
+
+Allowed stubs/mocks:
+
+- Placeholder surviving-count deltas and deterministic tactical smoke outcomes.
+
+Human-approved exceptions:
+
+- None for implementation. This packet is not yet approved.
+
+## Branch / PR requirements
+
+- Branch name: `story/STORY-TAC-007-simple-stack-strength-persistence`
+- PR title: `STORY-TAC-007 Simple stack strength persistence`
+- Required linked story ID: `STORY-TAC-007`
+- Required linked GDD/ADR/control docs: strategic-map, tactical-combat, faction-unit-rosters, control-manifest, testing-strategy, CI/build automation.
+- Required root/scoped AGENTS.md instructions: Unity repo root/scoped AGENTS.md.
+- Required evidence summary: stack persistence contract, invalid-result rejection, visible army summary update, tests/checks, CI, omissions.
+- Required omissions section: no healing/recovery economy, no defender persistence, no Champion-vs-Champion routing, no strategic AI, no final balance/content/lore, no final UI/art.
+
+PR must explicitly list known omissions, stubs, mocks, assumptions, deferred work, or state `No known omissions`.
+
+## Story readiness gate
+
+- [x] Story has stable ID, title, type, status, and parent epic.
+- [x] User/player/system value is clear.
+- [x] Exact GDD source sections are linked.
+- [x] Exact ADR/architecture/control-manifest sources are linked.
+- [x] Relevant root/scoped AGENTS.md instructions are identified.
+- [x] UX/content/art/worldbuilding references are linked if relevant or explicitly N/A.
+- [x] In-scope work is concrete and bounded.
+- [x] Out-of-scope work is explicit.
+- [x] Stubs/mocks/placeholders are explicitly listed.
+- [x] Dependencies are listed and satisfied or marked blocking.
+- [x] Acceptance criteria are observable and testable.
+- [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
+- [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
+- [ ] Ambiguity Check status is PASS.
+- [x] Branch / PR / CI traceability requirements are stated.
+- [ ] Human approval has been given for implementation / READY promotion.
+
+## DONE gate
+
+- [ ] Implementation matches approved story scope.
+- [ ] Acceptance criteria pass.
+- [ ] Required verification evidence exists.
+- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass, or human-approved exceptions are documented.
+- [ ] No unauthorized design or architecture decisions were introduced.
+- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [ ] PR/code review is complete.
+- [ ] CI passes or human-approved exceptions are documented.
+- [ ] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-DRAFT. Not assignable to Codex or implementation agents.
+DRAFT / READY-candidate only. Do not implement until a human explicitly approves this story and the status/approval fields plus Ambiguity Check are promoted to READY / approved / PASS.

@@ -80,9 +80,9 @@
 - [[production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes]] — approved next epic for scenario objective, Champion combat path, defender tiers, and simple HP/strength casualty stakes.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
-- [[production/stories/story-tac-007-simple-stack-strength-persistence]] — READY follow-up for simple stack HP/strength persistence; current approved implementation packet.
-- [[production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path]] — Draft follow-up for Champion-vs-Champion tactical encounters.
-- [[production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke]] — Draft connected smoke for objective, Champion combat, and casualty stakes.
+- [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.
+- [[production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path]] — DONE / merged Champion-vs-Champion tactical encounter path.
+- [[production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke]] — READY / approved current connected smoke for objective, Champion combat, and casualty stakes.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

@@ -1,7 +1,7 @@
 ---
 title: STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-10
@@ -20,14 +20,14 @@ related:
     production/stories/story-tac-007-simple-stack-strength-persistence,
     production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke
 
 ## Status
 
-READY-candidate / approval pending. Draft expanded after `STORY-TAC-008` merged. This story is prepared for human review, but it is not READY and does not authorize Unity implementation until approval is changed to `approved` and the Ambiguity Check is changed to PASS.
+READY / approved. Human approved on 2026-06-11 as a pure connected-smoke/evidence story with a strict stop condition: if a real gameplay or UI blocker prevents the smoke, stop and report rather than broadening scope. LOOP-004 evidence will inform whether EPIC-VSLICE-MVP-003 can close or needs a follow-up; the epic must not close automatically from CI alone.
 
 ## Story type
 
@@ -134,17 +134,13 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: FAIL until human approval.
+Status: PASS.
 
-Open questions for human review:
+Human-approved decisions recorded on 2026-06-11:
 
-1. Should LOOP-004 be a pure evidence/smoke integration story, or may it fix one small blocker if the connected path cannot be exercised because of a missing glue affordance?
-2. Should EPIC-VSLICE-MVP-003 close after LOOP-004 if the smoke passes, or should we reserve a separate human playtest/QA closeout story first?
-
-Recommendation:
-
-- Approve LOOP-004 as a pure connected-smoke/evidence story with a narrow stop condition: if a real gameplay or UI blocker prevents the smoke, stop and report rather than broadening scope.
-- Do not close the epic automatically from CI alone; use LOOP-004 evidence to decide whether a closeout/playtest story or QA readability follow-up is needed.
+1. LOOP-004 is a pure connected-smoke/evidence story. It may not broaden into gameplay, UI, AI, recovery, victory/loss, content, balance, or accessibility work.
+2. Stop condition: if a real gameplay or UI blocker prevents the smoke from being exercised or evidenced, stop and report instead of expanding scope. The follow-up should be a narrow QA/playability or prerequisite story.
+3. EPIC-VSLICE-MVP-003 must not close automatically from CI alone. Use LOOP-004 evidence to decide whether the epic is ready for closeout/playtest acceptance or needs a follow-up.
 
 ## Branch / PR requirements
 
@@ -169,8 +165,8 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Dependencies are listed and satisfied.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Human approval has been given for implementation / READY promotion.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval has been given for implementation / READY promotion.
 
 ## DONE gate
 
@@ -186,4 +182,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate / approval pending. Next human step: approve or revise LOOP-004 scope before Codex implementation.
+READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-loop-004.prompt.txt` after preflight confirms status/approval/PASS.

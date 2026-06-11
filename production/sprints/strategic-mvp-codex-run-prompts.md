@@ -49,9 +49,9 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation packet is currently READY / approved. `STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` is the next READY-candidate / approval-pending review packet.
+`STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` is the current READY / approved Unity implementation packet.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, `STORY-TAC-007 Simple Stack HP/Strength Persistence`, and `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` are DONE / merged. LOOP-004 is prepared for human review but remains blocked from implementation until approval is recorded and its Ambiguity Check passes.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, `STORY-TAC-007 Simple Stack HP/Strength Persistence`, and `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` are DONE / merged. LOOP-004 was approved on 2026-06-11 as a pure connected-smoke/evidence story with a stop-and-report condition if a blocker would require broader gameplay/UI work.
 
 ## Copy-safe prompt-file mode
 
@@ -63,8 +63,8 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# STORY-LOOP-004 is not yet runnable. It is a READY-candidate for human review.
-Select-String -Path production\stories\story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md -Pattern "status: ready-candidate","approval: pending","Status: FAIL"
+# Verify STORY-LOOP-004 is READY/approved before running Codex.
+Select-String -Path production\stories\story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -72,10 +72,11 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-# Do not run Codex for LOOP-004 until the story is promoted to READY / approved.
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-004.prompt.txt"
-# codex exec --sandbox workspace-write $prompt
-# codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -95,15 +96,16 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-LOOP-004 connected smoke review packet
+## Current guarded prompt — STORY-LOOP-004 connected smoke
 
-LOOP-004 is approval-pending. The checked-in prompt file is guarded and will block Codex until the story is promoted to READY / approved:
+Use the checked-in prompt file:
 
 ```powershell
-# Do not run Codex for LOOP-004 until the story is promoted to READY / approved.
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-004.prompt.txt"
-# codex exec --sandbox workspace-write $prompt
-# codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Historical prompt-file runs
@@ -141,8 +143,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None. LOOP-004 is a guarded approval-pending prompt.
+- `production/sprints/codex-story-loop-004.prompt.txt`
 
 ## After Codex finishes
 
-After human approval promotes LOOP-004 to READY, Codex should commit and push `story/STORY-LOOP-004-objective-champion-combat-casualty-smoke`, then open or prepare a PR titled `STORY-LOOP-004 Objective, Champion combat, and casualty stakes smoke`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-LOOP-004-objective-champion-combat-casualty-smoke`, then open or prepare a PR titled `STORY-LOOP-004 Objective, Champion combat, and casualty stakes smoke`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

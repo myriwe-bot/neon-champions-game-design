@@ -467,3 +467,11 @@
 - Recorded a narrow human-approved exception: TAC-007 may read the draft roster GDD only as a non-authoritative placeholder fixture reference for existing unit/stack IDs.
 - Clarified that final roster names, balance, recovery, lore, faction identity, and content remain unauthorized; implementation must stop if it needs those decisions.
 - Updated the TAC-007 prompt and run prompts so Codex can proceed without weakening source-control rules.
+
+## [2026-06-11] approval | STORY-LOOP-004 promoted to READY
+
+- Recorded human approval for `STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke`.
+- Promoted LOOP-004 to READY / approved with Ambiguity Check PASS.
+- Approved scope is pure connected smoke/evidence only; if a real gameplay or UI blocker prevents the smoke, implementation must stop and report instead of broadening scope.
+- Recorded that EPIC-VSLICE-MVP-003 must not close automatically from CI alone; LOOP-004 evidence informs the next human closeout/playtest decision.
+- Activated `production/sprints/codex-story-loop-004.prompt.txt` as the current copy-safe Codex prompt.

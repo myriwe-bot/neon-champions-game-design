@@ -1,4 +1,4 @@
-Prepare to implement STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke in the Neon Champions Unity repo.
+Implement STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke in the Neon Champions Unity repo.
 
 PREFLIGHT — implement only if all of these are true in the design/control repo:
 
@@ -10,12 +10,13 @@ If the preflight fails, report exactly:
 
 BLOCKED: STORY-LOOP-004 is not READY / approved. Do not create a Unity branch or edit runtime code.
 
-Current state:
+Human-approved scope recorded 2026-06-11:
 
-- STORY-LOOP-004 is currently a READY-candidate / approval-pending packet.
-- This prompt is checked in only as a guarded handoff artifact for later use after human approval.
+- Pure connected-smoke/evidence story.
+- Strict stop condition: if a real gameplay or UI blocker prevents the smoke from being exercised or evidenced, stop and report instead of expanding scope.
+- Do not close EPIC-VSLICE-MVP-003 automatically from CI alone; LOOP-004 evidence informs the next human closeout/playtest decision.
 
-Implementation scope after approval:
+Implementation scope:
 
 1. Read these sources in order:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md
@@ -45,4 +46,4 @@ Implementation scope after approval:
    - Compile / Standalone Check
    - git diff --check
 
-If the smoke reveals a real blocker requiring broader gameplay/UI changes, stop and report instead of expanding scope.
+If the smoke reveals a real blocker requiring broader gameplay/UI changes, stop and report instead of expanding scope. Do not use LOOP-004 to add strategic AI, full encounter systems, recovery economy, broad victory/loss structure, final content/balance/lore/art/accessibility, or a broad UI redesign.

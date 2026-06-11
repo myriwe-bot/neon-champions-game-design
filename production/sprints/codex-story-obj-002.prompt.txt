@@ -1,16 +1,16 @@
-Prepare to implement STORY-OBJ-002 Guarded Site Defender Strength Tiers in the Neon Champions Unity repo.
+Implement STORY-OBJ-002 Guarded Site Defender Strength Tiers in the Neon Champions Unity repo.
 
-STOP PREFLIGHT — DO NOT IMPLEMENT unless all of these are true in the design/control repo:
+PREFLIGHT — before editing Unity code, verify all of these are true in the design/control repo:
 
 - production/stories/story-obj-002-guarded-site-defender-strength-tiers.md has frontmatter `status: ready`.
 - The same file has `approval: approved`.
 - Its Ambiguity Check says `Status: PASS`.
 
-As checked in on 2026-06-11, this prompt is a guarded handoff artifact only because STORY-OBJ-002 is DRAFT / READY-candidate with approval pending. If the preflight fails, report exactly:
+If the preflight fails, report exactly:
 
 BLOCKED: STORY-OBJ-002 is not READY / approved. Do not create a Unity branch or edit runtime code.
 
-When the human later approves and the preflight passes, use this implementation scope:
+After the preflight passes, use this implementation scope:
 
 1. Read these sources in order:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-obj-002-guarded-site-defender-strength-tiers.md
@@ -26,7 +26,7 @@ When the human later approves and the preflight passes, use this implementation 
 
 3. Implement only this story:
    - Add exact defender tiers `weak`, `standard`, `strong` for guarded sites.
-   - Assign deterministic placeholder tiers in the current smoke scenario, including the central objective.
+   - Assign deterministic placeholder tiers in the current smoke scenario, including central objective tier `standard`.
    - Map tiers to deterministic placeholder defender setup using existing guarded-site/tactical setup plumbing.
    - Show the tier in the existing readable strategic preview/HUD path.
    - Validate missing/blank/unsupported tier data for guarded sites and objective guarded sites.

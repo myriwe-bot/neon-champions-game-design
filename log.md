@@ -439,3 +439,9 @@
 - Marked `STORY-OBJ-001` DONE / merged and updated `EPIC-VSLICE-MVP-003` child status.
 - Expanded `STORY-OBJ-002 Guarded Site Defender Strength Tiers` into a DRAFT / READY-candidate packet with approval pending; it is not implementation-authorizing yet.
 - Added guarded prompt `production/sprints/codex-story-obj-002.prompt.txt` and repointed run prompts to stop until human approval promotes OBJ-002 to READY / approved.
+
+## [2026-06-11] approval | STORY-OBJ-002 promoted to READY
+
+- Human approved `STORY-OBJ-002 Guarded Site Defender Strength Tiers` as the next implementation story.
+- Recorded approved scope: placeholder `weak` / `standard` / `strong` defender mappings, no final balance claims, central objective tier `standard` for now.
+- Promoted story frontmatter to `status: ready` / `approval: approved`, Ambiguity Check PASS, and activated `production/sprints/codex-story-obj-002.prompt.txt` as the current approved prompt.

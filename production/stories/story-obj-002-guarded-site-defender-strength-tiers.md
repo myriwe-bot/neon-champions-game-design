@@ -1,7 +1,7 @@
 ---
 title: STORY-OBJ-002 Guarded Site Defender Strength Tiers
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-10
@@ -18,14 +18,14 @@ related:
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
     production/stories/story-obj-001-scenario-objective-state-and-victory-feedback,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-OBJ-002 Guarded Site Defender Strength Tiers
 
 ## Status
 
-DRAFT / READY-candidate, approval pending. This is the prepared next implementation packet after `STORY-OBJ-001`, but it does not authorize Codex or Unity implementation until a human explicitly promotes it to READY / approved.
+READY / approved for implementation. Human approved on 2026-06-11 with placeholder weak/standard/strong defender mappings and the central objective set to `standard` for now.
 
 ## Story type
 
@@ -62,7 +62,7 @@ As a player testing the vertical slice, I need guarded sites to communicate whet
 ## In scope
 
 - Add a minimal defender strength tier contract for guarded sites with exactly these values: `weak`, `standard`, `strong`.
-- Assign deterministic placeholder tiers to the current guarded-site smoke scenario, including the central objective.
+- Assign deterministic placeholder tiers to the current guarded-site smoke scenario, including central objective tier `standard`.
 - Map each tier to deterministic placeholder defender stack setup using existing tactical setup/result plumbing.
 - Surface the tier in strategic preview/HUD/readable UI where guarded-site attack information is shown.
 - Validate missing/invalid tier data for guarded sites and objective guarded sites.
@@ -134,17 +134,18 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: FAIL until human approval promotes this packet to READY / approved.
+Status: PASS.
 
-Open questions:
+Resolved user decisions, 2026-06-11:
 
-- Human approval is still pending for this specific child story.
+- `STORY-OBJ-002` is approved as READY.
+- Use placeholder `weak` / `standard` / `strong` defender mappings; this does not approve final balance.
+- Set the central objective tier to `standard` for now.
 
-Assumptions for review:
+Assumptions:
 
 - The tier names are already approved at the epic level: `weak`, `standard`, `strong`.
 - Tier mapping may use placeholder stack count/strength differences only; no final balance is being approved here.
-- The central objective should likely be `standard` unless the human chooses otherwise before approval.
 
 Out of scope:
 
@@ -156,7 +157,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None for implementation. This packet is not yet approved.
+- Human approved implementation on 2026-06-11 with central objective tier `standard` and placeholder tier mappings only.
 
 ## Branch / PR requirements
 
@@ -185,9 +186,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given for implementation / READY promotion.
+- [x] Human approval has been given for implementation / READY promotion.
 
 ## DONE gate
 
@@ -203,4 +204,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-DRAFT / READY-candidate only. Do not implement until a human explicitly approves this story and the status/approval fields plus Ambiguity Check are promoted to READY / approved / PASS.
+READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-obj-002.prompt.txt` after preflight confirms status/approval/PASS.

@@ -79,7 +79,7 @@
 - [[production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass]] — DONE/merged playability pass for map scale, zoom/focus, overlapping labels, unobstructed buttons, and click/action clarity.
 - [[production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes]] — approved next epic for scenario objective, Champion combat path, defender tiers, and simple HP/strength casualty stakes.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
-- [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DRAFT / READY-candidate follow-up for weak/standard/strong defender tiers; approval pending.
+- [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — READY follow-up for weak/standard/strong defender tiers; current approved implementation packet.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — Draft follow-up for simple stack HP/strength persistence.
 - [[production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path]] — Draft follow-up for Champion-vs-Champion tactical encounters.
 - [[production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke]] — Draft connected smoke for objective, Champion combat, and casualty stakes.

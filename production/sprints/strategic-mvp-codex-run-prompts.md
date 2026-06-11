@@ -46,9 +46,9 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation packet is currently READY / approved.
+`STORY-OBJ-002 Guarded Site Defender Strength Tiers` is the current READY / approved Unity implementation packet.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback` is DONE / merged in Unity PR #28. `STORY-OBJ-002 Guarded Site Defender Strength Tiers` is prepared as the next DRAFT / READY-candidate packet, but approval is pending. The checked-in OBJ-002 prompt is guarded and must stop unless the story is explicitly promoted to READY / approved.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback` is DONE / merged in Unity PR #28. OBJ-002 was approved on 2026-06-11 with placeholder weak/standard/strong defender mappings and central objective tier `standard`.
 
 ## Copy-safe prompt-file mode
 
@@ -60,7 +60,7 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-OBJ-002 is READY/approved before running Codex. This currently fails by design until human approval.
+# Verify STORY-OBJ-002 is READY/approved before running Codex.
 Select-String -Path production\stories\story-obj-002-guarded-site-defender-strength-tiers.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
@@ -93,7 +93,7 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-OBJ-002 guarded site defender strength tiers
+## Current prompt — STORY-OBJ-002 guarded site defender strength tiers
 
 Use the checked-in prompt file:
 
@@ -133,12 +133,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-003.prompt.txt`
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 - `production/sprints/codex-story-obj-001.prompt.txt`
-- `production/sprints/codex-story-obj-002.prompt.txt` (guarded; not runnable until approval)
+- `production/sprints/codex-story-obj-002.prompt.txt`
 
 Current approved prompt:
 
-- None. Next prepared guarded prompt: `production/sprints/codex-story-obj-002.prompt.txt`
+- `production/sprints/codex-story-obj-002.prompt.txt`
 
 ## After Codex finishes
 
-Do not run Codex for OBJ-002 until human approval promotes the story to READY / approved. After approval, Codex should commit and push `story/STORY-OBJ-002-guarded-site-defender-strength-tiers`, then open or prepare a PR titled `STORY-OBJ-002 Guarded site defender strength tiers`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-OBJ-002-guarded-site-defender-strength-tiers`, then open or prepare a PR titled `STORY-OBJ-002 Guarded site defender strength tiers`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

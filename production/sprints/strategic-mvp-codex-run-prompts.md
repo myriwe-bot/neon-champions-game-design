@@ -48,9 +48,9 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation packet is currently READY / approved. `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` is the next READY-candidate / approval-pending review packet.
+`STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` is the current READY / approved Unity implementation packet.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, and `STORY-TAC-007 Simple Stack HP/Strength Persistence` are DONE / merged. TAC-008 is prepared for human review but remains blocked from implementation until approval is recorded and its Ambiguity Check passes.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, and `STORY-TAC-007 Simple Stack HP/Strength Persistence` are DONE / merged. TAC-008 was approved on 2026-06-11 with same-node-only Champion-vs-Champion encounter semantics.
 
 ## Copy-safe prompt-file mode
 
@@ -62,8 +62,8 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# STORY-TAC-008 is not yet runnable. It is a READY-candidate for human review.
-Select-String -Path production\stories\story-tac-008-champion-vs-champion-tactical-encounter-path.md -Pattern "status: ready-candidate","approval: pending","Status: FAIL"
+# Verify STORY-TAC-008 is READY/approved before running Codex.
+Select-String -Path production\stories\story-tac-008-champion-vs-champion-tactical-encounter-path.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -71,10 +71,11 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-# Do not run Codex for TAC-008 until the story is promoted to READY / approved.
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-008.prompt.txt"
-# codex exec --sandbox workspace-write $prompt
-# codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Windows PowerShell preflight
@@ -94,15 +95,16 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-TAC-008 Champion-vs-Champion review packet
+## Current guarded prompt — STORY-TAC-008 Champion-vs-Champion same-node encounter
 
-TAC-008 is approval-pending. The checked-in prompt file is guarded and will block Codex until the story is promoted to READY / approved:
+Use the checked-in prompt file:
 
 ```powershell
-# Do not run Codex for TAC-008 until the story is promoted to READY / approved.
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-008.prompt.txt"
-# codex exec --sandbox workspace-write $prompt
-# codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox workspace-write $prompt
+
+# Trusted-repo fallback if workspace-write is blocked:
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Historical prompt-file runs
@@ -139,8 +141,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None. TAC-008 is a guarded approval-pending prompt and must not be run until promoted to READY / approved.
+- `production/sprints/codex-story-tac-008.prompt.txt`
 
 ## After Codex finishes
 
-After human approval promotes TAC-008 to READY, Codex should commit and push `story/STORY-TAC-008-champion-vs-champion-tactical-encounter-path`, then open or prepare a PR titled `STORY-TAC-008 Champion-vs-Champion tactical encounter path`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-TAC-008-champion-vs-champion-tactical-encounter-path`, then open or prepare a PR titled `STORY-TAC-008 Champion-vs-Champion tactical encounter path`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

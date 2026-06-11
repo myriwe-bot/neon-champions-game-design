@@ -23,7 +23,7 @@ approval: approved
 
 APPROVED. Direction was selected by the user on 2026-06-10 after closing `EPIC-VSLICE-MVP-002`: central guarded objective capture, allow Champion-vs-Champion combat, defender tiers named `weak / standard / strong`, and simple per-stack HP/strength persistence. The user approved implementation prep for the first child story, `STORY-OBJ-001`, on 2026-06-10.
 
-`STORY-OBJ-001`, `STORY-OBJ-002`, and `STORY-TAC-007` are DONE / merged. `STORY-TAC-008` is the next READY-candidate / approval-pending review packet; it is not READY until the Champion encounter trigger semantics are approved.
+`STORY-OBJ-001`, `STORY-OBJ-002`, and `STORY-TAC-007` are DONE / merged. `STORY-TAC-008` is READY / approved as the current implementation packet with same-node-only Champion-vs-Champion encounter semantics.
 
 ## Priority tier
 
@@ -133,7 +133,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-OBJ-001 Scenario Objective State and Victory Feedback](../stories/story-obj-001-scenario-objective-state-and-victory-feedback.md) | DONE / merged PR #28 (`69be356`) | Logic + UI/Integration + UX/Smoke | EPIC-002 closed, current readable vertical slice | Objective-state tests, PlayMode smoke, PNG evidence, CI |
 | [STORY-OBJ-002 Guarded Site Defender Strength Tiers](../stories/story-obj-002-guarded-site-defender-strength-tiers.md) | DONE / merged PR #29 (`7b6807b`) | Logic + Config/Data + UI/Integration | OBJ-001 DONE | Tier validation, deterministic defender setup tests, visible tier evidence, CI |
 | [STORY-TAC-007 Simple Stack HP/Strength Persistence](../stories/story-tac-007-simple-stack-strength-persistence.md) | DONE / merged PR #30 (`d822018`) | Tactical Logic + Strategic Result Integration + UI/Smoke | OBJ-002 DONE | Battle-result persistence tests, zero-count removal tests, visual battle-result evidence, invalid-result tests, CI |
-| [STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path](../stories/story-tac-008-champion-vs-champion-tactical-encounter-path.md) | READY-candidate / approval pending | Tactical Integration + Strategic Encounter Routing | TAC-007 DONE | Deterministic Champion encounter smoke, result persistence evidence |
+| [STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path](../stories/story-tac-008-champion-vs-champion-tactical-encounter-path.md) | READY / approved | Tactical Integration + Strategic Encounter Routing | TAC-007 DONE | Deterministic same-node Champion encounter smoke, result persistence evidence |
 | [STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke](../stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md) | Draft | Playtest + Integration + UX/Smoke | OBJ-001, OBJ-002, TAC-007, TAC-008 as scoped | End-to-end objective/casualty/champion evidence, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -207,4 +207,4 @@ If any box above is checked, the epic needs revision.
 
 ## Verdict
 
-APPROVED for production story train. `STORY-OBJ-001`, `STORY-OBJ-002`, and `STORY-TAC-007` are DONE / merged. `STORY-TAC-008` is prepared as READY-candidate / approval pending; next human decision is to approve or revise its Champion encounter trigger semantics before implementation.
+APPROVED for production story train. `STORY-OBJ-001`, `STORY-OBJ-002`, and `STORY-TAC-007` are DONE / merged. `STORY-TAC-008` is READY / approved for implementation with same-node-only Champion-vs-Champion encounter semantics.

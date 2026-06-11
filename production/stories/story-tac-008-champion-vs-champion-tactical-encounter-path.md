@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-10
@@ -17,14 +17,14 @@ related:
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
     production/stories/story-tac-007-simple-stack-strength-persistence,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path
 
 ## Status
 
-READY-candidate / approval pending. Draft expanded after `STORY-TAC-007` merged. This story is prepared for human review, but it is not READY and does not authorize Unity implementation until approval is changed to `approved` and the Ambiguity Check is changed to PASS.
+READY / approved for implementation. Human approved on 2026-06-11 with same-node-only Champion-vs-Champion encounter semantics: the MVP trigger is two active opposing Champions occupying the same strategic node. No adjacent-target selection, strategic AI, pursuit, or broad encounter system is authorized.
 
 ## Story type
 
@@ -60,7 +60,7 @@ The prototype can resolve guarded-site battles and persist simple attacker stack
 ## In scope
 
 - Add a deterministic Champion-vs-Champion encounter path using existing Champion runtime state and tactical setup/result DTOs.
-- Support a player/test-triggered encounter only when two active opposing Champions occupy an approved encounter context, such as the same node or a story-approved adjacent/interaction path already available in the current map slice.
+- Support a player/test-triggered encounter only when two active opposing Champions occupy the same strategic node.
 - Produce a valid `BattleSetup` with `BattleType.ChampionVsChampion`, attacker side as the active/player Champion, defender side as the opposing Champion, and stable faction/champion/army/stack identity.
 - Route the encounter through the existing tactical handoff/board/result path where feasible.
 - Apply the resulting `BattleResult` back to strategic Champion state using the existing result application boundaries, including simple attacker stack persistence from TAC-007 where applicable.
@@ -129,18 +129,19 @@ Not allowed:
 
 ## Ambiguity Check
 
-Status: FAIL until human approval.
+Status: PASS.
 
-Open questions for human review:
+Human decisions recorded on 2026-06-11:
 
-1. What exact MVP encounter context should trigger Champion-vs-Champion for this story: same node only, selected adjacent enemy Champion, or a deterministic test/debug interaction?
-2. Should defeated Champion state reuse the current `ChampionStatusFlags.Defeated` semantics only, or should this story stop before any strategic victory/loss side effect beyond visible status?
-3. Is minimal placeholder feedback text enough, or should the existing battle-result panel explicitly name both Champion placeholder IDs?
+- Approved as next implementation packet.
+- Encounter trigger semantics: same-node only. A Champion-vs-Champion encounter may be created only when two active opposing Champions occupy the same strategic node.
+- Adjacent selected-target encounters, strategic AI, pursuit, and full encounter-system UX are out of scope.
+- Defeated Champion state may reuse the current `ChampionStatusFlags.Defeated` / existing placeholder status semantics only; if implementation requires broader victory/loss/recovery design, stop instead of inventing it.
+- Minimal placeholder feedback is sufficient, but it should identify both Champion placeholder IDs when those IDs are available through the existing UI/result path.
 
-Assumptions for review:
+Assumptions for implementation:
 
-- The smallest safe implementation is deterministic/player-test-triggered, not strategic AI.
-- Same-node encounter is likely the narrowest trigger unless the human chooses adjacent selection.
+- The trigger is deterministic/player-test-triggered, not strategic AI.
 - Existing placeholder IDs are acceptable; no final Champion identity/content work is authorized.
 
 ## Branch / PR requirements
@@ -166,8 +167,8 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Dependencies are listed and satisfied.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Human approval has been given for implementation / READY promotion.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval has been given for implementation / READY promotion.
 
 ## DONE gate
 
@@ -183,4 +184,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate / approval pending. Next human step: choose the Champion encounter trigger semantics and approve or revise this packet before Codex implementation.
+READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-tac-008.prompt.txt` after preflight confirms status/approval/PASS.

@@ -10,12 +10,7 @@ If the preflight fails, report exactly:
 
 BLOCKED: STORY-TAC-008 is not READY / approved. Do not create a Unity branch or edit runtime code.
 
-Current state:
-
-- STORY-TAC-008 is currently a READY-candidate / approval-pending packet.
-- This prompt is checked in only as a guarded handoff artifact for later use after human approval.
-
-Implementation scope after approval:
+Implementation scope:
 
 1. Read these sources in order:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-tac-008-champion-vs-champion-tactical-encounter-path.md
@@ -29,21 +24,45 @@ Implementation scope after approval:
 2. In the Unity repo, create branch:
    story/STORY-TAC-008-champion-vs-champion-tactical-encounter-path
 
-3. Implement only the approved story.
+3. Implement only this story:
+   - Add a deterministic Champion-vs-Champion encounter path using existing Champion runtime state and tactical setup/result DTOs.
+   - Same-node-only trigger: create a Champion-vs-Champion encounter only when two active opposing Champions occupy the same strategic node.
+   - Produce a valid `BattleSetup` / equivalent current DTO with Champion-vs-Champion battle type, active/player Champion as attacker, opposing Champion as defender, and stable faction/champion/army/stack identity.
+   - Route the encounter through the existing tactical handoff/board/result path where feasible.
+   - Apply valid results back through existing result-application boundaries.
+   - Reuse TAC-007 simple attacker stack persistence where applicable.
+   - Mark defeated Champion state only through existing placeholder defeated/status semantics.
+   - Add minimal placeholder visible feedback that a Champion-vs-Champion battle occurred, which placeholder Champions were involved, and which side won/lost.
 
 4. Keep out of scope:
-   - Strategic AI or enemy autonomous pursuit.
-   - Full encounter system or PvP UX.
-   - Healing/recovery/casualty economy.
+   - Adjacent selected-target encounters.
+   - Strategic AI, pursuit, or enemy autonomous initiation.
+   - Full encounter system, PvP UX, diplomacy, ambush, scouting, or zone-of-control rules.
+   - Healing/recovery/casualty economy or post-defeat revival rules.
    - New tactical abilities, cover, LOS, morale, ammo/status systems, or final combat balance.
    - Final Champion names/content/lore/art/accessibility.
-   - Save/load or campaign progression.
+   - Save/load, campaign progression, or broad victory/loss structure.
 
-5. Required checks before PR/merge:
+5. Use TDD:
+   - Add failing EditMode tests for same-node valid encounter setup.
+   - Add invalid setup tests for same-faction, missing, inactive/defeated, armyless, and non-same-node Champion cases.
+   - Add result validation/no-partial-mutation tests for invalid side/outcome/result payloads.
+   - Add guarded-site regressions proving OBJ-001/OBJ-002/TAC-007 flows still pass.
+   - Add/extend PlayMode smoke coverage for the deterministic same-node Champion encounter and visible result feedback.
+
+6. Evidence:
+   - Produce PNG evidence under production/evidence/STORY-TAC-008/ or equivalent story evidence path.
+   - Evidence must show the same-node Champion encounter path and visible result feedback.
+   - PR body must link story ID, source docs, evidence path, test commands, CI runs, and omissions.
+
+7. Required checks before PR/merge:
    - EditMode Tests
    - PlayMode Smoke Tests
    - Placeholder Validator
    - Compile / Standalone Check
    - git diff --check
+
+8. Commit and push the story branch. Open or prepare PR titled:
+   STORY-TAC-008 Champion-vs-Champion tactical encounter path
 
 If implementation needs a design decision not present in the approved story, stop and report instead of inventing it.

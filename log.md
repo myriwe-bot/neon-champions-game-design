@@ -453,3 +453,10 @@
 - Marked `STORY-OBJ-002` DONE / merged and updated `EPIC-VSLICE-MVP-003` child status.
 - Expanded `STORY-TAC-007 Simple Stack HP/Strength Persistence` into a DRAFT / READY-candidate packet with approval pending; it is not implementation-authorizing yet.
 - Added guarded prompt `production/sprints/codex-story-tac-007.prompt.txt` and repointed run prompts to stop until human approval promotes TAC-007 to READY / approved.
+
+## [2026-06-11] approval | STORY-TAC-007 promoted to READY
+
+- Recorded human approval for `STORY-TAC-007 Simple Stack HP/Strength Persistence`.
+- Captured zero-count stack decision: remove zero-count stacks from the active strategic army, document and test the rule.
+- Added explicit minimal visual-layer requirement for stack strength and battle-result feedback so the player can see stack-count changes and understand the battle result caused them.
+- Promoted TAC-007 to READY / approved and activated `production/sprints/codex-story-tac-007.prompt.txt` as the current implementation prompt.

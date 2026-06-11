@@ -47,9 +47,9 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation packet is currently READY / approved.
+`STORY-TAC-007 Simple Stack HP/Strength Persistence` is the current READY / approved Unity implementation packet.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback` and `STORY-OBJ-002 Guarded Site Defender Strength Tiers` are DONE / merged. `STORY-TAC-007 Simple Stack HP/Strength Persistence` is prepared as the next DRAFT / READY-candidate packet, but approval is pending. The checked-in TAC-007 prompt is guarded and must stop unless the story is explicitly promoted to READY / approved.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback` and `STORY-OBJ-002 Guarded Site Defender Strength Tiers` are DONE / merged. TAC-007 was approved on 2026-06-11 with zero-count stack removal and minimal visual stack/battle-result feedback included.
 
 ## Copy-safe prompt-file mode
 
@@ -61,7 +61,7 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-TAC-007 is READY/approved before running Codex. This currently fails by design until human approval.
+# Verify STORY-TAC-007 is READY/approved before running Codex.
 Select-String -Path production\stories\story-tac-007-simple-stack-strength-persistence.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
@@ -135,12 +135,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-next-step-epic-closeout.prompt.txt`
 - `production/sprints/codex-story-obj-001.prompt.txt`
 - `production/sprints/codex-story-obj-002.prompt.txt`
-- `production/sprints/codex-story-tac-007.prompt.txt` (guarded; not runnable until approval)
+- `production/sprints/codex-story-tac-007.prompt.txt`
 
 Current approved prompt:
 
-- None. Next prepared guarded prompt: `production/sprints/codex-story-tac-007.prompt.txt`
+- `production/sprints/codex-story-tac-007.prompt.txt`
 
 ## After Codex finishes
 
-Do not run Codex for TAC-007 until human approval promotes the story to READY / approved. After approval, Codex should commit and push `story/STORY-TAC-007-simple-stack-strength-persistence`, then open or prepare a PR titled `STORY-TAC-007 Simple stack strength persistence`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-TAC-007-simple-stack-strength-persistence`, then open or prepare a PR titled `STORY-TAC-007 Simple stack strength persistence`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

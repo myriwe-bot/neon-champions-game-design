@@ -1,16 +1,16 @@
 Prepare to implement STORY-TAC-007 Simple Stack HP/Strength Persistence in the Neon Champions Unity repo.
 
-STOP PREFLIGHT — DO NOT IMPLEMENT unless all of these are true in the design/control repo:
+PREFLIGHT — implement only if all of these are true in the design/control repo:
 
 - production/stories/story-tac-007-simple-stack-strength-persistence.md has frontmatter `status: ready`.
 - The same file has `approval: approved`.
 - Its Ambiguity Check says `Status: PASS`.
 
-As checked in on 2026-06-11, this prompt is a guarded handoff artifact only because STORY-TAC-007 is DRAFT / READY-candidate with approval pending. If the preflight fails, report exactly:
+If the preflight fails, report exactly:
 
 BLOCKED: STORY-TAC-007 is not READY / approved. Do not create a Unity branch or edit runtime code.
 
-When the human later approves and the preflight passes, use this implementation scope:
+Implementation scope:
 
 1. Read these sources in order:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-tac-007-simple-stack-strength-persistence.md
@@ -27,9 +27,11 @@ When the human later approves and the preflight passes, use this implementation 
 3. Implement only this story:
    - Add minimal attacker stack surviving-count/strength persistence through the existing tactical result/application path.
    - Update matching strategic Champion army stack counts after guarded-site battle result application.
+   - Remove zero-count stacks from the active strategic army; document and test this rule.
    - Reject invalid result data without partial mutation: unknown stack/unit, duplicate entry, negative count, or above-maximum count.
    - Document and test the chosen zero-count placeholder rule.
    - Show changed army strength/count in existing readable strategic summaries after return from tactical view.
+   - Add a minimal placeholder visual battle-result layer that reports stack count changes, e.g. `unit_placeholder_infantry 10 -> 7`, before or during return to the strategic map.
    - Keep OBJ-001 objective victory and OBJ-002 defender-tier behavior working.
 
 4. Keep out of scope:
@@ -39,16 +41,17 @@ When the human later approves and the preflight passes, use this implementation 
    - Strategic AI.
    - New tactical mechanics, abilities, cover, LOS, morale, ammo/status systems, or final combat balance.
    - Final roster/balance/content/lore names.
+   - Final UI/art/accessibility beyond the minimal placeholder stack/battle-result feedback required by this story.
    - Save/load, campaign progression, final UI/art/accessibility.
 
 5. Use TDD:
    - Add failing EditMode tests for stack persistence and invalid-result rejection/no partial mutation.
-   - Add/extend PlayMode smoke coverage for visible changed army summary after battle.
+   - Add/extend PlayMode smoke coverage for visible changed army summary and battle-result feedback after battle.
    - Keep objective completion/victory, recruitment-to-capture, multi-stack attacker, and defender-tier regressions green.
 
 6. Evidence:
    - Produce PNG evidence under production/evidence/STORY-TAC-007/ or equivalent story evidence path.
-   - Evidence must show changed strategic army strength/count after guarded battle resolution.
+   - Evidence must show changed strategic army strength/count after guarded battle resolution and the minimal battle-result feedback that caused it.
    - PR body must link story ID, source docs, evidence path, test commands, CI runs, and omissions.
 
 7. Required checks before PR/merge:

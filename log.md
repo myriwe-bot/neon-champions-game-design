@@ -475,3 +475,12 @@
 - Approved scope is pure connected smoke/evidence only; if a real gameplay or UI blocker prevents the smoke, implementation must stop and report instead of broadening scope.
 - Recorded that EPIC-VSLICE-MVP-003 must not close automatically from CI alone; LOOP-004 evidence informs the next human closeout/playtest decision.
 - Activated `production/sprints/codex-story-loop-004.prompt.txt` as the current copy-safe Codex prompt.
+
+
+## [2026-06-12] approve | EPIC-004 Intel on-ramp and STORY-INTEL-001 implementation prep
+
+- Closed `EPIC-VSLICE-MVP-003` as DONE after LOOP-004 evidence, post-merge Unity CI, and human closeout acceptance.
+- Created `production/epics/epic-vslice-mvp-004-intel-resource-on-ramp.md` as the next approved capability container.
+- Created and promoted `production/stories/story-intel-001-faction-intel-and-data-cache-pickup.md` to READY / approved as the only current Unity implementation authority.
+- Created `production/sprints/codex-story-intel-001.prompt.txt` and updated current run-prompt docs for Codex-safe implementation.
+- Kept broader Intel systems deliberately out of scope: spending, fog/hidden information, dirty information, tactical Intel rewards, recurring economy, and final content.

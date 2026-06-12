@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-003 Scenario Objective, Champion Combat, and Casualty Stakes
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-06-10
@@ -21,9 +21,9 @@ approval: approved
 
 ## Status
 
-APPROVED. Direction was selected by the user on 2026-06-10 after closing `EPIC-VSLICE-MVP-002`: central guarded objective capture, allow Champion-vs-Champion combat, defender tiers named `weak / standard / strong`, and simple per-stack HP/strength persistence. The user approved implementation prep for the first child story, `STORY-OBJ-001`, on 2026-06-10.
+DONE / human-accepted closeout. Direction was selected by the user on 2026-06-10 after closing `EPIC-VSLICE-MVP-002`: central guarded objective capture, allow Champion-vs-Champion combat, defender tiers named `weak / standard / strong`, and simple per-stack HP/strength persistence.
 
-`STORY-OBJ-001`, `STORY-OBJ-002`, `STORY-TAC-007`, `STORY-TAC-008`, and `STORY-LOOP-004` are DONE / merged. EPIC-VSLICE-MVP-003 is awaiting human closeout/playtest review; it is not automatically closed by CI alone.
+`STORY-OBJ-001`, `STORY-OBJ-002`, `STORY-TAC-007`, `STORY-TAC-008`, and `STORY-LOOP-004` are DONE / merged. Human closeout accepted on 2026-06-12 after LOOP-004 evidence and post-merge CI passed. Residual broad systems remain deferred, not active blockers.
 
 ## Priority tier
 
@@ -184,14 +184,14 @@ An epic may enter production only when all items are true:
 
 ## Epic DONE gate
 
-- [ ] All required child stories are DONE.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] All required child stories are DONE.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the epic as complete.
 
 ## Anti-pattern check
 
@@ -205,6 +205,12 @@ Invalid epic behavior:
 
 If any box above is checked, the epic needs revision.
 
+## Closeout evidence
+
+- Final child story: `STORY-LOOP-004` — Unity PR #32, merge commit `2ed6d38624bc7aabd824ec1ce2162e6ce7523dd2`.
+- LOOP-004 post-merge main CI: passed — https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27398328933
+- Control closeout: human accepted on 2026-06-12.
+
 ## Verdict
 
-APPROVED / awaiting human closeout review. All planned child stories through `STORY-LOOP-004` are DONE / merged. Use LOOP-004 evidence and playtest judgement to decide whether EPIC-VSLICE-MVP-003 can close or needs a narrow follow-up; do not mark the epic DONE from CI alone.
+DONE. EPIC-VSLICE-MVP-003 proved a prototype-quality objective/casualty/Champion-combat stakes loop. Deferred systems such as strategic AI, recovery economy, broader objective types, and final content/UI remain outside this epic.

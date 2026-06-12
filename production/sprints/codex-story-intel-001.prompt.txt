@@ -1,0 +1,61 @@
+Implement STORY-INTEL-001 Faction Intel and Data Cache Pickup in the Neon Champions Unity repo.
+
+PREFLIGHT — implement only if all of these are true in the design/control repo:
+
+- production/stories/story-intel-001-faction-intel-and-data-cache-pickup.md has frontmatter `status: ready`.
+- The same file has `approval: approved`.
+- Its Ambiguity Check says `Status: PASS`.
+
+If the preflight fails, report exactly:
+
+BLOCKED: STORY-INTEL-001 is not READY / approved. Do not create a Unity branch or edit runtime code.
+
+Human-approved scope recorded 2026-06-12:
+
+- Minimal Intel resource on-ramp only.
+- Add faction-level Intel earning/display and one deterministic data cache pickup.
+- Broader Intel GDD remains draft/pending; do not implement spending, upgrades, fog, dirty information, full economy, tactical Intel rewards, or final content.
+
+Implementation scope:
+
+1. Read these sources in order:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-001-faction-intel-and-data-cache-pickup.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-004-intel-resource-on-ramp.md
+   - linked GDD sections in design/gdd/intel-resource.md, design/gdd/strategic-map.md, and design/gdd/game-pillars.md
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and nearest scoped instructions
+   - existing strategic-map resource/site interaction tests, LOOP-004 smoke code, and evidence conventions
+
+2. In the Unity repo, create branch:
+   story/STORY-INTEL-001-faction-intel-data-cache-pickup
+
+3. Implement only the approved minimal Intel on-ramp:
+   - faction-level Intel state in the current strategic scenario/runtime snapshot;
+   - visible HUD/status text for faction Intel;
+   - one deterministic data cache source;
+   - one-time +5 Intel claim for the active faction;
+   - cache claimed/depleted state preventing duplicate awards;
+   - persistence across end-turn transitions;
+   - validators for any new data/cache reward fields;
+   - EditMode tests, PlayMode smoke, and PNG evidence.
+
+4. Keep out of scope:
+   - Intel spending, upgrades, assets, operations, hacks, doctrine, recruitment-site upgrades, or elite unlocks.
+   - Intel subtypes.
+   - Fog of war, hidden information, spoofing, polluted feeds, dirty-information systems, or counter-intel cleanup.
+   - Reverse-engineering/dismantling assets.
+   - Recurring weekly income, Intel Exchanges, Analysis Cells, markets, or full economy balancing.
+   - Tactical optional objectives or post-battle Intel rewards.
+   - Strategic AI or enemy autonomous collection.
+   - Final content/lore names, icons, art, animation, accessibility, broad UI redesign, or save/load.
+
+5. Required checks before PR/merge:
+   - EditMode Tests
+   - PlayMode Smoke Tests
+   - Placeholder Validator
+   - Compile / Standalone Check
+   - git diff --check
+
+If implementing the data cache requires broader economy, hidden-info, save/load, content, UX, or architecture decisions, stop and report instead of expanding scope.

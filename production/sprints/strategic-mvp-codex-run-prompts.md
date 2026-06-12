@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-11
+updated: 2026-06-12
 source_lore: []
 related:
   [
@@ -41,6 +41,8 @@ related:
     production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path,
     production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke,
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
+    production/epics/epic-vslice-mvp-004-intel-resource-on-ramp,
+    production/stories/story-intel-001-faction-intel-and-data-cache-pickup,
   ]
 approval: approved
 ---
@@ -49,9 +51,9 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation packet is currently READY / approved. `STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` is DONE / merged in Unity PR #32; EPIC-VSLICE-MVP-003 now needs human closeout/playtest review before the next implementation packet is approved.
+`STORY-INTEL-001 Faction Intel and Data Cache Pickup` is the current READY / approved Unity implementation packet. It starts EPIC-VSLICE-MVP-004 with the smallest Intel on-ramp: faction-level Intel display plus one deterministic data-cache pickup.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, `STORY-TAC-007 Simple Stack HP/Strength Persistence`, `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path`, and `STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` are DONE / merged. LOOP-004 evidence should drive the next human closeout/playtest decision.
+`EPIC-VSLICE-MVP-003` and all child stories through `STORY-LOOP-004` are DONE / merged. `STORY-INTEL-001` is the only current implementation authority; broader Intel spending, fog/hidden information, dirty information, tactical Intel rewards, and recurring economy remain out of scope.
 
 ## Copy-safe prompt-file mode
 
@@ -63,8 +65,8 @@ Current prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-LOOP-004 is READY/approved before running Codex.
-Select-String -Path production\stories\story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md -Pattern "status: ready","approval: approved","Status: PASS"
+# Verify STORY-INTEL-001 is READY/approved before running Codex.
+Select-String -Path production\stories\story-intel-001-faction-intel-and-data-cache-pickup.md -Pattern "status: ready","approval: approved","Status: PASS"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -72,7 +74,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-004.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -96,12 +98,12 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Last guarded prompt — STORY-LOOP-004 connected smoke (DONE / merged)
+## Current guarded prompt — STORY-INTEL-001 faction Intel and data cache pickup
 
 Use the checked-in prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-loop-004.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -143,8 +145,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- `production/sprints/codex-story-loop-004.prompt.txt`
+- `production/sprints/codex-story-intel-001.prompt.txt`
 
 ## After Codex finishes
 
-Historical prompt retained for traceability. Do not rerun STORY-LOOP-004; it merged in Unity PR #32. Await human closeout/playtest review before preparing the next implementation prompt.
+Codex should commit and push `story/STORY-INTEL-001-faction-intel-data-cache-pickup`, then open or prepare a PR titled `STORY-INTEL-001 Faction Intel and data cache pickup`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

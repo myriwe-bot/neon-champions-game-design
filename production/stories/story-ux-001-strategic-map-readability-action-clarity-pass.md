@@ -1,7 +1,7 @@
 ---
 title: STORY-UX-001 Strategic Map Readability and Action Clarity Pass
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-12
@@ -17,16 +17,16 @@ related:
     production/epics/epic-vslice-mvp-004-intel-resource-on-ramp,
     production/stories/story-intel-004-intel-on-ramp-closeout-smoke,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-UX-001 Strategic Map Readability and Action Clarity Pass
 
 ## Status
 
-DRAFT / READY-candidate only. Not approved for Unity implementation.
+READY / approved. Human approved implementation on 2026-06-12.
 
-This candidate is the recommended next implementation packet after `STORY-INTEL-004` because the prototype now has a connected strategic loop with movement, cache claim, placeholder Field Upgrade spend, guarded reward, and tactical return. Before adding deeper systems, the next risk is whether a human can read and operate the crude strategic map well enough to evaluate the loop.
+This is the next implementation packet after `STORY-INTEL-004` because the prototype now has a connected strategic loop with movement, cache claim, placeholder Field Upgrade spend, guarded reward, and tactical return. Before adding deeper systems, the next risk is whether a human can read and operate the crude strategic map well enough to evaluate the loop.
 
 ## Story type
 
@@ -54,13 +54,13 @@ As a human tester, I need the current strategic-map prototype to clearly show wh
   - `STORY-INTEL-003` DONE / merged.
   - `STORY-INTEL-004` DONE / merged.
 
-Authority note: this candidate is not implementation authority. Human approval must decide whether to run this readability/action-clarity pass before further gameplay/system expansion.
+Authority note: human approval on 2026-06-12 authorizes only this bounded readability/action-clarity pass before further gameplay/system expansion.
 
-## Candidate problem statement
+## Problem statement
 
 The connected Intel smoke proves the loop technically works, but it is still a crude prototype. If the player cannot quickly tell the active faction, selected Champion, reachable routes/nodes, selected site, available action, Intel total, Field Upgrade state, guarded reward state, and action result, then further gameplay features will outrun playability.
 
-## Candidate in scope, if approved
+## In scope
 
 - Improve the existing strategic-map prototype presentation enough to make the current loop readable at 1280x720 evidence resolution.
 - Make the following states visually/textually clear without requiring source-code knowledge:
@@ -77,24 +77,25 @@ The connected Intel smoke proves the loop technically works, but it is still a c
 - Produce before/after PNG evidence under `production/evidence/STORY-UX-001/`.
 - Keep existing INTEL-001/002/003/004, objective/combat/recruitment, and tactical regressions green.
 
-## Candidate out of scope
+## Out of scope
 
 - New gameplay mechanics, new Intel sources/sinks, new field-upgrade mechanics, new tactical objectives, save/load, strategic AI, accessibility pass beyond the current crude prototype, final art/icons/animation, final UI skin, localization, broad redesign, camera/zoom system, or replacing the prototype with a full production UI architecture.
 
 ## Ambiguity Check
 
-Status: FAIL until human review.
+Status: PASS.
 
-Open decisions before approval:
+Human-approved decisions recorded on 2026-06-12:
 
-1. Should the next implementation story be this readability/action-clarity pass, or should the project pause for human closeout/playtest review without code changes?
-2. Are small layout/focus/highlight/copy changes enough, or should any broader UI architecture work be deferred explicitly?
-3. What concrete human complaints should be first-class acceptance criteria if the current screenshots/playtest reveal them?
+1. Run this readability/action-clarity pass before further gameplay/system expansion.
+2. Keep scope to small layout, focus, highlight, label, and copy changes in the current prototype presentation.
+3. Broader UI architecture work, camera/zoom, final art, and full production UI are deferred and out of scope.
+4. Generic prototype-readability criteria are acceptable for this packet; if implementation/evidence reveals concrete overlap/clickability issues, preserve them as acceptance evidence and fix only within this bounded pass.
 
 ## Branch / PR requirements if later approved
 
-- Suggested branch name: `story/STORY-UX-001-strategic-map-readability-action-clarity-pass`
-- Suggested PR title: `STORY-UX-001 Strategic map readability and action clarity pass`
+- Branch name: `story/STORY-UX-001-strategic-map-readability-action-clarity-pass`
+- PR title: `STORY-UX-001 Strategic map readability and action clarity pass`
 - Required linked story ID: `STORY-UX-001`
 - Required omissions section: no new gameplay mechanics, no new Intel systems, no save/load, no strategic AI, no final art/UI redesign.
 
@@ -105,10 +106,10 @@ Open decisions before approval:
 - [x] Prior dependencies are listed.
 - [x] Candidate scope is bounded.
 - [x] Out-of-scope work is explicit.
-- [ ] Human approval has been given for implementation / READY promotion.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Concrete readability/playability acceptance drivers are approved or accepted as generic prototype-readability criteria.
+- [x] Human approval has been given for implementation / READY promotion.
+- [x] Ambiguity Check status is PASS.
+- [x] Concrete readability/playability acceptance drivers are approved or accepted as generic prototype-readability criteria.
 
 ## Verdict
 
-DRAFT / READY-candidate only. Do not implement until human approval promotes this story to READY / approved and the Ambiguity Check passes.
+READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-ux-001.prompt.txt` after preflight confirms status/approval/PASS.

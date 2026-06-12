@@ -539,3 +539,9 @@
 - Marked `STORY-INTEL-004` DONE / merged.
 - Prepared `STORY-UX-001 Strategic Map Readability and Action Clarity Pass` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
 - Added guarded non-runnable prompt `production/sprints/codex-story-ux-001.prompt.txt`; no Unity implementation is currently authorized.
+## [2026-06-12] approve | STORY-UX-001 implementation prep
+
+- Recorded human approval for `STORY-UX-001 Strategic Map Readability and Action Clarity Pass`.
+- Promoted STORY-UX-001 to READY / approved with Ambiguity Check PASS.
+- Approved scope: small strategic-map readability/action clarity improvements before further gameplay/system expansion, with before/after PNG evidence and no new gameplay mechanics.
+- Activated `production/sprints/codex-story-ux-001.prompt.txt` and repointed current Codex run prompts to STORY-UX-001.

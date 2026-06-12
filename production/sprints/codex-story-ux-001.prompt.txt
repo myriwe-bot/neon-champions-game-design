@@ -1,6 +1,6 @@
-Prepare STORY-UX-001 Strategic Map Readability and Action Clarity Pass only after human approval.
+Implement STORY-UX-001 Strategic Map Readability and Action Clarity Pass in the Neon Champions Unity repo.
 
-PREFLIGHT — do not implement unless all of these are true in the design/control repo:
+PREFLIGHT — implement only if all of these are true in the design/control repo:
 
 - production/stories/story-ux-001-strategic-map-readability-action-clarity-pass.md has frontmatter `status: ready`.
 - The same file has `approval: approved`.
@@ -11,22 +11,84 @@ If the preflight fails, report exactly:
 
 BLOCKED: STORY-UX-001 is not READY / approved or INTEL-004 is not DONE. Do not create a Unity branch or edit runtime code.
 
-Current state:
+Human-approved scope recorded 2026-06-12:
 
-- STORY-UX-001 is a DRAFT / READY-candidate only.
-- It is not approved for implementation.
-- Human review must decide whether the next implementation story should be this strategic-map readability/action-clarity pass, or whether EPIC-004 should pause for human closeout/playtest review first.
+- Implement this strategic-map readability/action-clarity pass before further gameplay/system expansion.
+- Keep scope to small layout, focus, highlight, label, and copy improvements in the current prototype presentation.
+- Generic prototype-readability criteria are accepted for this packet.
+- If implementation/evidence reveals concrete overlap/clickability/readability issues, preserve them in PR/evidence and fix only within this bounded pass.
 
-If later approved, implement only the bounded readability/action-clarity pass from the story file:
+Implementation scope:
 
-- improve current strategic-map prototype readability at 1280x720 evidence resolution;
-- clarify active faction, turn/round, selected Champion, army summary, reachable nodes/routes, selected site/action, Intel total, placeholder Field Upgrade state/cost/applied status, guarded reward preview/result, and latest diagnostic/action result;
-- prefer layout/label/focus/highlight changes in existing presentation code;
-- produce before/after PNG evidence under `production/evidence/STORY-UX-001/`;
-- keep all existing INTEL-001/002/003/004, objective/combat/recruitment, and tactical regressions green.
+1. Read these sources in order:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-ux-001-strategic-map-readability-action-clarity-pass.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-004-intel-on-ramp-closeout-smoke.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-004-intel-resource-on-ramp.md
+   - linked GDD sections in design/gdd/strategic-map.md and design/gdd/intel-resource.md
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and nearest scoped instructions
+   - existing PlayMode smoke/evidence conventions and `production/evidence/STORY-INTEL-004/` screenshots/README
 
-Keep out of scope:
+2. In the Unity repo, create branch:
+   story/STORY-UX-001-strategic-map-readability-action-clarity-pass
 
-- New gameplay mechanics, new Intel sources/sinks, new field-upgrade mechanics, new tactical objectives, save/load, strategic AI, final art/icons/animation, final UI skin, localization, broad redesign, camera/zoom system, or replacing the prototype with a full production UI architecture.
+3. Improve only the existing strategic-map prototype presentation enough to make the current loop readable at 1280x720 evidence resolution. Make these states clear without source-code knowledge:
+   - active faction and turn/round;
+   - selected Champion and current army summary;
+   - reachable nodes/routes;
+   - selected site and available action;
+   - current Intel total;
+   - placeholder `field_upgrade_alpha` / “Field Upgrade” status, cost, affordability, and applied state;
+   - guarded reward preview/result;
+   - latest diagnostic/action result.
+
+4. Prefer small presentation changes:
+   - layout spacing;
+   - label text/copy;
+   - focus/highlight states;
+   - visual grouping;
+   - stable evidence-friendly ordering;
+   - readable color/contrast within the current crude prototype.
+
+5. Tests/evidence expectations:
+   - Add or refine PlayMode assertions that the important labels/elements are visible/readable and do not overlap critical controls at 1280x720 where feasible.
+   - Produce before/after PNG evidence under `production/evidence/STORY-UX-001/`.
+   - Keep all existing INTEL-001/002/003/004, objective/combat/recruitment, and tactical regressions green.
+
+6. Keep out of scope:
+   - New gameplay mechanics.
+   - New Intel sources/sinks or new Field Upgrade mechanics.
+   - New tactical objectives.
+   - Save/load.
+   - Strategic AI.
+   - Final art/icons/animation.
+   - Final UI skin/localization.
+   - Broad UI redesign.
+   - Camera/zoom system.
+   - Replacing the prototype with a full production UI architecture.
+
+7. Required checks before PR/merge:
+   - EditMode Tests
+   - PlayMode Smoke Tests
+   - Placeholder Validator
+   - Compile / Standalone Check
+   - git diff --check
+
+PR requirements:
+
+- Open or prepare PR titled: `STORY-UX-001 Strategic map readability and action clarity pass`.
+- PR must link STORY-UX-001 and summarize:
+  - readability/action clarity changes;
+  - before/after evidence;
+  - preserved Intel loop behavior;
+  - CI;
+  - omissions.
+- PR omissions section must explicitly state: no new gameplay mechanics, no new Intel systems, no save/load, no strategic AI, no final art/UI redesign, no camera/zoom system, no full UI architecture rewrite.
+
+Stop conditions:
+
+If implementing this story requires new gameplay mechanics, a camera/zoom system, broad UI architecture replacement, final art/UI redesign, save/load, strategic AI, or new Intel/Field Upgrade behavior, stop and report instead of expanding scope.
 
 Codex must commit and push the actual implementation branch to remote, or clearly explain why it could not push.

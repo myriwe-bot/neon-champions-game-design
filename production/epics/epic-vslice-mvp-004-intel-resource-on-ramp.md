@@ -120,7 +120,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-INTEL-002 First Intel Spending Sink — Field Upgrade](../stories/story-intel-002-first-intel-spending-sink-field-upgrade.md) | DONE / merged | Strategic Economy + UI/Integration + Smoke | INTEL-001 DONE | Spend preview/commit tests, insufficient/duplicate rejection, PlayMode smoke, PNG evidence, CI |
 | [STORY-INTEL-003 Guarded Data Site Intel Reward](../stories/story-intel-003-guarded-data-site-intel-reward.md) | DONE / merged | Tactical/Strategic Integration | INTEL-001/002 DONE | Guarded reward tests, battle-result gating, duplicate rejection, PlayMode smoke, PNG evidence, CI |
 | [STORY-INTEL-004 Intel On-Ramp Closeout Smoke](../stories/story-intel-004-intel-on-ramp-closeout-smoke.md) | DONE / merged | Connected Smoke + UX/QA + Evidence | INTEL-001/002/003 DONE | Connected cache -> placeholder Field Upgrade spend -> guarded Intel reward smoke, PNG evidence, CI |
-| [STORY-UX-001 Strategic Map Readability and Action Clarity Pass](../stories/story-ux-001-strategic-map-readability-action-clarity-pass.md) | DRAFT / READY-candidate; approval pending | UI / Visual-Feel / Playability Smoke | INTEL-001/002/003/004 DONE; human decision required | TBD |
+| [STORY-UX-001 Strategic Map Readability and Action Clarity Pass](../stories/story-ux-001-strategic-map-readability-action-clarity-pass.md) | READY / approved | UI / Visual-Feel / Playability Smoke | INTEL-001/002/003/004 DONE | 1280x720 readability/action clarity checks, before/after PNG evidence, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -188,4 +188,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged; `STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, and `STORY-INTEL-004` are DONE / merged. EPIC-004 now awaits human closeout/playtest review; `STORY-UX-001` is a DRAFT / READY-candidate follow-up if readability/action clarity should be improved before deeper gameplay expansion. `field_upgrade_alpha` / “Field Upgrade” remains a temporary placeholder.
+APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged; `STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, and `STORY-INTEL-004` are DONE / merged. EPIC-004 now awaits human closeout/playtest review after this approved readability/action clarity pass; `STORY-UX-001` is the current READY implementation authority before deeper gameplay expansion. `field_upgrade_alpha` / “Field Upgrade” remains a temporary placeholder.

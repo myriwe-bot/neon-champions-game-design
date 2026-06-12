@@ -530,3 +530,12 @@
 - Approved scope: one connected smoke/evidence path for cache -> placeholder `field_upgrade_alpha` / “Field Upgrade” spend -> guarded Intel reward, with no new Intel mechanics.
 - Recorded that “Field Upgrade” remains approved for now as placeholder only and may be renamed/replaced later.
 - Activated `production/sprints/codex-story-intel-004.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-004.
+## [2026-06-12] merge | STORY-INTEL-004 closeout and next candidate prep
+
+- Reviewed Unity PR #36 for `STORY-INTEL-004 Intel On-Ramp Closeout Smoke` against the approved story contract.
+- Verified PR exact-head Unity Actions success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27426393447.
+- Marked PR #36 ready for review, recorded merge-gate PASS, and squash-merged to Unity `main` as `e596b2a6aa0b309f4d11038ace380b777d42d45c`.
+- First post-merge `main` run stalled; cancelled and re-ran the same run, which completed successfully at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27434768941.
+- Marked `STORY-INTEL-004` DONE / merged.
+- Prepared `STORY-UX-001 Strategic Map Readability and Action Clarity Pass` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
+- Added guarded non-runnable prompt `production/sprints/codex-story-ux-001.prompt.txt`; no Unity implementation is currently authorized.

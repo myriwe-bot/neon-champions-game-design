@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-004 Intel On-Ramp Closeout Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-12
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved implementation on 2026-06-12, explicitly keeping `field_upgrade_alpha` / “Field Upgrade” as a placeholder for now.
+DONE / merged. Implemented in Unity PR #36 and squash-merged to `main` as `e596b2a6aa0b309f4d11038ace380b777d42d45c` on 2026-06-12. PR-gate Unity Actions passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests on exact PR head `d048b8ec4e57b4f65ec0e2dd7a7dd0a79c782060`; the first post-merge run stalled and was cancelled/re-run, and the rerun completed successfully at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27434768941. `field_upgrade_alpha` / “Field Upgrade” remains a placeholder for now.
 
 This story exists because `STORY-INTEL-001`, `STORY-INTEL-002`, and `STORY-INTEL-003` now prove the three separate Intel beats: free cache earning, first spend sink, and guarded reward. The next useful step is a narrow closeout smoke that proves the whole Intel on-ramp is visible and coherent enough for human review, without adding new Intel mechanics.
 
@@ -107,6 +107,18 @@ Human-approved decisions recorded on 2026-06-12:
 - [x] Ambiguity Check status is PASS.
 - [x] Closeout-smoke vs direct epic-closeout decision is approved.
 
+## DONE gate
+
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes on PR branch and post-merge `main` rerun.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-intel-004.prompt.txt` after preflight confirms status/approval/PASS.
+DONE / merged. No further implementation is authorized under this story; `STORY-UX-001` is prepared only as DRAFT / READY-candidate pending human approval.

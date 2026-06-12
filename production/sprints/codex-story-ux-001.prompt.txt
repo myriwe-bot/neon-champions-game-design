@@ -1,0 +1,32 @@
+Prepare STORY-UX-001 Strategic Map Readability and Action Clarity Pass only after human approval.
+
+PREFLIGHT — do not implement unless all of these are true in the design/control repo:
+
+- production/stories/story-ux-001-strategic-map-readability-action-clarity-pass.md has frontmatter `status: ready`.
+- The same file has `approval: approved`.
+- Its Ambiguity Check says `Status: PASS`.
+- production/stories/story-intel-004-intel-on-ramp-closeout-smoke.md has frontmatter `status: done`.
+
+If the preflight fails, report exactly:
+
+BLOCKED: STORY-UX-001 is not READY / approved or INTEL-004 is not DONE. Do not create a Unity branch or edit runtime code.
+
+Current state:
+
+- STORY-UX-001 is a DRAFT / READY-candidate only.
+- It is not approved for implementation.
+- Human review must decide whether the next implementation story should be this strategic-map readability/action-clarity pass, or whether EPIC-004 should pause for human closeout/playtest review first.
+
+If later approved, implement only the bounded readability/action-clarity pass from the story file:
+
+- improve current strategic-map prototype readability at 1280x720 evidence resolution;
+- clarify active faction, turn/round, selected Champion, army summary, reachable nodes/routes, selected site/action, Intel total, placeholder Field Upgrade state/cost/applied status, guarded reward preview/result, and latest diagnostic/action result;
+- prefer layout/label/focus/highlight changes in existing presentation code;
+- produce before/after PNG evidence under `production/evidence/STORY-UX-001/`;
+- keep all existing INTEL-001/002/003/004, objective/combat/recruitment, and tactical regressions green.
+
+Keep out of scope:
+
+- New gameplay mechanics, new Intel sources/sinks, new field-upgrade mechanics, new tactical objectives, save/load, strategic AI, final art/icons/animation, final UI skin, localization, broad redesign, camera/zoom system, or replacing the prototype with a full production UI architecture.
+
+Codex must commit and push the actual implementation branch to remote, or clearly explain why it could not push.

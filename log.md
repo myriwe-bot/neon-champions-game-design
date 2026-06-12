@@ -502,3 +502,11 @@
 - Marked `STORY-INTEL-002` DONE / merged.
 - Prepared `STORY-INTEL-003 Guarded Data Site Intel Reward` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
 - Added guarded non-runnable prompt `production/sprints/codex-story-intel-003.prompt.txt`; no Unity implementation is currently authorized.
+
+## [2026-06-12] approve | STORY-INTEL-003 implementation prep
+
+- Recorded human approval for `STORY-INTEL-003 Guarded Data Site Intel Reward`.
+- Promoted STORY-INTEL-003 to READY / approved with Ambiguity Check PASS.
+- Approved scope: one guarded Intel reward path; reuse an existing guarded site if technically clean, otherwise add one placeholder guarded data site; award exactly 5 Intel to the active/claiming faction only after successful guarded-site capture / battle-result return.
+- Kept recurring economy, Intel subtypes, hidden/dirty information, tactical optional objectives beyond the single approved path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, and strategic AI spending out of scope.
+- Activated `production/sprints/codex-story-intel-003.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-003.

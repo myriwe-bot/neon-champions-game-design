@@ -1,21 +1,88 @@
-Prepare STORY-INTEL-003 Guarded Data Site Intel Reward only after human approval.
+Implement STORY-INTEL-003 Guarded Data Site Intel Reward in the Neon Champions Unity repo.
 
-PREFLIGHT — do not implement unless all of these are true in the design/control repo:
+PREFLIGHT — implement only if all of these are true in the design/control repo:
 
 - production/stories/story-intel-003-guarded-data-site-intel-reward.md has frontmatter `status: ready`.
 - The same file has `approval: approved`.
 - Its Ambiguity Check says `Status: PASS`.
-- The story records an approved fixed Intel reward amount and an approved guarded-site success condition.
 - production/stories/story-intel-002-first-intel-spending-sink-field-upgrade.md has frontmatter `status: done`.
 
 If the preflight fails, report exactly:
 
-BLOCKED: STORY-INTEL-003 is not READY / approved or its guarded reward decisions are unresolved. Do not create a Unity branch or edit runtime code.
+BLOCKED: STORY-INTEL-003 is not READY / approved or INTEL-002 is not DONE. Do not create a Unity branch or edit runtime code.
 
-Current state:
+Human-approved scope recorded 2026-06-12:
 
-- STORY-INTEL-003 is a DRAFT / READY-candidate only.
-- It is not approved for implementation.
-- Human review must decide whether to continue EPIC-004 with a guarded Intel reward, close EPIC-004 after INTEL-001/002, or pivot to another slice.
+- Continue EPIC-004 with one guarded Intel reward story.
+- Reuse an existing guarded site if technically clean; otherwise add one placeholder guarded data site.
+- Award exactly `5 Intel` to the active/claiming faction only after successful guarded-site capture / battle-result return.
+- Do not award on preview or battle launch.
+- Current crude PlayMode PNG evidence is sufficient for this story unless it shows the loop is unreadable.
 
-If later approved, implement only the approved single guarded data reward path from the story file. Do not add recurring economy, Intel subtypes, fog/hidden information, dirty information, tactical optional objectives beyond the approved single path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, or strategic AI spending.
+Implementation scope:
+
+1. Read these sources in order:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-003-guarded-data-site-intel-reward.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-002-first-intel-spending-sink-field-upgrade.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-001-faction-intel-and-data-cache-pickup.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-004-intel-resource-on-ramp.md
+   - linked GDD sections in design/gdd/intel-resource.md, design/gdd/strategic-map.md, and design/gdd/tactical-combat.md
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and nearest scoped instructions
+   - existing guarded-site interaction, battle-result return, Intel resource, field-upgrade, PlayMode smoke, and evidence conventions
+
+2. In the Unity repo, create branch:
+   story/STORY-INTEL-003-guarded-data-site-intel-reward
+
+3. Implement only the approved guarded Intel reward:
+   - one guarded data reward path;
+   - reuse an existing guarded site if technically clean; otherwise add one placeholder guarded data site;
+   - preview/communicate that the guarded site can yield exactly `5 Intel`;
+   - award exactly `5 Intel` to the active/claiming faction only after successful guarded-site capture / battle-result return;
+   - reject duplicate reward claims and invalid setup without partial mutation;
+   - preserve existing INTEL-001 free cache and INTEL-002 field upgrade behavior;
+   - preserve existing objective/combat/recruitment regressions.
+
+4. UI / evidence expectations:
+   - Keep current crude prototype UI; no broad redesign.
+   - The player/tester must see the guarded Intel reward opportunity and the resulting Intel total.
+   - Add PlayMode PNG evidence under `production/evidence/STORY-INTEL-003/` or equivalent generated evidence path:
+     - before guarded reward;
+     - reward preview / guarded encounter state;
+     - after reward;
+     - persisted Intel total after turn transition / return to faction.
+
+5. Keep out of scope:
+   - Multiple data vaults, tactical optional-objective systems, post-battle loot tables, recurring Intel economy, Intel subtypes.
+   - Fog/hidden information, dirty information, counter-intel cleanup.
+   - Operations/hacks/doctrine systems, upgrade trees, asset inventory.
+   - Final content/art/UI redesign, save/load, strategic AI spending.
+
+6. Required checks before PR/merge:
+   - EditMode Tests
+   - PlayMode Smoke Tests
+   - Placeholder Validator
+   - Compile / Standalone Check
+   - git diff --check
+
+PR requirements:
+
+- Open or prepare PR titled: `STORY-INTEL-003 Guarded data site Intel reward`.
+- PR must link STORY-INTEL-003 and summarize:
+  - guarded reward path;
+  - preview/communication;
+  - successful-capture / battle-result-return gating;
+  - exact `5 Intel` award;
+  - duplicate/invalid rejection and no partial mutation;
+  - PlayMode/PNG evidence;
+  - CI;
+  - omissions.
+- PR omissions section must explicitly state: no recurring economy, Intel subtypes, fog/hidden information, dirty information, tactical optional objectives beyond the approved single path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, or strategic AI spending.
+
+Stop conditions:
+
+If implementing this story requires broader reward tables, tactical optional objectives, hidden-info/dirty-info systems, recurring economy, save/load, strategic AI, final content, UX redesign, or architecture decisions, stop and report instead of expanding scope.
+
+Codex must commit and push the actual implementation branch to remote, or clearly explain why it could not push.

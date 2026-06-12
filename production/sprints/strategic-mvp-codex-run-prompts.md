@@ -52,9 +52,9 @@ approval: approved
 
 ## Recommended mode
 
-There is no current READY / approved Unity implementation packet after `STORY-INTEL-002` merged. `STORY-INTEL-003 Guarded Data Site Intel Reward` is prepared only as a DRAFT / READY-candidate for human review.
+`STORY-INTEL-003 Guarded Data Site Intel Reward` is the current READY / approved Unity implementation packet. It continues EPIC-VSLICE-MVP-004 after INTEL-001/002 by adding exactly one guarded Intel reward path: a guarded site awards 5 Intel only after successful guarded-site capture / battle-result return.
 
-`STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged. `STORY-INTEL-003` must not be implemented until human approval promotes it to READY / approved and its Ambiguity Check passes.
+`STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged. `STORY-INTEL-003` is the only current implementation authority; recurring economy, Intel subtypes, hidden/dirty information, tactical optional objectives beyond the single approved path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, and strategic AI spending remain out of scope.
 
 ## Copy-safe prompt-file mode
 
@@ -66,8 +66,9 @@ Current guarded candidate prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-INTEL-003 is not currently approved before attempting implementation.
-Select-String -Path production\stories\story-intel-003-guarded-data-site-intel-reward.md -Pattern "status: draft","approval: pending","Status: FAIL"
+# Verify STORY-INTEL-003 is READY/approved and INTEL-002 is DONE before running Codex.
+Select-String -Path production\stories\story-intel-003-guarded-data-site-intel-reward.md -Pattern "status: ready","approval: approved","Status: PASS"
+Select-String -Path production\stories\story-intel-002-first-intel-spending-sink-field-upgrade.md -Pattern "status: done"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -99,9 +100,7 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-INTEL-003 guarded data site Intel reward candidate
-
-This prompt is intentionally non-runnable until human approval promotes `STORY-INTEL-003` to READY / approved.
+## Current guarded prompt — STORY-INTEL-003 guarded data site Intel reward
 
 Use the checked-in prompt file:
 
@@ -148,10 +147,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-intel-001.prompt.txt`
 - `production/sprints/codex-story-intel-002.prompt.txt`
 
-Current guarded non-runnable candidate prompt:
+Current approved prompt:
 
 - `production/sprints/codex-story-intel-003.prompt.txt`
 
 ## After Codex finishes
 
-Codex must stop with the prompt's `BLOCKED` message until `STORY-INTEL-003` is explicitly approved. After approval, Codex must commit and push the actual implementation branch to remote, or clearly explain why it could not push.
+Codex should commit and push `story/STORY-INTEL-003-guarded-data-site-intel-reward`, then open or prepare a PR titled `STORY-INTEL-003 Guarded data site Intel reward`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

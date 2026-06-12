@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-003 Guarded Data Site Intel Reward
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-12
@@ -19,16 +19,16 @@ related:
     production/stories/story-intel-001-faction-intel-and-data-cache-pickup,
     production/stories/story-intel-002-first-intel-spending-sink-field-upgrade,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-INTEL-003 Guarded Data Site Intel Reward
 
 ## Status
 
-DRAFT / READY-candidate only. Not approved for Unity implementation.
+READY / approved. Human approved implementation on 2026-06-12 after reviewing the candidate packet.
 
-This packet is a prepared next-step candidate after `STORY-INTEL-002` merged. It exists so the next human review can decide whether the Intel on-ramp should continue into guarded/tactical reward flow, stop for epic closeout/playtest, or pivot elsewhere.
+This packet continues the Intel on-ramp after `STORY-INTEL-002` by proving one risk-gated Intel reward path: a guarded site yields Intel only after successful guarded-site capture / battle-result return.
 
 ## Story type
 
@@ -54,43 +54,43 @@ As a vertical-slice tester, I need one guarded data site or guarded reward path 
   - `STORY-INTEL-001` DONE / merged.
   - `STORY-INTEL-002` DONE / merged.
 
-Authority note: this candidate is not yet an implementation authority. Human approval must decide whether guarded data rewards are the next slice and exactly how narrow the reward should be.
+Authority note: human approval on 2026-06-12 authorizes only this bounded guarded Intel reward subset. Broader Intel rewards, tactical optional objectives, hidden information, dirty information, recurring economy, and final content remain unapproved.
 
-## Candidate problem statement
+## Problem statement
 
-`STORY-INTEL-001` made Intel collectible from a free data cache. `STORY-INTEL-002` proved one spend sink. The next possible slice is a single guarded data reward: win or resolve one existing guarded encounter, then award a small amount of Intel through the existing strategic result path.
+`STORY-INTEL-001` made Intel collectible from a free data cache. `STORY-INTEL-002` proved one spend sink. The next slice is a single guarded data reward: successfully capture/resolve one guarded site through the existing battle-result return path, then award a small amount of Intel through the existing strategic result path.
 
-## Candidate in scope, if approved
+## In scope
 
-- Add exactly one guarded data reward path tied to an existing guarded site or a new placeholder guarded data site if reuse is unsafe.
-- Reward a small fixed amount of global faction Intel only after the approved guarded-site/tactical resolution condition succeeds.
-- Preview/communicate that the guarded site can yield Intel without adding hidden/fog/dirty-information systems.
+- Add exactly one guarded data reward path: reuse an existing guarded site if technically clean; otherwise add one placeholder guarded data site.
+- Reward exactly `5 Intel` to the active/claiming faction only after successful guarded-site capture / battle-result return.
+- Preview/communicate that the guarded site can yield `5 Intel` without adding hidden/fog/dirty-information systems.
 - Award Intel exactly once, reject duplicates, and prevent partial mutation.
 - Preserve existing `STORY-INTEL-001` free cache and `STORY-INTEL-002` field upgrade behavior.
 - Add EditMode/application/domain tests for reward preview/commit, tactical/result gating, duplicate rejection, invalid data, resource mutation, and turn persistence.
 - Add PlayMode smoke and PNG evidence for before guarded reward, reward preview/encounter, after reward, and persisted Intel total.
 - Keep existing objective/combat/recruitment/Intel regressions green.
 
-## Candidate out of scope
+## Out of scope
 
 - Multiple data vaults, tactical optional objectives, post-battle loot tables, recurring Intel economy, Intel subtypes, fog/hidden information, dirty information, counter-intel cleanup, operations/hacks/doctrine systems, upgrade trees, asset inventory, final content/art/UI redesign, save/load, or strategic AI spending.
 
 ## Ambiguity Check
 
-Status: FAIL until human review.
+Status: PASS.
 
-Open decisions before approval:
+Human-approved decisions recorded on 2026-06-12:
 
-1. Should the next implementation continue EPIC-004 with a guarded Intel reward, or should EPIC-004 close after the free cache plus first spend sink?
-2. Should the guarded reward reuse an existing guarded site, add a placeholder guarded data site, or wait for a broader site-content pass?
-3. What exact success condition awards Intel: tactical victory, site capture, battle result return, or a narrower existing smoke condition?
-4. What fixed reward amount is approved?
-5. Is PNG evidence from the current crude strategic/tactical loop enough, or is a playtest/UX pass required first?
+1. Continue EPIC-004 with this guarded Intel reward story.
+2. Reuse an existing guarded site if technically clean; otherwise add one placeholder guarded data site.
+3. Award Intel only after successful guarded-site capture / battle-result return, not merely preview or battle launch.
+4. Fixed reward amount is exactly `5 Intel`.
+5. Current crude PlayMode PNG evidence is sufficient for this story; defer broader UX/playtest unless evidence shows the loop is unreadable.
 
 ## Branch / PR requirements if later approved
 
-- Suggested branch name: `story/STORY-INTEL-003-guarded-data-site-intel-reward`
-- Suggested PR title: `STORY-INTEL-003 Guarded data site Intel reward`
+- Branch name: `story/STORY-INTEL-003-guarded-data-site-intel-reward`
+- PR title: `STORY-INTEL-003 Guarded data site Intel reward`
 - Required linked story ID: `STORY-INTEL-003`
 - Required omissions section: no recurring economy, Intel subtypes, fog/hidden information, dirty information, tactical optional objectives beyond the approved single path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, or strategic AI spending.
 
@@ -101,10 +101,10 @@ Open decisions before approval:
 - [x] Prior dependencies are listed.
 - [x] Candidate scope is bounded.
 - [x] Out-of-scope work is explicit.
-- [ ] Human approval has been given for implementation / READY promotion.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Exact reward amount and success condition are approved.
+- [x] Human approval has been given for implementation / READY promotion.
+- [x] Ambiguity Check status is PASS.
+- [x] Exact reward amount and success condition are approved.
 
 ## Verdict
 
-DRAFT / READY-candidate only. Do not implement until human approval promotes this story to READY / approved and the Ambiguity Check passes.
+READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-intel-003.prompt.txt` after preflight confirms status/approval/PASS.

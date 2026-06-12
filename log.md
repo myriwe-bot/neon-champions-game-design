@@ -523,3 +523,10 @@
 
 - Human clarified that `field_upgrade_alpha` / “Field Upgrade” is acceptable for now as a placeholder only.
 - It is not a canon final Champion upgrade system and may be renamed, re-fictionalized, or replaced when Champion assets/upgrades are designed properly.
+## [2026-06-12] approve | STORY-INTEL-004 implementation prep
+
+- Recorded human approval for `STORY-INTEL-004 Intel On-Ramp Closeout Smoke`.
+- Promoted STORY-INTEL-004 to READY / approved with Ambiguity Check PASS.
+- Approved scope: one connected smoke/evidence path for cache -> placeholder `field_upgrade_alpha` / “Field Upgrade” spend -> guarded Intel reward, with no new Intel mechanics.
+- Recorded that “Field Upgrade” remains approved for now as placeholder only and may be renamed/replaced later.
+- Activated `production/sprints/codex-story-intel-004.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-004.

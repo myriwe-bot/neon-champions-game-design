@@ -119,7 +119,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-INTEL-001 Faction Intel and Data Cache Pickup](../stories/story-intel-001-faction-intel-and-data-cache-pickup.md) | DONE / merged | Strategic Logic + UI/Integration + Data/Smoke | EPIC-003 DONE | Intel state tests, data-cache interaction tests, PlayMode smoke, PNG evidence, CI |
 | [STORY-INTEL-002 First Intel Spending Sink — Field Upgrade](../stories/story-intel-002-first-intel-spending-sink-field-upgrade.md) | DONE / merged | Strategic Economy + UI/Integration + Smoke | INTEL-001 DONE | Spend preview/commit tests, insufficient/duplicate rejection, PlayMode smoke, PNG evidence, CI |
 | [STORY-INTEL-003 Guarded Data Site Intel Reward](../stories/story-intel-003-guarded-data-site-intel-reward.md) | DONE / merged | Tactical/Strategic Integration | INTEL-001/002 DONE | Guarded reward tests, battle-result gating, duplicate rejection, PlayMode smoke, PNG evidence, CI |
-| [STORY-INTEL-004 Intel On-Ramp Closeout Smoke](../stories/story-intel-004-intel-on-ramp-closeout-smoke.md) | DRAFT / READY-candidate; approval pending | Connected Smoke + UX/QA + Evidence | INTEL-001/002/003 DONE; human decision required | TBD |
+| [STORY-INTEL-004 Intel On-Ramp Closeout Smoke](../stories/story-intel-004-intel-on-ramp-closeout-smoke.md) | READY / approved | Connected Smoke + UX/QA + Evidence | INTEL-001/002/003 DONE | Connected cache -> placeholder Field Upgrade spend -> guarded Intel reward smoke, PNG evidence, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -187,4 +187,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged; `STORY-INTEL-001`, `STORY-INTEL-002`, and `STORY-INTEL-003` are DONE / merged; `STORY-INTEL-004` is only a DRAFT / READY-candidate pending human decision and is not current implementation authority.
+APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged; `STORY-INTEL-001`, `STORY-INTEL-002`, and `STORY-INTEL-003` are DONE / merged; `STORY-INTEL-004` is the current READY implementation authority for one connected Intel on-ramp closeout smoke. `field_upgrade_alpha` / “Field Upgrade” remains a temporary placeholder.

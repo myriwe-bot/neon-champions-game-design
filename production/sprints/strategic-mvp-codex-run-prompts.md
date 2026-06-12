@@ -52,9 +52,9 @@ approval: approved
 
 ## Recommended mode
 
-There is no current READY / approved Unity implementation packet after `STORY-INTEL-003` merged. `STORY-INTEL-004 Intel On-Ramp Closeout Smoke` is prepared only as a DRAFT / READY-candidate for human review.
+`STORY-INTEL-004 Intel On-Ramp Closeout Smoke` is the current READY / approved Unity implementation packet. It closes the Intel on-ramp by proving the connected cache -> placeholder Field Upgrade spend -> guarded Intel reward smoke path.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, and `STORY-INTEL-003` are DONE / merged. `STORY-INTEL-004` must not be implemented until human approval promotes it to READY / approved and its Ambiguity Check passes.
+`STORY-INTEL-001`, `STORY-INTEL-002`, and `STORY-INTEL-003` are DONE / merged. `STORY-INTEL-004` is the only current implementation authority; no new Intel mechanics, recurring economy, Intel subtypes, hidden/dirty information, new tactical optional objectives, operations/hacks/doctrine, upgrade tree, asset inventory, final content/art/UI redesign, save/load, or strategic AI spending are authorized.
 
 ## Copy-safe prompt-file mode
 
@@ -66,8 +66,9 @@ Current guarded candidate prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-INTEL-004 is not currently approved before attempting implementation.
-Select-String -Path production\stories\story-intel-004-intel-on-ramp-closeout-smoke.md -Pattern "status: draft","approval: pending","Status: FAIL"
+# Verify STORY-INTEL-004 is READY/approved and INTEL-003 is DONE before running Codex.
+Select-String -Path production\stories\story-intel-004-intel-on-ramp-closeout-smoke.md -Pattern "status: ready","approval: approved","Status: PASS"
+Select-String -Path production\stories\story-intel-003-guarded-data-site-intel-reward.md -Pattern "status: done"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -99,9 +100,7 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-INTEL-004 Intel on-ramp closeout smoke candidate
-
-This prompt is intentionally non-runnable until human approval promotes `STORY-INTEL-004` to READY / approved.
+## Current approved prompt — STORY-INTEL-004 Intel on-ramp closeout smoke
 
 Use the checked-in prompt file:
 
@@ -149,10 +148,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-intel-002.prompt.txt`
 - `production/sprints/codex-story-intel-003.prompt.txt`
 
-Current guarded non-runnable candidate prompt:
+Current approved prompt:
 
 - `production/sprints/codex-story-intel-004.prompt.txt`
 
 ## After Codex finishes
 
-Codex must stop with the prompt's `BLOCKED` message until `STORY-INTEL-004` is explicitly approved. After approval, Codex must commit and push the actual implementation branch to remote, or clearly explain why it could not push.
+Codex should commit and push `story/STORY-INTEL-004-intel-on-ramp-closeout-smoke`, then open or prepare a PR titled `STORY-INTEL-004 Intel on-ramp closeout smoke`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

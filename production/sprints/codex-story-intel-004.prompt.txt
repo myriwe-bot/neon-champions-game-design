@@ -1,6 +1,6 @@
-Prepare STORY-INTEL-004 Intel On-Ramp Closeout Smoke only after human approval.
+Implement STORY-INTEL-004 Intel On-Ramp Closeout Smoke in the Neon Champions Unity repo.
 
-PREFLIGHT — do not implement unless all of these are true in the design/control repo:
+PREFLIGHT — implement only if all of these are true in the design/control repo:
 
 - production/stories/story-intel-004-intel-on-ramp-closeout-smoke.md has frontmatter `status: ready`.
 - The same file has `approval: approved`.
@@ -11,12 +11,71 @@ If the preflight fails, report exactly:
 
 BLOCKED: STORY-INTEL-004 is not READY / approved or INTEL-003 is not DONE. Do not create a Unity branch or edit runtime code.
 
-Current state:
+Human-approved scope recorded 2026-06-12:
 
-- STORY-INTEL-004 is a DRAFT / READY-candidate only.
-- It is not approved for implementation.
-- Human review must decide whether an extra connected Intel closeout smoke is needed before EPIC-004 closeout/playtest review, or whether INTEL-003 evidence is sufficient.
+- Implement one connected Intel on-ramp closeout smoke before EPIC-004 human closeout/playtest review.
+- Keep `field_upgrade_alpha` / “Field Upgrade” for now as a placeholder only; it is not canon final Champion-upgrade design and may be renamed/replaced later.
+- Add no new Intel mechanics.
+- Minimal HUD/status copy or evidence-label adjustments are allowed only if the connected evidence is unclear.
 
-If later approved, implement only the connected Intel evidence path from the story file. Do not add new Intel sources/sinks, new guarded sites, recurring economy, Intel subtypes, hidden/dirty information, tactical optional objectives, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, or strategic AI spending.
+Implementation scope:
+
+1. Read these sources in order:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-004-intel-on-ramp-closeout-smoke.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-003-guarded-data-site-intel-reward.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-002-first-intel-spending-sink-field-upgrade.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-001-faction-intel-and-data-cache-pickup.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-004-intel-resource-on-ramp.md
+   - linked GDD sections in design/gdd/intel-resource.md and design/gdd/strategic-map.md
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and nearest scoped instructions
+   - existing PlayMode smoke/evidence conventions
+
+2. In the Unity repo, create branch:
+   story/STORY-INTEL-004-intel-on-ramp-closeout-smoke
+
+3. Implement only a connected smoke/evidence path for the existing Intel sequence:
+   - active faction starts with visible `Intel 0`;
+   - claims the existing free data cache and reaches `Intel 5`;
+   - spends `5 Intel` on existing placeholder `field_upgrade_alpha` / “Field Upgrade” and returns to `Intel 0`;
+   - resolves the existing guarded Intel reward path and receives exactly `5 Intel`;
+   - verifies the field-upgraded Champion/army state and final Intel total persist across a turn transition / return to faction.
+
+4. UI / evidence expectations:
+   - Keep current crude prototype UI; no broad redesign.
+   - Add only minimal HUD/status copy or evidence-label adjustments if necessary for the evidence to be readable.
+   - Produce PNG evidence under `production/evidence/STORY-INTEL-004/` showing the connected sequence and final persisted state.
+
+5. Keep out of scope:
+   - New Intel sources or sinks.
+   - New guarded sites beyond the existing INTEL-003 path.
+   - New tactical optional objectives, loot tables, recurring economy, Intel subtypes.
+   - Fog/hidden information, dirty information, counter-intel cleanup.
+   - Operations/hacks/doctrine systems, upgrade trees, asset inventory.
+   - Save/load, strategic AI spending, final content/art/UI redesign, broad UI/playability pass.
+
+6. Required checks before PR/merge:
+   - EditMode Tests
+   - PlayMode Smoke Tests
+   - Placeholder Validator
+   - Compile / Standalone Check
+   - git diff --check
+
+PR requirements:
+
+- Open or prepare PR titled: `STORY-INTEL-004 Intel on-ramp closeout smoke`.
+- PR must link STORY-INTEL-004 and summarize:
+  - connected cache -> placeholder Field Upgrade spend -> guarded Intel reward path;
+  - final Intel and upgraded Champion/army persistence;
+  - PlayMode/PNG evidence;
+  - CI;
+  - omissions.
+- PR omissions section must explicitly state: no new Intel mechanics, no recurring economy, no Intel subtypes, no hidden/dirty information, no new tactical optional objectives, no operations/hacks/doctrine, no upgrade tree, no asset inventory, no final content/art/UI redesign, no save/load, no strategic AI spending.
+
+Stop conditions:
+
+If implementing this story requires new Intel mechanics, broader reward/spend systems, hidden/dirty information, tactical optional objectives, save/load, strategic AI, final content, broad UX redesign, or architecture decisions, stop and report instead of expanding scope.
 
 Codex must commit and push the actual implementation branch to remote, or clearly explain why it could not push.

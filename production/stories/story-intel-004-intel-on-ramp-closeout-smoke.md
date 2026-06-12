@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-004 Intel On-Ramp Closeout Smoke
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-12
@@ -19,16 +19,16 @@ related:
     production/stories/story-intel-002-first-intel-spending-sink-field-upgrade,
     production/stories/story-intel-003-guarded-data-site-intel-reward,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-INTEL-004 Intel On-Ramp Closeout Smoke
 
 ## Status
 
-DRAFT / READY-candidate only. Not approved for Unity implementation.
+READY / approved. Human approved implementation on 2026-06-12, explicitly keeping `field_upgrade_alpha` / “Field Upgrade” as a placeholder for now.
 
-This candidate exists because `STORY-INTEL-001`, `STORY-INTEL-002`, and `STORY-INTEL-003` now prove the three separate Intel beats: free cache earning, first spend sink, and guarded reward. The next useful step is a narrow closeout smoke that proves the whole Intel on-ramp is visible and coherent enough for human review, without adding new Intel mechanics.
+This story exists because `STORY-INTEL-001`, `STORY-INTEL-002`, and `STORY-INTEL-003` now prove the three separate Intel beats: free cache earning, first spend sink, and guarded reward. The next useful step is a narrow closeout smoke that proves the whole Intel on-ramp is visible and coherent enough for human review, without adding new Intel mechanics.
 
 ## Story type
 
@@ -54,25 +54,25 @@ As a vertical-slice tester, I need one visible play path that shows Intel being 
   - `STORY-INTEL-002` DONE / merged.
   - `STORY-INTEL-003` DONE / merged.
 
-Authority note: this candidate is not yet implementation authority. Human approval must decide whether EPIC-004 needs this closeout smoke before epic closeout/playtest review.
+Authority note: human approval on 2026-06-12 authorizes only this closeout smoke/evidence slice. `field_upgrade_alpha` / “Field Upgrade” remains approved for now as a placeholder only, not canon final Champion-upgrade design.
 
-## Candidate problem statement
+## Problem statement
 
 The separate Intel slices pass individually, but human review still needs one concise evidence path that answers: can a player/tester see Intel start at 0, earn it from a cache, spend it on the field upgrade, earn it again from a guarded reward, and understand what changed?
 
-## Candidate in scope, if approved
+## In scope
 
 - Add or refine exactly one connected PlayMode smoke path that covers the existing Intel sequence end to end:
   1. active faction starts with visible `Intel 0`;
   2. claims the existing free data cache and reaches `Intel 5`;
-  3. spends `5 Intel` on the existing placeholder `field_upgrade_alpha` field upgrade and returns to `Intel 0`;
+  3. spends `5 Intel` on the existing placeholder `field_upgrade_alpha` / “Field Upgrade” and returns to `Intel 0`;
   4. resolves the existing guarded Intel reward path and receives exactly `5 Intel`;
   5. verifies the field-upgraded Champion/army state and final Intel total persist across a turn transition / return to faction.
 - Add only minimal HUD/status copy or evidence-label adjustments if the existing smoke is unreadable or cannot communicate the sequence.
 - Produce PNG evidence under `production/evidence/STORY-INTEL-004/` showing the connected sequence and final persisted state.
 - Keep all INTEL-001/002/003, objective/combat/recruitment, and tactical regressions green.
 
-## Candidate out of scope
+## Out of scope
 
 - New Intel sources or sinks.
 - New guarded sites beyond the existing INTEL-003 path.
@@ -80,18 +80,19 @@ The separate Intel slices pass individually, but human review still needs one co
 
 ## Ambiguity Check
 
-Status: FAIL until human review.
+Status: PASS.
 
-Open decisions before approval:
+Human-approved decisions recorded on 2026-06-12:
 
-1. Is an extra closeout smoke needed before EPIC-004 human closeout/playtest review, or is INTEL-003 evidence sufficient?
-2. If approved, should this be implementation work in Unity, or a design/QA closeout packet with no runtime changes?
-3. Are minimal HUD/status copy changes allowed only if the connected evidence is unclear?
+1. Implement this extra connected closeout smoke before EPIC-004 human closeout/playtest review.
+2. This is a Unity implementation/evidence packet, but it must stay smoke/evidence focused and add no new Intel mechanics.
+3. Minimal HUD/status copy or evidence-label adjustments are allowed only if the connected evidence is unclear.
+4. `field_upgrade_alpha` / “Field Upgrade” is approved for now as a placeholder only and may be renamed/replaced later.
 
 ## Branch / PR requirements if later approved
 
-- Suggested branch name: `story/STORY-INTEL-004-intel-on-ramp-closeout-smoke`
-- Suggested PR title: `STORY-INTEL-004 Intel on-ramp closeout smoke`
+- Branch name: `story/STORY-INTEL-004-intel-on-ramp-closeout-smoke`
+- PR title: `STORY-INTEL-004 Intel on-ramp closeout smoke`
 - Required linked story ID: `STORY-INTEL-004`
 - Required omissions section: no new Intel mechanics, no new economy systems, no hidden/dirty information, no new tactical objectives, no final content/art/UI redesign.
 
@@ -102,10 +103,10 @@ Open decisions before approval:
 - [x] Prior dependencies are listed.
 - [x] Candidate scope is bounded.
 - [x] Out-of-scope work is explicit.
-- [ ] Human approval has been given for implementation / READY promotion.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Closeout-smoke vs direct epic-closeout decision is approved.
+- [x] Human approval has been given for implementation / READY promotion.
+- [x] Ambiguity Check status is PASS.
+- [x] Closeout-smoke vs direct epic-closeout decision is approved.
 
 ## Verdict
 
-DRAFT / READY-candidate only. Do not implement until human approval promotes this story to READY / approved and the Ambiguity Check passes.
+READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-intel-004.prompt.txt` after preflight confirms status/approval/PASS.

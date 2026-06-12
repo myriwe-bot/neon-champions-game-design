@@ -87,7 +87,7 @@
 - [[production/stories/story-intel-001-faction-intel-and-data-cache-pickup]] — DONE / merged faction Intel and one data-cache pickup.
 - [[production/stories/story-intel-002-first-intel-spending-sink-field-upgrade]] — DONE / merged first narrow Intel spend sink.
 - [[production/stories/story-intel-003-guarded-data-site-intel-reward]] — DONE / merged guarded Intel reward path.
-- [[production/stories/story-intel-004-intel-on-ramp-closeout-smoke]] — DRAFT / READY-candidate connected Intel closeout smoke; not approved for implementation.
+- [[production/stories/story-intel-004-intel-on-ramp-closeout-smoke]] — READY / approved connected Intel closeout smoke.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

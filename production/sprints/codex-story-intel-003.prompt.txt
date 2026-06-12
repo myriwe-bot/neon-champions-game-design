@@ -1,0 +1,21 @@
+Prepare STORY-INTEL-003 Guarded Data Site Intel Reward only after human approval.
+
+PREFLIGHT — do not implement unless all of these are true in the design/control repo:
+
+- production/stories/story-intel-003-guarded-data-site-intel-reward.md has frontmatter `status: ready`.
+- The same file has `approval: approved`.
+- Its Ambiguity Check says `Status: PASS`.
+- The story records an approved fixed Intel reward amount and an approved guarded-site success condition.
+- production/stories/story-intel-002-first-intel-spending-sink-field-upgrade.md has frontmatter `status: done`.
+
+If the preflight fails, report exactly:
+
+BLOCKED: STORY-INTEL-003 is not READY / approved or its guarded reward decisions are unresolved. Do not create a Unity branch or edit runtime code.
+
+Current state:
+
+- STORY-INTEL-003 is a DRAFT / READY-candidate only.
+- It is not approved for implementation.
+- Human review must decide whether to continue EPIC-004 with a guarded Intel reward, close EPIC-004 after INTEL-001/002, or pivot to another slice.
+
+If later approved, implement only the approved single guarded data reward path from the story file. Do not add recurring economy, Intel subtypes, fog/hidden information, dirty information, tactical optional objectives beyond the approved single path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, or strategic AI spending.

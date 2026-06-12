@@ -492,3 +492,13 @@
 - Promoted `STORY-INTEL-002 First Intel Spending Sink — Field Upgrade` to READY / approved as the next implementation packet.
 - Human-approved scope: one placeholder selected-Champion field upgrade costing 5 Intel, using current global faction Intel and existing attached-army state for a small visible effect; no upgrade tree, asset inventory, operations/hacks/doctrine, fog/hidden information, dirty information, tactical Intel rewards, recurring economy, final content, or broad UI redesign.
 - Added `production/sprints/codex-story-intel-002.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-002.
+
+## [2026-06-12] merge | STORY-INTEL-002 closeout and next candidate prep
+
+- Reviewed Unity PR #34 for `STORY-INTEL-002 First Intel Spending Sink — Field Upgrade` against the approved story contract.
+- Fixed a review blocker where rejected invalid field-upgrade Apply calls could create a missing Champion upgrade-marker list before validation completed; added regression coverage for invalid no-partial-mutation and missing-selected spend rejection.
+- Verified PR exact-head Unity Actions success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27418263410.
+- Squash-merged PR #34 to Unity `main` as `cc0b3070de38da8891f5f0f02de4a354e90aed06` and verified post-merge `main` Unity Actions success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27419055491.
+- Marked `STORY-INTEL-002` DONE / merged.
+- Prepared `STORY-INTEL-003 Guarded Data Site Intel Reward` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
+- Added guarded non-runnable prompt `production/sprints/codex-story-intel-003.prompt.txt`; no Unity implementation is currently authorized.

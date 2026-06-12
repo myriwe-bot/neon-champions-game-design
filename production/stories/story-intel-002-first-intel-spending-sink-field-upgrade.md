@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-002 First Intel Spending Sink — Field Upgrade
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-12
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved preparing the next implementation slice on 2026-06-12 after `STORY-INTEL-001` merged via Unity PR #33.
+DONE / merged. Implemented in Unity PR #34 and squash-merged to `main` as `cc0b3070de38da8891f5f0f02de4a354e90aed06` on 2026-06-12. PR-gate Unity Actions passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests on exact PR head `188fbfa4bb0bd363a5a76539c0812b7109255b02`; post-merge `main` Unity Actions also completed successfully at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27419055491.
 
 This is intentionally the smallest Intel-use slice: add one visible, one-time placeholder Intel spend that turns the newly claimed data cache into a concrete tactical/strategic advantage. Do not build a full upgrade tree, asset inventory, operation system, fog/hidden information, dirty-information mechanics, recurring economy, or final content.
 
@@ -192,16 +192,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes on PR branch and post-merge `main`.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes on PR branch and post-merge `main`.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-intel-002.prompt.txt` after preflight confirms status/approval/PASS.
+DONE / merged. No further implementation is authorized under this story; use `STORY-INTEL-003` only after human approval promotes it from DRAFT / READY-candidate to READY / approved.

@@ -52,23 +52,22 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-INTEL-002 First Intel Spending Sink — Field Upgrade` is the current READY / approved Unity implementation packet. It continues EPIC-VSLICE-MVP-004 after INTEL-001 by adding exactly one narrow placeholder Intel spend: active faction spends 5 Intel on a one-time selected-Champion field upgrade.
+There is no current READY / approved Unity implementation packet after `STORY-INTEL-002` merged. `STORY-INTEL-003 Guarded Data Site Intel Reward` is prepared only as a DRAFT / READY-candidate for human review.
 
-`STORY-INTEL-001` is DONE / merged. `STORY-INTEL-002` is the only current implementation authority; broader upgrade trees, asset inventory, operations/hacks/doctrine, recruitment-site upgrades, fog/hidden information, dirty information, tactical Intel rewards, recurring economy, and final content remain out of scope.
+`STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged. `STORY-INTEL-003` must not be implemented until human approval promotes it to READY / approved and its Ambiguity Check passes.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current prompt-file command:
+Current guarded candidate prompt-file command:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-INTEL-002 is READY/approved and INTEL-001 is DONE before running Codex.
-Select-String -Path production\stories\story-intel-002-first-intel-spending-sink-field-upgrade.md -Pattern "status: ready","approval: approved","Status: PASS"
-Select-String -Path production\stories\story-intel-001-faction-intel-and-data-cache-pickup.md -Pattern "status: done"
+# Verify STORY-INTEL-003 is not currently approved before attempting implementation.
+Select-String -Path production\stories\story-intel-003-guarded-data-site-intel-reward.md -Pattern "status: draft","approval: pending","Status: FAIL"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -76,7 +75,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-003.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -100,12 +99,14 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-INTEL-002 first Intel spending sink field upgrade
+## Current guarded prompt — STORY-INTEL-003 guarded data site Intel reward candidate
+
+This prompt is intentionally non-runnable until human approval promotes `STORY-INTEL-003` to READY / approved.
 
 Use the checked-in prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-003.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -145,11 +146,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-tac-008.prompt.txt`
 - `production/sprints/codex-story-loop-004.prompt.txt`
 - `production/sprints/codex-story-intel-001.prompt.txt`
-
-Current approved prompt:
-
 - `production/sprints/codex-story-intel-002.prompt.txt`
+
+Current guarded non-runnable candidate prompt:
+
+- `production/sprints/codex-story-intel-003.prompt.txt`
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-INTEL-002-first-intel-spending-sink-field-upgrade`, then open or prepare a PR titled `STORY-INTEL-002 First Intel spending sink field upgrade`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex must stop with the prompt's `BLOCKED` message until `STORY-INTEL-003` is explicitly approved. After approval, Codex must commit and push the actual implementation branch to remote, or clearly explain why it could not push.

@@ -49,9 +49,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` is the current READY / approved Unity implementation packet.
+No Unity implementation packet is currently READY / approved. `STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` is DONE / merged in Unity PR #32; EPIC-VSLICE-MVP-003 now needs human closeout/playtest review before the next implementation packet is approved.
 
-`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, `STORY-TAC-007 Simple Stack HP/Strength Persistence`, and `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path` are DONE / merged. LOOP-004 was approved on 2026-06-11 as a pure connected-smoke/evidence story with a stop-and-report condition if a blocker would require broader gameplay/UI work.
+`STORY-OBJ-001 Scenario Objective State and Victory Feedback`, `STORY-OBJ-002 Guarded Site Defender Strength Tiers`, `STORY-TAC-007 Simple Stack HP/Strength Persistence`, `STORY-TAC-008 Champion-vs-Champion Tactical Encounter Path`, and `STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke` are DONE / merged. LOOP-004 evidence should drive the next human closeout/playtest decision.
 
 ## Copy-safe prompt-file mode
 
@@ -96,7 +96,7 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded prompt — STORY-LOOP-004 connected smoke
+## Last guarded prompt — STORY-LOOP-004 connected smoke (DONE / merged)
 
 Use the checked-in prompt file:
 
@@ -147,4 +147,4 @@ Current approved prompt:
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-LOOP-004-objective-champion-combat-casualty-smoke`, then open or prepare a PR titled `STORY-LOOP-004 Objective, Champion combat, and casualty stakes smoke`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Historical prompt retained for traceability. Do not rerun STORY-LOOP-004; it merged in Unity PR #32. Await human closeout/playtest review before preparing the next implementation prompt.

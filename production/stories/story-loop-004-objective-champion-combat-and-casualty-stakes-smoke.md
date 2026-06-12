@@ -1,11 +1,11 @@
 ---
 title: STORY-LOOP-004 Objective, Champion Combat, and Casualty Stakes Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-10
-updated: 2026-06-11
+updated: 2026-06-12
 source_lore: []
 related:
   [
@@ -27,7 +27,9 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved on 2026-06-11 as a pure connected-smoke/evidence story with a strict stop condition: if a real gameplay or UI blocker prevents the smoke, stop and report rather than broadening scope. LOOP-004 evidence will inform whether EPIC-VSLICE-MVP-003 can close or needs a follow-up; the epic must not close automatically from CI alone.
+DONE / merged. Unity PR #32 merged on 2026-06-12 at merge commit `2ed6d38624bc7aabd824ec1ce2162e6ce7523dd2`. Post-merge `main` Unity CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27398328933.
+
+LOOP-004 remains a pure connected-smoke/evidence story. Its evidence informs whether EPIC-VSLICE-MVP-003 is ready for human closeout/playtest acceptance or needs a narrow follow-up; the epic must not close automatically from CI alone.
 
 ## Story type
 
@@ -120,7 +122,7 @@ Not allowed:
 - [ ] Given the objective path is completed, existing objective/victory feedback remains visible and correct.
 - [ ] Existing OBJ-001, OBJ-002, TAC-007, and TAC-008 regression coverage remains green.
 - [ ] PNG evidence shows the connected smoke path at readable key moments.
-- [ ] CI passes.
+- [x] CI passes on PR branch and post-merge `main`.
 
 ## Verification requirements
 
@@ -170,16 +172,23 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes on PR branch and post-merge `main`.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
+## Merge evidence
+
+- Unity PR: #32 — https://github.com/myriwe-bot/neon-champions-unity/pull/32
+- Merge commit: `2ed6d38624bc7aabd824ec1ce2162e6ce7523dd2`
+- Post-merge main CI: passed — https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27398328933
+- Evidence package: `production/evidence/STORY-LOOP-004/README.md` in the Unity repo.
 
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-loop-004.prompt.txt` after preflight confirms status/approval/PASS.
+DONE / merged. STORY-LOOP-004 is closed; EPIC-VSLICE-MVP-003 now needs human closeout/playtest review before being marked DONE or before any follow-up story is approved.

@@ -510,3 +510,12 @@
 - Approved scope: one guarded Intel reward path; reuse an existing guarded site if technically clean, otherwise add one placeholder guarded data site; award exactly 5 Intel to the active/claiming faction only after successful guarded-site capture / battle-result return.
 - Kept recurring economy, Intel subtypes, hidden/dirty information, tactical optional objectives beyond the single approved path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, and strategic AI spending out of scope.
 - Activated `production/sprints/codex-story-intel-003.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-003.
+## [2026-06-12] merge | STORY-INTEL-003 closeout and next candidate prep
+
+- Reviewed Unity PR #35 for `STORY-INTEL-003 Guarded Data Site Intel Reward` against the approved story contract.
+- Verified PR exact-head Unity Actions success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27422389899.
+- Marked PR #35 ready for review, recorded merge-gate PASS, and squash-merged to Unity `main` as `e8640ba8120fc7f6c31d6014fd40d4133fe6f95b`.
+- Verified post-merge `main` Unity Actions success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27423740025.
+- Marked `STORY-INTEL-003` DONE / merged.
+- Prepared `STORY-INTEL-004 Intel On-Ramp Closeout Smoke` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
+- Added guarded non-runnable prompt `production/sprints/codex-story-intel-004.prompt.txt`; no Unity implementation is currently authorized.

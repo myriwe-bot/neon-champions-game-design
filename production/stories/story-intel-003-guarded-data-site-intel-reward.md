@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-003 Guarded Data Site Intel Reward
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-12
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved implementation on 2026-06-12 after reviewing the candidate packet.
+DONE / merged. Implemented in Unity PR #35 and squash-merged to `main` as `e8640ba8120fc7f6c31d6014fd40d4133fe6f95b` on 2026-06-12. PR-gate Unity Actions passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests on exact PR head `4a5d7e28c2373972e7086ef107c55efef3a21a2e`; post-merge `main` Unity Actions also completed successfully at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27423740025.
 
 This packet continues the Intel on-ramp after `STORY-INTEL-002` by proving one risk-gated Intel reward path: a guarded site yields Intel only after successful guarded-site capture / battle-result return.
 
@@ -105,6 +105,18 @@ Human-approved decisions recorded on 2026-06-12:
 - [x] Ambiguity Check status is PASS.
 - [x] Exact reward amount and success condition are approved.
 
+## DONE gate
+
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes on PR branch and post-merge `main`.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-intel-003.prompt.txt` after preflight confirms status/approval/PASS.
+DONE / merged. No further implementation is authorized under this story; use `STORY-INTEL-004` only after human approval promotes it from DRAFT / READY-candidate to READY / approved.

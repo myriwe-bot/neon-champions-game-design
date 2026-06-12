@@ -1,0 +1,90 @@
+Implement STORY-INTEL-002 First Intel Spending Sink — Field Upgrade in the Neon Champions Unity repo.
+
+PREFLIGHT — implement only if all of these are true in the design/control repo:
+
+- production/stories/story-intel-002-first-intel-spending-sink-field-upgrade.md has frontmatter `status: ready`.
+- The same file has `approval: approved`.
+- Its Ambiguity Check says `Status: PASS`.
+- production/stories/story-intel-001-faction-intel-and-data-cache-pickup.md has frontmatter `status: done`.
+
+If the preflight fails, report exactly:
+
+BLOCKED: STORY-INTEL-002 is not READY / approved or INTEL-001 is not DONE. Do not create a Unity branch or edit runtime code.
+
+Human-approved scope recorded 2026-06-12:
+
+- Add exactly one narrow placeholder Intel spending sink after INTEL-001.
+- The first spend is a one-time Champion field upgrade using the active faction's global Intel.
+- Cost is `5 Intel` for this story only so the existing +5 data cache can prove earn -> spend immediately; this is not final balance.
+- Placeholder effect may be represented by a small existing attached-stack improvement (+2 current/maximum count to the first valid attached stack) if implemented through domain/application boundaries and tested.
+- Broader Intel GDD remains draft/pending; do not implement upgrade trees, asset inventory, operations/hacks/doctrine, recruitment-site upgrades, fog, dirty information, tactical Intel rewards, recurring economy, or final content.
+
+Implementation scope:
+
+1. Read these sources in order:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-002-first-intel-spending-sink-field-upgrade.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-intel-001-faction-intel-and-data-cache-pickup.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-004-intel-resource-on-ramp.md
+   - linked GDD sections in design/gdd/intel-resource.md, design/gdd/strategic-map.md, and design/gdd/game-pillars.md
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - Unity repo AGENTS.md and nearest scoped instructions
+   - existing INTEL-001 resource/data-cache implementation, strategic-map input/session code, resource summaries, site interaction tests, PlayMode smoke code, and evidence conventions
+
+2. In the Unity repo, create branch:
+   story/STORY-INTEL-002-first-intel-spending-sink-field-upgrade
+
+3. Implement only the approved first Intel spend:
+   - one deterministic placeholder spend/upgrade ID such as `field_upgrade_alpha`;
+   - preview/availability for the active selected Champion;
+   - cost exactly 5 Intel from the active faction's global stockpile;
+   - reject if selected Champion is missing/inactive, faction stockpile missing, insufficient Intel, duplicate upgrade, or no valid attached stack/effect target;
+   - commit path deducts exactly 5 Intel, marks the Champion upgraded, applies the small visible upgrade effect, and refreshes HUD/status summaries;
+   - duplicate and insufficient attempts produce diagnostics and no partial mutation;
+   - upgraded state/effect persists across end-turn transitions and into existing battle setup through the Champion's attached army if a battle later launches;
+   - add/extend validation only for the new bounded spend/upgrade fields if such fields are introduced.
+
+4. UI / evidence expectations:
+   - Keep current crude prototype UI; no broad redesign.
+   - The player must see after claiming the INTEL-001 cache that a field-upgrade spend exists, costs 5 Intel, and is affordable.
+   - After spending, visible feedback must communicate the Intel spend, Intel dropping to 0, and the upgraded Champion/army summary.
+   - Add PlayMode PNG evidence under `production/evidence/STORY-INTEL-002/` or equivalent generated evidence path:
+     - before spend;
+     - spend preview;
+     - after spend;
+     - persisted upgraded state after turn transition / return to faction.
+
+5. Keep out of scope:
+   - Multiple upgrades, upgrade trees, levels, refunds/respec, balance UI.
+   - Asset inventory, artifact equipment, operation/hack/doctrine leveling, recruitment-site upgrades, elite unlocks, map reveals, counter-intel cleanup.
+   - Intel subtypes, fog/hidden information, dirty-information systems, recurring Intel economy.
+   - Additional caches, guarded data vaults, tactical Intel rewards, post-battle Intel rewards.
+   - Strategic AI spending.
+   - Final content/lore names, final icons/art/animation, accessibility pass, broad UI redesign, save/load.
+
+6. Required checks before PR/merge:
+   - EditMode Tests
+   - PlayMode Smoke Tests
+   - Placeholder Validator
+   - Compile / Standalone Check
+   - git diff --check
+
+PR requirements:
+
+- Open or prepare PR titled: `STORY-INTEL-002 First Intel spending sink field upgrade`.
+- PR must link STORY-INTEL-002 and summarize:
+  - earn -> spend flow;
+  - spend preview and affordability;
+  - resource deduction;
+  - one-time upgrade marker/effect;
+  - insufficient/duplicate rejection and no partial mutation;
+  - visible HUD/status feedback;
+  - PlayMode/PNG evidence;
+  - CI;
+  - omissions.
+- PR omissions section must explicitly state: no upgrade tree, no asset inventory, no operations/hacks/doctrine, no recruitment-site upgrades, no fog/hidden information, no dirty information, no tactical Intel rewards, no recurring Intel economy, no final content/art/UI redesign.
+
+Stop conditions:
+
+If implementing this story requires broader upgrade design, asset inventory, save/load, hidden-info, dirty-information, tactical reward, AI, final content, UX redesign, or architecture decisions, stop and report instead of expanding scope.

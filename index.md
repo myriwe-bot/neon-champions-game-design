@@ -78,13 +78,14 @@
 - [[production/stories/story-qa-003-loop-slice-visual-readability-and-clickable-layout-pass]] — DONE/merged visual/readability and clickable-layout pass for the connected loop slice.
 - [[production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass]] — DONE/merged playability pass for map scale, zoom/focus, overlapping labels, unobstructed buttons, and click/action clarity.
 - [[production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes]] — DONE objective, Champion combat path, defender tiers, and simple HP/strength casualty stakes epic.
-- [[production/epics/epic-vslice-mvp-004-intel-resource-on-ramp]] — approved next epic for minimal Intel earning/display and data-cache pickup.
+- [[production/epics/epic-vslice-mvp-004-intel-resource-on-ramp]] — approved active epic for minimal Intel earning/display, data-cache pickup, and first narrow spend sink.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.
 - [[production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path]] — DONE / merged Champion-vs-Champion tactical encounter path.
 - [[production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke]] — DONE / merged connected smoke for objective, Champion combat, and casualty stakes.
-- [[production/stories/story-intel-001-faction-intel-and-data-cache-pickup]] — READY / approved current implementation story for faction Intel and one data-cache pickup.
+- [[production/stories/story-intel-001-faction-intel-and-data-cache-pickup]] — DONE / merged faction Intel and one data-cache pickup.
+- [[production/stories/story-intel-002-first-intel-spending-sink-field-upgrade]] — READY / approved current implementation story for the first narrow Intel spend sink.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.

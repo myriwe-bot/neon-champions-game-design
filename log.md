@@ -484,3 +484,11 @@
 - Created and promoted `production/stories/story-intel-001-faction-intel-and-data-cache-pickup.md` to READY / approved as the only current Unity implementation authority.
 - Created `production/sprints/codex-story-intel-001.prompt.txt` and updated current run-prompt docs for Codex-safe implementation.
 - Kept broader Intel systems deliberately out of scope: spending, fog/hidden information, dirty information, tactical Intel rewards, recurring economy, and final content.
+
+## [2026-06-12] approve | STORY-INTEL-002 implementation prep
+
+- Marked `STORY-INTEL-001 Faction Intel and Data Cache Pickup` DONE / merged after Unity PR #33 squash-merged as `c28e64a25f6283c18463e404ff0368047fbb7ad2`.
+- Recorded PR-gate Unity Actions success for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests; post-merge main CI was still queued at closeout.
+- Promoted `STORY-INTEL-002 First Intel Spending Sink — Field Upgrade` to READY / approved as the next implementation packet.
+- Human-approved scope: one placeholder selected-Champion field upgrade costing 5 Intel, using current global faction Intel and existing attached-army state for a small visible effect; no upgrade tree, asset inventory, operations/hacks/doctrine, fog/hidden information, dirty information, tactical Intel rewards, recurring economy, final content, or broad UI redesign.
+- Added `production/sprints/codex-story-intel-002.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-002.

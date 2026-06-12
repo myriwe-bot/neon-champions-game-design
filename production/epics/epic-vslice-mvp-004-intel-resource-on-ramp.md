@@ -17,6 +17,7 @@ related:
     docs/architecture/ci-build-automation,
     production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes,
     production/stories/story-intel-001-faction-intel-and-data-cache-pickup,
+    production/stories/story-intel-002-first-intel-spending-sink-field-upgrade,
   ]
 approval: approved
 ---
@@ -27,7 +28,7 @@ approval: approved
 
 APPROVED for production story train. Human approved next-step implementation prep on 2026-06-12 after accepting EPIC-VSLICE-MVP-003 closeout.
 
-This epic is the next recommended vertical-slice spine because the prior slice proved HoMM-like movement/capture/tactical stakes, while the remaining core pillar gap is Intel as secrets turned into power. This epic deliberately starts with a tiny, visible strategic resource loop before adding spending, fog, dirty information, or economy depth.
+This epic is the next recommended vertical-slice spine because the prior slice proved HoMM-like movement/capture/tactical stakes, while the remaining core pillar gap is Intel as secrets turned into power. It started with a tiny visible earning/display loop in INTEL-001 and now continues with exactly one narrow first spend sink in INTEL-002 before any broader upgrade tree, fog, dirty information, or economy depth.
 
 ## Priority tier
 
@@ -52,7 +53,7 @@ Shared.
 
 ## Capability goal
 
-Give the player the first visible Intel resource loop: a faction can discover and claim a data cache, gain Intel as a strategic resource, see the result in the HUD/status text, and retain that state across turns.
+Give the player the first visible Intel resource loop: a faction can discover and claim a data cache, gain Intel as a strategic resource, see the result in the HUD/status text, spend it once on a placeholder field upgrade, and retain that state across turns.
 
 ## Player / design value
 
@@ -80,7 +81,7 @@ Relevant pillars:
 - Parent milestone:
   - `EPIC-VSLICE-MVP-003` DONE / closed.
 
-Implementation authority note: the broader Intel GDD remains draft/pending for later systems. Human approval on 2026-06-12 authorizes only the bounded child story scope in this epic unless later stories are separately approved.
+Implementation authority note: the broader Intel GDD remains draft/pending for later systems. Human approval on 2026-06-12 authorizes only the bounded child story scopes in this epic: INTEL-001 earning/display and INTEL-002 one placeholder field-upgrade spend. Broader Intel systems remain unapproved unless later stories are separately approved.
 
 ## Scope
 
@@ -91,10 +92,11 @@ Implementation authority note: the broader Intel GDD remains draft/pending for l
 - One-time Intel award from claiming that cache.
 - Visible HUD/status feedback for faction Intel and the cache claim.
 - Tests and PNG evidence that prove the on-ramp works.
+- One narrow first Intel spending sink: a one-time placeholder Champion field upgrade costing 5 Intel.
 
 ### Out of scope
 
-- Intel spending, upgrades, operations, hacks, doctrine, assets, or site upgrades.
+- General Intel spending systems, upgrade trees, operations, hacks, doctrine, asset inventory, or site upgrades beyond the single INTEL-002 placeholder field upgrade.
 - Intel subtypes such as HUMINT/SIGINT/Research/Proof.
 - Fog of war, hidden information, dirty-information spoofing, counter-intel cleanup, or reveal layers.
 - Reverse-engineering/dismantling assets.
@@ -104,7 +106,6 @@ Implementation authority note: the broader Intel GDD remains draft/pending for l
 
 ### Deferred
 
-- First Intel spending sink.
 - Guarded data vaults and tactical Intel rewards.
 - Dirty information / polluted-feed mechanics.
 - Champion skills that modify Intel income or cost.
@@ -115,8 +116,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-INTEL-001 Faction Intel and Data Cache Pickup](../stories/story-intel-001-faction-intel-and-data-cache-pickup.md) | READY / approved | Strategic Logic + UI/Integration + Data/Smoke | EPIC-003 DONE | Intel state tests, data-cache interaction tests, PlayMode smoke, PNG evidence, CI |
-| STORY-INTEL-002 First Intel Spending Sink | Draft placeholder | Strategic Economy + UI | INTEL-001 DONE | TBD after INTEL-001 evidence |
+| [STORY-INTEL-001 Faction Intel and Data Cache Pickup](../stories/story-intel-001-faction-intel-and-data-cache-pickup.md) | DONE / merged | Strategic Logic + UI/Integration + Data/Smoke | EPIC-003 DONE | Intel state tests, data-cache interaction tests, PlayMode smoke, PNG evidence, CI |
+| [STORY-INTEL-002 First Intel Spending Sink — Field Upgrade](../stories/story-intel-002-first-intel-spending-sink-field-upgrade.md) | READY / approved | Strategic Economy + UI/Integration + Smoke | INTEL-001 DONE | Spend preview/commit tests, insufficient/duplicate rejection, PlayMode smoke, PNG evidence, CI |
 | STORY-INTEL-003 Guarded Data Site Intel Reward | Draft placeholder | Tactical/Strategic Integration | INTEL-001/002 decision | TBD |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -126,7 +127,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - Upstream epics:
   - `EPIC-VSLICE-MVP-003` DONE / closed.
 - Required GDDs:
-  - Intel resource draft accepted only for `STORY-INTEL-001` bounded subset.
+  - Intel resource draft accepted only for the bounded `STORY-INTEL-001` and `STORY-INTEL-002` subsets.
   - Strategic map MVP GDD.
 - Required technical decisions:
   - Existing Unity technical scheme and control manifest.
@@ -143,7 +144,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 | Risk | Type | Impact | Mitigation / Owner |
 | --- | --- | --- | --- |
-| Intel expands into full economy too early | Scope | Story becomes unmergeable or design-heavy | INTEL-001 only creates earning/display, no spending / shared |
+| Intel expands into full economy too early | Scope | Story becomes unmergeable or design-heavy | INTEL-001 creates earning/display; INTEL-002 permits one placeholder field-upgrade spend only / shared |
 | Data cache becomes final content/lore | Content | Placeholder hardens into canon | Use placeholder IDs and neutral labels / shared |
 | Resource schema churn | Technical | Later economy work constrained by premature schema | Keep minimal faction resource state and validators; no subtypes / shared |
 | UI readability regresses | UX | Player cannot see what changed | Require PlayMode assertions and PNG evidence / reviewer |
@@ -160,7 +161,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Child stories are identified.
 - [x] Dependencies are known.
 - [x] Major risks are documented.
-- [x] At least one child story can pass the Story Readiness Standard: `STORY-INTEL-001`.
+- [x] At least one child story can pass the Story Readiness Standard: `STORY-INTEL-002`.
 
 ## Epic DONE gate
 
@@ -185,4 +186,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the next vertical-slice capability container. `STORY-INTEL-001` is the only READY implementation authority.
+APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` is DONE / merged; `STORY-INTEL-002` is the current READY implementation authority.

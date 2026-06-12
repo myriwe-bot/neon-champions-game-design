@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-001 Faction Intel and Data Cache Pickup
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-12
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved next-step implementation prep on 2026-06-12 after accepting EPIC-VSLICE-MVP-003 closeout.
+DONE / merged. Implemented in Unity PR #33 and merged to `main` as `c28e64a25f6283c18463e404ff0368047fbb7ad2` on 2026-06-12. PR-gate Unity Actions passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests before merge; post-merge main CI was queued at closeout.
 
 This is intentionally the smallest Intel on-ramp: add a faction-level Intel resource and one visible one-time data cache pickup. Do not add spending, upgrades, fog/hidden information, dirty-information systems, or full economy behavior.
 
@@ -184,16 +184,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes on PR branch and post-merge `main`.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual evidence pass on the PR branch.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes on PR branch; post-merge `main` run was queued when the story was closed.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-intel-001.prompt.txt` after preflight confirms status/approval/PASS.
+DONE / merged. No further implementation is authorized under this story; use `STORY-INTEL-002` for the next approved Intel slice.

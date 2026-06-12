@@ -92,6 +92,8 @@ Authority note: the broader Intel GDD remains draft/pending. Human approval on 2
 
 ## Allowed stubs, mocks, placeholders, or temporary data
 
+Placeholder naming note: `field_upgrade_alpha` / “Field Upgrade” is not a canon designed upgrade system. It is a temporary placeholder name/mechanic for the first Intel spend sink and may be renamed, re-fictionalized, or replaced when Champion assets/upgrades are designed properly.
+
 Allowed:
 
 - Placeholder upgrade ID/name/copy such as `field_upgrade_alpha` / `FIELD UPGRADE` / `Analyzed field kit`.

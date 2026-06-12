@@ -65,7 +65,7 @@ The separate Intel slices pass individually, but human review still needs one co
 - Add or refine exactly one connected PlayMode smoke path that covers the existing Intel sequence end to end:
   1. active faction starts with visible `Intel 0`;
   2. claims the existing free data cache and reaches `Intel 5`;
-  3. spends `5 Intel` on the existing `field_upgrade_alpha` field upgrade and returns to `Intel 0`;
+  3. spends `5 Intel` on the existing placeholder `field_upgrade_alpha` field upgrade and returns to `Intel 0`;
   4. resolves the existing guarded Intel reward path and receives exactly `5 Intel`;
   5. verifies the field-upgraded Champion/army state and final Intel total persist across a turn transition / return to faction.
 - Add only minimal HUD/status copy or evidence-label adjustments if the existing smoke is unreadable or cannot communicate the sequence.

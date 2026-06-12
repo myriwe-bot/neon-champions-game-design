@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-DONE / merged. Implemented in Unity PR #33 and merged to `main` as `c28e64a25f6283c18463e404ff0368047fbb7ad2` on 2026-06-12. PR-gate Unity Actions passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests before merge; post-merge main CI was queued at closeout.
+DONE / merged. Implemented in Unity PR #33 and merged to `main` as `c28e64a25f6283c18463e404ff0368047fbb7ad2` on 2026-06-12. PR-gate Unity Actions passed for Compile / Standalone Check, EditMode Tests, Placeholder Validator, and PlayMode Smoke Tests before merge; post-merge main CI completed successfully at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27411089173.
 
 This is intentionally the smallest Intel on-ramp: add a faction-level Intel resource and one visible one-time data cache pickup. Do not add spending, upgrades, fog/hidden information, dirty-information systems, or full economy behavior.
 
@@ -191,7 +191,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] No unauthorized design or architecture decisions were introduced.
 - [x] Omissions/stubs/mocks/deferred work are explicitly documented.
 - [x] PR/code review is complete.
-- [x] CI passes on PR branch; post-merge `main` run was queued when the story was closed.
+- [x] CI passes on PR branch and post-merge `main` run completed successfully at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27411089173.
 - [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict

@@ -1,0 +1,37 @@
+Prepare STORY-QA-005 PlayMode Evidence Artifact Hygiene only after human approval.
+
+PREFLIGHT — do not implement unless all of these are true in the design/control repo:
+
+- production/stories/story-qa-005-playmode-evidence-artifact-hygiene.md has `status: ready` and `approval: approved`.
+- production/stories/story-ux-001-strategic-map-readability-action-clarity-pass.md has `status: done`.
+
+If preflight fails, stop and report exactly what is missing.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Branch: story/STORY-QA-005-playmode-evidence-artifact-hygiene
+- PR title: STORY-QA-005 PlayMode evidence artifact hygiene
+
+Story contract:
+- Stop hard-coding STORY-QA-003 as the default PlayMode CI evidence output directory.
+- Use a neutral generated CI evidence path under artifacts/playmode/evidence by default.
+- Preserve explicit NEON_CHAMPIONS_EVIDENCE_DIR / -neonChampionsEvidenceDir override behavior for local story evidence generation.
+- Keep existing committed story evidence directories intact; do not delete historical evidence.
+- Reduce artifact quota pressure with a short retention period and/or narrower artifact path.
+- Preserve useful PlayMode failure summaries in CI logs.
+- Add/update a lightweight script or validator check proving the PlayMode CI evidence path is not stale/hard-coded to STORY-QA-003.
+- Update reviewer docs/readmes for where CI-generated PlayMode evidence lives.
+
+Hard limits:
+- No gameplay changes.
+- No UI presentation changes.
+- No broad CI rewrite.
+- No committed evidence deletion.
+- No runner/billing/manual GitHub storage administration.
+
+Verification required before PR:
+- git diff --check
+- relevant script/validator check
+- Unity Foundation CI exact-head after PR/push
+
+Commit and push the implementation branch. Open or prepare the PR. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

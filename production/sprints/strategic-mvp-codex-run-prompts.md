@@ -52,9 +52,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-UX-001 Strategic Map Readability and Action Clarity Pass` is the current READY / approved Unity implementation packet. It improves strategic-map readability/action clarity before further gameplay/system expansion.
+`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is the current READY-candidate Unity maintenance packet. It is not approved until human approval; it addresses stale PlayMode evidence paths and artifact quota pressure found during UX-001 review.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, and `STORY-INTEL-004` are DONE / merged. `STORY-UX-001` is the only current implementation authority; no new gameplay mechanics, new Intel systems, save/load, strategic AI, final art/UI redesign, camera/zoom system, or full UI architecture rewrite are authorized.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, and `STORY-UX-001` are DONE / merged. `STORY-QA-005` is a READY-candidate only; no implementation is authorized until human approval.
 
 ## Copy-safe prompt-file mode
 
@@ -66,9 +66,9 @@ Current guarded candidate prompt-file command:
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 git pull --ff-only origin main
 
-# Verify STORY-UX-001 is READY/approved and INTEL-004 is DONE before running Codex.
-Select-String -Path production\stories\story-ux-001-strategic-map-readability-action-clarity-pass.md -Pattern "status: ready","approval: approved","Status: PASS"
-Select-String -Path production\stories\story-intel-004-intel-on-ramp-closeout-smoke.md -Pattern "status: done"
+# Verify STORY-QA-005 is READY/approved and UX-001 is DONE before running Codex.
+Select-String -Path production\stories\story-qa-005-playmode-evidence-artifact-hygiene.md -Pattern "status: ready","approval: approved","Status: PASS"
+Select-String -Path production\stories\story-ux-001-strategic-map-readability-action-clarity-pass.md -Pattern "status: done"
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git fetch origin
@@ -76,7 +76,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-005.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -100,12 +100,12 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current approved prompt — STORY-UX-001 strategic map readability/action clarity pass
+## Current candidate prompt — STORY-QA-005 PlayMode evidence artifact hygiene
 
 Use the checked-in prompt file:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-005.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 
 # Trusted-repo fallback if workspace-write is blocked:
@@ -149,10 +149,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-intel-003.prompt.txt`
 - `production/sprints/codex-story-intel-004.prompt.txt`
 
-Current approved prompt:
+Current candidate prompt:
 
-- `production/sprints/codex-story-ux-001.prompt.txt`
+- `production/sprints/codex-story-qa-005.prompt.txt`
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-UX-001-strategic-map-readability-action-clarity-pass`, then open or prepare a PR titled `STORY-UX-001 Strategic map readability and action clarity pass`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+After approval, Codex should commit and push `story/STORY-QA-005-playmode-evidence-artifact-hygiene`, then open or prepare a PR titled `STORY-QA-005 PlayMode evidence artifact hygiene`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

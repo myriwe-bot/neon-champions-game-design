@@ -1,7 +1,7 @@
 ---
 title: STORY-UX-001 Strategic Map Readability and Action Clarity Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-12
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved implementation on 2026-06-12.
+DONE / merged. Human approved implementation on 2026-06-12.
 
 This is the next implementation packet after `STORY-INTEL-004` because the prototype now has a connected strategic loop with movement, cache claim, placeholder Field Upgrade spend, guarded reward, and tactical return. Before adding deeper systems, the next risk is whether a human can read and operate the crude strategic map well enough to evaluate the loop.
 
@@ -113,3 +113,11 @@ Human-approved decisions recorded on 2026-06-12:
 ## Verdict
 
 READY / approved for implementation. Codex may implement exactly this packet from the checked-in prompt file `production/sprints/codex-story-ux-001.prompt.txt` after preflight confirms status/approval/PASS.
+
+## Merge result
+
+Merged PR: https://github.com/myriwe-bot/neon-champions-unity/pull/37
+
+Squash merge commit: `a43ed135bb07f495a7cff791aeca562d5afe936b`
+
+Review note: independent review found a right-panel overflow/readability blocker; fixed before merge with compact high-risk states and stronger PlayMode layout assertions.

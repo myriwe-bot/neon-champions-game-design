@@ -545,3 +545,5 @@
 - Promoted STORY-UX-001 to READY / approved with Ambiguity Check PASS.
 - Approved scope: small strategic-map readability/action clarity improvements before further gameplay/system expansion, with before/after PNG evidence and no new gameplay mechanics.
 - Activated `production/sprints/codex-story-ux-001.prompt.txt` and repointed current Codex run prompts to STORY-UX-001.
+
+- 2026-06-12: STORY-UX-001 merged via Unity PR #37 (`a43ed135bb07f495a7cff791aeca562d5afe936b`) after right-panel overflow blocker was fixed and exact-head/post-merge CI passed. Prepared STORY-QA-005 as READY-candidate to clean up PlayMode evidence artifact hygiene.

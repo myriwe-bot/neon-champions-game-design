@@ -114,3 +114,5 @@
 ## Logs
 
 - [[log]] — chronological repository log.
+
+- [[production/stories/story-qa-005-playmode-evidence-artifact-hygiene|STORY-QA-005 PlayMode Evidence Artifact Hygiene]] — READY-candidate maintenance story after UX-001 merge.

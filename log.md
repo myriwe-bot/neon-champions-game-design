@@ -519,3 +519,7 @@
 - Marked `STORY-INTEL-003` DONE / merged.
 - Prepared `STORY-INTEL-004 Intel On-Ramp Closeout Smoke` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
 - Added guarded non-runnable prompt `production/sprints/codex-story-intel-004.prompt.txt`; no Unity implementation is currently authorized.
+## [2026-06-12] decision | Field Upgrade placeholder
+
+- Human clarified that `field_upgrade_alpha` / “Field Upgrade” is acceptable for now as a placeholder only.
+- It is not a canon final Champion upgrade system and may be renamed, re-fictionalized, or replaced when Champion assets/upgrades are designed properly.

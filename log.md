@@ -626,3 +626,15 @@
 - Scope is intentionally narrow: improve player-facing usability, target/denial feedback, and PlayMode evidence for existing `Rally Order` and `Drone Strike` only.
 - Updated EPIC-005 from awaiting closeout to active for this final usability pass.
 - Added copy-safe Codex prompt `production/sprints/codex-story-cmd-004.prompt.txt` and repointed the run-prompt index.
+
+## [2026-06-13] merge-and-closeout | STORY-CMD-004 merged; EPIC-005 awaits human review
+
+- Reviewed Unity PR #43 for `STORY-CMD-004 Tactical Command Usability and Targeting Pass` against the approved story contract.
+- Confirmed implementation improves existing `Rally Order` and `Drone Strike` usability/targeting only: availability/denial text, explicit Drone Strike target feedback, no-target denial, HUD summary refresh, tests, and evidence.
+- Fixed stale/pending CI evidence text in `production/evidence/STORY-CMD-004/README.md`, pushed an evidence commit, and re-verified exact-head CI.
+- Verified PR exact-head Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27470536214.
+- Recorded merge-gate PASS and squash-merged PR #43 to Unity `main` as `0fd5ac072f8dc285f00b06e551ee7142f56e464a`.
+- Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27470891186.
+- Marked `STORY-CMD-004` DONE / merged.
+- Updated EPIC-005 to awaiting human closeout/playtest review; no next implementation story is approved yet.
+- Cleared the current Codex implementation prompt until a new READY / approved story is selected.

@@ -83,8 +83,8 @@
 - [[production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud]] — DONE first Champion Command story.
 - [[production/stories/story-cmd-002-first-marshal-and-operator-command-pair]] — DONE first active Marshal/Operator Command spending story.
 - [[production/stories/story-cmd-003-command-on-ramp-closeout-smoke]] — DONE Champion Command on-ramp closeout smoke story.
-- [[production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass]] — READY tactical command usability and targeting story.
-- [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — active for one final command usability pass.
+- [[production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass]] — DONE tactical command usability and targeting story.
+- [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — awaiting human closeout/playtest review.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

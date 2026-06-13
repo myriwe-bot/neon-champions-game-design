@@ -29,7 +29,7 @@ approval: approved
 
 ## Status
 
-APPROVED / ACTIVE. After reviewing the CMD-003 smoke direction, human approved one more EPIC-005 story on 2026-06-13: a narrow tactical command usability and targeting pass before epic closeout.
+AWAITING HUMAN CLOSEOUT / PLAYTEST REVIEW. All approved child implementation stories are merged and verified; the epic is not marked DONE until human review accepts the smoke/usability evidence and omissions.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -110,7 +110,7 @@ Barebones MVP profile contract:
 | `marshal_alpha` | Attack / Defense / Logistics + Doctrine / Minor Commands | 2 | 0 | 2 | 0 | 1 | Sustained army reliability; no active effect in CMD-001. |
 | `operator_alpha` | Command / Control + Major Operations | 3 | 1 | 0 | 1 | 0 | More battle-level intervention capacity; no active effect in CMD-001. |
 
-These values are prototype contracts for EPIC-005 only, not final balance. CMD-001, CMD-002, and CMD-003 are DONE / merged. CMD-004 is READY to make the existing Rally Order and Drone Strike command pair intentionally usable and legible to a player.
+These values are prototype contracts for EPIC-005 only, not final balance. CMD-001, CMD-002, CMD-003, and CMD-004 are DONE / merged. The epic now awaits human closeout/playtest review rather than further automatic implementation.
 
 ## Scope
 
@@ -153,7 +153,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-CMD-001 Champion Command Archetype State and Tactical HUD](../stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md) | DONE / merged | Tactical Domain + UI/Integration | EPIC-004 DONE | PR #40, CI, PlayMode HUD evidence |
 | [STORY-CMD-002 First Marshal and Operator Command Pair](../stories/story-cmd-002-first-marshal-and-operator-command-pair.md) | DONE / merged | Tactical Rules + UI/Integration | CMD-001 DONE | PR #41, spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
 | [STORY-CMD-003 Command On-Ramp Closeout Smoke](../stories/story-cmd-003-command-on-ramp-closeout-smoke.md) | DONE / merged | Connected Smoke + Evidence | CMD-001/002 DONE | PR #42, strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
-| [STORY-CMD-004 Tactical Command Usability and Targeting Pass](../stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md) | READY | Tactical UI/UX + PlayMode Evidence | CMD-001/002/003 DONE | Player-legible Rally/Drone Strike affordances, target/denial feedback, PlayMode evidence, CI |
+| [STORY-CMD-004 Tactical Command Usability and Targeting Pass](../stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md) | DONE / merged | Tactical UI/UX + PlayMode Evidence | CMD-001/002/003 DONE | PR #43, player-legible Rally/Drone Strike affordances, target/denial feedback, PlayMode evidence, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -221,4 +221,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / ACTIVE for one final usability pass. `STORY-CMD-001`, `STORY-CMD-002`, and `STORY-CMD-003` are DONE / merged. `STORY-CMD-004` is READY to improve player-facing usability and targeting for the existing command pair before EPIC-005 closeout review.
+APPROVED, implementation-complete, and awaiting human closeout/playtest review. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, and `STORY-CMD-004` are DONE / merged. Do not prepare another EPIC-005 implementation story unless human closeout identifies a single narrow blocker.

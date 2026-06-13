@@ -1,7 +1,7 @@
 ---
 title: STORY-CMD-004 Tactical Command Usability and Targeting Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Codex implementation. Human approved continuing EPIC-005 and approved this next story on 2026-06-13 after `STORY-CMD-003` merged.
+DONE / merged. Unity PR #43 implemented and merged on 2026-06-13 after merge-gate review, evidence fix, exact-head CI, and post-merge `main` CI passed.
 
 This story keeps EPIC-005 open for one narrow usability pass: the first Marshal/Operator command pair already exists, but the tactical controls must make those commands intentionally usable and legible to a player before adding more Champion systems.
 
@@ -209,4 +209,17 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY for Codex implementation. Improve player-facing usability and targeting for the existing `Rally Order` and `Drone Strike` command pair only; do not add new command mechanics or mark EPIC-005 DONE from implementation alone.
+DONE / merged. Improved player-facing usability and targeting for the existing `Rally Order` and `Drone Strike` command pair only. No new command mechanics were added and EPIC-005 was not marked DONE by implementation alone.
+
+## Implementation evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/43
+- Branch head reviewed before merge: `7e3f0457a6700eeca6b542723e86763d29a9a983`
+- Merge commit on main: `0fd5ac072f8dc285f00b06e551ee7142f56e464a`
+- PR exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27470536214
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27470891186
+- Required jobs passed: Compile / Standalone Check, EditMode Tests, PlayMode Smoke Tests, Placeholder Validator.
+- Review verdict: PASS, recorded on PR.
+- Evidence path: `production/evidence/STORY-CMD-004/` in the Unity repo.
+- Gate fix during review: updated stale/pending CI evidence text, pushed evidence commit, and re-verified exact-head CI.
+- Omissions/deferred: no new command effects, no full Operations UI, no Command regeneration/cooldowns/round cadence/reactions, no progression, no final art/lore/UI/VFX/audio, no Intel integration, no strategic AI usage, no save/load. EPIC-005 awaits human closeout/playtest review.

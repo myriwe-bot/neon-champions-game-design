@@ -18,6 +18,7 @@ related:
     docs/architecture/ci-build-automation,
     production/epics/epic-vslice-mvp-004-intel-resource-on-ramp,
     production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud,
+    production/stories/story-cmd-002-first-marshal-and-operator-command-pair,
   ]
 approval: approved
 ---
@@ -107,7 +108,7 @@ Barebones MVP profile contract:
 | `marshal_alpha` | Attack / Defense / Logistics + Doctrine / Minor Commands | 2 | 0 | 2 | 0 | 1 | Sustained army reliability; no active effect in CMD-001. |
 | `operator_alpha` | Command / Control + Major Operations | 3 | 1 | 0 | 1 | 0 | More battle-level intervention capacity; no active effect in CMD-001. |
 
-These values are prototype contracts for EPIC-005 only, not final balance. CMD-001 implements state and visibility only; CMD-002 may implement one Marshal Minor Command and one Operator Major Operation.
+These values are prototype contracts for EPIC-005 only, not final balance. CMD-001 implements state and visibility only. CMD-002 is READY to implement one Marshal Minor Command (`rally_order`) and one Operator Major Operation (`drone_strike`) with finite Command spend/limit tests and PlayMode evidence.
 
 ## Scope
 
@@ -148,7 +149,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-CMD-001 Champion Command Archetype State and Tactical HUD](../stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md) | DONE / merged | Tactical Domain + UI/Integration | EPIC-004 DONE | PR #40, CI, PlayMode HUD evidence |
-| STORY-CMD-002 First Marshal and Operator Command Pair | Draft placeholder | Tactical Rules + UI/Integration | CMD-001 DONE | Spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
+| [STORY-CMD-002 First Marshal and Operator Command Pair](../stories/story-cmd-002-first-marshal-and-operator-command-pair.md) | READY | Tactical Rules + UI/Integration | CMD-001 DONE | Spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
 | STORY-CMD-003 Command On-Ramp Closeout Smoke | Draft placeholder | Connected Smoke + Evidence | CMD-001/002 DONE | Strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -217,4 +218,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the next vertical-slice capability container. `STORY-CMD-001` is the first READY implementation story after the narrow source-authority exception and barebones Marshal/Operator profile contract were recorded.
+APPROVED for production as the next vertical-slice capability container. `STORY-CMD-001` is DONE / merged. `STORY-CMD-002` is READY for the first active Marshal/Operator command-spending pair after CMD-001 established state/HUD visibility.

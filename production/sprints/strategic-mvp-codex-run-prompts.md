@@ -47,6 +47,7 @@ related:
     production/stories/story-qa-005-playmode-evidence-artifact-hygiene,
     production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp,
     production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud,
+    production/stories/story-cmd-002-first-marshal-and-operator-command-pair,
   ]
 approval: approved
 ---
@@ -55,15 +56,15 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-CMD-001 Champion Command Archetype State and Tactical HUD` is DONE / merged. There is no current READY Unity implementation packet.
+`STORY-CMD-002 First Marshal and Operator Command Pair` is the current READY / approved Unity implementation packet.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, and `STORY-CMD-001` are DONE / merged. No further Unity implementation is authorized until the next story is explicitly approved.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, and `STORY-CMD-001` are DONE / merged. `STORY-CMD-002` is authorized next.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-No current approved prompt-file command exists. STORY-CMD-001 is DONE / merged, and its prompt file is retained for historical audit only.
+Current approved prompt file: `production/sprints/codex-story-cmd-002.prompt.txt`.
 
 ## Windows PowerShell preflight
 
@@ -84,7 +85,19 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-None. STORY-CMD-001 is DONE / merged. Do not run a Unity implementation agent until a new story is explicitly READY / approved.
+Run one of these PowerShell commands from `C:\Users\NordicGamer\CodexProjects\neon-champions-unity` after the preflight above is clean.
+
+Workspace-write mode:
+
+```powershell
+codex exec --sandbox workspace-write --ask-for-approval on-request (Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-cmd-002.prompt.txt")
+```
+
+Danger-full-access mode, only if you intentionally want unrestricted local writes/network for this run:
+
+```powershell
+codex exec --sandbox danger-full-access --ask-for-approval never (Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-cmd-002.prompt.txt")
+```
 
 ## Historical prompt-file runs
 
@@ -122,11 +135,14 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-intel-002.prompt.txt`
 - `production/sprints/codex-story-intel-003.prompt.txt`
 - `production/sprints/codex-story-intel-004.prompt.txt`
+- `production/sprints/codex-story-ux-001.prompt.txt`
+- `production/sprints/codex-story-qa-005.prompt.txt`
+- `production/sprints/codex-story-cmd-001.prompt.txt`
 
 Current approved prompt:
 
-- None. `production/sprints/codex-story-cmd-001.prompt.txt` and `production/sprints/codex-story-qa-005.prompt.txt` are retained for historical audit only.
+- `production/sprints/codex-story-cmd-002.prompt.txt`
 
 ## After Codex finishes
 
-No current post-Codex action. STORY-CMD-001 is merged; review the next approved story only after it is explicitly READY.
+Review the `STORY-CMD-002` PR against the story contract, required tests, PlayMode evidence, exact-head Unity Foundation CI, omissions section, and scope boundaries before merge.

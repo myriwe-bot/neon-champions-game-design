@@ -589,3 +589,11 @@
 - No active command spending/effects were added.
 - PR CI passed on final head and post-merge main CI passed.
 - Cleared current Codex prompt pointer; no Unity implementation story is currently READY.
+
+## [2026-06-13] approve | STORY-CMD-002 implementation prep
+
+- Recorded human request to prepare `STORY-CMD-002 First Marshal and Operator Command Pair` for Codex implementation after `STORY-CMD-001` merged.
+- Created and promoted `production/stories/story-cmd-002-first-marshal-and-operator-command-pair.md` to READY / approved with Ambiguity Check PASS.
+- Approved narrow prototype command pair: Marshal `rally_order` / `Rally Order` costs 1 Command and restores 1 current stack count up to cap; Operator `drone_strike` / `Drone Strike` costs 2 Command and deals 1 direct damage to one opposing non-defeated stack, with at most one Major Operation per battle for this MVP story.
+- Kept broader Operations UI, command trees, Command regeneration, round/cooldown/reaction systems, Intel integration, final content/art/VFX/audio, and progression out of scope.
+- Added checked-in Codex prompt `production/sprints/codex-story-cmd-002.prompt.txt` and repointed current run prompts to STORY-CMD-002.

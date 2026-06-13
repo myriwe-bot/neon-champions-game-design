@@ -1,0 +1,76 @@
+Implement STORY-CMD-002 First Marshal and Operator Command Pair.
+
+PREFLIGHT — stop unless all are true in the design/control repo:
+
+- production/stories/story-cmd-002-first-marshal-and-operator-command-pair.md has `status: ready` and `approval: approved`.
+- Ambiguity Check says `Status: PASS`.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md has `status: approved` and `approval: approved`.
+- production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md is DONE / merged.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-CMD-002-first-marshal-operator-command-pair
+- PR title: STORY-CMD-002 First Marshal and Operator command pair
+
+Required reading before editing:
+- production/stories/story-cmd-002-first-marshal-and-operator-command-pair.md
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md
+- design/gdd/tactical-combat/champion-operations-and-progression.md §§29-80, §§93-155
+- design/gdd/strategic-map.md §§6, 7, 14
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- Add exactly two active command definitions/effects:
+  - Marshal Minor Command `rally_order` / `Rally Order`
+  - Operator Major Operation `drone_strike` / `Drone Strike`
+- `rally_order`:
+  - `marshal_alpha` only
+  - cost 1 Command
+  - usable during allied stack activation before battle completion
+  - restores 1 current stack count to the currently active allied stack
+  - caps at that stack's starting/current maximum count
+  - cannot target defeated or zero-count stacks
+  - rejects full-health/no-op use without deducting Command
+- `drone_strike`:
+  - `operator_alpha` only
+  - requires Major Operation Slots >= 1
+  - cost 2 Command
+  - usable during allied stack activation before battle completion
+  - applies exactly 1 direct damage to one opposing, non-defeated tactical stack using existing count/defeat rules
+  - at most one Major Operation may succeed per battle for this MVP story
+- Deduct Command only on successful command/operation use.
+- Reject invalid profile, insufficient Command, invalid/missing/defeated target, allied target for Drone Strike, defeated active stack for Rally, missing board, completed battle, and repeated Major Operation without partial mutation.
+- Update tactical HUD/status/presentation so successful and rejected command/operation attempts show current/maximum Command and a concise result/denial message.
+- Preserve existing move/attack/pass behavior; do not redesign the action economy.
+
+In scope:
+- Tactical runtime state/action logic for finite Command spending.
+- Minimal tactical UI affordance(s) if the existing presentation architecture supports them cleanly.
+- Deterministic target fallback is allowed only if arbitrary target UI is not clean yet; document it in tests/PR omissions.
+- Domain/EditMode tests and PlayMode smoke/evidence for both command profiles.
+
+Out of scope:
+- Full Operations/spellbook UI.
+- More commands/operations beyond `rally_order` and `drone_strike`.
+- Champion classes, levels, skills, Doctrine/passives, loadouts, perks, equipment, progression UI.
+- Final names/lore/icons/portraits/animations/VFX/audio/balance claims.
+- Command regeneration, round/cooldown/reaction/interrupt systems, initiative rewrite, broad action economy redesign.
+- Intel integration, Field Upgrade replacement, tactical Intel rewards, fog/dirty information, save/load, strategic AI usage, campaign persistence.
+
+Verification expected before PR:
+- `git diff --check`
+- EditMode/domain tests for command spending, denial/no-partial-mutation, Rally cap, Drone Strike damage/defeat, profile restrictions, and major-operation once-per-battle
+- PlayMode smoke/evidence showing Marshal `Rally Order` spend and Operator `Drone Strike` spend with visible Command/HUD/status updates
+- Unity Foundation CI exact-head
+
+PR requirements:
+- Link `STORY-CMD-002`.
+- Link the required GDD/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

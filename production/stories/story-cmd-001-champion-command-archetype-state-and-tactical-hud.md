@@ -1,7 +1,7 @@
 ---
 title: STORY-CMD-001 Champion Command Archetype State and Tactical HUD
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-13
@@ -17,14 +17,14 @@ related:
     docs/architecture/ci-build-automation,
     production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-CMD-001 Champion Command Archetype State and Tactical HUD
 
 ## Status
 
-DRAFT / READY-candidate. Not approved for implementation until human approval resolves the source-authority note below.
+READY / approved for implementation. Human approved the EPIC-005 direction and requested a barebones Marshal + Operator implementation now. Source-authority exception and profile values are recorded below.
 
 This is the first proposed child story for `EPIC-VSLICE-MVP-005`. It establishes minimal Champion Command state and tactical visibility for both requested archetype poles: Marshal-like and Operator-like Champions. It does **not** yet implement active command spending.
 
@@ -55,7 +55,26 @@ As a player, I want the tactical screen to show that my Champion has a command i
 - Parent epic:
   - `production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md`.
 
-Source-authority note: the Champion Operations split article has draft/pending front matter. This story should not become READY until the human approves a narrow exception or status update for the cited Marshal/Operator + Command sections only.
+Source-authority decision: human-approved narrow implementation-source exception. The Champion Operations split article has draft/pending front matter, but this story may use the cited sections for Marshal/Operator poles, Command, Operations, Doctrine, primary stat scopes, and the barebones profile contract only.
+
+
+## Design decision: Marshal vs Operator governance
+
+This story deliberately does **not** define Command as generic military authority. It follows the active Champion Operations design notes:
+
+- **Command** is the Knowledge analogue. It governs starting Command pool and prepared Operation loadout/flexibility. Operators tend to have more of it.
+- **Control** is the Spell Power analogue. It governs Operation strength, duration, radius, reliability, penetration, or similar per Operation. Operators lean into it.
+- **Marshals** are governed mainly by Attack, Defense, Logistics, Doctrine, Cohesion reliability, and Minor Command capacity.
+- **Operators** are governed mainly by Command, Control, prepared Major Operation slots, and operation-channel access.
+
+Barebones implementation contract for CMD-001:
+
+| Profile | Starting Command | Major Operation Slots | Minor Command Capacity | Control Scalar | Doctrine Scalar |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `marshal_alpha` | 2 | 0 | 2 | 0 | 1 |
+| `operator_alpha` | 3 | 1 | 0 | 1 | 0 |
+
+CMD-001 only implements data/state/HUD visibility for these values. It must not add active command spending or effects.
 
 ## In scope
 
@@ -83,8 +102,10 @@ Source-authority note: the Champion Operations split article has draft/pending f
 
 ## Allowed stubs, mocks, placeholders, or temporary data
 
-- Placeholder command profile IDs/labels are allowed, for example `marshal_alpha` / “Marshal” and `operator_alpha` / “Operator”.
-- Placeholder starting Command values are allowed if small and deterministic, for example Marshal 2 and Operator 3, as long as they are documented as prototype values and not final balance.
+- Placeholder command profile IDs/labels are approved: `marshal_alpha` / “Marshal” and `operator_alpha` / “Operator”.
+- Prototype profile values are approved for this story only:
+  - `marshal_alpha`: Starting Command 2, Major Operation Slots 0, Minor Command Capacity 2, Control Scalar 0, Doctrine Scalar 1.
+  - `operator_alpha`: Starting Command 3, Major Operation Slots 1, Minor Command Capacity 0, Control Scalar 1, Doctrine Scalar 0.
 - Existing placeholder Champions/factions may be mapped to profiles for this story only.
 
 ## Dependencies
@@ -101,9 +122,9 @@ Source-authority note: the Champion Operations split article has draft/pending f
 
 ## Acceptance criteria
 
-- [ ] Given a tactical battle setup for a Marshal-like Champion, when tactical state is initialized, then the tactical state contains a finite Command pool and `Marshal`/marshal-like command profile metadata.
-- [ ] Given a tactical battle setup for an Operator-like Champion, when tactical state is initialized, then the tactical state contains a finite Command pool and `Operator`/operator-like command profile metadata.
-- [ ] Given tactical HUD/status rendering, when a battle starts, then the visible tactical status identifies the Champion command profile and current/maximum Command.
+- [ ] Given a tactical battle setup for a Marshal-like Champion, when tactical state is initialized, then the tactical state contains `marshal_alpha`, Starting Command 2, Major Operation Slots 0, Minor Command Capacity 2, Control Scalar 0, and Doctrine Scalar 1.
+- [ ] Given a tactical battle setup for an Operator-like Champion, when tactical state is initialized, then the tactical state contains `operator_alpha`, Starting Command 3, Major Operation Slots 1, Minor Command Capacity 0, Control Scalar 1, and Doctrine Scalar 0.
+- [ ] Given tactical HUD/status rendering, when a battle starts, then the visible tactical status identifies the Champion command profile, current/maximum Command, Major Operation Slots, and Minor Command Capacity.
 - [ ] Given invalid or missing command profile data, when validation/factory code processes it, then it fails safely or falls back only through an explicitly tested placeholder default without crashing or partial mutation.
 - [ ] Given this story has no active command spending, when the player interacts with existing tactical controls, then no new command action can be triggered.
 
@@ -123,12 +144,11 @@ Source-authority note: the Champion Operations split article has draft/pending f
 
 ## Ambiguity Check
 
-Status: FAIL until human approval resolves source-authority note.
+Status: PASS
 
 Open questions:
 
-- Does the human approve a narrow implementation-source exception for `design/gdd/tactical-combat/champion-operations-and-progression.md` §§29-80 and §§98-130 despite draft/pending front matter?
-- Should placeholder starting Command values be Marshal 2 / Operator 3, or equal values for both in the first story?
+- None for CMD-001 implementation.
 
 Assumptions:
 
@@ -146,9 +166,8 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- Pending.
-
-If status is FAIL, this story is not READY.
+- Narrow source-authority exception approved for cited Champion Operations sections despite draft/pending front matter.
+- Prototype barebones profile values approved for CMD-001 only.
 
 ## Branch / PR requirements
 
@@ -164,7 +183,7 @@ If status is FAIL, this story is not READY.
 
 - [x] Story has stable ID, title, type, status, and parent epic.
 - [x] User/player/system value is clear.
-- [ ] Exact GDD source section is linked or explicitly N/A with approved exception.
+- [x] Exact GDD source section is linked or explicitly N/A with approved exception.
 - [x] Exact ADR/architecture/control-manifest source is linked or explicitly N/A.
 - [x] Relevant root/scoped AGENTS.md instructions are identified or explicitly N/A.
 - [x] UX/content/art/worldbuilding references are linked if relevant.
@@ -175,9 +194,9 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -193,4 +212,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended human decision: approve the narrow source-authority exception and choose starting Command values, then promote this story to READY.
+READY / approved for Unity implementation. Implement barebones Marshal/Operator command profile state and tactical HUD visibility only; no active command spending or effects.

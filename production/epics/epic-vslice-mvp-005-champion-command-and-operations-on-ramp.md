@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-005 Champion Command and Operations On-Ramp
 type: epic
-status: draft
+status: approved
 phase: production
 owner: shared
 created: 2026-06-13
@@ -19,14 +19,14 @@ related:
     production/epics/epic-vslice-mvp-004-intel-resource-on-ramp,
     production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud,
   ]
-approval: pending
+approval: approved
 ---
 
 # Epic: EPIC-VSLICE-MVP-005 Champion Command and Operations On-Ramp
 
 ## Status
 
-DRAFT / approved-candidate. Human closed EPIC-004 on 2026-06-13 and selected direction A: Champion Command / Operations. Human also requested that the next slice try to support both Champion poles, **Marshals** and **Operators**, rather than implementing only one archetype path.
+APPROVED as the next capability container. Human closed EPIC-004 on 2026-06-13 and selected direction A: Champion Command / Operations. Human also requested that the next slice support both Champion poles, **Marshals** and **Operators**, rather than implementing only one archetype path.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -84,7 +84,30 @@ Relevant pillars:
 - Parent milestone:
   - `EPIC-VSLICE-MVP-004` DONE / closed.
 
-Source authority note: the Champion Operations split article currently has draft/pending front matter while preserving approved design-session direction internally. Before any child story becomes READY, the child story must either cite an approved GDD section or record a narrow human-approved exception for the specific Marshal/Operator + Command sections it uses.
+Source authority decision: human-approved narrow implementation-source exception for this epic. The Champion Operations split article has draft/pending front matter, but its cited internal sections may be used for EPIC-005 child stories for **Marshal/Operator poles, Command, Operations, Doctrine, primary stat scopes, and barebones MVP command profile data only**. This exception does not approve full skill trees, full operation lists, final balance, Bio/Echo special channels, or progression implementation.
+
+
+## Design decision: what governs Marshal vs Operator abilities
+
+This epic uses the existing HoMM-like stat analogy exactly as recorded in Champion Operations design notes:
+
+- **Command** is the Knowledge analogue: it governs starting Command pool and prepared Operation loadout/flexibility. Under this definition, Operators usually have **more / more flexible Command** than Marshals.
+- **Control** is the Spell Power analogue: it governs Operation strength, duration, radius, reliability, penetration, or similar per Operation. Operators lean strongly into Control.
+- **Attack, Defense, and Logistics** govern Marshal value: army offense, durability, Cohesion stability, retaliation/ZoC reliability, movement/supply/recovery, and sustained battlefield reliability.
+- **Doctrine** is the Marshal-heavy passive/conditional army-shaping layer.
+- **Minor Commands** are the Marshal-heavy active layer: frequent, modest orders such as Rally, Hold the Line, initiative nudge, reload assist, or reposition support.
+- **Major Operations** are the Operator-heavy active layer: fewer but more transformative battle interventions such as Sensor Blackout, Drone Strike, Emergency Resupply, Ambush Cell, or Echo Override.
+
+Design clarification: if “command” is read as ordinary military command authority, Marshals sound like they should have more. In this GDD, however, capital-C **Command** is a resource/stat term, not generic leadership. Marshal leadership is expressed through Doctrine, army stats, Logistics, Cohesion, and Minor Commands; Operator leverage is expressed through Command pool/flexibility and Control-scaled Major Operations.
+
+Barebones MVP profile contract:
+
+| Profile | Governing emphasis | Starting Command | Major Operation Slots | Minor Command Capacity | Control Scalar | Doctrine Scalar | Notes |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| `marshal_alpha` | Attack / Defense / Logistics + Doctrine / Minor Commands | 2 | 0 | 2 | 0 | 1 | Sustained army reliability; no active effect in CMD-001. |
+| `operator_alpha` | Command / Control + Major Operations | 3 | 1 | 0 | 1 | 0 | More battle-level intervention capacity; no active effect in CMD-001. |
+
+These values are prototype contracts for EPIC-005 only, not final balance. CMD-001 implements state and visibility only; CMD-002 may implement one Marshal Minor Command and one Operator Major Operation.
 
 ## Scope
 
@@ -169,7 +192,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Child stories are identified.
 - [x] Dependencies are known.
 - [x] Major risks are documented.
-- [ ] At least one child story can pass the Story Readiness Standard after source-authority approval/exception.
+- [x] At least one child story can pass the Story Readiness Standard after source-authority approval/exception.
 
 ## Epic DONE gate
 
@@ -194,4 +217,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-DRAFT / approved-candidate for the next vertical-slice capability container. Recommended next action: resolve the narrow source-authority question for Champion Operations sections and, if accepted, promote `STORY-CMD-001` from READY-candidate to READY.
+APPROVED for production as the next vertical-slice capability container. `STORY-CMD-001` is the first READY implementation story after the narrow source-authority exception and barebones Marshal/Operator profile contract were recorded.

@@ -1,32 +1,29 @@
-DO NOT RUN YET — STORY-CMD-001 is not READY / approved.
-
-This is a guarded placeholder prompt for future implementation of STORY-CMD-001 Champion Command Archetype State and Tactical HUD.
+Implement STORY-CMD-001 Champion Command Archetype State and Tactical HUD.
 
 PREFLIGHT — stop unless all are true in the design/control repo:
 
 - production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md has `status: ready` and `approval: approved`.
 - Ambiguity Check says `Status: PASS`.
-- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md is approved.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md has `status: approved` and `approval: approved`.
 
-If preflight fails, stop and report exactly what is missing. Do not implement from this guarded prompt.
-
-Future implementation target, if approved:
+Implementation target:
 - Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 - Branch: story/STORY-CMD-001-champion-command-archetype-state-hud
 - PR title: STORY-CMD-001 Champion Command archetype state and tactical HUD
 
-Story contract, if later approved:
-- Add minimal Champion command profile/state for both Marshal-like and Operator-like profiles.
-- Add finite per-battle Command value/state.
+Story contract:
+- Add minimal Champion command profile/state for both profiles:
+  - `marshal_alpha`: display “Marshal”; Starting Command 2; Major Operation Slots 0; Minor Command Capacity 2; Control Scalar 0; Doctrine Scalar 1.
+  - `operator_alpha`: display “Operator”; Starting Command 3; Major Operation Slots 1; Minor Command Capacity 0; Control Scalar 1; Doctrine Scalar 0.
 - Propagate command profile/state from tactical setup into tactical runtime state.
-- Show command profile and current/maximum Command in tactical HUD/status.
+- Show command profile, current/maximum Command, Major Operation Slots, and Minor Command Capacity in tactical HUD/status.
 - Do not implement active Command spending or effects.
 - Do not implement skill trees, Doctrine, operation lists, progression, final art/lore/UI, Intel integration, or faction balance.
 
-Verification expected, if later approved:
+Verification expected:
 - git diff --check
 - EditMode/domain tests for state/validation/propagation
 - PlayMode HUD/status evidence
 - Unity Foundation CI exact-head
 
-Commit and push the implementation branch if implementation is later authorized. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

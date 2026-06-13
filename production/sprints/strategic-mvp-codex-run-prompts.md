@@ -55,15 +55,15 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is DONE / merged. `EPIC-VSLICE-MVP-005 Champion Command and Operations On-Ramp` and `STORY-CMD-001` are drafted as the next candidate direction, but there is no current READY Unity implementation packet.
+`STORY-CMD-001 Champion Command Archetype State and Tactical HUD` is READY / approved as the current Unity implementation packet for EPIC-VSLICE-MVP-005.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, and `STORY-QA-005` are DONE / merged. `STORY-CMD-001` is READY-candidate / approval pending; no Unity implementation is authorized until it is explicitly approved.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, and `STORY-QA-005` are DONE / merged. `STORY-CMD-001` is the only current authorized Unity implementation story.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-No current approved prompt-file command exists. STORY-QA-005 is DONE / merged, and its prompt file is retained for historical audit only.
+Current approved prompt-file command exists for STORY-CMD-001.
 
 ## Windows PowerShell preflight
 
@@ -84,7 +84,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-None. STORY-CMD-001 is only READY-candidate / approval pending. Do not run a Unity implementation agent until it or another story is explicitly READY / approved.
+`production/sprints/codex-story-cmd-001.prompt.txt` is approved for STORY-CMD-001.
 
 ## Historical prompt-file runs
 
@@ -125,8 +125,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None. `production/sprints/codex-story-qa-005.prompt.txt` is retained for historical audit only. `production/sprints/codex-story-cmd-001.prompt.txt` is a guarded non-runnable candidate prompt.
+- `production/sprints/codex-story-cmd-001.prompt.txt` is the current approved prompt. `production/sprints/codex-story-qa-005.prompt.txt` is retained for historical audit only.
 
 ## After Codex finishes
 
-No current post-Codex action. STORY-CMD-001 must not be run until the human resolves its source-authority/open-value questions and explicitly promotes it to READY.
+After Codex finishes STORY-CMD-001, review the implementation against the story scope: state/HUD visibility only, both profiles present, no active command spending/effects, tests and PlayMode evidence included.

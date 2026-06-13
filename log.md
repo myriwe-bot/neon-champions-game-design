@@ -571,3 +571,12 @@
 - Recorded human direction to pursue Champion Command / Operations and to try supporting both archetype poles: Marshals and Operators.
 - Drafted `STORY-CMD-001 Champion Command Archetype State and Tactical HUD` as READY-candidate / approval pending. It establishes finite Command state and tactical HUD visibility for both Marshal-like and Operator-like profiles, without active command spending.
 - Added guarded non-runnable prompt `production/sprints/codex-story-cmd-001.prompt.txt`; no Unity implementation is currently authorized.
+
+## [2026-06-13] design | Marshal / Operator Command clarification and STORY-CMD-001 READY
+
+- Consulted Champion Operations design notes and active tactical-combat Champion Operations GDD.
+- Clarified that capital-C `Command` is the HoMM Knowledge analogue, not generic military authority. Operators lean into Command/Control; Marshals lean into Attack/Defense/Logistics, Doctrine, Cohesion reliability, and Minor Command capacity.
+- Approved `EPIC-VSLICE-MVP-005 Champion Command and Operations On-Ramp` as the next production capability container.
+- Promoted `STORY-CMD-001 Champion Command Archetype State and Tactical HUD` to READY / approved.
+- Recorded barebones profile contract: `marshal_alpha` has Command 2, Major Operation Slots 0, Minor Command Capacity 2, Control Scalar 0, Doctrine Scalar 1; `operator_alpha` has Command 3, Major Operation Slots 1, Minor Command Capacity 0, Control Scalar 1, Doctrine Scalar 0.
+- Updated `production/sprints/codex-story-cmd-001.prompt.txt` as the current approved Unity implementation prompt.

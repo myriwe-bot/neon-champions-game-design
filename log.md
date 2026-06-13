@@ -607,3 +607,14 @@
 - Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27467415661.
 - Marked `STORY-CMD-002` DONE / merged.
 - Promoted `STORY-CMD-003 Command On-Ramp Closeout Smoke` to READY / approved as the next implementation packet, recording the human request to merge CMD-002 and prepare the next implementation story as delegated approval for this immediate closeout smoke.
+
+## [2026-06-13] merge-and-closeout | STORY-CMD-003 merged; EPIC-005 awaits human review
+
+- Reviewed Unity PR #42 for `STORY-CMD-003 Command On-Ramp Closeout Smoke` against the approved story contract.
+- Confirmed implementation is connected smoke/evidence only: PlayMode smoke plus `production/evidence/STORY-CMD-003/` README/PNGs; no runtime mechanics or out-of-scope systems added.
+- Verified PR exact-head Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27468129149.
+- Marked PR #42 ready for review, recorded merge-gate PASS, and squash-merged to Unity `main` as `edebd1eb8023e736351649916c7dca8a2117b155`.
+- Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27468769463.
+- Marked `STORY-CMD-003` DONE / merged.
+- Updated EPIC-005 to awaiting human closeout/playtest review instead of DONE; no next implementation story is approved yet.
+- Cleared the current Codex implementation prompt until a new READY / approved story is selected.

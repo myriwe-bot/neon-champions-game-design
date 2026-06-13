@@ -1,7 +1,7 @@
 ---
 title: STORY-CMD-003 Command On-Ramp Closeout Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Codex implementation. Human requested merge of `STORY-CMD-002` and preparation of the next implementation story on 2026-06-13; this records that delegated approval for the immediate EPIC-005 closeout smoke packet.
+DONE / merged. Unity PR #42 implemented and merged on 2026-06-13 after merge-gate review, exact-head CI, and post-merge `main` CI passed.
 
 This is the third child story for `EPIC-VSLICE-MVP-005`. It must prove the Champion Command on-ramp as a connected vertical-slice smoke: strategic setup enters tactical combat, a Champion command profile is visible, Command is spent through the approved CMD-002 actions, and battle resolution returns to the strategic layer with evidence.
 
@@ -194,4 +194,16 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY for Codex implementation. Implement a connected closeout smoke/evidence path for the approved Champion Command on-ramp only; do not add new command mechanics or mark EPIC-005 DONE from implementation alone.
+DONE / merged. Implemented a connected closeout smoke/evidence path for the approved Champion Command on-ramp only. No new command mechanics were added and EPIC-005 was not marked DONE by implementation alone.
+
+## Implementation evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/42
+- Branch head reviewed before merge: `bfb710852c5920604a3226b969d3cfa644092fc4`
+- Merge commit on main: `edebd1eb8023e736351649916c7dca8a2117b155`
+- PR exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27468129149
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27468769463
+- Required jobs passed: Compile / Standalone Check, EditMode Tests, PlayMode Smoke Tests, Placeholder Validator.
+- Review verdict: PASS, recorded on PR.
+- Evidence path: `production/evidence/STORY-CMD-003/` in the Unity repo.
+- Omissions/deferred: no full Operations UI, no additional command effects, no Command regeneration/cooldowns/round cadence/reactions, no progression, no final art/lore/UI/VFX/audio, no Intel integration, no strategic AI usage, no save/load. EPIC-005 awaits human closeout/playtest review.

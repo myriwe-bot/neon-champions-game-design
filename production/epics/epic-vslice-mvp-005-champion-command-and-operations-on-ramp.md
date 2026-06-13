@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-APPROVED as the next capability container. Human closed EPIC-004 on 2026-06-13 and selected direction A: Champion Command / Operations. Human also requested that the next slice support both Champion poles, **Marshals** and **Operators**, rather than implementing only one archetype path.
+AWAITING HUMAN CLOSEOUT / PLAYTEST REVIEW. Required child implementation stories are merged and verified; the epic is not marked DONE until human review accepts the smoke evidence and omissions.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -109,7 +109,7 @@ Barebones MVP profile contract:
 | `marshal_alpha` | Attack / Defense / Logistics + Doctrine / Minor Commands | 2 | 0 | 2 | 0 | 1 | Sustained army reliability; no active effect in CMD-001. |
 | `operator_alpha` | Command / Control + Major Operations | 3 | 1 | 0 | 1 | 0 | More battle-level intervention capacity; no active effect in CMD-001. |
 
-These values are prototype contracts for EPIC-005 only, not final balance. CMD-001 implements state and visibility only. CMD-002 is READY to implement one Marshal Minor Command (`rally_order`) and one Operator Major Operation (`drone_strike`) with finite Command spend/limit tests and PlayMode evidence.
+These values are prototype contracts for EPIC-005 only, not final balance. CMD-001, CMD-002, and CMD-003 are DONE / merged. The epic now awaits human closeout/playtest review rather than further automatic implementation.
 
 ## Scope
 
@@ -151,7 +151,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-CMD-001 Champion Command Archetype State and Tactical HUD](../stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md) | DONE / merged | Tactical Domain + UI/Integration | EPIC-004 DONE | PR #40, CI, PlayMode HUD evidence |
 | [STORY-CMD-002 First Marshal and Operator Command Pair](../stories/story-cmd-002-first-marshal-and-operator-command-pair.md) | DONE / merged | Tactical Rules + UI/Integration | CMD-001 DONE | PR #41, spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
-| [STORY-CMD-003 Command On-Ramp Closeout Smoke](../stories/story-cmd-003-command-on-ramp-closeout-smoke.md) | READY | Connected Smoke + Evidence | CMD-001/002 DONE | Strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
+| [STORY-CMD-003 Command On-Ramp Closeout Smoke](../stories/story-cmd-003-command-on-ramp-closeout-smoke.md) | DONE / merged | Connected Smoke + Evidence | CMD-001/002 DONE | PR #42, strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -219,4 +219,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the next vertical-slice capability container. `STORY-CMD-001` and `STORY-CMD-002` are DONE / merged. `STORY-CMD-003` is READY as the connected command on-ramp closeout smoke/evidence packet.
+APPROVED for production as the next vertical-slice capability container. `STORY-CMD-001`, `STORY-CMD-002`, and `STORY-CMD-003` are DONE / merged. EPIC-005 awaits human closeout/playtest review before being marked DONE or before selecting the next capability epic/story train.

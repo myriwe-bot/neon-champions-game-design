@@ -638,3 +638,15 @@
 - Marked `STORY-CMD-004` DONE / merged.
 - Updated EPIC-005 to awaiting human closeout/playtest review; no next implementation story is approved yet.
 - Cleared the current Codex implementation prompt until a new READY / approved story is selected.
+
+## [2026-06-13] playtest-closeout | EPIC-005 closeout rejected; QA repair train approved
+
+- Recorded human playtest feedback for the whole current prototype / EPIC-005 closeout review.
+- Verdict: REJECT CLOSEOUT. The implementation is technically connected, but the loop is not player-readable enough to judge.
+- Main blockers: unclear active turn/actor, unclear selected Champion location on some nodes, unclear guarded/site/objective state, unclear tactical current stack/friendly/enemy/attack target, weak action/result feedback, and visible-but-unexplained Champion commands.
+- Human approved the proposed repair stories.
+- Created approved repair train `production/sprints/epic-005-playability-repair-train.md`.
+- Promoted `STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass` to READY / approved as the next Codex implementation packet.
+- Added `STORY-QA-007 Champion Encounter Initiation Clarity` and `STORY-CMD-005 Champion Command Explanation Pass` as gated READY-candidates after QA-006.
+- Added `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction` as DRAFT because objective capture pacing is design-heavy and not current implementation.
+- Created current Codex prompt `production/sprints/codex-story-qa-006.prompt.txt` and repointed run prompts.

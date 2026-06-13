@@ -1,0 +1,94 @@
+Implement STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass.
+
+PREFLIGHT — stop unless all are true in the design/control repo:
+
+- production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md has `status: ready` and `approval: approved`.
+- Ambiguity Check says `Status: PASS`.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md has `status: approved` and `approval: approved`.
+- production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md is DONE / merged.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-QA-006-state-action-feedback-readability
+- PR title: STORY-QA-006 State and action feedback readability pass
+
+Required reading before editing:
+- production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md
+- production/sprints/epic-005-playability-repair-train.md
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md
+- production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md
+- design/gdd/strategic-map.md
+- design/gdd/tactical-combat.md
+- design/gdd/tactical-combat/champion-operations-and-progression.md §§29-80, §§93-155
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- This is a player-facing readability repair across strategic and tactical modes.
+- Preserve the human playtest complaints as the source of truth:
+  - unclear active faction / turn / turn changes;
+  - unclear selected Champion location on some nodes;
+  - unclear guarded/site/objective state;
+  - unclear tactical current stack and friendly/enemy identity;
+  - legal attacks/targets look like selecting the other army;
+  - attack/damage/result feedback is not understood;
+  - Champion commands are visible but not explained enough;
+  - UX blockers: clickable affordances, denial reasons, result feedback, battle/action understanding.
+
+In scope:
+- Strategic HUD/panel/text/marker improvements for active faction, turn/round, selected Champion, active Champion, location, reachable routes/nodes, guarded/controlled/objective states.
+- Strategic result/denial feedback for movement, site interaction, battle result return, and end turn.
+- Tactical HUD/panel/text/marker improvements for tactical mode, current side/current active stack, friendly/enemy identity, legal move destinations, legal attack targets.
+- Tactical result/denial feedback for move, attack, pass/wait/defend, battle result, and next active stack.
+- Short explanatory text for existing Rally Order and Drone Strike behavior/cost/target/denials.
+- Presentation/application/domain helper changes only as needed to expose existing state cleanly; cover with tests.
+
+Out of scope:
+- No new mechanics, economy, objective rules, capture rules, retaliation rules, AI, pathfinding, or encounter rules.
+- No map redesign away from the current node graph.
+- No multi-turn objective capture.
+- No Champion-vs-Champion encounter trigger redesign; reserved for STORY-QA-007.
+- No new command effects, Command economy, cooldowns, progression, skill trees, or full Operations UI.
+- No new units, attack types, creature depth, final balance, final art, icons, VFX, audio, animation, portraits, or final lore copy.
+- No save/load or persistence expansion.
+- If a clarity fix requires a gameplay rule change, stop and report the blocker instead of expanding scope.
+
+Acceptance criteria:
+- Given the strategic map is loaded, visible UI clearly shows active faction, round/turn, selected Champion, active Champion, and selected Champion location.
+- Given a guarded, unguarded, controlled, or objective site is visible, player-facing text/markers distinguish those states.
+- Given a legal or illegal strategic action occurs, feedback says what happened or why it was denied.
+- Given End Turn succeeds, feedback states previous and new active faction/turn/round enough that time advancement is clear.
+- Given tactical mode is active, current side/current stack/friendly/enemy identity are visibly distinct.
+- Given tactical legal moves/attacks exist, legal move destinations and legal attack targets are visible and not confused with selection ownership.
+- Given an attack succeeds, feedback states attacker, target, damage, remaining target count or defeat, and next active side/stack or battle result.
+- Given an action/command is denied, feedback states a concrete reason and does not mutate state.
+- Given Rally Order or Drone Strike is visible, the UI explains what the command does in prototype terms and what it costs/targets.
+- Existing tactical command mechanics and outcomes remain unchanged except for player-facing clarity.
+
+Verification expected before PR:
+- `git diff --check`
+- Relevant EditMode tests for state/result text helper changes
+- Relevant PlayMode smoke tests/evidence for STORY-QA-006
+- Existing STORY-CMD-004, strategic loop, and tactical command tests remain green
+- Unity Foundation CI exact-head
+
+Evidence package:
+- Create `production/evidence/STORY-QA-006/README.md`.
+- Include PNG evidence for:
+  1. Strategic initial/selected state clarity.
+  2. Strategic action result or denial clarity.
+  3. Tactical active stack + friendly/enemy + legal target clarity before attack.
+  4. Tactical attack result clarity.
+  5. Command explanation/denial/result clarity.
+- README must explain sequence, tests, CI expectations, placeholders, omissions, and confirm no mechanics/rules expansion.
+
+PR requirements:
+- Link `STORY-QA-006`.
+- Link required GDD/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

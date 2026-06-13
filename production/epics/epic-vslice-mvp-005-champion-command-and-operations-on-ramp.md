@@ -29,7 +29,7 @@ approval: approved
 
 ## Status
 
-AWAITING HUMAN CLOSEOUT / PLAYTEST REVIEW. All approved child implementation stories are merged and verified; the epic is not marked DONE until human review accepts the smoke/usability evidence and omissions.
+CLOSEOUT REJECTED / PLAYABILITY REPAIR ACTIVE. Human playtest on 2026-06-13 found the loop technically connected but not yet player-readable: active turn/actor, tactical sides/targets/results, command meaning, and action/result feedback are unclear. `STORY-QA-006` is READY as the first narrow repair story.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -110,7 +110,7 @@ Barebones MVP profile contract:
 | `marshal_alpha` | Attack / Defense / Logistics + Doctrine / Minor Commands | 2 | 0 | 2 | 0 | 1 | Sustained army reliability; no active effect in CMD-001. |
 | `operator_alpha` | Command / Control + Major Operations | 3 | 1 | 0 | 1 | 0 | More battle-level intervention capacity; no active effect in CMD-001. |
 
-These values are prototype contracts for EPIC-005 only, not final balance. CMD-001, CMD-002, CMD-003, and CMD-004 are DONE / merged. The epic now awaits human closeout/playtest review rather than further automatic implementation.
+These values are prototype contracts for EPIC-005 only, not final balance. CMD-001, CMD-002, CMD-003, and CMD-004 are DONE / merged. Human closeout playtest rejected closure, so a narrow playability repair train is active before the epic can be closed.
 
 ## Scope
 
@@ -154,6 +154,10 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-CMD-002 First Marshal and Operator Command Pair](../stories/story-cmd-002-first-marshal-and-operator-command-pair.md) | DONE / merged | Tactical Rules + UI/Integration | CMD-001 DONE | PR #41, spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
 | [STORY-CMD-003 Command On-Ramp Closeout Smoke](../stories/story-cmd-003-command-on-ramp-closeout-smoke.md) | DONE / merged | Connected Smoke + Evidence | CMD-001/002 DONE | PR #42, strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
 | [STORY-CMD-004 Tactical Command Usability and Targeting Pass](../stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md) | DONE / merged | Tactical UI/UX + PlayMode Evidence | CMD-001/002/003 DONE | PR #43, player-legible Rally/Drone Strike affordances, target/denial feedback, PlayMode evidence, CI |
+| [STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass](../stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md) | READY / approved | Cross-mode UX/Playability Repair | CMD-004 DONE + human closeout rejected | Current actor/turn, clickable actions, denial reasons, result feedback, friendly/enemy/target clarity |
+| [STORY-QA-007 Champion Encounter Initiation Clarity](../stories/story-qa-007-champion-encounter-initiation-clarity.md) | READY-candidate | Strategic encounter UX | QA-006 DONE/reviewed | Explain or afford Champion-vs-Champion engagement/denial |
+| [STORY-CMD-005 Champion Command Explanation Pass](../stories/story-cmd-005-champion-command-explanation-pass.md) | READY-candidate | Command UX | QA-006 DONE/reviewed if still needed | Explain Rally/Drone and Marshal/Operator identity if QA-006 does not resolve it |
+| [STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction](../stories/story-strat-objective-001-multi-turn-objective-contest-direction.md) | DRAFT | Strategic objective design | Later design approval | Explore multi-turn objective contest/capture; not current implementation |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -181,7 +185,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 | Command expands into a full spellbook too early | Scope | Story becomes design-heavy and unmergeable | Limit CMD-001 to state/HUD; CMD-002 to exactly one Marshal command and one Operator operation / shared |
 | Marshal/Operator becomes rigid final class system | Design | Prematurely locks Champion identity | Treat them as archetype poles and placeholder command profiles, not final classes / shared |
 | Operator becomes only hacking | Design | Narrows cyberpunk fantasy too much | First Operator effect may be Signal-like, but epic keeps Logistics/Covert/Fire Support/Doctrine open later / shared |
-| Tactical UI becomes unclear | UX | Player cannot tell what Command is or what changed | Require PlayMode HUD evidence and concise status text / reviewer |
+| Tactical UI becomes unclear | UX | Player cannot tell what Command is or what changed | Human playtest confirmed this risk; repair through QA-006 and likely QA-007/CMD-005 follow-ups / shared |
 | Draft source authority blocks Codex | Process | Implementation agent correctly stops | Resolve with narrow approval/exception before promoting child story to READY / human/shared |
 
 ## Epic readiness gate
@@ -200,7 +204,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
+- [ ] Required child stories are DONE or explicitly deferred by human closeout. Human closeout currently rejected; QA-006 is required before re-review.
 - [ ] Required verification evidence exists.
 - [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
 - [ ] Unresolved omissions are documented.
@@ -221,4 +225,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED, implementation-complete, and awaiting human closeout/playtest review. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, and `STORY-CMD-004` are DONE / merged. Do not prepare another EPIC-005 implementation story unless human closeout identifies a single narrow blocker.
+APPROVED, closeout rejected, and playability repair active. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, and `STORY-CMD-004` are DONE / merged. `STORY-QA-006` is READY / approved as the next implementation story; later repair stories remain gated until QA-006 is merged/reviewed.

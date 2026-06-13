@@ -1,0 +1,69 @@
+Implement STORY-CMD-003 Command On-Ramp Closeout Smoke.
+
+PREFLIGHT — stop unless all are true in the design/control repo:
+
+- production/stories/story-cmd-003-command-on-ramp-closeout-smoke.md has `status: ready` and `approval: approved`.
+- Ambiguity Check says `Status: PASS`.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md has `status: approved` and `approval: approved`.
+- production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md is DONE / merged.
+- production/stories/story-cmd-002-first-marshal-and-operator-command-pair.md is DONE / merged.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-CMD-003-command-on-ramp-closeout-smoke
+- PR title: STORY-CMD-003 Command on-ramp closeout smoke
+
+Required reading before editing:
+- production/stories/story-cmd-003-command-on-ramp-closeout-smoke.md
+- production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md
+- production/stories/story-cmd-002-first-marshal-and-operator-command-pair.md
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md
+- design/gdd/tactical-combat/champion-operations-and-progression.md §§29-80, §§93-155
+- design/gdd/strategic-map.md §§6, 7, 14
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- Add or update connected PlayMode smoke/evidence only.
+- Prove the Champion Command on-ramp from strategic context through tactical command spending and battle result feedback.
+- The smoke/evidence must show:
+  - strategic state launches tactical combat with Champion command profile visible;
+  - `marshal_alpha` visibly uses `rally_order` / `Rally Order` after taking damage;
+  - `operator_alpha` visibly uses `drone_strike` / `Drone Strike`;
+  - current/maximum Command values visibly update after spending;
+  - at least one command-spending path continues to a real BattleResult and returns strategic result feedback.
+- Capture PNG evidence under `production/evidence/STORY-CMD-003/`.
+- Add/update evidence README explaining the sequence, screenshots, CI expectations, and omissions.
+- Preserve all CMD-001 and CMD-002 behavior/tests.
+
+In scope:
+- PlayMode connected smoke path(s).
+- Minimal sequencing helpers if needed to drive existing UI/session APIs.
+- PNG evidence and evidence README.
+- Lightweight EditMode/PlayMode assertions if needed for smoke sequencing.
+
+Out of scope:
+- No new Champion command effects beyond `rally_order` and `drone_strike`.
+- No full Operations/spellbook UI.
+- No new Command economy rules, regeneration, cooldowns, round cadence, reactions, interrupts, initiative changes, or action economy redesign.
+- No new Champion classes, skills, Doctrine/passives, levels, progression, loadouts, perks, equipment, or strategic AI command usage.
+- No Intel integration, Field Upgrade replacement, operation upgrades, dirty information, fog/hidden information, save/load, campaign persistence, or final faction/canon changes.
+- No final art/icons/portraits/VFX/audio/animation/final operation names/balance claims.
+- Do not mark EPIC-005 DONE; implementation may produce evidence only. Human/design-control closeout is separate.
+
+Verification expected before PR:
+- `git diff --check`
+- Existing EditMode/domain tests remain green
+- PlayMode smoke/evidence for STORY-CMD-003 generates PNG evidence
+- Unity Foundation CI exact-head
+
+PR requirements:
+- Link `STORY-CMD-003`.
+- Link the required GDD/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

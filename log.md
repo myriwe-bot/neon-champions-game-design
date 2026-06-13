@@ -597,3 +597,13 @@
 - Approved narrow prototype command pair: Marshal `rally_order` / `Rally Order` costs 1 Command and restores 1 current stack count up to cap; Operator `drone_strike` / `Drone Strike` costs 2 Command and deals 1 direct damage to one opposing non-defeated stack, with at most one Major Operation per battle for this MVP story.
 - Kept broader Operations UI, command trees, Command regeneration, round/cooldown/reaction systems, Intel integration, final content/art/VFX/audio, and progression out of scope.
 - Added checked-in Codex prompt `production/sprints/codex-story-cmd-002.prompt.txt` and repointed current run prompts to STORY-CMD-002.
+
+## [2026-06-13] merge-and-prepare | STORY-CMD-002 closeout and CMD-003 READY
+
+- Reviewed Unity PR #41 for `STORY-CMD-002 First Marshal and Operator Command Pair` against the approved story contract.
+- Fixed merge-gate issues before merge: added null-safe Drone Strike fallback / tactical presentation handling for missing placed-stack collections, plus regression coverage for Rally insufficient Command, Drone Strike after battle completion, visible second-Drone-Strike denial feedback, and missing placed-stack fallback denial.
+- Verified PR exact-head Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27467133863.
+- Marked PR #41 ready for review, recorded merge-gate PASS, and squash-merged to Unity `main` as `73a15d98d24a93857405bcdff09c3f20ddac498c`.
+- Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27467415661.
+- Marked `STORY-CMD-002` DONE / merged.
+- Promoted `STORY-CMD-003 Command On-Ramp Closeout Smoke` to READY / approved as the next implementation packet, recording the human request to merge CMD-002 and prepare the next implementation story as delegated approval for this immediate closeout smoke.

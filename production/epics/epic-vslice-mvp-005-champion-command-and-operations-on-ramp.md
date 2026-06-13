@@ -19,6 +19,7 @@ related:
     production/epics/epic-vslice-mvp-004-intel-resource-on-ramp,
     production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud,
     production/stories/story-cmd-002-first-marshal-and-operator-command-pair,
+    production/stories/story-cmd-003-command-on-ramp-closeout-smoke,
   ]
 approval: approved
 ---
@@ -149,8 +150,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-CMD-001 Champion Command Archetype State and Tactical HUD](../stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md) | DONE / merged | Tactical Domain + UI/Integration | EPIC-004 DONE | PR #40, CI, PlayMode HUD evidence |
-| [STORY-CMD-002 First Marshal and Operator Command Pair](../stories/story-cmd-002-first-marshal-and-operator-command-pair.md) | READY | Tactical Rules + UI/Integration | CMD-001 DONE | Spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
-| STORY-CMD-003 Command On-Ramp Closeout Smoke | Draft placeholder | Connected Smoke + Evidence | CMD-001/002 DONE | Strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
+| [STORY-CMD-002 First Marshal and Operator Command Pair](../stories/story-cmd-002-first-marshal-and-operator-command-pair.md) | DONE / merged | Tactical Rules + UI/Integration | CMD-001 DONE | PR #41, spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
+| [STORY-CMD-003 Command On-Ramp Closeout Smoke](../stories/story-cmd-003-command-on-ramp-closeout-smoke.md) | READY | Connected Smoke + Evidence | CMD-001/002 DONE | Strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -218,4 +219,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the next vertical-slice capability container. `STORY-CMD-001` is DONE / merged. `STORY-CMD-002` is READY for the first active Marshal/Operator command-spending pair after CMD-001 established state/HUD visibility.
+APPROVED for production as the next vertical-slice capability container. `STORY-CMD-001` and `STORY-CMD-002` are DONE / merged. `STORY-CMD-003` is READY as the connected command on-ramp closeout smoke/evidence packet.

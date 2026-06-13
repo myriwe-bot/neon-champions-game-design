@@ -1,7 +1,7 @@
 ---
 title: STORY-CMD-002 First Marshal and Operator Command Pair
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Codex implementation. Human requested preparation of `STORY-CMD-002` on 2026-06-13 after `STORY-CMD-001` merged.
+DONE / merged. Unity PR #41 implemented and merged on 2026-06-13 after merge-gate review, review fixes, exact-head CI, and post-merge `main` CI passed.
 
 This is the second child story for `EPIC-VSLICE-MVP-005`. It adds the first active, finite Command spending proof: one Marshal-like Minor Command and one Operator-like Major Operation. It must remain a narrow prototype pair, not a full Operations system.
 
@@ -237,4 +237,16 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY for Codex implementation. Implement exactly one Marshal Minor Command (`rally_order`) and one Operator Major Operation (`drone_strike`) with finite Command spending, bounded validation, presentation feedback, tests, and PlayMode evidence.
+DONE / merged. Implemented exactly one Marshal Minor Command (`rally_order`) and one Operator Major Operation (`drone_strike`) with finite Command spending, bounded validation, presentation feedback, tests, and PlayMode evidence.
+
+## Implementation evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/41
+- Branch head reviewed before merge: `59865fbc9840111fdeb741799194c9a10b5c810a`
+- Merge commit on main: `73a15d98d24a93857405bcdff09c3f20ddac498c`
+- PR exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27467133863
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27467415661
+- Required jobs passed: Compile / Standalone Check, EditMode Tests, PlayMode Smoke Tests, Placeholder Validator.
+- Review verdict: PASS, recorded on PR.
+- Gate fixes during review: null-safe Drone Strike fallback, null-safe tactical presentation population for missing placed-stack collections, and added denial/no-partial-mutation regression coverage.
+- Omissions/deferred: no full Operations UI, no additional command effects, no Command regeneration/cooldowns/round cadence/reactions, no progression, no final art/lore/UI/VFX/audio, no Intel integration, no strategic AI usage, no save/load.

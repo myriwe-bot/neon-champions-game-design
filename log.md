@@ -618,3 +618,11 @@
 - Marked `STORY-CMD-003` DONE / merged.
 - Updated EPIC-005 to awaiting human closeout/playtest review instead of DONE; no next implementation story is approved yet.
 - Cleared the current Codex implementation prompt until a new READY / approved story is selected.
+
+## [2026-06-13] story-prep | STORY-CMD-004 approved and prepared
+
+- Human approved continuing EPIC-005 with one final tactical command usability and targeting pass after `STORY-CMD-003` merged.
+- Created `STORY-CMD-004 Tactical Command Usability and Targeting Pass` as READY / approved.
+- Scope is intentionally narrow: improve player-facing usability, target/denial feedback, and PlayMode evidence for existing `Rally Order` and `Drone Strike` only.
+- Updated EPIC-005 from awaiting closeout to active for this final usability pass.
+- Added copy-safe Codex prompt `production/sprints/codex-story-cmd-004.prompt.txt` and repointed the run-prompt index.

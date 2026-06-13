@@ -1,0 +1,94 @@
+Implement STORY-CMD-004 Tactical Command Usability and Targeting Pass.
+
+PREFLIGHT — stop unless all are true in the design/control repo:
+
+- production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md has `status: ready` and `approval: approved`.
+- Ambiguity Check says `Status: PASS`.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md has `status: approved` and `approval: approved`.
+- production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md is DONE / merged.
+- production/stories/story-cmd-002-first-marshal-and-operator-command-pair.md is DONE / merged.
+- production/stories/story-cmd-003-command-on-ramp-closeout-smoke.md is DONE / merged.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-CMD-004-tactical-command-usability-and-targeting-pass
+- PR title: STORY-CMD-004 Tactical command usability and targeting pass
+
+Required reading before editing:
+- production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md
+- production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md
+- production/stories/story-cmd-002-first-marshal-and-operator-command-pair.md
+- production/stories/story-cmd-003-command-on-ramp-closeout-smoke.md
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md
+- design/gdd/tactical-combat.md §§1-3
+- design/gdd/tactical-combat/champion-operations-and-progression.md §§29-80, §§93-155
+- design/gdd/strategic-map.md §§6, 7, 14
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- Improve player-facing usability and targeting for the existing command pair only:
+  - `rally_order` / `Rally Order`
+  - `drone_strike` / `Drone Strike`
+- Tactical command UI must communicate availability or denial for:
+  - enough Command;
+  - correct command profile;
+  - Major Operation already used;
+  - valid target / damaged active stack;
+  - battle not complete.
+- Drone Strike must require or clearly communicate the enemy target. Do not let the evidence rely on a hidden/unexplained deterministic fallback.
+- Command summary and feedback must update immediately after valid and invalid attempts.
+- Invalid command attempts must not mutate board state or Command state.
+
+In scope:
+- Minimal text/button UI affordances for existing Rally Order and Drone Strike.
+- Target selection or selected-target feedback for Drone Strike.
+- Visible denial/disabled reasons for invalid Rally/Drone attempts.
+- PlayMode screenshots/evidence under `production/evidence/STORY-CMD-004/`.
+- Regression tests for UI-visible state matching domain validation.
+- Domain/application validation helper changes only if needed to support player-facing state; cover such changes with EditMode tests.
+
+Out of scope:
+- No new Champion command effects beyond Rally Order and Drone Strike.
+- No full Operations/spellbook UI.
+- No new Command economy rules, regeneration, cooldowns, round cadence, reactions, interrupts, initiative changes, or action economy redesign.
+- No new Champion classes, skills, Doctrine/passives, levels, progression, loadouts, perks, equipment, or strategic AI command usage.
+- No Intel integration, Field Upgrade replacement, operation upgrades, dirty information, fog/hidden information, save/load, campaign persistence, or final faction/canon changes.
+- No final art/icons/portraits/VFX/audio/animation/final operation names/balance claims.
+- Do not mark EPIC-005 DONE.
+
+Acceptance criteria:
+- Given a Marshal tactical battle, when the active stack is damaged, Rally Order is visibly available or clearly usable and using it spends Command and restores count.
+- Given Rally Order is invalid, the UI shows a denial reason and no board/Command state mutation occurs.
+- Given an Operator tactical battle, Drone Strike requires/communicates a valid enemy target and spends Command on success.
+- Given Drone Strike was already used, a second attempt is visibly denied and Command does not change.
+- Given command state changes, the tactical HUD command summary updates immediately.
+- Given domain validation rejects a command, player-facing availability/denial state matches the domain reason instead of showing a contradictory affordance.
+- Given this is a usability/targeting story, no new command mechanics, progression, final content, or broader Operations systems are added.
+
+Verification expected before PR:
+- `git diff --check`
+- EditMode tests for any validation/no-mutation helper changes
+- PlayMode tests/evidence for STORY-CMD-004
+- Existing CMD-001/CMD-002/CMD-003 tests remain green
+- Unity Foundation CI exact-head
+
+Evidence package:
+- Create `production/evidence/STORY-CMD-004/README.md`.
+- Include PNG evidence for:
+  - valid Rally after damage;
+  - invalid Rally denial;
+  - valid Drone Strike target/use;
+  - second Drone Strike denial.
+- README must explain sequence, tests, CI expectations, placeholders, and omissions.
+
+PR requirements:
+- Link `STORY-CMD-004`.
+- Link required GDD/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

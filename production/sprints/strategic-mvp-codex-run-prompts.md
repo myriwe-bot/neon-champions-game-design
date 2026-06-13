@@ -49,6 +49,7 @@ related:
     production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud,
     production/stories/story-cmd-002-first-marshal-and-operator-command-pair,
     production/stories/story-cmd-003-command-on-ramp-closeout-smoke,
+    production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass,
   ]
 approval: approved
 ---
@@ -57,15 +58,15 @@ approval: approved
 
 ## Recommended mode
 
-No current READY / approved Unity implementation packet.
+`STORY-CMD-004 Tactical Command Usability and Targeting Pass` is the current READY / approved Unity implementation packet.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, and `STORY-CMD-003` are DONE / merged. EPIC-005 awaits human closeout/playtest review; do not run Codex for another implementation story until a new READY / approved story is recorded.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, and `STORY-CMD-003` are DONE / merged. `STORY-CMD-004` is authorized next.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt file: None.
+Current approved prompt file: `production/sprints/codex-story-cmd-004.prompt.txt`.
 
 ## Windows PowerShell preflight
 
@@ -86,7 +87,25 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-No current approved implementation prompt. Stop before running Codex unless a new story has `status: ready`, `approval: approved`, and `Ambiguity Check` PASS.
+Run these PowerShell commands from `C:\Users\NordicGamer\CodexProjects\neon-champions-unity` after the preflight above is clean.
+
+Set the prompt:
+
+```powershell
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-cmd-004.prompt.txt"
+```
+
+Workspace-write mode:
+
+```powershell
+codex exec --sandbox workspace-write --approval-policy on-request $prompt
+```
+
+Danger-full-access mode, only if you intentionally want unrestricted local writes/network for this run:
+
+```powershell
+codex exec --sandbox danger-full-access --approval-policy never $prompt
+```
 
 ## Historical prompt-file runs
 
@@ -132,8 +151,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None — EPIC-005 awaits human closeout/playtest review.
+- `production/sprints/codex-story-cmd-004.prompt.txt`
 
 ## After Codex finishes
 
-No current implementation PR is expected. Next action is human/design-control closeout review of EPIC-005 evidence, followed by selection/approval of the next capability story train.
+Review the `STORY-CMD-004` PR against the story contract, required tests, PlayMode evidence, exact-head Unity Foundation CI, omissions section, and scope boundaries before merge. Do not mark EPIC-005 DONE from implementation CI alone; use CMD-004 evidence for later human closeout/playtest review.

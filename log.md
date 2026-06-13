@@ -580,3 +580,12 @@
 - Promoted `STORY-CMD-001 Champion Command Archetype State and Tactical HUD` to READY / approved.
 - Recorded barebones profile contract: `marshal_alpha` has Command 2, Major Operation Slots 0, Minor Command Capacity 2, Control Scalar 0, Doctrine Scalar 1; `operator_alpha` has Command 3, Major Operation Slots 1, Minor Command Capacity 0, Control Scalar 1, Doctrine Scalar 0.
 - Updated `production/sprints/codex-story-cmd-001.prompt.txt` as the current approved Unity implementation prompt.
+
+## [2026-06-13] done | STORY-CMD-001 merged
+
+- Implemented and merged Unity PR #40 for `STORY-CMD-001 Champion Command Archetype State and Tactical HUD`.
+- Clarified design question in implementation: capital-C `Command` is the Knowledge analogue, so Operators lean into Command/Control; Marshals lean into Attack/Defense/Logistics, Doctrine, Cohesion reliability, and Minor Command capacity.
+- Barebones implementation added `marshal_alpha` and `operator_alpha` command profile state, tactical board propagation, tactical presentation snapshot fields, and HUD visibility.
+- No active command spending/effects were added.
+- PR CI passed on final head and post-merge main CI passed.
+- Cleared current Codex prompt pointer; no Unity implementation story is currently READY.

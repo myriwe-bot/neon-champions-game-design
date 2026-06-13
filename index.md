@@ -80,7 +80,7 @@
 - [[production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes]] — DONE objective, Champion combat path, defender tiers, and simple HP/strength casualty stakes epic.
 - [[production/epics/epic-vslice-mvp-004-intel-resource-on-ramp]] — DONE Intel resource on-ramp epic.
 - [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — APPROVED next epic for Champion Command and Operations.
-- [[production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud]] — READY first Champion Command story.
+- [[production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud]] — DONE first Champion Command story.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

@@ -147,7 +147,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-CMD-001 Champion Command Archetype State and Tactical HUD](../stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md) | READY-candidate / approval pending | Tactical Domain + UI/Integration | EPIC-004 DONE | Command profile/state tests, BattleSetup/tactical-state propagation tests, PlayMode HUD evidence, CI |
+| [STORY-CMD-001 Champion Command Archetype State and Tactical HUD](../stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud.md) | DONE / merged | Tactical Domain + UI/Integration | EPIC-004 DONE | PR #40, CI, PlayMode HUD evidence |
 | STORY-CMD-002 First Marshal and Operator Command Pair | Draft placeholder | Tactical Rules + UI/Integration | CMD-001 DONE | Spend/limit tests, one Marshal command, one Operator operation, PlayMode evidence, CI |
 | STORY-CMD-003 Command On-Ramp Closeout Smoke | Draft placeholder | Connected Smoke + Evidence | CMD-001/002 DONE | Strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
 

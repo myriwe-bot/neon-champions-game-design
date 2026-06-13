@@ -1,7 +1,7 @@
 ---
 title: STORY-CMD-001 Champion Command Archetype State and Tactical HUD
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved for implementation. Human approved the EPIC-005 direction and requested a barebones Marshal + Operator implementation now. Source-authority exception and profile values are recorded below.
+DONE / merged. Unity PR #40 implemented and merged on 2026-06-13 after CI and review passed. Human-approved source-authority exception and profile values are recorded below.
 
 This is the first proposed child story for `EPIC-VSLICE-MVP-005`. It establishes minimal Champion Command state and tactical visibility for both requested archetype poles: Marshal-like and Operator-like Champions. It does **not** yet implement active command spending.
 
@@ -200,16 +200,28 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Implement barebones Marshal/Operator command profile state and tactical HUD visibility only; no active command spending or effects.
+DONE / merged. Implemented barebones Marshal/Operator command profile state and tactical HUD visibility only; no active command spending or effects.
+
+
+## Implementation evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/40
+- Branch head reviewed: `d338529376acc10ab353736eea61eee7f0427da6`
+- Merge commit on main: `804fe7db8b9f2426706cc614b099383493747df2`
+- PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27463253643
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27463585232
+- Required jobs passed: Compile / Standalone Check, EditMode Tests, PlayMode Smoke Tests, Placeholder Validator.
+- Review verdict: PASS, recorded on PR.
+- Omissions/deferred: no active command spending/effects, no skill trees, no Doctrine mechanics, no full operation list, no progression, no final art/lore/UI, no Intel integration, no faction balance.

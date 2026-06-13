@@ -1,3 +1,5 @@
+HISTORICAL ONLY — STORY-CMD-001 is DONE / merged. Do not run this prompt.
+
 Implement STORY-CMD-001 Champion Command Archetype State and Tactical HUD.
 
 PREFLIGHT — stop unless all are true in the design/control repo:

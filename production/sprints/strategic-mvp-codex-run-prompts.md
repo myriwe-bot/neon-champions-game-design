@@ -55,15 +55,15 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-CMD-001 Champion Command Archetype State and Tactical HUD` is READY / approved as the current Unity implementation packet for EPIC-VSLICE-MVP-005.
+`STORY-CMD-001 Champion Command Archetype State and Tactical HUD` is DONE / merged. There is no current READY Unity implementation packet.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, and `STORY-QA-005` are DONE / merged. `STORY-CMD-001` is the only current authorized Unity implementation story.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, and `STORY-CMD-001` are DONE / merged. No further Unity implementation is authorized until the next story is explicitly approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt-file command exists for STORY-CMD-001.
+No current approved prompt-file command exists. STORY-CMD-001 is DONE / merged, and its prompt file is retained for historical audit only.
 
 ## Windows PowerShell preflight
 
@@ -84,7 +84,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-`production/sprints/codex-story-cmd-001.prompt.txt` is approved for STORY-CMD-001.
+None. STORY-CMD-001 is DONE / merged. Do not run a Unity implementation agent until a new story is explicitly READY / approved.
 
 ## Historical prompt-file runs
 
@@ -125,8 +125,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- `production/sprints/codex-story-cmd-001.prompt.txt` is the current approved prompt. `production/sprints/codex-story-qa-005.prompt.txt` is retained for historical audit only.
+- None. `production/sprints/codex-story-cmd-001.prompt.txt` and `production/sprints/codex-story-qa-005.prompt.txt` are retained for historical audit only.
 
 ## After Codex finishes
 
-After Codex finishes STORY-CMD-001, review the implementation against the story scope: state/HUD visibility only, both profiles present, no active command spending/effects, tests and PlayMode evidence included.
+No current post-Codex action. STORY-CMD-001 is merged; review the next approved story only after it is explicitly READY.

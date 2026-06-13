@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-005 PlayMode Evidence Artifact Hygiene
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-12
@@ -20,7 +20,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved implementation on 2026-06-13 for PlayMode evidence artifact hygiene only: no gameplay/UI changes, no committed evidence deletion, preserve local evidence override, reduce stale CI evidence paths and artifact quota pressure.
+DONE / merged. Human approved implementation on 2026-06-13; Unity PR #38 was squash-merged on 2026-06-13 as `507fb8c7b2e42dc54ed1902096230d369225efc7`. Post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461556833. Scope remained PlayMode evidence artifact hygiene only: no gameplay/UI changes, no committed evidence deletion, preserved local evidence override, reduced stale CI evidence paths and artifact quota pressure.
 
 ## Why this story exists
 
@@ -96,3 +96,18 @@ Human-approved implementation constraints:
 - No committed evidence deletion.
 - Preserve local evidence override behavior.
 - Reduce stale CI evidence paths and artifact quota pressure.
+
+
+## DONE evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/38
+- Branch head: `f8c9eb3d67584d342a3ce236e7da742674791ebb`
+- Merge commit: `507fb8c7b2e42dc54ed1902096230d369225efc7`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461099199
+- Post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461556833
+- Merge-gate verdict: PASS; no blockers; no scope drift.
+- Required checks passed: Compile / Standalone Check, EditMode Tests, Placeholder Validator, PlayMode Smoke Tests.
+
+## Omissions / deferred work
+
+No known omissions.

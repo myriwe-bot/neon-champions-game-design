@@ -1,4 +1,6 @@
-Implement STORY-QA-005 PlayMode Evidence Artifact Hygiene. Human approval is recorded in the design repo.
+HISTORICAL PROMPT ONLY — STORY-QA-005 is DONE / merged. Do not run this prompt unless a human explicitly reopens the story or asks to reproduce the historical implementation.
+
+Original task: Implement STORY-QA-005 PlayMode Evidence Artifact Hygiene. Human approval is recorded in the design repo.
 
 PREFLIGHT — do not implement unless all of these are true in the design/control repo:
 

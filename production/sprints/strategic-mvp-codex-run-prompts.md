@@ -53,36 +53,15 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is the current READY / approved Unity maintenance packet. It addresses stale PlayMode evidence paths and artifact quota pressure found during UX-001 review.
+`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is DONE / merged. There is no current READY Unity implementation packet.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, and `STORY-UX-001` are DONE / merged. `STORY-QA-005` is READY / approved for PlayMode evidence artifact hygiene only.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, and `STORY-QA-005` are DONE / merged. No further Unity implementation is authorized until the next story is explicitly approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt-file command:
-
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git pull --ff-only origin main
-
-# Verify STORY-QA-005 is READY/approved and UX-001 is DONE before running Codex.
-Select-String -Path production\stories\story-qa-005-playmode-evidence-artifact-hygiene.md -Pattern "status: ready","approval: approved","Status: PASS"
-Select-String -Path production\stories\story-ux-001-strategic-map-readability-action-clarity-pass.md -Pattern "status: done"
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git fetch origin
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-005.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
-```
+No current approved prompt-file command exists. STORY-QA-005 is DONE / merged, and its prompt file is retained for historical audit only.
 
 ## Windows PowerShell preflight
 
@@ -101,17 +80,9 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current approved prompt — STORY-QA-005 PlayMode evidence artifact hygiene
+## Current approved prompt
 
-Use the checked-in prompt file:
-
-```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-005.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-
-# Trusted-repo fallback if workspace-write is blocked:
-codex exec --sandbox danger-full-access $prompt
-```
+None. STORY-QA-005 is DONE / merged. Do not run a Unity implementation agent until a new story is explicitly READY / approved.
 
 ## Historical prompt-file runs
 
@@ -152,8 +123,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- `production/sprints/codex-story-qa-005.prompt.txt`
+- None. `production/sprints/codex-story-qa-005.prompt.txt` is retained for historical audit only.
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-QA-005-playmode-evidence-artifact-hygiene`, then open or prepare a PR titled `STORY-QA-005 PlayMode evidence artifact hygiene`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+No current post-Codex action. STORY-QA-005 is merged; review the next approved story only after it is explicitly READY.

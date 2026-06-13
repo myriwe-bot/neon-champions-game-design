@@ -554,3 +554,12 @@
 - Promoted STORY-QA-005 from DRAFT / READY-candidate to READY / approved with Ambiguity Check PASS.
 - Approved scope: PlayMode evidence artifact hygiene only; no gameplay/UI changes, no committed evidence deletion, preserve local evidence override, reduce stale CI evidence paths and artifact quota pressure.
 - Activated `production/sprints/codex-story-qa-005.prompt.txt` and repointed current Codex run prompts to STORY-QA-005.
+
+## [2026-06-13] merge | STORY-QA-005 closeout
+
+- Reviewed Unity PR #38 for `STORY-QA-005 PlayMode Evidence Artifact Hygiene` against the approved story contract.
+- Verified exact-head Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461099199.
+- Recorded merge-gate PASS, marked PR #38 ready for review, and squash-merged to Unity `main` as `507fb8c7b2e42dc54ed1902096230d369225efc7`.
+- Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461556833.
+- Marked `STORY-QA-005` DONE / merged and cleared the current Codex prompt pointer; no next Unity implementation story is currently READY.
+- Cleared the Unity repo current-task pointer in follow-up PR #39, squash-merged as `4943a74554a1777156af960bdccb90d52a2b16b3`; post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461937339.

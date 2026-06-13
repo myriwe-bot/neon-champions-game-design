@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-12
+> Last updated: 2026-06-13
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -88,7 +88,7 @@
 - [[production/stories/story-intel-002-first-intel-spending-sink-field-upgrade]] — DONE / merged first narrow Intel spend sink.
 - [[production/stories/story-intel-003-guarded-data-site-intel-reward]] — DONE / merged guarded Intel reward path.
 - [[production/stories/story-intel-004-intel-on-ramp-closeout-smoke]] — DONE / merged connected Intel closeout smoke.
-- [[production/stories/story-ux-001-strategic-map-readability-action-clarity-pass]] — READY / approved strategic-map readability/action clarity pass.
+- [[production/stories/story-ux-001-strategic-map-readability-action-clarity-pass]] — DONE / merged strategic-map readability/action clarity pass.
 - [[production/sprints/strategic-mvp-closeout-story-train-002]] — approved closeout train from guarded-site interaction through visible capture smoke.
 - [[production/sprints/strategic-mvp-story-train-001]] — Codex-safe sequential implementation train for the next strategic MVP stories.
 - [[production/sprints/strategic-mvp-codex-execution-system]] — approved Codex execution system and story-specific prompt wrappers for the strategic MVP train.
@@ -115,4 +115,4 @@
 
 - [[log]] — chronological repository log.
 
-- [[production/stories/story-qa-005-playmode-evidence-artifact-hygiene|STORY-QA-005 PlayMode Evidence Artifact Hygiene]] — READY-candidate maintenance story after UX-001 merge.
+- [[production/stories/story-qa-005-playmode-evidence-artifact-hygiene|STORY-QA-005 PlayMode Evidence Artifact Hygiene]] — READY / approved maintenance story after UX-001 merge.

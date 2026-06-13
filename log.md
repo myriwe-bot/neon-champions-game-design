@@ -547,3 +547,10 @@
 - Activated `production/sprints/codex-story-ux-001.prompt.txt` and repointed current Codex run prompts to STORY-UX-001.
 
 - 2026-06-12: STORY-UX-001 merged via Unity PR #37 (`a43ed135bb07f495a7cff791aeca562d5afe936b`) after right-panel overflow blocker was fixed and exact-head/post-merge CI passed. Prepared STORY-QA-005 as READY-candidate to clean up PlayMode evidence artifact hygiene.
+
+## [2026-06-13] approve | STORY-QA-005 implementation prep
+
+- Recorded human approval for `STORY-QA-005 PlayMode Evidence Artifact Hygiene`.
+- Promoted STORY-QA-005 from DRAFT / READY-candidate to READY / approved with Ambiguity Check PASS.
+- Approved scope: PlayMode evidence artifact hygiene only; no gameplay/UI changes, no committed evidence deletion, preserve local evidence override, reduce stale CI evidence paths and artifact quota pressure.
+- Activated `production/sprints/codex-story-qa-005.prompt.txt` and repointed current Codex run prompts to STORY-QA-005.

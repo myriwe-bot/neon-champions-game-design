@@ -1,11 +1,11 @@
 ---
 title: STORY-QA-005 PlayMode Evidence Artifact Hygiene
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-06-13
 source_lore: []
 related:
   [
@@ -13,14 +13,14 @@ related:
     docs/architecture/ci-build-automation,
     production/stories/story-ux-001-strategic-map-readability-action-clarity-pass,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-QA-005 PlayMode Evidence Artifact Hygiene
 
 ## Status
 
-DRAFT / READY-candidate. Not approved for implementation until human approval.
+READY / approved. Human approved implementation on 2026-06-13 for PlayMode evidence artifact hygiene only: no gameplay/UI changes, no committed evidence deletion, preserve local evidence override, reduce stale CI evidence paths and artifact quota pressure.
 
 ## Why this story exists
 
@@ -54,7 +54,7 @@ One narrow CI/test-evidence hygiene pass:
 ## Out of scope
 
 - No gameplay changes.
-- No UI presentation changes.
+- No UI changes.
 - No story/evidence PNG regeneration unless needed to verify path behavior.
 - No deletion of committed evidence.
 - No broad CI rewrite.
@@ -86,12 +86,13 @@ One narrow CI/test-evidence hygiene pass:
 
 ## Ambiguity check
 
-Status: PASS as READY-candidate.
+Status: PASS.
 
-Open decision before implementation:
+Human-approved implementation constraints:
 
-- Human must approve this maintenance story before Codex runs it.
-
-Recommended approval wording:
-
-> Approve STORY-QA-005 as READY: PlayMode evidence artifact hygiene only; no gameplay/UI changes, no committed evidence deletion, preserve local evidence override, reduce stale CI evidence paths and artifact quota pressure.
+- PlayMode evidence artifact hygiene only.
+- No gameplay changes.
+- No UI changes.
+- No committed evidence deletion.
+- Preserve local evidence override behavior.
+- Reduce stale CI evidence paths and artifact quota pressure.

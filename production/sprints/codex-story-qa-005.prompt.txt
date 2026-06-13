@@ -1,4 +1,4 @@
-Prepare STORY-QA-005 PlayMode Evidence Artifact Hygiene only after human approval.
+Implement STORY-QA-005 PlayMode Evidence Artifact Hygiene. Human approval is recorded in the design repo.
 
 PREFLIGHT — do not implement unless all of these are true in the design/control repo:
 
@@ -17,16 +17,16 @@ Story contract:
 - Use a neutral generated CI evidence path under artifacts/playmode/evidence by default.
 - Preserve explicit NEON_CHAMPIONS_EVIDENCE_DIR / -neonChampionsEvidenceDir override behavior for local story evidence generation.
 - Keep existing committed story evidence directories intact; do not delete historical evidence.
-- Reduce artifact quota pressure with a short retention period and/or narrower artifact path.
+- Reduce stale CI evidence paths and artifact quota pressure with a short retention period and/or narrower artifact path.
 - Preserve useful PlayMode failure summaries in CI logs.
 - Add/update a lightweight script or validator check proving the PlayMode CI evidence path is not stale/hard-coded to STORY-QA-003.
 - Update reviewer docs/readmes for where CI-generated PlayMode evidence lives.
 
 Hard limits:
 - No gameplay changes.
-- No UI presentation changes.
+- No UI changes or UI presentation changes.
 - No broad CI rewrite.
-- No committed evidence deletion.
+- No committed evidence deletion; keep historical checked-in evidence intact.
 - No runner/billing/manual GitHub storage administration.
 
 Verification required before PR:

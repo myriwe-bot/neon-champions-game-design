@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-12
+updated: 2026-06-13
 source_lore: []
 related:
   [
@@ -44,6 +44,7 @@ related:
     production/epics/epic-vslice-mvp-004-intel-resource-on-ramp,
     production/stories/story-intel-001-faction-intel-and-data-cache-pickup,
     production/stories/story-intel-002-first-intel-spending-sink-field-upgrade,
+    production/stories/story-qa-005-playmode-evidence-artifact-hygiene,
   ]
 approval: approved
 ---
@@ -52,15 +53,15 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is the current READY-candidate Unity maintenance packet. It is not approved until human approval; it addresses stale PlayMode evidence paths and artifact quota pressure found during UX-001 review.
+`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is the current READY / approved Unity maintenance packet. It addresses stale PlayMode evidence paths and artifact quota pressure found during UX-001 review.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, and `STORY-UX-001` are DONE / merged. `STORY-QA-005` is a READY-candidate only; no implementation is authorized until human approval.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, and `STORY-UX-001` are DONE / merged. `STORY-QA-005` is READY / approved for PlayMode evidence artifact hygiene only.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded candidate prompt-file command:
+Current approved prompt-file command:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -100,7 +101,7 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current candidate prompt — STORY-QA-005 PlayMode evidence artifact hygiene
+## Current approved prompt — STORY-QA-005 PlayMode evidence artifact hygiene
 
 Use the checked-in prompt file:
 
@@ -149,10 +150,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-intel-003.prompt.txt`
 - `production/sprints/codex-story-intel-004.prompt.txt`
 
-Current candidate prompt:
+Current approved prompt:
 
 - `production/sprints/codex-story-qa-005.prompt.txt`
 
 ## After Codex finishes
 
-After approval, Codex should commit and push `story/STORY-QA-005-playmode-evidence-artifact-hygiene`, then open or prepare a PR titled `STORY-QA-005 PlayMode evidence artifact hygiene`. Review the PR against the story contract, evidence package, CI, and omissions before merging.
+Codex should commit and push `story/STORY-QA-005-playmode-evidence-artifact-hygiene`, then open or prepare a PR titled `STORY-QA-005 PlayMode evidence artifact hygiene`. Review the PR against the story contract, evidence package, CI, and omissions before merging.

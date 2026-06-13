@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-06-13
 source_lore: [digital-net, greenland, blue-monday]
 related:
   [
@@ -188,4 +188,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged; `STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, and `STORY-INTEL-004` are DONE / merged. EPIC-004 child implementation and readability work is DONE / merged. EPIC-004 now awaits human closeout/playtest review before deeper gameplay expansion. `STORY-QA-005` is a READY-candidate maintenance story for PlayMode evidence artifact hygiene discovered during UX-001 review. `field_upgrade_alpha` / “Field Upgrade” remains a temporary placeholder.
+APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged; `STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, and `STORY-INTEL-004` are DONE / merged. EPIC-004 child implementation and readability work is DONE / merged. EPIC-004 now awaits human closeout/playtest review before deeper gameplay expansion. `STORY-QA-005` is READY / approved as a maintenance story for PlayMode evidence artifact hygiene discovered during UX-001 review. `field_upgrade_alpha` / “Field Upgrade” remains a temporary placeholder.

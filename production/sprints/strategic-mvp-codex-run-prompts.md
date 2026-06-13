@@ -97,13 +97,13 @@ $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-ga
 Workspace-write mode:
 
 ```powershell
-codex exec --sandbox workspace-write --ask-for-approval on-request $prompt
+codex exec --sandbox workspace-write --approval-policy on-request $prompt
 ```
 
 Danger-full-access mode, only if you intentionally want unrestricted local writes/network for this run:
 
 ```powershell
-codex exec --sandbox danger-full-access --ask-for-approval never $prompt
+codex exec --sandbox danger-full-access --approval-policy never $prompt
 ```
 
 ## Historical prompt-file runs

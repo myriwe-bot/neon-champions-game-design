@@ -86,8 +86,8 @@
 - [[production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass]] — DONE tactical command usability and targeting story.
 - [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — closeout rejected; playability repair active.
 - [[production/sprints/epic-005-playability-repair-train]] — approved repair train after human playtest.
-- [[production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass]] — READY current cross-mode state/action feedback readability story.
-- [[production/stories/story-qa-007-champion-encounter-initiation-clarity]] — READY-candidate follow-up for Champion encounter clarity.
+- [[production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass]] — DONE cross-mode state/action feedback readability story.
+- [[production/stories/story-qa-007-champion-encounter-initiation-clarity]] — READY current Champion encounter clarity story.
 - [[production/stories/story-cmd-005-champion-command-explanation-pass]] — READY-candidate follow-up for command explanation if still needed.
 - [[production/stories/story-strat-objective-001-multi-turn-objective-contest-direction]] — DRAFT objective contest direction.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.

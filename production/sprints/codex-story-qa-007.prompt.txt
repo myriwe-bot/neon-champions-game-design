@@ -1,0 +1,83 @@
+Implement STORY-QA-007 Champion Encounter Initiation Clarity.
+
+PREFLIGHT — stop unless all are true in the design/control repo:
+
+- production/stories/story-qa-007-champion-encounter-initiation-clarity.md has `status: ready` and `approval: approved`.
+- Ambiguity Check says `Status: PASS`.
+- production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md is DONE / merged.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md has `status: approved` and `approval: approved`.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-QA-007-champion-encounter-initiation-clarity
+- PR title: STORY-QA-007 Champion encounter initiation clarity
+
+Required reading before editing:
+- production/stories/story-qa-007-champion-encounter-initiation-clarity.md
+- production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md
+- production/sprints/epic-005-playability-repair-train.md
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md
+- production/stories/story-tac-008-champion-vs-champion-tactical-encounter-path.md
+- design/gdd/strategic-map.md
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- This is a narrow Champion encounter initiation clarity/affordance story.
+- Preserve the human playtest complaint: Champions appear to be in the same area but battle does not clearly trigger; movement may be blocked; enemy interaction can feel like selecting the other Champion.
+- Make the current existing Champion-vs-Champion encounter path understandable without adding new encounter mechanics.
+
+In scope:
+- Strategic snapshot/HUD/panel text/marker/button improvements for enemy Champion encounter state.
+- Explicit player-facing affordance/control when the selected active Champion can launch an existing Champion-vs-Champion encounter.
+- Denial/non-engageable text when encounter/movement is blocked by current existing validation.
+- Friendly vs enemy Champion selection/inspection clarity so enemy UI cannot be mistaken for controlling the enemy Champion.
+- Feedback for successful Champion encounter launch naming attacker, defender, source/location, and tactical Champion battle handoff.
+- EditMode/PlayMode tests and evidence for these visible states.
+
+Out of scope:
+- No new strategic AI.
+- No fog/ambush/stealth/hidden-information/diplomacy/zone-of-control/overwatch rules.
+- No multi-Champion battles.
+- No map redesign away from the current node graph.
+- No objective/capture rule changes.
+- No new battle mechanics, Command effects, units, attack types, balance, final art/icons/VFX/audio/animation/portraits/lore copy.
+- No save/load or persistence expansion.
+- No broad Champion movement/pathfinding rewrite.
+- If a clarity fix requires gameplay rule changes, stop and report the exact rule-change need instead of expanding scope.
+
+Acceptance criteria:
+- Given the selected active Champion can launch an existing Champion-vs-Champion encounter, strategic UI shows an explicit Engage Champion/equivalent affordance naming the enemy Champion.
+- Given an enemy Champion is present but not engageable, strategic UI explains why in player-facing terms instead of silently blocking movement or appearing to select the enemy.
+- Given the player clicks/interacts with enemy Champion-related UI, feedback cannot be mistaken for taking control of the enemy Champion.
+- Given Champion encounter launch succeeds, feedback names attacker, defender, source node/location, and that tactical Champion battle mode launched.
+- Given Champion encounter launch is denied, feedback names the reason and does not mutate strategic/tactical state.
+- Existing ChampionEncounterService battle setup/result mechanics remain unchanged unless the story records a stop-condition.
+- Existing QA-006 state/action feedback remains visible and is not regressed.
+
+Verification expected before PR:
+- `git diff --check`
+- Relevant EditMode tests for encounter-state preview/denial/feedback helpers
+- Relevant PlayMode smoke tests/evidence for STORY-QA-007
+- Existing QA-006, Champion encounter, tactical command, and strategic loop tests remain green
+- Unity Foundation CI exact-head
+
+Evidence package:
+- Create `production/evidence/STORY-QA-007/README.md`.
+- Include PNG evidence for:
+  1. Strategic state with enemy Champion encounter affordance or clear non-engageable explanation.
+  2. Enemy Champion marker/panel clarity proving enemy interaction is not confused with friendly Champion selection.
+  3. Champion encounter launch feedback naming attacker/defender/location.
+  4. Tactical Champion battle handoff after successful launch.
+- README must include tests run, CI URL, omissions/deferred work, and confirmation that encounter mechanics/rules were not expanded.
+
+PR requirements:
+- Link `STORY-QA-007`.
+- Link required GDD/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

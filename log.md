@@ -650,3 +650,15 @@
 - Added `STORY-QA-007 Champion Encounter Initiation Clarity` and `STORY-CMD-005 Champion Command Explanation Pass` as gated READY-candidates after QA-006.
 - Added `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction` as DRAFT because objective capture pacing is design-heavy and not current implementation.
 - Created current Codex prompt `production/sprints/codex-story-qa-006.prompt.txt` and repointed run prompts.
+
+## [2026-06-13] merge-and-advance | STORY-QA-006 merged; STORY-QA-007 prepared
+
+- Reviewed Unity PR #44 for `STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass`.
+- Independent review found one blocker: evidence README lacked the required CI URL. Fixed the README, pushed an evidence commit, and re-verified exact-head CI.
+- Verified PR exact-head Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27476023860.
+- Squash-merged PR #44 to Unity `main` as `a0c2b052746e0cba2838242cc2732853c9e8f9a8`.
+- Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27476388754.
+- Marked `STORY-QA-006` DONE / merged.
+- Promoted `STORY-QA-007 Champion Encounter Initiation Clarity` to READY / approved as the next implementation packet.
+- Created current Codex prompt `production/sprints/codex-story-qa-007.prompt.txt` and repointed run prompts.
+- Kept `STORY-CMD-005` READY-candidate and `STORY-STRAT-OBJECTIVE-001` DRAFT.

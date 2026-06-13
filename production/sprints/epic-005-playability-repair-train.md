@@ -22,7 +22,7 @@ approval: approved
 
 ## Status
 
-Approved direction after human playtest rejected EPIC-005 closeout on 2026-06-13. Run one story at a time. Only `STORY-QA-006` is the current READY implementation packet.
+Approved direction after human playtest rejected EPIC-005 closeout on 2026-06-13. Run one story at a time. `STORY-QA-006` is DONE / merged. `STORY-QA-007` is the current READY implementation packet.
 
 ## Human closeout verdict
 
@@ -32,8 +32,8 @@ REJECT CLOSEOUT. The implementation works technically, but the player-facing loo
 
 | Order | Story | Status | Purpose |
 | ---: | --- | --- | --- |
-| 1 | [STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass](../stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md) | READY / approved | Current actor, clickable actions, denial reasons, results, and target clarity across strategic/tactical modes. |
-| 2 | [STORY-QA-007 Champion Encounter Initiation Clarity](../stories/story-qa-007-champion-encounter-initiation-clarity.md) | READY-candidate | Clarify how Champion-vs-Champion encounters start or why movement/engagement is denied. |
+| 1 | [STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass](../stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md) | DONE / merged | PR #44; current actor, clickable actions, denial reasons, results, and target clarity across strategic/tactical modes. |
+| 2 | [STORY-QA-007 Champion Encounter Initiation Clarity](../stories/story-qa-007-champion-encounter-initiation-clarity.md) | READY / approved | Current implementation packet: clarify how Champion-vs-Champion encounters start or why movement/engagement is denied. |
 | 3 | [STORY-CMD-005 Champion Command Explanation Pass](../stories/story-cmd-005-champion-command-explanation-pass.md) | READY-candidate | If still needed after QA-006, make Rally/Drone and Marshal/Operator identity understandable. |
 | 4 | [STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction](../stories/story-strat-objective-001-multi-turn-objective-contest-direction.md) | DRAFT | Design heavier objective-contest/capture direction; not current Codex work. |
 

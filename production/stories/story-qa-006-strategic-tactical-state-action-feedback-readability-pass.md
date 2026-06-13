@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
@@ -25,7 +25,19 @@ approval: approved
 
 ## Status
 
-READY / approved for Codex implementation. Human playtest on 2026-06-13 rejected EPIC-005 closeout and approved a short QA/playability repair train. This first story is the narrow readability blocker: the player cannot reliably tell current state, clickable actions, denial reasons, or action results across strategic and tactical modes.
+DONE / merged. Human playtest on 2026-06-13 rejected EPIC-005 closeout and approved a short QA/playability repair train. Unity PR #44 implemented this first readability repair and was squash-merged on 2026-06-13.
+
+## Implementation evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/44
+- Final reviewed branch head: `92f81a7964c27bfc87d6fd3e6313e8c0121e7d88`
+- Merge commit on main: `a0c2b052746e0cba2838242cc2732853c9e8f9a8`
+- PR exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27476023860
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27476388754
+- Required jobs passed: Compile / Standalone Check, EditMode Tests, PlayMode Smoke Tests, Placeholder Validator.
+- Evidence path: `production/evidence/STORY-QA-006/` in the Unity repo.
+- Gate fix during review: updated evidence README with CI URL, pushed evidence commit, and re-verified exact-head CI.
+- Scope verdict: PASS. Changes stayed within player-facing readability/feedback for existing strategic/tactical/command mechanics.
 
 ## Human playtest source
 

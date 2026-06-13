@@ -45,6 +45,8 @@ related:
     production/stories/story-intel-001-faction-intel-and-data-cache-pickup,
     production/stories/story-intel-002-first-intel-spending-sink-field-upgrade,
     production/stories/story-qa-005-playmode-evidence-artifact-hygiene,
+    production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp,
+    production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud,
   ]
 approval: approved
 ---
@@ -53,9 +55,9 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is DONE / merged. There is no current READY Unity implementation packet.
+`STORY-QA-005 PlayMode Evidence Artifact Hygiene` is DONE / merged. `EPIC-VSLICE-MVP-005 Champion Command and Operations On-Ramp` and `STORY-CMD-001` are drafted as the next candidate direction, but there is no current READY Unity implementation packet.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, and `STORY-QA-005` are DONE / merged. No further Unity implementation is authorized until the next story is explicitly approved.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, and `STORY-QA-005` are DONE / merged. `STORY-CMD-001` is READY-candidate / approval pending; no Unity implementation is authorized until it is explicitly approved.
 
 ## Copy-safe prompt-file mode
 
@@ -82,7 +84,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-None. STORY-QA-005 is DONE / merged. Do not run a Unity implementation agent until a new story is explicitly READY / approved.
+None. STORY-CMD-001 is only READY-candidate / approval pending. Do not run a Unity implementation agent until it or another story is explicitly READY / approved.
 
 ## Historical prompt-file runs
 
@@ -123,8 +125,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt:
 
-- None. `production/sprints/codex-story-qa-005.prompt.txt` is retained for historical audit only.
+- None. `production/sprints/codex-story-qa-005.prompt.txt` is retained for historical audit only. `production/sprints/codex-story-cmd-001.prompt.txt` is a guarded non-runnable candidate prompt.
 
 ## After Codex finishes
 
-No current post-Codex action. STORY-QA-005 is merged; review the next approved story only after it is explicitly READY.
+No current post-Codex action. STORY-CMD-001 must not be run until the human resolves its source-authority/open-value questions and explicitly promotes it to READY.

@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-004 Intel Resource On-Ramp
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-06-12
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-APPROVED for production story train. Human approved next-step implementation prep on 2026-06-12 after accepting EPIC-VSLICE-MVP-003 closeout.
+DONE / closed. Human accepted closeout on 2026-06-13 after `STORY-QA-005` merged and post-merge Unity/design CI passed. Residual broader Intel systems remain deferred, not blockers.
 
 This epic is the next recommended vertical-slice spine because the prior slice proved HoMM-like movement/capture/tactical stakes, while the remaining core pillar gap is Intel as secrets turned into power. It started with a tiny visible earning/display loop in INTEL-001 and now continues with exactly one narrow first spend sink in INTEL-002 before any broader upgrade tree, fog, dirty information, or economy depth.
 
@@ -167,14 +167,14 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the epic as complete.
 
 ## Anti-pattern check
 
@@ -188,4 +188,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED for production as the active Intel vertical-slice capability container. `STORY-INTEL-001` and `STORY-INTEL-002` are DONE / merged; `STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, and `STORY-INTEL-004` are DONE / merged. EPIC-004 child implementation and readability work is DONE / merged. EPIC-004 now awaits human closeout/playtest review before deeper gameplay expansion. `STORY-QA-005` is DONE / merged as a maintenance story for PlayMode evidence artifact hygiene discovered during UX-001 review. `field_upgrade_alpha` / “Field Upgrade” remains a temporary placeholder.
+DONE / closed. EPIC-004 proved the first visible Intel resource loop: data-cache pickup, faction Intel display, one placeholder Field Upgrade spend, guarded Intel reward, connected closeout smoke, readability pass, and evidence-pipeline hygiene. Deferred broader Intel economy, dirty information, Intel subtypes, operation trees, and final content remain outside this epic. `field_upgrade_alpha` / “Field Upgrade” remains a temporary placeholder.

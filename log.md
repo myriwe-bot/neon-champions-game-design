@@ -563,3 +563,11 @@
 - Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461556833.
 - Marked `STORY-QA-005` DONE / merged and cleared the current Codex prompt pointer; no next Unity implementation story is currently READY.
 - Cleared the Unity repo current-task pointer in follow-up PR #39, squash-merged as `4943a74554a1777156af960bdccb90d52a2b16b3`; post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27461937339.
+
+## [2026-06-13] plan | EPIC-005 Champion Command direction
+
+- Formally closed `EPIC-VSLICE-MVP-004 Intel Resource On-Ramp` as DONE after human closeout acceptance.
+- Drafted `EPIC-VSLICE-MVP-005 Champion Command and Operations On-Ramp` as the next approved-candidate capability container.
+- Recorded human direction to pursue Champion Command / Operations and to try supporting both archetype poles: Marshals and Operators.
+- Drafted `STORY-CMD-001 Champion Command Archetype State and Tactical HUD` as READY-candidate / approval pending. It establishes finite Command state and tactical HUD visibility for both Marshal-like and Operator-like profiles, without active command spending.
+- Added guarded non-runnable prompt `production/sprints/codex-story-cmd-001.prompt.txt`; no Unity implementation is currently authorized.

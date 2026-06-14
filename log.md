@@ -662,3 +662,14 @@
 - Promoted `STORY-QA-007 Champion Encounter Initiation Clarity` to READY / approved as the next implementation packet.
 - Created current Codex prompt `production/sprints/codex-story-qa-007.prompt.txt` and repointed run prompts.
 - Kept `STORY-CMD-005` READY-candidate and `STORY-STRAT-OBJECTIVE-001` DRAFT.
+
+## [2026-06-14] merge-and-advance | STORY-QA-007 merged; STORY-CMD-005 prepared
+
+- Reviewed Unity PR #45 for `STORY-QA-007 Champion Encounter Initiation Clarity`.
+- Independent review found stale/non-specific CI evidence; fixed `production/evidence/STORY-QA-007/README.md`, pushed an evidence clarification commit, and recorded final exact-head CI in the PR gate comment.
+- Verified PR exact-head Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27500086022.
+- Squash-merged PR #45 to Unity `main` as `52d36e22751555bb012b43798db39649d8a90ff6`.
+- Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27500477543.
+- Marked `STORY-QA-007` DONE / merged.
+- Promoted `STORY-CMD-005 Champion Command Explanation Pass` to READY / approved as the next implementation packet, recording the user request to merge QA-007 and prepare the next implementation packet as delegated approval for this immediate repair-train follow-up.
+- Created current Codex prompt `production/sprints/codex-story-cmd-005.prompt.txt` and repointed run prompts.

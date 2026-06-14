@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-13
+updated: 2026-06-14
 source_lore: []
 related:
   [
@@ -53,6 +53,7 @@ related:
     production/sprints/epic-005-playability-repair-train,
     production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass,
     production/stories/story-qa-007-champion-encounter-initiation-clarity,
+    production/stories/story-cmd-005-champion-command-explanation-pass,
   ]
 approval: approved
 ---
@@ -61,15 +62,15 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-QA-007 Champion Encounter Initiation Clarity` is the current READY / approved Unity implementation packet.
+`STORY-CMD-005 Champion Command Explanation Pass` is the current READY / approved Unity implementation packet.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, and `STORY-QA-006` are DONE / merged. Human closeout rejected EPIC-005 readability; `STORY-QA-007` is authorized next as the Champion encounter clarity repair story.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, and `STORY-QA-007` are DONE / merged. Human closeout rejected EPIC-005 readability; `STORY-CMD-005` is authorized next as the command explanation repair story.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt file: `production/sprints/codex-story-qa-007.prompt.txt`.
+Current approved prompt file: `production/sprints/codex-story-cmd-005.prompt.txt`.
 
 ## Windows PowerShell preflight
 
@@ -95,7 +96,7 @@ Run these PowerShell commands from `C:\Users\NordicGamer\CodexProjects\neon-cham
 Set the prompt:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-007.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-cmd-005.prompt.txt"
 ```
 
 Workspace-write mode:
@@ -153,11 +154,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-cmd-003.prompt.txt`
 - `production/sprints/codex-story-cmd-004.prompt.txt`
 - `production/sprints/codex-story-qa-006.prompt.txt`
+- `production/sprints/codex-story-qa-007.prompt.txt`
 
 Current approved prompt:
 
-- `production/sprints/codex-story-qa-007.prompt.txt`
+- `production/sprints/codex-story-cmd-005.prompt.txt`
 
 ## After Codex finishes
 
-Review the `STORY-QA-007` PR against the story contract, the human playtest complaints, required tests, PlayMode evidence, exact-head Unity Foundation CI, omissions section, and scope boundaries before merge. Do not expand into CMD-005, objective redesign, new encounter rules, strategic AI, fog/stealth, zone-of-control, new battle mechanics, or map redesign.
+Review the `STORY-CMD-005` PR against the story contract, the human playtest complaints, required tests, PlayMode evidence, exact-head Unity Foundation CI, omissions section, and scope boundaries before merge. Do not add new command mechanics, full Operations UI, objective redesign, strategic AI, fog/stealth, new battle mechanics, final content, or EPIC-005 closeout decisions.

@@ -1,0 +1,86 @@
+Implement STORY-CMD-005 Champion Command Explanation Pass.
+
+PREFLIGHT — stop unless all are true in the design/control repo:
+
+- production/stories/story-cmd-005-champion-command-explanation-pass.md has `status: ready` and `approval: approved`.
+- Ambiguity Check says `Status: PASS`.
+- production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md is DONE / merged.
+- production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md is DONE / merged.
+- production/stories/story-qa-007-champion-encounter-initiation-clarity.md is DONE / merged.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md remains approved and playability repair active.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-CMD-005-champion-command-explanation-pass
+- PR title: STORY-CMD-005 Champion command explanation pass
+
+Required reading before editing:
+- production/stories/story-cmd-005-champion-command-explanation-pass.md
+- production/sprints/epic-005-playability-repair-train.md
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md
+- production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md
+- production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md
+- production/stories/story-qa-007-champion-encounter-initiation-clarity.md
+- design/gdd/tactical-combat.md §§1-3
+- design/gdd/tactical-combat/champion-operations-and-progression.md §§29-80 and §§93-155 as narrow explanation context only
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- This is a narrow command explanation/readability pass for existing prototype commands only.
+- Preserve the human playtest complaint: Rally Order and Drone Strike are visible but not understood; denial/result meaning is unclear; Marshal vs Operator identity is unclear.
+- Explain existing mechanics without changing them.
+
+In scope:
+- Tactical HUD/panel/button/snapshot text explaining existing Rally Order and Drone Strike.
+- Player-facing explanation of what each command does, Command cost, when it works, and why it may be denied.
+- Marshal vs Operator prototype identity labels/descriptions in the current tactical UI.
+- Compact display of Command state, cost, one-use/major-slot limits, target/result summary, and denial reason.
+- EditMode/PlayMode tests and evidence for these visible explanations.
+
+Out of scope:
+- No new command effects beyond existing rally_order and drone_strike.
+- No balance changes to costs, damage, healing, command pools, one-use limits, or profile stats.
+- No new Command economy, cooldowns, regeneration, reactions, initiative, or action economy redesign.
+- No full Operations/spellbook UI.
+- No new Champion classes, skills, Doctrine/passives, levels, progression, loadouts, perks, equipment, or strategic AI command usage.
+- No Intel integration, operation upgrades, dirty information, fog/hidden information, save/load, campaign persistence, objective/capture redesign, or final faction/canon changes.
+- No final art, icons, portraits, VFX, audio, animation, final command names, or lore copy.
+- No EPIC-005 closeout decision.
+
+Acceptance criteria:
+- Marshal Rally Order UI explains what it does, its Command cost, and the damaged-friendly-stack condition.
+- Invalid Rally Order denial explains the reason and does not mutate board/Command state.
+- Operator Drone Strike UI explains what it does, its Command cost, enemy target meaning, and one-Major-Operation-per-battle limit.
+- Invalid/second Drone Strike denial explains the reason and does not mutate board/Command state.
+- HUD explanation/summary updates after command state changes.
+- Marshal and Operator prototype identities are textually distinct enough that a player can describe the difference.
+- No new command mechanics, progression, final content, objective rules, or broader Operations systems are added.
+- Existing QA-006 and QA-007 readability/encounter clarity feedback remains visible and is not regressed.
+
+Verification expected before PR:
+- `git diff --check`
+- Relevant EditMode tests for any changed application/domain helpers and no-mutation denial cases
+- Relevant PlayMode smoke tests/evidence for STORY-CMD-005
+- Existing command usability, QA-006, QA-007, Champion encounter, tactical command, and strategic loop tests remain green
+- Unity Foundation CI exact-head
+
+Evidence package:
+- Create `production/evidence/STORY-CMD-005/README.md`.
+- Include PNG evidence for:
+  1. Marshal Rally explanation.
+  2. Rally denial explanation.
+  3. Operator Drone Strike explanation / target meaning.
+  4. second-use or invalid Drone Strike explanation.
+- README must include tests run, CI URL, omissions/deferred work, and confirmation that command mechanics/rules were not expanded.
+
+PR requirements:
+- Link `STORY-CMD-005`.
+- Link required GDD/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

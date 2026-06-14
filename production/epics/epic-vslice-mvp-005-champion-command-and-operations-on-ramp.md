@@ -29,7 +29,7 @@ approval: approved
 
 ## Status
 
-CLOSEOUT REJECTED / PLAYABILITY REPAIR ACTIVE. Human playtest on 2026-06-13 found the loop technically connected but not yet player-readable: active turn/actor, tactical sides/targets/results, command meaning, and action/result feedback are unclear. `STORY-QA-006` is DONE / merged; `STORY-QA-007` is READY as the next narrow repair story.
+CLOSEOUT REJECTED / PLAYABILITY REPAIR ACTIVE. Human playtest on 2026-06-13 found the loop technically connected but not yet player-readable: active turn/actor, tactical sides/targets/results, command meaning, and action/result feedback are unclear. `STORY-QA-006` and `STORY-QA-007` are DONE / merged; `STORY-CMD-005` is READY as the next narrow repair story.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -155,8 +155,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-CMD-003 Command On-Ramp Closeout Smoke](../stories/story-cmd-003-command-on-ramp-closeout-smoke.md) | DONE / merged | Connected Smoke + Evidence | CMD-001/002 DONE | PR #42, strategic -> tactical -> command use -> battle result smoke, PNG evidence, CI |
 | [STORY-CMD-004 Tactical Command Usability and Targeting Pass](../stories/story-cmd-004-tactical-command-usability-and-targeting-pass.md) | DONE / merged | Tactical UI/UX + PlayMode Evidence | CMD-001/002/003 DONE | PR #43, player-legible Rally/Drone Strike affordances, target/denial feedback, PlayMode evidence, CI |
 | [STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass](../stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md) | DONE / merged | Cross-mode UX/Playability Repair | CMD-004 DONE + human closeout rejected | PR #44; current actor/turn, clickable actions, denial reasons, result feedback, friendly/enemy/target clarity |
-| [STORY-QA-007 Champion Encounter Initiation Clarity](../stories/story-qa-007-champion-encounter-initiation-clarity.md) | READY / approved | Strategic encounter UX | QA-006 DONE/merged | Explain or afford Champion-vs-Champion engagement/denial |
-| [STORY-CMD-005 Champion Command Explanation Pass](../stories/story-cmd-005-champion-command-explanation-pass.md) | READY-candidate | Command UX | QA-006 DONE/reviewed if still needed | Explain Rally/Drone and Marshal/Operator identity if QA-006 does not resolve it |
+| [STORY-QA-007 Champion Encounter Initiation Clarity](../stories/story-qa-007-champion-encounter-initiation-clarity.md) | DONE / merged | Strategic encounter UX | QA-006 DONE/merged | PR #45; Champion-vs-Champion engagement/denial clarity and evidence |
+| [STORY-CMD-005 Champion Command Explanation Pass](../stories/story-cmd-005-champion-command-explanation-pass.md) | READY / approved | Command UX | QA-007 DONE/merged | Current packet: explain Rally/Drone and Marshal/Operator identity without changing mechanics |
 | [STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction](../stories/story-strat-objective-001-multi-turn-objective-contest-direction.md) | DRAFT | Strategic objective design | Later design approval | Explore multi-turn objective contest/capture; not current implementation |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -225,4 +225,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED, closeout rejected, and playability repair active. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, and `STORY-CMD-004` are DONE / merged. `STORY-QA-006` is DONE / merged. `STORY-QA-007` is READY / approved as the next implementation story; later repair stories remain gated until QA-007 is merged/reviewed.
+APPROVED, closeout rejected, and playability repair active. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, and `STORY-QA-007` are DONE / merged. `STORY-CMD-005` is READY / approved as the next implementation story; objective-contest direction remains draft/gated.

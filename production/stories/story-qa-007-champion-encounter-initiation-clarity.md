@@ -1,11 +1,11 @@
 ---
 title: STORY-QA-007 Champion Encounter Initiation Clarity
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-06-14
 source_lore: []
 related:
   [
@@ -25,7 +25,9 @@ approval: approved
 
 ## Status
 
-READY / approved for Codex implementation. `STORY-QA-006` is DONE / merged, and this is the next approved narrow playability repair from the human playtest train.
+DONE / merged. Unity PR #45 implemented and merged on 2026-06-14 after merge-gate review, evidence clarification, exact-head CI, and post-merge `main` CI passed.
+
+This story was the narrow Champion encounter clarity repair from the human playtest train. `STORY-CMD-005` is now the current READY implementation packet.
 
 ## Human playtest source
 

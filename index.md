@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-13
+> Last updated: 2026-06-14
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -87,8 +87,8 @@
 - [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — closeout rejected; playability repair active.
 - [[production/sprints/epic-005-playability-repair-train]] — approved repair train after human playtest.
 - [[production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass]] — DONE cross-mode state/action feedback readability story.
-- [[production/stories/story-qa-007-champion-encounter-initiation-clarity]] — READY current Champion encounter clarity story.
-- [[production/stories/story-cmd-005-champion-command-explanation-pass]] — READY-candidate follow-up for command explanation if still needed.
+- [[production/stories/story-qa-007-champion-encounter-initiation-clarity]] — DONE Champion encounter clarity story.
+- [[production/stories/story-cmd-005-champion-command-explanation-pass]] — READY current command explanation story.
 - [[production/stories/story-strat-objective-001-multi-turn-objective-contest-direction]] — DRAFT objective contest direction.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.

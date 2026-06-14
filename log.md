@@ -685,3 +685,4 @@
 - Marked `STORY-CMD-005` DONE / merged.
 - Expanded `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction` only to READY-candidate / approval pending with Ambiguity Check FAIL; objective-rule design remains unapproved.
 - Created guarded non-runnable prompt `production/sprints/codex-story-strat-objective-001.prompt.txt` and updated run prompts to say no Unity implementation packet is currently approved.
+- Cleared the Unity repo current-task pointer on `main` as commit `60c30cf316023c79e4afd71ac58c90f01676fe09`; Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27502974784.

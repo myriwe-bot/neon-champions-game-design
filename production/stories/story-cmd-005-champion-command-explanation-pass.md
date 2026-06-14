@@ -1,7 +1,7 @@
 ---
 title: STORY-CMD-005 Champion Command Explanation Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
@@ -27,9 +27,9 @@ approval: approved
 
 ## Status
 
-READY / approved for Codex implementation. `STORY-QA-007` is DONE / merged in Unity PR #45, and the user request to merge QA-007 and prepare the next implementation packet is recorded as delegated approval for this immediate repair-train follow-up.
+DONE / merged. Unity PR #46 implemented and merged on 2026-06-14 after merge-gate review, evidence clarification, exact-head CI, and post-merge `main` CI passed.
 
-This story remains a narrow explanation/readability pass for the already-implemented prototype Champion commands. It is not approval to add new command mechanics or broaden EPIC-005.
+This story was a narrow explanation/readability pass for the already-implemented prototype Champion commands. It did not approve new command mechanics or broaden EPIC-005.
 
 ## Story type
 
@@ -187,9 +187,9 @@ Human-approved exceptions:
 
 ## Story DONE gate
 
-- [ ] Implementation PR merged.
-- [ ] Required tests and Unity Foundation CI exact-head pass.
-- [ ] PlayMode evidence exists under `production/evidence/STORY-CMD-005/`.
-- [ ] No unauthorized command mechanics or broader Operations scope added.
-- [ ] Omissions/deferred work documented.
-- [ ] Post-merge `main` CI passes.
+- [x] Implementation PR merged: Unity PR #46.
+- [x] Required tests and Unity Foundation CI exact-head pass: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27502389529.
+- [x] PlayMode evidence exists under `production/evidence/STORY-CMD-005/`.
+- [x] No unauthorized command mechanics or broader Operations scope added.
+- [x] Omissions/deferred work documented.
+- [x] Post-merge `main` CI passes: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27502711745.

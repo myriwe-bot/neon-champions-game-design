@@ -674,3 +674,14 @@
 - Promoted `STORY-CMD-005 Champion Command Explanation Pass` to READY / approved as the next implementation packet, recording the user request to merge QA-007 and prepare the next implementation packet as delegated approval for this immediate repair-train follow-up.
 - Created current Codex prompt `production/sprints/codex-story-cmd-005.prompt.txt` and repointed run prompts.
 - Updated the Unity repo current-task pointer on `main` to `STORY-CMD-005` as commit `fe480605a901fcab6a4407e19746891f52bfbc93`; Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27500803658.
+
+## [2026-06-14] merge-and-gate-next | STORY-CMD-005 merged; objective direction guarded
+
+- Reviewed Unity PR #46 for `STORY-CMD-005 Champion Command Explanation Pass`.
+- Independent review found stale/non-specific CI evidence; fixed `production/evidence/STORY-CMD-005/README.md`, pushed an evidence clarification commit, and recorded final exact-head CI in the PR gate comment.
+- Verified PR exact-head Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27502389529.
+- Squash-merged PR #46 to Unity `main` as `b89b02d568c67b70dcead1cfcae90ee9f937d3cd`.
+- Verified post-merge `main` Unity Foundation CI success at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27502711745.
+- Marked `STORY-CMD-005` DONE / merged.
+- Expanded `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction` only to READY-candidate / approval pending with Ambiguity Check FAIL; objective-rule design remains unapproved.
+- Created guarded non-runnable prompt `production/sprints/codex-story-strat-objective-001.prompt.txt` and updated run prompts to say no Unity implementation packet is currently approved.

@@ -62,15 +62,15 @@ approval: approved
 
 ## Recommended mode
 
-`STORY-CMD-005 Champion Command Explanation Pass` is the current READY / approved Unity implementation packet.
+No Unity implementation packet is currently READY / approved. `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction` is only READY-candidate / approval pending with a guarded, non-runnable prompt.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, and `STORY-QA-007` are DONE / merged. Human closeout rejected EPIC-005 readability; `STORY-CMD-005` is authorized next as the command explanation repair story.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, and `STORY-CMD-005` are DONE / merged. Human closeout rejected EPIC-005 readability; the named objective-contest follow-up is approval-pending design work, not authorized implementation.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt file: `production/sprints/codex-story-cmd-005.prompt.txt`.
+Current approved prompt file: none. Guarded non-runnable next-review prompt: `production/sprints/codex-story-strat-objective-001.prompt.txt`.
 
 ## Windows PowerShell preflight
 
@@ -91,21 +91,21 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-Run these PowerShell commands from `C:\Users\NordicGamer\CodexProjects\neon-champions-unity` after the preflight above is clean.
+There is no runnable implementation command yet. The guarded prompt below exists only to self-block until `STORY-STRAT-OBJECTIVE-001` is approved.
 
 Set the prompt:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-cmd-005.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-objective-001.prompt.txt"
 ```
 
-Workspace-write mode:
+Guarded workspace-write check, expected to stop until approval:
 
 ```powershell
 codex exec --sandbox workspace-write $prompt
 ```
 
-Danger-full-access mode, only if you intentionally want unrestricted local writes/network for this trusted repo run:
+Guarded danger-full-access check, expected to stop until approval:
 
 ```powershell
 codex exec --sandbox danger-full-access $prompt
@@ -155,11 +155,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-cmd-004.prompt.txt`
 - `production/sprints/codex-story-qa-006.prompt.txt`
 - `production/sprints/codex-story-qa-007.prompt.txt`
-
-Current approved prompt:
-
 - `production/sprints/codex-story-cmd-005.prompt.txt`
+
+Guarded / not currently approved prompt:
+
+- `production/sprints/codex-story-strat-objective-001.prompt.txt`
 
 ## After Codex finishes
 
-Review the `STORY-CMD-005` PR against the story contract, the human playtest complaints, required tests, PlayMode evidence, exact-head Unity Foundation CI, omissions section, and scope boundaries before merge. Do not add new command mechanics, full Operations UI, objective redesign, strategic AI, fog/stealth, new battle mechanics, final content, or EPIC-005 closeout decisions.
+Do not run Codex implementation until the human approves the next direction. To promote `STORY-STRAT-OBJECTIVE-001`, first choose the objective rule shape and update the story to `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.

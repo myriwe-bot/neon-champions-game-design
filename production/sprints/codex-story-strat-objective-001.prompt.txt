@@ -1,0 +1,26 @@
+GUARDED / NOT RUNNABLE YET: STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction.
+
+STOP unless all are true in the design/control repo:
+
+- production/stories/story-strat-objective-001-multi-turn-objective-contest-direction.md has `status: ready`.
+- The same story has `approval: approved`.
+- Its Ambiguity Check says `Status: PASS`.
+- The story records the approved objective rule shape: countdown, defense waves, contest/control points, or clarity-only warning.
+- The story has final testable acceptance criteria and out-of-scope boundaries.
+
+Current state on 2026-06-14:
+
+- The story is READY-candidate / approval pending.
+- Ambiguity Check is FAIL.
+- No Unity implementation is authorized.
+
+If any preflight condition fails, do not edit Unity code. Report exactly which approval/design blocker remains.
+
+Once promoted to READY by a later design-control commit, this prompt should be replaced with a story-specific runnable prompt containing:
+
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-STRAT-OBJECTIVE-001-multi-turn-objective-contest-direction
+- PR title: STORY-STRAT-OBJECTIVE-001 Multi-turn objective contest direction
+- Required reading: approved story, strategic-map GDD objective sections, control manifest, testing strategy, CI/build automation, and relevant prior objective stories.
+- Verification: git diff --check, focused EditMode/PlayMode tests, evidence under production/evidence/STORY-STRAT-OBJECTIVE-001/, and Unity Foundation CI exact-head.

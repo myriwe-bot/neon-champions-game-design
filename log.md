@@ -673,3 +673,4 @@
 - Marked `STORY-QA-007` DONE / merged.
 - Promoted `STORY-CMD-005 Champion Command Explanation Pass` to READY / approved as the next implementation packet, recording the user request to merge QA-007 and prepare the next implementation packet as delegated approval for this immediate repair-train follow-up.
 - Created current Codex prompt `production/sprints/codex-story-cmd-005.prompt.txt` and repointed run prompts.
+- Updated the Unity repo current-task pointer on `main` to `STORY-CMD-005` as commit `fe480605a901fcab6a4407e19746891f52bfbc93`; Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27500803658.

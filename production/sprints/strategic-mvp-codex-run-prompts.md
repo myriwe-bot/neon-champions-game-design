@@ -54,6 +54,7 @@ related:
     production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass,
     production/stories/story-qa-007-champion-encounter-initiation-clarity,
     production/stories/story-cmd-005-champion-command-explanation-pass,
+    production/stories/story-strat-objective-001-multi-turn-objective-contest-direction,
   ]
 approval: approved
 ---
@@ -62,15 +63,15 @@ approval: approved
 
 ## Recommended mode
 
-No Unity implementation packet is currently READY / approved. `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction` is only READY-candidate / approval pending with a guarded, non-runnable prompt.
+Current READY / approved Unity implementation packet: `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction`. Use the checked-in prompt file `production/sprints/codex-story-strat-objective-001.prompt.txt`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, and `STORY-CMD-005` are DONE / merged. Human closeout rejected EPIC-005 readability; the named objective-contest follow-up is approval-pending design work, not authorized implementation.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, and `STORY-CMD-005` are DONE / merged. Human approved Option 1 for `STORY-STRAT-OBJECTIVE-001`; Codex is authorized to implement the narrow two-turn central-objective hold countdown.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt file: none. Guarded non-runnable next-review prompt: `production/sprints/codex-story-strat-objective-001.prompt.txt`.
+Current approved prompt file: `production/sprints/codex-story-strat-objective-001.prompt.txt`.
 
 ## Windows PowerShell preflight
 
@@ -91,7 +92,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-There is no runnable implementation command yet. The guarded prompt below exists only to self-block until `STORY-STRAT-OBJECTIVE-001` is approved.
+Run the approved prompt below for `STORY-STRAT-OBJECTIVE-001`.
 
 Set the prompt:
 
@@ -99,13 +100,13 @@ Set the prompt:
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-objective-001.prompt.txt"
 ```
 
-Guarded workspace-write check, expected to stop until approval:
+Normal workspace-write run:
 
 ```powershell
 codex exec --sandbox workspace-write $prompt
 ```
 
-Guarded danger-full-access check, expected to stop until approval:
+Trusted-repo fallback:
 
 ```powershell
 codex exec --sandbox danger-full-access $prompt
@@ -157,10 +158,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-007.prompt.txt`
 - `production/sprints/codex-story-cmd-005.prompt.txt`
 
-Guarded / not currently approved prompt:
+Current prompt-file run:
 
 - `production/sprints/codex-story-strat-objective-001.prompt.txt`
 
 ## After Codex finishes
 
-Do not run Codex implementation until the human approves the next direction. To promote `STORY-STRAT-OBJECTIVE-001`, first choose the objective rule shape and update the story to `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
+Codex should commit and push `story/STORY-STRAT-OBJECTIVE-001-multi-turn-objective-contest-direction`, open a PR if available, and include tests, evidence, CI URL, and omissions/deferred-work notes.

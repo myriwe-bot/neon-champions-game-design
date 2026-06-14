@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-13
@@ -20,16 +20,18 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction
 
 ## Status
 
-READY-candidate / approval pending. This is the next named concern after the EPIC-005 readability repair train, but it is design-heavy and is **not** authorized for Codex implementation until human approval resolves the objective rule choices below.
+READY / approved for implementation.
 
-`STORY-CMD-005` is DONE / merged. There is no current approved Unity implementation story after CMD-005.
+Human approval recorded on 2026-06-14: approve the recommended **Option 1 — narrow two-turn capture countdown**. This story may change central-objective victory timing from same-interaction/sneak capture toward the already-approved Strategic Map §13 hold-progress contract.
+
+`STORY-CMD-005` is DONE / merged. This is the next approved Unity implementation story.
 
 ## Human playtest source
 
@@ -42,57 +44,125 @@ The player reported:
 
 Preserve this complaint as first-class design authority. Do not turn it into generic “make objective harder”.
 
-## Design problem
+## Approved implementation shape
 
-The current objective is too binary for the intended fantasy of contested cyberpunk territorial struggle. The likely future direction is a multi-turn contest/capture process with clearer defenses, warnings, and counterplay.
+Implement the smallest real rule change: a visible two-turn central-objective hold countdown.
 
-## Candidate implementation value
+Authoritative rule shape:
 
-A future implementation story should make objective capture readable and contestable enough that a player can tell:
+1. Interacting with / claiming the central objective starts or confirms objective control/hold state for the acting faction; it must not silently win the scenario in the same interaction.
+2. The same faction must still control the central objective at a later own-turn objective check before objective victory resolves.
+3. The working default is Strategic Map §13’s approved value: `objectiveHoldRequired = 2` consecutive own-turn checks.
+4. Scenario definitions/state should store the required count rather than hardcoding victory to an immediate capture.
+5. Objective hold progress, controlling/holding faction, remaining checks/turns, and reset/interruption reason must be visible in the strategic HUD/status/result feedback.
+6. If another faction controls or contests the objective before the next valid check, prior progress resets for MVP.
+7. Champion defeat victory still has priority over objective hold victory after battle/result application.
 
-- who is contesting or controlling the objective;
-- how close capture is;
-- what defense or counterplay window remains;
-- why capture did or did not complete.
+## Source authority
 
-## Approval choices required before READY
+Approved implementation sources:
 
-Choose exactly one first implementation shape:
+- `design/gdd/strategic-map.md` §10 Site and Infrastructure States, especially site preview/control/guarded/contested state rules.
+- `design/gdd/strategic-map.md` §13 Turn/Scenario/Victory Structure, especially:
+  - start-of-faction-turn objective check;
+  - central objective hold victory;
+  - working default of 2 consecutive own-turn checks;
+  - objective hold state fields;
+  - objective control contract and reset visibility.
+- `docs/architecture/control-manifest.md` §§1, 2, 4, 5, 6, 7, 9, 10.
+- `docs/architecture/testing-strategy.md`.
+- `docs/architecture/ci-build-automation.md`.
 
-1. **Two-turn capture countdown** — interacting with the objective starts a visible capture state; the same faction must hold/confirm on a later turn to win. Smallest likely implementation.
-2. **Round-based defense waves** — capture triggers one or more required defensive tactical encounters before victory. More dramatic, but larger and riskier.
-3. **Contest/control-points model** — factions accumulate or interrupt objective progress over multiple turns. More systemic, best saved for a larger strategic-objective epic.
-4. **Clarity-only guard state** — do not change capture timing yet; only make guarded/unguarded and “capture would win now” warnings explicit. Safest if we want another UI repair before rule changes.
+Prior objective stories are context and regression surface, not permission to keep immediate objective victory if that contradicts this READY story.
 
-Recommended next approval: Option 1, a narrow two-turn capture countdown, because it directly addresses “sneak capture” while staying small enough for one implementation branch.
+## In scope
 
-## Not ready because
+- Runtime state/support for central-objective hold progress using stable fields equivalent to:
+  - objective site ID;
+  - holding/controlling faction ID;
+  - hold progress;
+  - required hold count.
+- Strategic rules so central objective capture/control starts or advances a countdown instead of same-interaction victory.
+- Start-of-own-turn objective progress/victory evaluation consistent with Strategic Map §13.
+- Reset/interrupt behavior when the objective becomes controlled/contested by the other faction before the holder completes the countdown.
+- Strategic HUD/status/result text that tells the player:
+  - who controls or is holding the objective;
+  - current progress and required progress;
+  - how many own-turn checks remain;
+  - that the opponent has a counterplay window;
+  - why progress reset or did not advance.
+- Focused EditMode/PlayMode tests and evidence proving the countdown, reset, and visible feedback.
 
-- Needs human choice among countdown, defense waves, control points, or clarity-only warning.
-- Needs explicit decision on whether the story changes victory timing or only previews danger.
-- Needs interaction rules for interruption: enemy presence, enemy capture, leaving the node, or end-turn ownership.
-- Needs GDD/control wording before implementation so Codex does not invent strategic objective design.
+## Out of scope
 
-## Candidate future acceptance ideas
+- No round-based defense waves.
+- No multi-objective control-points system.
+- No scoring/race victory mode.
+- No new tactical battle modes, tactical objective redesign, or tactical AI behavior.
+- No strategic AI.
+- No fog/stealth/hidden objective state.
+- No new map layout or final art/VFX/audio.
+- No campaign persistence/save-load format expansion beyond serializable state fields needed by this story.
+- No Champion recovery/revival/capture rules.
+- No broader economy, Intel, Operations, Command, recruitment, or faction-specific objective rules.
 
-These are not final acceptance criteria until the rule shape is approved:
+## Allowed placeholders / assumptions
 
-- Objective state shows capture progress, owner/contester, and turns remaining.
-- Capture cannot complete silently in one interaction unless explicitly designed as a special case.
-- Opponent receives readable warning/counterplay opportunity.
-- Defenses/guards are visible before commitment.
-- Invalid or interrupted capture attempts explain why and do not partially mutate hidden state.
+- Use clear prototype UI text instead of final narrative copy.
+- Use existing strategic HUD/status/result presentation surfaces where practical; do not build a full objective panel unless needed for readability.
+- The first scenario may use the existing central objective site and a default required hold count of 2 from data/configuration.
+- If the current runtime lacks fully separate `contested` state, implement the smallest equivalent interruption/reset behavior and label the limitation in evidence; do not invent a full contest/control-points model.
+
+## Acceptance criteria
+
+- Capturing/interacting with the central objective no longer wins immediately from the same interaction alone.
+- The objective records visible hold progress for the acting/controlling faction.
+- At the next valid own-turn objective check, holding the objective advances progress and only wins when required progress is met.
+- `objectiveHoldRequired` is data/state driven for the scenario, with working default 2.
+- If the opposing faction takes/control-contests the objective before completion, prior holder progress resets and the UI/result feedback explains the reset or interruption.
+- Champion defeat victory remains immediate priority after battle/result application and is not delayed by objective countdown logic.
+- Strategic HUD/status/result feedback shows controlling/holding faction, progress, turns/checks remaining, and opponent counterplay window.
+- Invalid or unavailable objective interactions explain why and do not partially mutate hidden objective progress.
+- Existing objective, Champion encounter, guarded-site, command explanation, and loop smoke behavior is not regressed outside the approved objective timing change.
+
+## Evidence requirements
+
+Implementation PR must include `production/evidence/STORY-STRAT-OBJECTIVE-001/README.md` with:
+
+- tests run;
+- exact-head Unity Foundation CI URL;
+- screenshots/PNG evidence or equivalent PlayMode evidence showing:
+  1. initial objective capture/hold progress without immediate victory;
+  2. start-of-own-turn progress/victory countdown state;
+  3. opponent reset/interruption or counterplay feedback;
+  4. final objective victory only after the required hold progress;
+- omissions/deferred-work section, or `No known omissions`.
+
+## Branch / PR
+
+- Branch: `story/STORY-STRAT-OBJECTIVE-001-multi-turn-objective-contest-direction`
+- PR title: `STORY-STRAT-OBJECTIVE-001 Multi-turn objective contest direction`
+- One READY story per branch. Do not bundle unrelated cleanup unless required to make this story pass its tests/evidence.
 
 ## Ambiguity Check
 
-Status: FAIL.
+Status: PASS.
 
-Blockers:
+Resolved decisions:
 
-- Objective capture rule shape is unapproved.
-- Victory timing and interruption semantics are unapproved.
-- Scope is not yet bounded enough for Codex implementation.
+- Objective rule shape: Option 1, two-turn capture countdown.
+- Victory timing: objective victory requires later own-turn hold progress; not same-interaction sneak capture.
+- Interruption default: opposing control/contest before completion resets prior progress for MVP.
+- Scope boundary: no defense waves, no control-points system, no broader objective redesign.
 
-## Guarded prompt status
+## Readiness gate
 
-A guarded prompt exists at `production/sprints/codex-story-strat-objective-001.prompt.txt`, but it must self-block unless this story is promoted to `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
+- [x] Story status is READY.
+- [x] Human approval is recorded.
+- [x] Source authority is approved or narrowly scoped.
+- [x] Acceptance criteria are testable.
+- [x] Non-goals and placeholders are explicit.
+- [x] Evidence requirements are explicit.
+- [x] Branch/PR guidance is explicit.
+
+Verdict: READY for Codex implementation.

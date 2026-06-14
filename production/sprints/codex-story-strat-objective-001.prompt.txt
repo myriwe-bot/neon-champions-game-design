@@ -1,26 +1,105 @@
-GUARDED / NOT RUNNABLE YET: STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction.
+Implement STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction.
 
-STOP unless all are true in the design/control repo:
+PREFLIGHT — stop unless all are true in the design/control repo:
 
-- production/stories/story-strat-objective-001-multi-turn-objective-contest-direction.md has `status: ready`.
-- The same story has `approval: approved`.
-- Its Ambiguity Check says `Status: PASS`.
-- The story records the approved objective rule shape: countdown, defense waves, contest/control points, or clarity-only warning.
-- The story has final testable acceptance criteria and out-of-scope boundaries.
+- production/stories/story-strat-objective-001-multi-turn-objective-contest-direction.md has `status: ready` and `approval: approved`.
+- The story records approved Option 1: narrow two-turn capture countdown.
+- Ambiguity Check says `Status: PASS`.
+- production/stories/story-cmd-005-champion-command-explanation-pass.md is DONE / merged.
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md remains approved / playability repair active.
 
-Current state on 2026-06-14:
-
-- The story is READY-candidate / approval pending.
-- Ambiguity Check is FAIL.
-- No Unity implementation is authorized.
-
-If any preflight condition fails, do not edit Unity code. Report exactly which approval/design blocker remains.
-
-Once promoted to READY by a later design-control commit, this prompt should be replaced with a story-specific runnable prompt containing:
-
+Implementation target:
 - Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 - Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 - Branch: story/STORY-STRAT-OBJECTIVE-001-multi-turn-objective-contest-direction
 - PR title: STORY-STRAT-OBJECTIVE-001 Multi-turn objective contest direction
-- Required reading: approved story, strategic-map GDD objective sections, control manifest, testing strategy, CI/build automation, and relevant prior objective stories.
-- Verification: git diff --check, focused EditMode/PlayMode tests, evidence under production/evidence/STORY-STRAT-OBJECTIVE-001/, and Unity Foundation CI exact-head.
+
+Required reading before editing:
+- production/stories/story-strat-objective-001-multi-turn-objective-contest-direction.md
+- production/sprints/epic-005-playability-repair-train.md
+- production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp.md
+- production/stories/story-obj-001-scenario-objective-state-and-victory-feedback.md
+- production/stories/story-obj-002-guarded-site-defender-strength-tiers.md
+- production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md
+- design/gdd/strategic-map.md §10 Site and Infrastructure States
+- design/gdd/strategic-map.md §13 Turn/Scenario/Victory Structure
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- Human playtest says objective capture is too easy and can be “snuck”.
+- Implement the smallest real fix: central objective capture/hold must be visibly multi-turn.
+- Align with Strategic Map §13: central objective hold victory requires 2 consecutive own-turn checks by default, stored as scenario/state data rather than hardcoded immediate victory.
+- The same faction must still control/hold the objective at a later own-turn check before objective victory resolves.
+
+In scope:
+- Runtime state/support for central-objective hold progress:
+  - central objective site ID;
+  - holding/controlling faction ID;
+  - current hold progress;
+  - required hold progress, default 2.
+- Strategic rules so objective interaction/control starts or advances visible hold state instead of immediate same-interaction victory.
+- Start-of-own-turn objective progress and victory evaluation.
+- Reset/interruption behavior when the opposing faction takes or contests the objective before completion.
+- Strategic HUD/status/result text showing:
+  - controlling/holding faction;
+  - current progress and required progress;
+  - turns/checks remaining;
+  - opponent counterplay window;
+  - why progress reset or did not advance.
+- Tests and PlayMode/evidence for countdown, reset/interruption, and final victory after required progress.
+
+Out of scope:
+- No round-based defense waves.
+- No multi-objective control-points system.
+- No score/race victory mode.
+- No new tactical battle modes, tactical objective redesign, or tactical AI behavior.
+- No strategic AI.
+- No fog/stealth/hidden objective state.
+- No new map layout, final art, icons, VFX, audio, or animation.
+- No campaign persistence/save-load format expansion beyond serializable state fields needed here.
+- No Champion recovery/revival/capture rules.
+- No broader economy, Intel, Operations, Command, recruitment, or faction-specific objective rules.
+
+Allowed placeholders / assumptions:
+- Use clear prototype UI text, not final lore copy.
+- Use existing strategic HUD/status/result presentation surfaces where practical.
+- Existing central objective site may be used with default required hold count 2.
+- If the current runtime lacks a full `contested` state, implement the smallest equivalent reset/interruption behavior and document the limitation in evidence; do not invent a full control-points model.
+
+Acceptance criteria:
+- Capturing/interacting with the central objective no longer wins immediately from the same interaction alone.
+- Objective hold progress is recorded and visible for the acting/controlling faction.
+- Start-of-own-turn objective checks advance progress and only win when required progress is met.
+- `objectiveHoldRequired` is data/state driven for the scenario, with working default 2.
+- Opposing control/contest before completion resets prior progress and explains the reset/interruption in feedback.
+- Champion defeat victory remains immediate priority after battle/result application.
+- Strategic HUD/status/result feedback shows holder/controller, progress, remaining checks/turns, and counterplay window.
+- Invalid or unavailable objective interactions explain why and do not partially mutate hidden objective progress.
+- Existing objective, Champion encounter, guarded-site, command explanation, and loop smoke behavior is not regressed outside the approved objective timing change.
+
+Verification expected before PR:
+- `git diff --check`
+- Relevant EditMode tests for objective progress, required count, reset/interruption, no immediate victory, and Champion-defeat priority
+- Relevant PlayMode smoke/evidence for visible objective countdown and final victory
+- Existing objective, Champion encounter, guarded-site, command explanation, and loop smoke tests remain green
+- Unity Foundation CI exact-head
+
+Evidence package:
+- Create `production/evidence/STORY-STRAT-OBJECTIVE-001/README.md`.
+- Include PNG evidence or equivalent PlayMode evidence for:
+  1. initial objective capture/hold progress without immediate victory;
+  2. start-of-own-turn progress/countdown state;
+  3. opponent reset/interruption or counterplay feedback;
+  4. final objective victory only after required hold progress.
+- README must include tests run, CI URL, omissions/deferred work, and confirmation that defense waves/control-points/broader objective redesign were not added.
+
+PR requirements:
+- Link `STORY-STRAT-OBJECTIVE-001`.
+- Link required GDD/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

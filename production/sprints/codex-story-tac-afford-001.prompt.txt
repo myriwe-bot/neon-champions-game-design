@@ -1,0 +1,50 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Implement exactly this READY story:
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Story: production/stories/story-tac-afford-001-movement-and-attack-affordance-pass.md
+- Parent epic: production/epics/epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency.md
+
+Branch:
+- story/STORY-TAC-AFFORD-001-movement-attack-affordance-pass
+
+Before coding:
+1. Read Unity root AGENTS.md and every scoped AGENTS.md under touched directories.
+2. Read the story completely, then read all linked source docs in the story.
+3. Confirm main includes STORY-TAC-READ-002 and STORY-TAC-RET-001.
+4. Keep scope narrow: tactical movement/attack affordance clarity only.
+
+Implementation authority:
+- Improve visible tactical affordance data for the active stack: movement range, attack range, current coordinate, legal move destinations, legal attack targets, and nearby blocked/occupied/non-attackable context where practical.
+- Improve tactical board/side-panel/readable overlay wording so players can distinguish legal move hexes, occupied/blocked hexes, legal attack targets, and enemies that exist but are not currently attackable.
+- Improve concrete denial feedback for occupied moves, out-of-range moves, out-of-range attacks, same-side targets, and missing/defeated targets.
+- Add focused tests and evidence under production/evidence/STORY-TAC-AFFORD-001/ in the Unity repo.
+
+Hard exclusions:
+- No AP economy.
+- No Defend armor/bonus.
+- No Zone of Control/opportunity attacks/Overwatch.
+- No cover, LOS, terrain bonuses, range falloff, movement animation, path preview, or pathfinding redesign.
+- No CombatAI.
+- No unit roster/stat expansion, final names, balance pass, damage types, armor, shields, morale, strategic-map/base/recruitment changes, final art/VFX/audio.
+
+Expected technical targets (verify exact names in code before editing):
+- Presentation/application: TacticalBoardPresentationSnapshot, StrategicMapInputSession, StrategicMapBootstrap.
+- Tactical domain only if a denial/no-mutation edge case needs an actual bug fix; do not change combat rules for presentation convenience.
+- Tests: EditMode tactical/presentation tests and focused PlayMode smoke in PlayModeSmokeTests.
+
+Required verification before PR:
+- Focused EditMode tests covering active-stack range/coordinate/affordance snapshot text and denial feedback/no-mutation cases.
+- Focused PlayMode test/evidence showing legal move affordances, legal attack affordances, and at least one concrete denial explanation.
+- Full .\ci\RunEditModeTests.ps1.
+- Full .\ci\RunPlayModeTests.ps1.
+- .\ci\RunPlaceholderValidator.ps1.
+- git diff --check.
+- Unity Foundation CI exact-head success before merge.
+
+PR requirements:
+- Title: STORY-TAC-AFFORD-001 Movement and attack affordance pass
+- Body must include: linked story/docs, summary, tests/checks, evidence paths, CI URL, and omissions/deferred work.
+- Explicitly state that AP, Defend bonus, ZoC, Overwatch, CombatAI, unit roster/stat expansion, strategic-map changes, and final art/content remain omitted.
+
+Stop and ask only if implementation requires changing story scope or making an unapproved design decision.

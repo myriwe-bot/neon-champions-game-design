@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-RET-001 Minimal Melee Retaliation
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-15
@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human direction: defenders must get to answer; current prototype feels attacker-only. Implement the first narrow defender-agency step after `STORY-TAC-READ-002` made tactical actions readable.
+DONE / merged. Human direction: defenders must get to answer; current prototype felt attacker-only. Unity PR #49 merged 2026-06-15 as squash commit `cfc24e04c53da0a6917b0117452c72a230ef9a84`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27552604744
 
 ## Story type
 
@@ -208,16 +208,16 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. This story is the only current implementation authority from EPIC-006 after `STORY-TAC-READ-002`.
+DONE / merged. This story established minimal defender retaliation. Next authorized child story: `STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass`.

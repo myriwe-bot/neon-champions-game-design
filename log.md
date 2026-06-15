@@ -732,3 +732,16 @@
 - Created `production/stories/story-tac-ret-001-minimal-melee-retaliation.md` as the next READY / approved EPIC-006 implementation packet.
 - Created `production/sprints/codex-story-tac-ret-001.prompt.txt` for Codex execution.
 - Scope is intentionally narrow: adjacent surviving defender retaliation, once-per-minimal-cycle availability, readable event-feed output, tests/evidence/CI; excludes AP, Defend bonus, ZoC, Overwatch, CombatAI, unit roster/stat expansion, and final art/content.
+
+## [2026-06-15] merge | STORY-TAC-RET-001 minimal melee retaliation
+
+- Reviewed and merged Unity PR #49 for `STORY-TAC-RET-001 Minimal Melee Retaliation`.
+- Squash merge commit: `cfc24e04c53da0a6917b0117452c72a230ef9a84`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27552604744
+- Marked `STORY-TAC-RET-001` DONE and updated EPIC-006 child-story status.
+
+## [2026-06-15] approve | STORY-TAC-AFFORD-001 movement and attack affordance pass
+
+- Created `production/stories/story-tac-afford-001-movement-and-attack-affordance-pass.md` as the next READY / approved EPIC-006 implementation packet.
+- Created `production/sprints/codex-story-tac-afford-001.prompt.txt` for Codex execution.
+- Scope is intentionally narrow: visible movement range, attack range, current coordinate, legal move/attack affordances, blocked/non-attackable context, and denial feedback; excludes AP, Defend bonus, ZoC, Overwatch, CombatAI, unit roster/stat expansion, strategic-map changes, and final art/content.

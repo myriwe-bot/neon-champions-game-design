@@ -94,7 +94,8 @@
 - [[production/stories/story-qa-007-champion-encounter-initiation-clarity]] — DONE Champion encounter clarity story.
 - [[production/stories/story-cmd-005-champion-command-explanation-pass]] — DONE command explanation story.
 - [[production/stories/story-strat-objective-001-multi-turn-objective-contest-direction]] — DONE merged objective contest countdown story.
-- [[production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed]] — READY / approved first story for EPIC-006 tactical stack labels and HoMM-like combat event feed.
+- [[production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed]] — DONE / merged first EPIC-006 tactical stack labels and HoMM-like combat event feed story.
+- [[production/stories/story-tac-ret-001-minimal-melee-retaliation]] — READY / approved next EPIC-006 story for minimal melee retaliation and defender agency.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

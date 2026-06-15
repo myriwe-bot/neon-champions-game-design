@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-READ-002 Tactical Stack Labels and Combat Event Feed
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-15
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-15: begin `EPIC-VSLICE-MVP-006 Tactical Battle Readability and Defender Agency` with tactical stack labels and a HoMM-like combat event feed.
+DONE / merged. Human approval recorded 2026-06-15. Unity PR #48 merged 2026-06-15 as squash commit `2c22667532ccc64e0fe746030fd33707c2edd682`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27543258160
 
 ## Story type
 
@@ -205,16 +205,16 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. This story is the only current implementation authority from EPIC-006.
+DONE / merged. This story established the tactical readability baseline for stack labels and combat event-feed wording. Next authorized child story: `STORY-TAC-RET-001 Minimal Melee Retaliation`.

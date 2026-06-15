@@ -1,0 +1,53 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Implement exactly this READY story:
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Story: production/stories/story-tac-ret-001-minimal-melee-retaliation.md
+- Parent epic: production/epics/epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency.md
+
+Branch:
+- story/STORY-TAC-RET-001-minimal-melee-retaliation
+
+Before coding:
+1. Read Unity root AGENTS.md and every scoped AGENTS.md under touched directories.
+2. Read the story completely, then read all linked source docs in the story.
+3. Confirm the currently merged baseline includes STORY-TAC-READ-002 on main.
+4. Keep scope narrow: minimal melee retaliation only.
+
+Implementation authority:
+- Add minimal immediate melee retaliation after a legal adjacent standard attack when the target survives and has retaliation available.
+- Use current placeholder damage/count rules; do not design a new damage formula.
+- Add result data and event-feed text so the visible feed says the primary attack and retaliation with counts/defeat.
+- Add tests and evidence under production/evidence/STORY-TAC-RET-001/ in the Unity repo.
+
+Hard exclusions:
+- No AP economy.
+- No Defend bonus.
+- No Zone of Control/opportunity attacks/Overwatch.
+- No CombatAI.
+- No unit roster/stat expansion, final names, balance pass, damage types, armor, shields, cover, LOS, terrain, save/load, strategic-map/base/recruitment changes, final art/VFX/audio.
+
+Expected technical targets (verify exact names in code before editing):
+- Tactical domain: TacticalBoardState / TacticalBattleCommandSession / TacticalActionResult / TacticalCommandResult.
+- Presentation/event feed: StrategicMapInputSession and TacticalBoardPresentationSnapshot/StrategicMapBootstrap only if needed for display.
+- Tests: EditMode tactical tests and focused PlayMode smoke in PlayModeSmokeTests.
+
+Required verification before PR:
+- Focused EditMode tests covering:
+  - surviving defender retaliates immediately;
+  - defeated defender does not retaliate;
+  - once-per-cycle/minimal availability prevents repeated retaliation until the documented refresh point;
+  - counts/defeat/battle completion stay deterministic.
+- Focused PlayMode test/evidence showing visible attack + retaliation feed.
+- Full .\ci\RunEditModeTests.ps1.
+- Full .\ci\RunPlayModeTests.ps1.
+- .\ci\RunPlaceholderValidator.ps1.
+- git diff --check.
+- Unity Foundation CI exact-head success before merge.
+
+PR requirements:
+- Title: STORY-TAC-RET-001 Minimal melee retaliation
+- Body must include: linked story/docs, summary, tests/checks, evidence paths, CI URL, and omissions/deferred work.
+- Explicitly state that AP, Defend bonus, ZoC, Overwatch, CombatAI, unit roster/stat expansion, and final art/content remain omitted.
+
+Stop and ask only if implementing retaliation requires changing story scope or making an unapproved design decision.

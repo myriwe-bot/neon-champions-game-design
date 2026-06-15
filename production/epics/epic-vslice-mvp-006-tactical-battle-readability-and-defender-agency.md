@@ -15,6 +15,7 @@ related:
     design/research/homm-like-tactical-battle-ui-reference,
     production/planning/prototype-readability-and-map-next-steps-2026-06-15,
     production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed,
+    production/stories/story-tac-ret-001-minimal-melee-retaliation,
     docs/architecture/control-manifest,
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
@@ -26,7 +27,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PRODUCTION. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. First READY child story: `STORY-TAC-READ-002 Tactical Stack Labels and Combat Event Feed`.
+APPROVED / IN PRODUCTION. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. `STORY-TAC-READ-002` is DONE / merged; current READY child story: `STORY-TAC-RET-001 Minimal Melee Retaliation`.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -123,8 +124,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-TAC-READ-002 Tactical Stack Labels and Combat Event Feed](../stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed.md) | READY / approved | Tactical UI + Playability Repair | EPIC-005 repair train DONE; current prototype tactical combat | EditMode/PlayMode, PNG evidence showing stack labels and attack event feed |
-| STORY-TAC-RET-001 Minimal Melee Retaliation | Draft target | Tactical Rules + UI | TAC-READ-002 DONE | Retaliation tests and event-feed evidence |
+| [STORY-TAC-READ-002 Tactical Stack Labels and Combat Event Feed](../stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed.md) | DONE / merged | Tactical UI + Playability Repair | EPIC-005 repair train DONE; current prototype tactical combat | Unity PR #48; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27543258160 |
+| [STORY-TAC-RET-001 Minimal Melee Retaliation](../stories/story-tac-ret-001-minimal-melee-retaliation.md) | READY / approved | Tactical Rules + UI | TAC-READ-002 DONE | Retaliation tests and event-feed evidence |
 | STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass | Draft target | Tactical UI | TAC-READ-002, likely TAC-RET-001 | Legal move/attack target evidence |
 | STORY-TAC-UNIT-001 Minimal Unit Definition Stats | Draft target | Data + Tactical Domain | readability and affordance baseline | Unit-definition tests and tactical setup evidence |
 | STORY-TAC-AP-001 Minimal Tactical AP and Defend State | Draft target | Tactical Rules + UI | unit/stat baseline or accepted prototype exception | AP spend/Defend tests and evidence |
@@ -196,4 +197,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PRODUCTION. Implement `STORY-TAC-READ-002` first. Do not start retaliation, AP, unit data, or AI work until the relevant child story is promoted to READY.
+APPROVED / IN PRODUCTION. `STORY-TAC-READ-002` is DONE / merged. Implement `STORY-TAC-RET-001` next. Do not start AP, unit data, AI, ZoC, Overwatch, Defend bonus, or strategic-map work until the relevant child story is promoted to READY.

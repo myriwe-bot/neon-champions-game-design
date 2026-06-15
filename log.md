@@ -719,3 +719,16 @@
 - Created approved `production/epics/epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md`, sequenced after the tactical readability baseline.
 - Created READY / approved `production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed.md` as the only current Unity implementation authority.
 - Added checked-in Codex prompt `production/sprints/codex-story-tac-read-002.prompt.txt` and updated `index.md`.
+
+## [2026-06-15] merge | STORY-TAC-READ-002 tactical readability baseline
+
+- Reviewed and merged Unity PR #48 for `STORY-TAC-READ-002 Tactical Stack Labels and Combat Event Feed`.
+- Squash merge commit: `2c22667532ccc64e0fe746030fd33707c2edd682`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27543258160
+- Marked `STORY-TAC-READ-002` DONE and updated EPIC-006 child-story status.
+
+## [2026-06-15] approve | STORY-TAC-RET-001 minimal melee retaliation
+
+- Created `production/stories/story-tac-ret-001-minimal-melee-retaliation.md` as the next READY / approved EPIC-006 implementation packet.
+- Created `production/sprints/codex-story-tac-ret-001.prompt.txt` for Codex execution.
+- Scope is intentionally narrow: adjacent surviving defender retaliation, once-per-minimal-cycle availability, readable event-feed output, tests/evidence/CI; excludes AP, Defend bonus, ZoC, Overwatch, CombatAI, unit roster/stat expansion, and final art/content.

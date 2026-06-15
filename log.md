@@ -703,3 +703,10 @@
 - Marked `STORY-STRAT-OBJECTIVE-001` DONE / merged and updated EPIC-005 repair-train status.
 - Cleared current Codex run prompts: no next Unity implementation packet is approved until human closeout review or a new READY story direction.
 - Unity current-task pointer cleared on main as `272fe543bc496ff729cfb428599e4e553e685979`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27531270885
+
+## [2026-06-15] add | Prototype readability and HoMM-like map references
+
+- Added `design/research/homm-like-tactical-battle-ui-reference.md` with tactical readability references for HoMM3, Olden Era, and Songs of Conquest: stack counts, event-feed language, movement/attack affordances, Defend, and retaliation.
+- Added `design/research/homm-like-strategic-map-topology-reference.md` with strategic/adventure-map topology references: H3 square-tile adventure map, Olden Era/Songs modern HoMM-like map expectations, King's Bounty as anti-reference, and a recommended region/site transition path.
+- Added `production/planning/prototype-readability-and-map-next-steps-2026-06-15.md` recommending a readability-first implementation order: tactical stack labels/event feed, minimal melee retaliation, movement/attack affordances, unit definitions, AP/Defend, neutral AI, strategic readability, bases, then region/site map evolution.
+- Updated `index.md` links.

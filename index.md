@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-14
+> Last updated: 2026-06-15
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -43,6 +43,8 @@
 
 - [[design/research/commander-spellbook-reference]] — commander/spellbook/operations reference research.
 - [[design/research/tactical-combat-deep-reference]] — preserved long-form tactical-combat packet history and rationale; reference only, not first-read implementation contract.
+- [[design/research/homm-like-tactical-battle-ui-reference]] — HoMM-like tactical battle UI/readability references: stack counts, event feed, movement/attack affordances, retaliation.
+- [[design/research/homm-like-strategic-map-topology-reference]] — HoMM-like strategic/adventure map topology references: node, region, tile/hex, bases, guarded sites.
 
 ## World Import Layer
 
@@ -52,6 +54,7 @@
 
 ## Production Planning
 
+- [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.
 - [[production/epics/epic-vslice-mvp-002-larger-map-bases-recruitment-minimal-tactical-combat]] — DONE larger map/bases/recruitment/minimal tactical combat vertical slice.

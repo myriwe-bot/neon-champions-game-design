@@ -82,17 +82,19 @@
 - [[production/stories/story-qa-004-playability-map-scale-zoom-and-ui-clarity-pass]] — DONE/merged playability pass for map scale, zoom/focus, overlapping labels, unobstructed buttons, and click/action clarity.
 - [[production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes]] — DONE objective, Champion combat path, defender tiers, and simple HP/strength casualty stakes epic.
 - [[production/epics/epic-vslice-mvp-004-intel-resource-on-ramp]] — DONE Intel resource on-ramp epic.
-- [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — APPROVED next epic for Champion Command and Operations.
+- [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — COMPLETE / human closeout accepted after repair train.
+- [[production/epics/epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency]] — APPROVED / IN PRODUCTION tactical battle readability and defender agency epic.
+- [[production/epics/epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation]] — APPROVED strategic map readability, bases, and spatial-presentation follow-up epic, sequenced after tactical readability baseline.
 - [[production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud]] — DONE first Champion Command story.
 - [[production/stories/story-cmd-002-first-marshal-and-operator-command-pair]] — DONE first active Marshal/Operator Command spending story.
 - [[production/stories/story-cmd-003-command-on-ramp-closeout-smoke]] — DONE Champion Command on-ramp closeout smoke story.
 - [[production/stories/story-cmd-004-tactical-command-usability-and-targeting-pass]] — DONE tactical command usability and targeting story.
-- [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — closeout rejected; playability repair active.
-- [[production/sprints/epic-005-playability-repair-train]] — approved repair train after human playtest.
+- [[production/sprints/epic-005-playability-repair-train]] — DONE repair train after human playtest.
 - [[production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass]] — DONE cross-mode state/action feedback readability story.
 - [[production/stories/story-qa-007-champion-encounter-initiation-clarity]] — DONE Champion encounter clarity story.
 - [[production/stories/story-cmd-005-champion-command-explanation-pass]] — DONE command explanation story.
 - [[production/stories/story-strat-objective-001-multi-turn-objective-contest-direction]] — DONE merged objective contest countdown story.
+- [[production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed]] — READY / approved first story for EPIC-006 tactical stack labels and HoMM-like combat event feed.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

@@ -1,0 +1,107 @@
+Implement STORY-TAC-READ-002 Tactical Stack Labels and Combat Event Feed.
+
+PREFLIGHT — stop unless all are true in the design/control repo:
+
+- production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed.md has `status: ready` and `approval: approved`.
+- The story Ambiguity Check says `Status: PASS`.
+- production/epics/epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency.md is approved / in production.
+- production/epics/epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md exists but has no READY child story yet.
+- Unity README current task pointer references STORY-TAC-READ-002, or if it does not, report that mismatch before editing.
+
+Implementation target:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-TAC-READ-002-tactical-stack-labels-event-feed
+- PR title: STORY-TAC-READ-002 Tactical stack labels and combat event feed
+
+Required reading before editing:
+- production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed.md
+- production/epics/epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency.md
+- design/research/homm-like-tactical-battle-ui-reference.md
+- production/planning/prototype-readability-and-map-next-steps-2026-06-15.md
+- design/gdd/tactical-combat.md
+- design/gdd/tactical-combat/army-deployment-and-stacks.md
+- design/gdd/tactical-combat/ap-actions-and-reactions.md §§78-91 and §§121-138
+- docs/architecture/control-manifest.md §§1, 2, 4, 5, 6, 7, 9, 10
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Story contract:
+- This is a readability/storytelling pass for current tactical combat, not a rules expansion.
+- Add readable tactical stack labels and a compact HoMM-like event feed for current actions.
+- Preserve current tactical rules. Do not add retaliation, AP, Defend armor, unit rosters, CombatAI, strategic map changes, or final art/content.
+
+In scope:
+- Visible tactical stack labels for every placed tactical stack:
+  - readable unit display label or placeholder unit key;
+  - current stack count;
+  - owning side/faction/controller cue using existing prototype-safe text/color/marker surfaces;
+  - clear current acting stack highlight.
+- Compact tactical event feed/result log for current tactical actions:
+  - move success;
+  - invalid move denial;
+  - attack success;
+  - invalid attack denial;
+  - target damage and resulting count/defeat;
+  - pass/wait/defend action feedback using current mechanics only;
+  - battle result/next active stack feedback where available.
+- Concise HoMM-like natural language for attack outcomes, adapted to current placeholder data:
+  - example shape: `Attacker Label attacks Defender Label for 3 damage. Defender Label loses 3; 5 remain.`
+  - if defeated: `Defender Label is defeated.`
+- Preserve or improve existing legal move and legal attack highlighting; do not regress affordances already added by STORY-QA-006.
+- Add enough presentation-snapshot/domain event data to support the feed without changing combat rules.
+- Add focused tests and PlayMode/evidence for labels and event-feed readability.
+
+Out of scope:
+- No retaliation/counterattack implementation.
+- No AP economy implementation.
+- No Defend armor/bonus implementation beyond explaining the existing current behavior.
+- No Zone of Control, Overwatch, cover, LOS, range falloff, armor/shield/damage-type rules.
+- No neutral guard CombatAI implementation.
+- No new tactical units, final unit names, final faction roster data, balance, or damage formulas.
+- No strategic map redesign, base/recruitment changes, objective changes, encounter changes, or battle-result rules changes.
+- No final art/icons/VFX/audio/animation/portraits.
+
+Allowed placeholders / assumptions:
+- Placeholder unit labels/display keys are allowed if final unit names are not available.
+- Prototype text/color/markers are allowed; final UI art is not required.
+- Existing fixed tactical damage/count behavior may remain unchanged and should be described accurately.
+- If current code has no per-unit pluralization/localization support, simple readable labels are acceptable; do not build a full localization/pluralization system in this story.
+
+Acceptance criteria:
+- Every visible tactical stack displays a readable label/key, stack count, and side/faction cue.
+- Current acting stack is visually/textually distinct.
+- Legal move destinations and legal attack targets remain visible or improve; enemy targets are not confused with selecting/owning enemy stacks.
+- Legal move feedback states which stack moved and enough context to understand the result.
+- Invalid move feedback states a concrete denial reason and board state does not mutate.
+- Legal attack feedback states attacker, defender, damage/current count change, and remaining count or defeat.
+- Invalid attack feedback states a concrete denial reason and board state does not mutate.
+- Pass/wait/defend feedback accurately describes current implemented effect without claiming unimplemented AP/armor/retaliation behavior.
+- Existing tactical movement, attack, command, battle handoff, objective, and Champion encounter behavior is not intentionally changed.
+
+Verification expected before PR:
+- `git diff --check`
+- Focused EditMode tests for presentation snapshot/event text helpers where practical
+- Focused PlayMode/smoke evidence for labels and event-feed behavior
+- Existing placeholder/data validators remain green
+- Relevant existing tactical movement/attack/command/battle handoff tests remain green
+- Unity Foundation CI exact-head
+
+Evidence package:
+- Create `production/evidence/STORY-TAC-READ-002/README.md` in the Unity repo.
+- Include PNG evidence or equivalent PlayMode evidence for:
+  1. tactical stack labels showing label/key, count, side cue, and active stack;
+  2. legal move feedback/event line;
+  3. legal attack feedback/event line with attacker, defender, damage/count result;
+  4. invalid/denied tactical action with concrete reason;
+  5. defeated or post-attack remaining-count state.
+- README must include tests run, CI URL, omissions/deferred work, and confirmation that retaliation/AP/unit roster/CombatAI/strategic map rules were not added.
+
+PR requirements:
+- Link STORY-TAC-READ-002.
+- Link required GDD/reference/ADR/control docs.
+- Include tests run, PlayMode evidence path/screenshots, CI run URL, and omissions.
+- Include an omissions section that either lists known omissions/stubs/placeholders/deferred work or states `No known omissions`.
+
+Commit and push the implementation branch. Open a PR if available. If pushing/opening PR is impossible, report the exact blocker and leave the branch committed locally.

@@ -710,3 +710,12 @@
 - Added `design/research/homm-like-strategic-map-topology-reference.md` with strategic/adventure-map topology references: H3 square-tile adventure map, Olden Era/Songs modern HoMM-like map expectations, King's Bounty as anti-reference, and a recommended region/site transition path.
 - Added `production/planning/prototype-readability-and-map-next-steps-2026-06-15.md` recommending a readability-first implementation order: tactical stack labels/event feed, minimal melee retaliation, movement/attack affordances, unit definitions, AP/Defend, neutral AI, strategic readability, bases, then region/site map evolution.
 - Updated `index.md` links.
+
+## [2026-06-15] approve | EPIC-006 and EPIC-007 split; STORY-TAC-READ-002 READY
+
+- Recorded human approval for the two-epic split: `EPIC-VSLICE-MVP-006 Tactical Battle Readability and Defender Agency` first, then `EPIC-VSLICE-MVP-007 Strategic Map Readability, Bases, and Spatial Presentation`.
+- Marked `EPIC-VSLICE-MVP-005 Champion Command and Operations On-Ramp` complete / human closeout accepted for next-direction handoff.
+- Created approved `production/epics/epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency.md` with child-story sequence: stack labels/event feed, retaliation, movement/attack affordances, unit definitions, AP/Defend, neutral guard AI.
+- Created approved `production/epics/epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md`, sequenced after the tactical readability baseline.
+- Created READY / approved `production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed.md` as the only current Unity implementation authority.
+- Added checked-in Codex prompt `production/sprints/codex-story-tac-read-002.prompt.txt` and updated `index.md`.

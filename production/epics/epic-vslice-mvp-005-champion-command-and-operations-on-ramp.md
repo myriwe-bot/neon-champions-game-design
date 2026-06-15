@@ -29,7 +29,7 @@ approval: approved
 
 ## Status
 
-CLOSEOUT REVIEW READY / NO CURRENT IMPLEMENTATION STORY. Human playtest on 2026-06-13 rejected closeout and later highlighted objective capture as too easy/sneakable. `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. The approved repair train is exhausted; next step is human closeout/playtest review or a newly approved epic/story direction.
+COMPLETE / HUMAN CLOSEOUT ACCEPTED FOR NEXT-DIRECTION HANDOFF. Human playtest on 2026-06-13 rejected initial closeout and produced the repair train; `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. On 2026-06-15 the human approved moving on to `EPIC-VSLICE-MVP-006` and `EPIC-VSLICE-MVP-007`; no further EPIC-005 implementation story remains approved.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -204,14 +204,14 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout. Human closeout currently rejected; QA-006 is required before re-review.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the epic as complete for next-direction handoff on 2026-06-15.
 
 ## Anti-pattern check
 
@@ -225,4 +225,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED, repair train complete, and closeout review ready. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. No current Unity implementation packet is approved; human review should decide whether EPIC-005 is accepted or what the next epic/story should be.
+COMPLETE / HUMAN CLOSEOUT ACCEPTED. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. On 2026-06-15 the human approved the next direction: `EPIC-VSLICE-MVP-006 Tactical Battle Readability and Defender Agency` first, followed by `EPIC-VSLICE-MVP-007 Strategic Map Readability, Bases, and Spatial Presentation`.

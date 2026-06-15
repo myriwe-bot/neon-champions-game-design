@@ -769,3 +769,11 @@
 
 - Design/control publish CI passed for `STORY-TAC-UNIT-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27563075187
 - Unity README pointer-clear commit `7b75805be994228c048c13daf8d24be2e0878886` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27563076371
+
+## [2026-06-15] approval | STORY-TAC-UNIT-001 ready for implementation
+
+- Human approval recorded from chat: "Approved, prepare."
+- Promoted `production/stories/story-tac-unit-001-minimal-unit-definition-stats.md` from READY-candidate to READY / approved.
+- Recorded approved assumptions: code-side placeholder catalog only; one or two tiny prototype stat differences allowed to prove data path; non-retaliating units may skip melee retaliation with event-feed explanation.
+- Recorded narrow source-authority exception for cited draft/pending tactical article passages; broader roster, AP, ability/status, objective, CombatAI, and strategic-map work remains unapproved.
+- Updated EPIC-006, index, and Codex prompt `production/sprints/codex-story-tac-unit-001.prompt.txt` for implementation handoff.

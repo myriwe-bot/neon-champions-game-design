@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-UNIT-001 Minimal Unit Definition Stats
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-15
@@ -22,14 +22,21 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-TAC-UNIT-001 Minimal Unit Definition Stats
 
 ## Status
 
-READY-candidate / approval pending. This is the recommended next EPIC-006 packet after `STORY-TAC-AFFORD-001` merged. It is drafted for review; it does not authorize Unity implementation until human approval promotes it to READY.
+READY / approved. Human approval recorded 2026-06-15: "Approved, prepare." This is the next EPIC-006 implementation packet after `STORY-TAC-AFFORD-001` merged.
+
+Approved assumptions:
+
+- First unit-data slice uses a code-side placeholder catalog only; no ScriptableObject/editor tooling is required in this story.
+- One or two tiny prototype stat differences are allowed to prove the data path, while final balance remains deferred.
+- A non-retaliating unit may skip melee retaliation and the event feed must explain the reason.
+- Narrow source-authority exception: `design/gdd/tactical-combat/army-deployment-and-stacks.md`, `design/gdd/tactical-combat/mvp-content-and-faction-rosters.md`, and `design/gdd/tactical-combat/implementation-contracts.md` are draft/pending overall, but their cited unit-stack/data-contract passages are approved as implementation authority only for this story's minimal unit-definition data path. Broader deployment, full roster, ability/status, objective, AP, and advanced tactical systems remain unapproved unless covered by a later READY story.
 
 ## Story type
 
@@ -91,7 +98,7 @@ Concrete implementation tasks proposed by this story:
 
 ## Out of scope
 
-Not authorized by this candidate story:
+Not authorized by this story:
 
 - No full faction roster implementation.
 - No final unit names, final lore copy, final art/icons, animations, VFX, audio, portraits, or localization pass.
@@ -150,15 +157,15 @@ Not authorized by this candidate story:
 
 ## Ambiguity Check
 
-Status: NEEDS APPROVAL.
+Status: PASS.
 
-Open questions for human approval:
+Human-approved answers:
 
-1. Approve the first unit-data slice as code-side placeholder catalog only, with no ScriptableObject/editor tooling yet?
-2. Approve one or two tiny prototype stat differences to prove the data path, while keeping final balance deferred?
-3. Approve the candidate retaliation flag behavior: a non-retaliating unit simply skips melee retaliation and the feed explains the reason?
+1. Approved: first unit-data slice is code-side placeholder catalog only, with no ScriptableObject/editor tooling yet.
+2. Approved: one or two tiny prototype stat differences may prove the data path; final balance remains deferred.
+3. Approved: a non-retaliating unit skips melee retaliation and the feed explains the reason.
 
-Assumptions if approved:
+Approved assumptions:
 
 - Exact placeholder labels/stat values are implementation-owned within tiny prototype-safe bounds, but must be documented in evidence and tests.
 - The implementation should preserve existing story smoke behavior unless a test explicitly proves a unit-data-driven change.
@@ -175,7 +182,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None yet.
+- Narrow source-authority exception for the cited draft/pending tactical articles, as recorded in the Status section. This does not approve broader scope from those articles.
 
 ## Branch / PR requirements
 
@@ -208,9 +215,9 @@ Human-approved exceptions:
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval recorded.
+- [x] Human approval recorded.
 
 ## DONE gate
 
@@ -226,4 +233,4 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY-candidate / approval pending. Do not run Codex implementation until this story is promoted to READY / approved.
+READY / approved for Unity implementation. This story is the current implementation authority for EPIC-006. Do not expand into AP, Defend bonus, full roster, CombatAI, strategic-map/base work, or advanced tactical systems.

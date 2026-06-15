@@ -764,3 +764,8 @@
 - Created guarded prompt `production/sprints/codex-story-tac-unit-001.prompt.txt`.
 - Status is READY-candidate / approval pending because the parent epic only listed this item as a draft target; Codex prompt self-blocks until human approval promotes the story to READY.
 - Proposed scope: minimal code-side unit definition catalog, definition-derived movement/attack/damage/retaliation capability/display labels, tests/evidence; excludes full roster, final content/art, balance pass, AP, Defend bonus, ZoC, Overwatch, CombatAI, abilities/statuses, and strategic-map/base changes.
+
+## [2026-06-15] verify | STORY-TAC-UNIT-001 candidate publish and Unity pointer clear
+
+- Design/control publish CI passed for `STORY-TAC-UNIT-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27563075187
+- Unity README pointer-clear commit `7b75805be994228c048c13daf8d24be2e0878886` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27563076371

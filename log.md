@@ -702,3 +702,4 @@
 - Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27530718158
 - Marked `STORY-STRAT-OBJECTIVE-001` DONE / merged and updated EPIC-005 repair-train status.
 - Cleared current Codex run prompts: no next Unity implementation packet is approved until human closeout review or a new READY story direction.
+- Unity current-task pointer cleared on main as `272fe543bc496ff729cfb428599e4e553e685979`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27531270885

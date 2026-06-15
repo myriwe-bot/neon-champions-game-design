@@ -17,6 +17,7 @@ related:
     production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed,
     production/stories/story-tac-ret-001-minimal-melee-retaliation,
     production/stories/story-tac-afford-001-movement-and-attack-affordance-pass,
+    production/stories/story-tac-unit-001-minimal-unit-definition-stats,
     docs/architecture/control-manifest,
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
@@ -28,7 +29,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PRODUCTION. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. `STORY-TAC-READ-002` and `STORY-TAC-RET-001` are DONE / merged; current READY child story: `STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass`.
+APPROVED / IN PRODUCTION. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. `STORY-TAC-READ-002`, `STORY-TAC-RET-001`, and `STORY-TAC-AFFORD-001` are DONE / merged; next proposed child story: `STORY-TAC-UNIT-001 Minimal Unit Definition Stats` as READY-candidate / approval pending.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -127,8 +128,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-TAC-READ-002 Tactical Stack Labels and Combat Event Feed](../stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed.md) | DONE / merged | Tactical UI + Playability Repair | EPIC-005 repair train DONE; current prototype tactical combat | Unity PR #48; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27543258160 |
 | [STORY-TAC-RET-001 Minimal Melee Retaliation](../stories/story-tac-ret-001-minimal-melee-retaliation.md) | DONE / merged | Tactical Rules + UI | TAC-READ-002 DONE | Unity PR #49; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27552604744 |
-| [STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass](../stories/story-tac-afford-001-movement-and-attack-affordance-pass.md) | READY / approved | Tactical UI | TAC-READ-002 and TAC-RET-001 DONE | Legal move/attack target evidence |
-| STORY-TAC-UNIT-001 Minimal Unit Definition Stats | Draft target | Data + Tactical Domain | readability and affordance baseline | Unit-definition tests and tactical setup evidence |
+| [STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass](../stories/story-tac-afford-001-movement-and-attack-affordance-pass.md) | DONE / merged | Tactical UI | TAC-READ-002 and TAC-RET-001 DONE | Unity PR #50; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27562547868 |
+| [STORY-TAC-UNIT-001 Minimal Unit Definition Stats](../stories/story-tac-unit-001-minimal-unit-definition-stats.md) | READY-candidate / approval pending | Data + Tactical Domain | readability and affordance baseline | Unit-definition tests and tactical setup evidence |
 | STORY-TAC-AP-001 Minimal Tactical AP and Defend State | Draft target | Tactical Rules + UI | unit/stat baseline or accepted prototype exception | AP spend/Defend tests and evidence |
 | STORY-TAC-AI-001 Neutral Guard One-Step CombatAI | Draft target | Tactical AI | readable feedback/event feed | AI action tests and guarded-battle PlayMode evidence |
 
@@ -198,4 +199,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PRODUCTION. `STORY-TAC-READ-002` and `STORY-TAC-RET-001` are DONE / merged. Implement `STORY-TAC-AFFORD-001` next. Do not start AP, unit data, AI, ZoC, Overwatch, Defend bonus, or strategic-map work until the relevant child story is promoted to READY.
+APPROVED / IN PRODUCTION. `STORY-TAC-READ-002`, `STORY-TAC-RET-001`, and `STORY-TAC-AFFORD-001` are DONE / merged. Next proposed packet is `STORY-TAC-UNIT-001`, currently READY-candidate / approval pending. Do not start unit data, AP, AI, ZoC, Overwatch, Defend bonus, or strategic-map work until the relevant child story is promoted to READY.

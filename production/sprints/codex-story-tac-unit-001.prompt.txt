@@ -1,0 +1,55 @@
+You are Codex working in the Neon Champions Unity repo.
+
+PRE-FLIGHT STOP: this is a guarded candidate prompt, not an approved implementation prompt yet.
+
+Before doing any Unity work, read the design/control story:
+- C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-tac-unit-001-minimal-unit-definition-stats.md
+
+If that story still says `status: ready-candidate` or `approval: pending`, STOP. Do not create a branch, do not edit Unity files, do not run implementation. Report that STORY-TAC-UNIT-001 needs human approval before implementation.
+
+Only if the story has been promoted to READY / approved, implement exactly that story.
+
+Expected branch after approval:
+- story/STORY-TAC-UNIT-001-minimal-unit-definition-stats
+
+After approval, before coding:
+1. Read Unity root AGENTS.md and every scoped AGENTS.md under touched directories.
+2. Read the story completely, then read all linked source docs in the story.
+3. Confirm main includes STORY-TAC-READ-002, STORY-TAC-RET-001, and STORY-TAC-AFFORD-001.
+4. Keep scope narrow: minimal unit definition stats only.
+
+Proposed implementation authority after approval:
+- Add minimal tactical unit definition data: stable ID, display label, movement range, attack range, attack damage, retaliation capability, optional role tag.
+- Provide a tiny placeholder catalog for currently used prototype unit IDs.
+- Have tactical board setup populate placed stack stats/display fields from the catalog.
+- Use definition-derived attack damage for attack and retaliation.
+- Reject unknown/blank unit definitions with clear diagnostics and no partial accepted board.
+- Surface unit-derived labels/stats in existing tactical presentation/affordance UI.
+- Add focused tests and evidence under production/evidence/STORY-TAC-UNIT-001/.
+
+Hard exclusions:
+- No full faction roster implementation.
+- No final names/lore/art/icons/animation/VFX/audio/localization.
+- No balance pass beyond tiny documented prototype stat differences.
+- No armor, shields, damage types, morale, statuses, cover, LOS, terrain, range falloff, or ability system.
+- No AP economy or Defend bonus.
+- No Zone of Control/opportunity attacks/Overwatch.
+- No CombatAI.
+- No strategic-map/base/recruitment changes.
+- No ScriptableObject/editor tooling unless the approved story is revised to require it.
+
+Required verification after approval and implementation:
+- Focused Unit/EditMode tests for catalog lookup, board factory population, missing-definition rejection/no partial board, legal range behavior, definition-derived damage, and retaliation capability.
+- Focused PlayMode evidence showing visible unit-derived stat differences and damage/count output.
+- Full .\ci\RunEditModeTests.ps1.
+- Full .\ci\RunPlayModeTests.ps1.
+- .\ci\RunPlaceholderValidator.ps1.
+- git diff --check.
+- Unity Foundation CI exact-head success before merge.
+
+PR requirements after approval:
+- Title: STORY-TAC-UNIT-001 Minimal unit definition stats
+- Body must include: linked story/docs, summary, tests/checks, evidence paths, CI URL, and omissions/deferred work.
+- Explicitly state that full roster, final names/content/art, balance pass, AP, Defend bonus, ZoC, Overwatch, CombatAI, abilities/statuses, strategic-map changes, and final art/content remain omitted.
+
+Stop and ask only if implementation requires changing story scope or making an unapproved design decision.

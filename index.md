@@ -96,7 +96,8 @@
 - [[production/stories/story-strat-objective-001-multi-turn-objective-contest-direction]] — DONE merged objective contest countdown story.
 - [[production/stories/story-tac-read-002-tactical-stack-labels-and-combat-event-feed]] — DONE / merged first EPIC-006 tactical stack labels and HoMM-like combat event feed story.
 - [[production/stories/story-tac-ret-001-minimal-melee-retaliation]] — DONE / merged EPIC-006 story for minimal melee retaliation and defender agency.
-- [[production/stories/story-tac-afford-001-movement-and-attack-affordance-pass]] — READY / approved next EPIC-006 story for tactical movement and attack affordance clarity.
+- [[production/stories/story-tac-afford-001-movement-and-attack-affordance-pass]] — DONE / merged EPIC-006 story for tactical movement and attack affordance clarity.
+- [[production/stories/story-tac-unit-001-minimal-unit-definition-stats]] — READY-candidate / approval pending next proposed EPIC-006 story for minimal unit definition stats.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

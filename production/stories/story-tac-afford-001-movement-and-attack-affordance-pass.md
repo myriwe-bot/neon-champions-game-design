@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-15
@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human direction: the prototype still makes it unclear how far units can move or what they can attack. `STORY-TAC-READ-002` and `STORY-TAC-RET-001` are DONE / merged, so the next narrow EPIC-006 implementation packet is tactical movement/attack affordance clarity.
+DONE / merged. Human direction: the prototype still made it unclear how far units can move or what they can attack. Unity PR #50 merged 2026-06-15 as squash commit `11e5703d79f0dde6be8f5ceec9c7834c3e8e4b9e`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27562547868
 
 ## Story type
 
@@ -210,16 +210,16 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. This story is the only current implementation authority from EPIC-006 after `STORY-TAC-RET-001`.
+DONE / merged. Next proposed EPIC-006 child story: `STORY-TAC-UNIT-001 Minimal Unit Definition Stats`, currently READY-candidate / approval pending.

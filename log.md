@@ -750,3 +750,17 @@
 
 - Design/control publish CI passed for `STORY-TAC-AFFORD-001` packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27553269879
 - Unity README current-task pointer commit `9cdb31adcd7829b073889af84c56e85ff8e264fc` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27553270134
+
+## [2026-06-15] merge | STORY-TAC-AFFORD-001 movement and attack affordance pass
+
+- Reviewed and merged Unity PR #50 for `STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass`.
+- Squash merge commit: `11e5703d79f0dde6be8f5ceec9c7834c3e8e4b9e`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27562547868
+- Marked `STORY-TAC-AFFORD-001` DONE and updated EPIC-006 child-story status.
+
+## [2026-06-15] draft | STORY-TAC-UNIT-001 minimal unit definition stats
+
+- Created `production/stories/story-tac-unit-001-minimal-unit-definition-stats.md` as the next proposed EPIC-006 packet.
+- Created guarded prompt `production/sprints/codex-story-tac-unit-001.prompt.txt`.
+- Status is READY-candidate / approval pending because the parent epic only listed this item as a draft target; Codex prompt self-blocks until human approval promotes the story to READY.
+- Proposed scope: minimal code-side unit definition catalog, definition-derived movement/attack/damage/retaliation capability/display labels, tests/evidence; excludes full roster, final content/art, balance pass, AP, Defend bonus, ZoC, Overwatch, CombatAI, abilities/statuses, and strategic-map/base changes.

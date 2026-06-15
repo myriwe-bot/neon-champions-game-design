@@ -745,3 +745,8 @@
 - Created `production/stories/story-tac-afford-001-movement-and-attack-affordance-pass.md` as the next READY / approved EPIC-006 implementation packet.
 - Created `production/sprints/codex-story-tac-afford-001.prompt.txt` for Codex execution.
 - Scope is intentionally narrow: visible movement range, attack range, current coordinate, legal move/attack affordances, blocked/non-attackable context, and denial feedback; excludes AP, Defend bonus, ZoC, Overwatch, CombatAI, unit roster/stat expansion, strategic-map changes, and final art/content.
+
+## [2026-06-15] verify | STORY-TAC-AFFORD-001 handoff publish and Unity pointer
+
+- Design/control publish CI passed for `STORY-TAC-AFFORD-001` packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27553269879
+- Unity README current-task pointer commit `9cdb31adcd7829b073889af84c56e85ff8e264fc` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27553270134

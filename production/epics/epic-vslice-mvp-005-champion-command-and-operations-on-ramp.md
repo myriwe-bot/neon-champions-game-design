@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-06-15
 source_lore: [champions, digital-net, greenland, blue-monday]
 related:
   [
@@ -29,7 +29,7 @@ approval: approved
 
 ## Status
 
-CLOSEOUT REJECTED / PLAYABILITY REPAIR ACTIVE. Human playtest on 2026-06-13 found the loop technically connected but not yet player-readable and later highlighted objective capture as too easy/sneakable. `STORY-QA-006`, `STORY-QA-007`, and `STORY-CMD-005` are DONE / merged. Human approved `STORY-STRAT-OBJECTIVE-001` Option 1 on 2026-06-14; the current Unity implementation packet is a narrow two-turn central-objective hold countdown.
+CLOSEOUT REVIEW READY / NO CURRENT IMPLEMENTATION STORY. Human playtest on 2026-06-13 rejected closeout and later highlighted objective capture as too easy/sneakable. `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. The approved repair train is exhausted; next step is human closeout/playtest review or a newly approved epic/story direction.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -157,7 +157,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-QA-006 Strategic and Tactical State/Action Feedback Readability Pass](../stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass.md) | DONE / merged | Cross-mode UX/Playability Repair | CMD-004 DONE + human closeout rejected | PR #44; current actor/turn, clickable actions, denial reasons, result feedback, friendly/enemy/target clarity |
 | [STORY-QA-007 Champion Encounter Initiation Clarity](../stories/story-qa-007-champion-encounter-initiation-clarity.md) | DONE / merged | Strategic encounter UX | QA-006 DONE/merged | PR #45; Champion-vs-Champion engagement/denial clarity and evidence |
 | [STORY-CMD-005 Champion Command Explanation Pass](../stories/story-cmd-005-champion-command-explanation-pass.md) | DONE / merged | Command UX | QA-007 DONE/merged | PR #46; Rally/Drone and Marshal/Operator explanations without mechanic changes |
-| [STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction](../stories/story-strat-objective-001-multi-turn-objective-contest-direction.md) | READY / approved | Strategic objective rules + UI | CMD-005 DONE + human approval of Option 1 | Implement narrow two-turn central-objective hold countdown; current implementation packet |
+| [STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction](../stories/story-strat-objective-001-multi-turn-objective-contest-direction.md) | DONE / merged | Strategic objective rules + UI | CMD-005 DONE + human approval of Option 1 | PR #47; merged as `2eab67d8a10824a122493271feae94d53119c440`; post-merge main CI passed |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -225,4 +225,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED, closeout rejected, and playability repair active. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, and `STORY-CMD-005` are DONE / merged. Human approved Option 1 for `STORY-STRAT-OBJECTIVE-001`; it is now READY / approved as the current implementation packet for a narrow two-turn central-objective hold countdown.
+APPROVED, repair train complete, and closeout review ready. `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. No current Unity implementation packet is approved; human review should decide whether EPIC-005 is accepted or what the next epic/story should be.

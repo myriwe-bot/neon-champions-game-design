@@ -693,3 +693,12 @@
 - Promoted the story to READY / approved with Ambiguity Check PASS.
 - Replaced the guarded prompt with runnable Codex prompt `production/sprints/codex-story-strat-objective-001.prompt.txt`.
 - Updated EPIC-005, the playability repair train, run prompts, and index so this story is the current implementation packet.
+
+
+## 2026-06-15 — STORY-STRAT-OBJECTIVE-001 merged; EPIC-005 closeout review ready
+
+- Verified and merged Unity PR #47 for `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction`.
+- Merge commit: `2eab67d8a10824a122493271feae94d53119c440`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27530718158
+- Marked `STORY-STRAT-OBJECTIVE-001` DONE / merged and updated EPIC-005 repair-train status.
+- Cleared current Codex run prompts: no next Unity implementation packet is approved until human closeout review or a new READY story direction.

@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-14
+updated: 2026-06-15
 source_lore: []
 related:
   [
@@ -63,15 +63,15 @@ approval: approved
 
 ## Recommended mode
 
-Current READY / approved Unity implementation packet: `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction`. Use the checked-in prompt file `production/sprints/codex-story-strat-objective-001.prompt.txt`.
+Current READY / approved Unity implementation packet: **None**. `STORY-STRAT-OBJECTIVE-001` is DONE / merged. Do not run Codex until a new story is explicitly promoted to READY / approved.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, and `STORY-CMD-005` are DONE / merged. Human approved Option 1 for `STORY-STRAT-OBJECTIVE-001`; Codex is authorized to implement the narrow two-turn central-objective hold countdown.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. The EPIC-005 repair train is exhausted and awaiting human closeout/direction.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt file: `production/sprints/codex-story-strat-objective-001.prompt.txt`.
+Current approved prompt file: **None**. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -92,25 +92,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-Run the approved prompt below for `STORY-STRAT-OBJECTIVE-001`.
-
-Set the prompt:
-
-```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-objective-001.prompt.txt"
-```
-
-Normal workspace-write run:
-
-```powershell
-codex exec --sandbox workspace-write $prompt
-```
-
-Trusted-repo fallback:
-
-```powershell
-codex exec --sandbox danger-full-access $prompt
-```
+No runnable prompt is currently approved. If Codex is launched from any historical prompt, it must stop unless the design/control repo has promoted a new story to `status: ready` and `approval: approved`.
 
 ## Historical prompt-file runs
 
@@ -157,11 +139,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-qa-006.prompt.txt`
 - `production/sprints/codex-story-qa-007.prompt.txt`
 - `production/sprints/codex-story-cmd-005.prompt.txt`
+- `production/sprints/codex-story-strat-objective-001.prompt.txt`
 
 Current prompt-file run:
 
-- `production/sprints/codex-story-strat-objective-001.prompt.txt`
+- None.
 
 ## After Codex finishes
 
-Codex should commit and push `story/STORY-STRAT-OBJECTIVE-001-multi-turn-objective-contest-direction`, open a PR if available, and include tests, evidence, CI URL, and omissions/deferred-work notes.
+Codex should not run until a new READY / approved story exists. Next human action: review EPIC-005 closeout or choose the next epic/story direction.

@@ -1,11 +1,11 @@
 ---
 title: STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-13
-updated: 2026-06-14
+updated: 2026-06-15
 source_lore: []
 related:
   [
@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY / approved for implementation.
+DONE / merged. Unity PR #47 merged as `2eab67d8a10824a122493271feae94d53119c440`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27530718158
 
 Human approval recorded on 2026-06-14: approve the recommended **Option 1 — narrow two-turn capture countdown**. This story may change central-objective victory timing from same-interaction/sneak capture toward the already-approved Strategic Map §13 hold-progress contract.
 
@@ -165,4 +165,4 @@ Resolved decisions:
 - [x] Evidence requirements are explicit.
 - [x] Branch/PR guidance is explicit.
 
-Verdict: READY for Codex implementation.
+Verdict: DONE / merged. Objective countdown implementation passed merge gate, exact-head PR CI, and post-merge main CI.

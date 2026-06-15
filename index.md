@@ -89,7 +89,7 @@
 - [[production/stories/story-qa-006-strategic-tactical-state-action-feedback-readability-pass]] — DONE cross-mode state/action feedback readability story.
 - [[production/stories/story-qa-007-champion-encounter-initiation-clarity]] — DONE Champion encounter clarity story.
 - [[production/stories/story-cmd-005-champion-command-explanation-pass]] — DONE command explanation story.
-- [[production/stories/story-strat-objective-001-multi-turn-objective-contest-direction]] — READY approved objective contest countdown story.
+- [[production/stories/story-strat-objective-001-multi-turn-objective-contest-direction]] — DONE merged objective contest countdown story.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

@@ -793,3 +793,8 @@
 - Status is READY-candidate / approval pending because the parent epic listed AP/Defend as a draft target, not an approved READY story.
 - Proposed scope: baseline 2 AP activation state, Move/Basic Attack cost 1 AP, insufficient-AP denial/no mutation, visible Defend state, tactical snapshot/HUD/event-feed visibility, and focused tests/evidence.
 - Open approval question before READY: Defend visible state only versus tiny prototype damage-reduction effect. Recommended default is visible state only.
+
+## [2026-06-16] verify | STORY-TAC-AP-001 candidate publish and Unity pointer clear
+
+- Design/control publish CI passed for `STORY-TAC-AP-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27620455931
+- Unity README pointer-clear PR #52 merged as `1aeb8f193e1371884c0a44a9c027b53623bbc4d9`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27620829960

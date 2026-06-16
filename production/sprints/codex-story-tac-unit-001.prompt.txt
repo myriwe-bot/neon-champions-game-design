@@ -87,6 +87,15 @@ Required commands before PR/merge readiness:
 - git diff --check
 - Unity Foundation CI exact-head success before merge.
 
+Required Git/GitHub closeout before stopping:
+- git status --short --branch
+- git log --oneline -5
+- If `git status --short` shows modified or untracked story files after tests/evidence, do not report the task complete; add, commit, and push them first.
+- Commit the implementation and evidence on `story/STORY-TAC-UNIT-001-minimal-unit-definition-stats`.
+- Push with `git push -u origin HEAD:story/STORY-TAC-UNIT-001-minimal-unit-definition-stats`.
+- Open or update the PR and include the PR URL/number in the final response.
+- If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.
+
 PR requirements:
 - Title: STORY-TAC-UNIT-001 Minimal unit definition stats
 - Body must include:

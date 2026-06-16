@@ -777,3 +777,19 @@
 - Recorded approved assumptions: code-side placeholder catalog only; one or two tiny prototype stat differences allowed to prove data path; non-retaliating units may skip melee retaliation with event-feed explanation.
 - Recorded narrow source-authority exception for cited draft/pending tactical article passages; broader roster, AP, ability/status, objective, CombatAI, and strategic-map work remains unapproved.
 - Updated EPIC-006, index, and Codex prompt `production/sprints/codex-story-tac-unit-001.prompt.txt` for implementation handoff.
+
+## [2026-06-16] merge | STORY-TAC-UNIT-001 minimal unit definition stats
+
+- Reviewed and merged Unity PR #51 for `STORY-TAC-UNIT-001 Minimal Unit Definition Stats`.
+- Squash merge commit: `b95368b66ed53be957bbdb545c7dbb4da627e2fd`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27619495357
+- Marked `STORY-TAC-UNIT-001` DONE and updated EPIC-006 child-story status.
+- Added a closeout safeguard to the active Codex prompt and reusable handoff pattern: future Codex implementation prompts must explicitly commit, push, open/update the PR, or report a concrete push blocker with `git status --short --branch`.
+
+## [2026-06-16] draft | STORY-TAC-AP-001 minimal tactical AP and Defend state
+
+- Created `production/stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state.md` as the next proposed EPIC-006 packet.
+- Created guarded prompt `production/sprints/codex-story-tac-ap-001.prompt.txt`.
+- Status is READY-candidate / approval pending because the parent epic listed AP/Defend as a draft target, not an approved READY story.
+- Proposed scope: baseline 2 AP activation state, Move/Basic Attack cost 1 AP, insufficient-AP denial/no mutation, visible Defend state, tactical snapshot/HUD/event-feed visibility, and focused tests/evidence.
+- Open approval question before READY: Defend visible state only versus tiny prototype damage-reduction effect. Recommended default is visible state only.

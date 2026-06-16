@@ -1,0 +1,54 @@
+You are Codex working in the Neon Champions Unity repo.
+
+GUARDED PROMPT — DO NOT IMPLEMENT YET.
+
+This prompt is prepared for the next proposed packet only:
+- STORY-TAC-AP-001 Minimal Tactical AP and Defend State
+
+Current status in design/control repo:
+- status: ready-candidate
+- approval: pending
+
+Preflight stop condition:
+1. In the design/control repo, read:
+   - production\stories\story-tac-ap-001-minimal-tactical-ap-and-defend-state.md
+2. If the story does not say `status: ready` and `approval: approved`, STOP.
+3. Report: `STORY-TAC-AP-001 is not approved for implementation yet.`
+4. Do not create a Unity branch, do not edit Unity files, do not run implementation tests.
+
+When a future human approval promotes the story to READY, this prompt may be replaced with an implementation prompt using:
+
+Branch:
+- story/STORY-TAC-AP-001-minimal-tactical-ap-defend-state
+
+PR title:
+- STORY-TAC-AP-001 Minimal tactical AP and Defend state
+
+Expected future scope after approval:
+- minimal activation AP state, baseline max/current AP = 2;
+- Move and Basic Attack cost 1 AP;
+- insufficient-AP denial with no partial mutation;
+- visible Defend state / activation-ending action;
+- AP and Defend surfaced in tactical presentation snapshot/HUD/event feed;
+- focused EditMode and PlayMode evidence under production\evidence\STORY-TAC-AP-001\;
+- Unity Foundation CI exact-head success before merge.
+
+Known unresolved approval question:
+- Should Defend be visible state only, or should it also add a tiny prototype damage-reduction effect?
+- Recommended default: visible state only.
+
+Hard exclusions unless the approved story changes:
+- No Wait action.
+- No initiative order or manipulation.
+- No AP carryover.
+- No heavy/signature 2 AP actions beyond preserving current command behavior.
+- No armor/shield/damage-type/cover/LOS/terrain/range-falloff/status/ability system.
+- No Zone of Control, opportunity attacks, Overwatch, CombatAI, or strategic-map/base/recruitment work.
+
+Future implementation prompt must include Git/GitHub closeout:
+- git status --short --branch
+- git log --oneline -5
+- If `git status --short` shows modified or untracked story files after tests/evidence, do not report complete; add, commit, and push them first.
+- Push with `git push -u origin HEAD:story/STORY-TAC-AP-001-minimal-tactical-ap-defend-state`.
+- Open or update the PR and include the PR URL/number in the final response.
+- If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.

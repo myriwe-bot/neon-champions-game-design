@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-UNIT-001 Minimal Unit Definition Stats
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-15
@@ -29,7 +29,9 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-15: "Approved, prepare." This is the next EPIC-006 implementation packet after `STORY-TAC-AFFORD-001` merged.
+DONE / merged. Unity PR #51 merged 2026-06-16. Squash merge commit: `b95368b66ed53be957bbdb545c7dbb4da627e2fd`. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27619495357
+
+Original approval: Human approval recorded 2026-06-15: "Approved, prepare." This was the EPIC-006 implementation packet after `STORY-TAC-AFFORD-001` merged.
 
 Approved assumptions:
 
@@ -221,16 +223,18 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. This story is the current implementation authority for EPIC-006. Do not expand into AP, Defend bonus, full roster, CombatAI, strategic-map/base work, or advanced tactical systems.
+DONE / merged. Unity PR #51 merged 2026-06-16; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27619495357
+
+Next proposed EPIC-006 child story: `STORY-TAC-AP-001 Minimal Tactical AP and Defend State`, currently READY-candidate / approval pending. Do not implement AP/Defend until human approval promotes that story to READY.

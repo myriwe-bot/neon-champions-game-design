@@ -837,3 +837,10 @@
 - Promoted story to READY / approved, passed ambiguity check, and recorded the narrow source-authority exception for draft tactical AI/AP implementation sources.
 - Replaced the guarded prompt `production/sprints/codex-story-tac-ai-001.prompt.txt` with the runnable implementation prompt.
 - Updated EPIC-006, index, and Codex run prompts to point at `STORY-TAC-AI-001` as the current approved Unity implementation packet.
+
+
+## [2026-06-17] verify | STORY-TAC-AI-001 approval publish and Unity pointer
+
+- Design/control publish CI passed for `STORY-TAC-AI-001` approval packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27694739627
+- Unity README approved-task pointer commit `0e54ac1d99616ab3b1f3d9e4800238b35f871e1f` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27694848108
+- Unity README now names `STORY-TAC-AI-001 Neutral Guard One-Step CombatAI` as the current READY / approved implementation task.

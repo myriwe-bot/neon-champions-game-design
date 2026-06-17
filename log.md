@@ -860,3 +860,10 @@
 - Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
 - Proposed scope: strategic map readability improvements for reachable routes/sites, path-cost preview, site category/state labels, interaction preview, and post-battle return summary using existing graph-backed state.
 - Explicitly excludes tile/hex topology, new base/recruitment systems, strategic AI, fog/logistics/weather, full economy, new tactical rules, and final map art/content.
+
+
+## [2026-06-17] verify | STORY-STRAT-READ-002 candidate publish and Unity pointer clear
+
+- Design/control publish CI passed for `STORY-STRAT-READ-002` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27701173908
+- Unity README pointer commit `914d6e938b85316403de8c5b9fbeb524d38e165b` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27701275473
+- Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-STRAT-READ-002` candidate packet only.

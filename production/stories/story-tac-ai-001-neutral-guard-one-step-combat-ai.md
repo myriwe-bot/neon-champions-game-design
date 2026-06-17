@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-AI-001 Neutral Guard One-Step CombatAI
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-17
@@ -23,18 +23,16 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-TAC-AI-001 Neutral Guard One-Step CombatAI
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed next EPIC-006 implementation packet after `STORY-TAC-AP-001 Minimal Tactical AP and Defend State` merged.
+READY / approved for implementation. Human approval recorded 2026-06-17: `STORY-TAC-AI-001` is approved as the next EPIC-006 implementation packet.
 
-Do not implement until human approval promotes this story to READY / approved.
-
-Recommended approval question: approve a deterministic one-step neutral guard AI that can Attack if already in range, otherwise Move one legal step toward the nearest living attacker, otherwise Defend/Pass?
+Approved answer: deterministic one-step neutral guard AI may Attack if already in range, otherwise Move one legal step toward the nearest living attacker, otherwise Defend/Pass.
 
 ## Story type
 
@@ -151,13 +149,17 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate, pending human approval.
+Status: PASS.
 
-Open questions before READY:
+Open questions:
 
-1. Human must approve this story as the next implementation packet.
+- None.
 
-Assumptions proposed for approval:
+Human-approved answers:
+
+1. Approved 2026-06-17: deterministic one-step neutral guard AI may Attack if already in range, otherwise Move one legal step toward the nearest living attacker, otherwise Defend/Pass.
+
+Approved assumptions:
 
 - The one-step priority is Attack, else Move toward nearest enemy, else Defend, else Pass.
 - Tie-breakers are implementation-owned if deterministic and covered by tests.
@@ -174,7 +176,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None yet. The cited draft/pending tactical GDD articles are source context only until human approval records a narrow source-authority exception for this story.
+- Narrow source-authority exception: `design/gdd/tactical-combat/ap-actions-and-reactions.md` and `design/gdd/tactical-combat/implementation-contracts.md` are draft/pending overall, but their cited Move / Basic Attack / Defend AP behavior and deterministic/testable tactical-system passages are approved as implementation authority only for this story's neutral guard one-step CombatAI. Broader initiative, Wait, advanced tactical AI, behavior trees/utility AI, strategic AI, ZoC, Overwatch, new combat mechanics, statuses, and final combat formulas remain out of scope.
 
 If status is FAIL, this story is not READY.
 
@@ -208,9 +210,9 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [x] Ambiguity Check status is PASS for candidate; human approval remains pending.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given and recorded.
 
 ## DONE gate
 
@@ -226,4 +228,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending.
+READY for implementation.

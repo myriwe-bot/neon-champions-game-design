@@ -1,12 +1,13 @@
 You are Codex working in the Neon Champions Unity repo.
 
-Candidate implementation packet:
+Implement exactly one approved story:
 - STORY-TAC-AI-001 Neutral Guard One-Step CombatAI
 
-IMPORTANT AUTHORIZATION GUARD:
-- This story is currently READY-candidate / approval pending.
+Human approval recorded 2026-06-17.
+
+Authorization guard:
 - Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
-- If it does not, STOP. Do not implement. Report: `STORY-TAC-AI-001 is not approved for implementation yet.`
+- If it does not, STOP and report the mismatch.
 
 Design/control repo:
 - GitHub: https://github.com/myriwe-bot/neon-champions-game-design
@@ -23,7 +24,7 @@ Required preflight:
    - `git checkout main`
    - `git pull --ff-only origin main`
    - `git status --short --branch`
-3. Read these files before deciding whether implementation is authorized:
+3. Read these files before editing Unity code:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-tac-ai-001-neutral-guard-one-step-combat-ai.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\tactical-combat.md
@@ -35,12 +36,12 @@ Required preflight:
    - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
 4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
 
-When approved, branch and PR:
+Branch and PR:
 - Create branch: story/STORY-TAC-AI-001-neutral-guard-one-step-combat-ai
 - PR title: STORY-TAC-AI-001 Neutral guard one-step CombatAI
 - Required linked story ID in commits/PR: STORY-TAC-AI-001
 
-Approved scope when/if promoted to READY:
+Scope to implement:
 - Implement the smallest deterministic CombatAI action path for neutral guarded-site defender stacks.
 - Apply it only to tactical sides/stacks whose controller is CombatAI / neutral guard data from guarded-site battle setup.
 - Add one explicit AI-step command or orchestration path that advances the current CombatAI-controlled activation by at most one chosen action.
@@ -61,14 +62,14 @@ Out of scope:
 - No auto-resolve or hidden AI-only damage/movement shortcuts.
 - No broad controller architecture rewrite beyond the narrow seam needed for one deterministic CombatAI step.
 
-Verification required when approved:
+Verification required:
 - TDD for AI selection/no-mutation behavior where practical.
 - Unit/EditMode tests for attack choice, move choice, fallback Defend/Pass, AP spend, retaliation interaction, battle-end behavior, HumanLocal rejection/no mutation, and deterministic tie-breakers.
 - PlayMode guarded-site smoke/evidence showing a neutral guard taking at least one visible AI action.
 - Placeholder validator remains green.
 - Unity Foundation CI exact-head before merge.
 
-Git/GitHub closeout when approved:
+Git/GitHub closeout:
 1. Run relevant tests locally and include exact commands/results in the final response.
 2. Run `git status --short --branch` and `git log --oneline -5`.
 3. If `git status --short` shows modified or untracked story files after tests/evidence, do not report complete; add, commit, and push them first.

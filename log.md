@@ -822,3 +822,9 @@
 - Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
 - Proposed scope: deterministic one-step CombatAI for neutral guarded-site defender stacks only: Attack if legal, else move one legal step toward nearest living enemy, else Defend, else Pass.
 - Explicitly excludes strategic AI, advanced tactical AI/planning, randomness, initiative/Wait, ZoC/Overwatch, new combat mechanics, final UI/audio/VFX/content, and broad controller architecture rewrites.
+
+## [2026-06-17] verify | STORY-TAC-AI-001 candidate publish and Unity pointer clear
+
+- Design/control publish CI passed for `STORY-TAC-AI-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27693399088
+- Unity README pointer commit `607bf03c091d13dd43ecdf01b4d6636f8aa8539c` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27693503026
+- Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-TAC-AI-001` candidate packet only.

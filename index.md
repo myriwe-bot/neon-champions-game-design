@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-15
+> Last updated: 2026-06-17
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -98,7 +98,7 @@
 - [[production/stories/story-tac-ret-001-minimal-melee-retaliation]] — DONE / merged EPIC-006 story for minimal melee retaliation and defender agency.
 - [[production/stories/story-tac-afford-001-movement-and-attack-affordance-pass]] — DONE / merged EPIC-006 story for tactical movement and attack affordance clarity.
 - [[production/stories/story-tac-unit-001-minimal-unit-definition-stats]] — DONE / merged EPIC-006 story for minimal unit definition stats.
-- [[production/stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state]] — READY-candidate / approval pending next EPIC-006 story for minimal tactical AP and Defend state.
+- [[production/stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state]] — READY / approved EPIC-006 story for minimal tactical AP and Defend state with tiny prototype Defend damage reduction.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

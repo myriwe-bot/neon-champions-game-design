@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-15
+updated: 2026-06-17
 source_lore: []
 related:
   [
@@ -55,6 +55,7 @@ related:
     production/stories/story-qa-007-champion-encounter-initiation-clarity,
     production/stories/story-cmd-005-champion-command-explanation-pass,
     production/stories/story-strat-objective-001-multi-turn-objective-contest-direction,
+    production/stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state,
   ]
 approval: approved
 ---
@@ -63,15 +64,15 @@ approval: approved
 
 ## Recommended mode
 
-Current READY / approved Unity implementation packet: **None**. `STORY-STRAT-OBJECTIVE-001` is DONE / merged. Do not run Codex until a new story is explicitly promoted to READY / approved.
+Current READY / approved Unity implementation packet: **STORY-TAC-AP-001 Minimal Tactical AP and Defend State**. Human approval recorded 2026-06-17 with tiny prototype Defend damage reduction approved.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. The EPIC-005 repair train is exhausted and awaiting human closeout/direction.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, and `STORY-STRAT-OBJECTIVE-001` are DONE / merged. `STORY-TAC-AP-001` is the current approved EPIC-006 implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt file: **None**. Historical prompt files remain for audit only.
+Current approved prompt file: `production/sprints/codex-story-tac-ap-001.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -92,7 +93,19 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-No runnable prompt is currently approved. If Codex is launched from any historical prompt, it must stop unless the design/control repo has promoted a new story to `status: ready` and `approval: approved`.
+Use the checked-in prompt file:
+
+```powershell
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-ap-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+If workspace-write cannot complete because Unity tests/evidence require broader filesystem access, rerun the same checked-in prompt with:
+
+```powershell
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-ap-001.prompt.txt"
+codex exec --sandbox danger-full-access $prompt
+```
 
 ## Historical prompt-file runs
 
@@ -143,8 +156,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current prompt-file run:
 
-- None.
+- `production/sprints/codex-story-tac-ap-001.prompt.txt`
 
 ## After Codex finishes
 
-Codex should not run until a new READY / approved story exists. Next human action: review EPIC-005 closeout or choose the next epic/story direction.
+Codex must push `story/STORY-TAC-AP-001-minimal-tactical-ap-defend-state` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, and omissions/deferred work.

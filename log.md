@@ -798,3 +798,10 @@
 
 - Design/control publish CI passed for `STORY-TAC-AP-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27620455931
 - Unity README pointer-clear PR #52 merged as `1aeb8f193e1371884c0a44a9c027b53623bbc4d9`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27620829960
+## [2026-06-17] approval | STORY-TAC-AP-001 promoted to READY
+
+- Human approval recorded for `STORY-TAC-AP-001 Minimal Tactical AP and Defend State`.
+- Approved Defend direction: visible `Defending` state plus a tiny prototype damage-reduction effect.
+- Promoted story to READY / approved, passed ambiguity check, and recorded the narrow source-authority exception for draft AP/Defend planning sources.
+- Replaced guarded `production/sprints/codex-story-tac-ap-001.prompt.txt` with the runnable implementation prompt.
+- Updated EPIC-006, index, and Codex run prompts to point at `STORY-TAC-AP-001` as the current approved Unity implementation packet.

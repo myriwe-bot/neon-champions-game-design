@@ -1,11 +1,11 @@
 ---
 title: STORY-TAC-AP-001 Minimal Tactical AP and Defend State
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-17
 source_lore: []
 related:
   [
@@ -21,14 +21,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-TAC-AP-001 Minimal Tactical AP and Defend State
 
 ## Status
 
-READY-candidate / approval pending. This is the next proposed EPIC-006 child packet after `STORY-TAC-UNIT-001` merged. It is not implementation authority until human approval promotes it to READY.
+READY / approved for implementation. Human approval recorded 2026-06-17: `STORY-TAC-AP-001` is approved with a tiny prototype damage-reduction effect for Defend.
 
 ## Story type
 
@@ -77,7 +77,10 @@ Concrete implementation tasks proposed by this story:
   - Defend ends the current stack activation / consumes remaining AP;
   - Defend sets a visible `Defending` state until the stack's next activation or the simplest equivalent reset point available in the current prototype;
   - Defend state is visible in tactical snapshot/HUD/event feed.
-- If armor/damage reduction is not already architecture-ready, this story may implement Defend as visible state only; do not pretend hidden armor exists. A simple prototype damage-reduction effect requires explicit human approval before READY.
+- Defend also applies a tiny prototype damage-reduction effect while the `Defending` state is active:
+  - implement the smallest readable prototype rule available in the current damage pipeline;
+  - document the exact temporary value/name in code comments, test names, event/feed text, or evidence notes;
+  - this is not a final armor, shield, cover, damage-type, terrain, or defense formula.
 - Surface current/max AP and Defend state through existing presentation snapshot, affordance summary, marker labels/cards, and denial feedback.
 - Add focused tests for AP spend, insufficient-AP denial/no mutation, Defend state/reset visibility, and no regression to movement/attack/retaliation/unit-definition behavior.
 
@@ -90,7 +93,7 @@ Not authorized by this story:
 - No AP carryover between turns/rounds.
 - No heavy/signature 2 AP actions beyond preserving existing command actions.
 - No AP cost changes for Champion Command operations unless strictly necessary to preserve current behavior and explicitly documented.
-- No armor, shields, damage types, cover, LOS, terrain, range falloff, ability system, status system, or final defense formula.
+- No final armor, shields, damage types, cover, LOS, terrain, range falloff, ability system, status system, or final defense formula. The only defense effect authorized is the tiny prototype Defend damage-reduction effect approved for this story.
 - No Zone of Control, opportunity attacks, Overwatch, CombatAI, or initiative.
 - No strategic-map/base/recruitment/economy/topology changes.
 - No final UI skin, icons, animation, VFX, audio, portraits, final lore copy, or localization pass.
@@ -98,7 +101,7 @@ Not authorized by this story:
 ## Allowed stubs, mocks, placeholders, or temporary data
 
 - Prototype AP values may be code-side constants for this slice: baseline max AP 2; Move cost 1; Basic Attack cost 1.
-- Defend may be visible state only unless human approval explicitly authorizes a prototype damage-reduction effect.
+- Human approval explicitly authorizes a tiny prototype Defend damage-reduction effect for this story; keep it temporary, obvious, and covered by tests.
 - Placeholder UI text is allowed but must be player-facing, not debug-only.
 
 ## Dependencies
@@ -119,13 +122,13 @@ Not authorized by this story:
 - [ ] Given the active stack moves legally, current AP decreases by 1 and the visible AP summary/event feed reflects the spend.
 - [ ] Given the active stack attacks legally, current AP decreases by 1 and the visible AP summary/event feed reflects the spend.
 - [ ] Given current AP is 0, Move and Basic Attack are rejected with clear diagnostics/feedback and no partial movement, damage, retaliation, or event mutation.
-- [ ] Given the player chooses Defend, the stack enters visible Defending state, remaining AP is consumed or activation is ended, and the event feed explains Defend.
+- [ ] Given the player chooses Defend, the stack enters visible Defending state, remaining AP is consumed or activation is ended, the event feed explains Defend, and a tiny prototype damage-reduction effect applies while Defending.
 - [ ] Given the stack's next activation/reset point occurs, stale Defending state clears according to the documented prototype reset rule.
 - [ ] Existing movement range, attack range, definition-derived damage, retaliation, command availability, and tactical presentation smoke behavior are not intentionally regressed.
 
 ## Verification requirements
 
-- Unit/EditMode tests: Required for AP initialization, AP spend, insufficient-AP rejection/no mutation, Defend state application/reset, and regression coverage around movement/attack/retaliation/unit-definition behavior.
+- Unit/EditMode tests: Required for AP initialization, AP spend, insufficient-AP rejection/no mutation, Defend state application/reset, tiny prototype Defend damage reduction, and regression coverage around movement/attack/retaliation/unit-definition behavior.
 - PlayMode tests/evidence: Required focused smoke showing visible AP values, AP spend after action, Defend state, and insufficient-AP denial feedback.
 - Screenshot/video evidence: Required PNG evidence under `production/evidence/STORY-TAC-AP-001/` in the Unity repo if implemented.
 - CI evidence: Unity Foundation CI exact-head before merge.
@@ -133,13 +136,12 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: FAIL until human approval resolves the Defend effect question.
+Status: PASS.
 
-Open approval question before READY:
+Human-approved answers recorded 2026-06-17:
 
-1. Should `STORY-TAC-AP-001` implement Defend as visible state only for the first AP slice, or also add a tiny prototype damage-reduction effect?
-
-Recommended default: visible state only. It proves the action/tempo/UI path without inventing armor/damage formulas before the defense model is ready.
+1. `STORY-TAC-AP-001` is approved with a tiny prototype damage-reduction effect for Defend, not visible-state-only Defend.
+2. Narrow source-authority exception: `design/gdd/tactical-combat/ap-actions-and-reactions.md` and `production/planning/prototype-readability-and-map-next-steps-2026-06-15.md` remain draft/pending planning sources, but their cited AP/Defend sections are authorized only for this READY story's minimal AP, visible Defend state, and tiny prototype Defend damage-reduction effect. Broader initiative, Wait, armor, shield, cover, damage-type, terrain, status, ZoC, Overwatch, and CombatAI rules remain out of scope.
 
 ## Branch / PR requirements
 
@@ -164,9 +166,9 @@ Recommended default: visible state only. It proves the action/tempo/UI path with
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval recorded.
+- [x] Human approval recorded.
 
 ## DONE gate
 
@@ -182,4 +184,4 @@ Recommended default: visible state only. It proves the action/tempo/UI path with
 
 ## Verdict
 
-READY-candidate / approval pending. Do not implement until human approval resolves the Defend effect question and promotes this story to READY.
+READY / approved for implementation. Human approval recorded 2026-06-17 with tiny prototype Defend damage reduction approved as the narrow effect exception; implement only the bounded AP/Defend slice above.

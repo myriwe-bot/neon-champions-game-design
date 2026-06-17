@@ -1,54 +1,91 @@
 You are Codex working in the Neon Champions Unity repo.
 
-GUARDED PROMPT — DO NOT IMPLEMENT YET.
-
-This prompt is prepared for the next proposed packet only:
+Implement exactly one approved story:
 - STORY-TAC-AP-001 Minimal Tactical AP and Defend State
 
-Current status in design/control repo:
-- status: ready-candidate
-- approval: pending
+Design/control repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-game-design
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 
-Preflight stop condition:
-1. In the design/control repo, read:
-   - production\stories\story-tac-ap-001-minimal-tactical-ap-and-defend-state.md
-2. If the story does not say `status: ready` and `approval: approved`, STOP.
-3. Report: `STORY-TAC-AP-001 is not approved for implementation yet.`
-4. Do not create a Unity branch, do not edit Unity files, do not run implementation tests.
+Unity implementation repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-unity
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 
-When a future human approval promotes the story to READY, this prompt may be replaced with an implementation prompt using:
+Required preflight:
+1. In the design/control repo, run `git pull --ff-only origin main`.
+2. In the Unity repo, run:
+   - `git fetch origin`
+   - `git checkout main`
+   - `git pull --ff-only origin main`
+   - `git status --short --branch`
+3. Read these files before editing Unity code:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-tac-ap-001-minimal-tactical-ap-and-defend-state.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\tactical-combat.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\tactical-combat\ap-actions-and-reactions.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md
+   - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
+4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
 
-Branch:
-- story/STORY-TAC-AP-001-minimal-tactical-ap-defend-state
+Branch and PR:
+- Create branch: story/STORY-TAC-AP-001-minimal-tactical-ap-defend-state
+- PR title: STORY-TAC-AP-001 Minimal tactical AP and Defend state
+- Required linked story ID in commits/PR: STORY-TAC-AP-001
 
-PR title:
-- STORY-TAC-AP-001 Minimal tactical AP and Defend state
+Scope to implement:
+- Add minimal activation AP state to tactical board/session state.
+- Baseline max/current AP = 2 for the active stack activation.
+- AP does not carry between activations.
+- Refresh/reset behavior must be deterministic in the current prototype activation/session model.
+- Move costs 1 AP.
+- Basic Attack costs 1 AP.
+- Reject Move / Basic Attack when current AP is insufficient, with clear diagnostics and event-feed/feedback text and no partial mutation.
+- Add a minimal Defend action:
+  - Defend ends the current stack activation / consumes remaining AP.
+  - Defend sets a visible `Defending` state until the stack's next activation or the simplest equivalent reset point available in the current prototype.
+  - Defend state is visible in tactical snapshot/HUD/event feed.
+  - Human-approved effect: Defend also applies a tiny prototype damage-reduction effect while the `Defending` state is active.
+  - Keep the effect temporary, obvious, and small. Document the exact temporary value/name in code comments, test names, event/feed text, or evidence notes.
+  - This is not a final armor, shield, cover, damage-type, terrain, status-system, or defense formula.
+- Surface current/max AP and Defend state through existing presentation snapshot, affordance summary, marker labels/cards, and denial feedback.
+- Add focused tests for AP spend, insufficient-AP denial/no mutation, Defend state/reset visibility, tiny prototype Defend damage reduction, and no regression to movement/attack/retaliation/unit-definition behavior.
 
-Expected future scope after approval:
-- minimal activation AP state, baseline max/current AP = 2;
-- Move and Basic Attack cost 1 AP;
-- insufficient-AP denial with no partial mutation;
-- visible Defend state / activation-ending action;
-- AP and Defend surfaced in tactical presentation snapshot/HUD/event feed;
-- focused EditMode and PlayMode evidence under production\evidence\STORY-TAC-AP-001\;
-- Unity Foundation CI exact-head success before merge.
-
-Known unresolved approval question:
-- Should Defend be visible state only, or should it also add a tiny prototype damage-reduction effect?
-- Recommended default: visible state only.
-
-Hard exclusions unless the approved story changes:
+Out of scope:
+- No initiative order implementation or initiative manipulation.
 - No Wait action.
-- No initiative order or manipulation.
-- No AP carryover.
-- No heavy/signature 2 AP actions beyond preserving current command behavior.
-- No armor/shield/damage-type/cover/LOS/terrain/range-falloff/status/ability system.
-- No Zone of Control, opportunity attacks, Overwatch, CombatAI, or strategic-map/base/recruitment work.
+- No AP carryover between turns/rounds.
+- No heavy/signature 2 AP actions beyond preserving existing command actions.
+- No AP cost changes for Champion Command operations unless strictly necessary to preserve current behavior and explicitly documented.
+- No final armor, shields, damage types, cover, LOS, terrain, range falloff, ability system, status system, or final defense formula.
+- No Zone of Control, opportunity attacks, Overwatch, CombatAI, or initiative.
+- No strategic-map/base/recruitment/economy/topology changes.
+- No final UI skin, icons, animation, VFX, audio, portraits, final lore copy, or localization pass.
 
-Future implementation prompt must include Git/GitHub closeout:
-- git status --short --branch
-- git log --oneline -5
-- If `git status --short` shows modified or untracked story files after tests/evidence, do not report complete; add, commit, and push them first.
-- Push with `git push -u origin HEAD:story/STORY-TAC-AP-001-minimal-tactical-ap-defend-state`.
-- Open or update the PR and include the PR URL/number in the final response.
-- If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.
+Acceptance criteria:
+- Given a stack is activated, tactical state/snapshot exposes current AP and max AP as 2 / 2.
+- Given the active stack moves legally, current AP decreases by 1 and visible AP summary/event feed reflects the spend.
+- Given the active stack attacks legally, current AP decreases by 1 and visible AP summary/event feed reflects the spend.
+- Given current AP is 0, Move and Basic Attack are rejected with clear diagnostics/feedback and no partial movement, damage, retaliation, or event mutation.
+- Given the player chooses Defend, the stack enters visible Defending state, remaining AP is consumed or activation is ended, event feed explains Defend, and the tiny prototype damage-reduction effect applies while Defending.
+- Given the stack's next activation/reset point occurs, stale Defending state clears according to the documented prototype reset rule.
+- Existing movement range, attack range, definition-derived damage, retaliation, command availability, and tactical presentation smoke behavior are not intentionally regressed.
+
+Verification required:
+- Use TDD for AP/Defend behavior where practical: failing focused tests first, then implementation.
+- Required Unit/EditMode tests: AP initialization, AP spend, insufficient-AP rejection/no mutation, Defend state application/reset, tiny prototype Defend damage reduction, and regression coverage around movement/attack/retaliation/unit-definition behavior.
+- Required PlayMode tests/evidence: focused smoke showing visible AP values, AP spend after action, Defend state, tiny Defend damage reduction if observable, and insufficient-AP denial feedback.
+- Required screenshot/video evidence: PNG evidence under `production/evidence/STORY-TAC-AP-001/` in the Unity repo if implemented.
+- Required CI: Unity Foundation CI exact-head before merge.
+
+Git/GitHub closeout:
+1. Run relevant tests locally and include exact commands/results in the final response.
+2. Run `git status --short --branch` and `git log --oneline -5`.
+3. If `git status --short` shows modified or untracked story files after tests/evidence, do not report complete; add, commit, and push them first.
+4. Push with `git push -u origin HEAD:story/STORY-TAC-AP-001-minimal-tactical-ap-defend-state`.
+5. Open or update the PR with the required title.
+6. PR body must link the story, relevant GDD/ADR/control docs, tests/evidence, known omissions/stubs/placeholders/deferred work or explicitly state `No known omissions`.
+7. Final response must include PR URL/number, tests run, evidence path, CI URL/status or blocker, omissions/deferred work, and exact local git status.
+
+If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.

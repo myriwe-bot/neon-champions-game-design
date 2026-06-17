@@ -30,7 +30,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PRODUCTION. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. `STORY-TAC-READ-002`, `STORY-TAC-RET-001`, `STORY-TAC-AFFORD-001`, and `STORY-TAC-UNIT-001` are DONE / merged. Next proposed child story: `STORY-TAC-AP-001 Minimal Tactical AP and Defend State`, currently READY-candidate / approval pending.
+APPROVED / IN PRODUCTION. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. `STORY-TAC-READ-002`, `STORY-TAC-RET-001`, `STORY-TAC-AFFORD-001`, and `STORY-TAC-UNIT-001` are DONE / merged. `STORY-TAC-AP-001 Minimal Tactical AP and Defend State` is READY / approved for implementation with tiny prototype Defend damage reduction.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -131,7 +131,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TAC-RET-001 Minimal Melee Retaliation](../stories/story-tac-ret-001-minimal-melee-retaliation.md) | DONE / merged | Tactical Rules + UI | TAC-READ-002 DONE | Unity PR #49; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27552604744 |
 | [STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass](../stories/story-tac-afford-001-movement-and-attack-affordance-pass.md) | DONE / merged | Tactical UI | TAC-READ-002 and TAC-RET-001 DONE | Unity PR #50; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27562547868 |
 | [STORY-TAC-UNIT-001 Minimal Unit Definition Stats](../stories/story-tac-unit-001-minimal-unit-definition-stats.md) | DONE / merged | Data + Tactical Domain | readability and affordance baseline | Unity PR #51; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27619495357 |
-| [STORY-TAC-AP-001 Minimal Tactical AP and Defend State](../stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state.md) | READY-candidate / approval pending | Tactical Rules + UI | unit/stat baseline | AP spend/Defend tests and evidence; approval question: Defend visible state only vs tiny prototype damage reduction |
+| [STORY-TAC-AP-001 Minimal Tactical AP and Defend State](../stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state.md) | READY / approved | Tactical Rules + UI | unit/stat baseline | AP spend/Defend tests and evidence; tiny prototype Defend damage reduction approved |
 | STORY-TAC-AI-001 Neutral Guard One-Step CombatAI | Draft target | Tactical AI | readable feedback/event feed | AI action tests and guarded-battle PlayMode evidence |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -200,4 +200,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PRODUCTION. `STORY-TAC-READ-002`, `STORY-TAC-RET-001`, `STORY-TAC-AFFORD-001`, and `STORY-TAC-UNIT-001` are DONE / merged. `STORY-TAC-AP-001` is drafted as READY-candidate / approval pending; do not implement AP, Defend bonus, AI, ZoC, Overwatch, or strategic-map work until the relevant child story is promoted to READY.
+APPROVED / IN PRODUCTION. `STORY-TAC-READ-002`, `STORY-TAC-RET-001`, `STORY-TAC-AFFORD-001`, and `STORY-TAC-UNIT-001` are DONE / merged. `STORY-TAC-AP-001` is READY / approved for implementation with tiny prototype Defend damage reduction. Do not implement AI, ZoC, Overwatch, strategic-map work, or broader defense systems until later child stories are promoted to READY.

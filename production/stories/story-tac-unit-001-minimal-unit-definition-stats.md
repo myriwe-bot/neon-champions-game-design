@@ -237,4 +237,4 @@ Human-approved exceptions:
 
 DONE / merged. Unity PR #51 merged 2026-06-16; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27619495357
 
-Next proposed EPIC-006 child story: `STORY-TAC-AP-001 Minimal Tactical AP and Defend State`, currently READY-candidate / approval pending. Do not implement AP/Defend until human approval promotes that story to READY.
+Next EPIC-006 child story: `STORY-TAC-AP-001 Minimal Tactical AP and Defend State`, now READY / approved as of 2026-06-17 with tiny prototype Defend damage reduction.

@@ -844,3 +844,19 @@
 - Design/control publish CI passed for `STORY-TAC-AI-001` approval packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27694739627
 - Unity README approved-task pointer commit `0e54ac1d99616ab3b1f3d9e4800238b35f871e1f` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27694848108
 - Unity README now names `STORY-TAC-AI-001 Neutral Guard One-Step CombatAI` as the current READY / approved implementation task.
+
+
+## [2026-06-17] merge | STORY-TAC-AI-001 neutral guard one-step CombatAI
+
+- Reviewed and merged Unity PR #54 for `STORY-TAC-AI-001 Neutral Guard One-Step CombatAI`.
+- Squash merge commit: `0a7e67383932101459529a015e4d82d1d06b53b1`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27700425414
+- Marked `STORY-TAC-AI-001` DONE and updated EPIC-006 child-story status.
+
+## [2026-06-17] draft | STORY-STRAT-READ-002 strategic map readability pass
+
+- Created `production/stories/story-strat-read-002-strategic-map-readability-pass.md` as the next proposed EPIC-007 packet.
+- Created guarded prompt `production/sprints/codex-story-strat-read-002.prompt.txt`.
+- Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
+- Proposed scope: strategic map readability improvements for reachable routes/sites, path-cost preview, site category/state labels, interaction preview, and post-battle return summary using existing graph-backed state.
+- Explicitly excludes tile/hex topology, new base/recruitment systems, strategic AI, fog/logistics/weather, full economy, new tactical rules, and final map art/content.

@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-AI-001 Neutral Guard One-Step CombatAI
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-17
@@ -30,9 +30,9 @@ approval: approved
 
 ## Status
 
-READY / approved for implementation. Human approval recorded 2026-06-17: `STORY-TAC-AI-001` is approved as the next EPIC-006 implementation packet.
+DONE / merged. Unity PR #54 merged 2026-06-17. Squash merge commit: `0a7e67383932101459529a015e4d82d1d06b53b1`. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27700425414
 
-Approved answer: deterministic one-step neutral guard AI may Attack if already in range, otherwise Move one legal step toward the nearest living attacker, otherwise Defend/Pass.
+Original approval: Human approval recorded 2026-06-17. Approved answer: deterministic one-step neutral guard AI may Attack if already in range, otherwise Move one legal step toward the nearest living attacker, otherwise Defend/Pass.
 
 ## Story type
 
@@ -228,4 +228,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY for implementation.
+DONE / merged.

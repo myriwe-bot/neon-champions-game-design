@@ -30,7 +30,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PRODUCTION. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. `STORY-TAC-READ-002`, `STORY-TAC-RET-001`, `STORY-TAC-AFFORD-001`, and `STORY-TAC-UNIT-001` are DONE / merged. `STORY-TAC-AP-001 Minimal Tactical AP and Defend State` is READY / approved for implementation with tiny prototype Defend damage reduction.
+IMPLEMENTATION COMPLETE / awaiting human closeout. Human approval recorded 2026-06-15: split the next work into two epics, with this epic covering tactical readability and defender agency. All listed implementation child stories through `STORY-TAC-AI-001 Neutral Guard One-Step CombatAI` are DONE / merged.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -132,7 +132,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass](../stories/story-tac-afford-001-movement-and-attack-affordance-pass.md) | DONE / merged | Tactical UI | TAC-READ-002 and TAC-RET-001 DONE | Unity PR #50; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27562547868 |
 | [STORY-TAC-UNIT-001 Minimal Unit Definition Stats](../stories/story-tac-unit-001-minimal-unit-definition-stats.md) | DONE / merged | Data + Tactical Domain | readability and affordance baseline | Unity PR #51; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27619495357 |
 | [STORY-TAC-AP-001 Minimal Tactical AP and Defend State](../stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state.md) | DONE / merged | Tactical Rules + UI | unit/stat baseline | Unity PR #53; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27689580984 |
-| [STORY-TAC-AI-001 Neutral Guard One-Step CombatAI](../stories/story-tac-ai-001-neutral-guard-one-step-combat-ai.md) | READY / approved | Tactical AI | readable feedback/event feed; AP/Defend baseline | AI action tests and guarded-battle PlayMode evidence |
+| [STORY-TAC-AI-001 Neutral Guard One-Step CombatAI](../stories/story-tac-ai-001-neutral-guard-one-step-combat-ai.md) | DONE / merged | Tactical AI | readable feedback/event feed; AP/Defend baseline | Unity PR #54; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27700425414 |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 

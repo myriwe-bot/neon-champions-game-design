@@ -1,0 +1,76 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Candidate implementation packet:
+- STORY-STRAT-READ-002 Strategic Map Readability Pass
+
+IMPORTANT AUTHORIZATION GUARD:
+- This story is currently READY-candidate / approval pending.
+- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
+- If it does not, STOP. Do not implement. Report: `STORY-STRAT-READ-002 is not approved for implementation yet.`
+
+Design/control repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-game-design
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Unity implementation repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-unity
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Required preflight:
+1. In the design/control repo, run `git pull --ff-only origin main`.
+2. In the Unity repo, run:
+   - `git fetch origin`
+   - `git checkout main`
+   - `git pull --ff-only origin main`
+   - `git status --short --branch`
+3. Read these files before deciding whether implementation is authorized:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-strat-read-002-strategic-map-readability-pass.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\research\homm-like-strategic-map-topology-reference.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md
+   - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
+4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
+
+When approved, branch and PR:
+- Create branch: story/STORY-STRAT-READ-002-strategic-map-readability-pass
+- PR title: STORY-STRAT-READ-002 Strategic map readability pass
+- Required linked story ID in commits/PR: STORY-STRAT-READ-002
+
+Approved scope when/if promoted to READY:
+- Improve current strategic map readability using existing graph-backed strategic state.
+- Show clearer reachable route/site feedback from active Champion state.
+- Show path/route cost preview before movement commitment using existing route data.
+- Improve site labels/cards for existing categories/states: start/base-like site, resource, recruitment, guarded, objective, and data/cache if present.
+- Improve interaction preview text before commitment: move, battle, recruit/reinforce if already supported, collect/reward if already supported, contest, blocked/invalid.
+- Improve post-battle return summary for already-supported outcomes: site control, rewards/resource change, objective countdown/progress, losses/damage summary if already available.
+- Keep changes presentation/application-facing where possible; domain changes only to expose already-existing state through snapshots/results.
+- Add focused tests plus PlayMode PNG evidence under `production/evidence/STORY-STRAT-READ-002/`.
+
+Out of scope:
+- No tile/hex strategic topology, freeform map movement, route construction/destruction, terrain pathfinding, procedural map generation, or map editor.
+- No new base system, town-building tree, garrison management, recruitment economy, stock refresh, or reinforcement rules.
+- No strategic AI, fog/misinformation, weather/logistics/supply, market simulation, or full economy.
+- No new tactical combat rules, tactical UI changes, unit roster/balance changes, or new site mechanics beyond presenting existing interactions.
+- No final map art/icons/VFX/audio/animation/lore/localization pass.
+- No broad scene/prefab/ProjectSettings/package changes unless narrowly required and explicitly listed.
+
+Verification required when approved:
+- TDD for projection/preview/summary behavior where practical.
+- Unit/EditMode tests for formatting/state projection if introduced.
+- PlayMode tests/evidence for visible strategic map readability surfaces, interaction preview, and post-battle return summary.
+- Placeholder validator remains green.
+- Unity Foundation CI exact-head before merge.
+
+Git/GitHub closeout when approved:
+1. Run relevant tests locally and include exact commands/results in the final response.
+2. Run `git status --short --branch` and `git log --oneline -5`.
+3. If `git status --short` shows modified or untracked story files after tests/evidence, do not report complete; add, commit, and push them first.
+4. Push with `git push -u origin HEAD:story/STORY-STRAT-READ-002-strategic-map-readability-pass`.
+5. Open or update the PR with the required title.
+6. PR body must link the story, relevant GDD/ADR/control docs, tests/evidence, known omissions/stubs/placeholders/deferred work or explicitly state `No known omissions`.
+7. Final response must include PR URL/number, tests run, evidence path, CI URL/status or blocker, omissions/deferred work, and exact local git status.
+
+If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.

@@ -57,6 +57,7 @@ related:
     production/stories/story-strat-objective-001-multi-turn-objective-contest-direction,
     production/stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state,
     production/stories/story-tac-ai-001-neutral-guard-one-step-combat-ai,
+    production/stories/story-strat-read-002-strategic-map-readability-pass,
   ]
 approval: approved
 ---
@@ -65,15 +66,15 @@ approval: approved
 
 ## Recommended mode
 
-Current READY / approved Unity implementation packet: **STORY-TAC-AI-001 Neutral Guard One-Step CombatAI**. Human approval recorded 2026-06-17.
+No current READY / approved Unity implementation packet. Proposed next packet: **STORY-STRAT-READ-002 Strategic Map Readability Pass** is READY-candidate / approval pending.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, and `STORY-TAC-AP-001` are DONE / merged. `STORY-TAC-AI-001` is the current approved EPIC-006 implementation packet.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, and `STORY-TAC-AI-001` are DONE / merged. `STORY-STRAT-READ-002` is the next EPIC-007 candidate packet and is not approved for implementation yet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current approved prompt file: `production/sprints/codex-story-tac-ai-001.prompt.txt`. Historical prompt files remain for audit only.
+Candidate prompt file: `production/sprints/codex-story-strat-read-002.prompt.txt`. It self-blocks until the story is promoted to READY / approved. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -92,19 +93,19 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current approved prompt
+## Candidate prompt
 
-Use the checked-in prompt file:
+Use only after approval. The checked-in prompt file self-blocks while the story is not approved:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-ai-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-read-002.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-If workspace-write cannot complete because Unity tests/evidence require broader filesystem access, rerun the same checked-in prompt with:
+After approval only: if workspace-write cannot complete because Unity tests/evidence require broader filesystem access, rerun the same checked-in prompt with:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-ai-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-strat-read-002.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
 
@@ -155,10 +156,10 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-cmd-005.prompt.txt`
 - `production/sprints/codex-story-strat-objective-001.prompt.txt`
 
-Current prompt-file run:
+Current candidate prompt-file run:
 
-- `production/sprints/codex-story-tac-ai-001.prompt.txt`
+- `production/sprints/codex-story-strat-read-002.prompt.txt`
 
 ## After Codex finishes
 
-Codex must push `story/STORY-TAC-AI-001-neutral-guard-one-step-combat-ai` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, and omissions/deferred work.
+Do not run Codex for `STORY-STRAT-READ-002` until human approval promotes the story to READY / approved. After approval, Codex must push `story/STORY-STRAT-READ-002-strategic-map-readability-pass` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, and omissions/deferred work.

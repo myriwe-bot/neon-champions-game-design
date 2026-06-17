@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-APPROVED / NOT YET IN PRODUCTION. Human approval recorded 2026-06-15: this is the second follow-up epic after tactical readability/defender agency. It should start after enough tactical readability work has landed to make strategic-to-tactical decisions judgeable.
+APPROVED / READY-CANDIDATE PREPARED. Human approval recorded 2026-06-15: this is the second follow-up epic after tactical readability/defender agency. EPIC-006 implementation baseline has landed through `STORY-TAC-AI-001`; first child story `STORY-STRAT-READ-002` is now READY-candidate / approval pending.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -116,7 +116,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| STORY-STRAT-READ-002 Strategic Map Readability Pass | Draft target | Strategic UI + Playability Repair | Tactical readability baseline from EPIC-006, likely TAC-READ-002 DONE | Reachability/path/site/interaction/return-summary evidence |
+| [STORY-STRAT-READ-002 Strategic Map Readability Pass](../stories/story-strat-read-002-strategic-map-readability-pass.md) | READY-candidate / approval pending | Strategic UI + Playability Repair | Tactical readability baseline from EPIC-006 through STORY-TAC-AI-001 DONE | Reachability/path/site/interaction/return-summary evidence |
 | STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview | Draft target | Strategic Rules + UI | STRAT-READ-002 or accepted exception | Base/reinforcement tests and evidence |
 | STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype | Draft target | Strategic Presentation + Data | Strategic readability and base direction | Region/site map presentation evidence, no topology rewrite |
 
@@ -160,7 +160,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Child stories are identified as draft targets.
 - [x] Dependencies are known.
 - [x] Major risks are documented.
-- [ ] At least one child story is READY. Deferred until EPIC-006 baseline lands or human explicitly accelerates strategic readability.
+- [ ] At least one child story is READY. `STORY-STRAT-READ-002` is READY-candidate / approval pending after EPIC-006 baseline landed.
 
 ## Epic DONE gate
 
@@ -185,4 +185,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / SEQUENCED AFTER EPIC-006 BASELINE. Keep draft child stories non-READY until tactical readability has improved enough or the human explicitly approves accelerating strategic-map readability.
+APPROVED / FIRST CHILD READY-CANDIDATE. `STORY-STRAT-READ-002` is prepared but not implementation-authorized until human approval promotes it to READY.

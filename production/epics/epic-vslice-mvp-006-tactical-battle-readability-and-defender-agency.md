@@ -131,8 +131,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TAC-RET-001 Minimal Melee Retaliation](../stories/story-tac-ret-001-minimal-melee-retaliation.md) | DONE / merged | Tactical Rules + UI | TAC-READ-002 DONE | Unity PR #49; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27552604744 |
 | [STORY-TAC-AFFORD-001 Movement and Attack Affordance Pass](../stories/story-tac-afford-001-movement-and-attack-affordance-pass.md) | DONE / merged | Tactical UI | TAC-READ-002 and TAC-RET-001 DONE | Unity PR #50; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27562547868 |
 | [STORY-TAC-UNIT-001 Minimal Unit Definition Stats](../stories/story-tac-unit-001-minimal-unit-definition-stats.md) | DONE / merged | Data + Tactical Domain | readability and affordance baseline | Unity PR #51; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27619495357 |
-| [STORY-TAC-AP-001 Minimal Tactical AP and Defend State](../stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state.md) | READY / approved | Tactical Rules + UI | unit/stat baseline | AP spend/Defend tests and evidence; tiny prototype Defend damage reduction approved |
-| STORY-TAC-AI-001 Neutral Guard One-Step CombatAI | Draft target | Tactical AI | readable feedback/event feed | AI action tests and guarded-battle PlayMode evidence |
+| [STORY-TAC-AP-001 Minimal Tactical AP and Defend State](../stories/story-tac-ap-001-minimal-tactical-ap-and-defend-state.md) | DONE / merged | Tactical Rules + UI | unit/stat baseline | Unity PR #53; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27689580984 |
+| [STORY-TAC-AI-001 Neutral Guard One-Step CombatAI](../stories/story-tac-ai-001-neutral-guard-one-step-combat-ai.md) | READY-candidate / approval pending | Tactical AI | readable feedback/event feed; AP/Defend baseline | AI action tests and guarded-battle PlayMode evidence |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 

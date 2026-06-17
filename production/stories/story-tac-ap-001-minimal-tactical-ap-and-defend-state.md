@@ -1,7 +1,7 @@
 ---
 title: STORY-TAC-AP-001 Minimal Tactical AP and Defend State
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-16
@@ -28,7 +28,9 @@ approval: approved
 
 ## Status
 
-READY / approved for implementation. Human approval recorded 2026-06-17: `STORY-TAC-AP-001` is approved with a tiny prototype damage-reduction effect for Defend.
+DONE / merged. Unity PR #53 merged 2026-06-17. Squash merge commit: `d2c55ad4820d64f6980a7cbf432f632bd4c17ce3`. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27689580984
+
+Original approval: Human approval recorded 2026-06-17: `STORY-TAC-AP-001` approved with a tiny prototype damage-reduction effect for Defend.
 
 ## Story type
 

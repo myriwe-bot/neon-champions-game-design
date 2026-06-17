@@ -805,3 +805,20 @@
 - Promoted story to READY / approved, passed ambiguity check, and recorded the narrow source-authority exception for draft AP/Defend planning sources.
 - Replaced guarded `production/sprints/codex-story-tac-ap-001.prompt.txt` with the runnable implementation prompt.
 - Updated EPIC-006, index, and Codex run prompts to point at `STORY-TAC-AP-001` as the current approved Unity implementation packet.
+
+
+## [2026-06-17] merge | STORY-TAC-AP-001 minimal tactical AP and Defend state
+
+- Reviewed and merged Unity PR #53 for `STORY-TAC-AP-001 Minimal Tactical AP and Defend State`.
+- Merge-gate fixes made before merge: Basic Attack from full AP now spends 1 AP without ending activation, Drone Strike respects the temporary Defend reduction, and strategic/PlayMode smoke flows were updated for 2-AP activations.
+- Squash merge commit: `d2c55ad4820d64f6980a7cbf432f632bd4c17ce3`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27689580984
+- Marked `STORY-TAC-AP-001` DONE and updated EPIC-006 child-story status.
+
+## [2026-06-17] draft | STORY-TAC-AI-001 neutral guard one-step CombatAI
+
+- Created `production/stories/story-tac-ai-001-neutral-guard-one-step-combat-ai.md` as the next proposed EPIC-006 packet.
+- Created guarded prompt `production/sprints/codex-story-tac-ai-001.prompt.txt`.
+- Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
+- Proposed scope: deterministic one-step CombatAI for neutral guarded-site defender stacks only: Attack if legal, else move one legal step toward nearest living enemy, else Defend, else Pass.
+- Explicitly excludes strategic AI, advanced tactical AI/planning, randomness, initiative/Wait, ZoC/Overwatch, new combat mechanics, final UI/audio/VFX/content, and broad controller architecture rewrites.

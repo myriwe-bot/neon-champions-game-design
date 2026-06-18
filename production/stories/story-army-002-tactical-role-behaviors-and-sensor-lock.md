@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-18
@@ -18,16 +18,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock
 
 ## Status
 
-READY-candidate / approval pending. This story is prepared after `STORY-ARMY-001` merged, but is not yet authorized for Unity implementation.
-
-Do not implement until human approval promotes this story to `status: ready` and `approval: approved`.
+READY / approved. Human approval recorded 2026-06-18 from chat: `Approved`, in response to approval question for `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock` with the recommended default Sensor Lock effect.
 
 ## Story type
 
@@ -55,7 +53,7 @@ Exact source references:
 
 ## In scope
 
-Concrete implementation tasks if promoted to READY:
+Concrete implementation tasks:
 
 - Make the ARMY-001 unit definitions produce visible tactical role differences without adding new faction rosters or recruitment.
 - Preserve or refine the current data fields for:
@@ -66,7 +64,7 @@ Concrete implementation tasks if promoted to READY:
 - Implement one readable status/effect: **Sensor Lock / Marked**.
   - Primary owner: QXZ `strato_sensor_swarm` / Strato Sensor Swarm.
   - Effect should be small, visible, and easy to explain.
-  - Recommended MVP effect: mark one enemy target so follow-up attacks against it receive a small explicit bonus or guaranteed readable advantage, using existing tactical result/event-feed surfaces.
+  - Human-approved MVP effect: Strato Sensor Swarm applies a separate 1 AP Sensor Lock support action; the next successful attack against the marked target deals +1 stack-count damage and consumes the mark.
 - Add event-feed/status text that explains:
   - who applied Sensor Lock / Marked;
   - who is marked;
@@ -128,30 +126,25 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: FAIL until human approval and one effect-shape decision are recorded.
+Status: PASS.
 
-Open questions before READY:
+Human-approved answers recorded 2026-06-18:
 
-1. What exact MVP mechanical effect should Sensor Lock / Marked have?
-   - Recommended default: the next attack against the marked target deals +1 stack-count damage, then consumes the mark.
-   - Safer alternative: mark grants a visible +1 attack damage bonus only to Strato Sensor Swarm's side until the marked unit next activates.
-   - Lighter alternative: mark only enables a clearer target/focus-fire affordance, but this risks failing the “not cosmetic” criterion.
-2. Should Sensor Lock cost a normal attack/action in the current AP model, or be implemented as a separate support action with 1 AP cost?
-   - Recommended default: separate 1 AP support action, because it teaches support behavior without replacing ranged attack.
-3. Should only Strato Sensor Swarm apply it in this story?
-   - Recommended default: yes.
-
-Assumptions proposed for approval:
-
-- Use the recommended default: Strato Sensor Swarm applies a 1 AP Sensor Lock support action; the next successful attack against that target deals +1 stack-count damage and consumes the mark.
-- Keep Home Rule counterplay deferred.
-- Keep Sled Logistics Team as visible support/mobility role only; no special mobility ability yet.
+1. Sensor Lock / Marked effect:
+   - Strato Sensor Swarm applies a 1 AP Sensor Lock support action.
+   - The next successful attack against the marked target deals +1 stack-count damage.
+   - The mark is consumed after that bonus attack.
+2. Sensor Lock action cost/type:
+   - Separate 1 AP support action, not a replacement for the normal attack.
+3. Authorized applier:
+   - Only QXZ `strato_sensor_swarm` / Strato Sensor Swarm applies Sensor Lock in this story.
+4. Deferred scope:
+   - Home Rule counterplay is deferred.
+   - Sled Logistics Team remains a visible support/mobility role only; no special mobility ability yet.
 
 Human-approved exceptions:
 
-- None yet.
-
-If status is FAIL, this story is not READY.
+- None.
 
 ## Branch / PR requirements
 
@@ -183,9 +176,9 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval recorded.
+- [x] Human approval recorded.
 
 ## DONE gate
 
@@ -201,4 +194,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending. Good next packet for EPIC-008, but not approved for Unity implementation yet.
+READY / approved for Unity implementation. Implement exactly this story scope first; do not start ARMY-003 recruitment work until a later story is promoted to READY.

@@ -69,7 +69,7 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** None. `STORY-ARMY-001` is DONE / merged; `STORY-ARMY-002` is READY-candidate / approval pending and must not be run until explicitly approved.
+**Current READY / approved Unity implementation packet:** `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock`. Use the checked-in prompt file below.
 
 `STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, and `STORY-ARMY-001` are DONE / merged. EPIC-007 is closed for implementation; EPIC-008 direction is planned around faction armies, recruitment, and tactical role identity.
 
@@ -77,7 +77,7 @@ approval: approved
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Candidate prompt file `production/sprints/codex-story-army-002.prompt.txt` self-blocks until `STORY-ARMY-002` is promoted to READY / approved. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-army-002.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -98,23 +98,23 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-No Unity implementation prompt is currently approved. Do not run Codex against `neon-champions-unity` until `STORY-ARMY-002` or another story is promoted to `status: ready` and `approval: approved`.
+Run Codex from the checked-in approved prompt file:
 
-Candidate prompt-file run after explicit approval only:
+Current approved prompt-file run:
 
 ```powershell
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-002.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted-repo fallback for the same candidate packet, after explicit approval only:
+Trusted-repo fallback for the same approved packet:
 
 ```powershell
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-002.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
 
-The candidate prompt must stop while `STORY-ARMY-002` remains READY-candidate / approval pending.
+The prompt preflight must verify `STORY-ARMY-002` is `status: ready`, `approval: approved`, and Ambiguity Check PASS before editing Unity code.
 
 ## Historical prompt-file runs
 
@@ -171,7 +171,7 @@ Current approved prompt-file run:
 
 - `production/sprints/codex-story-army-001.prompt.txt`
 
-Current candidate prompt-file run:
+Current approved prompt-file run:
 
 - `production/sprints/codex-story-army-002.prompt.txt`
 
@@ -181,4 +181,4 @@ Guarded decision-brief packet:
 
 ## After Codex finishes
 
-If running the candidate ARMY-002 prompt before approval, Codex must stop after preflight and must not push Unity runtime changes or create a Unity implementation PR. After approval, Codex must push `story/STORY-ARMY-002-tactical-role-behaviors-sensor-lock` or explicitly report why pushing/PR creation was impossible.
+Codex must push `story/STORY-ARMY-002-tactical-role-behaviors-sensor-lock` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, and omissions/deferred work.

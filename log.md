@@ -1000,3 +1000,11 @@
 - Post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27776429736.
 - Created `production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md` as READY-candidate / approval pending.
 - Created guarded prompt `production/sprints/codex-story-army-002.prompt.txt`; it self-blocks until ARMY-002 is explicitly approved.
+
+## [2026-06-18] approval | STORY-ARMY-002
+
+- Promoted `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock` to READY / approved after human approval.
+- Approved Sensor Lock effect: Strato Sensor Swarm applies a separate 1 AP support action; the next successful attack against the marked target deals +1 stack-count damage and consumes the mark.
+- Home Rule counterplay remains deferred.
+- Sled Logistics Team remains visible support/mobility role only; no special mobility ability in ARMY-002.
+- Activated prompt `production/sprints/codex-story-army-002.prompt.txt`.

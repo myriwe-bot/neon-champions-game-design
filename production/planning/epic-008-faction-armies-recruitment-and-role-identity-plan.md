@@ -80,11 +80,11 @@ Out of scope:
 
 Status:
 
-- READY-candidate / approval pending.
+- READY / approved for implementation.
 
-Recommended approval default:
+Human-approved default:
 
-- Strato Sensor Swarm applies a 1 AP Sensor Lock support action; the next successful attack against that target deals +1 stack-count damage and consumes the mark.
+- Strato Sensor Swarm applies a separate 1 AP Sensor Lock support action; the next successful attack against the marked target deals +1 stack-count damage and consumes the mark.
 
 ### Slice C — STORY-ARMY-003 Fixed Recruitment Offers and Army Summary
 

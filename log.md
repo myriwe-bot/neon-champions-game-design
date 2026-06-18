@@ -899,3 +899,11 @@
 - Design/control publish CI passed for `STORY-STRAT-BASE-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27745979278
 - Unity README pointer commit `18520eac55d55f4193137a46b9857921ca1c6358` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27745985653
 - Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-STRAT-BASE-001` candidate packet only.
+
+## [2026-06-18] approval | STORY-STRAT-BASE-001 starting hub reinforcement preview
+
+- Human approved `STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview`.
+- Promoted story from READY-candidate / approval pending to READY / approved.
+- Approved assumptions: one fixed prototype starting-hub/base-like reinforcement affordance only; reuse existing recruitment/resource/army infrastructure where practical; labels/effect values may remain prototype-scoped.
+- Updated EPIC-007, run-prompt index, guarded prompt, and Unity task pointer for implementation handoff.
+- Workflow note from human: future approvals and verify-review-fix-merge-next-packet loops should be faster and less ruminative; next epic should consider larger stories or safe batched chunk review to reduce cycle time.

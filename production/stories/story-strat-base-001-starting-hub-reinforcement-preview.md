@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-18
@@ -16,18 +16,16 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed second EPIC-007 implementation packet after `STORY-STRAT-READ-002` merged.
+READY / approved. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-BASE-001 approved`.
 
-Do not implement until human approval promotes this story to READY / approved.
-
-Recommended approval question: approve one narrow starting-hub reinforcement preview that makes the owned start/base-like site show a fixed replenish/reinforce affordance using existing recruitment/resource/army state, without adding a town-building tree, garrison management, stock-refresh economy, or new base system?
+Approved scope: one narrow starting-hub reinforcement preview that makes the owned start/base-like site show a fixed replenish/reinforce affordance using existing recruitment/resource/army state, without adding a town-building tree, garrison management, stock-refresh economy, or new base system.
 
 ## Story type
 
@@ -127,14 +125,14 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate, pending human approval.
+Status: PASS. Human approval recorded 2026-06-18.
 
-Open questions before READY:
+Human-approved answers:
 
-1. Human must approve this story as the next implementation packet.
-2. Human should accept the fixed-prototype direction: one starting-hub reinforcement affordance only, not a general base system.
+1. Approved as the next implementation packet.
+2. Approved fixed-prototype direction: one starting-hub reinforcement affordance only, not a general base system.
 
-Assumptions proposed for approval:
+Approved assumptions:
 
 - This is a single fixed prototype reinforcement affordance at the owned starting hub/base-like site.
 - It may reuse existing recruitment/resource/army infrastructure but must keep recruitment-site behavior distinct.
@@ -150,9 +148,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None yet.
-
-If status is FAIL, this story is not READY.
+- None. Story scope remains narrow and does not authorize a general base system.
 
 ## Branch / PR requirements
 
@@ -182,9 +178,9 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [x] Ambiguity Check status is PASS for candidate; human approval remains pending.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -200,4 +196,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending.
+READY for implementation.

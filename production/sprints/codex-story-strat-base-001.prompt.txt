@@ -1,12 +1,11 @@
 You are Codex working in the Neon Champions Unity repo.
 
-Candidate implementation packet:
+Approved implementation packet:
 - STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview
 
-IMPORTANT AUTHORIZATION GUARD:
-- This story is currently READY-candidate / approval pending.
-- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
-- If it does not, STOP. Do not implement. Report: `STORY-STRAT-BASE-001 is not approved for implementation yet.`
+Authorization:
+- Human approval recorded 2026-06-18.
+- Implement only the approved story scope.
 
 Design/control repo:
 - GitHub: https://github.com/myriwe-bot/neon-champions-game-design
@@ -23,7 +22,7 @@ Required preflight:
    - `git checkout main`
    - `git pull --ff-only origin main`
    - `git status --short --branch`
-3. Read these files before deciding whether implementation is authorized:
+3. Read these files before implementation:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-strat-base-001-starting-hub-reinforcement-preview.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md
@@ -33,12 +32,12 @@ Required preflight:
    - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
 4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
 
-When approved, branch and PR:
+Branch and PR:
 - Create branch: story/STORY-STRAT-BASE-001-starting-hub-reinforcement-preview
 - PR title: STORY-STRAT-BASE-001 Starting hub reinforcement preview
 - Required linked story ID in commits/PR: STORY-STRAT-BASE-001
 
-Candidate scope when/if promoted to READY:
+Approved scope:
 - Add one narrow starting-hub/base-like reinforcement preview/action for the active Champion at the owned starting hub.
 - Preview offer/effect, cost, affordability/availability, and likely army/resource change before commitment.
 - Apply only through strategic-layer state using existing resources/army data where possible.

@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-008 Strategic Map Region Playtest and Closeout Review
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-18
@@ -17,18 +17,16 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-QA-008 Strategic Map Region Playtest and Closeout Review
 
 ## Status
 
-READY-candidate / approval pending. This is a guarded follow-up after EPIC-007's three implementation stories merged.
+READY / approved. Human approval recorded 2026-06-18 from chat: `Approved`, in response to the guarded `STORY-QA-008` closeout candidate.
 
-Do not implement until human approval promotes this story to READY / approved and supplies either a playtest verdict or concrete readability/clickability issues to fix.
-
-Recommended approval question: approve a narrow EPIC-007 closeout/review pass that replays the current vertical-slice strategic map at 1280x720, verifies the new region/site/corridor presentation is readable and clickable, and fixes only concrete readability/clickability regressions found during that review?
+Approved scope: a narrow EPIC-007 closeout/review pass that replays the current vertical-slice strategic map at 1280x720, verifies the new region/site/corridor presentation is readable and clickable, and fixes only concrete readability/clickability regressions found during that review.
 
 ## Story type
 
@@ -109,15 +107,15 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: FAIL until human approval and review input.
+Status: PASS. Human approval recorded 2026-06-18.
 
-Open questions before READY:
+Human-approved answers:
 
-1. Does the human want this closeout/review pass before starting the next mechanics/design epic?
-2. Should Codex fix concrete issues it finds during review, or only report them for human prioritization?
-3. If the review passes, should EPIC-007 be closed as DONE or left awaiting human playtest?
+1. Yes: run this closeout/review pass before starting the next mechanics/design epic.
+2. Codex may fix concrete readability/clickability issues it finds during review if they are directly tied to EPIC-007 commitments.
+3. If review passes, record a closeout verdict; do not start the next epic without separate human direction.
 
-Assumptions proposed for approval:
+Approved assumptions:
 
 - This is a narrow QA/readability closeout pass, not a new mechanics packet.
 - Concrete readability/clickability regressions may be fixed if they are directly tied to EPIC-007 commitments.
@@ -125,9 +123,7 @@ Assumptions proposed for approval:
 
 Human-approved exceptions:
 
-- None yet.
-
-If status is FAIL, this story is not READY.
+- None. Story scope remains a narrow QA/readability closeout pass and does not authorize new mechanics or next-epic implementation.
 
 ## Branch / PR requirements
 
@@ -148,8 +144,8 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -163,4 +159,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending. Do not implement yet.
+READY for implementation.

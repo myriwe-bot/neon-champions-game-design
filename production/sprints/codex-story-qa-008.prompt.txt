@@ -1,12 +1,11 @@
 You are Codex working in the Neon Champions Unity repo.
 
-Candidate packet:
+Approved implementation packet:
 - STORY-QA-008 Strategic Map Region Playtest and Closeout Review
 
-IMPORTANT AUTHORIZATION GUARD:
-- This story is currently READY-candidate / approval pending.
-- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
-- If it does not, STOP. Do not implement. Report: `STORY-QA-008 is not approved for implementation yet.`
+Authorization:
+- Human approval recorded 2026-06-18.
+- Implement only the approved story scope.
 
 Design/control repo:
 - GitHub: https://github.com/myriwe-bot/neon-champions-game-design
@@ -23,7 +22,7 @@ Required preflight:
    - `git checkout main`
    - `git pull --ff-only origin main`
    - `git status --short --branch`
-3. Read these files before deciding whether implementation is authorized:
+3. Read these files before implementation:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-qa-008-strategic-map-region-playtest-and-closeout-review.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md
@@ -34,12 +33,12 @@ Required preflight:
    - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
 4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
 
-When/if approved, branch and PR:
+Branch and PR:
 - Create branch: story/STORY-QA-008-strategic-map-region-playtest-closeout
 - PR title: STORY-QA-008 Strategic map region playtest and closeout review
 - Required linked story ID: STORY-QA-008
 
-Candidate scope when/if promoted to READY:
+Approved scope:
 - Review the merged EPIC-007 strategic map surface at 1280x720.
 - Verify active actor, reachable destinations, path cost, site category, guarded/ownership state, starting-hub reinforcement, selected-site interaction, and return/readability context are understandable together.
 - Fix only concrete readability/clickability regressions directly tied to EPIC-007 commitments.

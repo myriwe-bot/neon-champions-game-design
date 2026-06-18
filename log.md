@@ -960,3 +960,10 @@
 - Design/control publish CI passed for `STORY-QA-008` guarded candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27759595723
 - Unity README pointer-clear commit `b8da4b50951fd9e471060f0f0f860deef0d5cf39` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27759608451
 - Unity README now states no READY / approved implementation task is active and points to guarded `STORY-QA-008` candidate only.
+
+## [2026-06-18] approval | STORY-QA-008 strategic map region playtest and closeout review
+
+- Human approved `STORY-QA-008 Strategic Map Region Playtest and Closeout Review`.
+- Promoted story from READY-candidate / approval pending to READY / approved.
+- Approved assumptions: run this closeout/review before starting another mechanics/design epic; Codex may fix concrete readability/clickability regressions directly tied to EPIC-007 commitments; broader next-epic direction remains human-owned after closeout verdict.
+- Updated EPIC-007, run-prompt index, prompt, and Unity task pointer for implementation handoff.

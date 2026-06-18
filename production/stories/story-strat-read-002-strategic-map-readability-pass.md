@@ -1,11 +1,11 @@
 ---
 title: STORY-STRAT-READ-002 Strategic Map Readability Pass
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-18
 source_lore: []
 related:
   [
@@ -18,18 +18,16 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-STRAT-READ-002 Strategic Map Readability Pass
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed first EPIC-007 implementation packet after EPIC-006's tactical readability / defender-agency baseline landed through `STORY-TAC-AI-001`.
+READY / approved. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-READ-002 approved`. This is the first EPIC-007 implementation packet after EPIC-006's tactical readability / defender-agency baseline landed through `STORY-TAC-AI-001`.
 
-Do not implement until human approval promotes this story to READY / approved.
-
-Recommended approval question: approve a narrow strategic-map readability pass that improves reachable route/site feedback, path-cost preview, site category/state labels, interaction preview, and post-battle return summary without changing strategic topology or adding base/recruitment systems?
+Approved scope: a narrow strategic-map readability pass that improves reachable route/site feedback, path-cost preview, site category/state labels, interaction preview, and post-battle return summary without changing strategic topology or adding base/recruitment systems.
 
 ## Story type
 
@@ -139,13 +137,14 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate, pending human approval.
+Status: PASS. Human approval recorded 2026-06-18.
 
-Open questions before READY:
+Human-approved answers:
 
-1. Human must approve this story as the next implementation packet.
+1. Approved as the next implementation packet.
+2. Narrow source-authority exception approved for the cited draft planning note and draft reference note only as bounded context for this story; approved GDD/ADR/control docs remain authoritative.
 
-Assumptions proposed for approval:
+Approved assumptions:
 
 - The pass improves readability of existing strategic mechanics only; it does not add new strategic rules.
 - Placeholder labels/icons/markers may be used if clear, deterministic, and covered by evidence.
@@ -161,7 +160,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None yet. The cited draft planning note is source context only until human approval records a narrow source-authority exception for this story.
+- The cited draft planning note `production/planning/prototype-readability-and-map-next-steps-2026-06-15.md` §7 and draft reference note `design/research/homm-like-strategic-map-topology-reference.md` are approved only as bounded context for this story's readability scope. They do not authorize broader topology, base/recruitment, economy, fog/logistics, strategic AI, or final-content work.
 
 If status is FAIL, this story is not READY.
 
@@ -194,9 +193,9 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [x] Ambiguity Check status is PASS for candidate; human approval remains pending.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -212,4 +211,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending.
+READY for implementation.

@@ -867,3 +867,12 @@
 - Design/control publish CI passed for `STORY-STRAT-READ-002` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27701173908
 - Unity README pointer commit `914d6e938b85316403de8c5b9fbeb524d38e165b` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27701275473
 - Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-STRAT-READ-002` candidate packet only.
+
+## [2026-06-18] approval | STORY-STRAT-READ-002 promoted to READY
+
+- Human approval recorded from chat: `STORY-STRAT-READ-002 approved`.
+- Promoted `production/stories/story-strat-read-002-strategic-map-readability-pass.md` from READY-candidate to READY / approved.
+- Approved assumptions: existing strategic mechanics only; placeholder labels/icons/markers may be used if clear and covered by evidence; exact text is implementation-owned within acceptance criteria.
+- Recorded narrow source-authority exception for the cited draft planning/reference notes as bounded context only; broader topology, base/recruitment, economy, fog/logistics, strategic AI, and final-content work remain out of scope.
+- Replaced the guarded `production/sprints/codex-story-strat-read-002.prompt.txt` with the runnable implementation prompt.
+- Updated EPIC-007, index, and Codex run prompts to point at `STORY-STRAT-READ-002` as the current approved Unity implementation packet.

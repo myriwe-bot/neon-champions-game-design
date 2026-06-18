@@ -69,15 +69,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** None. EPIC-007 is closed; do not run Codex against Unity until a new story is promoted to `status: ready` and `approval: approved`.
+**Current READY / approved Unity implementation packet:** None. EPIC-008 is planned/approved, but `STORY-ARMY-001` is still READY-candidate / approval pending. Do not run Codex against Unity until that story is promoted to `status: ready` and `approval: approved`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, and `STORY-QA-008` are DONE / merged. EPIC-007 is closed for implementation; next-epic direction is pending human choice.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, and `STORY-QA-008` are DONE / merged. EPIC-007 is closed for implementation; EPIC-008 direction is planned around faction armies, recruitment, and tactical role identity.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current prompt file: none. `production/sprints/codex-next-epic-direction-brief.prompt.txt` is a guarded decision-brief packet only; it must not create a Unity branch or implement runtime changes. Historical prompt files remain for audit only.
+Current implementation prompt file: none. Candidate prompt file `production/sprints/codex-story-army-001.prompt.txt` self-blocks until `STORY-ARMY-001` is promoted to READY / approved. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -98,23 +98,23 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-No Unity implementation prompt is currently approved. Do not run Codex against `neon-champions-unity` until a new story is promoted to `status: ready` and `approval: approved`.
+No Unity implementation prompt is currently approved. Do not run Codex against `neon-champions-unity` until `STORY-ARMY-001` or another story is promoted to `status: ready` and `approval: approved`.
 
-Guarded decision-brief packet, if a human asks for next-direction preparation only:
+Current candidate prompt-file run, after explicit approval only:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-epic-direction-brief.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted-repo fallback for the same guarded decision brief only:
+Trusted-repo fallback for the same candidate packet, after explicit approval only:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-epic-direction-brief.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-001.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
 
-The guarded packet must stop if asked to modify Unity runtime code or create a runnable implementation branch.
+The candidate packet must stop while `STORY-ARMY-001` remains READY-candidate / approval pending.
 
 ## Historical prompt-file runs
 
@@ -165,10 +165,15 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-strat-read-002.prompt.txt`
 - `production/sprints/codex-story-strat-base-001.prompt.txt`
 - `production/sprints/codex-story-strat-map-region-001.prompt.txt`
+- `production/sprints/codex-story-qa-008.prompt.txt`
 
 Current approved prompt-file run:
 
 - None.
+
+Current candidate prompt-file run:
+
+- `production/sprints/codex-story-army-001.prompt.txt`
 
 Guarded decision-brief packet:
 
@@ -176,4 +181,4 @@ Guarded decision-brief packet:
 
 ## After Codex finishes
 
-If running the guarded decision-brief packet, Codex must not push Unity runtime changes or create a Unity implementation PR. It should output a concise human decision brief with 2-4 next-direction options and the recommended default. A later implementation packet requires explicit human approval and a new READY story.
+If running the candidate ARMY-001 prompt before approval, Codex must stop after preflight and must not push Unity runtime changes or create a Unity implementation PR. After approval, Codex must push `story/STORY-ARMY-001-mvp-faction-unit-definitions-roster-seed` or explicitly report why pushing/PR creation was impossible.

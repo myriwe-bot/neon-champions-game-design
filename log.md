@@ -973,3 +973,12 @@
 - Design/control publish CI passed for `STORY-QA-008` READY promotion: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27761239723
 - Unity README pointer commit `753d1837593c45de8cea02beb92213de1a34d43d` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27761243650
 - Unity README now names `STORY-QA-008` as the current READY / approved implementation task.
+
+## [2026-06-18] plan | EPIC-008 faction armies, recruitment, and tactical role identity
+
+- Human selected next direction after EPIC-007 closeout: faction armies + recruitment + tactical role identity.
+- Recorded accepted defaults: Home Rule Coalition vs QXZ Meridian; Home Rule is soft-canon/provisional; 3 unit lines per faction; QXZ owns the first Sensor Lock / Marked lane; fixed offers at starting hubs plus one neutral recruitment site; 4 medium-batched implementation slices plus QA closeout.
+- Created `production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md` as approved/planned epic.
+- Created `production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan.md`.
+- Created `production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md` as READY-candidate / approval pending, not yet implementation-authorized.
+- Created guarded candidate prompt `production/sprints/codex-story-army-001.prompt.txt`.

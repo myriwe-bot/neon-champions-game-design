@@ -1,0 +1,55 @@
+Candidate packet: STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock.
+
+IMPORTANT AUTHORIZATION GUARD:
+- This story is currently READY-candidate / approval pending.
+- Before editing Unity code, read the story file and confirm it says `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
+- If it does not, STOP. Do not implement. Report: `STORY-ARMY-002 is not approved for implementation yet.`
+
+Implementation target after approval:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-ARMY-002-tactical-role-behaviors-sensor-lock
+- PR title: STORY-ARMY-002 Tactical role behaviors and Sensor Lock
+
+Required reading before editing:
+- production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md
+- production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md
+- production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md
+- production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan.md
+- design/gdd/faction-unit-rosters.md
+- design/gdd/tactical-combat.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Candidate scope when/if promoted to READY:
+- Make ARMY-001 unit definitions produce visible tactical role differences.
+- Implement one readable status/effect: Sensor Lock / Marked.
+- Primary owner: Strato Sensor Swarm.
+- Recommended default if approved: Strato Sensor Swarm applies a 1 AP Sensor Lock support action; the next successful attack against the target deals +1 stack-count damage and consumes the mark.
+- Add event-feed/status text for applier, target, mechanical effect, and consume/expiry.
+- Add tests and evidence under production/evidence/STORY-ARMY-002/.
+
+Out of scope:
+- No recruitment UI/action.
+- No full town tree.
+- No upgraded variants or new unit lines.
+- No full balance pass.
+- No full cover/LOS/morale/damage taxonomy, armor/shield system, or AP redesign.
+- No Champion Assets/Operations expansion.
+- No strategic AI.
+- No final art/icons/VFX/audio/animation.
+- No hard-canon rename of Home Rule Coalition.
+
+Expected verification before PR after approval:
+- git diff --check
+- focused unit/edit-mode tests for Sensor Lock validation/application/effect/invalid target cases
+- focused tactical snapshot/event text tests where practical
+- PlayMode/screenshot evidence showing Sensor Lock / Marked and visible role labels
+- Unity Foundation CI exact-head
+
+PR requirements after approval:
+- Link STORY-ARMY-002.
+- Include tests run, evidence path, CI run URL, and omissions/deferred work.
+- Commit and push the actual implementation branch to remote, or clearly explain why pushing/PR creation was impossible.

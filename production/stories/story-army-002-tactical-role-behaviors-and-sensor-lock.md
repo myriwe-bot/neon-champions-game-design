@@ -1,0 +1,204 @@
+---
+title: STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock
+type: story
+status: ready-candidate
+phase: production
+owner: shared
+created: 2026-06-18
+updated: 2026-06-18
+source_lore: [greenland, qxz-meridian, white-sky]
+related:
+  [
+    production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity,
+    production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan,
+    production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed,
+    design/gdd/faction-unit-rosters,
+    design/gdd/tactical-combat,
+    docs/architecture/control-manifest,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+  ]
+approval: pending
+---
+
+# STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock
+
+## Status
+
+READY-candidate / approval pending. This story is prepared after `STORY-ARMY-001` merged, but is not yet authorized for Unity implementation.
+
+Do not implement until human approval promotes this story to `status: ready` and `approval: approved`.
+
+## Story type
+
+Tactical Rules + UI / Playability Differentiation.
+
+## Parent epic
+
+- [EPIC-VSLICE-MVP-008 Faction Armies, Recruitment, and Tactical Role Identity](../epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md)
+
+## User/player/system value
+
+As a player, I want the newly defined early units to behave differently in battle, so that army composition becomes readable and tactically meaningful before recruitment expands the strategic loop.
+
+## Source requirements
+
+Exact source references:
+
+- `production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md` for approved unit IDs, display names, factions, and placeholder stats.
+- `production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md` for the accepted direction: roles plus one readable status/effect, QXZ-first Sensor Lock / Marked.
+- `design/gdd/tactical-combat.md` §§3-6.7 for stack-first combat, actions, retaliation hooks, range, and visible statuses.
+- `design/gdd/faction-unit-rosters.md` for the first 3-line Home Rule / QXZ roster fantasy; use only the already-approved seed scope.
+- `docs/architecture/control-manifest.md` §§1, 2, 4, 5, 6, 7, 9, 10.
+- `docs/architecture/testing-strategy.md`.
+- `docs/architecture/ci-build-automation.md`.
+
+## In scope
+
+Concrete implementation tasks if promoted to READY:
+
+- Make the ARMY-001 unit definitions produce visible tactical role differences without adding new faction rosters or recruitment.
+- Preserve or refine the current data fields for:
+  - melee / retaliator;
+  - ranged / recon;
+  - support / mobility;
+  - heavy defender.
+- Implement one readable status/effect: **Sensor Lock / Marked**.
+  - Primary owner: QXZ `strato_sensor_swarm` / Strato Sensor Swarm.
+  - Effect should be small, visible, and easy to explain.
+  - Recommended MVP effect: mark one enemy target so follow-up attacks against it receive a small explicit bonus or guaranteed readable advantage, using existing tactical result/event-feed surfaces.
+- Add event-feed/status text that explains:
+  - who applied Sensor Lock / Marked;
+  - who is marked;
+  - what changed mechanically;
+  - when the status expired or was consumed, if applicable.
+- Ensure melee/retaliator, ranged/recon, and heavy defender roles remain visible in labels/snapshots/evidence.
+- Add focused tests for role behavior and Sensor Lock edge cases.
+- Add PlayMode/PNG evidence under `production/evidence/STORY-ARMY-002/`.
+
+## Out of scope
+
+Not authorized by this story:
+
+- No recruitment UI/action or strategic recruitment changes. That belongs to ARMY-003.
+- No full town/dwelling tree.
+- No upgraded variants or new unit lines.
+- No full balance pass.
+- No full cover, LOS, morale, damage-type taxonomy, armor/shield system, or AP redesign.
+- No Champion Assets/Operations expansion.
+- No strategic AI.
+- No final art/icons/VFX/audio/animation.
+- No hard-canon rename of Home Rule Coalition.
+
+## Allowed stubs, mocks, placeholders, or temporary data
+
+- Sensor Lock / Marked can use prototype text labels and existing event-feed/status surfaces.
+- The exact numerical bonus/effect may be a small prototype value if it is explicit, tested, documented, and easy to change later.
+- Sled Logistics Team may remain a support/mobility placeholder if implementing a distinct tactical ability would exceed scope; it should still display as a distinct support/mobility role.
+- Home Rule counterplay to Sensor Lock may remain deferred unless it is very small and does not broaden scope.
+
+## Dependencies
+
+- `STORY-ARMY-001` DONE / merged.
+- Existing tactical board, action, event-feed, labels, AP, retaliation, and CombatAI baseline.
+- Existing Unity Foundation CI.
+
+## Acceptance criteria
+
+- [ ] Strato Sensor Swarm can apply a visible Sensor Lock / Marked status/effect to a legal enemy target.
+- [ ] Sensor Lock / Marked has an explicit, tested mechanical effect and does not remain a cosmetic flag.
+- [ ] Event feed/status text identifies the applier, target, and effect in player-readable terms.
+- [ ] Invalid Sensor Lock / Marked attempts fail safely with concrete diagnostics and no partial mutation.
+- [ ] The effect cannot target defeated, same-side, missing, or out-of-range targets unless the story explicitly documents a narrower allowed target model.
+- [ ] Melee/retaliator, ranged/recon, support/mobility, and heavy defender role labels remain visible in tactical snapshots/evidence.
+- [ ] Existing movement, attack, retaliation, AP, CombatAI, battle handoff, and ARMY-001 unit definition behavior do not regress.
+- [ ] Evidence documents the prototype Sensor Lock / Marked value/effect and deferred role depth.
+
+## Verification requirements
+
+- Unit tests: Required for Sensor Lock / Marked validation, application, effect, expiration/consumption if any, and invalid target cases.
+- Unity edit-mode tests: Required for tactical board/action behavior and snapshot/event text where practical.
+- Unity play-mode tests: Required if current PlayMode smoke can verify visible status/evidence.
+- Integration/data validation tests: Existing validators remain green.
+- Screenshot/video evidence: Required PNG evidence under `production/evidence/STORY-ARMY-002/` showing Sensor Lock / Marked applied and visible role labels.
+- Performance budget or N/A: N/A.
+- CI evidence: Unity Foundation CI exact-head before merge.
+- TDD evidence required? Yes for production tactical logic.
+- Automation deferred? No broad exception approved; document any UI-only manual evidence.
+
+## Ambiguity Check
+
+Status: FAIL until human approval and one effect-shape decision are recorded.
+
+Open questions before READY:
+
+1. What exact MVP mechanical effect should Sensor Lock / Marked have?
+   - Recommended default: the next attack against the marked target deals +1 stack-count damage, then consumes the mark.
+   - Safer alternative: mark grants a visible +1 attack damage bonus only to Strato Sensor Swarm's side until the marked unit next activates.
+   - Lighter alternative: mark only enables a clearer target/focus-fire affordance, but this risks failing the “not cosmetic” criterion.
+2. Should Sensor Lock cost a normal attack/action in the current AP model, or be implemented as a separate support action with 1 AP cost?
+   - Recommended default: separate 1 AP support action, because it teaches support behavior without replacing ranged attack.
+3. Should only Strato Sensor Swarm apply it in this story?
+   - Recommended default: yes.
+
+Assumptions proposed for approval:
+
+- Use the recommended default: Strato Sensor Swarm applies a 1 AP Sensor Lock support action; the next successful attack against that target deals +1 stack-count damage and consumes the mark.
+- Keep Home Rule counterplay deferred.
+- Keep Sled Logistics Team as visible support/mobility role only; no special mobility ability yet.
+
+Human-approved exceptions:
+
+- None yet.
+
+If status is FAIL, this story is not READY.
+
+## Branch / PR requirements
+
+- Branch name after approval: `story/STORY-ARMY-002-tactical-role-behaviors-sensor-lock`
+- PR title after approval: `STORY-ARMY-002 Tactical role behaviors and Sensor Lock`
+- Required linked story ID: `STORY-ARMY-002`.
+- Required linked GDD/ADR/control docs:
+  - `design/gdd/faction-unit-rosters.md`.
+  - `design/gdd/tactical-combat.md`.
+  - `docs/architecture/control-manifest.md`.
+  - `docs/architecture/testing-strategy.md`.
+  - `docs/architecture/ci-build-automation.md`.
+- Required root/scoped AGENTS.md instructions: read Unity root `AGENTS.md` plus scoped AGENTS files for all touched Runtime/Domain/Application/Presentation/Tests/Evidence directories.
+- Required evidence summary: tests run, PlayMode/PNG evidence path, CI URL.
+- Required omissions section: explicitly list known omissions/stubs/placeholders/deferred work or state `No known omissions`.
+
+## Story readiness gate
+
+- [x] Story has stable ID, title, type, status, and parent epic.
+- [x] User/player/system value is clear.
+- [x] Exact GDD source section is linked or explicitly N/A.
+- [x] Exact ADR/architecture/control-manifest source is linked or explicitly N/A.
+- [x] Relevant root/scoped AGENTS.md instructions are identified.
+- [x] UX/reference sources are linked.
+- [x] In-scope work is concrete and bounded.
+- [x] Out-of-scope work is explicit.
+- [x] Stubs/mocks/placeholders are explicitly listed.
+- [x] Dependencies are listed and satisfied or marked non-blocking.
+- [x] Acceptance criteria are observable and testable.
+- [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
+- [x] Required automated tests/validators/PlayMode evidence are listed.
+- [ ] Ambiguity Check status is PASS.
+- [x] Branch / PR / CI traceability requirements are stated.
+- [ ] Human approval recorded.
+
+## DONE gate
+
+- [ ] Implementation matches approved story scope.
+- [ ] Acceptance criteria pass.
+- [ ] Required verification evidence exists.
+- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [ ] No unauthorized design or architecture decisions were introduced.
+- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [ ] PR/code review is complete.
+- [ ] CI passes or human-approved exceptions are documented.
+- [ ] Required docs were updated in the correct source-of-truth layer.
+
+## Verdict
+
+READY-candidate / approval pending. Good next packet for EPIC-008, but not approved for Unity implementation yet.

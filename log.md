@@ -989,3 +989,14 @@
 - Promoted story from READY-candidate / approval pending to READY / approved.
 - Recorded human-approved answers for Home Rule Coalition as provisional soft-canon name, Sled Logistics Team as support/mobility placeholder, QXZ Strato Sensor Swarm as future Sensor Lock lane, and neutral Survey Drones/Site Guards selection rule.
 - Updated EPIC-008, planning note, run-prompt index, checked-in Codex prompt, and implementation handoff state.
+
+## [2026-06-18] merge | STORY-ARMY-001 and prepare STORY-ARMY-002 candidate
+
+- Verified, gate-fixed, and merged Unity PR #60 for `STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed`.
+- Merge-gate blocker fixed before merge: unit definition IDs now match the approved story literals (`settlement_watch`, `sled_logistics_team`, `hunter_scouts`, `meridian_security`, `strato_sensor_swarm`, `climate_bulwark`, `survey_drones`, `site_guards`).
+- Unity PR #60 final gate-fix head: `ba2d3103d410decdeca85af6d9c0ff83af1238e0`.
+- Unity merge commit: `3c3158ce1e06bf63c19f1d1f5b7e0024a32e29e1`.
+- Exact-head Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27775537496.
+- Post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27776429736.
+- Created `production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md` as READY-candidate / approval pending.
+- Created guarded prompt `production/sprints/codex-story-army-002.prompt.txt`; it self-blocks until ARMY-002 is explicitly approved.

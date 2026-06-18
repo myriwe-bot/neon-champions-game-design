@@ -56,7 +56,7 @@ Scope:
 
 Status:
 
-- READY / approved for implementation.
+- DONE / merged in Unity PR #60.
 
 ### Slice B — STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock
 
@@ -77,6 +77,14 @@ Out of scope:
 
 - Full cover/LOS/morale/damage taxonomy.
 - Full faction signature mechanics.
+
+Status:
+
+- READY-candidate / approval pending.
+
+Recommended approval default:
+
+- Strato Sensor Swarm applies a 1 AP Sensor Lock support action; the next successful attack against that target deals +1 stack-count damage and consumes the mark.
 
 ### Slice C — STORY-ARMY-003 Fixed Recruitment Offers and Army Summary
 

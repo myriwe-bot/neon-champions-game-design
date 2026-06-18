@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-18
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-18 from chat: `Approve STORY-ARMY-001`.
+DONE / merged. Human approval recorded 2026-06-18 from chat: `Approve STORY-ARMY-001`. Unity PR #60 merged 2026-06-18.
 
 Approved scope: MVP faction unit definitions and roster seed for Home Rule Coalition vs QXZ Meridian, with Home Rule treated as a provisional soft-canon game-facing name.
 
@@ -206,16 +206,24 @@ This story is READY.
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
+Merge evidence:
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/60
+- Gate-fix head: `ba2d3103d410decdeca85af6d9c0ff83af1238e0`
+- Merge commit: `3c3158ce1e06bf63c19f1d1f5b7e0024a32e29e1`
+- Exact-head Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27775537496
+- Post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27776429736
 
 ## Verdict
 
-READY / approved for Unity implementation. This story is the current EPIC-008 implementation authority.
+DONE / merged. This story delivered the MVP faction unit definition and roster seed baseline for EPIC-008.

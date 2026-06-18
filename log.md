@@ -876,3 +876,20 @@
 - Recorded narrow source-authority exception for the cited draft planning/reference notes as bounded context only; broader topology, base/recruitment, economy, fog/logistics, strategic AI, and final-content work remain out of scope.
 - Replaced the guarded `production/sprints/codex-story-strat-read-002.prompt.txt` with the runnable implementation prompt.
 - Updated EPIC-007, index, and Codex run prompts to point at `STORY-STRAT-READ-002` as the current approved Unity implementation packet.
+
+## [2026-06-18] merge | STORY-STRAT-READ-002 strategic map readability pass
+
+- Reviewed and merged Unity PR #55 for `STORY-STRAT-READ-002 Strategic Map Readability Pass`.
+- Merge-gate fixes before merge: added recruit/reinforce preview coverage, restored legacy visible action strings, and compacted strategic readability UI text.
+- Squash merge commit: `e6e26835595db1cad51a3fbcdf3220d1391874cd`.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27744712697
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27745368044
+- Marked `STORY-STRAT-READ-002` DONE and updated EPIC-007 child-story status.
+
+## [2026-06-18] draft | STORY-STRAT-BASE-001 starting hub reinforcement preview
+
+- Created `production/stories/story-strat-base-001-starting-hub-reinforcement-preview.md` as the next proposed EPIC-007 packet.
+- Created guarded prompt `production/sprints/codex-story-strat-base-001.prompt.txt`.
+- Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
+- Proposed scope: one fixed prototype starting-hub/base-like reinforcement preview/action for the active Champion using existing strategic resource/army state.
+- Explicitly excludes full base/town-building systems, garrisons, reserves/caravans, stock economy, new unit roster/balance, topology migration, new tactical rules, and final map/base art/content.

@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-APPROVED / FIRST CHILD READY. Human approval recorded 2026-06-15 for the epic and 2026-06-18 for first child story `STORY-STRAT-READ-002`. EPIC-006 implementation baseline has landed through `STORY-TAC-AI-001`; `STORY-STRAT-READ-002` is now READY / approved for implementation.
+APPROVED / NEXT CHILD READY-CANDIDATE PREPARED. Human approval recorded 2026-06-15 for the epic. `STORY-STRAT-READ-002` merged 2026-06-18; next child `STORY-STRAT-BASE-001` is READY-candidate / approval pending.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -116,8 +116,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-STRAT-READ-002 Strategic Map Readability Pass](../stories/story-strat-read-002-strategic-map-readability-pass.md) | READY / approved | Strategic UI + Playability Repair | Tactical readability baseline from EPIC-006 through STORY-TAC-AI-001 DONE | Reachability/path/site/interaction/return-summary evidence |
-| STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview | Draft target | Strategic Rules + UI | STRAT-READ-002 or accepted exception | Base/reinforcement tests and evidence |
+| [STORY-STRAT-READ-002 Strategic Map Readability Pass](../stories/story-strat-read-002-strategic-map-readability-pass.md) | DONE / merged | Strategic UI + Playability Repair | Tactical readability baseline from EPIC-006 through STORY-TAC-AI-001 DONE | PR #55, post-merge CI, reachability/path/site/interaction/return-summary evidence |
+| [STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview](../stories/story-strat-base-001-starting-hub-reinforcement-preview.md) | READY-candidate / approval pending | Strategic Rules + UI | STRAT-READ-002 DONE | Base/reinforcement tests and evidence |
 | STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype | Draft target | Strategic Presentation + Data | Strategic readability and base direction | Region/site map presentation evidence, no topology rewrite |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -185,4 +185,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / FIRST CHILD READY. `STORY-STRAT-READ-002` is implementation-authorized as the current READY child story.
+APPROVED / NEXT CHILD READY-CANDIDATE. `STORY-STRAT-READ-002` is DONE / merged; `STORY-STRAT-BASE-001` is prepared but not implementation-authorized until human approval promotes it to READY.

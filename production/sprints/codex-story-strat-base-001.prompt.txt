@@ -1,0 +1,67 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Candidate implementation packet:
+- STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview
+
+IMPORTANT AUTHORIZATION GUARD:
+- This story is currently READY-candidate / approval pending.
+- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
+- If it does not, STOP. Do not implement. Report: `STORY-STRAT-BASE-001 is not approved for implementation yet.`
+
+Design/control repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-game-design
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Unity implementation repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-unity
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Required preflight:
+1. In the design/control repo, run `git pull --ff-only origin main`.
+2. In the Unity repo, run:
+   - `git fetch origin`
+   - `git checkout main`
+   - `git pull --ff-only origin main`
+   - `git status --short --branch`
+3. Read these files before deciding whether implementation is authorized:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-strat-base-001-starting-hub-reinforcement-preview.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md
+   - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
+4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
+
+When approved, branch and PR:
+- Create branch: story/STORY-STRAT-BASE-001-starting-hub-reinforcement-preview
+- PR title: STORY-STRAT-BASE-001 Starting hub reinforcement preview
+- Required linked story ID in commits/PR: STORY-STRAT-BASE-001
+
+Candidate scope when/if promoted to READY:
+- Add one narrow starting-hub/base-like reinforcement preview/action for the active Champion at the owned starting hub.
+- Preview offer/effect, cost, affordability/availability, and likely army/resource change before commitment.
+- Apply only through strategic-layer state using existing resources/army data where possible.
+- Keep recruitment-site flow distinct and green.
+- Add EditMode tests, PlayMode smoke/evidence, and exact-head Unity Foundation CI.
+
+Out of scope:
+- No full base/town-building system, construction tree, garrisons, reserves/caravans, stock economy, new unit roster/balance, topology migration, strategic AI, fog/logistics/weather, full economy, new tactical rules, or final map/base art/content.
+
+Verification required when approved:
+- TDD for preview/apply/invalid-state behavior where practical.
+- EditMode tests for affordability, invalid cases, no partial mutation, and recruitment no-regression.
+- PlayMode tests/evidence for visible starting-hub reinforcement preview and post-apply summary.
+- Placeholder validator remains green.
+- Unity Foundation CI exact-head before merge.
+
+Git/GitHub closeout when approved:
+1. Run relevant tests locally and include exact commands/results in the final response.
+2. Run `git status --short --branch` and `git log --oneline -5`.
+3. If `git status --short` shows modified or untracked story files after tests/evidence, do not report complete; add, commit, and push them first.
+4. Push with `git push -u origin HEAD:story/STORY-STRAT-BASE-001-starting-hub-reinforcement-preview`.
+5. Open or update the PR with the required title.
+6. PR body must link the story, relevant GDD/ADR/control docs, tests/evidence, known omissions/stubs/placeholders/deferred work or explicitly state `No known omissions`.
+7. Final response must include PR URL/number, tests run, evidence path, CI URL/status or blocker, omissions/deferred work, and exact local git status.
+
+If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.

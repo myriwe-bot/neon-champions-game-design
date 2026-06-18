@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-READ-002 Strategic Map Readability Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-17
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-READ-002 approved`. This is the first EPIC-007 implementation packet after EPIC-006's tactical readability / defender-agency baseline landed through `STORY-TAC-AI-001`.
+DONE / merged. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-READ-002 approved`. Unity PR #55 merged 2026-06-18 as `e6e26835595db1cad51a3fbcdf3220d1391874cd`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27745368044
 
 Approved scope: a narrow strategic-map readability pass that improves reachable route/site feedback, path-cost preview, site category/state labels, interaction preview, and post-battle return summary without changing strategic topology or adding base/recruitment systems.
 
@@ -199,16 +199,16 @@ If status is FAIL, this story is not READY.
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists: `production/evidence/STORY-STRAT-READ-002/` in the Unity repo.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented in Unity PR #55.
+- [x] PR/code review is complete: https://github.com/myriwe-bot/neon-champions-unity/pull/55
+- [x] CI passes: PR exact-head Unity Foundation CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27744712697 and post-merge main CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27745368044
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation.
+DONE / merged.

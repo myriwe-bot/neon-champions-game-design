@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-18
@@ -23,9 +23,9 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-BASE-001 approved`.
+DONE / merged. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-BASE-001 approved`. Unity PR #56 merged 2026-06-18 as `c49c52d86043bb2fdd0095223e3bcb890ea5dec6`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27751021572
 
-Approved scope: one narrow starting-hub reinforcement preview that makes the owned start/base-like site show a fixed replenish/reinforce affordance using existing recruitment/resource/army state, without adding a town-building tree, garrison management, stock-refresh economy, or new base system.
+Approved scope was one narrow starting-hub reinforcement preview that makes the owned start/base-like site show a fixed replenish/reinforce affordance using existing recruitment/resource/army state, without adding a town-building tree, garrison management, stock-refresh economy, or new base system.
 
 ## Story type
 
@@ -184,16 +184,16 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists: `production/evidence/STORY-STRAT-BASE-001/` in the Unity repo.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented in Unity PR #56.
+- [x] PR/code review is complete: https://github.com/myriwe-bot/neon-champions-unity/pull/56
+- [x] CI passes: PR exact-head Unity Foundation CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27750164280 and post-merge main CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27751021572
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation.
+DONE / merged.

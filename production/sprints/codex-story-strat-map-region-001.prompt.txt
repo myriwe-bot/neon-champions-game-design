@@ -1,0 +1,68 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Candidate implementation packet:
+- STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype
+
+IMPORTANT AUTHORIZATION GUARD:
+- This story is currently READY-candidate / approval pending.
+- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
+- If it does not, STOP. Do not implement. Report: `STORY-STRAT-MAP-REGION-001 is not approved for implementation yet.`
+
+Design/control repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-game-design
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Unity implementation repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-unity
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Required preflight:
+1. In the design/control repo, run `git pull --ff-only origin main`.
+2. In the Unity repo, run:
+   - `git fetch origin`
+   - `git checkout main`
+   - `git pull --ff-only origin main`
+   - `git status --short --branch`
+3. Read these files before deciding whether implementation is authorized:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-strat-map-region-001-region-site-presentation-prototype.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\research\homm-like-strategic-map-topology-reference.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md
+   - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
+4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
+
+When approved, branch and PR:
+- Create branch: story/STORY-STRAT-MAP-REGION-001-region-site-presentation-prototype
+- PR title: STORY-STRAT-MAP-REGION-001 Region/site presentation prototype
+- Required linked story ID in commits/PR: STORY-STRAT-MAP-REGION-001
+
+Candidate scope when/if promoted to READY:
+- Make the current graph-backed strategic map read as region/site/corridor presentation.
+- Preserve node-route graph rules internally; no tile/hex movement/pathfinding/topology rewrite.
+- Render distinct presentation for start hubs, recruitment site, resource/cache/guarded sites, central objective, ownership/control, active/selected Champion, reachable destinations, selected site interaction, and path-cost/readability.
+- Keep existing select/move/recruit/reinforce/attack/engage/field-upgrade affordances working.
+- Add EditMode/PlayMode tests and PNG evidence under production/evidence/STORY-STRAT-MAP-REGION-001/.
+
+Out of scope:
+- No square/hex strategic tile movement, freeform movement, terrain pathfinding, road modifiers, fog, scouting, logistics, weather, strategic AI, procedural map generation, map editor, new economy/base/tactical systems, unit roster/balance, final art/icons/VFX/audio/animation/localization, or replacement of the graph as rules substrate.
+
+Verification required when approved:
+- TDD where practical for presentation projection and command no-regression.
+- EditMode tests for any new presentation data projection/validation and graph-semantics no-regression.
+- PlayMode tests for visible region/site/corridor markers, basic readability/non-overlap at 1280x720, and existing core interaction no-regression.
+- Placeholder validator remains green.
+- Unity Foundation CI exact-head before merge.
+
+Git/GitHub closeout when approved:
+1. Run relevant tests locally and include exact commands/results in the final response.
+2. Run `git status --short --branch` and `git log --oneline -5`.
+3. If `git status --short` shows modified or untracked story files after tests/evidence, do not report complete; add, commit, and push them first.
+4. Push with `git push -u origin HEAD:story/STORY-STRAT-MAP-REGION-001-region-site-presentation-prototype`.
+5. Open or update the PR with the required title.
+6. PR body must link the story, relevant GDD/ADR/control docs, tests/evidence, known omissions/stubs/placeholders/deferred work or explicitly state `No known omissions`.
+7. Final response must include PR URL/number, tests run, evidence path, CI URL/status or blocker, omissions/deferred work, and exact local git status.
+
+If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.

@@ -907,3 +907,20 @@
 - Approved assumptions: one fixed prototype starting-hub/base-like reinforcement affordance only; reuse existing recruitment/resource/army infrastructure where practical; labels/effect values may remain prototype-scoped.
 - Updated EPIC-007, run-prompt index, guarded prompt, and Unity task pointer for implementation handoff.
 - Workflow note from human: future approvals and verify-review-fix-merge-next-packet loops should be faster and less ruminative; next epic should consider larger stories or safe batched chunk review to reduce cycle time.
+
+## [2026-06-18] merge | STORY-STRAT-BASE-001 starting hub reinforcement preview
+
+- Reviewed and merged Unity PR #56 for `STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview`.
+- Merge-gate fixes before merge: trimmed trailing whitespace in new Unity `.meta` files and refreshed story evidence README CI status.
+- Squash merge commit: `c49c52d86043bb2fdd0095223e3bcb890ea5dec6`.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27750164280
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27751021572
+- Marked `STORY-STRAT-BASE-001` DONE and updated EPIC-007 child-story status.
+
+## [2026-06-18] draft | STORY-STRAT-MAP-REGION-001 region/site presentation prototype
+
+- Created `production/stories/story-strat-map-region-001-region-site-presentation-prototype.md` as the next proposed EPIC-007 packet.
+- Created guarded prompt `production/sprints/codex-story-strat-map-region-001.prompt.txt`.
+- Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
+- Proposed scope: one graph-backed region/site/corridor presentation prototype that improves HoMM-like spatial readability without changing strategic topology or adding tile/hex movement.
+- Explicitly excludes tile/hex movement, pathfinding, fog/logistics/weather/supply, strategic AI, procedural/map editor work, new economy/base/tactical systems, final art/content, and graph replacement.

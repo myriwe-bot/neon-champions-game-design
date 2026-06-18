@@ -954,3 +954,9 @@
 - Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
 - Proposed scope: one narrow EPIC-007 closeout/review pass that verifies the merged strategic map readability/base/region-site surface at 1280x720 and fixes only concrete readability/clickability regressions found during review.
 - Explicitly excludes new mechanics, tile/hex/freeform movement, pathfinding, fog/logistics/weather/supply, strategic AI, procedural/map editor work, base/economy/tactical system expansion, final art/content, and next-epic implementation.
+
+## [2026-06-18] verify | STORY-QA-008 candidate publish and Unity pointer clear
+
+- Design/control publish CI passed for `STORY-QA-008` guarded candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27759595723
+- Unity README pointer-clear commit `b8da4b50951fd9e471060f0f0f860deef0d5cf39` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27759608451
+- Unity README now states no READY / approved implementation task is active and points to guarded `STORY-QA-008` candidate only.

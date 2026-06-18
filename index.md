@@ -84,7 +84,7 @@
 - [[production/epics/epic-vslice-mvp-004-intel-resource-on-ramp]] — DONE Intel resource on-ramp epic.
 - [[production/epics/epic-vslice-mvp-005-champion-command-and-operations-on-ramp]] — COMPLETE / human closeout accepted after repair train.
 - [[production/epics/epic-vslice-mvp-006-tactical-battle-readability-and-defender-agency]] — IMPLEMENTATION COMPLETE / awaiting human closeout tactical battle readability and defender agency epic.
-- [[production/epics/epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation]] — APPROVED follow-up epic with strategic readability and starting-hub reinforcement DONE; region/site presentation READY.
+- [[production/epics/epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation]] — APPROVED follow-up epic with strategic readability, starting-hub reinforcement, and region/site presentation DONE; closeout review candidate prepared.
 - [[production/stories/story-cmd-001-champion-command-archetype-state-and-tactical-hud]] — DONE first Champion Command story.
 - [[production/stories/story-cmd-002-first-marshal-and-operator-command-pair]] — DONE first active Marshal/Operator Command spending story.
 - [[production/stories/story-cmd-003-command-on-ramp-closeout-smoke]] — DONE Champion Command on-ramp closeout smoke story.
@@ -102,7 +102,8 @@
 - [[production/stories/story-tac-ai-001-neutral-guard-one-step-combat-ai]] — DONE / merged EPIC-006 story for neutral guard one-step CombatAI.
 - [[production/stories/story-strat-read-002-strategic-map-readability-pass]] — DONE / merged EPIC-007 story for strategic map readability.
 - [[production/stories/story-strat-base-001-starting-hub-reinforcement-preview]] — DONE / merged EPIC-007 story for starting hub reinforcement preview.
-- [[production/stories/story-strat-map-region-001-region-site-presentation-prototype]] — READY / approved EPIC-007 story for region/site presentation.
+- [[production/stories/story-strat-map-region-001-region-site-presentation-prototype]] — DONE / merged EPIC-007 story for region/site presentation.
+- [[production/stories/story-qa-008-strategic-map-region-playtest-and-closeout-review]] — READY-candidate / approval pending EPIC-007 closeout review.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

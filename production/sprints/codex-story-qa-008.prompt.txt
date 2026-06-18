@@ -1,0 +1,58 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Candidate packet:
+- STORY-QA-008 Strategic Map Region Playtest and Closeout Review
+
+IMPORTANT AUTHORIZATION GUARD:
+- This story is currently READY-candidate / approval pending.
+- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
+- If it does not, STOP. Do not implement. Report: `STORY-QA-008 is not approved for implementation yet.`
+
+Design/control repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-game-design
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+
+Unity implementation repo:
+- GitHub: https://github.com/myriwe-bot/neon-champions-unity
+- Windows local path: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Required preflight:
+1. In the design/control repo, run `git pull --ff-only origin main`.
+2. In the Unity repo, run:
+   - `git fetch origin`
+   - `git checkout main`
+   - `git pull --ff-only origin main`
+   - `git status --short --branch`
+3. Read these files before deciding whether implementation is authorized:
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-qa-008-strategic-map-region-playtest-and-closeout-review.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\research\homm-like-strategic-map-topology-reference.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md
+   - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md
+   - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
+4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
+
+When/if approved, branch and PR:
+- Create branch: story/STORY-QA-008-strategic-map-region-playtest-closeout
+- PR title: STORY-QA-008 Strategic map region playtest and closeout review
+- Required linked story ID: STORY-QA-008
+
+Candidate scope when/if promoted to READY:
+- Review the merged EPIC-007 strategic map surface at 1280x720.
+- Verify active actor, reachable destinations, path cost, site category, guarded/ownership state, starting-hub reinforcement, selected-site interaction, and return/readability context are understandable together.
+- Fix only concrete readability/clickability regressions directly tied to EPIC-007 commitments.
+- Add/update PlayMode smoke tests and PNG evidence under production/evidence/STORY-QA-008/ if changes are made.
+- Produce a closeout verdict recommending whether EPIC-007 is accepted, needs another narrow fix, or should pause for human playtest/next-epic decision.
+
+Out of scope:
+- No new strategic mechanics, economy, base/town-building system, garrisons, reserves/caravans, recruitment stock economy, tactical rules, tile/hex/freeform movement, terrain pathfinding, road modifiers, fog/scouting/logistics/weather, strategic AI, procedural generation, map editor, final art/content, broad UI redesign, or next-epic implementation.
+
+Verification required when approved:
+- PlayMode smoke/evidence for any Unity UI/code changes.
+- EditMode tests for any application/domain projection changes.
+- Placeholder validator remains green.
+- Unity Foundation CI exact-head before merge.
+
+If pushing or PR creation is impossible, explicitly report the blocker and leave the exact local `git status --short --branch` output.

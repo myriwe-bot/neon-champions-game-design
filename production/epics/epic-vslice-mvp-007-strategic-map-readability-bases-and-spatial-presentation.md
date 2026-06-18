@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-APPROVED / CURRENT CHILD READY. Human approval recorded 2026-06-15 for the epic. `STORY-STRAT-READ-002` and `STORY-STRAT-BASE-001` merged 2026-06-18; `STORY-STRAT-MAP-REGION-001` is READY / approved as the current implementation packet.
+APPROVED / IMPLEMENTATION CHILDREN MERGED, AWAITING CLOSEOUT REVIEW. Human approval recorded 2026-06-15 for the epic. `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, and `STORY-STRAT-MAP-REGION-001` merged 2026-06-18. Guarded closeout candidate `STORY-QA-008` is prepared but not approved for implementation.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -118,7 +118,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-STRAT-READ-002 Strategic Map Readability Pass](../stories/story-strat-read-002-strategic-map-readability-pass.md) | DONE / merged | Strategic UI + Playability Repair | Tactical readability baseline from EPIC-006 through STORY-TAC-AI-001 DONE | PR #55, post-merge CI, reachability/path/site/interaction/return-summary evidence |
 | [STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview](../stories/story-strat-base-001-starting-hub-reinforcement-preview.md) | DONE / merged | Strategic Rules + UI | STRAT-READ-002 DONE | PR #56, post-merge CI, base/reinforcement tests and evidence |
-| [STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype](../stories/story-strat-map-region-001-region-site-presentation-prototype.md) | READY / approved | Strategic Presentation + Data | STRAT-READ-002 and STRAT-BASE-001 DONE | Region/site map presentation evidence, no topology rewrite |
+| [STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype](../stories/story-strat-map-region-001-region-site-presentation-prototype.md) | DONE / merged | Strategic Presentation + Data | STRAT-READ-002 and STRAT-BASE-001 DONE | PR #57, post-merge CI, region/site map presentation evidence, no topology rewrite |
+| [STORY-QA-008 Strategic Map Region Playtest and Closeout Review](../stories/story-qa-008-strategic-map-region-playtest-and-closeout-review.md) | READY-candidate / approval pending | QA + Playability Review | EPIC-007 child stories DONE | Closeout review/evidence, no new mechanics |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -185,4 +186,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / CURRENT CHILD READY. `STORY-STRAT-READ-002` and `STORY-STRAT-BASE-001` are DONE / merged; `STORY-STRAT-MAP-REGION-001` is implementation-authorized as the current READY child story.
+APPROVED / IMPLEMENTATION CHILDREN MERGED. `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, and `STORY-STRAT-MAP-REGION-001` are DONE / merged. EPIC-007 is awaiting human closeout/playtest review; guarded candidate `STORY-QA-008` is not implementation-authorized until approval promotes it to READY.

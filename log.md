@@ -937,3 +937,20 @@
 - Promoted story from READY-candidate / approval pending to READY / approved.
 - Approved assumptions: graph remains the authoritative strategic rules substrate; lightweight deterministic presentation fields/markers/labels/tints/coordinates are allowed; story improves spatial readability without introducing new mechanics.
 - Updated EPIC-007, run-prompt index, guarded prompt, and Unity task pointer for implementation handoff.
+
+## [2026-06-18] merge | STORY-STRAT-MAP-REGION-001 region/site presentation prototype
+
+- Reviewed and merged Unity PR #57 for `STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype`.
+- Merge-gate fixes before merge: refreshed stale story evidence README CI status and marked draft PR ready for review.
+- Squash merge commit: `ffe1dd68c61faa897f0ae4021b61aa12d77df924`.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27758159262
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27759022977
+- Marked `STORY-STRAT-MAP-REGION-001` DONE and updated EPIC-007 child-story status.
+
+## [2026-06-18] draft | STORY-QA-008 strategic map region playtest and closeout review
+
+- Created guarded closeout candidate `production/stories/story-qa-008-strategic-map-region-playtest-and-closeout-review.md`.
+- Created guarded prompt `production/sprints/codex-story-qa-008.prompt.txt`.
+- Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
+- Proposed scope: one narrow EPIC-007 closeout/review pass that verifies the merged strategic map readability/base/region-site surface at 1280x720 and fixes only concrete readability/clickability regressions found during review.
+- Explicitly excludes new mechanics, tile/hex/freeform movement, pathfinding, fog/logistics/weather/supply, strategic AI, procedural/map editor work, base/economy/tactical system expansion, final art/content, and next-epic implementation.

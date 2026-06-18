@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-18
@@ -26,9 +26,9 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-MAP-REGION-001 approved`.
+DONE / merged. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-MAP-REGION-001 approved`. Unity PR #57 merged 2026-06-18 as `ffe1dd68c61faa897f0ae4021b61aa12d77df924`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27759022977
 
-Approved scope: one region/site presentation prototype that makes the current graph-backed strategic map look and read more like a spatial HoMM-like map, while preserving the existing node-route rules and avoiding full tile/hex movement, pathfinding, fog, map editor, procedural generation, final art, or new strategic mechanics.
+Approved scope was one region/site presentation prototype that makes the current graph-backed strategic map look and read more like a spatial HoMM-like map, while preserving the existing node-route rules and avoiding full tile/hex movement, pathfinding, fog, map editor, procedural generation, final art, or new strategic mechanics.
 
 ## Story type
 
@@ -186,16 +186,16 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists: `production/evidence/STORY-STRAT-MAP-REGION-001/` in the Unity repo.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented in Unity PR #57.
+- [x] PR/code review is complete: https://github.com/myriwe-bot/neon-champions-unity/pull/57
+- [x] CI passes: PR exact-head Unity Foundation CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27758159262 and post-merge main CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27759022977
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation.
+DONE / merged.

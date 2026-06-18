@@ -104,9 +104,9 @@
 - [[production/stories/story-strat-base-001-starting-hub-reinforcement-preview]] — DONE / merged EPIC-007 story for starting hub reinforcement preview.
 - [[production/stories/story-strat-map-region-001-region-site-presentation-prototype]] — DONE / merged EPIC-007 story for region/site presentation.
 - [[production/stories/story-qa-008-strategic-map-region-playtest-and-closeout-review]] — DONE / merged EPIC-007 closeout review.
-- [[production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity]] — APPROVED / planned next epic for faction armies, recruitment, and tactical role identity.
+- [[production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity]] — APPROVED / IN PRODUCTION epic for faction armies, recruitment, and tactical role identity.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
-- [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — READY-candidate first EPIC-008 story for MVP faction unit definitions and roster seed.
+- [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — READY / approved first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

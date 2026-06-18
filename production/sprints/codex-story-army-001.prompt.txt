@@ -1,11 +1,11 @@
-Candidate packet: STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed.
+Approved implementation packet: STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed.
 
-IMPORTANT AUTHORIZATION GUARD:
-- This story is currently READY-candidate / approval pending.
-- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
-- If it does not, STOP. Do not implement. Report: `STORY-ARMY-001 is not approved for implementation yet.`
+Authorization:
+- Human approval recorded 2026-06-18.
+- Before editing Unity code, read the story file and confirm it says `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
+- If it does not, STOP and report the mismatch.
 
-Implementation target after approval:
+Implementation target:
 - Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 - Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 - Branch: story/STORY-ARMY-001-mvp-faction-unit-definitions-roster-seed
@@ -23,7 +23,7 @@ Required reading before editing:
 - docs/architecture/ci-build-automation.md
 - Unity repo AGENTS.md files for every touched scope
 
-Candidate scope when/if promoted to READY:
+Approved scope:
 - Add/formalize an MVP unit definition schema with stable IDs and validation.
 - Add Home Rule unit definitions: Settlement Watch, Sled Logistics Team, Hunter-Scouts.
 - Add QXZ unit definitions: Meridian Security, Strato Sensor Swarm, Climate Bulwark.
@@ -43,14 +43,20 @@ Out of scope:
 - No final art/icons/VFX/audio/animation.
 - No hard-canon rename of Home Rule Coalition.
 
-Expected verification before PR after approval:
+Expected verification before PR:
 - git diff --check
 - focused unit/edit-mode tests for definition validation and lookup
 - focused tactical setup tests where practical
 - PlayMode/screenshot evidence showing distinct unit definitions in tactical mode
 - Unity Foundation CI exact-head
 
-PR requirements after approval:
+PR requirements:
 - Link STORY-ARMY-001.
 - Include tests run, evidence path, CI run URL, and omissions/deferred work.
 - Push branch and open PR if available; otherwise report exact blocker.
+
+
+Hard implementation constraints:
+- `design/gdd/faction-unit-rosters.md` is draft/pending as a broad roster document; only the exact Home Rule/QXZ 3+3 roster seed and naming guardrails cited by STORY-ARMY-001 are approved for this packet.
+- Do not implement ARMY-002 Sensor Lock behavior, ARMY-003 recruitment, or ARMY-004 composition scenario work.
+- Commit and push the actual implementation branch to remote, or clearly explain why pushing/PR creation was impossible.

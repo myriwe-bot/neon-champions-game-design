@@ -56,7 +56,7 @@ Scope:
 
 Status:
 
-- READY-candidate / approval pending.
+- READY / approved for implementation.
 
 ### Slice B — STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock
 
@@ -179,4 +179,4 @@ Use both only if technically cheap; otherwise pick the one closest to current gu
 
 ## Recommended approval question
 
-Approve `STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed` as the first EPIC-008 Unity implementation packet, using Home Rule Coalition as provisional soft-canon production name and the listed 3+3 roster seed?
+`STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed` approved 2026-06-18 as the first EPIC-008 Unity implementation packet, using Home Rule Coalition as provisional soft-canon production name and the listed 3+3 roster seed.

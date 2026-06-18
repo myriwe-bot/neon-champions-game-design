@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-18
@@ -18,16 +18,16 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed
 
 ## Status
 
-READY-candidate / approval pending. This story is drafted from human EPIC-008 direction on 2026-06-18 but is not yet authorized for Unity implementation.
+READY / approved. Human approval recorded 2026-06-18 from chat: `Approve STORY-ARMY-001`.
 
-Do not implement until human approval promotes this story to `status: ready` and `approval: approved`.
+Approved scope: MVP faction unit definitions and roster seed for Home Rule Coalition vs QXZ Meridian, with Home Rule treated as a provisional soft-canon game-facing name.
 
 ## Story type
 
@@ -58,7 +58,7 @@ Exact source references:
 
 ## In scope
 
-Concrete implementation tasks authorized if promoted to READY:
+Concrete implementation tasks authorized by this story:
 
 - Add or formalize an MVP unit definition schema for tactical/army units, with stable IDs and validation.
 - Add data for this 3-line-per-faction roster seed:
@@ -148,15 +148,15 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: FAIL until human approval promotes this story to READY / approved.
+Status: PASS. Human approval recorded 2026-06-18.
 
-Open questions before READY:
+Human-approved answers:
 
-1. Are the listed unit IDs/names acceptable as the first implementation seed?
-2. Should `Sled Logistics Team` be represented tactically now as a support/mobility placeholder, or should it start as a simple low-damage support stack until ARMY-002?
-3. Should neutral defenders be `Survey Drones`, `Site Guards`, or both in ARMY-001?
+1. The listed unit IDs/names are acceptable as the first implementation seed.
+2. `Sled Logistics Team` should be represented tactically now as a support/mobility placeholder; concrete special behavior remains deferred unless current code can express it without scope expansion.
+3. Include both `Survey Drones` and `Site Guards` only if technically cheap; otherwise choose the one closest to current guarded-site setup and document the omission.
 
-Assumptions proposed for approval:
+Approved assumptions:
 
 - Use `Home Rule Coalition` as the provisional game-facing soft-canon faction name.
 - Use `Sled Logistics Team` as the third Home Rule MVP line.
@@ -165,14 +165,14 @@ Assumptions proposed for approval:
 
 Human-approved exceptions:
 
-- None yet.
+- `design/gdd/faction-unit-rosters.md` is still a draft/pending broader roster document, but the exact Home Rule/QXZ 3+3 roster seed and naming guardrails cited by this story are human-approved for this implementation packet only. Broader faction roster content, upgraded variants, and final faction naming remain unapproved.
 
-If status is FAIL, this story is not READY.
+This story is READY.
 
 ## Branch / PR requirements
 
-- Branch name after approval: `story/STORY-ARMY-001-mvp-faction-unit-definitions-roster-seed`
-- PR title after approval: `STORY-ARMY-001 MVP faction unit definitions and roster seed`
+- Branch name: `story/STORY-ARMY-001-mvp-faction-unit-definitions-roster-seed`
+- PR title: `STORY-ARMY-001 MVP faction unit definitions and roster seed`
 - Required linked story ID: `STORY-ARMY-001`.
 - Required linked GDD/ADR/control docs:
   - `design/gdd/faction-unit-rosters.md`.
@@ -200,9 +200,9 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval recorded.
+- [x] Human approval recorded.
 
 ## DONE gate
 
@@ -218,4 +218,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending. Good first packet for EPIC-008, but not approved for Unity implementation yet.
+READY / approved for Unity implementation. This story is the current EPIC-008 implementation authority.

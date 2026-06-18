@@ -28,9 +28,9 @@ approval: approved
 
 ## Status
 
-APPROVED / PLANNED. Human direction recorded 2026-06-18: proceed with faction armies, recruitment, and tactical role identity as the next epic after EPIC-007 closeout.
+APPROVED / IN PRODUCTION. Human direction recorded 2026-06-18: proceed with faction armies, recruitment, and tactical role identity as the next epic after EPIC-007 closeout.
 
-This epic is not direct implementation authority. Agents and Codex may only implement READY child stories. The first child story is prepared as READY-candidate, not READY, until the human explicitly approves that packet.
+This epic is not direct implementation authority. Agents and Codex may only implement READY child stories. `STORY-ARMY-001` is READY / approved as the current implementation packet.
 
 ## Priority tier
 
@@ -153,7 +153,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed](../stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md) | READY-candidate / approval pending | Data + Tactical Setup | EPIC-008 approved | Unit-definition tests, validation tests, tactical screenshot/evidence with distinct unit names/stats |
+| [STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed](../stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md) | READY / approved | Data + Tactical Setup | EPIC-008 approved | Unit-definition tests, validation tests, tactical screenshot/evidence with distinct unit names/stats |
 | STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock | Draft target | Tactical Rules + UI | ARMY-001 DONE | Melee/ranged/support behavior tests, Sensor Lock visibility/evidence |
 | STORY-ARMY-003 Fixed Recruitment Offers and Army Summary | Draft target | Strategic Rules + UI | ARMY-001 DONE; likely ARMY-002 DONE | recruit → army update → BattleSetup evidence |
 | STORY-ARMY-004 Composition Consequence Scenario | Draft target | Vertical Slice | ARMY-001/002/003 DONE | before/after recruitment battle evidence, losses/rewards summary |
@@ -198,7 +198,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Child stories are identified.
 - [x] Dependencies are known.
 - [x] Major risks are documented.
-- [ ] At least one child story passes the Story Readiness Standard. `STORY-ARMY-001` is READY-candidate pending human approval.
+- [x] At least one child story passes the Story Readiness Standard. `STORY-ARMY-001` is READY / approved.
 
 ## Epic DONE gate
 
@@ -223,4 +223,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / PLANNED. Prepare `STORY-ARMY-001` for approval. Do not run Codex against Unity until the first story is promoted to READY / approved.
+APPROVED / IN PRODUCTION. Implement `STORY-ARMY-001` first. Do not start ARMY-002 recruitment/role behavior work until a later story is promoted to READY.

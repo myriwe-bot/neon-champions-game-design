@@ -982,3 +982,10 @@
 - Created `production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan.md`.
 - Created `production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md` as READY-candidate / approval pending, not yet implementation-authorized.
 - Created guarded candidate prompt `production/sprints/codex-story-army-001.prompt.txt`.
+
+## [2026-06-18] approval | STORY-ARMY-001 MVP faction unit definitions and roster seed
+
+- Human approved `STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed`.
+- Promoted story from READY-candidate / approval pending to READY / approved.
+- Recorded human-approved answers for Home Rule Coalition as provisional soft-canon name, Sled Logistics Team as support/mobility placeholder, QXZ Strato Sensor Swarm as future Sensor Lock lane, and neutral Survey Drones/Site Guards selection rule.
+- Updated EPIC-008, planning note, run-prompt index, checked-in Codex prompt, and implementation handoff state.

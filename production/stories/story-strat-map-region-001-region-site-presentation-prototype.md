@@ -1,7 +1,7 @@
 ---
 title: STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-18
@@ -19,18 +19,16 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed third EPIC-007 packet after `STORY-STRAT-READ-002` and `STORY-STRAT-BASE-001` merged.
+READY / approved. Human approval recorded 2026-06-18 from chat: `STORY-STRAT-MAP-REGION-001 approved`.
 
-Do not implement until human approval promotes this story to READY / approved.
-
-Recommended approval question: approve one region/site presentation prototype that makes the current graph-backed strategic map look and read more like a spatial HoMM-like map, while preserving the existing node-route rules and avoiding full tile/hex movement, pathfinding, fog, map editor, procedural generation, final art, or new strategic mechanics?
+Approved scope: one region/site presentation prototype that makes the current graph-backed strategic map look and read more like a spatial HoMM-like map, while preserving the existing node-route rules and avoiding full tile/hex movement, pathfinding, fog, map editor, procedural generation, final art, or new strategic mechanics.
 
 ## Story type
 
@@ -128,14 +126,14 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate, pending human approval.
+Status: PASS. Human approval recorded 2026-06-18.
 
-Open questions before READY:
+Human-approved answers:
 
-1. Human must approve this story as the next implementation packet.
-2. Human should accept the region/site hybrid direction as a presentation/data pass only, not a topology rewrite.
+1. Approved as the next implementation packet.
+2. Approved region/site hybrid direction as a presentation/data pass only, not a topology rewrite.
 
-Assumptions proposed for approval:
+Approved assumptions:
 
 - The graph remains the authoritative strategic rules substrate.
 - The story may add lightweight presentation fields/markers/labels/tints/coordinates if deterministic and future-compatible.
@@ -151,9 +149,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None yet.
-
-If status is FAIL, this story is not READY.
+- None. Story scope remains presentation/data only and does not authorize a topology rewrite.
 
 ## Branch / PR requirements
 
@@ -184,9 +180,9 @@ If status is FAIL, this story is not READY.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [x] Ambiguity Check status is PASS for candidate; human approval remains pending.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -202,4 +198,4 @@ If status is FAIL, this story is not READY.
 
 ## Verdict
 
-READY-candidate / approval pending.
+READY for implementation.

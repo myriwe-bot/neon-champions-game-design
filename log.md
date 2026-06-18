@@ -930,3 +930,10 @@
 - Design/control publish CI passed for `STORY-STRAT-MAP-REGION-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27751683596
 - Unity README pointer commit `82125506f6b45eb328872d0f8ff48f8b75661580` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27751688521
 - Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-STRAT-MAP-REGION-001` candidate packet only.
+
+## [2026-06-18] approval | STORY-STRAT-MAP-REGION-001 region/site presentation prototype
+
+- Human approved `STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype`.
+- Promoted story from READY-candidate / approval pending to READY / approved.
+- Approved assumptions: graph remains the authoritative strategic rules substrate; lightweight deterministic presentation fields/markers/labels/tints/coordinates are allowed; story improves spatial readability without introducing new mechanics.
+- Updated EPIC-007, run-prompt index, guarded prompt, and Unity task pointer for implementation handoff.

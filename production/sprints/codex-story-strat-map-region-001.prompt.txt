@@ -1,12 +1,11 @@
 You are Codex working in the Neon Champions Unity repo.
 
-Candidate implementation packet:
+Approved implementation packet:
 - STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype
 
-IMPORTANT AUTHORIZATION GUARD:
-- This story is currently READY-candidate / approval pending.
-- Before editing Unity code, read the story file and confirm it says `status: ready` and `approval: approved`.
-- If it does not, STOP. Do not implement. Report: `STORY-STRAT-MAP-REGION-001 is not approved for implementation yet.`
+Authorization:
+- Human approval recorded 2026-06-18.
+- Implement only the approved story scope.
 
 Design/control repo:
 - GitHub: https://github.com/myriwe-bot/neon-champions-game-design
@@ -23,7 +22,7 @@ Required preflight:
    - `git checkout main`
    - `git pull --ff-only origin main`
    - `git status --short --branch`
-3. Read these files before deciding whether implementation is authorized:
+3. Read these files before implementation:
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-strat-map-region-001-region-site-presentation-prototype.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
    - C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md
@@ -34,12 +33,12 @@ Required preflight:
    - Unity repo root AGENTS.md and every scoped AGENTS.md under touched directories.
 4. Confirm the story says `status: ready` and `approval: approved`. If not, STOP and report the mismatch.
 
-When approved, branch and PR:
+Branch and PR:
 - Create branch: story/STORY-STRAT-MAP-REGION-001-region-site-presentation-prototype
 - PR title: STORY-STRAT-MAP-REGION-001 Region/site presentation prototype
 - Required linked story ID in commits/PR: STORY-STRAT-MAP-REGION-001
 
-Candidate scope when/if promoted to READY:
+Approved scope:
 - Make the current graph-backed strategic map read as region/site/corridor presentation.
 - Preserve node-route graph rules internally; no tile/hex movement/pathfinding/topology rewrite.
 - Render distinct presentation for start hubs, recruitment site, resource/cache/guarded sites, central objective, ownership/control, active/selected Champion, reachable destinations, selected site interaction, and path-cost/readability.

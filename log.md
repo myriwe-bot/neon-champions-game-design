@@ -893,3 +893,9 @@
 - Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
 - Proposed scope: one fixed prototype starting-hub/base-like reinforcement preview/action for the active Champion using existing strategic resource/army state.
 - Explicitly excludes full base/town-building systems, garrisons, reserves/caravans, stock economy, new unit roster/balance, topology migration, new tactical rules, and final map/base art/content.
+
+## [2026-06-18] verify | STORY-STRAT-BASE-001 candidate publish and Unity pointer clear
+
+- Design/control publish CI passed for `STORY-STRAT-BASE-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27745979278
+- Unity README pointer commit `18520eac55d55f4193137a46b9857921ca1c6358` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27745985653
+- Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-STRAT-BASE-001` candidate packet only.

@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-APPROVED / CLOSEOUT REVIEW READY. Human approval recorded 2026-06-15 for the epic. `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, and `STORY-STRAT-MAP-REGION-001` merged 2026-06-18. `STORY-QA-008` is READY / approved as the current closeout review packet.
+DONE / CLOSED FOR IMPLEMENTATION. Human approval recorded 2026-06-15 for the epic. `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, and `STORY-QA-008` merged 2026-06-18. The closeout review accepted EPIC-007 from the QA pass and recommends pausing for human playtest or next-epic direction before starting another mechanics train.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -119,7 +119,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-STRAT-READ-002 Strategic Map Readability Pass](../stories/story-strat-read-002-strategic-map-readability-pass.md) | DONE / merged | Strategic UI + Playability Repair | Tactical readability baseline from EPIC-006 through STORY-TAC-AI-001 DONE | PR #55, post-merge CI, reachability/path/site/interaction/return-summary evidence |
 | [STORY-STRAT-BASE-001 Starting Hub Reinforcement Preview](../stories/story-strat-base-001-starting-hub-reinforcement-preview.md) | DONE / merged | Strategic Rules + UI | STRAT-READ-002 DONE | PR #56, post-merge CI, base/reinforcement tests and evidence |
 | [STORY-STRAT-MAP-REGION-001 Region/Site Presentation Prototype](../stories/story-strat-map-region-001-region-site-presentation-prototype.md) | DONE / merged | Strategic Presentation + Data | STRAT-READ-002 and STRAT-BASE-001 DONE | PR #57, post-merge CI, region/site map presentation evidence, no topology rewrite |
-| [STORY-QA-008 Strategic Map Region Playtest and Closeout Review](../stories/story-qa-008-strategic-map-region-playtest-and-closeout-review.md) | READY / approved | QA + Playability Review | EPIC-007 child stories DONE | Closeout review/evidence, no new mechanics |
+| [STORY-QA-008 Strategic Map Region Playtest and Closeout Review](../stories/story-qa-008-strategic-map-region-playtest-and-closeout-review.md) | DONE / merged | QA + Playability Review | EPIC-007 child stories DONE | PR #58, post-merge CI, closeout review/evidence; no new mechanics |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -165,14 +165,14 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the epic as complete.
 
 ## Anti-pattern check
 
@@ -186,4 +186,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / CURRENT CLOSEOUT READY. `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, and `STORY-STRAT-MAP-REGION-001` are DONE / merged. `STORY-QA-008` is implementation-authorized as the current READY closeout review story.
+DONE / CLOSED. EPIC-007 implementation children and closeout review are merged through Unity PR #58, with Unity README pointer cleanup merged in PR #59. No next Unity implementation story is READY; next direction remains human-owned.

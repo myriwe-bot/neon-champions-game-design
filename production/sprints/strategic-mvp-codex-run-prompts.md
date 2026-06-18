@@ -69,15 +69,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-QA-008 Strategic Map Region Playtest and Closeout Review`. Use the checked-in prompt file below.
+**Current READY / approved Unity implementation packet:** None. EPIC-007 is closed; do not run Codex against Unity until a new story is promoted to `status: ready` and `approval: approved`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, and `STORY-STRAT-MAP-REGION-001` are DONE / merged. `STORY-QA-008` is READY / approved as the current EPIC-007 closeout implementation packet.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, and `STORY-QA-008` are DONE / merged. EPIC-007 is closed for implementation; next-epic direction is pending human choice.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current prompt file: `production/sprints/codex-story-qa-008.prompt.txt`. Historical prompt files remain for audit only.
+Current prompt file: none. `production/sprints/codex-next-epic-direction-brief.prompt.txt` is a guarded decision-brief packet only; it must not create a Unity branch or implement runtime changes. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -98,19 +98,23 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current approved prompt
 
-Run Codex from the checked-in prompt file:
+No Unity implementation prompt is currently approved. Do not run Codex against `neon-champions-unity` until a new story is promoted to `status: ready` and `approval: approved`.
+
+Guarded decision-brief packet, if a human asks for next-direction preparation only:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-008.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-epic-direction-brief.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-If workspace-write cannot complete because Unity tests/evidence require broader filesystem access, rerun the same checked-in prompt with:
+Trusted-repo fallback for the same guarded decision brief only:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-008.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-epic-direction-brief.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
+
+The guarded packet must stop if asked to modify Unity runtime code or create a runnable implementation branch.
 
 ## Historical prompt-file runs
 
@@ -164,8 +168,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current approved prompt-file run:
 
-- `production/sprints/codex-story-qa-008.prompt.txt`
+- None.
+
+Guarded decision-brief packet:
+
+- `production/sprints/codex-next-epic-direction-brief.prompt.txt`
 
 ## After Codex finishes
 
-Codex must push `story/STORY-QA-008-strategic-map-region-playtest-closeout` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, closeout verdict, and omissions/deferred work.
+If running the guarded decision-brief packet, Codex must not push Unity runtime changes or create a Unity implementation PR. It should output a concise human decision brief with 2-4 next-direction options and the recommended default. A later implementation packet requires explicit human approval and a new READY story.

@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-008 Strategic Map Region Playtest and Closeout Review
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-18
@@ -24,9 +24,9 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-18 from chat: `Approved`, in response to the guarded `STORY-QA-008` closeout candidate.
+DONE / merged. Unity PR #58 merged 2026-06-18 as `487bbf2ee5ed43d5b74c6964a669bd77a9541cbb`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27767272113. Follow-up Unity README pointer cleanup PR #59 merged as `55c183094e2438c2640afe9c6f0510a2725fdc5d`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27768154311.
 
-Approved scope: a narrow EPIC-007 closeout/review pass that replays the current vertical-slice strategic map at 1280x720, verifies the new region/site/corridor presentation is readable and clickable, and fixes only concrete readability/clickability regressions found during that review.
+Approved scope was a narrow EPIC-007 closeout/review pass that replayed the current vertical-slice strategic map at 1280x720, verified the new region/site/corridor presentation is readable and clickable, and fixed only concrete readability/clickability regressions found during that review. The implemented pass found no concrete in-scope blocker, so the merged Unity change is evidence/closeout-only.
 
 ## Story type
 
@@ -149,14 +149,14 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation/review matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists.
-- [ ] Required tests/CI pass or human-approved exceptions are documented.
-- [ ] Closeout verdict is recorded.
-- [ ] PR/code review is complete.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation/review matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists.
+- [x] Required tests/CI pass or human-approved exceptions are documented.
+- [x] Closeout verdict is recorded.
+- [x] PR/code review is complete.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY for implementation.
+DONE. Closeout verdict from Unity evidence: EPIC-007 is accepted from this QA pass; pause for human playtest or next-epic direction before starting more strategic mechanics. No next Unity implementation story is READY until human/design-control approval promotes one.

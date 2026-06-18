@@ -1,0 +1,34 @@
+Prepare the next Neon Champions implementation direction brief, but do not implement Unity runtime changes yet.
+
+Current state:
+- EPIC-VSLICE-MVP-007 is closed for implementation.
+- STORY-QA-008 merged in Unity PR #58 as 487bbf2ee5ed43d5b74c6964a669bd77a9541cbb.
+- STORY-QA-008 post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27767272113.
+- Unity README current-task pointer cleanup merged in PR #59 as 55c183094e2438c2640afe9c6f0510a2725fdc5d.
+- Pointer-cleanup post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27768154311.
+- There is no current READY / approved Unity implementation story.
+
+Stop conditions:
+- Do not create a Unity implementation branch.
+- Do not modify Unity runtime, tests, scenes, prefabs, assets, packages, or ProjectSettings.
+- Do not promote any story to READY unless the human explicitly approves that specific next packet.
+- If asked to implement a mechanics/design direction from this prompt alone, stop and report that a READY story and approval are required.
+
+Task:
+1. Pull latest game-design and Unity main.
+2. Read:
+   - production/epics/epic-vslice-mvp-007-strategic-map-readability-bases-and-spatial-presentation.md
+   - production/stories/story-qa-008-strategic-map-region-playtest-and-closeout-review.md
+   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - design/gdd/strategic-map.md sections 1-13
+3. Prepare a concise human decision brief for the next implementation direction:
+   - confirm EPIC-007 is closed and no READY Unity task is active;
+   - propose 2-4 next directions, explicitly marked not READY until approved;
+   - include the STORY-QA-008 recommendation: pause for human playtest or next-epic direction before starting more strategic mechanics;
+   - recommend one default next direction in 3-5 bullets.
+4. If asked to draft a story after the human chooses a direction, create it as DRAFT / READY-candidate first unless the human explicitly approves implementation.
+
+Output format:
+- No runtime changes.
+- No Unity PR.
+- A concise numbered decision brief only.

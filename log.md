@@ -924,3 +924,9 @@
 - Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
 - Proposed scope: one graph-backed region/site/corridor presentation prototype that improves HoMM-like spatial readability without changing strategic topology or adding tile/hex movement.
 - Explicitly excludes tile/hex movement, pathfinding, fog/logistics/weather/supply, strategic AI, procedural/map editor work, new economy/base/tactical systems, final art/content, and graph replacement.
+
+## [2026-06-18] verify | STORY-STRAT-MAP-REGION-001 candidate publish and Unity pointer clear
+
+- Design/control publish CI passed for `STORY-STRAT-MAP-REGION-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27751683596
+- Unity README pointer commit `82125506f6b45eb328872d0f8ff48f8b75661580` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27751688521
+- Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-STRAT-MAP-REGION-001` candidate packet only.

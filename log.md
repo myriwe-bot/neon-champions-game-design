@@ -967,3 +967,9 @@
 - Promoted story from READY-candidate / approval pending to READY / approved.
 - Approved assumptions: run this closeout/review before starting another mechanics/design epic; Codex may fix concrete readability/clickability regressions directly tied to EPIC-007 commitments; broader next-epic direction remains human-owned after closeout verdict.
 - Updated EPIC-007, run-prompt index, prompt, and Unity task pointer for implementation handoff.
+
+## [2026-06-18] verify | STORY-QA-008 approval publish and Unity pointer
+
+- Design/control publish CI passed for `STORY-QA-008` READY promotion: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27761239723
+- Unity README pointer commit `753d1837593c45de8cea02beb92213de1a34d43d` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27761243650
+- Unity README now names `STORY-QA-008` as the current READY / approved implementation task.

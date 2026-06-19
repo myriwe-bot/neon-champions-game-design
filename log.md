@@ -8,6 +8,7 @@
 - Added `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` as a READY-candidate / approval-pending packet.
 - Added guarded `production/sprints/codex-story-army-003.prompt.txt`; it self-blocks until human approval promotes ARMY-003 to READY.
 - Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+- Cleared the Unity repo current-task pointer via Unity PR #62; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27822509900
 
 ## [2026-05-22] create | Initialize game design repository
 

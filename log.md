@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-19] merge | STORY-ARMY-003 and prepare ARMY-004 candidate
+
+- Marked `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` DONE / merged after Unity PR #64 and post-merge Unity Foundation CI passed.
+- Added `STORY-ARMY-004 Composition Consequence Scenario` as a READY-candidate / approval-pending packet.
+- Added guarded `production/sprints/codex-story-army-004.prompt.txt`; it self-blocks until human approval promotes ARMY-004 to READY.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+
 ## [2026-06-19] approve | Promote STORY-ARMY-003 for implementation
 
 - Promoted `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` to READY / approved after human approval.

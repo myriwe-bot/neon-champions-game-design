@@ -1,0 +1,49 @@
+Guarded implementation packet candidate: STORY-ARMY-004 Composition Consequence Scenario.
+
+AUTHORIZATION PREFLIGHT:
+- Before editing Unity code, read `production/stories/story-army-004-composition-consequence-scenario.md` in the design/control repo.
+- Confirm it says `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
+- If it does not, STOP. Do not implement. Report: `STORY-ARMY-004 source-of-truth is not READY / approved.`
+
+Candidate implementation target after approval:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-ARMY-004-composition-consequence-scenario
+- PR title: STORY-ARMY-004 Composition consequence scenario
+
+Required reading before editing after approval:
+- production/stories/story-army-004-composition-consequence-scenario.md
+- production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md
+- production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md
+- production/stories/story-army-003-fixed-recruitment-offers-and-army-summary.md
+- production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md
+- production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan.md
+- design/gdd/strategic-map.md
+- design/gdd/tactical-combat.md
+- design/gdd/faction-unit-rosters.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Candidate scope, pending approval:
+- Deterministic starting-only vs recruited-composition comparison path.
+- Visible tactical setup/labels differ after recruitment.
+- Post-battle summary records losses and site/reward outcome.
+- Return-to-strategic state remains visible and does not regress ARMY-003 recruitment/summary behavior.
+- Prefer one narrow Home Rule `settlement_watch` composition proof unless human approval changes it.
+
+Out of scope:
+- No full balance pass, scenario editor, new unit definitions, upgrades, town/economy system, strategic AI, final art/audio/VFX, or new tactical role behavior.
+- No mirrored QXZ proof unless human approval explicitly includes it or it is trivial and still story-scoped.
+
+Expected verification after approval:
+- git diff --check
+- EditMode tests for deterministic composition comparison and post-battle/result state
+- PlayMode/screenshot evidence under production/evidence/STORY-ARMY-004/
+- Unity Foundation CI exact-head
+
+PR requirements after approval:
+- Link STORY-ARMY-004.
+- Include tests run, evidence path, CI run URL, and omissions/deferred work.
+- Commit and push the actual implementation branch to remote, or clearly explain why pushing/PR creation was impossible.

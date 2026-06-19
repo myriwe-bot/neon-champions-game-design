@@ -107,9 +107,9 @@ Out of scope:
 
 Status:
 
-- READY / approved for implementation. Human approval recorded 2026-06-19: Home Rule hub offers `settlement_watch`, QXZ hub offers `meridian_security`, neutral site attempts `survey_drones` if small, claims are one-time consumed, and counts use MVP defaults unless documented otherwise for readability.
+- DONE / merged in Unity PR #64. Human approval recorded 2026-06-19: Home Rule hub offers `settlement_watch`, QXZ hub offers `meridian_security`, neutral site attempts `survey_drones` if small, claims are one-time consumed, and counts use MVP defaults unless documented otherwise for readability.
 
-### Slice D — STORY-ARMY-004 Composition Consequence Scenario
+### Slice D — [STORY-ARMY-004 Composition Consequence Scenario](../stories/story-army-004-composition-consequence-scenario.md)
 
 Purpose:
 
@@ -125,6 +125,10 @@ Out of scope:
 
 - Full balance pass.
 - Scenario editor.
+
+Status:
+
+- READY-candidate / approval pending. Requires human answers on proof target, outcome requirement, encounter/site choice, and whether QXZ mirrored proof is included before Codex may implement.
 
 ### Slice E — STORY-QA-009 EPIC-008 Playtest and Closeout Review
 

@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-003 Fixed Recruitment Offers and Army Summary
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-19
@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-19 from chat: `Approved`, approving the recommended defaults listed in the candidate Ambiguity Check. Prepared after `STORY-ARMY-002` merged in Unity PR #61.
+DONE / merged. Human approval recorded 2026-06-19 from chat: `Approved`, approving the recommended defaults listed in the candidate Ambiguity Check. Unity PR #64 merged 2026-06-19.
 
 ## Story type
 
@@ -172,16 +172,23 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
+Merge evidence:
+
+- Unity PR #64: https://github.com/myriwe-bot/neon-champions-unity/pull/64
+- Merge commit: `e84cec6ed6a8884682f804b66539897b5e2dc7c4`
+- PR exact-head Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27830040047
+- Post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27830742555
 
 ## Verdict
 
-READY / approved for Unity implementation. Implement exactly this story scope; do not start ARMY-004 composition-consequence work until a later story is promoted to READY.
+DONE / merged. Prepare `STORY-ARMY-004` only as approval-pending until human approval resolves its Ambiguity Check.

@@ -1,0 +1,47 @@
+Guarded implementation packet candidate: STORY-ARMY-003 Fixed Recruitment Offers and Army Summary.
+
+AUTHORIZATION PREFLIGHT:
+- Before editing Unity code, read `production/stories/story-army-003-fixed-recruitment-offers-and-army-summary.md` in the design/control repo.
+- Confirm it says `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
+- If it does not, STOP. Do not implement. Report: `STORY-ARMY-003 source-of-truth is not READY / approved.`
+
+Implementation target after approval:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-ARMY-003-fixed-recruitment-offers-army-summary
+- PR title: STORY-ARMY-003 Fixed recruitment offers and army summary
+
+Required reading before editing:
+- production/stories/story-army-003-fixed-recruitment-offers-and-army-summary.md
+- production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md
+- production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md
+- production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md
+- production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan.md
+- design/gdd/strategic-map.md
+- design/gdd/faction-unit-rosters.md
+- design/gdd/tactical-combat.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Candidate scope, pending approval:
+- Starting hubs expose fixed faction-scoped recruitment/reinforcement offers.
+- One neutral recruitment site may expose one fixed offer if approved and small.
+- Valid claims update current army state and visible army summary.
+- Recruited/current composition reaches tactical setup and visible tactical labels.
+- Invalid/duplicate/wrong-faction claims fail safely with diagnostics and no partial mutation.
+
+Out of scope:
+- No town building tree, weekly economy, upgrades, strategic AI, full balance pass, final art/audio/VFX, or new tactical role behavior.
+
+Expected verification after approval:
+- git diff --check
+- EditMode tests for offer validation, claim mutation, consumed state, army summary, and BattleSetup composition
+- PlayMode/screenshot evidence under production/evidence/STORY-ARMY-003/
+- Unity Foundation CI exact-head
+
+PR requirements after approval:
+- Link STORY-ARMY-003.
+- Include tests run, evidence path, CI run URL, and omissions/deferred work.
+- Commit and push the actual implementation branch to remote, or clearly explain why pushing/PR creation was impossible.

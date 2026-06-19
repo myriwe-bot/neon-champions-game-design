@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-19] merge | STORY-ARMY-002 and prepare ARMY-003 candidate
+
+- Marked `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock` DONE / merged after Unity PR #61 and post-merge Unity Foundation CI passed.
+- Added `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` as a READY-candidate / approval-pending packet.
+- Added guarded `production/sprints/codex-story-army-003.prompt.txt`; it self-blocks until human approval promotes ARMY-003 to READY.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+
 ## [2026-05-22] create | Initialize game design repository
 
 - Created private production-facing design repo scaffold under `/root/wiki/neon-champions-game-design`.

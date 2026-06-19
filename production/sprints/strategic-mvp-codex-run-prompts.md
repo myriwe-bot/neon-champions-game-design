@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-18
+updated: 2026-06-19
 source_lore: []
 related:
   [
@@ -61,6 +61,9 @@ related:
     production/stories/story-strat-base-001-starting-hub-reinforcement-preview,
     production/stories/story-strat-map-region-001-region-site-presentation-prototype,
     production/stories/story-qa-008-strategic-map-region-playtest-and-closeout-review,
+    production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed,
+    production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock,
+    production/stories/story-army-003-fixed-recruitment-offers-and-army-summary,
   ]
 approval: approved
 ---
@@ -69,15 +72,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock`. Use the checked-in prompt file below.
+**Current READY / approved Unity implementation packet:** none. `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` is prepared only as a READY-candidate / approval-pending packet; do not run Codex until approved.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, and `STORY-ARMY-001` are DONE / merged. EPIC-007 is closed for implementation; EPIC-008 direction is planned around faction armies, recruitment, and tactical role identity.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, and `STORY-ARMY-002` are DONE / merged. EPIC-008 is in production; ARMY-003 is the next candidate but remains approval-pending.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-army-002.prompt.txt`. Historical prompt files remain for audit only.
+Current guarded candidate prompt file: `production/sprints/codex-story-army-003.prompt.txt`. It self-blocks until STORY-ARMY-003 is approved. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -96,25 +99,23 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current approved prompt
+## Current candidate prompt
 
-Run Codex from the checked-in approved prompt file:
-
-Current approved prompt-file run:
+Do not run Codex yet. `STORY-ARMY-003` is approval-pending and the prompt is guarded. After human approval promotes the story to READY, use:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-003.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted-repo fallback for the same approved packet:
+Trusted-repo fallback after approval:
 
 ```powershell
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-003.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
 
-The prompt preflight must verify `STORY-ARMY-002` is `status: ready`, `approval: approved`, and Ambiguity Check PASS before editing Unity code.
+The guarded prompt preflight must verify `STORY-ARMY-003` is `status: ready`, `approval: approved`, and Ambiguity Check PASS before editing Unity code.
 
 ## Historical prompt-file runs
 
@@ -166,14 +167,12 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-strat-base-001.prompt.txt`
 - `production/sprints/codex-story-strat-map-region-001.prompt.txt`
 - `production/sprints/codex-story-qa-008.prompt.txt`
-
-Current approved prompt-file run:
-
 - `production/sprints/codex-story-army-001.prompt.txt`
-
-Current approved prompt-file run:
-
 - `production/sprints/codex-story-army-002.prompt.txt`
+
+Current guarded candidate prompt-file run:
+
+- `production/sprints/codex-story-army-003.prompt.txt`
 
 Guarded decision-brief packet:
 
@@ -181,4 +180,4 @@ Guarded decision-brief packet:
 
 ## After Codex finishes
 
-Codex must push `story/STORY-ARMY-002-tactical-role-behaviors-sensor-lock` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, and omissions/deferred work.
+After approval, Codex must push `story/STORY-ARMY-003-fixed-recruitment-offers-army-summary` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, and omissions/deferred work.

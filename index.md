@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-18
+> Last updated: 2026-06-19
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -107,7 +107,8 @@
 - [[production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity]] — APPROVED / IN PRODUCTION epic for faction armies, recruitment, and tactical role identity.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
-- [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — READY / approved next EPIC-008 Unity implementation packet for tactical role behaviors and Sensor Lock.
+- [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.
+- [[production/stories/story-army-003-fixed-recruitment-offers-and-army-summary]] — READY-candidate / approval-pending next EPIC-008 packet for fixed recruitment offers and army summary.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

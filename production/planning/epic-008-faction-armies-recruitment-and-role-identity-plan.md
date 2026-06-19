@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-06-19
 related:
   - production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity
   - production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed
@@ -80,13 +80,13 @@ Out of scope:
 
 Status:
 
-- READY / approved for implementation.
+- DONE / merged in Unity PR #61.
 
 Human-approved default:
 
 - Strato Sensor Swarm applies a separate 1 AP Sensor Lock support action; the next successful attack against the marked target deals +1 stack-count damage and consumes the mark.
 
-### Slice C — STORY-ARMY-003 Fixed Recruitment Offers and Army Summary
+### Slice C — [STORY-ARMY-003 Fixed Recruitment Offers and Army Summary](../stories/story-army-003-fixed-recruitment-offers-and-army-summary.md)
 
 Purpose:
 
@@ -104,6 +104,10 @@ Out of scope:
 - Town building tree.
 - Weekly economy.
 - Upgrades.
+
+Status:
+
+- READY-candidate / approval pending. Requires human answers on exact fixed offers, neutral site inclusion, one-time consumed state, and stack counts before Codex may implement.
 
 ### Slice D — STORY-ARMY-004 Composition Consequence Scenario
 

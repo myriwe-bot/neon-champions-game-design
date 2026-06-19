@@ -1,11 +1,11 @@
 ---
 title: STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-06-19
 source_lore: [greenland, qxz-meridian, white-sky]
 related:
   [
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-18 from chat: `Approved`, in response to approval question for `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock` with the recommended default Sensor Lock effect.
+DONE / merged. Human approval recorded 2026-06-18 from chat: `Approved`, in response to approval question for `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock` with the recommended default Sensor Lock effect. Unity PR #61 merged 2026-06-19.
 
 ## Story type
 
@@ -182,16 +182,22 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
+Merge evidence:
+
+- Unity PR #61: https://github.com/myriwe-bot/neon-champions-unity/pull/61
+- Merge commit: `847e1700535855571acbf8f289e14a4b46d05293`
+- Post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27821650148
 
 ## Verdict
 
-READY / approved for Unity implementation. Implement exactly this story scope first; do not start ARMY-003 recruitment work until a later story is promoted to READY.
+DONE / merged. Prepare `STORY-ARMY-003` only as approval-pending until human approval resolves its Ambiguity Check.

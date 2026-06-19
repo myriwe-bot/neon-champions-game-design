@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-004 Composition Consequence Scenario
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-19
@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-19 from chat: `approved`, approving the recommended Ambiguity Check defaults: narrow Home Rule `settlement_watch` proof first; require visible setup/label/loss-summary difference rather than guaranteed win/loss tuning; adapt the existing guarded-site path if small, otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial and still story-scoped.
+DONE / merged. Human approval recorded 2026-06-19 from chat: `approved`, approving the recommended Ambiguity Check defaults: narrow Home Rule `settlement_watch` proof first; require visible setup/label/loss-summary difference rather than guaranteed win/loss tuning; adapt the existing guarded-site path if small, otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial and still story-scoped. Unity PR #67 merged 2026-06-19.
 
 ## Story type
 
@@ -155,16 +155,23 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
+
+Merge evidence:
+
+- Unity PR #67: https://github.com/myriwe-bot/neon-champions-unity/pull/67
+- Merge commit: `259a758729cf33967a5feeab3e1a1a76dd8a31b9`
+- PR exact-head Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27835689667
+- Post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27837125337
 
 ## Verdict
 
-READY / approved for Unity implementation. Implement exactly this story scope; do not start EPIC-008 QA closeout or mirrored QXZ composition proof unless it is trivial and remains within the approved ARMY-004 scope.
+DONE / merged. Prepare `STORY-QA-009` only as a guarded READY-candidate until human approval resolves its closeout review scope and next-direction decision gate.

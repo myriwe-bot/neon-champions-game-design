@@ -1,0 +1,49 @@
+Guarded implementation packet candidate: STORY-QA-009 EPIC-008 Playtest and Closeout Review.
+
+AUTHORIZATION PREFLIGHT:
+- Before editing Unity code, read `production/stories/story-qa-009-epic-008-playtest-and-closeout-review.md` in the design/control repo.
+- Confirm it says `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
+- If it does not, STOP. Do not implement. Report: `STORY-QA-009 source-of-truth is not READY / approved.`
+
+Candidate target after approval:
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Branch: story/STORY-QA-009-epic-008-playtest-closeout-review
+- PR title: STORY-QA-009 EPIC-008 playtest and closeout review
+
+Required reading before editing after approval:
+- production/stories/story-qa-009-epic-008-playtest-and-closeout-review.md
+- production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md
+- production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md
+- production/stories/story-army-003-fixed-recruitment-offers-and-army-summary.md
+- production/stories/story-army-004-composition-consequence-scenario.md
+- production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md
+- production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan.md
+- design/gdd/strategic-map.md
+- design/gdd/tactical-combat.md
+- design/gdd/faction-unit-rosters.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+- Unity repo AGENTS.md files for every touched scope
+
+Candidate scope, pending approval:
+- EPIC-008 closeout/playtest review: recruit -> inspect army -> fight -> losses/result -> return.
+- Judge completed proof points, deferred scope, and true blockers.
+- Record verdict candidate: CLOSE EPIC, ONE NARROW FOLLOW-UP, or REJECT CLOSEOUT.
+- Propose 2-4 next-epic options if no true blocker remains, without promoting next implementation work.
+
+Out of scope:
+- No new gameplay mechanics, unit definitions, tactical role behavior, recruitment economy, upgrades, strategic AI, scenario editor, final art/audio/VFX, or next-epic implementation story.
+- No broad balance pass.
+
+Expected verification after approval:
+- git diff --check
+- Design/control site build if source docs change
+- Unity Foundation CI exact-head if Unity repo changes are made
+- Evidence summary under production/evidence/STORY-QA-009/ if approved
+
+PR requirements after approval:
+- Link STORY-QA-009.
+- Include tests/evidence reviewed, evidence path if created, CI run URL if Unity changes are made, and omissions/deferred work.
+- Commit and push the actual branch to remote, or clearly explain why pushing/PR creation was impossible.

@@ -109,7 +109,8 @@
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.
 - [[production/stories/story-army-003-fixed-recruitment-offers-and-army-summary]] — DONE / merged EPIC-008 packet for fixed recruitment offers and army summary.
-- [[production/stories/story-army-004-composition-consequence-scenario]] — READY / approved next EPIC-008 packet for composition consequence scenario.
+- [[production/stories/story-army-004-composition-consequence-scenario]] — DONE / merged EPIC-008 packet for composition consequence scenario.
+- [[production/stories/story-qa-009-epic-008-playtest-and-closeout-review]] — READY-candidate / approval-pending EPIC-008 closeout review packet.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

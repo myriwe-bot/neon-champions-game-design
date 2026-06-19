@@ -128,9 +128,9 @@ Out of scope:
 
 Status:
 
-- READY / approved. Human approval recorded 2026-06-19: prove narrow Home Rule `settlement_watch` path first; require visible setup/label/loss-summary difference rather than guaranteed win/loss tuning; adapt existing guarded-site path if small otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial.
+- DONE / merged in Unity PR #67. Human approval recorded 2026-06-19: prove narrow Home Rule `settlement_watch` path first; require visible setup/label/loss-summary difference rather than guaranteed win/loss tuning; adapt existing guarded-site path if small otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial.
 
-### Slice E — STORY-QA-009 EPIC-008 Playtest and Closeout Review
+### Slice E — [STORY-QA-009 EPIC-008 Playtest and Closeout Review](../stories/story-qa-009-epic-008-playtest-and-closeout-review.md)
 
 Purpose:
 
@@ -153,6 +153,10 @@ Possible next directions after closeout:
 - deeper tactical systems.
 - strategic economy/base depth.
 - readability/balance repair.
+
+Status:
+
+- READY-candidate / approval pending. Requires human approval of closeout-only scope, allowed verdict language, and next-epic options before Codex may implement.
 
 ## MVP roster seed
 

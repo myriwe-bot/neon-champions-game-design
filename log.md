@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-19] merge | STORY-ARMY-004 and prepare QA-009 candidate
+
+- Marked `STORY-ARMY-004 Composition Consequence Scenario` DONE / merged after Unity PR #67 and post-merge Unity Foundation CI passed.
+- Added `STORY-QA-009 EPIC-008 Playtest and Closeout Review` as a READY-candidate / approval-pending closeout packet.
+- Added guarded `production/sprints/codex-story-qa-009.prompt.txt`; it self-blocks until human approval promotes QA-009 to READY.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+
 ## [2026-06-19] approve | Promote STORY-ARMY-004 for implementation
 
 - Promoted `STORY-ARMY-004 Composition Consequence Scenario` to READY / approved after human approval.

@@ -8,6 +8,7 @@
 - Added `STORY-ARMY-004 Composition Consequence Scenario` as a READY-candidate / approval-pending packet.
 - Added guarded `production/sprints/codex-story-army-004.prompt.txt`; it self-blocks until human approval promotes ARMY-004 to READY.
 - Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+- Updated Unity README current-task pointer via PR #65, merged as `bf0b72e0f441a2fe13430e6b01ddb1c98d5ef0fc`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27831766110
 
 ## [2026-06-19] approve | Promote STORY-ARMY-003 for implementation
 

@@ -107,7 +107,7 @@ Out of scope:
 
 Status:
 
-- READY-candidate / approval pending. Requires human answers on exact fixed offers, neutral site inclusion, one-time consumed state, and stack counts before Codex may implement.
+- READY / approved for implementation. Human approval recorded 2026-06-19: Home Rule hub offers `settlement_watch`, QXZ hub offers `meridian_security`, neutral site attempts `survey_drones` if small, claims are one-time consumed, and counts use MVP defaults unless documented otherwise for readability.
 
 ### Slice D — STORY-ARMY-004 Composition Consequence Scenario
 

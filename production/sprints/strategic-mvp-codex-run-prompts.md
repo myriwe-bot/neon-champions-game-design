@@ -72,15 +72,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` is prepared only as a READY-candidate / approval-pending packet; do not run Codex until approved.
+**Current READY / approved Unity implementation packet:** `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary`. Use the checked-in prompt file below.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, and `STORY-ARMY-002` are DONE / merged. EPIC-008 is in production; ARMY-003 is the next candidate but remains approval-pending.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, and `STORY-ARMY-002` are DONE / merged. EPIC-008 is in production; ARMY-003 is READY / approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded candidate prompt file: `production/sprints/codex-story-army-003.prompt.txt`. It self-blocks until STORY-ARMY-003 is approved. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-army-003.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -99,23 +99,23 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current candidate prompt
+## Current approved prompt
 
-Do not run Codex yet. `STORY-ARMY-003` is approval-pending and the prompt is guarded. After human approval promotes the story to READY, use:
+Run Codex from the checked-in approved prompt file:
 
 ```powershell
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-003.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted-repo fallback after approval:
+Trusted-repo fallback for the same approved packet:
 
 ```powershell
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-003.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
 
-The guarded prompt preflight must verify `STORY-ARMY-003` is `status: ready`, `approval: approved`, and Ambiguity Check PASS before editing Unity code.
+The prompt preflight must verify `STORY-ARMY-003` is `status: ready`, `approval: approved`, and Ambiguity Check PASS before editing Unity code.
 
 ## Historical prompt-file runs
 
@@ -170,7 +170,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-army-001.prompt.txt`
 - `production/sprints/codex-story-army-002.prompt.txt`
 
-Current guarded candidate prompt-file run:
+Current approved prompt-file run:
 
 - `production/sprints/codex-story-army-003.prompt.txt`
 

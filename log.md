@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-06-19] approve | Promote STORY-ARMY-003 for implementation
+
+- Promoted `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` to READY / approved after human approval.
+- Recorded approved defaults: Home Rule hub offers `settlement_watch`, QXZ hub offers `meridian_security`, neutral site attempts `survey_drones` only if small, claims are one-time consumed, and stack counts use MVP defaults unless evidence documents a readability exception.
+- Updated the Codex prompt and run-prompt index for runnable implementation handoff.
+
 ## [2026-06-19] merge | STORY-ARMY-002 and prepare ARMY-003 candidate
 
 - Marked `STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock` DONE / merged after Unity PR #61 and post-merge Unity Foundation CI passed.

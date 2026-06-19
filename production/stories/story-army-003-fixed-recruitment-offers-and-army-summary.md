@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-003 Fixed Recruitment Offers and Army Summary
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-19
@@ -20,14 +20,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-ARMY-003 Fixed Recruitment Offers and Army Summary
 
 ## Status
 
-READY-candidate / approval pending. Prepared after `STORY-ARMY-002` merged in Unity PR #61. This is the next EPIC-008 implementation candidate, but it is **not runnable** until human approval promotes it to `status: ready`, `approval: approved`, and Ambiguity Check PASS.
+READY / approved. Human approval recorded 2026-06-19 from chat: `Approved`, approving the recommended defaults listed in the candidate Ambiguity Check. Prepared after `STORY-ARMY-002` merged in Unity PR #61.
 
 ## Story type
 
@@ -61,9 +61,9 @@ Exact source references:
 Concrete implementation target:
 
 - Add fixed recruitment/reinforcement offers at each starting hub:
-  - Home Rule starting hub offers one approved Home Rule unit stack.
-  - QXZ starting hub offers one approved QXZ unit stack.
-- Add one neutral recruitment site with one fixed offer if it can be represented on the existing strategic map without expanding topology beyond a small approved site/node addition.
+  - Home Rule starting hub offers `settlement_watch` / Settlement Watch using the unit definition catalog default count.
+  - QXZ starting hub offers `meridian_security` / Meridian Security using the unit definition catalog default count.
+- Add one neutral recruitment site offering `survey_drones` / Survey Drones if it can be represented on the existing strategic map without expanding topology beyond a small approved site/node addition; otherwise stop and report the scoped blocker rather than substituting an unapproved offer.
 - Add an army summary surface on the strategic HUD/snapshot that shows current stack composition by unit display name, count, and faction/owner.
 - Applying a valid fixed offer updates the acting faction/Champion army state and is visible before tactical handoff.
 - Tactical BattleSetup generation uses the recruited/current army composition rather than always falling back to a single placeholder/default stack where the current architecture supports it.
@@ -85,9 +85,10 @@ Not authorized by this story:
 ## Allowed stubs, mocks, placeholders, or temporary data
 
 - Fixed offers may be hard-authored prototype data if IDs are stable, validated, and story-scoped.
-- Neutral recruitment may use one existing neutral/site unit if a second offer path would require broader map work.
+- Neutral recruitment uses `survey_drones` if the existing map/site path supports it without broad topology work; do not substitute `site_guards` without a story update.
 - UI may use text-only labels/summaries on existing HUD/snapshot surfaces.
-- Offer consumption can be one-time for MVP; recurring/weekly recruitment is explicitly deferred.
+- Offer consumption is one-time for MVP; recurring/weekly recruitment is explicitly deferred.
+- Fixed offer stack counts use current MVP default counts from the unit definition catalog unless a smaller proof count is required for readability and is explicitly documented in evidence.
 
 ## Dependencies
 
@@ -118,22 +119,23 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: FAIL / approval pending.
+Status: PASS.
 
-Open approval questions before READY:
+Human-approved answers recorded 2026-06-19 from chat: `Approved`:
 
-1. Which exact starting-hub fixed offers should ARMY-003 use first?
-   - Recommended: Home Rule hub -> `settlement_watch` stack; QXZ hub -> `meridian_security` stack.
-2. Should the neutral recruitment site offer `survey_drones`, `site_guards`, or defer neutral recruitment to keep this slice strictly starting-hub only?
-   - Recommended: include one neutral `survey_drones` offer only if the existing map/site path is small; otherwise defer neutral to ARMY-004/QA.
-3. Should claims be one-time per offer for MVP?
-   - Recommended: yes, one-time consumed state, no economy cost yet.
-4. What minimal stack counts should be used?
-   - Recommended: use current MVP default counts from the unit definition catalog unless implementation must choose smaller proof counts for readability.
+1. Starting-hub fixed offers:
+   - Home Rule hub -> `settlement_watch` / Settlement Watch.
+   - QXZ hub -> `meridian_security` / Meridian Security.
+2. Neutral recruitment site:
+   - Include one neutral `survey_drones` / Survey Drones offer only if the existing map/site path is small; otherwise stop and report the scoped blocker rather than substituting `site_guards`.
+3. Claim model:
+   - One-time consumed state for each fixed offer. No economy/resource cost in this story.
+4. Stack counts:
+   - Use current MVP default counts from the unit definition catalog unless implementation must choose smaller proof counts for readability and documents that in evidence.
 
 Human-approved exceptions:
 
-- None yet.
+- `design/gdd/faction-unit-rosters.md` remains broader draft/pending, but the exact Home Rule/QXZ/Survey Drones MVP unit IDs and names already approved by ARMY-001 plus the ARMY-003 fixed-offer defaults above are approved as source authority for this story only.
 
 ## Branch / PR requirements
 
@@ -165,8 +167,8 @@ Human-approved exceptions:
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Human approval recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval recorded.
 
 ## DONE gate
 
@@ -182,4 +184,4 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY-candidate / approval pending. Do not run Codex until the Ambiguity Check is approved and the story is promoted to READY.
+READY / approved for Unity implementation. Implement exactly this story scope; do not start ARMY-004 composition-consequence work until a later story is promoted to READY.

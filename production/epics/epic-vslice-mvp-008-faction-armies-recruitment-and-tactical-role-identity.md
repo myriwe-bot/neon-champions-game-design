@@ -30,7 +30,7 @@ approval: approved
 
 APPROVED / IN PRODUCTION. Human direction recorded 2026-06-18: proceed with faction armies, recruitment, and tactical role identity as the next epic after EPIC-007 closeout.
 
-This epic is not direct implementation authority. Agents and Codex may only implement READY child stories. `STORY-ARMY-001` and `STORY-ARMY-002` are DONE / merged. `STORY-ARMY-003` is a READY-candidate / approval-pending next packet, not yet runnable.
+This epic is not direct implementation authority. Agents and Codex may only implement READY child stories. `STORY-ARMY-001` and `STORY-ARMY-002` are DONE / merged. `STORY-ARMY-003` is READY / approved as the current implementation packet.
 
 ## Priority tier
 
@@ -155,7 +155,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed](../stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed.md) | DONE / merged | Data + Tactical Setup | EPIC-008 approved | Unity PR #60, exact-head CI, post-merge CI, unit-definition tests/evidence |
 | [STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock](../stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md) | DONE / merged | Tactical Rules + UI | ARMY-001 DONE | Unity PR #61, exact-head CI, post-merge CI, Sensor Lock/role behavior tests/evidence |
-| [STORY-ARMY-003 Fixed Recruitment Offers and Army Summary](../stories/story-army-003-fixed-recruitment-offers-and-army-summary.md) | READY-candidate / approval pending | Strategic Rules + UI | ARMY-001/002 DONE | recruit → army update → BattleSetup evidence |
+| [STORY-ARMY-003 Fixed Recruitment Offers and Army Summary](../stories/story-army-003-fixed-recruitment-offers-and-army-summary.md) | READY / approved | Strategic Rules + UI | ARMY-001/002 DONE | recruit → army update → BattleSetup evidence |
 | STORY-ARMY-004 Composition Consequence Scenario | Draft target | Vertical Slice | ARMY-001/002/003 DONE | before/after recruitment battle evidence, losses/rewards summary |
 | STORY-QA-009 EPIC-008 Playtest and Closeout Review | Draft target | QA + Playability Review | implementation slices DONE | recruit/fight/loss/return loop evidence and next-direction verdict |
 
@@ -223,4 +223,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PRODUCTION. `STORY-ARMY-001` is DONE / merged. Implement `STORY-ARMY-002` next. Do not start ARMY-003 recruitment work until a later story is promoted to READY.
+APPROVED / IN PRODUCTION. `STORY-ARMY-001` and `STORY-ARMY-002` are DONE / merged. Implement `STORY-ARMY-003` next. Do not start ARMY-004 composition-consequence work until a later story is promoted to READY.

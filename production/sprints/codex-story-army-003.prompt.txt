@@ -1,11 +1,11 @@
-Guarded implementation packet candidate: STORY-ARMY-003 Fixed Recruitment Offers and Army Summary.
+Approved implementation packet: STORY-ARMY-003 Fixed Recruitment Offers and Army Summary.
 
 AUTHORIZATION PREFLIGHT:
 - Before editing Unity code, read `production/stories/story-army-003-fixed-recruitment-offers-and-army-summary.md` in the design/control repo.
 - Confirm it says `status: ready`, `approval: approved`, and Ambiguity Check `Status: PASS`.
 - If it does not, STOP. Do not implement. Report: `STORY-ARMY-003 source-of-truth is not READY / approved.`
 
-Implementation target after approval:
+Implementation target:
 - Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 - Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 - Branch: story/STORY-ARMY-003-fixed-recruitment-offers-army-summary
@@ -25,23 +25,32 @@ Required reading before editing:
 - docs/architecture/ci-build-automation.md
 - Unity repo AGENTS.md files for every touched scope
 
-Candidate scope, pending approval:
-- Starting hubs expose fixed faction-scoped recruitment/reinforcement offers.
-- One neutral recruitment site may expose one fixed offer if approved and small.
+Approved scope:
+- Starting hubs expose fixed faction-scoped recruitment/reinforcement offers:
+  - Home Rule hub -> `settlement_watch` / Settlement Watch using the unit definition catalog default count.
+  - QXZ hub -> `meridian_security` / Meridian Security using the unit definition catalog default count.
+- Include one neutral recruitment-site offer for `survey_drones` / Survey Drones if the existing map/site path is small; if it requires broad topology/system work, STOP and report that scoped blocker instead of substituting `site_guards` or widening scope.
 - Valid claims update current army state and visible army summary.
+- Army summary shows unit display names, counts, and owner/faction where practical.
 - Recruited/current composition reaches tactical setup and visible tactical labels.
 - Invalid/duplicate/wrong-faction claims fail safely with diagnostics and no partial mutation.
+- Fixed offers are one-time consumed for MVP.
+- Fixed offer stack counts use current MVP defaults unless a smaller proof count is needed for readability and documented in evidence.
 
 Out of scope:
-- No town building tree, weekly economy, upgrades, strategic AI, full balance pass, final art/audio/VFX, or new tactical role behavior.
+- No town building tree, weekly economy, upgrades, market, resource costs, strategic AI, full balance pass, final art/audio/VFX, or new tactical role behavior.
+- No unapproved `site_guards` neutral offer substitution.
+- No ARMY-004 composition-consequence scenario work.
+- No hard-canon rename of Home Rule Coalition.
 
-Expected verification after approval:
+Expected verification before PR:
 - git diff --check
-- EditMode tests for offer validation, claim mutation, consumed state, army summary, and BattleSetup composition
-- PlayMode/screenshot evidence under production/evidence/STORY-ARMY-003/
+- EditMode tests for offer validation, valid claim mutation, consumed duplicate blocking, wrong-faction/site denial, army summary state, and BattleSetup composition
+- PlayMode/screenshot evidence under `production/evidence/STORY-ARMY-003/` showing offer visibility, claimed army summary, and tactical handoff/composition where practical
 - Unity Foundation CI exact-head
 
-PR requirements after approval:
+PR requirements:
 - Link STORY-ARMY-003.
 - Include tests run, evidence path, CI run URL, and omissions/deferred work.
+- Explicitly list any scoped blocker, especially if neutral `survey_drones` cannot be represented without broad map/topology work.
 - Commit and push the actual implementation branch to remote, or clearly explain why pushing/PR creation was impossible.

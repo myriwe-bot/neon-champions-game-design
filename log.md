@@ -8,6 +8,7 @@
 - Recorded approved defaults: narrow Home Rule `settlement_watch` proof first; visible setup/label/loss-summary difference instead of guaranteed win/loss tuning; adapt existing guarded-site path if small, otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial.
 - Converted `production/sprints/codex-story-army-004.prompt.txt` from guarded candidate to runnable implementation handoff.
 - Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+- Updated Unity README current-task pointer via PR #66, merged as `85c3ff35bb91ed4ee9043fcd8d9465eb4588a715`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27833694023
 
 ## [2026-06-19] merge | STORY-ARMY-003 and prepare ARMY-004 candidate
 

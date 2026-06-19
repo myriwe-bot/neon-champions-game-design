@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-004 Composition Consequence Scenario
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-19
@@ -21,14 +21,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-ARMY-004 Composition Consequence Scenario
 
 ## Status
 
-READY-candidate / approval pending. Prepared after `STORY-ARMY-003` merged in Unity PR #64. This is the next EPIC-008 implementation candidate, but it is **not runnable** until human approval promotes it to `status: ready`, `approval: approved`, and Ambiguity Check PASS.
+READY / approved. Human approval recorded 2026-06-19 from chat: `approved`, approving the recommended Ambiguity Check defaults: narrow Home Rule `settlement_watch` proof first; require visible setup/label/loss-summary difference rather than guaranteed win/loss tuning; adapt the existing guarded-site path if small, otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial and still story-scoped.
 
 ## Story type
 
@@ -115,27 +115,23 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: FAIL / approval pending.
+Status: PASS.
 
-Open approval questions before READY:
+Human-approved defaults recorded 2026-06-19:
 
-1. What should ARMY-004 prove first?
-   - Recommended: a narrow Home Rule path where `settlement_watch` recruitment changes the guarded-site tactical setup and post-battle loss/reward summary.
-2. Should the comparison require different battle outcomes, or only different setup/loss pressure?
-   - Recommended: require visible setup/label/loss-summary difference, not guaranteed victory/loss tuning.
-3. Which encounter should be used?
-   - Recommended: adapt the existing guarded-site path if small; otherwise create one story-scoped guarded composition-demo site.
-4. Should QXZ get a mirrored composition proof now?
-   - Recommended: defer mirrored QXZ proof to QA/closeout unless cheap; keep ARMY-004 focused on one deterministic path.
+1. ARMY-004 proves a narrow Home Rule path where `settlement_watch` recruitment changes the guarded-site tactical setup and post-battle loss/reward summary.
+2. The comparison requires visible setup/label/loss-summary difference, not guaranteed victory/loss tuning.
+3. Use the existing guarded-site path if small; otherwise create one story-scoped guarded composition-demo site.
+4. Defer mirrored QXZ proof to QA/closeout unless it is trivial and still story-scoped.
 
 Human-approved exceptions:
 
-- None yet.
+- The story may create a narrow story-scoped composition-demo guarded site if adapting the existing guarded-site path would be larger/riskier than a small dedicated site.
 
 ## Branch / PR requirements
 
-- Branch name after approval: `story/STORY-ARMY-004-composition-consequence-scenario`
-- PR title after approval: `STORY-ARMY-004 Composition consequence scenario`
+- Branch name: `story/STORY-ARMY-004-composition-consequence-scenario`
+- PR title: `STORY-ARMY-004 Composition consequence scenario`
 - Required linked story ID: `STORY-ARMY-004`.
 - Required evidence summary: tests run, PNG evidence path, CI run URL.
 - Required omissions section: explicitly list known omissions/stubs/placeholders/deferred work or state `No known omissions`.
@@ -154,8 +150,8 @@ Human-approved exceptions:
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Human approval recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval recorded.
 
 ## DONE gate
 
@@ -171,4 +167,4 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY-candidate / approval pending. Do not run Codex until the Ambiguity Check is approved and the story is promoted to READY.
+READY / approved for Unity implementation. Implement exactly this story scope; do not start EPIC-008 QA closeout or mirrored QXZ composition proof unless it is trivial and remains within the approved ARMY-004 scope.

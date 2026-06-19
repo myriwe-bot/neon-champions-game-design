@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-19] approve | Promote STORY-ARMY-004 for implementation
+
+- Promoted `STORY-ARMY-004 Composition Consequence Scenario` to READY / approved after human approval.
+- Recorded approved defaults: narrow Home Rule `settlement_watch` proof first; visible setup/label/loss-summary difference instead of guaranteed win/loss tuning; adapt existing guarded-site path if small, otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial.
+- Converted `production/sprints/codex-story-army-004.prompt.txt` from guarded candidate to runnable implementation handoff.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+
 ## [2026-06-19] merge | STORY-ARMY-003 and prepare ARMY-004 candidate
 
 - Marked `STORY-ARMY-003 Fixed Recruitment Offers and Army Summary` DONE / merged after Unity PR #64 and post-merge Unity Foundation CI passed.

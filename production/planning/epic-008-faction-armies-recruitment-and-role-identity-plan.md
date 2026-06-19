@@ -128,7 +128,7 @@ Out of scope:
 
 Status:
 
-- READY-candidate / approval pending. Requires human answers on proof target, outcome requirement, encounter/site choice, and whether QXZ mirrored proof is included before Codex may implement.
+- READY / approved. Human approval recorded 2026-06-19: prove narrow Home Rule `settlement_watch` path first; require visible setup/label/loss-summary difference rather than guaranteed win/loss tuning; adapt existing guarded-site path if small otherwise create one story-scoped composition-demo guarded site; defer mirrored QXZ proof to QA/closeout unless trivial.
 
 ### Slice E — STORY-QA-009 EPIC-008 Playtest and Closeout Review
 

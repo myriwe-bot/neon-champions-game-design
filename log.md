@@ -8,6 +8,7 @@
 - Added `STORY-QA-009 EPIC-008 Playtest and Closeout Review` as a READY-candidate / approval-pending closeout packet.
 - Added guarded `production/sprints/codex-story-qa-009.prompt.txt`; it self-blocks until human approval promotes QA-009 to READY.
 - Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index.
+- Updated Unity README current-task pointer via PR #68, merged as `4568e08bc36843e01b25acc9e3bde462c84de512`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27837997087
 
 ## [2026-06-19] approve | Promote STORY-ARMY-004 for implementation
 

@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-24] approve | Promote STORY-QA-009 for implementation
+
+- Promoted `STORY-QA-009 EPIC-008 Playtest and Closeout Review` to READY / approved after human approval.
+- Recorded approved scope: closeout-first review; allow only tiny QA/evidence/test polish if needed, no new gameplay; Codex may recommend `CLOSE EPIC`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`; next-epic options are decision options only.
+- Converted `production/sprints/codex-story-qa-009.prompt.txt` from guarded candidate to runnable implementation handoff.
+- Updated EPIC-008, the EPIC-008 plan, and run-prompt index.
+
 ## [2026-06-19] merge | STORY-ARMY-004 and prepare QA-009 candidate
 
 - Marked `STORY-ARMY-004 Composition Consequence Scenario` DONE / merged after Unity PR #67 and post-merge Unity Foundation CI passed.

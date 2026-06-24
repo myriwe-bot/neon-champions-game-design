@@ -74,15 +74,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. `STORY-QA-009 EPIC-008 Playtest and Closeout Review` is prepared only as a READY-candidate / approval-pending closeout packet; do not run Codex until approved.
+**Current READY / approved Unity implementation packet:** `STORY-QA-009 EPIC-008 Playtest and Closeout Review`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, and `STORY-ARMY-004` are DONE / merged. EPIC-008 is ready for QA closeout; STORY-QA-009 is the next candidate but remains approval-pending.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, and `STORY-ARMY-004` are DONE / merged. EPIC-008 is ready for QA closeout; STORY-QA-009 is the current approved packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded candidate prompt file: `production/sprints/codex-story-qa-009.prompt.txt`. It self-blocks until STORY-QA-009 is approved. Historical prompt files remain for audit only.
+Current prompt file: `production/sprints/codex-story-qa-009.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -101,9 +101,9 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current candidate prompt
+## Current approved prompt
 
-Do not run Codex yet. `STORY-QA-009` is approval-pending and the prompt is guarded. After human approval promotes the story to READY, use:
+Run `STORY-QA-009` with:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -118,7 +118,7 @@ $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-ga
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted-repo fallback after approval:
+Trusted-repo fallback:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -133,7 +133,7 @@ $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-ga
 codex exec --sandbox danger-full-access $prompt
 ```
 
-The guarded prompt preflight must verify `STORY-QA-009` is `status: ready`, `approval: approved`, and Ambiguity Check PASS before editing Unity code.
+The prompt preflight still verifies `STORY-QA-009` is `status: ready`, `approval: approved`, and Ambiguity Check PASS before editing Unity code.
 
 ## Historical prompt-file runs
 
@@ -190,7 +190,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-army-003.prompt.txt`
 - `production/sprints/codex-story-army-004.prompt.txt`
 
-Current guarded candidate prompt-file run:
+Current approved prompt-file run:
 
 - `production/sprints/codex-story-qa-009.prompt.txt`
 
@@ -200,4 +200,4 @@ Guarded decision-brief packet:
 
 ## After Codex finishes
 
-After approval, Codex must push `story/STORY-QA-009-epic-008-playtest-closeout-review` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, omissions/deferred work, and closeout verdict recommendation.
+Codex must push `story/STORY-QA-009-epic-008-playtest-closeout-review` or explicitly report why pushing/PR creation was impossible. Final response must include tests/evidence, PR URL/number if created, CI status or blocker, omissions/deferred work, and closeout verdict recommendation.

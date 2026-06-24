@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-009 EPIC-008 Playtest and Closeout Review
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-19
@@ -22,14 +22,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-QA-009 EPIC-008 Playtest and Closeout Review
 
 ## Status
 
-READY-candidate / approval pending. Prepared after `STORY-ARMY-004` merged in Unity PR #67. This is the next EPIC-008 closeout candidate, but it is **not runnable** until human approval promotes it to `status: ready`, `approval: approved`, and Ambiguity Check PASS.
+READY / approved. Human approval recorded 2026-06-24. Approved scope: closeout-first review; allow only tiny test/evidence polish if needed, with no new gameplay. Codex may recommend `CLOSE EPIC`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`, but human acceptance is still required before closing the epic or starting next implementation work. Include 2-4 next-epic options as decision options only.
 
 ## Story type
 
@@ -114,20 +114,17 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: FAIL / approval pending.
+Status: PASS.
 
-Open approval questions before READY:
+Human-approved answers recorded 2026-06-24:
 
-1. Should STORY-QA-009 be a closeout-only review, or may it include one tiny test/evidence polish fix if found?
-   - Recommended: closeout-only by default; allow only tiny test/evidence polish, no new gameplay.
-2. What verdict should Codex be allowed to emit without another human round?
-   - Recommended: Codex may recommend `CLOSE EPIC`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`, but human acceptance is still required before closing the epic or starting the next implementation story.
-3. Should next-epic options be included in this closeout?
-   - Recommended: yes, list 2-4 options and a recommended default, but keep all as decision options, not READY work.
+1. STORY-QA-009 is closeout-first. It may include only tiny test/evidence polish if needed to make the closeout repeatable; no new gameplay mechanics or broad repair work.
+2. Codex may recommend exactly one of `CLOSE EPIC`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`. The recommendation is not itself approval to close the epic or begin another implementation story.
+3. Include 2-4 next-epic options and a recommended default as decision options only; do not promote any next epic/story to READY.
 
 Human-approved exceptions:
 
-- None yet.
+- Tiny QA/evidence/test polish is allowed only if it remains story-scoped and does not add new gameplay.
 
 ## Branch / PR requirements
 
@@ -151,8 +148,8 @@ Human-approved exceptions:
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Human approval recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval recorded.
 
 ## DONE gate
 
@@ -168,4 +165,4 @@ Human-approved exceptions:
 
 ## Verdict
 
-READY-candidate / approval pending. Do not run Codex until the Ambiguity Check is approved and the story is promoted to READY.
+READY / approved for implementation. Run Codex from `production/sprints/codex-story-qa-009.prompt.txt` on branch `story/STORY-QA-009-epic-008-playtest-closeout-review`.

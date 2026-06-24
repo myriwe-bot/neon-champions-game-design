@@ -156,7 +156,7 @@ Possible next directions after closeout:
 
 Status:
 
-- READY / approved. Human approval recorded 2026-06-24: closeout-first review; tiny QA/evidence/test polish allowed only if no new gameplay; Codex may recommend `CLOSE EPIC`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`; next-epic options are decision options only.
+- DONE / merged in Unity PR #70. Verdict: `CLOSE EPIC`; no true blocker found. Next-epic options remain human decision options only.
 
 ## MVP roster seed
 

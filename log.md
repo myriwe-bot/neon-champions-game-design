@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-24] merge | STORY-QA-009 and prepare next-direction brief
+
+- Marked `STORY-QA-009 EPIC-008 Playtest and Closeout Review` DONE / merged after Unity PR #70 and post-merge Unity Foundation CI passed.
+- Recorded closeout verdict: `CLOSE EPIC`; no true EPIC-008 blocker remains, and next-epic options stay human decision options only.
+- Cleared the Unity README current-task pointer via PR #71, merged as `7877c3c75727708113431c0c607cbc09a19d91b7`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28124041275
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, production index, and guarded next-direction brief prompt.
+
 ## [2026-06-24] approve | Promote STORY-QA-009 for implementation
 
 - Promoted `STORY-QA-009 EPIC-008 Playtest and Closeout Review` to READY / approved after human approval.

@@ -28,9 +28,9 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PRODUCTION. Human direction recorded 2026-06-18: proceed with faction armies, recruitment, and tactical role identity as the next epic after EPIC-007 closeout.
+CLOSEOUT REVIEW MERGED / CLOSE EPIC RECOMMENDED. Human direction recorded 2026-06-18: proceed with faction armies, recruitment, and tactical role identity as the next epic after EPIC-007 closeout. `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, and `STORY-QA-009` are DONE / merged. STORY-QA-009 recommends `CLOSE EPIC`; no further EPIC-008 implementation story is approved.
 
-This epic is not direct implementation authority. Agents and Codex may only implement READY child stories. `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, and `STORY-ARMY-004` are DONE / merged. `STORY-QA-009` is READY / approved as the closeout review packet.
+This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
 ## Priority tier
 
@@ -157,7 +157,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-ARMY-002 Tactical Role Behaviors and Sensor Lock](../stories/story-army-002-tactical-role-behaviors-and-sensor-lock.md) | DONE / merged | Tactical Rules + UI | ARMY-001 DONE | Unity PR #61, exact-head CI, post-merge CI, Sensor Lock/role behavior tests/evidence |
 | [STORY-ARMY-003 Fixed Recruitment Offers and Army Summary](../stories/story-army-003-fixed-recruitment-offers-and-army-summary.md) | DONE / merged | Strategic Rules + UI | ARMY-001/002 DONE | Unity PR #64, exact-head CI, post-merge CI, recruit → army update → BattleSetup evidence |
 | [STORY-ARMY-004 Composition Consequence Scenario](../stories/story-army-004-composition-consequence-scenario.md) | DONE / merged | Vertical Slice | ARMY-001/002/003 DONE | Unity PR #67, exact-head CI, post-merge CI, before/after recruitment battle evidence, losses/rewards summary |
-| [STORY-QA-009 EPIC-008 Playtest and Closeout Review](../stories/story-qa-009-epic-008-playtest-and-closeout-review.md) | READY / approved | QA + Playability Review | implementation slices DONE | recruit/fight/loss/return loop evidence and next-direction verdict |
+| [STORY-QA-009 EPIC-008 Playtest and Closeout Review](../stories/story-qa-009-epic-008-playtest-and-closeout-review.md) | DONE / merged | QA + Playability Review | implementation slices DONE | Unity PR #70, exact-head CI, post-merge CI, `CLOSE EPIC` recommendation and next-direction options |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -223,4 +223,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PRODUCTION. `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, and `STORY-ARMY-004` are DONE / merged. `STORY-QA-009` is READY / approved as the next closeout review packet; it may recommend close, one narrow follow-up, or reject closeout, but human acceptance is still required before closing the epic or starting next implementation work.
+CLOSEOUT REVIEW MERGED / CLOSE EPIC RECOMMENDED. `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, and `STORY-QA-009` are DONE / merged. STORY-QA-009 recommends `CLOSE EPIC`; no active EPIC-008 blocker remains, and no next implementation story is READY until the human chooses the next direction.

@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-009 EPIC-008 Playtest and Closeout Review
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-19
@@ -29,7 +29,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-24. Approved scope: closeout-first review; allow only tiny test/evidence polish if needed, with no new gameplay. Codex may recommend `CLOSE EPIC`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`, but human acceptance is still required before closing the epic or starting next implementation work. Include 2-4 next-epic options as decision options only.
+DONE / merged. Unity PR #70 merged as `7d605dcc0a00f12bd8b67d389f176a700b2baf5e`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28123164904. Closeout verdict recommends `CLOSE EPIC`; human next-direction acceptance is still required before promoting any next implementation story to READY.
 
 ## Story type
 
@@ -153,16 +153,16 @@ Human-approved exceptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists: Unity `production/evidence/STORY-QA-009/README.md`.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for implementation. Run Codex from `production/sprints/codex-story-qa-009.prompt.txt` on branch `story/STORY-QA-009-epic-008-playtest-closeout-review`.
+DONE / merged. STORY-QA-009 closeout evidence recommends `CLOSE EPIC`, with next-epic options retained as human decision options only.

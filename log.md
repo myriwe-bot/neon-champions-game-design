@@ -8,6 +8,7 @@
 - Recorded approved scope: closeout-first review; allow only tiny QA/evidence/test polish if needed, no new gameplay; Codex may recommend `CLOSE EPIC`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`; next-epic options are decision options only.
 - Converted `production/sprints/codex-story-qa-009.prompt.txt` from guarded candidate to runnable implementation handoff.
 - Updated EPIC-008, the EPIC-008 plan, and run-prompt index.
+- Updated Unity README current-task pointer via PR #69, merged as `7b4f347102e640b5f8b60eb4f2b662201efffcb3`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28117361202
 
 ## [2026-06-19] merge | STORY-ARMY-004 and prepare QA-009 candidate
 

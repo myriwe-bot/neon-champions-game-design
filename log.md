@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-25] closeout | EPIC-008 closed after ARMY-007
+
+- Merged `STORY-ARMY-007 Strategic Map Pan Input Repair` via Unity PR #77 as `14f1312198958b971d24582302a0ac38d7cef6ae`.
+- Verified exact-head PR CI and post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191824791
+- Cleared Unity current-task pointer via PR #78 as `f92ed63c0a8ae61bfbf685aa121b4cd0d15846ec`; post-cleanup main CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28192659752
+- Marked STORY-ARMY-007 DONE / merged and EPIC-008 DONE / closed.
+- Updated run prompts to no current approved Unity implementation task and refreshed the guarded next-epic direction brief.
+
 ## [2026-06-25] approval | STORY-ARMY-007 pan input repair
 
 - Human approved `STORY-ARMY-007 Strategic Map Pan Input Repair` with: "Approved".

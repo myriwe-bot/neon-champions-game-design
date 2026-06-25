@@ -79,15 +79,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-ARMY-007 Strategic Map Pan Input Repair`.
+**Current READY / approved Unity implementation packet:** none.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is READY / approved as the current Unity implementation story.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is DONE / merged. EPIC-008 is DONE / closed.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Historical prompt files remain for audit only. Current implementation prompt: `production/sprints/codex-story-army-007.prompt.txt`.
+Current implementation prompt file: none. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -108,11 +108,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-Current approved Unity implementation prompt:
-
-- `production/sprints/codex-story-army-007.prompt.txt`
-
-Codex may implement only `STORY-ARMY-007` scope. It must stop rather than broaden into recruitment, tactical rules, map replacement, camera framework redesign, tactical AI, balance, Champion progression, or Intel upgrades.
+No current approved Unity implementation prompt. Do not run Codex for Unity implementation until a future story is explicitly promoted to READY / approved.
 
 ## Historical prompt-file runs
 
@@ -170,7 +166,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-army-004.prompt.txt`
 - `production/sprints/codex-story-qa-009.prompt.txt`
 
-Current prompt-file run:
+Most recent completed prompt-file run:
 
 - `production/sprints/codex-story-army-007.prompt.txt`
 
@@ -180,4 +176,4 @@ Historical decision-brief prompt-file run:
 
 ## After Codex finishes
 
-Codex Unity implementation is authorized for `STORY-ARMY-007` only. After Codex finishes, verify the remote implementation branch/PR before review.
+No Codex Unity implementation is currently authorized. Next work should begin from a new human-approved story or a guarded decision brief, not from EPIC-008.

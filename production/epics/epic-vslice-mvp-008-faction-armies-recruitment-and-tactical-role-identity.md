@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-008 Faction Armies, Recruitment, and Tactical Role Identity
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-06-18
@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-PAN INPUT REPAIR APPROVED. Human `STORY-QA-011` playtest after ARMY-006 + PR #76 reported: `The pan is now not working at all. Otherwise, it seems to look better.` `STORY-ARMY-007 Strategic Map Pan Input Repair` is READY / approved as the current narrow Unity implementation packet.
+DONE / CLOSED. `STORY-ARMY-007 Strategic Map Pan Input Repair` merged in Unity PR #77 and post-merge main CI passed. The Unity current-task pointer was cleared in PR #78 and post-cleanup main CI passed. Human closeout blocker from `STORY-QA-011` is addressed; no READY Unity implementation task remains active.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -162,7 +162,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review](../stories/story-qa-010-epic-008-repair-playtest-and-closeout-review.md) | DONE / closeout rejected | QA + Human Playtest | ARMY-005 DONE | Human notes: pan/zoom reset, misleading recruitment availability, tactical drones unusable/no stack info |
 | [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md) | DONE / merged | UI + Playability Repair | QA-010 DONE / rejected | Unity PR #74, exact-head CI, post-merge CI, evidence; pointer cleanup PR #75; follow-up AP-selection fix PR #76 |
 | [STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review](../stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md) | DONE / one narrow follow-up | QA + Human Playtest | ARMY-006 DONE | Human note: pan not working at all; otherwise looks better |
-| [STORY-ARMY-007 Strategic Map Pan Input Repair](../stories/story-army-007-strategic-map-pan-input-repair.md) | READY / approved | Input + Playability Repair | QA-011 DONE / one narrow follow-up | Current approved Unity implementation packet |
+| [STORY-ARMY-007 Strategic Map Pan Input Repair](../stories/story-army-007-strategic-map-pan-input-repair.md) | DONE / merged | Input + Playability Repair | QA-011 DONE / one narrow follow-up | Unity PR #77, exact-head CI, post-merge CI; pointer cleanup PR #78 |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -225,14 +225,14 @@ EPIC-008 cannot close until the merged ARMY-006 repair is human-playtested and t
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the epic as complete.
 
 ## Anti-pattern check
 
@@ -246,4 +246,19 @@ Invalid epic behavior:
 
 ## Verdict
 
-PAN INPUT REPAIR APPROVED. `STORY-QA-011` recorded a human closeout blocker: pan is now not working at all, while the rest looks better. `STORY-ARMY-007` is READY / approved as the current narrow Unity implementation packet.
+DONE / CLOSED. EPIC-008 faction armies, recruitment, tactical role identity, repair train, and final strategic-pan blocker are complete. `STORY-ARMY-007` merged in PR #77, post-merge CI passed, Unity pointer cleanup PR #78 passed, and no current Unity implementation task remains active.
+
+
+## Final closeout — 2026-06-25
+
+- Final repair: `STORY-ARMY-007 Strategic Map Pan Input Repair`.
+- Unity PR #77: https://github.com/myriwe-bot/neon-champions-unity/pull/77
+- Reviewed head: `384059151996050fe9e316fd83edb64ae19faf31`
+- Merge commit: `14f1312198958b971d24582302a0ac38d7cef6ae`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191077507
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191824791
+- Unity current-task pointer cleanup PR #78: https://github.com/myriwe-bot/neon-champions-unity/pull/78
+- Pointer cleanup merge commit: `f92ed63c0a8ae61bfbf685aa121b4cd0d15846ec`
+- Pointer cleanup post-merge CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28192659752
+
+Closeout verdict: `CLOSE EPIC`. No active EPIC-008 Unity blocker remains.

@@ -227,7 +227,7 @@ Scope target:
 
 Status:
 
-- READY-candidate / approval pending. Recommended next step before a new gameplay epic.
+- DONE / one narrow follow-up. Human note: pan not working at all; otherwise looks better.
 
 
 ### Slice J — [STORY-ARMY-007 Strategic Map Pan Input Repair](../stories/story-army-007-strategic-map-pan-input-repair.md)
@@ -244,7 +244,7 @@ Scope target:
 
 Status:
 
-- READY / approved. Current Unity implementation packet.
+- DONE / merged in Unity PR #77. Post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191824791. Unity current-task pointer cleanup PR #78 passed post-merge CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28192659752.
 
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 
@@ -298,3 +298,8 @@ Use both only if technically cheap; otherwise pick the one closest to current gu
 ## Recommended approval question
 
 `STORY-ARMY-001 MVP Faction Unit Definitions and Roster Seed` approved 2026-06-18 as the first EPIC-008 Unity implementation packet, using Home Rule Coalition as provisional soft-canon production name and the listed 3+3 roster seed.
+
+
+## Closeout result — 2026-06-25
+
+EPIC-008 is DONE / closed. The final pan-input blocker identified by QA-011 was repaired by STORY-ARMY-007 in Unity PR #77, verified by exact-head and post-merge CI, and the Unity current-task pointer was cleared by PR #78. No approved Unity implementation task remains active.

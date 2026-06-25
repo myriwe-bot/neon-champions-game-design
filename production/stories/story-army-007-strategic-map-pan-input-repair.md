@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-007 Strategic Map Pan Input Repair
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-25
@@ -24,9 +24,9 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-25: `Approved` in response to the `STORY-ARMY-007` recommendation. Human playtest note recorded 2026-06-25 after ARMY-006 + PR #76: `The pan is now not working at all. Otherwise, it seems to look better.`
+DONE / merged. Unity PR #77 merged as `14f1312198958b971d24582302a0ac38d7cef6ae`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191824791. Unity current-task pointer cleanup PR #78 merged as `f92ed63c0a8ae61bfbf685aa121b4cd0d15846ec`; post-cleanup main CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28192659752.
 
-This is the current approved Unity implementation packet.
+Human approval recorded 2026-06-25: `Approved` in response to the `STORY-ARMY-007` recommendation. Human playtest note recorded 2026-06-25 after ARMY-006 + PR #76: `The pan is now not working at all. Otherwise, it seems to look better.`
 
 ## Story type
 
@@ -72,15 +72,15 @@ ARMY-006 fixed camera-state persistence across UI refreshes, but the current pla
 
 ## Acceptance criteria
 
-- [ ] On the strategic view, the player can pan the map from the default camera position using the supported player-facing input path.
-- [ ] If keyboard pan is supported, WASD and/or arrow keys move the camera visibly within bounds.
-- [ ] If pointer drag pan is supported, dragging on non-UI strategic map space moves the camera visibly within bounds.
-- [ ] Dragging/panning does not also select a Champion/site/route/node by accident.
-- [ ] Panning is clamped to existing map bounds and cannot lose the playable map.
-- [ ] Panning is disabled or ignored while tactical view is active.
-- [ ] After panning and/or zooming, clicking/selecting story-scoped UI buttons does not reset camera position/zoom.
-- [ ] Existing recruitment truthfulness and tactical drone select/detail/actionability tests remain green.
-- [ ] Evidence includes before/after notes or screenshot/GIF/video proving pan works in the current player-facing build.
+- [x] On the strategic view, the player can pan the map from the default camera position using the supported player-facing input path.
+- [x] If keyboard pan is supported, WASD and/or arrow keys move the camera visibly within bounds.
+- [x] If pointer drag pan is supported, dragging on non-UI strategic map space moves the camera visibly within bounds.
+- [x] Dragging/panning does not also select a Champion/site/route/node by accident.
+- [x] Panning is clamped to existing map bounds and cannot lose the playable map.
+- [x] Panning is disabled or ignored while tactical view is active.
+- [x] After panning and/or zooming, clicking/selecting story-scoped UI buttons does not reset camera position/zoom.
+- [x] Existing recruitment truthfulness and tactical drone select/detail/actionability tests remain green.
+- [x] Evidence includes before/after notes or screenshot/GIF/video proving pan works in the current player-facing build.
 
 ## Verification requirements
 
@@ -134,4 +134,18 @@ PR must include:
 
 ## Verdict
 
-READY / approved for Unity implementation. This is the only current approved Unity implementation packet.
+DONE / merged. This was the final EPIC-008 closeout repair and no current Unity implementation packet remains active.
+
+
+## Implementation result — 2026-06-25
+
+- Unity PR #77: https://github.com/myriwe-bot/neon-champions-unity/pull/77
+- Reviewed head: `384059151996050fe9e316fd83edb64ae19faf31`
+- Merge commit: `14f1312198958b971d24582302a0ac38d7cef6ae`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191077507
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191824791
+- Unity current-task pointer cleanup PR #78: https://github.com/myriwe-bot/neon-champions-unity/pull/78
+- Pointer cleanup merge commit: `f92ed63c0a8ae61bfbf685aa121b4cd0d15846ec`
+- Pointer cleanup post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28192659752
+
+Closeout decision: EPIC-008 can close. The final reported blocker, strategic-map pan input, has a narrow repair, evidence, exact-head CI, and post-merge main CI.

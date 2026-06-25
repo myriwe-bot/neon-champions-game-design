@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-06-25] fix | STORY-ARMY-006 follow-up review blocker
+
+- Recorded independent review blocker found after STORY-ARMY-006 merge: tactical stack selection could call activation and refresh spent AP / bypass activation limits.
+- Fixed in Unity PR #76, merged as `682e574e014603a340a5b1281e1d3739229b3670`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28186926534
+- Updated ARMY-006 and QA-011 source requirements so the next human playtest checks that tactical re-selection does not restore spent AP or grant extra actionability.
+
 ## [2026-06-25] merge | STORY-ARMY-006 and prepare QA-011 candidate
 
 - Marked `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` DONE / merged after Unity PR #74 merged as `50abc93aa88305c9a89f239de54668e9eb2b1147`.

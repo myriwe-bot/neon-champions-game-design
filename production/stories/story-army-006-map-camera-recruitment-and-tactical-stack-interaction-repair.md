@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-DONE / merged. Unity PR #74 merged as `50abc93aa88305c9a89f239de54668e9eb2b1147`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301. Unity current-task pointer cleanup merged in PR #75 as `5a3692b5c445373eb5bd1ddf4371fe2029a273f0`; post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400.
+DONE / merged. Unity PR #74 merged as `50abc93aa88305c9a89f239de54668e9eb2b1147`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301. Unity current-task pointer cleanup merged in PR #75 as `5a3692b5c445373eb5bd1ddf4371fe2029a273f0`; post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400. Independent review found a tactical selection AP-refresh risk after merge; follow-up PR #76 merged as `682e574e014603a340a5b1281e1d3739229b3670`; post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28186926534.
 
 ## Story type
 
@@ -136,4 +136,4 @@ PR must include:
 
 ## Verdict
 
-DONE / merged. EPIC-008 now needs another human repair-playtest / closeout decision before any new implementation direction is promoted.
+DONE / merged, including follow-up AP-selection fix PR #76. EPIC-008 now needs another human repair-playtest / closeout decision before any new implementation direction is promoted.

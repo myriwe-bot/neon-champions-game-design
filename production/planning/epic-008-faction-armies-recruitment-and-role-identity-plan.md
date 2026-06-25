@@ -210,7 +210,7 @@ Scope target:
 
 Status:
 
-- DONE / merged in Unity PR #74. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301. Unity current-task pointer cleanup merged in PR #75 with post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400.
+- DONE / merged in Unity PR #74. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301. Unity current-task pointer cleanup merged in PR #75 with post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400. Follow-up tactical selection AP fix merged in PR #76 with post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28186926534.
 
 
 ### Slice I — [STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review](../stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md)

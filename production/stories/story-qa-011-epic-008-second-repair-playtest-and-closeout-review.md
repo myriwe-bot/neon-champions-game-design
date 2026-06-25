@@ -44,11 +44,13 @@ As project director, I need to replay the repaired camera/recruitment/tactical-d
 
 - `STORY-ARMY-006` merged in Unity PR #74 with post-merge CI success.
 - Unity README current-task pointer cleanup merged in PR #75 with post-merge CI success.
+- Tactical selection/AP follow-up fix merged in Unity PR #76 with post-merge CI success.
 - Human QA-010 blockers that ARMY-006 was meant to repair:
   - pan/zoom reset after button clicks;
   - recruitment appears available after it stops changing drone count;
   - tactical drones cannot be selected, moved, or utilized;
-  - stack info is not shown on tactical click.
+  - stack info is not shown on tactical click;
+  - follow-up review risk: selecting tactical stacks must not refresh spent AP or bypass turn/activation limits.
 
 ## In scope
 
@@ -59,7 +61,8 @@ As project director, I need to replay the repaired camera/recruitment/tactical-d
   - recruited drone visibility in tactical combat;
   - tactical drone selection;
   - tactical selected-stack detail/status display on click;
-  - tactical drone movement or currently approved actionability.
+  - tactical drone movement or currently approved actionability;
+  - tactical stack re-selection does not refresh spent AP or grant extra actionability.
 - Re-check the broader EPIC-008 proof:
   - army state is understandable;
   - recruitment changes composition clearly;
@@ -92,7 +95,8 @@ As project director, I need to replay the repaired camera/recruitment/tactical-d
 8. Confirm the recruited drone stack appears.
 9. Click/select the drone stack and confirm stack info/details/status appear.
 10. Move or otherwise use the drone stack where current tactical rules allow.
-11. Judge whether army composition is now understandable enough to evaluate gameplay choices.
+11. Re-click/reselect the same drone stack after movement/use and confirm it does not regain spent AP or extra movement/action.
+12. Judge whether army composition is now understandable enough to evaluate gameplay choices.
 
 ## Decision questions
 

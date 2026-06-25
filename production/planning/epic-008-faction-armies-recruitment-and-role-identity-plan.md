@@ -193,7 +193,24 @@ Scope target:
 
 Status:
 
-- READY / approved on 2026-06-25 as the next human repair-playtest closeout gate. No Unity runtime changes are authorized by this QA story.
+- DONE / closeout rejected on 2026-06-25. Human notes: pan/zoom resets after button clicks; recruitment only increases drones once despite appearing available again; tactical drones cannot be selected/moved/utilized; stack info is not shown on tactical click.
+
+
+### Slice H — [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md)
+
+Purpose:
+
+- Repair the QA-010 blockers that still prevent judging army composition after ARMY-005.
+
+Scope target:
+
+- Preserve strategic map pan/zoom across UI button clicks.
+- Make recruitment availability/result truthfulness match the drone fixed-offer behavior.
+- Make recruited tactical drone stacks selectable, inspectable, and usable/movable where current rules allow.
+
+Status:
+
+- READY-candidate / approval pending. No Unity implementation is authorized until explicitly approved.
 
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 

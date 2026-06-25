@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-25
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-25: `STORY-QA-010 approved`. This is the active approved QA/playtest closeout packet after `STORY-ARMY-005` merged. It is not a Unity runtime implementation task.
+DONE / closeout rejected. Human `STORY-QA-010` playtest notes recorded 2026-06-25: map pan/zoom resets after button clicks, recruitment only increases drones once despite appearing available again, tactical drones cannot be selected/moved/utilized, and stack info is not shown on tactical click.
 
 ## Story type
 
@@ -104,10 +104,10 @@ As project director, I need to replay the repaired army/recruitment/tactical-rol
 
 ## Acceptance criteria
 
-- [ ] Human playtest notes explicitly address the ARMY-005 repaired surfaces.
-- [ ] Verdict is recorded as `CLOSE EPIC-008`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`.
-- [ ] If any blocker remains, the blocker is narrowed to one next story candidate rather than a broad polish bucket.
-- [ ] No next implementation story is promoted to READY without explicit human approval.
+- [x] Human playtest notes explicitly address the ARMY-005 repaired surfaces.
+- [x] Verdict is recorded as `REJECT CLOSEOUT`.
+- [x] Blockers are narrowed into one next story candidate: `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair`.
+- [x] No next implementation story is promoted to READY without explicit human approval.
 
 ## Verification requirements
 
@@ -140,6 +140,14 @@ Human-approved decision recorded 2026-06-25:
 - [x] Ambiguity Check status is PASS.
 - [x] Human approval recorded.
 
+## Human playtest notes — 2026-06-25
+
+- Strategic map pan resets to the default position after a button is clicked.
+- Strategic map does not remember location or zoom; this should not happen.
+- Recruitment only increases drones once, even though the action appears available more times.
+- In tactical view, drones cannot be selected, moved, or utilized.
+- Stack info is not shown on click in tactical view.
+
 ## Verdict
 
-READY / approved for human playtest and closeout decision. No Unity runtime implementation is authorized by this story.
+REJECT CLOSEOUT. EPIC-008 remains open. The next recommended packet is `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` as a READY-candidate / approval-pending repair story.

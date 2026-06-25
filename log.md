@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-25] reject | STORY-QA-010 repair closeout playtest
+
+- Recorded human `STORY-QA-010` playtest rejection: strategic pan/zoom resets after button clicks; recruitment only increases drones once even though the action appears available again; tactical drones cannot be selected, moved, or utilized; stack info is not shown on tactical click.
+- Marked `STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review` DONE with verdict `REJECT CLOSEOUT`.
+- Added `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` as READY-candidate / approval pending.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, production index, and guarded Codex prompt. No Unity implementation story is currently READY.
+
 ## [2026-06-25] approve | Promote STORY-QA-010 repair closeout playtest
 
 - Promoted `STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review` to READY / approved after human approval: `STORY-QA-010 approved`.

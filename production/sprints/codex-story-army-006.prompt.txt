@@ -1,0 +1,35 @@
+DO NOT RUN UNTIL STORY-ARMY-006 IS EXPLICITLY APPROVED.
+
+Purpose: Unity implementation handoff for STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair.
+
+Current state:
+- STORY-QA-010 human repair-playtest rejected EPIC-008 closeout.
+- Reported blockers:
+  - pan resets to default after a button is clicked and does not remember location/zoom;
+  - recruitment only increases drones once although the action appears available more times;
+  - in tactical view, drones cannot be selected, moved, or utilized;
+  - stack info is not shown on click in tactical view.
+- STORY-ARMY-006 is READY-candidate / approval pending, not approved.
+
+Stop conditions:
+- Stop unless production/stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md has `status: ready` and `approval: approved`.
+- Do not broaden into new recruitment economy, town/dwelling tree, final strategic map replacement, tactical AI expansion, balance pass, Champion progression, or Intel upgrades.
+- If the existing architecture makes one listed repair impossible without a broader rewrite, stop and report the blocker instead of expanding scope.
+
+If approved, task:
+1. Read the story and source docs.
+2. Create branch `story/STORY-ARMY-006-map-camera-recruitment-tactical-stack-repair` from latest `main`.
+3. Fix strategic pan/zoom persistence across story-scoped UI button clicks.
+4. Fix recruitment availability/result truthfulness for the drone/recruitment path.
+5. Fix tactical drone stack selection, stack details on click, and current approved actionability/movement where rules allow.
+6. Add/repair tests for camera persistence, recruitment consistency, and tactical stack selection/details/actionability where feasible.
+7. Capture evidence under `production/evidence/STORY-ARMY-006/`.
+8. Run required checks/CI locally where available.
+9. Commit and push the actual implementation branch, or clearly explain why pushing was not done.
+
+Output required:
+- Branch name and commit SHA.
+- Files changed.
+- Tests/evidence run.
+- Evidence path.
+- PR URL if opened, or exact reason no PR was opened.

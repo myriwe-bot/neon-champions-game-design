@@ -210,7 +210,24 @@ Scope target:
 
 Status:
 
-- READY / approved on 2026-06-25 as the current Unity implementation repair packet.
+- DONE / merged in Unity PR #74. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301. Unity current-task pointer cleanup merged in PR #75 with post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400.
+
+
+### Slice I — [STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review](../stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md)
+
+Purpose:
+
+- Re-test the camera/recruitment/tactical-drone repairs after ARMY-006 and decide whether EPIC-008 can close.
+
+Scope target:
+
+- Human playtest protocol.
+- Closeout verdict: close epic, one narrow follow-up, or reject closeout.
+- No Unity runtime changes.
+
+Status:
+
+- READY-candidate / approval pending. Recommended next step before a new gameplay epic.
 
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 

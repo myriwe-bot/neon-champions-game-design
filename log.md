@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-25] merge | STORY-ARMY-006 and prepare QA-011 candidate
+
+- Marked `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` DONE / merged after Unity PR #74 merged as `50abc93aa88305c9a89f239de54668e9eb2b1147`.
+- Verified STORY-ARMY-006 exact-head CI and post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301
+- Cleared the Unity README current-task pointer via PR #75, merged as `5a3692b5c445373eb5bd1ddf4371fe2029a273f0`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400
+- Added `STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review` as READY-candidate / approval pending; no Unity implementation task is currently READY.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index for the second-repair-merged / awaiting-human-replaytest state.
+
 ## [2026-06-25] approve | Promote STORY-ARMY-006 repair implementation
 
 - Promoted `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` to READY / approved after human approval: `Approved`.

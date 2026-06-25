@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-25
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-25: `Approved` in response to the `STORY-ARMY-006` recommendation. This is the active approved Unity implementation packet.
+DONE / merged. Unity PR #74 merged as `50abc93aa88305c9a89f239de54668e9eb2b1147`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301. Unity current-task pointer cleanup merged in PR #75 as `5a3692b5c445373eb5bd1ddf4371fe2029a273f0`; post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400.
 
 ## Story type
 
@@ -78,15 +78,15 @@ Human `STORY-QA-010` notes recorded 2026-06-25:
 
 ## Acceptance criteria
 
-- [ ] After the player pans and/or zooms the strategic map, clicking story-scoped UI buttons does not reset the map to its default pan/zoom.
-- [ ] Recruitment UI cannot advertise a repeatable action that no longer changes the army.
-- [ ] If recruitment remains available more than once, each successful use visibly updates the exact relevant stack count.
-- [ ] If recruitment is one-time/consumed, the UI makes that consumed/unavailable state visible and prevents misleading repeat activation.
-- [ ] A recruited drone stack appears in tactical combat when recruited before battle.
-- [ ] The recruited drone stack can be selected by the player in tactical view.
-- [ ] Clicking/selecting the recruited drone stack shows stack info/details/status.
-- [ ] The recruited drone stack can be moved or otherwise use its currently approved tactical role/action when action rules allow.
-- [ ] Evidence includes before/after notes or screenshots/GIF/video proving camera persistence, recruitment truthfulness, and tactical drone select/details/actionability.
+- [x] After the player pans and/or zooms the strategic map, clicking story-scoped UI buttons does not reset the map to its default pan/zoom.
+- [x] Recruitment UI cannot advertise a repeatable action that no longer changes the army.
+- [x] If recruitment remains available more than once, each successful use visibly updates the exact relevant stack count, or the offer is consumed/disabled.
+- [x] If recruitment is one-time/consumed, the UI makes that consumed/unavailable state visible and prevents misleading repeat activation.
+- [x] A recruited drone stack appears in tactical combat when recruited before battle.
+- [x] The recruited drone stack can be selected by the player in tactical view.
+- [x] Clicking/selecting the recruited drone stack shows stack info/details/status.
+- [x] The recruited drone stack can be moved or otherwise use its currently approved tactical role/action when action rules allow.
+- [x] Evidence includes before/after notes or screenshots/GIF/video proving camera persistence, recruitment truthfulness, and tactical drone select/details/actionability.
 
 ## Verification requirements
 
@@ -136,4 +136,4 @@ PR must include:
 
 ## Verdict
 
-READY / approved for Unity implementation. This is the only current approved Unity implementation packet.
+DONE / merged. EPIC-008 now needs another human repair-playtest / closeout decision before any new implementation direction is promoted.

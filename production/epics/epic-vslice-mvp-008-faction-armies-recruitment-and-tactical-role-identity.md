@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-CLOSEOUT REJECTED AGAIN / REPAIR STORY READY. Human `STORY-QA-010` playtest on 2026-06-25 rejected closeout because map camera state, recruitment truthfulness, and tactical drone stack interaction still block judging army composition. `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` is READY / approved as the current repair packet.
+SECOND REPAIR MERGED / AWAITING HUMAN RE-PLAYTEST. Human `STORY-QA-010` playtest on 2026-06-25 rejected closeout because map camera state, recruitment truthfulness, and tactical drone stack interaction still blocked judging army composition. `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` is now DONE / merged; `STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review` is READY-candidate for the next human decision gate.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -160,7 +160,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-QA-009 EPIC-008 Playtest and Closeout Review](../stories/story-qa-009-epic-008-playtest-and-closeout-review.md) | DONE / merged; superseded by human playtest rejection | QA + Playability Review | implementation slices DONE | Unity PR #70, exact-head CI, post-merge CI, `CLOSE EPIC` recommendation later rejected by human playtest |
 | [STORY-ARMY-005 Army, Recruitment, and Map Readability Repair](../stories/story-army-005-army-recruitment-and-map-readability-repair.md) | DONE / merged | UI + Playability Repair | QA-009 DONE + human playtest rejection | Unity PR #72, exact-head CI, post-merge CI, PNG evidence; pointer cleanup PR #73 |
 | [STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review](../stories/story-qa-010-epic-008-repair-playtest-and-closeout-review.md) | DONE / closeout rejected | QA + Human Playtest | ARMY-005 DONE | Human notes: pan/zoom reset, misleading recruitment availability, tactical drones unusable/no stack info |
-| [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md) | READY / approved | UI + Playability Repair | QA-010 DONE / rejected | Current approved repair packet |
+| [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md) | DONE / merged | UI + Playability Repair | QA-010 DONE / rejected | Unity PR #74, exact-head CI, post-merge CI, evidence; pointer cleanup PR #75 |
+| [STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review](../stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md) | READY-candidate / approval pending | QA + Human Playtest | ARMY-006 DONE | Proposed next closeout decision gate; no Unity runtime changes |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -214,7 +215,7 @@ Human playtest rejected the previous `CLOSE EPIC` recommendation. Blocking compl
 - Recruitment/dwellings only say “recruited” and do not explain unit type/count/cost/future dwelling model.
 - Tactical roles and stack differences are invisible.
 
-EPIC-008 cannot close until the QA-010 blockers are repaired or explicitly accepted by the human. Current blockers:
+EPIC-008 cannot close until the merged ARMY-006 repair is human-playtested and the human accepts the army/recruitment/composition proof or explicitly accepts remaining risk. QA-010 blockers addressed by ARMY-006 were:
 
 - pan/zoom resets after UI button clicks;
 - recruitment availability misleads after drone count increases only once;
@@ -244,4 +245,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-CLOSEOUT REJECTED AGAIN. `STORY-QA-010` is DONE with a `REJECT CLOSEOUT` verdict. `STORY-ARMY-006` is READY / approved as the current Unity implementation repair packet.
+SECOND REPAIR MERGED / AWAITING HUMAN RE-PLAYTEST. `STORY-ARMY-006` is DONE / merged and the Unity current-task pointer is cleared. No new Unity implementation story is READY. Recommended next step is `STORY-QA-011` as a human repair-playtest closeout gate.

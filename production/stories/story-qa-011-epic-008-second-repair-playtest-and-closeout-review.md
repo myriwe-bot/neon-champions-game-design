@@ -1,0 +1,154 @@
+---
+title: STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review
+type: story
+status: ready-candidate
+phase: production
+owner: shared
+created: 2026-06-25
+updated: 2026-06-25
+source_lore: [greenland, qxz-meridian, white-sky]
+related:
+  [
+    production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity,
+    production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan,
+    production/stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair,
+    production/stories/story-qa-010-epic-008-repair-playtest-and-closeout-review,
+    design/gdd/strategic-map,
+    design/gdd/tactical-combat,
+    design/gdd/faction-unit-rosters,
+    docs/architecture/testing-strategy,
+    docs/architecture/ci-build-automation,
+  ]
+approval: pending
+---
+
+# STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review
+
+## Status
+
+READY-candidate / approval pending. This is the proposed next human playtest after `STORY-ARMY-006` merged. It is not a Unity runtime implementation task until explicitly approved.
+
+## Story type
+
+QA / Human Playtest / Closeout Decision.
+
+## Parent epic
+
+- [EPIC-VSLICE-MVP-008 Faction Armies, Recruitment, and Tactical Role Identity](../epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md)
+
+## User/player/system value
+
+As project director, I need to replay the repaired camera/recruitment/tactical-drone loop and decide whether EPIC-008 can close, needs one final narrow repair, or remains too unclear to judge.
+
+## Source requirements
+
+- `STORY-ARMY-006` merged in Unity PR #74 with post-merge CI success.
+- Unity README current-task pointer cleanup merged in PR #75 with post-merge CI success.
+- Human QA-010 blockers that ARMY-006 was meant to repair:
+  - pan/zoom reset after button clicks;
+  - recruitment appears available after it stops changing drone count;
+  - tactical drones cannot be selected, moved, or utilized;
+  - stack info is not shown on tactical click.
+
+## In scope
+
+- Human playtest instructions for current Unity `main` after ARMY-006.
+- Review of the exact repaired surfaces:
+  - strategic pan/zoom persistence after UI button clicks;
+  - recruitment consumed/unavailable truthfulness or repeatable real count increase;
+  - recruited drone visibility in tactical combat;
+  - tactical drone selection;
+  - tactical selected-stack detail/status display on click;
+  - tactical drone movement or currently approved actionability.
+- Re-check the broader EPIC-008 proof:
+  - army state is understandable;
+  - recruitment changes composition clearly;
+  - composition can be inspected in tactical combat;
+  - unit/stack roles are understandable enough to judge whether composition matters.
+- Closeout verdict with one of:
+  - `CLOSE EPIC-008`;
+  - `ONE NARROW FOLLOW-UP`;
+  - `REJECT CLOSEOUT`.
+- If a follow-up is needed, identify exactly one dominant blocker category and preserve the human complaint text.
+- If EPIC-008 closes, choose the next implementation direction only as a human decision; do not promote a new implementation story automatically.
+
+## Out of scope
+
+- No Unity runtime, test, scene, prefab, asset, package, or ProjectSettings changes.
+- No new recruitment economy, town/dwelling system, unit upgrades, balance pass, tactical AI expansion, Champion progression, Intel upgrades, or realistic strategic-map replacement.
+- No next-epic implementation story promotion without explicit human approval.
+
+## Playtest protocol
+
+1. Pull latest `main` in both repos.
+2. Open Unity and play the current strategic map loop.
+3. Pan and zoom the strategic map away from default.
+4. Click/select story-scoped UI buttons: Champion, route/node, recruitment site, recruitment action, tactical entry/interact where available.
+5. Confirm pan/zoom persists unless using an explicit focus/zoom control.
+6. Recruit drones and check whether the UI is truthful:
+   - repeat use actually increases the relevant stack count; or
+   - the offer becomes visibly consumed/unavailable after use.
+7. Enter tactical combat after recruitment.
+8. Confirm the recruited drone stack appears.
+9. Click/select the drone stack and confirm stack info/details/status appear.
+10. Move or otherwise use the drone stack where current tactical rules allow.
+11. Judge whether army composition is now understandable enough to evaluate gameplay choices.
+
+## Decision questions
+
+1. EPIC-008 verdict:
+   - A. Close EPIC-008 now.
+   - B. One narrow follow-up before closing.
+   - C. Reject closeout; the loop is still too unclear to judge.
+2. If B or C, choose the single dominant blocker:
+   - A. Strategic camera / map focus still unstable.
+   - B. Recruitment availability/result is still misleading.
+   - C. Tactical drone selection/details/actionability still fails.
+   - D. Broader army composition readability is still insufficient.
+   - E. Composition consequences are still not visible enough.
+3. If A, choose next direction for a later story packet:
+   - A. Champion Assets / Operations deeper identity layer.
+   - B. Intel / upgrades.
+   - C. Deeper tactical systems.
+   - D. Strategic economy / bases / realistic-map direction.
+
+## Acceptance criteria
+
+- [ ] Human playtest notes explicitly address the ARMY-006 repaired surfaces.
+- [ ] Verdict is recorded as `CLOSE EPIC-008`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`.
+- [ ] If any blocker remains, the blocker is narrowed to one next story candidate rather than a broad polish bucket.
+- [ ] No next implementation story is promoted to READY without explicit human approval.
+
+## Verification requirements
+
+- Human playtest notes required.
+- Unity CI evidence is inherited from ARMY-006 and pointer cleanup; no new Unity code evidence is required unless this story is later converted into a Codex QA-review task.
+- Design-control updates required after the human verdict.
+
+## Ambiguity Check
+
+Status: PASS for READY-candidate.
+
+Open human decision:
+
+- Approve this QA/playtest closeout packet as the next step, or give direct playtest verdict in chat and skip a formal Codex QA story.
+
+## Branch / PR requirements
+
+- No Unity branch is authorized by this story as written.
+- If later promoted to a Codex QA-review packet, branch name should be `story/STORY-QA-011-epic-008-second-repair-playtest-closeout-review` and runtime changes remain out of scope.
+
+## Story readiness gate
+
+- [x] Story has stable ID, title, type, status, and parent epic.
+- [x] User/player/system value is clear.
+- [x] Exact source authority is linked.
+- [x] In-scope and out-of-scope are bounded.
+- [x] Acceptance criteria are observable.
+- [x] Verification requirements are defined.
+- [x] Ambiguity Check status is PASS for candidate.
+- [ ] Human approval recorded.
+
+## Verdict
+
+READY-candidate / approval pending. Recommended next step is human playtest using this protocol before choosing any new implementation direction.

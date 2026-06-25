@@ -1,0 +1,23 @@
+DO NOT RUN AS A UNITY IMPLEMENTATION PROMPT UNTIL STORY-QA-011 IS EXPLICITLY APPROVED.
+
+Purpose: QA/playtest closeout packet for EPIC-008 after STORY-ARMY-006 merged.
+
+Current state:
+- STORY-ARMY-006 merged in Unity PR #74 as 50abc93aa88305c9a89f239de54668e9eb2b1147.
+- STORY-ARMY-006 post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28184379301.
+- Unity README current-task pointer cleanup merged in PR #75 as 5a3692b5c445373eb5bd1ddf4371fe2029a273f0.
+- Pointer cleanup post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28185218400.
+- No READY Unity implementation story is active.
+
+Stop conditions:
+- Do not modify Unity runtime, tests, scenes, prefabs, assets, packages, or ProjectSettings.
+- Do not create a Unity implementation branch.
+- Do not promote a next implementation story to READY unless the human explicitly approves that exact packet.
+
+Task if approved:
+1. Read production/stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md.
+2. Read STORY-ARMY-006 evidence in the Unity repo.
+3. Prepare a concise human playtest / closeout brief using the story protocol.
+4. After the human supplies verdict notes, update source-of-truth docs accordingly.
+
+Output: playtest instructions and decision questions only, unless the human has already supplied the playtest verdict.

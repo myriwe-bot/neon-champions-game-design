@@ -69,6 +69,7 @@ related:
     production/stories/story-army-005-army-recruitment-and-map-readability-repair,
     production/stories/story-qa-010-epic-008-repair-playtest-and-closeout-review,
     production/stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair,
+    production/stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review,
   ]
 approval: approved
 ---
@@ -77,15 +78,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair`.
+**Current READY / approved Unity implementation packet:** none. `STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review` is READY-candidate / approval pending as the next human decision gate.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is READY / approved as the current Unity implementation story.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is a READY-candidate / approval-pending repair-playtest closeout packet; no Unity implementation story is READY.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current Unity implementation prompt file: `production/sprints/codex-story-army-006.prompt.txt`. Historical prompt files remain for audit only.
+Current implementation prompt file: none. Historical prompt files remain for audit only. Candidate QA/playtest prompt: `production/sprints/codex-story-qa-011.prompt.txt` must not be run until approved.
 
 ## Windows PowerShell preflight
 
@@ -106,11 +107,11 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-Current approved Unity implementation prompt:
+No Unity implementation prompt is currently READY / approved.
 
-- `production/sprints/codex-story-army-006.prompt.txt`
+`STORY-ARMY-006` has merged. The next recommended step is human playtest / closeout using `STORY-QA-011`, which is only READY-candidate / approval pending.
 
-Codex may implement only `STORY-ARMY-006` scope. It must stop rather than broaden into new recruitment economy, final map replacement, tactical AI expansion, balance, Champion progression, or Intel upgrades.
+If a Codex agent is asked to implement from this state, it must stop until a specific Unity implementation story is explicitly promoted to READY / approved.
 
 ## Historical prompt-file runs
 
@@ -170,7 +171,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current prompt-file run:
 
-- `production/sprints/codex-story-army-006.prompt.txt`
+- None. `production/sprints/codex-story-qa-011.prompt.txt` is candidate / approval pending and must not be run as an implementation prompt.
 
 Historical decision-brief prompt-file run:
 
@@ -178,4 +179,4 @@ Historical decision-brief prompt-file run:
 
 ## After Codex finishes
 
-Codex Unity implementation is authorized for `STORY-ARMY-006` only. After Codex finishes, verify the remote implementation branch/PR before review.
+No Codex implementation is currently authorized. Next human action is to playtest the ARMY-006 repaired loop and answer the STORY-QA-011 closeout questions.

@@ -76,15 +76,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. `STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review` is READY-candidate / approval pending as the next human decision gate.
+**Current READY / approved Unity implementation packet:** none. **Current approved QA/playtest packet:** `STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is a READY-candidate / approval-pending repair-playtest closeout packet; no Unity implementation story is READY.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is READY / approved as the repair-playtest closeout packet; no Unity implementation story is READY.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Historical prompt files remain for audit only. Candidate QA/playtest prompt: `production/sprints/codex-story-qa-010.prompt.txt` must not be run until approved.
+Current Unity implementation prompt file: none. Current approved QA/playtest prompt file: `production/sprints/codex-story-qa-010.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -107,9 +107,9 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 No Unity implementation prompt is currently READY / approved.
 
-`STORY-ARMY-005` has merged. The next recommended step is human playtest / closeout using `STORY-QA-010`, which is only READY-candidate / approval pending.
+`STORY-ARMY-005` has merged. The current approved step is human playtest / closeout using `STORY-QA-010`.
 
-If a Codex agent is asked to implement from this state, it must stop until a specific Unity implementation story is explicitly promoted to READY / approved.
+If a Codex agent is asked to implement Unity runtime changes from this state, it must stop until a specific Unity implementation story is explicitly promoted to READY / approved.
 
 ## Historical prompt-file runs
 
@@ -169,7 +169,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current prompt-file run:
 
-- None. `production/sprints/codex-story-qa-010.prompt.txt` is candidate / approval pending and must not be run as an implementation prompt.
+- `production/sprints/codex-story-qa-010.prompt.txt` — approved QA/playtest closeout prompt; not a Unity implementation prompt.
 
 Historical decision-brief prompt-file run:
 
@@ -177,4 +177,4 @@ Historical decision-brief prompt-file run:
 
 ## After Codex finishes
 
-No Codex implementation is currently authorized. Next human action is to playtest the ARMY-005 repaired loop and answer the STORY-QA-010 closeout questions.
+No Codex Unity implementation is currently authorized. Next human action is to playtest the ARMY-005 repaired loop and answer the STORY-QA-010 closeout questions.

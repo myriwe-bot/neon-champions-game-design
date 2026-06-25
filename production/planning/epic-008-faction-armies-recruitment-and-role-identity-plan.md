@@ -193,7 +193,7 @@ Scope target:
 
 Status:
 
-- READY-candidate / approval pending. Recommended next step before a new gameplay epic.
+- READY / approved on 2026-06-25 as the next human repair-playtest closeout gate. No Unity runtime changes are authorized by this QA story.
 
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 

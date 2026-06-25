@@ -112,7 +112,7 @@
 - [[production/stories/story-army-004-composition-consequence-scenario]] — DONE / merged EPIC-008 packet for composition consequence scenario.
 - [[production/stories/story-qa-009-epic-008-playtest-and-closeout-review]] — DONE / merged EPIC-008 closeout review packet; later superseded by human playtest rejection.
 - [[production/stories/story-army-005-army-recruitment-and-map-readability-repair]] — DONE / merged repair packet for army, recruitment, tactical stack, and map readability.
-- [[production/stories/story-qa-010-epic-008-repair-playtest-and-closeout-review]] — READY-candidate / approval-pending repair playtest closeout.
+- [[production/stories/story-qa-010-epic-008-repair-playtest-and-closeout-review]] — READY / approved repair playtest closeout.
 - [[production/planning/strategic-map-realism-brief-2026-06-25]] — DRAFT / design-only realistic strategic map brief.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.

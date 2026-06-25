@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-06-25] approve | Promote STORY-QA-010 repair closeout playtest
+
+- Promoted `STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review` to READY / approved after human approval: `STORY-QA-010 approved`.
+- Recorded that QA-010 authorizes human playtest and closeout decision only; no Unity runtime changes or new implementation branch are authorized.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, production index, story frontmatter, and QA prompt.
+
 ## [2026-06-25] merge | STORY-ARMY-005 and prepare QA-010 candidate
 
 - Marked `STORY-ARMY-005 Army, Recruitment, and Map Readability Repair` DONE / merged after Unity PR #72 merged as `5adb88b1fb0d2733609d526a8d3a8c53d3e23b9a`.

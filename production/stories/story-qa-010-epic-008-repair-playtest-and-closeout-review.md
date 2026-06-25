@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-25
@@ -19,14 +19,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed next story after `STORY-ARMY-005` merged. It is not a Unity runtime implementation task until explicitly approved.
+READY / approved. Human approval recorded 2026-06-25: `STORY-QA-010 approved`. This is the active approved QA/playtest closeout packet after `STORY-ARMY-005` merged. It is not a Unity runtime implementation task.
 
 ## Story type
 
@@ -117,11 +117,12 @@ As project director, I need to replay the repaired army/recruitment/tactical-rol
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate.
+Status: PASS.
 
-Open human decision:
+Human-approved decision recorded 2026-06-25:
 
-- Approve this QA/playtest closeout packet as the next step, or give direct playtest verdict in chat and skip a formal Codex QA story.
+- `STORY-QA-010` is approved as the next EPIC-008 repair-playtest / closeout decision gate.
+- Approval does not authorize Unity runtime changes or a new implementation branch.
 
 ## Branch / PR requirements
 
@@ -136,9 +137,9 @@ Open human decision:
 - [x] In-scope and out-of-scope are bounded.
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
-- [x] Ambiguity Check status is PASS for candidate.
-- [ ] Human approval recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval recorded.
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next step is human playtest using this protocol before choosing any new implementation direction.
+READY / approved for human playtest and closeout decision. No Unity runtime implementation is authorized by this story.

@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-18
-updated: 2026-06-19
+updated: 2026-06-25
 related:
   - production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity
   - production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed
@@ -156,7 +156,37 @@ Possible next directions after closeout:
 
 Status:
 
-- DONE / merged in Unity PR #70. Verdict: `CLOSE EPIC`; no true blocker found. Next-epic options remain human decision options only.
+- DONE / merged in Unity PR #70. Original verdict recommended `CLOSE EPIC`, but human playtest on 2026-06-25 rejected closeout because army/recruitment/tactical-role readability remains too poor to judge composition.
+
+### Slice F — [STORY-ARMY-005 Army, Recruitment, and Map Readability Repair](../stories/story-army-005-army-recruitment-and-map-readability-repair.md)
+
+Purpose:
+
+- Repair the failed human playtest closeout by making army state, recruitment results, tactical stack identity, and map focus readable enough to judge EPIC-008.
+
+Scope target:
+
+- Selected-Champion bottom hero bar on the strategic map.
+- Hero name/class/level placeholders where needed.
+- Army stack slots with unit names, counts, and role hints.
+- HoMM3 Tier-1-style fixed recruitment clarity for the prototype while preserving future dwelling extensibility.
+- Compact tactical stack labels always visible, details on select.
+- Strategic map panning/scrolling.
+- Small objective contrast repair if directly tied to readability.
+
+Status:
+
+- READY / approved on 2026-06-25 after human playtest rejected closeout.
+
+### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
+
+Purpose:
+
+- Start deciding what a more realistic map means without authorizing map replacement implementation inside ARMY-005.
+
+Status:
+
+- DRAFT / design-only.
 
 ## MVP roster seed
 

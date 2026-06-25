@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-25] approve | STORY-ARMY-005 repair after EPIC-008 closeout rejection
+
+- Recorded human playtest rejection of EPIC-008 closeout: army/recruitment/tactical-role readability is too poor to judge composition, UI is cluttered, top objective contrast is poor, and the strategic map needs panning.
+- Added and promoted `STORY-ARMY-005 Army, Recruitment, and Map Readability Repair` to READY / approved.
+- Recorded approved scope: selected-Champion bottom hero bar, fixed Tier-1-style recruitment clarity while preserving future dwelling types, compact tactical labels plus details on select, map panning, and small objective contrast repair if directly tied to readability.
+- Added design-only `production/planning/strategic-map-realism-brief-2026-06-25.md`; realistic map replacement is not authorized by ARMY-005.
+- Added runnable Codex prompt `production/sprints/codex-story-army-005.prompt.txt` and updated EPIC-008, the EPIC-008 plan, run prompts, and index.
+
 ## [2026-06-24] merge | STORY-QA-009 and prepare next-direction brief
 
 - Marked `STORY-QA-009 EPIC-008 Playtest and Closeout Review` DONE / merged after Unity PR #70 and post-merge Unity Foundation CI passed.

@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-19
+updated: 2026-06-25
 source_lore: []
 related:
   [
@@ -66,6 +66,7 @@ related:
     production/stories/story-army-003-fixed-recruitment-offers-and-army-summary,
     production/stories/story-army-004-composition-consequence-scenario,
     production/stories/story-qa-009-epic-008-playtest-and-closeout-review,
+    production/stories/story-army-005-army-recruitment-and-map-readability-repair,
   ]
 approval: approved
 ---
@@ -74,15 +75,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. `STORY-QA-009` merged and recommends `CLOSE EPIC`; the next step is a guarded human decision brief for the next epic/story direction.
+**Current READY / approved Unity implementation packet:** `STORY-ARMY-005 Army, Recruitment, and Map Readability Repair`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, and `STORY-QA-009` are DONE / merged. EPIC-008 closeout recommends `CLOSE EPIC`; no new Unity implementation packet is active.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, and `STORY-QA-009` are DONE / merged. Human playtest rejected EPIC-008 closeout; `STORY-ARMY-005` is READY / approved as the repair packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded decision-brief prompt file: `production/sprints/codex-next-epic-direction-brief.prompt.txt`. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-army-005.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -101,9 +102,9 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current guarded decision-brief prompt
+## Current READY implementation prompt
 
-No Unity implementation story is currently approved. To prepare the next human decision brief only, use:
+`STORY-ARMY-005` is READY / approved. To run Codex:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -114,7 +115,7 @@ cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git checkout main
 git pull --ff-only origin main
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-epic-direction-brief.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-005.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -129,11 +130,11 @@ cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git checkout main
 git pull --ff-only origin main
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-epic-direction-brief.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-army-005.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
 
-The guarded decision brief must not create a Unity branch or modify runtime code. It may only summarize next-direction options until the human approves a specific next story.
+The parallel realistic-map brief is design-only and does not authorize map replacement implementation.
 
 ## Historical prompt-file runs
 
@@ -189,15 +190,16 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-army-002.prompt.txt`
 - `production/sprints/codex-story-army-003.prompt.txt`
 - `production/sprints/codex-story-army-004.prompt.txt`
+- `production/sprints/codex-story-qa-009.prompt.txt`
 
-Current guarded decision-brief prompt-file run:
+Current prompt-file run:
+
+- `production/sprints/codex-story-army-005.prompt.txt`
+
+Historical decision-brief prompt-file run:
 
 - `production/sprints/codex-next-epic-direction-brief.prompt.txt`
 
-Historical prompt-file run:
-
-- `production/sprints/codex-story-qa-009.prompt.txt`
-
 ## After Codex finishes
 
-The next-direction brief must produce decision options only. Do not run Unity implementation until a new story is explicitly promoted to READY / approved.
+Verify that Codex committed and pushed the actual implementation branch, then review the PR against `STORY-ARMY-005` acceptance criteria and evidence requirements.

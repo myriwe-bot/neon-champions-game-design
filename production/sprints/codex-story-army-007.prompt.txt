@@ -1,6 +1,4 @@
-DO NOT RUN UNTIL STORY-ARMY-007 IS EXPLICITLY APPROVED AND PROMOTED TO READY.
-
-Purpose: narrow Unity repair for `STORY-ARMY-007 Strategic Map Pan Input Repair`.
+Purpose: approved narrow Unity repair for `STORY-ARMY-007 Strategic Map Pan Input Repair`.
 
 Human playtest authority:
 - "The pan is now not working at all. Otherwise, it seems to look better."
@@ -8,9 +6,9 @@ Human playtest authority:
 Current state:
 - STORY-ARMY-006 and follow-up PR #76 are merged and green.
 - STORY-QA-011 closeout cannot pass while strategic pan is dead.
-- This prompt is guarded until approval.
+- STORY-ARMY-007 is READY / approved.
 
-If approved later, Codex must:
+Codex must:
 1. Read `production/stories/story-army-007-strategic-map-pan-input-repair.md` in the game-design repo.
 2. Work in Unity repo branch `story/STORY-ARMY-007-strategic-map-pan-input-repair` from latest `origin/main`.
 3. Restore actual player-facing strategic-map pan input on the strategic view.
@@ -19,6 +17,10 @@ If approved later, Codex must:
 6. Add PlayMode/integration coverage for the real input-driven pan path where feasible, plus regression coverage for camera persistence.
 7. Add evidence under `production/evidence/STORY-ARMY-007/`.
 8. Commit and push the implementation branch, or clearly explain why it stopped without pushing.
+
+Preflight:
+- Confirm story frontmatter says `status: ready` and `approval: approved`.
+- If not, stop.
 
 Hard stop conditions:
 - Do not change recruitment rules, tactical stack rules, tactical AI, rosters, balance, Champion progression, Intel upgrades, assets, packages, or ProjectSettings.

@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-007 Strategic Map Pan Input Repair
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-25
@@ -17,16 +17,16 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-ARMY-007 Strategic Map Pan Input Repair
 
 ## Status
 
-READY-candidate / approval pending. Human playtest note recorded 2026-06-25 after ARMY-006 + PR #76: `The pan is now not working at all. Otherwise, it seems to look better.`
+READY / approved. Human approval recorded 2026-06-25: `Approved` in response to the `STORY-ARMY-007` recommendation. Human playtest note recorded 2026-06-25 after ARMY-006 + PR #76: `The pan is now not working at all. Otherwise, it seems to look better.`
 
-This is the proposed single narrow follow-up before EPIC-008 closeout can be reconsidered.
+This is the current approved Unity implementation packet.
 
 ## Story type
 
@@ -104,7 +104,7 @@ Approved defaults for human review:
 
 Open human decision:
 
-- Approve this narrow pan-input repair packet, or provide a different intended pan affordance if keyboard/drag defaults are wrong.
+- Resolved 2026-06-25: approved as the narrow pan-input repair packet. Default pan affordances stand: keyboard pan must work; pointer drag may be added if needed for player-facing pan discoverability.
 
 ## Branch / PR requirements
 
@@ -130,8 +130,8 @@ PR must include:
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
 - [x] Ambiguity Check status is PASS for candidate.
-- [ ] Human approval recorded.
+- [x] Human approval recorded.
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended as the next and only implementation repair before another EPIC-008 closeout attempt.
+READY / approved for Unity implementation. This is the only current approved Unity implementation packet.

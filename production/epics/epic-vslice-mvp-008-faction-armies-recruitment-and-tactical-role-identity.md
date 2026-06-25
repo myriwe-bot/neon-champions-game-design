@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-PAN INPUT BLOCKER / ONE NARROW FOLLOW-UP. Human `STORY-QA-011` playtest after ARMY-006 + PR #76 reported: `The pan is now not working at all. Otherwise, it seems to look better.` `STORY-ARMY-007 Strategic Map Pan Input Repair` is READY-candidate / approval pending as the narrow follow-up. No Unity implementation story is READY until approved.
+PAN INPUT REPAIR APPROVED. Human `STORY-QA-011` playtest after ARMY-006 + PR #76 reported: `The pan is now not working at all. Otherwise, it seems to look better.` `STORY-ARMY-007 Strategic Map Pan Input Repair` is READY / approved as the current narrow Unity implementation packet.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -162,7 +162,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review](../stories/story-qa-010-epic-008-repair-playtest-and-closeout-review.md) | DONE / closeout rejected | QA + Human Playtest | ARMY-005 DONE | Human notes: pan/zoom reset, misleading recruitment availability, tactical drones unusable/no stack info |
 | [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md) | DONE / merged | UI + Playability Repair | QA-010 DONE / rejected | Unity PR #74, exact-head CI, post-merge CI, evidence; pointer cleanup PR #75; follow-up AP-selection fix PR #76 |
 | [STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review](../stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md) | DONE / one narrow follow-up | QA + Human Playtest | ARMY-006 DONE | Human note: pan not working at all; otherwise looks better |
-| [STORY-ARMY-007 Strategic Map Pan Input Repair](../stories/story-army-007-strategic-map-pan-input-repair.md) | READY-candidate / approval pending | Input + Playability Repair | QA-011 DONE / one narrow follow-up | Proposed narrow pan-only repair; no Unity implementation authority yet |
+| [STORY-ARMY-007 Strategic Map Pan Input Repair](../stories/story-army-007-strategic-map-pan-input-repair.md) | READY / approved | Input + Playability Repair | QA-011 DONE / one narrow follow-up | Current approved Unity implementation packet |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -246,4 +246,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-PAN INPUT BLOCKER / ONE NARROW FOLLOW-UP. `STORY-QA-011` recorded a human closeout blocker: pan is now not working at all, while the rest looks better. `STORY-ARMY-007` is READY-candidate / approval pending as the narrow repair. No Unity implementation story is READY until approved.
+PAN INPUT REPAIR APPROVED. `STORY-QA-011` recorded a human closeout blocker: pan is now not working at all, while the rest looks better. `STORY-ARMY-007` is READY / approved as the current narrow Unity implementation packet.

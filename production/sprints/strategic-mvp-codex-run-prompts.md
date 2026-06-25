@@ -79,15 +79,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. `STORY-ARMY-007 Strategic Map Pan Input Repair` is READY-candidate / approval pending as the proposed narrow follow-up for the pan input blocker.
+**Current READY / approved Unity implementation packet:** `STORY-ARMY-007 Strategic Map Pan Input Repair`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is READY-candidate / approval pending; no Unity implementation story is READY.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is READY / approved as the current Unity implementation story.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Historical prompt files remain for audit only. Candidate implementation prompt: `production/sprints/codex-story-army-007.prompt.txt` must not be run until approved and promoted to READY.
+Current implementation prompt file: none. Historical prompt files remain for audit only. Current implementation prompt: `production/sprints/codex-story-army-007.prompt.txt`.
 
 ## Windows PowerShell preflight
 
@@ -108,11 +108,11 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-No Unity implementation prompt is currently READY / approved.
+Current approved Unity implementation prompt:
 
-`STORY-QA-011` recorded a pan-input blocker. The next recommended step is `STORY-ARMY-007`, which is only READY-candidate / approval pending.
+- `production/sprints/codex-story-army-007.prompt.txt`
 
-If a Codex agent is asked to implement from this state, it must stop until `STORY-ARMY-007` or another specific Unity implementation story is explicitly promoted to READY / approved.
+Codex may implement only `STORY-ARMY-007` scope. It must stop rather than broaden into recruitment, tactical rules, map replacement, camera framework redesign, tactical AI, balance, Champion progression, or Intel upgrades.
 
 ## Historical prompt-file runs
 
@@ -172,7 +172,7 @@ Historical prompt-file runs are retained in this folder for audit only:
 
 Current prompt-file run:
 
-- None. `production/sprints/codex-story-army-007.prompt.txt` is candidate / approval pending and must not be run as an implementation prompt.
+- `production/sprints/codex-story-army-007.prompt.txt`
 
 Historical decision-brief prompt-file run:
 
@@ -180,4 +180,4 @@ Historical decision-brief prompt-file run:
 
 ## After Codex finishes
 
-No Codex implementation is currently authorized. Next human action is to approve or revise `STORY-ARMY-007` as the narrow pan-input repair.
+Codex Unity implementation is authorized for `STORY-ARMY-007` only. After Codex finishes, verify the remote implementation branch/PR before review.

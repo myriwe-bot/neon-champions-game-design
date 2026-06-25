@@ -244,7 +244,7 @@ Scope target:
 
 Status:
 
-- READY-candidate / approval pending. Recommended as one narrow follow-up before another closeout attempt.
+- READY / approved. Current Unity implementation packet.
 
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 

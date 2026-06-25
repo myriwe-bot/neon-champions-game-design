@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-06-25] approval | STORY-ARMY-007 pan input repair
+
+- Human approved `STORY-ARMY-007 Strategic Map Pan Input Repair` with: "Approved".
+- Promoted STORY-ARMY-007 to READY / approved as the current Unity implementation packet.
+- Activated prompt `production/sprints/codex-story-army-007.prompt.txt` and repointed run-prompt instructions to ARMY-007 only.
+
 ## [2026-06-25] playtest | QA-011 pan input blocker
 
 - Recorded human playtest note after ARMY-006 + PR #76: "The pan is now not working at all. Otherwise, it seems to look better."

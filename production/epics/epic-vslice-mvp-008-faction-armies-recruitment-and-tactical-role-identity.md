@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-CLOSEOUT REJECTED AGAIN / NEXT REPAIR CANDIDATE READY FOR APPROVAL. Human `STORY-QA-010` playtest on 2026-06-25 rejected closeout because map camera state, recruitment truthfulness, and tactical drone stack interaction still block judging army composition. `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` is READY-candidate / approval pending.
+CLOSEOUT REJECTED AGAIN / REPAIR STORY READY. Human `STORY-QA-010` playtest on 2026-06-25 rejected closeout because map camera state, recruitment truthfulness, and tactical drone stack interaction still block judging army composition. `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` is READY / approved as the current repair packet.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -160,7 +160,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-QA-009 EPIC-008 Playtest and Closeout Review](../stories/story-qa-009-epic-008-playtest-and-closeout-review.md) | DONE / merged; superseded by human playtest rejection | QA + Playability Review | implementation slices DONE | Unity PR #70, exact-head CI, post-merge CI, `CLOSE EPIC` recommendation later rejected by human playtest |
 | [STORY-ARMY-005 Army, Recruitment, and Map Readability Repair](../stories/story-army-005-army-recruitment-and-map-readability-repair.md) | DONE / merged | UI + Playability Repair | QA-009 DONE + human playtest rejection | Unity PR #72, exact-head CI, post-merge CI, PNG evidence; pointer cleanup PR #73 |
 | [STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review](../stories/story-qa-010-epic-008-repair-playtest-and-closeout-review.md) | DONE / closeout rejected | QA + Human Playtest | ARMY-005 DONE | Human notes: pan/zoom reset, misleading recruitment availability, tactical drones unusable/no stack info |
-| [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md) | READY-candidate / approval pending | UI + Playability Repair | QA-010 DONE / rejected | Candidate repair; no implementation until approved |
+| [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md) | READY / approved | UI + Playability Repair | QA-010 DONE / rejected | Current approved repair packet |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -244,4 +244,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-CLOSEOUT REJECTED AGAIN. `STORY-QA-010` is DONE with a `REJECT CLOSEOUT` verdict. No new Unity implementation story is READY. `STORY-ARMY-006` is the recommended READY-candidate repair packet, pending explicit approval.
+CLOSEOUT REJECTED AGAIN. `STORY-QA-010` is DONE with a `REJECT CLOSEOUT` verdict. `STORY-ARMY-006` is READY / approved as the current Unity implementation repair packet.

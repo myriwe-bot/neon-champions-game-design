@@ -210,7 +210,7 @@ Scope target:
 
 Status:
 
-- READY-candidate / approval pending. No Unity implementation is authorized until explicitly approved.
+- READY / approved on 2026-06-25 as the current Unity implementation repair packet.
 
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 

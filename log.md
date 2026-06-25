@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-25] approve | Promote STORY-ARMY-006 repair implementation
+
+- Promoted `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` to READY / approved after human approval: `Approved`.
+- Activated `production/sprints/codex-story-army-006.prompt.txt` as the current Unity implementation prompt.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, production index, and story status.
+- Approved scope remains narrow: pan/zoom persistence, recruitment truthfulness, tactical drone selection/details/actionability, and evidence/tests for those blockers only.
+
 ## [2026-06-25] reject | STORY-QA-010 repair closeout playtest
 
 - Recorded human `STORY-QA-010` playtest rejection: strategic pan/zoom resets after button clicks; recruitment only increases drones once even though the action appears available again; tactical drones cannot be selected, moved, or utilized; stack info is not shown on tactical click.

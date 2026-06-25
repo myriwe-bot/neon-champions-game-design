@@ -1,4 +1,4 @@
-DO NOT RUN UNTIL STORY-ARMY-006 IS EXPLICITLY APPROVED.
+STORY-ARMY-006 is approved for Unity implementation.
 
 Purpose: Unity implementation handoff for STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair.
 
@@ -9,14 +9,14 @@ Current state:
   - recruitment only increases drones once although the action appears available more times;
   - in tactical view, drones cannot be selected, moved, or utilized;
   - stack info is not shown on click in tactical view.
-- STORY-ARMY-006 is READY-candidate / approval pending, not approved.
+- STORY-ARMY-006 is READY / approved. Human approval recorded 2026-06-25.
 
 Stop conditions:
 - Stop unless production/stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md has `status: ready` and `approval: approved`.
 - Do not broaden into new recruitment economy, town/dwelling tree, final strategic map replacement, tactical AI expansion, balance pass, Champion progression, or Intel upgrades.
 - If the existing architecture makes one listed repair impossible without a broader rewrite, stop and report the blocker instead of expanding scope.
 
-If approved, task:
+Task:
 1. Read the story and source docs.
 2. Create branch `story/STORY-ARMY-006-map-camera-recruitment-tactical-stack-repair` from latest `main`.
 3. Fix strategic pan/zoom persistence across story-scoped UI button clicks.

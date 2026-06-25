@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-25
@@ -18,14 +18,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair
 
 ## Status
 
-READY-candidate / approval pending. Drafted from the human `STORY-QA-010` repair-playtest rejection. This story is not implementation authority until explicitly approved.
+READY / approved. Human approval recorded 2026-06-25: `Approved` in response to the `STORY-ARMY-006` recommendation. This is the active approved Unity implementation packet.
 
 ## Story type
 
@@ -100,21 +100,18 @@ Required unless a blocker is documented in the PR evidence:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate.
+Status: PASS.
 
-Human-approved defaults if promoted:
+Human approval recorded 2026-06-25. Approved defaults:
 
 - The bug is not acceptable as-is: pan/zoom reset after ordinary UI button clicks should be fixed.
 - Recruitment availability must be truthful. The implementation may choose the smallest story-scoped fix: repeatable-with-real-count-increase or consumed/disabled-after-use, whichever matches the existing fixed-offer model with least scope.
 - Drones already present through the approved recruitment/composition path must be normal player-usable tactical stacks where current tactical rules allow.
 
-Open human decision:
-
-- Approve this repair as the next Unity implementation packet, or split it if you want camera/recruitment and tactical-stack interaction repaired in separate stories.
 
 ## Branch / PR requirements
 
-If approved, use branch:
+Use branch:
 
 - `story/STORY-ARMY-006-map-camera-recruitment-tactical-stack-repair`
 
@@ -134,9 +131,9 @@ PR must include:
 - [x] In-scope and out-of-scope are bounded.
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
-- [x] Ambiguity Check status is PASS for candidate.
-- [ ] Human approval recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval recorded.
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next step is approval of this repair packet before another EPIC-008 closeout attempt.
+READY / approved for Unity implementation. This is the only current approved Unity implementation packet.

@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-SECOND REPAIR MERGED / AWAITING HUMAN RE-PLAYTEST. Human `STORY-QA-010` playtest on 2026-06-25 rejected closeout because map camera state, recruitment truthfulness, and tactical drone stack interaction still blocked judging army composition. `STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair` is now DONE / merged; `STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review` is READY-candidate for the next human decision gate.
+PAN INPUT BLOCKER / ONE NARROW FOLLOW-UP. Human `STORY-QA-011` playtest after ARMY-006 + PR #76 reported: `The pan is now not working at all. Otherwise, it seems to look better.` `STORY-ARMY-007 Strategic Map Pan Input Repair` is READY-candidate / approval pending as the narrow follow-up. No Unity implementation story is READY until approved.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -161,7 +161,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-ARMY-005 Army, Recruitment, and Map Readability Repair](../stories/story-army-005-army-recruitment-and-map-readability-repair.md) | DONE / merged | UI + Playability Repair | QA-009 DONE + human playtest rejection | Unity PR #72, exact-head CI, post-merge CI, PNG evidence; pointer cleanup PR #73 |
 | [STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review](../stories/story-qa-010-epic-008-repair-playtest-and-closeout-review.md) | DONE / closeout rejected | QA + Human Playtest | ARMY-005 DONE | Human notes: pan/zoom reset, misleading recruitment availability, tactical drones unusable/no stack info |
 | [STORY-ARMY-006 Map Camera, Recruitment, and Tactical Stack Interaction Repair](../stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair.md) | DONE / merged | UI + Playability Repair | QA-010 DONE / rejected | Unity PR #74, exact-head CI, post-merge CI, evidence; pointer cleanup PR #75; follow-up AP-selection fix PR #76 |
-| [STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review](../stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md) | READY-candidate / approval pending | QA + Human Playtest | ARMY-006 DONE | Proposed next closeout decision gate; no Unity runtime changes |
+| [STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review](../stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review.md) | DONE / one narrow follow-up | QA + Human Playtest | ARMY-006 DONE | Human note: pan not working at all; otherwise looks better |
+| [STORY-ARMY-007 Strategic Map Pan Input Repair](../stories/story-army-007-strategic-map-pan-input-repair.md) | READY-candidate / approval pending | Input + Playability Repair | QA-011 DONE / one narrow follow-up | Proposed narrow pan-only repair; no Unity implementation authority yet |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -245,4 +246,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-SECOND REPAIR MERGED / AWAITING HUMAN RE-PLAYTEST. `STORY-ARMY-006` is DONE / merged and the Unity current-task pointer is cleared. No new Unity implementation story is READY. Recommended next step is `STORY-QA-011` as a human repair-playtest closeout gate.
+PAN INPUT BLOCKER / ONE NARROW FOLLOW-UP. `STORY-QA-011` recorded a human closeout blocker: pan is now not working at all, while the rest looks better. `STORY-ARMY-007` is READY-candidate / approval pending as the narrow repair. No Unity implementation story is READY until approved.

@@ -104,7 +104,7 @@
 - [[production/stories/story-strat-base-001-starting-hub-reinforcement-preview]] — DONE / merged EPIC-007 story for starting hub reinforcement preview.
 - [[production/stories/story-strat-map-region-001-region-site-presentation-prototype]] — DONE / merged EPIC-007 story for region/site presentation.
 - [[production/stories/story-qa-008-strategic-map-region-playtest-and-closeout-review]] — DONE / merged EPIC-007 closeout review.
-- [[production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity]] — SECOND REPAIR MERGED / awaiting human re-playtest for faction armies, recruitment, and tactical role identity.
+- [[production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity]] — PAN INPUT BLOCKER / one narrow follow-up for faction armies, recruitment, and tactical role identity.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.
@@ -153,3 +153,5 @@
 - [[log]] — chronological repository log.
 
 - [[production/stories/story-qa-005-playmode-evidence-artifact-hygiene|STORY-QA-005 PlayMode Evidence Artifact Hygiene]] — DONE / merged maintenance story after UX-001 merge.
+
+- [[production/stories/story-army-007-strategic-map-pan-input-repair]] — READY-candidate / approval-pending pan input repair after QA-011.

@@ -229,6 +229,23 @@ Status:
 
 - READY-candidate / approval pending. Recommended next step before a new gameplay epic.
 
+
+### Slice J — [STORY-ARMY-007 Strategic Map Pan Input Repair](../stories/story-army-007-strategic-map-pan-input-repair.md)
+
+Purpose:
+
+- Restore player-facing strategic-map pan input after human QA-011 reported: "The pan is now not working at all. Otherwise, it seems to look better."
+
+Scope target:
+
+- Pan-only Unity input repair.
+- Preserve ARMY-006 camera persistence across UI refreshes.
+- Prevent pan/drag from accidental map selection and disable strategic pan during tactical view.
+
+Status:
+
+- READY-candidate / approval pending. Recommended as one narrow follow-up before another closeout attempt.
+
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 
 Purpose:

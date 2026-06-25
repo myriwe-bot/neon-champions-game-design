@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-25] playtest | QA-011 pan input blocker
+
+- Recorded human playtest note after ARMY-006 + PR #76: "The pan is now not working at all. Otherwise, it seems to look better."
+- Marked `STORY-QA-011` DONE / one narrow follow-up.
+- Drafted `STORY-ARMY-007 Strategic Map Pan Input Repair` as READY-candidate / approval pending; no Unity implementation story is READY until approved.
+- Updated EPIC-008, EPIC-008 plan, run prompts, index, and log for the pan-only closeout blocker.
+
 ## [2026-06-25] fix | STORY-ARMY-006 follow-up review blocker
 
 - Recorded independent review blocker found after STORY-ARMY-006 merge: tactical stack selection could call activation and refresh spent AP / bypass activation limits.

@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review
 type: story
-status: ready-candidate
+status: done
 phase: production
 owner: shared
 created: 2026-06-25
@@ -19,14 +19,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: recorded
 ---
 
 # STORY-QA-011 EPIC-008 Second Repair Playtest and Closeout Review
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed next human playtest after `STORY-ARMY-006` merged. It is not a Unity runtime implementation task until explicitly approved.
+DONE / one narrow follow-up. Human playtest after `STORY-ARMY-006` + PR #76 reported: `The pan is now not working at all. Otherwise, it seems to look better.` Closeout remains blocked by strategic-map pan input; `STORY-ARMY-007` is drafted as the narrow repair candidate.
 
 ## Story type
 
@@ -118,10 +118,10 @@ As project director, I need to replay the repaired camera/recruitment/tactical-d
 
 ## Acceptance criteria
 
-- [ ] Human playtest notes explicitly address the ARMY-006 repaired surfaces.
-- [ ] Verdict is recorded as `CLOSE EPIC-008`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT`.
-- [ ] If any blocker remains, the blocker is narrowed to one next story candidate rather than a broad polish bucket.
-- [ ] No next implementation story is promoted to READY without explicit human approval.
+- [x] Human playtest notes explicitly address the ARMY-006 repaired surfaces.
+- [x] Verdict is recorded as `ONE NARROW FOLLOW-UP`.
+- [x] If any blocker remains, the blocker is narrowed to one next story candidate rather than a broad polish bucket.
+- [x] No next implementation story is promoted to READY without explicit human approval.
 
 ## Verification requirements
 
@@ -155,4 +155,20 @@ Open human decision:
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next step is human playtest using this protocol before choosing any new implementation direction.
+DONE / ONE NARROW FOLLOW-UP. Strategic pan input is now the sole reported closeout blocker; `STORY-ARMY-007` is READY-candidate / approval pending.
+
+
+## Human playtest result — 2026-06-25
+
+Verdict: `ONE NARROW FOLLOW-UP`.
+
+Human note:
+
+> The pan is now not working at all. Otherwise, it seems to look better.
+
+Decision:
+
+- Do not close EPIC-008 yet.
+- Treat strategic-map pan input as a hard closeout blocker.
+- Draft one narrow repair candidate: `STORY-ARMY-007 Strategic Map Pan Input Repair`.
+- Preserve the positive signal that the rest of ARMY-006 appears better; do not broaden the follow-up into recruitment or tactical changes unless new evidence appears.

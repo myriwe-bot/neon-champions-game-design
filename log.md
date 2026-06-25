@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-25] merge | STORY-ARMY-005 and prepare QA-010 candidate
+
+- Marked `STORY-ARMY-005 Army, Recruitment, and Map Readability Repair` DONE / merged after Unity PR #72 merged as `5adb88b1fb0d2733609d526a8d3a8c53d3e23b9a`.
+- Verified STORY-ARMY-005 exact-head CI and post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28163961946
+- Cleared the Unity README current-task pointer via PR #73, merged as `ba451c92e008e4dae4dc96528d696688c06b700c`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28164738365
+- Added `STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review` as READY-candidate / approval pending; no Unity implementation task is currently READY.
+- Updated EPIC-008, the EPIC-008 plan, run-prompt index, and production index for the repair-merged / awaiting-human-replaytest state.
+
 ## [2026-06-25] approve | STORY-ARMY-005 repair after EPIC-008 closeout rejection
 
 - Recorded human playtest rejection of EPIC-008 closeout: army/recruitment/tactical-role readability is too poor to judge composition, UI is cluttered, top objective contrast is poor, and the strategic map needs panning.

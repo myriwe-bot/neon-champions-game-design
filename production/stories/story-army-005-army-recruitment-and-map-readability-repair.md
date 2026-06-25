@@ -1,7 +1,7 @@
 ---
 title: STORY-ARMY-005 Army, Recruitment, and Map Readability Repair
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-25
@@ -33,7 +33,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-25: approve `STORY-ARMY-005` with a strategic-map selected-Champion hero bar, fixed Tier-1-style recruitment clarity, tactical stack labels/details, map panning, and a realistic-map brief in parallel. This story is a repair after human playtest rejected EPIC-008 closeout.
+DONE / merged. Unity PR #72 merged as `5adb88b1fb0d2733609d526a8d3a8c53d3e23b9a`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28163961946. A follow-up Unity pointer cleanup merged in PR #73 as `ba451c92e008e4dae4dc96528d696688c06b700c`; post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28164738365.
 
 ## Story type
 
@@ -229,16 +229,16 @@ If status is FAIL, this story is not READY.
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists under Unity `production/evidence/STORY-ARMY-005/`.
+- [x] Required automated tests, validators, PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete; gate PASS recorded on Unity PR #72.
+- [x] CI passes: exact-head PR/push CI and post-merge main CI passed.
+- [x] Required docs were updated in the correct source-of-truth layer; Unity current-task pointer cleared via PR #73.
 
 ## Verdict
 
-READY for Unity implementation. This is the only current approved Unity implementation packet. The parallel realistic-map brief is design-only and does not authorize map replacement implementation.
+DONE / merged. This repair landed; EPIC-008 now needs a human repair-playtest / closeout decision before any new implementation direction is promoted.

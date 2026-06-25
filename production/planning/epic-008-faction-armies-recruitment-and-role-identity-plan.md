@@ -176,7 +176,24 @@ Scope target:
 
 Status:
 
-- READY / approved on 2026-06-25 after human playtest rejected closeout.
+- DONE / merged in Unity PR #72. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28163961946. Unity current-task pointer cleanup merged in PR #73 with post-merge CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28164738365.
+
+
+### Slice G — [STORY-QA-010 EPIC-008 Repair Playtest and Closeout Review](../stories/story-qa-010-epic-008-repair-playtest-and-closeout-review.md)
+
+Purpose:
+
+- Re-test the repaired army/recruitment/tactical-role loop after ARMY-005 and decide whether EPIC-008 can close.
+
+Scope target:
+
+- Human playtest protocol.
+- Closeout verdict: close epic, one narrow follow-up, or reject closeout.
+- No Unity runtime changes.
+
+Status:
+
+- READY-candidate / approval pending. Recommended next step before a new gameplay epic.
 
 ### Parallel design-only brief — [Strategic Map Realism Brief](strategic-map-realism-brief-2026-06-25.md)
 

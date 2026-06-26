@@ -10,6 +10,7 @@
 - Drafted `STORY-BASE-001 Base Definition and Facility Construction Core` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-base-001.prompt.txt`.
 - Cleared runnable Unity implementation authorization until STORY-BASE-001 is explicitly approved.
 - Unity README pointer-clear commit `b46a004` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28229095893.
+- Async review blocker on node/site back-reference validation was fixed directly on Unity main in commit `b829cce`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28229707819.
 
 
 ## [2026-06-26] approval | Promote STORY-MAP-REAL-001 for implementation

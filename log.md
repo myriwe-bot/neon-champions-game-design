@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-26] planning | EPIC-009 strategic map bases and facility construction decisions
+
+- Recorded next-epic planning direction: strategic map geography/readability plus bases and simple resource-costed facilities.
+- Added `design/research/homm-town-building-reference.md` with Heroes 3 and Olden Era town/building/dwelling research.
+- Updated `design/gdd/strategic-map.md` with base/facility construction planning decisions: three-level administration income chain, one to two faction-specific recruitment/dwelling offers per faction, one build per base per turn, starting bases not capturable, scenario-authored names/localization keys, and validation-first map-editor posture.
+- Updated `production/planning/strategic-map-realism-brief-2026-06-25.md` and `index.md` for discoverability.
+
 ## [2026-06-25] closeout | EPIC-008 closed after ARMY-007
 
 - Merged `STORY-ARMY-007 Strategic Map Pan Input Repair` via Unity PR #77 as `14f1312198958b971d24582302a0ac38d7cef6ae`.

@@ -45,6 +45,7 @@
 - [[design/research/tactical-combat-deep-reference]] — preserved long-form tactical-combat packet history and rationale; reference only, not first-read implementation contract.
 - [[design/research/homm-like-tactical-battle-ui-reference]] — HoMM-like tactical battle UI/readability references: stack counts, event feed, movement/attack affordances, retaliation.
 - [[design/research/homm-like-strategic-map-topology-reference]] — HoMM-like strategic/adventure map topology references: node, region, tile/hex, bases, guarded sites.
+- [[design/research/homm-town-building-reference]] — HoMM3 and Olden Era town/building/dwelling reference for Neon Champions base facilities.
 
 ## World Import Layer
 
@@ -115,7 +116,7 @@
 - [[production/stories/story-qa-010-epic-008-repair-playtest-and-closeout-review]] — DONE / closeout rejected after repair playtest.
 - [[production/stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair]] — DONE / merged repair for pan/zoom persistence, recruitment truthfulness, and tactical drone interaction.
 - [[production/stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review]] — DONE / one narrow follow-up second repair playtest closeout.
-- [[production/planning/strategic-map-realism-brief-2026-06-25]] — DRAFT / design-only realistic strategic map brief.
+- [[production/planning/strategic-map-realism-brief-2026-06-25]] — DRAFT / design-only realistic strategic map and EPIC-009 base-facility planning brief.
 - [[production/stories/story-obj-001-scenario-objective-state-and-victory-feedback]] — DONE / merged first story for visible objective state and victory feedback.
 - [[production/stories/story-obj-002-guarded-site-defender-strength-tiers]] — DONE / merged follow-up for weak/standard/strong defender tiers.
 - [[production/stories/story-tac-007-simple-stack-strength-persistence]] — DONE / merged simple stack HP/strength persistence story.

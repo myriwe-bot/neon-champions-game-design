@@ -108,7 +108,8 @@
 - [[production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity]] — DONE / closed faction armies, recruitment, and tactical role identity epic.
 - [[production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction]] — APPROVED / PLANNED strategic map geography, bases, and simple facility construction epic.
 - [[production/stories/story-map-real-001-scenario-authored-strategic-map-shell]] — DONE / merged first EPIC-009 story.
-- [[production/stories/story-base-001-base-definition-and-facility-construction-core]] — READY / approved current EPIC-009 implementation story.
+- [[production/stories/story-base-001-base-definition-and-facility-construction-core]] — DONE / merged EPIC-009 base construction core story.
+- [[production/stories/story-base-002-administration-income-chain-and-recruitment-dwellings]] — READY / approved current EPIC-009 implementation story for income chain and recruitment dwellings.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

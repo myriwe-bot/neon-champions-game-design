@@ -1,7 +1,7 @@
 ---
 title: STORY-BASE-001 Base Definition and Facility Construction Core
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-26
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-26 from chat: `Next step? Prepare implementation`. Approved assumptions: this story builds the base construction substrate only; prototype facility IDs/names/costs are allowed if data-driven; one build per base per turn remains locked; starting-base capture remains out of scope. The HoMM town-building research note is reference-only authority for shape, not exact implementation numbers.
+DONE / merged. Unity PR #80 merged as `1185987df42716fe216701329713cf302414d364`; post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28238288375. Merge-gate fix added lane/type and non-empty resource-cost authoring validation.
 
 ## Story type
 
@@ -224,16 +224,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Codex may implement only this story scope and must stop rather than expanding into income effects, dwelling refresh, capture/siege, editor UI, strategic AI, topology rewrite, or final art.
+DONE / merged. Scope delivered: base facility definitions, construction command/service, one-build-per-base-per-turn, resource-cost payment, validation, and minimal visible base panel/build feedback. Deferred scope remains for STORY-BASE-002: income effects and recruitment/dwelling refresh.

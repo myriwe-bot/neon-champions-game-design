@@ -1,0 +1,80 @@
+# Codex prompt — STORY-BASE-002
+
+You are implementing `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings` in the Neon Champions Unity repo.
+
+## Required source reading order
+
+1. `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-base-002-administration-income-chain-and-recruitment-dwellings.md`
+2. `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction.md`
+3. `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md` §§12-16
+4. `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\research\homm-town-building-reference.md`
+5. `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md`
+6. `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md`
+7. Unity repo `AGENTS.md` and scoped AGENTS files for touched directories.
+
+## Authorized scope
+
+Implement only `STORY-BASE-002`:
+
+- data-driven administration income effect metadata;
+- three-level administration chain shape for current starting bases;
+- deterministic start-of-active-faction-turn Credits income from owned constructed/starting income facilities;
+- visible start-of-turn income feedback;
+- one to two faction-specific recruitment/dwelling offers per faction gated by base facility state;
+- deterministic recruitment/dwelling stock/refresh behavior if mutable;
+- validation, EditMode tests, PlayMode tests, and evidence.
+
+## Stop conditions / forbidden scope
+
+Do not implement:
+
+- base capture, siege, garrisons, or ownership transfer;
+- full Heroes-style town tree;
+- upgraded-unit dwellings;
+- marketplace/resource trading;
+- global Capitol special rule;
+- strategic AI construction/recruitment;
+- map editor UI;
+- procedural map generation;
+- strategic topology rewrite;
+- final art/icons/VFX/audio/animation;
+- new victory conditions.
+
+If the story cannot be implemented without any of those, stop and report the blocker instead of expanding scope.
+
+## Implementation requirements
+
+- Keep scenario data authored/data-driven; no hardcoded player-facing names or one-off facility branches.
+- Preserve all existing STORY-BASE-001 construction behavior and tests.
+- Preserve current movement, site interaction, current recruitment, tactical handoff, battle result application, and objective smoke behavior.
+- Use TDD for new domain/rules/validation behavior.
+- Add/extend PlayMode smoke coverage for visible income feedback and facility-unlocked recruitment/dwelling offer flow.
+- Add evidence under `production/evidence/STORY-BASE-002/` in the Unity repo.
+
+## Required verification before PR
+
+Run the Unity project’s standard available checks locally where possible, and ensure GitHub Unity Foundation CI passes on the PR head:
+
+- EditMode Tests
+- PlayMode Smoke Tests
+- Placeholder Validator
+- Compile / Standalone Check
+
+The PR body must include:
+
+- story ID and source links;
+- implementation summary;
+- tests/evidence run;
+- evidence paths;
+- known omissions/stubs/deferred work, or `No known omissions`;
+- explicit statement that forbidden scope was not added.
+
+## Branch / PR
+
+Use branch:
+
+`story/STORY-BASE-002-administration-income-chain-and-recruitment-dwellings`
+
+Open PR title:
+
+`STORY-BASE-002 Administration income chain and recruitment dwellings`

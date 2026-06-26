@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-06-26] merge | STORY-BASE-001 merged and STORY-BASE-002 prepared
+
+- Unity PR #80 `STORY-BASE-001 Base definition and facility construction core` merged. Merge commit: `1185987df42716fe216701329713cf302414d364`.
+- Merge-gate fix added facility lane/type and non-empty resource-cost validation.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28237613101.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28238288375.
+- Marked `STORY-BASE-001` DONE / merged in design-control.
+- Added and promoted `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings` to READY / approved as the current Unity implementation packet.
+- Runnable prompt: `production/sprints/codex-story-base-002.prompt.txt`.
+
 ## [2026-06-26] approval | Promote STORY-BASE-001 for implementation
 
 - Promoted `STORY-BASE-001 Base Definition and Facility Construction Core` to READY / approved from human direction: `Next step? Prepare implementation`.

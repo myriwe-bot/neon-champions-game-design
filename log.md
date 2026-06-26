@@ -8,6 +8,7 @@
 - Converted `production/sprints/codex-story-base-001.prompt.txt` from guarded candidate prompt to runnable implementation prompt.
 - Current authorized Unity scope: base facility definitions, construction command, one-build-per-base-per-turn, and minimal base panel.
 - Explicit exclusions remain: income chain effects, recruitment/dwelling refresh, base capture/siege, editor UI, strategic AI, topology rewrite, and final art.
+- Unity README pointer commit `ca47102` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28234791612.
 
 
 ## [2026-06-26] merge | STORY-MAP-REAL-001 merged and STORY-BASE-001 drafted

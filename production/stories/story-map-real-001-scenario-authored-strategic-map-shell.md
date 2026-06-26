@@ -1,7 +1,7 @@
 ---
 title: STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-26
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-26 from chat: `Approved`. This story is the current Unity implementation packet for EPIC-009.
+DONE / merged. Unity PR #79 merged 2026-06-26. Merge commit `5c57448f4e1538986d679ff71ca856be02d85f72`. Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28228564546.
 
 ## Story type
 
@@ -214,16 +214,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation.
+DONE / merged via Unity PR #79. Post-merge Unity main CI passed.

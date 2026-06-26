@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-26] merge | STORY-MAP-REAL-001 merged and STORY-BASE-001 drafted
+
+- Unity PR #79 `STORY-MAP-REAL-001 Scenario-authored strategic map shell` merged. Merge commit: `5c57448f4e1538986d679ff71ca856be02d85f72`.
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28228564546.
+- Marked `STORY-MAP-REAL-001` DONE / merged in design-control.
+- Drafted `STORY-BASE-001 Base Definition and Facility Construction Core` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-base-001.prompt.txt`.
+- Cleared runnable Unity implementation authorization until STORY-BASE-001 is explicitly approved.
+
+
 ## [2026-06-26] approval | Promote STORY-MAP-REAL-001 for implementation
 
 - Human approved `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell` with: `Approved`.

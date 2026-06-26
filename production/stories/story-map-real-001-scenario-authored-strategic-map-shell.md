@@ -1,7 +1,7 @@
 ---
 title: STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-26
@@ -18,14 +18,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell
 
 ## Status
 
-READY-candidate / approval pending. This story is drafted as the recommended first EPIC-009 implementation story, but it is not READY until human approval is recorded and the guarded prompt is converted to runnable.
+READY / approved. Human approval recorded 2026-06-26 from chat: `Approved`. This story is the current Unity implementation packet for EPIC-009.
 
 ## Story type
 
@@ -60,7 +60,7 @@ Exact source references:
 
 ## In scope
 
-Concrete implementation tasks authorized by this story after approval:
+Concrete implementation tasks authorized by this story:
 
 - Add or formalize scenario-authored strategic map definition fields sufficient for:
   - stable map ID;
@@ -148,11 +148,12 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate.
+Status: PASS. Human approval recorded 2026-06-26.
 
-Open human decision:
+Human-approved answers:
 
-- Approve this story as the first EPIC-009 implementation packet, or revise scope before approval.
+- Approved this story as the first EPIC-009 implementation packet.
+- Approved the listed scope, assumptions, exclusions, and allowed placeholders as written.
 
 Assumptions:
 
@@ -172,7 +173,7 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None yet. Human approval is still pending.
+- None.
 
 ## Branch / PR requirements
 
@@ -207,9 +208,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [x] Ambiguity Check status is PASS for READY-candidate.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -225,4 +226,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate / approval pending. No Unity implementation is authorized until human approval promotes this story to READY / approved.
+READY / approved for Unity implementation.

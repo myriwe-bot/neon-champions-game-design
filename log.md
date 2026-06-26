@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-26] approval | Promote STORY-MAP-REAL-001 for implementation
+
+- Human approved `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell` with: `Approved`.
+- Promoted STORY-MAP-REAL-001 to READY / approved as the current Unity implementation packet.
+- Converted `production/sprints/codex-story-map-real-001.prompt.txt` from guarded candidate to runnable implementation handoff.
+- Updated EPIC-009, run prompts, index, and story status.
+
+
 ## [2026-06-26] planning | Draft EPIC-009 and STORY-MAP-REAL-001
 
 - Created `EPIC-VSLICE-MVP-009 Strategic Map Geography, Bases, and Facility Construction` as APPROVED / PLANNED after human agreement to move from next-epic planning to stories.

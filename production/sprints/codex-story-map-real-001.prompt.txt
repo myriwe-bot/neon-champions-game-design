@@ -1,26 +1,24 @@
-# Guarded Codex prompt — STORY-MAP-REAL-001
+# Codex prompt — STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell
 
-This prompt is intentionally guarded. Do not run Unity implementation from it unless the story frontmatter has been promoted to:
+You are implementing the approved Neon Champions Unity story `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell`.
 
-```yaml
-status: ready
-approval: approved
-```
+## Required repository context
 
-Current expected state at creation: `READY-candidate / approval pending`.
+Design/control repo on Windows:
 
-If not approved, stop and report:
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
 
-> STORY-MAP-REAL-001 is not READY / approved. No Unity implementation is authorized.
+Unity repo on Windows:
 
-## If approved later
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
 
-Implement only:
+Start in the Unity repo after pulling both repos to latest `main`.
+
+## Required reading before coding
+
+Read these files from the design repo before editing Unity code:
 
 - `production/stories/story-map-real-001-scenario-authored-strategic-map-shell.md`
-
-Required source authority:
-
 - `production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction.md`
 - `design/gdd/strategic-map.md` §§1-10, §12, §16
 - `design/research/homm-like-strategic-map-topology-reference.md`
@@ -29,7 +27,11 @@ Required source authority:
 - `docs/architecture/testing-strategy.md`
 - `docs/architecture/ci-build-automation.md`
 
-Branch:
+Also read Unity root `AGENTS.md` and any scoped `AGENTS.md` files for directories you touch.
+
+## Branch and PR
+
+Create implementation branch:
 
 - `story/STORY-MAP-REAL-001-scenario-authored-strategic-map-shell`
 
@@ -37,31 +39,77 @@ PR title:
 
 - `STORY-MAP-REAL-001 Scenario-authored strategic map shell`
 
-Core scope:
+## In scope
+
+Implement only the approved story scope:
 
 - Scenario-authored strategic map definition shell.
-- Stable map/node/route/site/base IDs.
-- Scenario-authored display/localization keys.
+- Stable IDs for map, nodes, routes, sites, and starting bases.
+- Scenario-authored display/localization keys or equivalent authored display data.
+- Presentation coordinates/layout metadata where current architecture supports it.
 - Starting base definitions attached to starting-hub nodes.
-- Validation for IDs, missing references, and missing player-visible display keys.
-- Migration of current prototype map to the authored shape.
-- Preserve existing graph movement, site interactions, recruitment, tactical handoff, objective behavior.
+- Validation for duplicate IDs, missing display keys, invalid route endpoints, base references to missing nodes, site/base reference problems, and invalid presentation coordinates where practical.
+- Migration/adaptation of the current prototype map data to the authored definition shape.
+- Preserve current graph movement, Champion placement, site interaction, recruitment, tactical handoff, and objective behavior.
+- Evidence that strategic map rendering/labels are driven by authored scenario data for at least current starting bases and several sites/nodes.
 
-Hard exclusions:
+## Hard out of scope
 
-- No active base facility construction.
-- No income-chain behavior.
-- No recruitment/dwelling refresh changes.
-- No base capture/siege.
-- No editor UI.
-- No topology rewrite.
-- No final art pass.
+Do not implement:
 
-Required evidence:
+- Base facility construction UI or build action.
+- Resource-costed buildings.
+- Income-chain behavior.
+- Recruitment/dwelling stock refresh changes.
+- Starting-base capture, siege, or garrison management.
+- Full map editor UI.
+- Procedural map generation.
+- Hex/tile/freeform movement rewrite.
+- Full geography art replacement or final map art.
+- Strategic AI.
+- New victory conditions.
+- Broad balance changes.
 
-- Tests/validators for valid and invalid authored map/base/site data.
-- Existing strategic loop still loads/runs.
+## Allowed placeholders
+
+- Placeholder visual/background/theme keys if data-driven and documented.
+- Prototype coordinates/layout values.
+- Existing provisional labels carried forward as authored display/localization keys; do not hardcode them in newly touched presentation logic.
+- Inert facility placeholders only if useful for later `STORY-BASE-001`; no active construction behavior.
+
+## Acceptance criteria
+
+Satisfy every acceptance criterion in the story file. In particular:
+
+- Current prototype scenario still loads and plays with same graph movement/topology rules.
+- No tile/hex/freeform movement is introduced.
+- Site interaction, recruitment, tactical battle handoff, and objective flow are not intentionally changed.
+- Invalid authored data fails clearly in tests or validation output.
+- Starting bases are authored definitions attached to starting-hub nodes but cannot be captured and have no active facility construction behavior.
+
+## Required verification
+
+Run and report:
+
+- Unit tests for validators/lookups.
+- Unity edit-mode tests for map/scenario definition loading or validation where applicable.
+- Existing PlayMode or smoke test proving current strategic loop still loads/moves/enters tactical handoff after migration, if available.
+- Integration/data validation tests for invalid ID/reference/display-key cases.
+- Manual/PNG evidence if UI labels/map shell cannot be fully asserted automatically.
 - Evidence path under Unity repo: `production/evidence/STORY-MAP-REAL-001/`.
-- Exact-head CI before merge and post-merge CI after merge.
+- Exact-head Unity Foundation CI before merge.
 
-PR omissions section must explicitly list known omissions/stubs/placeholders/deferred work, or state `No known omissions`.
+Use TDD for validators/lookups and migration-safe behavior.
+
+## PR body requirements
+
+The PR must include:
+
+- Link to `STORY-MAP-REAL-001`.
+- Link to the relevant GDD/research/control docs.
+- Summary of implementation.
+- Tests and evidence run, including paths/URLs.
+- Known omissions/stubs/placeholders/deferred work, or exact statement `No known omissions`.
+- Confirmation that no unauthorized design/architecture decisions were introduced.
+
+Stop and report rather than inventing design if the implementation requires active base construction, capture/siege, map editor UI, topology rewrite, or final art decisions.

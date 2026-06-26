@@ -1,0 +1,67 @@
+# Guarded Codex prompt — STORY-MAP-REAL-001
+
+This prompt is intentionally guarded. Do not run Unity implementation from it unless the story frontmatter has been promoted to:
+
+```yaml
+status: ready
+approval: approved
+```
+
+Current expected state at creation: `READY-candidate / approval pending`.
+
+If not approved, stop and report:
+
+> STORY-MAP-REAL-001 is not READY / approved. No Unity implementation is authorized.
+
+## If approved later
+
+Implement only:
+
+- `production/stories/story-map-real-001-scenario-authored-strategic-map-shell.md`
+
+Required source authority:
+
+- `production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction.md`
+- `design/gdd/strategic-map.md` §§1-10, §12, §16
+- `design/research/homm-like-strategic-map-topology-reference.md`
+- `design/research/homm-town-building-reference.md`
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+
+Branch:
+
+- `story/STORY-MAP-REAL-001-scenario-authored-strategic-map-shell`
+
+PR title:
+
+- `STORY-MAP-REAL-001 Scenario-authored strategic map shell`
+
+Core scope:
+
+- Scenario-authored strategic map definition shell.
+- Stable map/node/route/site/base IDs.
+- Scenario-authored display/localization keys.
+- Starting base definitions attached to starting-hub nodes.
+- Validation for IDs, missing references, and missing player-visible display keys.
+- Migration of current prototype map to the authored shape.
+- Preserve existing graph movement, site interactions, recruitment, tactical handoff, objective behavior.
+
+Hard exclusions:
+
+- No active base facility construction.
+- No income-chain behavior.
+- No recruitment/dwelling refresh changes.
+- No base capture/siege.
+- No editor UI.
+- No topology rewrite.
+- No final art pass.
+
+Required evidence:
+
+- Tests/validators for valid and invalid authored map/base/site data.
+- Existing strategic loop still loads/runs.
+- Evidence path under Unity repo: `production/evidence/STORY-MAP-REAL-001/`.
+- Exact-head CI before merge and post-merge CI after merge.
+
+PR omissions section must explicitly list known omissions/stubs/placeholders/deferred work, or state `No known omissions`.

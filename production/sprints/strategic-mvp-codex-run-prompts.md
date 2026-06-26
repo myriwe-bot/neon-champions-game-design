@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-25
+updated: 2026-06-26
 source_lore: []
 related:
   [
@@ -71,6 +71,8 @@ related:
     production/stories/story-army-006-map-camera-recruitment-and-tactical-stack-interaction-repair,
     production/stories/story-qa-011-epic-008-second-repair-playtest-and-closeout-review,
     production/stories/story-army-007-strategic-map-pan-input-repair,
+    production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction,
+    production/stories/story-map-real-001-scenario-authored-strategic-map-shell,
   ]
 approval: approved
 ---
@@ -81,13 +83,13 @@ approval: approved
 
 **Current READY / approved Unity implementation packet:** none.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is DONE / merged. EPIC-008 is DONE / closed.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is DONE / merged. EPIC-008 is DONE / closed. EPIC-009 is APPROVED / PLANNED. `STORY-MAP-REAL-001` is READY-candidate / approval pending; do not run Codex for it until promoted to READY / approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Historical prompt files remain for audit only.
+Current implementation prompt file: none. `production/sprints/codex-story-map-real-001.prompt.txt` exists as a guarded candidate prompt only and must not be run until `STORY-MAP-REAL-001` is promoted to READY / approved. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -174,6 +176,10 @@ Historical decision-brief prompt-file run:
 
 - `production/sprints/codex-next-epic-direction-brief.prompt.txt`
 
+Guarded candidate prompt, not runnable until human approval:
+
+- `production/sprints/codex-story-map-real-001.prompt.txt`
+
 ## After Codex finishes
 
-No Codex Unity implementation is currently authorized. Next work should begin from a new human-approved story or a guarded decision brief, not from EPIC-008.
+No Codex Unity implementation is currently authorized. Next implementation work should begin only after `STORY-MAP-REAL-001` or another future story is explicitly promoted to READY / approved.

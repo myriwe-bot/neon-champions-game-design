@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-26] planning | Draft EPIC-009 and STORY-MAP-REAL-001
+
+- Created `EPIC-VSLICE-MVP-009 Strategic Map Geography, Bases, and Facility Construction` as APPROVED / PLANNED after human agreement to move from next-epic planning to stories.
+- Created `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell` as READY-candidate / approval pending.
+- Added guarded prompt `production/sprints/codex-story-map-real-001.prompt.txt`; no Unity implementation is authorized until STORY-MAP-REAL-001 is explicitly approved and promoted to READY.
+- Updated `index.md` for discoverability.
+
 ## [2026-06-26] planning | EPIC-009 strategic map bases and facility construction decisions
 
 - Recorded next-epic planning direction: strategic map geography/readability plus bases and simple resource-costed facilities.

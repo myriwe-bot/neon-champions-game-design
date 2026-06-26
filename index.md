@@ -106,6 +106,8 @@
 - [[production/stories/story-strat-map-region-001-region-site-presentation-prototype]] — DONE / merged EPIC-007 story for region/site presentation.
 - [[production/stories/story-qa-008-strategic-map-region-playtest-and-closeout-review]] — DONE / merged EPIC-007 closeout review.
 - [[production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity]] — DONE / closed faction armies, recruitment, and tactical role identity epic.
+- [[production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction]] — APPROVED / PLANNED strategic map geography, bases, and simple facility construction epic.
+- [[production/stories/story-map-real-001-scenario-authored-strategic-map-shell]] — READY-candidate / approval pending first EPIC-009 story.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

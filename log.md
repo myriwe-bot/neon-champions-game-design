@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-26] approval | Promote STORY-BASE-001 for implementation
+
+- Promoted `STORY-BASE-001 Base Definition and Facility Construction Core` to READY / approved from human direction: `Next step? Prepare implementation`.
+- Converted `production/sprints/codex-story-base-001.prompt.txt` from guarded candidate prompt to runnable implementation prompt.
+- Current authorized Unity scope: base facility definitions, construction command, one-build-per-base-per-turn, and minimal base panel.
+- Explicit exclusions remain: income chain effects, recruitment/dwelling refresh, base capture/siege, editor UI, strategic AI, topology rewrite, and final art.
+
+
 ## [2026-06-26] merge | STORY-MAP-REAL-001 merged and STORY-BASE-001 drafted
 
 - Unity PR #79 `STORY-MAP-REAL-001 Scenario-authored strategic map shell` merged. Merge commit: `5c57448f4e1538986d679ff71ca856be02d85f72`.

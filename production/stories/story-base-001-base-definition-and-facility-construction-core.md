@@ -1,7 +1,7 @@
 ---
 title: STORY-BASE-001 Base Definition and Facility Construction Core
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-26
@@ -18,14 +18,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-BASE-001 Base Definition and Facility Construction Core
 
 ## Status
 
-READY-candidate / approval pending. Drafted after `STORY-MAP-REAL-001` merged and post-merge Unity main CI passed. This is the recommended next EPIC-009 implementation packet, but it is not READY until human approval is recorded and the guarded prompt is converted to runnable.
+READY / approved. Human approval recorded 2026-06-26 from chat: `Next step? Prepare implementation`. Approved assumptions: this story builds the base construction substrate only; prototype facility IDs/names/costs are allowed if data-driven; one build per base per turn remains locked; starting-base capture remains out of scope. The HoMM town-building research note is reference-only authority for shape, not exact implementation numbers.
 
 ## Story type
 
@@ -58,7 +58,7 @@ Exact source references:
 
 ## In scope
 
-Concrete implementation tasks authorized after approval:
+Concrete implementation tasks authorized:
 
 - Add scenario-authored base facility definition data sufficient for the first build core:
   - stable facility ID;
@@ -158,11 +158,11 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate.
+Status: PASS.
 
-Open human decision:
+Human-approved answer:
 
-- Approve this story as the next EPIC-009 implementation packet, or revise scope before approval.
+- Approved as the next EPIC-009 implementation packet on 2026-06-26.
 
 Assumptions:
 
@@ -183,7 +183,8 @@ Allowed stubs/mocks:
 
 Human-approved exceptions:
 
-- None yet. Human approval is still pending.
+- HoMM town-building research is reference-only authority for investment shape; exact Heroes/Olden Era numbers are not implementation requirements.
+- Prototype facility names/costs are allowed if scenario-authored/data-driven and documented.
 
 ## Branch / PR requirements
 
@@ -219,7 +220,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Required automated tests/validators/PlayMode evidence are listed.
 - [x] Ambiguity Check status is PASS for READY-candidate.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -235,4 +236,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate / approval pending. No Unity implementation is authorized until human approval promotes this story to READY / approved.
+READY / approved for Unity implementation. Codex may implement only this story scope and must stop rather than expanding into income effects, dwelling refresh, capture/siege, editor UI, strategic AI, topology rewrite, or final art.

@@ -82,15 +82,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-BASE-001 Base Definition and Facility Construction Core`.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is DONE / merged. EPIC-008 is DONE / closed. EPIC-009 is APPROVED / PLANNED. `STORY-MAP-REAL-001` is DONE / merged. `STORY-BASE-001` is READY-candidate / approval pending; do not run Codex for it until promoted to READY / approved.
+`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is DONE / merged. EPIC-008 is DONE / closed. EPIC-009 is APPROVED / PLANNED. `STORY-MAP-REAL-001` is DONE / merged. `STORY-BASE-001` is READY / approved and is the current Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. `production/sprints/codex-story-base-001.prompt.txt` exists as a guarded candidate prompt only and must not be run until `STORY-BASE-001` is promoted to READY / approved. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-base-001.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -111,7 +111,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-No current approved Unity implementation prompt. Do not run Codex for Unity implementation until `STORY-BASE-001` or another future story is explicitly promoted to READY / approved.
+Use checked-in prompt file `production/sprints/codex-story-base-001.prompt.txt` for `STORY-BASE-001`.
 
 ## Historical prompt-file runs
 
@@ -181,10 +181,44 @@ Most recent completed prompt-file run:
 
 - `production/sprints/codex-story-map-real-001.prompt.txt`
 
-Guarded candidate prompt, not runnable until human approval:
+Current runnable prompt-file run:
 
 - `production/sprints/codex-story-base-001.prompt.txt`
 
+## Copy-safe STORY-BASE-001 handoff
+
+Primary workspace-write run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-base-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+Trusted fallback if workspace-write cannot complete required Unity edits:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-base-001.prompt.txt"
+codex exec --sandbox danger-full-access $prompt
+```
+
 ## After Codex finishes
 
-No Codex Unity implementation is currently authorized. Next implementation work should begin only after `STORY-BASE-001` or another future story is explicitly promoted to READY / approved.
+Codex should produce a PR for `STORY-BASE-001`; review against the story acceptance criteria and require exact-head Unity Foundation CI before merge.

@@ -1,19 +1,13 @@
-# Guarded Codex prompt — STORY-BASE-001
+# Codex prompt — STORY-BASE-001
 
-This prompt is intentionally guarded. Do not run Unity implementation from it unless the story frontmatter has been promoted to:
+Preflight: read `production/stories/story-base-001-base-definition-and-facility-construction-core.md` in the design/control repo and confirm its frontmatter is exactly:
 
 ```yaml
 status: ready
 approval: approved
 ```
 
-Current expected state at creation: `READY-candidate / approval pending`.
-
-If not approved, stop and report:
-
-> STORY-BASE-001 is not READY / approved. No Unity implementation is authorized.
-
-## If approved later
+If it is not READY / approved, stop without editing Unity and report the mismatch.
 
 Implement only:
 
@@ -48,7 +42,7 @@ Core scope:
 - Prototype facility catalog for current two-faction scenario.
 - Tests and evidence for validation, build command, resource payment, one-build limit, turn reset, and UI evidence.
 
-Hard exclusions:
+Hard exclusions / stop conditions:
 
 - No recurring income chain behavior.
 - No recruitment/dwelling refresh or new unit behavior.
@@ -73,3 +67,15 @@ PR body requirements:
 - Confirmation that no unauthorized design/architecture decisions were introduced.
 
 Stop and report rather than inventing design if implementation requires income effects, recruitment refresh, capture/siege, editor UI, full town-tree design, strategic AI, topology changes, or final art decisions.
+
+
+## Required workflow
+
+1. In the Unity repo, create branch `story/STORY-BASE-001-base-definition-and-facility-construction-core` from current `main`.
+2. Read root `AGENTS.md` and all scoped AGENTS files for touched Runtime, Domain, Application, Presentation, Tests, and Evidence paths.
+3. Implement with tests first where practical for validators/build command behavior.
+4. Preserve current movement, site interaction, recruitment, tactical handoff, objective flow, and STORY-MAP-REAL-001 authored map behavior.
+5. Put visual/manual evidence under `production/evidence/STORY-BASE-001/`.
+6. Run the strongest available local checks/tests; if Unity CLI is unavailable locally, say so and rely on PR CI after pushing.
+7. Push the branch and open a PR titled exactly `STORY-BASE-001 Base definition and facility construction core`.
+8. PR body must include implementation summary, test/evidence paths, known omissions/stubs/placeholders, and explicit confirmation that income effects/recruitment refresh/capture/editor UI/topology rewrite/final art were not implemented.

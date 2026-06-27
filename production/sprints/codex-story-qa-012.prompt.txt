@@ -2,7 +2,7 @@
 
 You are preparing/reviewing Neon Champions Unity story `STORY-QA-012 EPIC-009 Playtest and Closeout Review`.
 
-## Mandatory preflight — stop if not approved
+## Mandatory source-authority preflight
 
 Before editing Unity files, read:
 
@@ -13,7 +13,7 @@ Stop immediately without modifying files unless the story frontmatter says exact
 - `status: ready`
 - `approval: approved`
 
-Current expected state at prompt creation: `READY-candidate / approval pending`. If that is still true, report that STORY-QA-012 is not authorized yet and stop.
+Also confirm the story Ambiguity Check is PASS. If any of these checks fail, report that STORY-QA-012 is not authorized and stop.
 
 ## Repositories
 
@@ -25,7 +25,7 @@ Unity implementation repo:
 
 - `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
 
-## Required reading after approval
+## Required reading
 
 Read these before planning or editing:
 
@@ -50,12 +50,12 @@ Read these before planning or editing:
 
 ## Branch and PR
 
-After approval, work in the Unity repo on:
+Work in the Unity repo on:
 
 - Branch: `story/STORY-QA-012-epic-009-playtest-closeout-review`
 - PR title: `STORY-QA-012 EPIC-009 playtest and closeout review`
 
-## Authorized scope after approval
+## Authorized scope
 
 This is a QA/playability closeout pass, not a new mechanics packet.
 
@@ -83,7 +83,7 @@ Do not add:
 - full town tree, upgraded dwellings, multi-base economy expansion;
 - broad UI redesign or final art/audio/VFX/localization.
 
-## Required verification after approval
+## Required verification
 
 If a Unity branch is opened:
 
@@ -99,7 +99,7 @@ If a Unity branch is opened:
   - evidence paths;
   - omissions/deferred work;
   - closeout verdict.
-- Push the branch.
+- Verify before final handoff: `git status --short --branch`, `git log --oneline -5`, and `git push -u origin HEAD:story/STORY-QA-012-epic-009-playtest-closeout-review`.
 
 If no code changes are needed after review:
 
@@ -111,7 +111,7 @@ If no code changes are needed after review:
 
 Stop and report instead of guessing if:
 
-- STORY-QA-012 is not `ready` / `approved`.
+- STORY-QA-012 is not `ready` / `approved` or Ambiguity Check is not PASS.
 - You find a blocker that requires new mechanics/design outside this story.
 - Required source files are missing or contradictory.
 - Unity tests or build cannot run and no GitHub Actions path is available.

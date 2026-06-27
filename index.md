@@ -112,7 +112,7 @@
 - [[production/stories/story-base-002-administration-income-chain-and-recruitment-dwellings]] — DONE / merged EPIC-009 income chain and recruitment dwellings story.
 - [[production/stories/story-map-site-001-site-route-base-and-objective-readability-pass]] — DONE / merged EPIC-009 strategic-map readability pass.
 - [[production/stories/story-base-loop-001-base-building-scenario-smoke]] — DONE / merged EPIC-009 connected base-building smoke story.
-- [[production/stories/story-qa-012-epic-009-playtest-and-closeout-review]] — READY-candidate / approval pending EPIC-009 playtest and closeout review.
+- [[production/stories/story-qa-012-epic-009-playtest-and-closeout-review]] — READY / approved current EPIC-009 playtest and closeout review.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

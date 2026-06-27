@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-27] approval | Promote STORY-QA-012 for closeout review
+
+- Human approved `STORY-QA-012 EPIC-009 Playtest and Closeout Review` with: `Approved`.
+- Promoted STORY-QA-012 to READY / approved as the current EPIC-009 closeout/playtest packet.
+- Runnable prompt: `production/sprints/codex-story-qa-012.prompt.txt`.
+- Authorized scope is QA/playability closeout over the merged EPIC-009 strategic-map/base-building surface, with only narrow readability/clickability/evidence fixes allowed if concrete blockers are found.
+- Explicit exclusions remain: new mechanics, facility tiers/costs/effects/resources/factions/units/routes/sites/objectives/victory rules, base capture/siege/garrisons, marketplace, supply, fog, strategic AI, editor UI, tactical combat rule changes, broad UI redesign, or final art/audio/VFX/localization.
+
 ## [2026-06-27] merge | STORY-BASE-LOOP-001 merged and STORY-QA-012 prepared
 
 - Unity PR #83 `STORY-BASE-LOOP-001 Base-Building Scenario Smoke` merged. Merge commit: `e37c2c92d27329020a3d6ae4ce99b4a4767391e4`.

@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-012 EPIC-009 Playtest and Closeout Review
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-27
@@ -19,14 +19,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-QA-012 EPIC-009 Playtest and Closeout Review
 
 ## Status
 
-READY-candidate / approval pending. Drafted after `STORY-BASE-LOOP-001` merged via Unity PR #83 and post-merge Unity Foundation CI passed. This is the recommended EPIC-009 closeout packet, but it is not authorized until a human explicitly approves it and promotes this story to READY / approved.
+READY / approved. Human approved on 2026-06-27 with: `Approved`. This story is authorized as the next EPIC-009 closeout/playtest implementation packet. Approved scope: QA/playability closeout over the merged EPIC-009 strategic-map/base-building surface, with only narrow readability/clickability/evidence fixes allowed if concrete blockers are found.
 
 ## Story type
 
@@ -111,11 +111,13 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS-candidate, blocked on human approval.
+Status: PASS. Human approval recorded 2026-06-27.
 
-Open human decision:
+Human-approved answers:
 
-- Approve this QA/playtest closeout packet as the next step, or give direct playtest verdict in chat and skip a formal Codex QA story.
+1. Run this QA/playtest closeout packet as the next step.
+2. Allow only narrow readability/clickability/evidence fixes directly tied to EPIC-009 commitments.
+3. Record a closeout verdict; do not close EPIC-009 or start a next-epic implementation story without separate human direction.
 
 ## Branch / PR requirements
 
@@ -136,8 +138,8 @@ Open human decision:
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [x] Ambiguity Check status is PASS-candidate.
-- [ ] Human approval has been recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval has been recorded.
 
 ## DONE gate
 
@@ -151,4 +153,4 @@ Open human decision:
 
 ## Verdict
 
-READY-candidate / approval pending. Do not run Codex and do not open a Unity branch until this story is promoted to READY / approved.
+READY / approved for implementation. Use `production/sprints/codex-story-qa-012.prompt.txt`; branch `story/STORY-QA-012-epic-009-playtest-closeout-review`; PR title `STORY-QA-012 EPIC-009 playtest and closeout review`.

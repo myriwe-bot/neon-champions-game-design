@@ -4,8 +4,9 @@ Context:
 - Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 - Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 - Unity branch/PR: story/STORY-BASE-002-administration-income-chain-and-recruitment-dwellings / PR #81
-- Current reviewed branch head before this prompt: 61a4ee8ca7a91c2daad7576e34d1ee28be5ddf65
-- CI at that head passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28282992425
+- Current reviewed branch head before this prompt: 40857f76762cce26d9cc10425e696d3eb91e48b0
+- CI at the previous implementation/test head passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28282993525
+- Latest Unity branch change only ignores local generated `artifacts/` scratch output so Codex/local git status does not treat previous Unity test logs/results as user-authored changes.
 
 Important review findings already fixed in fb9d2fd and 61a4ee8:
 - Dwelling stock refresh now uses matching BaseFacilityEffectDefinition recruitment-unlock effect amount.

@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-27] merge | STORY-TERRAIN-001 strategic terrain tags and layout family contract
+
+- Merged Unity PR #86: https://github.com/myriwe-bot/neon-champions-unity/pull/86
+- Merge commit: `f3ab34c13a1a8190afb660eac58411bfd06b201d`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28297730456
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28298091108
+- Gate fix added regression coverage for unknown tactical layout family IDs and blank terrain/context tag IDs.
+- Marked `STORY-TERRAIN-001` DONE and drafted `STORY-TERRAIN-002` as READY-candidate / approval pending with a guarded prompt.
+
 ## [2026-06-27] control fix | STORY-TERRAIN-001 prompt requires pushed branch and PR
 
 - Merge gate discovery found no remote implementation branch or open PR for `STORY-TERRAIN-001`; implementation review/merge is blocked until Codex pushes actual Unity changes.

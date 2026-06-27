@@ -1,0 +1,52 @@
+# Codex prompt — STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones
+
+GUARD: This prompt is not runnable yet unless `production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md` has `status: ready` and `approval: approved`.
+
+If the story is still `ready-candidate` or approval is still `pending`, stop immediately and report: `BLOCKED: STORY-TERRAIN-002 is not approved for implementation yet.`
+
+When approved, implement only `STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones`.
+
+Required repository context:
+
+- Design/control repo on Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Unity repo on Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Before coding, pull both repos to latest `main` and read:
+
+- `production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md`
+- `production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md`
+- `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+- `design/gdd/tactical-combat.md` §§3-6 and §6.2A
+- `design/gdd/strategic-map.md` §9.5
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+- Unity root `AGENTS.md` and scoped `AGENTS.md` files for touched directories.
+
+Branch:
+
+- `story/STORY-TERRAIN-002-tactical-layout-definitions-deployment-zones`
+
+PR title:
+
+- `STORY-TERRAIN-002 Tactical layout definitions and deployment zones`
+
+Scope:
+
+- Tactical layout definitions keyed by existing layout family IDs.
+- Attacker/defender deployment zones for each layout family.
+- Battle setup `TacticalLayoutFamilyId` selects an authored layout definition.
+- At least two layout families produce distinct deployment patterns.
+- Validation for missing/unknown layout definitions and invalid deployment zones.
+- Evidence under `production/evidence/STORY-TERRAIN-002/`.
+
+Hard out of scope:
+
+- No blockers, cover, hazards, terrain combat modifiers, elevation, LoS rewrite, strategic terrain movement costs, weather, fog, supply, topology rewrite, final art, new units/resources/sites/facilities/objectives, or map editor UI.
+
+Required finish state:
+
+- Commit and push the actual Unity implementation branch.
+- Open/update the PR against `main`.
+- PR body includes story links, implementation summary, tests/evidence, omissions/deferred work, and confirmation that no unauthorized design decisions were introduced.
+- If unable to push/open PR, state exact blocker and leave the local branch committed with `git status --short --branch` output.

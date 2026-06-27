@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-27
@@ -17,14 +17,20 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: approved
+approval: implemented
 ---
 
 # STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-27: "Excellent, now prepare first story for implementation, approved". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
+DONE / merged. Unity PR #86 merged on 2026-06-27.
+
+- PR: https://github.com/myriwe-bot/neon-champions-unity/pull/86
+- Merge commit: `f3ab34c13a1a8190afb660eac58411bfd06b201d`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28297730456
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28298091108
+- Merge-gate fix added during review: battle setup validation now rejects unknown tactical layout family IDs and blank terrain/context tag IDs.
 
 ## Story type
 
@@ -213,16 +219,16 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-001.prompt.txt`.
+DONE / merged. Strategic terrain/context tags and tactical layout-family bridge are implemented and verified. Next candidate: `STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones`.

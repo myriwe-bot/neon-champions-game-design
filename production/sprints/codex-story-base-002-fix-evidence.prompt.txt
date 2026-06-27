@@ -1,0 +1,68 @@
+You are Codex working on Neon Champions Unity. Fix only the remaining merge-gate blockers for STORY-BASE-002 Administration Income Chain and Recruitment Dwellings.
+
+Context:
+- Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Unity branch/PR: story/STORY-BASE-002-administration-income-chain-and-recruitment-dwellings / PR #81
+- Current reviewed branch head before this prompt: fb9d2fd75f69cf121577ee94bf8894a4525bc5db
+- CI at that head passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28282600340
+
+Important review finding already fixed in fb9d2fd:
+- Dwelling stock refresh now uses matching BaseFacilityEffectDefinition recruitment-unlock effect amount.
+- Scenario validation now rejects drift between recruitment unlock effect metadata and the authored offer RequiredFacilityId / StockRefreshPerTurn.
+Do not revert or broaden that fix.
+
+Remaining blockers to clear:
+1. Required STORY-BASE-002 visual evidence is missing from the repo. production/evidence/STORY-BASE-002/README.md names these four PNGs, but production/evidence/STORY-BASE-002/generated/ is not committed:
+   - story-base-002-admin-build-before-income.png
+   - story-base-002-income-feedback.png
+   - story-base-002-dwelling-offer-unlocked.png
+   - story-base-002-dwelling-recruited-result.png
+2. The evidence README still contains stale/pending wording and must be updated after screenshots are actually committed.
+3. PR #81 is Draft and must stay Draft until the evidence commit is pushed and exact-head CI passes again.
+
+Hard rules:
+- Do not fabricate screenshots or copy unrelated images.
+- Do not implement new gameplay scope.
+- Do not touch capture/siege/garrisons, full town tree, upgraded dwellings, marketplace, strategic AI, editor UI, topology rewrite, final art, or victory conditions.
+- If Unity/evidence capture cannot run locally, stop and report the exact blocker. Do not mark ready.
+
+Steps:
+1. In the design repo, update main:
+   git checkout main
+   git pull --ff-only origin main
+2. In the Unity repo, fetch and check out the existing story branch:
+   git fetch origin
+   git checkout story/STORY-BASE-002-administration-income-chain-and-recruitment-dwellings
+   git pull --ff-only origin story/STORY-BASE-002-administration-income-chain-and-recruitment-dwellings
+3. Confirm the branch contains fb9d2fd or a descendant:
+   git log --oneline -5
+4. Run the PlayMode evidence capture for STORY-BASE-002 so the four named PNGs are produced under:
+   production\evidence\STORY-BASE-002\generated\
+   Use the repo's existing PlayMode/evidence command conventions. If available, run:
+   .\ci\RunPlayModeTests.ps1 -neonChampionsEvidenceDir 'production\evidence\STORY-BASE-002\generated'
+   If the script path/argument has changed, inspect the repo and use the correct existing command. Do not invent a new evidence pipeline unless necessary.
+5. Verify the four PNG files exist, are non-empty, and visually correspond to STORY-BASE-002:
+   - admin build before recurring income
+   - income feedback after turn advance
+   - gated dwelling offer unlocked after recruitment facility construction
+   - dwelling recruitment applied/result
+6. Update production/evidence/STORY-BASE-002/README.md:
+   - replace stale Pending lines with the actual local evidence command/result;
+   - mention the exact branch head before pushing;
+   - keep a note that final exact-head CI must be checked after this evidence commit.
+7. Run a local sanity check if possible:
+   - git diff --check
+   - targeted PlayMode evidence command from step 4
+8. Commit and push only the evidence/README changes:
+   git add production/evidence/STORY-BASE-002
+   git commit -m "docs: add STORY-BASE-002 visual evidence"
+   git push origin HEAD
+9. After pushing, do not merge. Report:
+   - new commit SHA
+   - evidence files added
+   - local command result
+   - CI run URL if one started
+   - whether PR #81 is still Draft
+
+If everything passes locally and CI starts, leave the PR for Hermes merge-gate verification. Hermes will mark ready/merge only after exact-head CI and evidence are verified.

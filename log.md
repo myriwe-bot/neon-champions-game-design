@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-27] control | Unity current-task pointer set to STORY-TERRAIN-002
+
+- Unity docs PR #88 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/88
+- Unity pointer commit: `24628c735d8136134f3e04d0b6da79ebe9cf0e34`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28299652374
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28299860776
+- Unity README now points to approved READY implementation story `STORY-TERRAIN-002` and its runnable prompt.
+
 ## [2026-06-27] approval | STORY-TERRAIN-002 tactical layout definitions and deployment zones
 
 - Human approval recorded: "Approved next story".

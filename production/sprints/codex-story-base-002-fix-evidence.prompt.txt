@@ -28,6 +28,11 @@ Hard rules:
 - Do not touch capture/siege/garrisons, full town tree, upgraded dwellings, marketplace, strategic AI, editor UI, topology rewrite, final art, or victory conditions.
 - If Unity/evidence capture cannot run locally, stop and report the exact blocker. Do not mark ready.
 
+Preflight rule for local generated artifacts:
+- The repo intentionally treats `artifacts/` as local CI/test scratch output. Files such as `artifacts/build/unity-build.log`, `artifacts/editmode/results.xml`, `artifacts/editmode/unity-editmode.log`, `artifacts/playmode/results.xml`, `artifacts/playmode/unity-playmode.log`, and `artifacts/validator/unity-validator.log` are generated/disposable evidence-run outputs, not user-authored source changes.
+- If `git status --short` shows only untracked files under `artifacts/`, do not stop. Leave them alone unless an existing repo script overwrites them during normal test/evidence execution. Never commit them.
+- If uncommitted changes exist outside `artifacts/` or the intended `production/evidence/STORY-BASE-002/` paths, stop and report them before editing.
+
 Steps:
 1. In the design repo, update main:
    git checkout main

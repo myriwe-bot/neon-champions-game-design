@@ -1,7 +1,7 @@
 ---
 title: Next Implementation Direction Brief — 2026-06-27
 type: decision-brief
-status: draft
+status: superseded
 phase: production
 owner: shared
 created: 2026-06-27
@@ -41,3 +41,20 @@ Why:
 ## Approval gate
 
 Before implementation, human should choose one direction or provide a different one. Then prepare a new epic plus first READY-candidate story and guarded Codex prompt.
+
+
+## Human decision update — EPIC-010
+
+The initial default recommendation in this brief was superseded by human direction on 2026-06-27. Approved next direction: **Terrain, Tactical Battlefields, and Map-Space Readability**.
+
+Recorded boundary:
+
+- Include strategic-map terrain identity/presentation and tactical-layout-family selection because terrain is being introduced.
+- Put real terrain gameplay first on the tactical map: authored layout families, deployment zones, blockers, simple defensive/cover cells, and readability.
+- Exclude strategic terrain movement costs, supply/logistics, weather, fog/stealth, strategic AI terrain valuation, and topology rewrites.
+
+Prepared artifacts:
+
+- `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+- `production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md`
+- `production/sprints/codex-story-terrain-001.prompt.txt` guarded candidate prompt

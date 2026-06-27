@@ -236,6 +236,60 @@ Out of scope for MVP topology:
 - route construction/destruction systems;
 - final map editor format.
 
+## 9.5 Strategic Terrain and Tactical Battle Context Contract
+
+### EPIC-010 Direction: Strategic Terrain as Presentation/Data, Tactical Terrain as Gameplay
+
+Approved direction 2026-06-27: because the next epic introduces terrain, the strategic map should also gain terrain identity. For this epic, strategic terrain is a readable scenario-authored context layer and tactical-layout bridge, not a strategic movement-rule system.
+
+Rules:
+
+1. Strategic map terrain/context tags describe what kind of place a region, node, route, site, or base-adjacent area represents.
+2. Terrain/context tags may affect presentation, labels, iconography, evidence/debug output, and tactical layout family selection.
+3. Terrain/context tags do **not** add strategic movement costs, movement-type rules, supply/logistics, weather, fog, scouting uncertainty, or strategic AI valuation in EPIC-010.
+4. Current node-route movement, route costs, site interaction, objective flow, recruitment, base/facility behavior, and tactical handoff rules remain authoritative unless a later approved story explicitly changes them.
+5. Strategic battle context should be data-driven and scenario-authored. Implementation must avoid hardcoded one-off map-to-battle switches.
+6. Tactical layout family selection is the first bridge from strategic terrain to tactical play. The tactical board contents themselves are authored by later tactical terrain/layout stories.
+7. Terrain/context tags are prototype/scenario metadata, not final canon geography. Labels should remain data/localization-key friendly for future editor workflows.
+
+Prototype terrain/context tag examples:
+
+| Tag | Use | Notes |
+| --- | --- | --- |
+| `urban_ruins` | ruined settlement / damaged infrastructure | Good for blocked lanes and cover later. |
+| `corporate_facility_zone` | corporate campus, logistics compound, or secured worksite | Supports base-adjacent or facility fights. |
+| `glacier_road` | open Arctic route / ice-road corridor | Good for exposed route clashes. |
+| `data_center_perimeter` | data cache, server yard, sensor perimeter | Natural fit for Intel/data-cache encounters. |
+| `white_sky_exposed_plain` | exposed open area under altered sky | Strong readability/lore tag; no weather mechanics yet. |
+| `base_outskirts` | approach around owned or contested base | Supports fortified-approach tactical layouts. |
+| `infrastructure_hub` | central objective / Treaty-Net / logistics node | Supports objective-heavy battle context. |
+
+Prototype tactical layout family examples:
+
+| Strategic context | Suggested layout family | Initial meaning |
+| --- | --- | --- |
+| Data cache / data-center perimeter | `server_yard` | Authored tactical layout family for data/cache fights. |
+| Base-adjacent site / base outskirts | `fortified_approach` | Defensive approach with deployment clarity. |
+| Route or open connector clash | `open_route_clash` | Exposed road/field fight with fewer blockers. |
+| Central objective / infrastructure hub | `infrastructure_hub` | Objective-focused tactical layout family. |
+
+Validation implications:
+
+- Unknown terrain/context tag IDs should fail validation or be reported clearly.
+- Unknown tactical layout family IDs should fail validation or be reported clearly.
+- A battle context may have a default layout family only if the default is authored/data-visible, not a hidden hardcoded fallback.
+- Evidence for EPIC-010 stories should show which strategic context selected which tactical layout family.
+
+Explicitly out of scope for EPIC-010 strategic terrain:
+
+- strategic terrain movement costs;
+- movement-type modifiers;
+- supply/logistics;
+- weather/climate simulation;
+- fog/stealth/scouting uncertainty;
+- strategic AI terrain valuation;
+- strategic topology rewrite or tile/hex/freeform movement.
+
 ## 10. Site and Infrastructure States
 
 ### Packet D Decision: D Hybrid Site Model

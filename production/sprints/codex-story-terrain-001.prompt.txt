@@ -1,0 +1,114 @@
+# Codex prompt — STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract
+
+You are preparing to implement Neon Champions Unity story `STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract`.
+
+## HARD STOP: approval gate
+
+This prompt is guarded. Before editing Unity code, read the story file. If `production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md` is not marked `status: ready` or `READY / approved` with `approval: approved`, stop immediately and report:
+
+`STORY-TERRAIN-001 is not approved for implementation yet. No Unity changes made.`
+
+Do not bypass this gate.
+
+## Required repository context
+
+Design/control repo on Windows:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Start in the Unity repo after pulling both repos to latest `main`.
+
+## Required reading before coding, after approval is confirmed
+
+Read these files from the design repo before editing Unity code:
+
+- `production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md`
+- `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+- `design/gdd/strategic-map.md` §§9, 9.5, 10
+- `design/gdd/tactical-combat.md` §§3-6 and §6.2A
+- `design/gdd/tactical-combat/statuses-terrain-and-objectives.md` §Terrain Hazards for reference only; hazards are not authorized
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+
+Also read Unity root `AGENTS.md` and any scoped `AGENTS.md` files for directories you touch.
+
+## Branch and PR
+
+Create implementation branch:
+
+- `story/STORY-TERRAIN-001-strategic-terrain-tags-layout-family-contract`
+
+PR title:
+
+- `STORY-TERRAIN-001 Strategic terrain tags and tactical layout family contract`
+
+## In scope
+
+Implement only the approved story scope:
+
+- Strategic terrain/context metadata in scenario-authored map data where current architecture supports it.
+- Prototype, data-driven terrain/context tag IDs.
+- Tactical layout family IDs selected from strategic battle context.
+- Data-driven context-to-layout-family mapping.
+- Validation for missing/unknown terrain tags, layout family IDs, and invalid mappings.
+- Battle setup or equivalent handoff data carrying selected tactical layout family ID.
+- Tests/evidence proving at least two current scenario contexts select distinct layout families.
+- Preserve current strategic map, base/facility, site, recruitment, objective, and tactical handoff behavior.
+
+## Hard out of scope
+
+Do not implement:
+
+- Tactical board cell terrain, deployment zones, blockers, cover, or defensive terrain cells.
+- Strategic terrain movement costs or movement modifiers.
+- Supply/logistics, weather, fog, stealth, scouting uncertainty, or strategic AI terrain valuation.
+- Strategic topology rewrite, tile/hex/freeform movement, route generation, procedural maps, or map editor UI.
+- New units, abilities, Champion Commands/Operations, resources, sites, facility rules, objectives, victory rules, or balance changes.
+- Final art, icons, animation, VFX, audio, or localization pass.
+
+## Allowed placeholders
+
+- Prototype tag IDs, display strings, and layout family IDs if data-driven and documented.
+- Debug/evidence-only display of selected terrain/context and layout family.
+- Existing site/theme labels reused as mapping inputs.
+
+## Acceptance criteria
+
+Satisfy every acceptance criterion in the story file. In particular:
+
+- Current scenario can express terrain/context without changing graph topology.
+- Battle setup or equivalent handoff carries a tactical layout family ID.
+- At least two current scenario contexts select distinct layout families from authored data.
+- Unknown tags/families fail validation clearly.
+- Current movement and existing strategic/tactical loop behavior are preserved.
+
+## Required verification
+
+Run and report:
+
+- Unit tests for validators and mapping behavior.
+- Unity edit-mode tests for scenario data / battle setup loading or validation where applicable.
+- PlayMode smoke if available for handoff carrying selected layout family.
+- Integration/data validation tests for invalid IDs and valid multi-context mapping.
+- Evidence under Unity repo: `production/evidence/STORY-TERRAIN-001/`.
+- Exact-head Unity Foundation CI before merge.
+
+Use TDD for validators and mapping behavior.
+
+## PR body requirements
+
+The PR must include:
+
+- Link to `STORY-TERRAIN-001`.
+- Link to the parent epic and relevant GDD/control docs.
+- Summary of implementation.
+- Tests and evidence run, including paths/URLs.
+- Known omissions/stubs/placeholders/deferred work, or exact statement `No known omissions`.
+- Confirmation that no unauthorized design/architecture decisions were introduced.
+
+Stop and report rather than inventing design if implementation requires tactical terrain cells, strategic movement rules, weather, fog, supply, topology rewrite, or final art decisions.

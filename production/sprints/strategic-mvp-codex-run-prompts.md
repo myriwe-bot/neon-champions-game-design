@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-26
+updated: 2026-06-27
 source_lore: []
 related:
   [
@@ -75,6 +75,8 @@ related:
     production/stories/story-map-real-001-scenario-authored-strategic-map-shell,
     production/stories/story-base-001-base-definition-and-facility-construction-core,
     production/stories/story-base-002-administration-income-chain-and-recruitment-dwellings,
+    production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract,
+    production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability,
   ]
 approval: approved
 ---
@@ -83,15 +85,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings`.
+**Current READY / approved Unity implementation packet:** None. `STORY-TERRAIN-001` is READY-candidate / approval pending with a guarded prompt.
 
-`STORY-INTEL-001`, `STORY-INTEL-002`, `STORY-INTEL-003`, `STORY-INTEL-004`, `STORY-UX-001`, `STORY-QA-005`, `STORY-CMD-001`, `STORY-CMD-002`, `STORY-CMD-003`, `STORY-CMD-004`, `STORY-QA-006`, `STORY-QA-007`, `STORY-CMD-005`, `STORY-STRAT-OBJECTIVE-001`, `STORY-TAC-AP-001`, `STORY-TAC-AI-001`, `STORY-STRAT-READ-002`, `STORY-STRAT-BASE-001`, `STORY-STRAT-MAP-REGION-001`, `STORY-QA-008`, `STORY-ARMY-001`, `STORY-ARMY-002`, `STORY-ARMY-003`, `STORY-ARMY-004`, `STORY-QA-009`, and `STORY-ARMY-005` are DONE / merged. `STORY-QA-010` is DONE / closeout rejected. `STORY-ARMY-006` is DONE / merged. `STORY-QA-011` is DONE / one narrow follow-up. `STORY-ARMY-007` is DONE / merged. EPIC-008 is DONE / closed. EPIC-009 is APPROVED / PLANNED. `STORY-MAP-REAL-001` is DONE / merged. `STORY-BASE-001` is DONE / merged. `STORY-BASE-002` is READY / approved and is the current Unity implementation packet.
+EPIC-009 is DONE / closed. EPIC-010 is APPROVED / PLANNED. `STORY-TERRAIN-001` is READY-candidate / approval pending; no Unity implementation is authorized until it is explicitly promoted to READY / approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-base-002.prompt.txt`. Historical prompt files remain for audit only.
+Current guarded candidate prompt file: `production/sprints/codex-story-terrain-001.prompt.txt`. It must not be run until `STORY-TERRAIN-001` is explicitly approved. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -112,7 +114,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-base-002.prompt.txt` for `STORY-BASE-002`.
+No current READY / approved Unity implementation prompt exists. `production/sprints/codex-story-terrain-001.prompt.txt` is guarded and will self-block until `STORY-TERRAIN-001` is approved.
 
 ## Historical prompt-file runs
 
@@ -186,13 +188,15 @@ Most recent completed prompt-file run:
 
 - `production/sprints/codex-story-base-001.prompt.txt`
 
-Current runnable prompt-file run:
+Most recent completed runnable prompt-file run:
 
 - `production/sprints/codex-story-base-002.prompt.txt`
 
-## Copy-safe STORY-BASE-002 handoff
+## Guarded STORY-TERRAIN-001 handoff
 
-Primary workspace-write run:
+Do not run this as implementation until `STORY-TERRAIN-001` is explicitly approved and promoted to READY. The prompt contains its own hard stop.
+
+Primary workspace-write run after approval only:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -204,11 +208,11 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-base-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted fallback if workspace-write cannot complete required Unity edits:
+Trusted fallback after approval only:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -220,10 +224,6 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-base-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
-
-## After Codex finishes
-
-Codex should produce a PR for `STORY-BASE-002`; review against the story acceptance criteria and require exact-head Unity Foundation CI before merge.

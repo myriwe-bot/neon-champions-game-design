@@ -145,6 +145,38 @@ Approved on 2026-06-04: MVP tactical combat uses a flat **hex grid**. The first 
 | Deployment      | Fast formation/reorder choices are allowed in prepared battles; battle type owns exceptions. |
 | Scouting        | UI must distinguish confirmed enemy information from estimates.                              |
 
+### 6.2A Tactical Battlefield Layout Families and Terrain Cells
+
+Approved direction 2026-06-27 for EPIC-010: tactical battles should happen in readable authored spaces tied to strategic context. The first step is a data contract from strategic terrain/context to tactical layout family; later stories may author concrete deployment zones, blockers, and simple defensive terrain cells.
+
+Rules:
+
+1. Tactical battle setup may carry a `tacticalLayoutFamilyId` selected from strategic battle context.
+2. Layout families describe the kind of battlefield, not final art. Examples: `server_yard`, `fortified_approach`, `open_route_clash`, and `infrastructure_hub`.
+3. MVP tactical layouts remain flat hex boards. No elevation/high-ground or multi-floor rules are introduced by EPIC-010.
+4. Authored tactical layouts may define deployment zones, blocked/obstacle cells, open cells, defensive/cover cells, objective-adjacent cells, and scenario markers.
+5. Blocked/obstacle cells may restrict movement and occupancy once a later story implements board cell terrain.
+6. Defensive/cover cells may provide a tiny explicit defensive modifier only if a later approved story authorizes the exact rule and UI explanation.
+7. Terrain hazards from the detailed terrain article are not automatically authorized by EPIC-010. Hazards require a specific later story.
+8. Tactical terrain should improve movement, range, role, and positioning readability without importing full XCOM simulation.
+9. Movement and attack affordances must show terrain consequences before the player commits AP/movement.
+10. Layout definitions and terrain cells must be data-driven enough for tests, validation, and future editor compatibility.
+
+Initial layout-family meanings:
+
+| Layout family | Strategic source | Initial gameplay/readability purpose |
+| --- | --- | --- |
+| `server_yard` | Data cache, data-center perimeter, sensor/Intel site | Clear lanes, data/infrastructure markers, future Signal hooks. |
+| `fortified_approach` | Base outskirts or defended facility | Deployment contrast, defensive cells, approach pressure. |
+| `open_route_clash` | Route/open connector encounter | Exposed movement/range readability; few blockers. |
+| `infrastructure_hub` | Central objective / Treaty-Net / logistics node | Objective-adjacent cells and contested center readability. |
+
+EPIC-010 first-story boundary:
+
+- `STORY-TERRAIN-001` may add strategic terrain/context tags and tactical layout family selection.
+- It must not implement tactical cell terrain, deployment zones, blockers, cover modifiers, hazards, or new combat rules.
+- Later EPIC-010 stories may implement authored tactical layouts and terrain cells under separate approval.
+
 ### 6.3 AP and Actions
 
 | Rule                    | Contract                                                                                                 |

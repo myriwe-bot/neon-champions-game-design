@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-06-27] planning | Draft EPIC-010 terrain/tactical battlefield direction and STORY-TERRAIN-001
+
+- Human approved the next epic direction: terrain, tactical battlefields, and map-space readability.
+- Created `EPIC-VSLICE-MVP-010 Terrain, Tactical Battlefields, and Map-Space Readability` as APPROVED / PLANNED.
+- Recorded the design boundary: strategic terrain identity/presentation and tactical-layout-family selection are in scope; strategic terrain movement costs, supply/logistics, weather, fog/stealth, strategic AI terrain valuation, and topology rewrites are out of scope.
+- Updated `design/gdd/strategic-map.md` with §9.5 strategic terrain/context contract.
+- Updated `design/gdd/tactical-combat.md` with §6.2A tactical battlefield layout family and terrain-cell contract.
+- Created `STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract` as READY-candidate / approval pending.
+- Added guarded prompt `production/sprints/codex-story-terrain-001.prompt.txt`; no Unity implementation is authorized until STORY-TERRAIN-001 is explicitly approved and promoted to READY.
+- Updated `production/planning/next-implementation-direction-brief-2026-06-27.md`, `production/sprints/strategic-mvp-codex-run-prompts.md`, and `index.md` for discoverability.
+
 ## [2026-06-27] closeout | STORY-QA-012 merged and EPIC-009 closed
 
 - Unity PR #85 `STORY-QA-012 EPIC-009 playtest and closeout review` merged. Merge commit: `8679799b15bf14239f886201de9b6ea440d1b5b3`.

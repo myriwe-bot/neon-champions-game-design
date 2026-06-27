@@ -1,7 +1,7 @@
 ---
 title: STORY-BASE-LOOP-001 Base-Building Scenario Smoke
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-27
@@ -19,14 +19,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # Story: STORY-BASE-LOOP-001 Base-Building Scenario Smoke
 
 ## Status
 
-READY-candidate / approval pending. Drafted after `STORY-MAP-SITE-001` merged via Unity PR #82 and post-merge Unity Foundation CI passed. This is the recommended next EPIC-009 implementation packet, but it is not authorized until a human explicitly approves it and promotes this story to READY / approved.
+READY / approved. Human approved on 2026-06-27 with: `Approved`. This story is authorized as the next EPIC-009 implementation packet. Approved assumptions: keep this as one narrow connected smoke over existing EPIC-009 systems; do not add new mechanics, rules, content, or tactical combat changes.
 
 ## Player value
 
@@ -101,6 +101,13 @@ This is a smoke/connection story, not a new systems story. It should use the exi
 
 Prefer adding one named PlayMode test over broad UI rewrites. If the existing UI already exposes the needed state, assert against existing `StrategicMapPresentationSnapshot` fields and visible text. If a feedback line is missing, add the smallest presentation/session text needed to make the smoke understandable.
 
+## Readiness / ambiguity gate
+
+- [x] Human approval is recorded.
+- [x] Implementer can complete the story without inventing new design, content, rules, balance, UX, canon, or architecture decisions.
+- [x] Existing source systems and exact story scope are enough to implement the smoke.
+- [x] Out-of-scope list blocks likely scope creep.
+
 ## DONE gate
 
 - [ ] Implementation matches approved story scope.
@@ -113,4 +120,4 @@ Prefer adding one named PlayMode test over broad UI rewrites. If the existing UI
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next implementation story after MAP-SITE-001, but not authorized until approved.
+READY / approved for implementation. Use `production/sprints/codex-story-base-loop-001.prompt.txt`.

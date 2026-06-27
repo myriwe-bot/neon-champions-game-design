@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-27] approval | Promote STORY-BASE-LOOP-001 for implementation
+
+- Human approved `STORY-BASE-LOOP-001 Base-Building Scenario Smoke` with: `Approved`.
+- Promoted STORY-BASE-LOOP-001 to READY / approved as the current EPIC-009 implementation packet.
+- Runnable prompt: `production/sprints/codex-story-base-loop-001.prompt.txt`.
+- Authorized scope is one connected smoke over existing EPIC-009 systems: base build, income/recruitment refresh, movement/site interaction or battle, and objective readability.
+- Explicit exclusions remain: new mechanics/content/rules, base capture/siege/garrisons, editor UI, tactical combat rule changes, strategic AI, broad balance changes, or final art/audio/VFX.
+
 ## [2026-06-27] merge | STORY-MAP-SITE-001 merged and STORY-BASE-LOOP-001 prepared
 
 - Unity PR #82 `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass` merged. Merge commit: `c71da60f53ae164e7b53be473e4db9df83b9d923`.

@@ -9,6 +9,7 @@
 - Runnable prompt: `production/sprints/codex-story-qa-012.prompt.txt`.
 - Authorized scope is QA/playability closeout over the merged EPIC-009 strategic-map/base-building surface, with only narrow readability/clickability/evidence fixes allowed if concrete blockers are found.
 - Explicit exclusions remain: new mechanics, facility tiers/costs/effects/resources/factions/units/routes/sites/objectives/victory rules, base capture/siege/garrisons, marketplace, supply, fog, strategic AI, editor UI, tactical combat rule changes, broad UI redesign, or final art/audio/VFX/localization.
+- Unity README current-task pointer updated via PR #84, merged as `5f5803a5f00cbae1ad14ed9dbf8ab1ea462f2687`; exact-head pointer CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28292271313; post-merge main CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28292447268.
 
 ## [2026-06-27] merge | STORY-BASE-LOOP-001 merged and STORY-QA-012 prepared
 

@@ -1,7 +1,7 @@
 ---
 title: STORY-BASE-LOOP-001 Base-Building Scenario Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-27
@@ -26,7 +26,9 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved on 2026-06-27 with: `Approved`. This story is authorized as the next EPIC-009 implementation packet. Approved assumptions: keep this as one narrow connected smoke over existing EPIC-009 systems; do not add new mechanics, rules, content, or tactical combat changes.
+DONE / merged. Unity PR #83 merged 2026-06-27 as `e37c2c92d27329020a3d6ae4ce99b4a4767391e4`; exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28291273686. Post-merge `main` Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28291619707.
+
+Approved scope was one narrow connected smoke over existing EPIC-009 systems: base build, income/recruitment refresh, movement/site interaction or battle, and objective readability. No new mechanics, rules, content, or tactical combat changes were authorized.
 
 ## Player value
 
@@ -110,14 +112,14 @@ Prefer adding one named PlayMode test over broad UI rewrites. If the existing UI
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the story as complete.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the story as complete.
 
 ## Verdict
 
-READY / approved for implementation. Use `production/sprints/codex-story-base-loop-001.prompt.txt`.
+DONE / merged. EPIC-009 implementation train is complete enough for the next QA/playtest closeout candidate: `STORY-QA-012`.

@@ -1,0 +1,117 @@
+# Codex prompt — STORY-QA-012 EPIC-009 Playtest and Closeout Review
+
+You are preparing/reviewing Neon Champions Unity story `STORY-QA-012 EPIC-009 Playtest and Closeout Review`.
+
+## Mandatory preflight — stop if not approved
+
+Before editing Unity files, read:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-qa-012-epic-009-playtest-and-closeout-review.md`
+
+Stop immediately without modifying files unless the story frontmatter says exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Current expected state at prompt creation: `READY-candidate / approval pending`. If that is still true, report that STORY-QA-012 is not authorized yet and stop.
+
+## Repositories
+
+Design/control repo:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity implementation repo:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+## Required reading after approval
+
+Read these before planning or editing:
+
+1. Story authority:
+   - `production/stories/story-qa-012-epic-009-playtest-and-closeout-review.md`
+2. Parent epic:
+   - `production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction.md`
+3. Merged story evidence in Unity:
+   - `production/evidence/STORY-MAP-REAL-001/`
+   - `production/evidence/STORY-BASE-001/`
+   - `production/evidence/STORY-BASE-002/`
+   - `production/evidence/STORY-MAP-SITE-001/`
+   - `production/evidence/STORY-BASE-LOOP-001/`
+4. Design/control:
+   - `design/gdd/strategic-map.md`
+   - `docs/architecture/control-manifest.md`
+   - `docs/architecture/testing-strategy.md`
+   - `docs/architecture/ci-build-automation.md`
+5. Unity repo instructions:
+   - root `README.md`
+   - any applicable `AGENTS.md` files
+
+## Branch and PR
+
+After approval, work in the Unity repo on:
+
+- Branch: `story/STORY-QA-012-epic-009-playtest-closeout-review`
+- PR title: `STORY-QA-012 EPIC-009 playtest and closeout review`
+
+## Authorized scope after approval
+
+This is a QA/playability closeout pass, not a new mechanics packet.
+
+You may:
+
+- Review/run the current EPIC-009 strategic-map/base-building loop at 1280x720.
+- Inspect the complete surface together:
+  - scenario-authored map labels/regions/sites/routes;
+  - owned bases and selected-base panel;
+  - facility build preview/result;
+  - income/recruitment refresh after turn advance;
+  - Champion movement to a meaningful site;
+  - guarded interaction / tactical handoff and return summary;
+  - objective holder/progress/status after the loop.
+- Fix only concrete player-facing readability/clickability blockers directly tied to EPIC-009 commitments.
+- Add or update PlayMode smoke tests and PNG evidence under `production/evidence/STORY-QA-012/` if a fix is made or if new closeout evidence is needed.
+- Record a closeout verdict: `CLOSE EPIC-009`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT / NEEDS HUMAN PLAYTEST`.
+
+Do not add:
+
+- new strategic mechanics;
+- new facility tiers/costs/effects/resources/factions/units/routes/sites/objectives/victory rules;
+- base capture/siege/garrisons, marketplace, supply, fog, strategic AI, editor UI;
+- tactical combat rule changes;
+- full town tree, upgraded dwellings, multi-base economy expansion;
+- broad UI redesign or final art/audio/VFX/localization.
+
+## Required verification after approval
+
+If a Unity branch is opened:
+
+- Placeholder validator must pass.
+- EditMode tests must pass if any application/domain projection changes are made.
+- PlayMode tests must pass if any Unity code/UI/evidence changes are made.
+- Standalone Windows64 build must pass.
+- Commit evidence under `production/evidence/STORY-QA-012/` as needed.
+- Open/update the PR with:
+  - story/design links;
+  - changed files summary;
+  - tests run;
+  - evidence paths;
+  - omissions/deferred work;
+  - closeout verdict.
+- Push the branch.
+
+If no code changes are needed after review:
+
+- Still record what was inspected and why no fix was needed.
+- Preserve a clear closeout verdict.
+- Do not invent new design direction.
+
+## Stop conditions
+
+Stop and report instead of guessing if:
+
+- STORY-QA-012 is not `ready` / `approved`.
+- You find a blocker that requires new mechanics/design outside this story.
+- Required source files are missing or contradictory.
+- Unity tests or build cannot run and no GitHub Actions path is available.

@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-06-27] merge | STORY-BASE-LOOP-001 merged and STORY-QA-012 prepared
+
+- Unity PR #83 `STORY-BASE-LOOP-001 Base-Building Scenario Smoke` merged. Merge commit: `e37c2c92d27329020a3d6ae4ce99b4a4767391e4`.
+- Merge-gate fix replaced stale committed CI placeholder text with exact-head evidence plus final PR verdict.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28291273686.
+- Post-merge `main` Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28291619707.
+- Marked `STORY-BASE-LOOP-001` DONE / merged and moved EPIC-009 to implementation-complete / awaiting QA closeout.
+- Added `STORY-QA-012 EPIC-009 Playtest and Closeout Review` as READY-candidate / approval pending.
+- Guarded prompt: `production/sprints/codex-story-qa-012.prompt.txt`; it self-blocks until human approval promotes the story to READY / approved.
+- Unity current-task pointer will be cleared because no next READY / approved implementation packet exists yet.
+
 ## [2026-06-27] approval | Promote STORY-BASE-LOOP-001 for implementation
 
 - Human approved `STORY-BASE-LOOP-001 Base-Building Scenario Smoke` with: `Approved`.

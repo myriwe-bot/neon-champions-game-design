@@ -11,7 +11,7 @@
 - Marked `STORY-BASE-LOOP-001` DONE / merged and moved EPIC-009 to implementation-complete / awaiting QA closeout.
 - Added `STORY-QA-012 EPIC-009 Playtest and Closeout Review` as READY-candidate / approval pending.
 - Guarded prompt: `production/sprints/codex-story-qa-012.prompt.txt`; it self-blocks until human approval promotes the story to READY / approved.
-- Unity current-task pointer will be cleared because no next READY / approved implementation packet exists yet.
+- Unity current-task pointer cleared in commit `4699938a3c6c9a118592faa64935221c27d180b2`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28291888898.
 
 ## [2026-06-27] approval | Promote STORY-BASE-LOOP-001 for implementation
 

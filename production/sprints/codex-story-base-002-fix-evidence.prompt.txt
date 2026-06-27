@@ -55,10 +55,10 @@ Steps:
 7. Run a local sanity check if possible:
    - git diff --check
    - targeted PlayMode evidence command from step 4
-8. Commit and push only the evidence/README changes:
-   git add production/evidence/STORY-BASE-002
-   git commit -m "docs: add STORY-BASE-002 visual evidence"
-   git push origin HEAD
+8. Commit and push only the evidence/README changes. Use a normal git commit with this exact message, but do not paste this prompt text into a shell as commands:
+   Commit message: docs: add STORY-BASE-002 visual evidence
+   Files to commit: production/evidence/STORY-BASE-002
+   Push target: current HEAD to origin
 9. After pushing, do not merge. Report:
    - new commit SHA
    - evidence files added

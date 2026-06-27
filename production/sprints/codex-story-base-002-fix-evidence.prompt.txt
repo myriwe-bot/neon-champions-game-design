@@ -4,13 +4,14 @@ Context:
 - Design/control repo: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
 - Unity repo: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 - Unity branch/PR: story/STORY-BASE-002-administration-income-chain-and-recruitment-dwellings / PR #81
-- Current reviewed branch head before this prompt: fb9d2fd75f69cf121577ee94bf8894a4525bc5db
-- CI at that head passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28282600340
+- Current reviewed branch head before this prompt: 61a4ee8ca7a91c2daad7576e34d1ee28be5ddf65
+- CI at that head passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28282992425
 
-Important review finding already fixed in fb9d2fd:
+Important review findings already fixed in fb9d2fd and 61a4ee8:
 - Dwelling stock refresh now uses matching BaseFacilityEffectDefinition recruitment-unlock effect amount.
 - Scenario validation now rejects drift between recruitment unlock effect metadata and the authored offer RequiredFacilityId / StockRefreshPerTurn.
-Do not revert or broaden that fix.
+- EditMode regression coverage now verifies preview/failed turn do not mutate income/dwelling stock and opponent-faction bases do not mutate during the active faction's turn.
+Do not revert or broaden those fixes.
 
 Remaining blockers to clear:
 1. Required STORY-BASE-002 visual evidence is missing from the repo. production/evidence/STORY-BASE-002/README.md names these four PNGs, but production/evidence/STORY-BASE-002/generated/ is not committed:

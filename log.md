@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-27] merge | STORY-BASE-002 merged and STORY-MAP-SITE-001 prepared
+
+- Unity PR #81 `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings` merged. Merge commit: `b7cacc0a2848db7b4604aef8f753e0c72ebec813`.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28284395229.
+- Post-merge `main` Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28284706039.
+- Marked `STORY-BASE-002` DONE / merged in design-control.
+- Added `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass` as READY-candidate / approval pending.
+- Guarded prompt: `production/sprints/codex-story-map-site-001.prompt.txt`; it self-blocks until human approval promotes the story to READY / approved.
+
 ## [2026-06-26] merge | STORY-BASE-001 merged and STORY-BASE-002 prepared
 
 - Unity PR #80 `STORY-BASE-001 Base definition and facility construction core` merged. Merge commit: `1185987df42716fe216701329713cf302414d364`.

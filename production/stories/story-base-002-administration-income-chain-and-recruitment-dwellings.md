@@ -1,7 +1,7 @@
 ---
 title: STORY-BASE-002 Administration Income Chain and Recruitment Dwellings
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-26
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Prepared after `STORY-BASE-001` merged via Unity PR #80 and post-merge Unity Foundation CI passed. This story is the next EPIC-009 implementation packet: make constructed base facilities produce the first tiny economy/recruitment effects while preserving the existing map, battle, and objective loop.
+DONE / merged. Unity PR #81 merged as `b7cacc0a2848db7b4604aef8f753e0c72ebec813`; exact-head PR Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28284395229 and post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28284706039.
 
 ## Story type
 
@@ -190,16 +190,16 @@ Out of scope:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes: exact-head PR CI and post-merge `main` CI passed.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Codex may implement only this story scope and must stop rather than expanding into capture/siege, full town tree, upgraded dwellings, marketplace/trading, editor UI, strategic AI, topology rewrite, or final art.
+DONE / merged. STORY-BASE-002 landed in Unity PR #81 and completes the first base income + gated dwelling recruitment implementation slice for EPIC-009.

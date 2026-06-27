@@ -1,0 +1,117 @@
+# Codex prompt — STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass
+
+You are preparing/implementing Neon Champions Unity story `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass`.
+
+## Required repository context
+
+Design/control repo on Windows:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Start in the Unity repo after pulling both repos to latest `main`.
+
+## Approval preflight — mandatory stop condition
+
+Before editing Unity, read this design repo file:
+
+- `production/stories/story-map-site-001-site-route-base-and-objective-readability-pass.md`
+
+Confirm its frontmatter is exactly:
+
+```yaml
+status: ready
+approval: approved
+```
+
+If it is not READY / approved, stop without editing Unity and report the mismatch. A `ready-candidate` / `approval: pending` story is not authorized for implementation.
+
+## Required reading before coding
+
+Read these files from the design repo before editing Unity code:
+
+- `production/stories/story-map-site-001-site-route-base-and-objective-readability-pass.md`
+- `production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction.md`
+- `production/stories/story-map-real-001-scenario-authored-strategic-map-shell.md`
+- `production/stories/story-base-001-base-definition-and-facility-construction-core.md`
+- `production/stories/story-base-002-administration-income-chain-and-recruitment-dwellings.md`
+- `design/gdd/strategic-map.md` §§1-16, especially §§9-12 and §16
+- `design/research/homm-like-strategic-map-topology-reference.md`
+- `production/planning/strategic-map-realism-brief-2026-06-25.md`
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+
+Also read Unity root `AGENTS.md` and any scoped `AGENTS.md` files for directories you touch.
+
+## Branch and PR
+
+Create implementation branch:
+
+- `story/STORY-MAP-SITE-001-site-route-base-and-objective-readability-pass`
+
+PR title:
+
+- `STORY-MAP-SITE-001 Site, route, base, and objective readability pass`
+
+## In scope
+
+Implement only the approved story scope:
+
+- Make bases, sites, objective-relevant sites, routes, and current Champion position easier to distinguish in the strategic map presentation.
+- Improve ownership/faction context for bases and relevant sites.
+- Improve active objective/status text and its connection to visible map/site context.
+- Improve selected base/site panel text, category/ownership clarity, and available action/reason text.
+- Improve route readability without changing route topology, route costs, or legal movement behavior.
+- Add/refine lightweight scenario-authored presentation metadata only if necessary.
+- Preserve existing map movement, site interaction, recruitment, base construction, income, dwelling recruitment, tactical handoff, and objective rules.
+- Add automated semantic coverage where practical for presentation snapshot labels, categories, ownership, objective markers, selected panel content, and available-action text.
+- Add PNG evidence under `production/evidence/STORY-MAP-SITE-001/`.
+
+## Hard out of scope
+
+Do not implement:
+
+- New strategic rules, resources, facility effects, recruitment mechanics, balance changes, or objective rules.
+- Base capture, siege, garrison management, or ownership transfer.
+- Full geography art replacement, final map art, animation, VFX, audio, or final icon polish.
+- Map editor UI.
+- Procedural map generation.
+- Hex/tile/freeform movement rewrite.
+- New sites, objectives, factions, units, victory conditions, or tactical combat changes.
+- Strategic AI construction/recruitment planning.
+
+## Allowed placeholders
+
+- Prototype colors, text labels, simple markers, route line thicknesses, and icon-like shapes are allowed if data-driven or consistent with existing presentation conventions.
+- Placeholder visual/theme keys are allowed if documented.
+- Final art is not required.
+
+## Required verification
+
+Run and report the strongest available checks:
+
+- Unit tests for formatter/helper/presentation-metadata logic if added.
+- EditMode tests for presentation snapshot semantics and data contract preservation where touched.
+- PlayMode smoke/evidence capture for strategic map readability if supported.
+- Existing strategic loop preservation checks.
+- PNG evidence under Unity repo: `production/evidence/STORY-MAP-SITE-001/`.
+- Exact-head Unity Foundation CI before merge.
+
+Use TDD where practical for snapshot/formatter/data-contract changes.
+
+## PR body requirements
+
+The PR must include:
+
+- Link to `STORY-MAP-SITE-001`.
+- Link to relevant GDD/research/control docs.
+- Summary of implementation.
+- Tests and evidence run, including paths/URLs.
+- Known omissions/stubs/placeholders/deferred work, or exact statement `No known omissions`.
+- Confirmation that no unauthorized design/architecture decisions were introduced.
+
+Stop and report rather than inventing design if implementation requires new mechanics, capture/siege/garrisons, editor UI, topology rewrite, final art decisions, or strategic AI.

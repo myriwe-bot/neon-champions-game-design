@@ -1,0 +1,100 @@
+# Codex prompt — STORY-BASE-LOOP-001 Base-Building Scenario Smoke
+
+You are preparing/implementing Neon Champions Unity story `STORY-BASE-LOOP-001 Base-Building Scenario Smoke`.
+
+## Mandatory preflight
+
+Before modifying Unity files, read the design-control story:
+
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-base-loop-001-base-building-scenario-smoke.md`
+
+Hard stop unless the story frontmatter says exactly:
+
+```yaml
+status: ready
+approval: approved
+```
+
+If it is still `ready-candidate` or `approval: pending`, stop and report: `STORY-BASE-LOOP-001 is not approved for implementation.`
+
+## Repos / directories
+
+Design-control repo:
+
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo:
+
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Work in the Unity repo after preflight passes.
+
+## Branch
+
+Create/use:
+
+`story/STORY-BASE-LOOP-001-base-building-scenario-smoke`
+
+PR title:
+
+`STORY-BASE-LOOP-001 Base-building scenario smoke`
+
+## Scope
+
+Implement only the approved story. This is a connected smoke/evidence story over existing EPIC-009 systems.
+
+Allowed:
+
+- one deterministic PlayMode smoke proving base build -> income/recruitment refresh -> movement/site interaction or battle -> objective pressure readability;
+- minimal EditMode/snapshot tests if needed to lock connected loop state;
+- smallest presentation/session feedback additions needed for the smoke to be understandable;
+- committed evidence under `production/evidence/STORY-BASE-LOOP-001/generated/`;
+- evidence README under `production/evidence/STORY-BASE-LOOP-001/README.md`.
+
+Forbidden:
+
+- new mechanics, facility tiers, costs, resources, factions, units, routes, sites, objectives, or victory rules;
+- base capture/siege/garrisons/marketplace/supply/fog/strategic AI/editor UI;
+- tactical combat rule changes;
+- broad refactors or final art/audio/VFX/localization work.
+
+## Required checks
+
+Run and record:
+
+```powershell
+./ci/RunPlaceholderValidator.ps1
+./ci/RunEditModeTests.ps1
+./ci/RunPlayModeTests.ps1 -neonChampionsEvidenceDir "production\evidence\STORY-BASE-LOOP-001\generated"
+./ci/BuildStandaloneWindows64.ps1
+./ci/ValidatePlayModeEvidencePath.ps1
+```
+
+If any check fails, fix within story scope and rerun.
+
+## Evidence expectations
+
+Expected generated screenshots, unless a better exact naming set is justified in the evidence README:
+
+- `production/evidence/STORY-BASE-LOOP-001/generated/story-base-loop-001-base-build-result.png`
+- `production/evidence/STORY-BASE-LOOP-001/generated/story-base-loop-001-income-refresh.png`
+- `production/evidence/STORY-BASE-LOOP-001/generated/story-base-loop-001-move-site-interaction.png`
+- `production/evidence/STORY-BASE-LOOP-001/generated/story-base-loop-001-objective-pressure.png`
+
+Evidence README must include:
+
+- checks run and pass/fail status;
+- manual evidence paths;
+- CI link placeholder or final CI link;
+- changed Unity assets/settings/packages inventory;
+- omissions/deferred work.
+
+## PR expectations
+
+Open a draft PR against `main` when ready for review. Include:
+
+- story link;
+- implementation summary;
+- test/evidence summary;
+- explicit changed asset/settings/package inventory;
+- omissions/deferred work.

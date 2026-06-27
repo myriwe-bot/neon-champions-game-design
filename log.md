@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-27] merge | STORY-MAP-SITE-001 merged and STORY-BASE-LOOP-001 prepared
+
+- Unity PR #82 `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass` merged. Merge commit: `c71da60f53ae164e7b53be473e4db9df83b9d923`.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28288065852.
+- Post-merge `main` Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28288703609.
+- Marked `STORY-MAP-SITE-001` DONE / merged in design-control.
+- Added `STORY-BASE-LOOP-001 Base-Building Scenario Smoke` as READY-candidate / approval pending.
+- Guarded prompt: `production/sprints/codex-story-base-loop-001.prompt.txt`; it self-blocks until human approval promotes the story to READY / approved.
+
 ## [2026-06-27] approval | Promote STORY-MAP-SITE-001 for implementation
 
 - Human approved `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass` with: `Approved`.

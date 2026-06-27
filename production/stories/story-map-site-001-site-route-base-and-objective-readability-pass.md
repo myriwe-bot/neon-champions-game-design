@@ -1,7 +1,7 @@
 ---
 title: STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-27

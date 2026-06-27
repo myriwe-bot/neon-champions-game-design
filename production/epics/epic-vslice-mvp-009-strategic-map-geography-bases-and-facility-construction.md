@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-26
-updated: 2026-06-26
+updated: 2026-06-27
 source_lore: [greenland, blue-monday, white-sky, digital-net]
 related:
   [
@@ -27,7 +27,7 @@ approval: approved
 
 APPROVED / PLANNED. Human direction recorded 2026-06-26: proceed from EPIC-008 closeout into strategic-map geography/readability plus bases and simple resource-costed facility construction. This epic is a capability container only. Agents and Codex may not implement the epic directly; only READY child stories authorize implementation.
 
-Merged child stories: `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell`, `STORY-BASE-001 Base Definition and Facility Construction Core`, and `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings`. Current child story READY / approved: `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass`.
+Merged child stories: `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell`, `STORY-BASE-001 Base Definition and Facility Construction Core`, `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings`, and `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass`. Next child story READY-candidate / approval pending: `STORY-BASE-LOOP-001 Base-Building Scenario Smoke`.
 
 ## Priority tier
 
@@ -152,8 +152,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell](../stories/story-map-real-001-scenario-authored-strategic-map-shell.md) | DONE / merged PR #79 | Data + Presentation + Validation | EPIC-009 approved | Complete: validators/tests, PlayMode evidence, PNG evidence, post-merge CI |
 | [STORY-BASE-001 Base Definition and Facility Construction Core](../stories/story-base-001-base-definition-and-facility-construction-core.md) | DONE / merged PR #80 | Strategic Rules + UI | MAP-REAL-001 DONE | Complete: facility validation, build-command tests, base panel evidence, post-merge CI |
 | [STORY-BASE-002 Administration Income Chain and Recruitment Dwellings](../stories/story-base-002-administration-income-chain-and-recruitment-dwellings.md) | DONE / merged PR #81 | Economy + Recruitment | BASE-001 DONE | Complete: income/recruitment tests, mutation guards, PNG evidence, exact-head and post-merge CI |
-| [STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass](../stories/story-map-site-001-site-route-base-and-objective-readability-pass.md) | READY / approved | Strategic UI + Playability | MAP-REAL-001 and BASE-001/002 DONE | Required: map readability tests and PNG evidence |
-| STORY-BASE-LOOP-001 Base-Building Scenario Smoke | Draft target | Vertical Slice Smoke | Prior EPIC-009 implementation stories DONE | Required: connected loop evidence |
+| [STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass](../stories/story-map-site-001-site-route-base-and-objective-readability-pass.md) | DONE / merged PR #82 | Strategic UI + Playability | MAP-REAL-001 and BASE-001/002 DONE | Complete: readability tests, PNG evidence, exact-head and post-merge CI |
+| [STORY-BASE-LOOP-001 Base-Building Scenario Smoke](../stories/story-base-loop-001-base-building-scenario-smoke.md) | READY-candidate / approval pending | Vertical Slice Smoke | Prior EPIC-009 implementation stories DONE | Required: connected loop evidence |
 | STORY-QA-012 EPIC-009 Playtest and Closeout Review | Draft target | QA + Playability Review | EPIC-009 implementation stories DONE | Required: QA/playtest verdict |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -200,7 +200,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Child stories are identified.
 - [x] Dependencies are known.
 - [x] Major risks are documented.
-- [x] At least one child story has merged. `STORY-MAP-REAL-001` and `STORY-BASE-001` are DONE / merged; `STORY-BASE-002` is READY / approved.
+- [x] At least one child story has merged. `STORY-MAP-REAL-001`, `STORY-BASE-001`, `STORY-BASE-002`, and `STORY-MAP-SITE-001` are DONE / merged; `STORY-BASE-LOOP-001` is READY-candidate / approval pending.
 
 ## Epic DONE gate
 
@@ -225,4 +225,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / PLANNED. `STORY-MAP-REAL-001`, `STORY-BASE-001`, and `STORY-BASE-002` are DONE / merged; `STORY-MAP-SITE-001` is READY / approved as the current Unity implementation packet.
+APPROVED / PLANNED. `STORY-MAP-REAL-001`, `STORY-BASE-001`, `STORY-BASE-002`, and `STORY-MAP-SITE-001` are DONE / merged; `STORY-BASE-LOOP-001` is READY-candidate / approval pending as the recommended next implementation packet.

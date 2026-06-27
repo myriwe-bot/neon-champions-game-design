@@ -99,6 +99,19 @@ Run and report:
 
 Use TDD for validators and mapping behavior.
 
+## Required finish state
+
+Before stopping, commit and push the actual Unity implementation branch, then open or update a GitHub PR.
+
+Required git / GitHub outcome:
+
+- Branch pushed to remote: `story/STORY-TERRAIN-001-strategic-terrain-tags-layout-family-contract`.
+- PR opened against `main` with title: `STORY-TERRAIN-001 Strategic terrain tags and tactical layout family contract`.
+- PR body includes the requirements below.
+- If you cannot push or open a PR, state the exact blocker and leave the local branch committed with `git status --short --branch` output.
+
+Do not stop after only local edits, tests, or evidence generation. A remote branch/PR is required for review.
+
 ## PR body requirements
 
 The PR must include:

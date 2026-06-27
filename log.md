@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-06-27] control fix | STORY-TERRAIN-001 prompt requires pushed branch and PR
+
+- Merge gate discovery found no remote implementation branch or open PR for `STORY-TERRAIN-001`; implementation review/merge is blocked until Codex pushes actual Unity changes.
+- Updated `production/sprints/codex-story-terrain-001.prompt.txt` to require Codex to commit, push the story branch, and open/update a GitHub PR before stopping.
+- Current READY implementation packet remains `STORY-TERRAIN-001`; the story train must not advance to `STORY-TERRAIN-002` until TERRAIN-001 has a reviewable implementation PR and merges.
+
 ## [2026-06-27] approval | Promote STORY-TERRAIN-001 for implementation
 
 - Human approved `STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract` with: `Excellent, now prepare first story for implementation, approved`.

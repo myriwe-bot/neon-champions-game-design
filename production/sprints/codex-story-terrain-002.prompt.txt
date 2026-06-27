@@ -1,10 +1,8 @@
 # Codex prompt — STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones
 
-GUARD: This prompt is not runnable yet unless `production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md` has `status: ready` and `approval: approved`.
+Preflight guard: before coding, confirm `production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch.
 
-If the story is still `ready-candidate` or approval is still `pending`, stop immediately and report: `BLOCKED: STORY-TERRAIN-002 is not approved for implementation yet.`
-
-When approved, implement only `STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones`.
+Implement only `STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones`.
 
 Required repository context:
 
@@ -50,3 +48,11 @@ Required finish state:
 - Open/update the PR against `main`.
 - PR body includes story links, implementation summary, tests/evidence, omissions/deferred work, and confirmation that no unauthorized design decisions were introduced.
 - If unable to push/open PR, state exact blocker and leave the local branch committed with `git status --short --branch` output.
+
+
+Required verification:
+
+- Run focused EditMode/unit tests for layout definition validation, layout-family selection, and deployment-zone assignment.
+- Run or rely on Unity Foundation CI after opening/updating the PR.
+- Produce evidence under `production/evidence/STORY-TERRAIN-002/` showing at least two layout-family contexts and their attacker/defender deployment zones.
+- Keep generated root `artifacts/` output uncommitted; story evidence belongs under `production/evidence/STORY-TERRAIN-002/`.

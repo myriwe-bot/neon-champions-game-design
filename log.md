@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-27] approval | STORY-TERRAIN-002 tactical layout definitions and deployment zones
+
+- Human approval recorded: "Approved next story".
+- Promoted `STORY-TERRAIN-002` from READY-candidate / approval pending to READY / approved.
+- Converted `production/sprints/codex-story-terrain-002.prompt.txt` from guarded candidate prompt to runnable implementation prompt with a frontmatter preflight guard.
+- Next Unity implementation branch: `story/STORY-TERRAIN-002-tactical-layout-definitions-deployment-zones`.
+
 ## [2026-06-27] merge | STORY-TERRAIN-001 strategic terrain tags and layout family contract
 
 - Merged Unity PR #86: https://github.com/myriwe-bot/neon-champions-unity/pull/86

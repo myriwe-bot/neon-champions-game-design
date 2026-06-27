@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001` is DONE / merged. Next recommended packet is `STORY-TERRAIN-002`, currently READY-candidate / approval pending. No Unity implementation is authorized directly by this epic. Agents and Codex may only implement READY child stories.
+APPROVED / IN PROGRESS. `STORY-TERRAIN-001` is DONE / merged. Current READY / approved Unity implementation packet is `STORY-TERRAIN-002`. No Unity implementation is authorized directly by this epic. Agents and Codex may only implement READY child stories.
 
 ## Priority tier
 
@@ -129,7 +129,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract](../stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md) | DONE / merged | Data + Contract + Validation | EPIC-010 approval; EPIC-009 DONE | PR #86; exact-head CI; post-merge CI |
-| [STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones](../stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md) | READY-candidate / approval pending | Tactical Data + Presentation | TERRAIN-001 DONE | Guarded prompt prepared |
+| [STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones](../stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md) | READY / approved | Tactical Data + Presentation | TERRAIN-001 DONE | Runnable prompt prepared |
 | STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain | Draft placeholder | Tactical Rules + UI | TERRAIN-002 DONE | TBD |
 | STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass | Draft placeholder | Tactical UI + Playability | TERRAIN-003 DONE | TBD |
 | STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke | Draft placeholder | Integration Smoke | TERRAIN-001-004 DONE | TBD |
@@ -205,4 +205,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001` is DONE / merged. Next recommended Unity implementation packet: `STORY-TERRAIN-002`, currently READY-candidate / approval pending with a guarded prompt.
+APPROVED / IN PROGRESS. `STORY-TERRAIN-001` is DONE / merged. Current READY / approved Unity implementation packet: `STORY-TERRAIN-002` with a runnable prompt.

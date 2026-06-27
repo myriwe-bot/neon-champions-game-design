@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-27
@@ -17,14 +17,19 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones
 
 ## Status
 
-READY-candidate / approval pending. This is the recommended next implementation packet after `STORY-TERRAIN-001`, but it is not runnable until human approval promotes it to `status: ready` and `approval: approved`.
+READY / approved for Unity implementation. Human approval recorded 2026-06-27: "Approved next story". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
+
+Human-approved answers:
+
+- The listed prototype layout families are sufficient for this story: `server_yard`, `fortified_approach`, `open_route_clash`, and `infrastructure_hub`.
+- Deployment-zone presentation may be implemented with readable labels/markers where practical; text/debug evidence is acceptable for this packet if the zones are visible/testable and the extension point for later terrain cells remains clean.
 
 ## Story type
 
@@ -100,12 +105,11 @@ As a player, I want the tactical battle screen to use authored battlefield layou
 
 ## Ambiguity Check
 
-Status: READY-candidate / pending approval.
+Status: PASS.
 
 Open questions:
 
-- Are the listed prototype layout families sufficient for this story, or should one be deferred if implementation complexity is higher than expected?
-- Should deployment-zone presentation be visible as labels/markers immediately, or is text/debug evidence enough for this packet?
+- None.
 
 Assumptions:
 
@@ -123,7 +127,9 @@ Allowed stubs/mocks:
 
 Human-approved answers:
 
-- None yet. Human approval required before implementation.
+- Approved 2026-06-27 via user instruction: "Approved next story".
+- Use the four listed prototype layout families unless implementation discovers a concrete blocker; if so, report the blocker rather than silently deferring one.
+- Text/debug evidence is acceptable when paired with tests and readable presentation output; do not add full terrain-cell mechanics.
 
 ## Branch / PR requirements
 
@@ -145,8 +151,8 @@ Human-approved answers:
 - [x] Dependencies are listed and satisfied.
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined.
-- [ ] Ambiguity Check status is PASS.
-- [ ] Human implementation approval has been given and recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human implementation approval has been given and recorded.
 
 ## DONE gate
 
@@ -162,4 +168,4 @@ Human-approved answers:
 
 ## Verdict
 
-READY-candidate / approval pending. Guarded Codex prompt prepared at `production/sprints/codex-story-terrain-002.prompt.txt`; it must self-block until this story is approved.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-002.prompt.txt`.

@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-27] approval | Promote STORY-TERRAIN-001 for implementation
+
+- Human approved `STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract` with: `Excellent, now prepare first story for implementation, approved`.
+- Promoted STORY-TERRAIN-001 to READY / approved as the current EPIC-010 Unity implementation packet.
+- Converted `production/sprints/codex-story-terrain-001.prompt.txt` from guarded candidate prompt to runnable implementation prompt.
+- Authorized scope is the strategic terrain/context metadata and tactical layout family bridge only.
+- Explicit exclusions remain: tactical board cell terrain, deployment zones, blockers, cover, hazards, strategic terrain movement costs, supply/logistics, weather, fog/stealth, strategic AI terrain valuation, topology rewrite, new units/abilities/resources/sites/facilities/objectives, final art/audio/VFX/localization.
+- Recorded source-authority note: `design/gdd/tactical-combat/statuses-terrain-and-objectives.md` remains draft/pending and reference-only; it does not authorize hazards or tactical terrain cells.
+
 ## [2026-06-27] planning | Draft EPIC-010 terrain/tactical battlefield direction and STORY-TERRAIN-001
 
 - Human approved the next epic direction: terrain, tactical battlefields, and map-space readability.

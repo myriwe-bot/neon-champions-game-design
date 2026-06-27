@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-27
@@ -17,14 +17,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract
 
 ## Status
 
-READY-candidate / approval pending. Human approved the EPIC-010 direction on 2026-06-27, but this story is not yet authorized for Unity implementation until explicitly promoted to READY / approved.
+READY / approved for Unity implementation. Human approval recorded 2026-06-27: "Excellent, now prepare first story for implementation, approved". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
 
 ## Story type
 
@@ -58,7 +58,7 @@ Exact source references:
 
 ## In scope
 
-Concrete implementation tasks authorized if this candidate is approved:
+Concrete implementation tasks authorized by this READY story:
 
 - Add or formalize strategic terrain/context metadata in scenario-authored map data for map regions, sites, nodes, and/or routes where current architecture supports it.
 - Define stable terrain/context tag IDs suitable for prototype use, such as:
@@ -139,11 +139,11 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate. It becomes READY only after explicit human implementation approval.
+Status: PASS. Human implementation approval recorded 2026-06-27.
 
 Open questions:
 
-- None blocking candidate readiness. Exact final tag names and layout family IDs may be adjusted during implementation only if they remain prototype, data-driven, documented, and do not add gameplay rules.
+- None blocking READY implementation. Exact final tag names and layout family IDs may be adjusted during implementation only if they remain prototype, data-driven, documented, and do not add gameplay rules.
 
 Assumptions:
 
@@ -159,6 +159,16 @@ Allowed stubs/mocks:
 
 - Prototype tag IDs, display strings, and layout family IDs.
 - Debug/evidence-only family display.
+
+Human-approved answers:
+
+1. Promote `STORY-TERRAIN-001` for implementation.
+2. Keep the approved EPIC-010 boundary: strategic terrain identity/layout-family bridge now; no strategic movement terrain rules, tactical terrain cells, hazards, fog, weather, supply, topology rewrite, or final art.
+3. Use the story's listed assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as the implementation contract.
+
+Approved source-authority note:
+
+- `design/gdd/tactical-combat/statuses-terrain-and-objectives.md` remains `draft` / `pending` and is reference-only for terrain terminology and future hazard context. It is not binding implementation authority for this story; hazards and tactical terrain cells remain out of scope.
 
 Human-approved exceptions:
 
@@ -197,9 +207,9 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [x] Required automated tests/validators/PlayMode evidence are listed.
-- [x] Ambiguity Check status is PASS for candidate readiness.
+- [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human implementation approval has been given and recorded.
+- [x] Human implementation approval has been given and recorded.
 
 ## DONE gate
 
@@ -215,4 +225,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate / approval pending. Guarded Codex prompt prepared. Do not run implementation until human explicitly approves `STORY-TERRAIN-001`.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-001.prompt.txt`.

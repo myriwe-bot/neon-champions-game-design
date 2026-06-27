@@ -85,15 +85,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** None. `STORY-TERRAIN-001` is READY-candidate / approval pending with a guarded prompt.
+**Current READY / approved Unity implementation packet:** `STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract`.
 
-EPIC-009 is DONE / closed. EPIC-010 is APPROVED / PLANNED. `STORY-TERRAIN-001` is READY-candidate / approval pending; no Unity implementation is authorized until it is explicitly promoted to READY / approved.
+EPIC-009 is DONE / closed. EPIC-010 is APPROVED / PLANNED. `STORY-TERRAIN-001` is READY / approved as the current Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded candidate prompt file: `production/sprints/codex-story-terrain-001.prompt.txt`. It must not be run until `STORY-TERRAIN-001` is explicitly approved. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-terrain-001.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -114,7 +114,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-No current READY / approved Unity implementation prompt exists. `production/sprints/codex-story-terrain-001.prompt.txt` is guarded and will self-block until `STORY-TERRAIN-001` is approved.
+Use checked-in prompt file `production/sprints/codex-story-terrain-001.prompt.txt` for `STORY-TERRAIN-001`.
 
 ## Historical prompt-file runs
 
@@ -192,11 +192,9 @@ Most recent completed runnable prompt-file run:
 
 - `production/sprints/codex-story-base-002.prompt.txt`
 
-## Guarded STORY-TERRAIN-001 handoff
+## Copy-safe STORY-TERRAIN-001 handoff
 
-Do not run this as implementation until `STORY-TERRAIN-001` is explicitly approved and promoted to READY. The prompt contains its own hard stop.
-
-Primary workspace-write run after approval only:
+Primary workspace-write run:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -212,7 +210,7 @@ $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-ga
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted fallback after approval only:
+Trusted fallback if workspace-write cannot complete required Unity edits:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -227,3 +225,8 @@ git status --short
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
+
+
+## After Codex finishes
+
+Codex should produce a PR for `STORY-TERRAIN-001`; review against the story acceptance criteria and require exact-head Unity Foundation CI before merge.

@@ -1,14 +1,6 @@
 # Codex prompt — STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract
 
-You are preparing to implement Neon Champions Unity story `STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract`.
-
-## HARD STOP: approval gate
-
-This prompt is guarded. Before editing Unity code, read the story file. If `production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md` is not marked `status: ready` or `READY / approved` with `approval: approved`, stop immediately and report:
-
-`STORY-TERRAIN-001 is not approved for implementation yet. No Unity changes made.`
-
-Do not bypass this gate.
+You are implementing the approved Neon Champions Unity story `STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract`.
 
 ## Required repository context
 
@@ -22,7 +14,7 @@ Unity repo on Windows:
 
 Start in the Unity repo after pulling both repos to latest `main`.
 
-## Required reading before coding, after approval is confirmed
+## Required reading before coding
 
 Read these files from the design repo before editing Unity code:
 
@@ -36,6 +28,10 @@ Read these files from the design repo before editing Unity code:
 - `docs/architecture/ci-build-automation.md`
 
 Also read Unity root `AGENTS.md` and any scoped `AGENTS.md` files for directories you touch.
+
+## Source-authority note
+
+`design/gdd/tactical-combat/statuses-terrain-and-objectives.md` is still draft/pending and is reference-only for terminology/future hazard context. It is not binding implementation authority for this story. Do not implement hazards or tactical terrain cells from that file.
 
 ## Branch and PR
 
@@ -69,6 +65,7 @@ Do not implement:
 - Supply/logistics, weather, fog, stealth, scouting uncertainty, or strategic AI terrain valuation.
 - Strategic topology rewrite, tile/hex/freeform movement, route generation, procedural maps, or map editor UI.
 - New units, abilities, Champion Commands/Operations, resources, sites, facility rules, objectives, victory rules, or balance changes.
+- Tactical terrain hazards.
 - Final art, icons, animation, VFX, audio, or localization pass.
 
 ## Allowed placeholders
@@ -86,6 +83,7 @@ Satisfy every acceptance criterion in the story file. In particular:
 - At least two current scenario contexts select distinct layout families from authored data.
 - Unknown tags/families fail validation clearly.
 - Current movement and existing strategic/tactical loop behavior are preserved.
+- Implementation leaves a clean extension point for later authored tactical layout definitions and deployment zones.
 
 ## Required verification
 
@@ -96,6 +94,7 @@ Run and report:
 - PlayMode smoke if available for handoff carrying selected layout family.
 - Integration/data validation tests for invalid IDs and valid multi-context mapping.
 - Evidence under Unity repo: `production/evidence/STORY-TERRAIN-001/`.
+- Standalone Windows64 build if a Unity PR is opened.
 - Exact-head Unity Foundation CI before merge.
 
 Use TDD for validators and mapping behavior.
@@ -111,4 +110,4 @@ The PR must include:
 - Known omissions/stubs/placeholders/deferred work, or exact statement `No known omissions`.
 - Confirmation that no unauthorized design/architecture decisions were introduced.
 
-Stop and report rather than inventing design if implementation requires tactical terrain cells, strategic movement rules, weather, fog, supply, topology rewrite, or final art decisions.
+Stop and report rather than inventing design if implementation requires tactical terrain cells, strategic movement rules, weather, fog, supply, topology rewrite, hazards, or final art decisions.

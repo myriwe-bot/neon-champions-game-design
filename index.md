@@ -114,7 +114,7 @@
 - [[production/stories/story-base-loop-001-base-building-scenario-smoke]] — DONE / merged EPIC-009 connected base-building smoke story.
 - [[production/stories/story-qa-012-epic-009-playtest-and-closeout-review]] — DONE / merged EPIC-009 playtest and closeout review.
 - [[production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability]] — APPROVED / PLANNED terrain, tactical battlefields, and map-space readability epic.
-- [[production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract]] — READY-candidate / approval pending first EPIC-010 story.
+- [[production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract]] — READY / approved first EPIC-010 implementation story.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

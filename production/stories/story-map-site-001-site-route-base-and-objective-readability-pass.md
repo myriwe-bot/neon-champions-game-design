@@ -1,7 +1,7 @@
 ---
 title: STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-27
@@ -20,14 +20,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass
 
 ## Status
 
-READY-candidate / approval pending. Drafted after `STORY-BASE-002` merged via Unity PR #81 and post-merge Unity Foundation CI passed. This is the recommended next EPIC-009 implementation packet, but it is not authorized for Unity implementation until human approval promotes it to READY / approved.
+READY / approved. Human approval recorded 2026-06-27 with message: `Approved`. This story is the current authorized EPIC-009 implementation packet.
 
 ## Story type
 
@@ -134,11 +134,11 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate. Human approval is still pending.
+Status: PASS. Human approval recorded 2026-06-27.
 
 Open questions:
 
-- None blocking candidate drafting.
+- None.
 
 Assumptions:
 
@@ -155,9 +155,14 @@ Allowed stubs/mocks:
 - Prototype visual markers and labels.
 - Placeholder visual/theme keys if data-driven and documented.
 
+Human-approved answers:
+
+- Approved as the next EPIC-009 implementation packet on 2026-06-27.
+- Approved assumptions: readability pass over existing EPIC-009 mechanics; prototype-readable markers/text are acceptable; final art remains deferred; prefer adapting current strategic presentation snapshots and PlayMode evidence capture over introducing a new UI framework.
+
 Human-approved exceptions:
 
-- None yet.
+- None.
 
 ## Branch / PR requirements
 
@@ -194,7 +199,7 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 - [x] Required automated tests/validators/PlayMode evidence are listed.
 - [x] Ambiguity Check status is PASS.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been given or delegated gate approval is recorded.
+- [x] Human approval has been given or delegated gate approval is recorded.
 
 ## DONE gate
 
@@ -210,4 +215,4 @@ PR must explicitly list known omissions, stubs, mocks, assumptions, deferred wor
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next implementation step after STORY-BASE-002, but not yet authorized for Unity implementation.
+READY / approved for Unity implementation. Codex may implement only this story scope and must stop rather than expanding into new mechanics, capture/siege/garrisons, editor UI, topology rewrite, final art, or strategic AI.

@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-27] approval | Promote STORY-MAP-SITE-001 for implementation
+
+- Human approved `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass` with: `Approved`.
+- Promoted STORY-MAP-SITE-001 to READY / approved as the current EPIC-009 implementation packet.
+- Guarded prompt `production/sprints/codex-story-map-site-001.prompt.txt` is now runnable after its READY / approved preflight.
+- Authorized scope is a strategic-map readability pass over existing bases, sites, routes, ownership, objectives, selected panels, and action text.
+- Explicit exclusions remain: new mechanics, capture/siege/garrisons, editor UI, topology rewrite, final art, strategic AI, broad balance changes, or tactical combat changes.
+
 ## [2026-06-27] merge | STORY-BASE-002 merged and STORY-MAP-SITE-001 prepared
 
 - Unity PR #81 `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings` merged. Merge commit: `b7cacc0a2848db7b4604aef8f753e0c72ebec813`.

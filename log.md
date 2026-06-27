@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-06-27] closeout | STORY-QA-012 merged and EPIC-009 closed
+
+- Unity PR #85 `STORY-QA-012 EPIC-009 playtest and closeout review` merged. Merge commit: `8679799b15bf14239f886201de9b6ea440d1b5b3`.
+- Merge-gate fix corrected stale evidence README CI wording; no runtime blocker was found.
+- Exact-head PR Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28293845486.
+- Post-merge `main` Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28294198935.
+- Marked `STORY-QA-012` DONE / merged and closed EPIC-009 as DONE / closed.
+- Added next implementation direction brief: `production/planning/next-implementation-direction-brief-2026-06-27.md`. Recommended default: Champion Assets / Operations depth, pending human direction.
+- Guarded next-direction prompt refreshed: `production/sprints/codex-next-epic-direction-brief.prompt.txt`. No current READY / approved Unity implementation story remains.
+
+
 ## [2026-06-27] approval | Promote STORY-QA-012 for closeout review
 
 - Human approved `STORY-QA-012 EPIC-009 Playtest and Closeout Review` with: `Approved`.

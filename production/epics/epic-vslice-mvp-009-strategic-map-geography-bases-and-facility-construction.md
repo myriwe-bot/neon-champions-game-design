@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-009 Strategic Map Geography, Bases, and Facility Construction
 type: epic
-status: implementation-complete
+status: done
 phase: production
 owner: shared
 created: 2026-06-26
@@ -25,9 +25,9 @@ approval: approved
 
 ## Status
 
-APPROVED / PLANNED. Human direction recorded 2026-06-26: proceed from EPIC-008 closeout into strategic-map geography/readability plus bases and simple resource-costed facility construction. This epic is a capability container only. Agents and Codex may not implement the epic directly; only READY child stories authorize implementation.
+DONE / closed. Human direction recorded 2026-06-26; EPIC-009 closed 2026-06-27 after QA-012 closeout. Strategic-map geography/readability, bases, simple facility construction, income/recruitment feedback, connected base-building smoke, and QA evidence are complete for this vertical-slice scope.
 
-Merged child stories: `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell`, `STORY-BASE-001 Base Definition and Facility Construction Core`, `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings`, `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass`, and `STORY-BASE-LOOP-001 Base-Building Scenario Smoke`. Current child story READY / approved: `STORY-QA-012 EPIC-009 Playtest and Closeout Review`.
+Merged child stories: `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell`, `STORY-BASE-001 Base Definition and Facility Construction Core`, `STORY-BASE-002 Administration Income Chain and Recruitment Dwellings`, `STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass`, `STORY-BASE-LOOP-001 Base-Building Scenario Smoke`, and `STORY-QA-012 EPIC-009 Playtest and Closeout Review`.
 
 ## Priority tier
 
@@ -154,7 +154,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-BASE-002 Administration Income Chain and Recruitment Dwellings](../stories/story-base-002-administration-income-chain-and-recruitment-dwellings.md) | DONE / merged PR #81 | Economy + Recruitment | BASE-001 DONE | Complete: income/recruitment tests, mutation guards, PNG evidence, exact-head and post-merge CI |
 | [STORY-MAP-SITE-001 Site, Route, Base, and Objective Readability Pass](../stories/story-map-site-001-site-route-base-and-objective-readability-pass.md) | DONE / merged PR #82 | Strategic UI + Playability | MAP-REAL-001 and BASE-001/002 DONE | Complete: readability tests, PNG evidence, exact-head and post-merge CI |
 | [STORY-BASE-LOOP-001 Base-Building Scenario Smoke](../stories/story-base-loop-001-base-building-scenario-smoke.md) | DONE / merged PR #83 | Vertical Slice Smoke | Prior EPIC-009 implementation stories DONE | Complete: connected loop evidence, exact-head and post-merge CI |
-| [STORY-QA-012 EPIC-009 Playtest and Closeout Review](../stories/story-qa-012-epic-009-playtest-and-closeout-review.md) | READY / approved | QA + Playability Review | EPIC-009 implementation stories DONE | Required: QA/playtest verdict |
+| [STORY-QA-012 EPIC-009 Playtest and Closeout Review](../stories/story-qa-012-epic-009-playtest-and-closeout-review.md) | DONE / merged PR #85 | QA + Playability Review | EPIC-009 implementation stories DONE | Complete: QA closeout evidence, exact-head and post-merge CI; verdict CLOSE EPIC-009 |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -200,18 +200,18 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Child stories are identified.
 - [x] Dependencies are known.
 - [x] Major risks are documented.
-- [x] At least one child story has merged. `STORY-MAP-REAL-001`, `STORY-BASE-001`, `STORY-BASE-002`, `STORY-MAP-SITE-001`, and `STORY-BASE-LOOP-001` are DONE / merged; `STORY-QA-012` is READY / approved.
+- [x] All required child stories have merged: `STORY-MAP-REAL-001`, `STORY-BASE-001`, `STORY-BASE-002`, `STORY-MAP-SITE-001`, `STORY-BASE-LOOP-001`, and `STORY-QA-012`.
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented. No known closeout blocker remains.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
+- [x] Human review accepts the epic as complete by merge/closeout instruction and QA-012 CLOSE EPIC verdict.
 
 ## Anti-pattern check
 
@@ -225,4 +225,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-IMPLEMENTATION COMPLETE / awaiting human QA closeout. EPIC-009 implementation stories through `STORY-BASE-LOOP-001` are DONE / merged. `STORY-QA-012` is READY / approved as the current closeout/playtest packet.
+DONE / closed. EPIC-009 is accepted as complete after QA-012 closeout. Unity PR #85 merged as `8679799b15bf14239f886201de9b6ea440d1b5b3`; exact-head CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28293845486 and post-merge main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28294198935. No current READY / approved Unity implementation story remains.

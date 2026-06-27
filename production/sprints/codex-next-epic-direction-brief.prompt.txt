@@ -1,11 +1,10 @@
 Prepare the next Neon Champions implementation direction brief, but do not implement Unity runtime changes yet.
 
 Current state:
-- EPIC-VSLICE-MVP-008 faction armies / recruitment / tactical role identity is DONE / closed.
-- Final repair STORY-ARMY-007 merged in Unity PR #77 as `14f1312198958b971d24582302a0ac38d7cef6ae`.
-- STORY-ARMY-007 post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28191824791.
-- Unity README current-task pointer cleanup merged in PR #78 as `f92ed63c0a8ae61bfbf685aa121b4cd0d15846ec`.
-- Pointer-cleanup post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28192659752.
+- EPIC-VSLICE-MVP-009 strategic map geography, bases, and facility construction is DONE / closed.
+- Final QA closeout STORY-QA-012 merged in Unity PR #85 as `8679799b15bf14239f886201de9b6ea440d1b5b3`.
+- STORY-QA-012 exact-head Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28293845486.
+- STORY-QA-012 post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28294198935.
 - There is no current READY / approved Unity implementation story.
 
 Stop conditions:
@@ -17,18 +16,17 @@ Stop conditions:
 Task:
 1. Pull latest game-design and Unity main.
 2. Read:
-   - production/epics/epic-vslice-mvp-008-faction-armies-recruitment-and-tactical-role-identity.md
-   - production/stories/story-army-007-strategic-map-pan-input-repair.md
-   - production/sprints/strategic-mvp-codex-run-prompts.md
+   - production/epics/epic-vslice-mvp-009-strategic-map-geography-bases-and-facility-construction.md
+   - production/stories/story-qa-012-epic-009-playtest-and-closeout-review.md
+   - production/planning/next-implementation-direction-brief-2026-06-27.md
    - design/gdd/strategic-map.md
    - design/gdd/tactical-combat.md
    - design/gdd/faction-unit-rosters.md
    - design/gdd/intel-resource.md
 3. Prepare a concise human decision brief for the next implementation direction:
-   - confirm EPIC-008 is closed and no READY Unity task is active;
+   - confirm EPIC-009 is closed and no READY Unity task is active;
    - propose 2-4 next directions, explicitly marked not READY until approved;
-   - include plausible options such as Champion Assets/Operations depth, Intel/upgrades, deeper tactical systems, strategic economy/base depth, or strategic-map realism/readability continuation;
-   - note that Champion Command on-ramp already exists, so if recommending Champion Assets/Operations, frame it as the next deeper Champion-identity/asset layer rather than repeating EPIC-005;
+   - include plausible options such as Champion Assets/Operations depth, Intel/dirty-information layer, deeper tactical systems, or strategic economy/base depth;
    - recommend one default next direction in 3-5 bullets.
 4. If asked to draft a story after the human chooses a direction, create it as DRAFT / READY-candidate first unless the human explicitly approves implementation.
 

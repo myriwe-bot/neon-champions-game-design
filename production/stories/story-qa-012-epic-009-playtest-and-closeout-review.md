@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-012 EPIC-009 Playtest and Closeout Review
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-27
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approved on 2026-06-27 with: `Approved`. This story is authorized as the next EPIC-009 closeout/playtest implementation packet. Approved scope: QA/playability closeout over the merged EPIC-009 strategic-map/base-building surface, with only narrow readability/clickability/evidence fixes allowed if concrete blockers are found.
+DONE / merged. Unity PR #85 merged on 2026-06-27 as `8679799b15bf14239f886201de9b6ea440d1b5b3`. Merge-gate verdict: PASS. Closeout verdict: CLOSE EPIC-009. Approved scope remained QA/playability closeout over the merged EPIC-009 strategic-map/base-building surface, with only narrow readability/clickability/evidence fixes allowed if concrete blockers were found.
 
 ## Story type
 
@@ -93,12 +93,12 @@ Not authorized by this story:
 
 ## Acceptance criteria
 
-- [ ] The merged EPIC-009 loop can be reviewed on current Unity `main` at 1280x720.
-- [ ] The review explicitly addresses map/site/base/route readability, base facility construction, income/recruitment refresh, movement/site interaction or battle, and objective pressure.
-- [ ] Any concrete in-scope closeout blocker discovered is fixed narrowly and covered by PlayMode/regression evidence.
-- [ ] Evidence under `production/evidence/STORY-QA-012/` documents the final inspected/fixed surface, or the story records why existing evidence was sufficient.
-- [ ] Unity Foundation CI passes at exact PR head before merge if any Unity branch is created.
-- [ ] Closeout verdict states whether EPIC-009 can close, needs one narrow follow-up, or should pause for human playtest.
+- [x] The merged EPIC-009 loop can be reviewed on current Unity `main` at 1280x720.
+- [x] The review explicitly addresses map/site/base/route readability, base facility construction, income/recruitment refresh, movement/site interaction or battle, and objective pressure.
+- [x] Any concrete in-scope closeout blocker discovered is fixed narrowly and covered by PlayMode/regression evidence. No runtime blocker was found; merge-gate fix only corrected stale evidence README CI wording.
+- [x] Evidence under `production/evidence/STORY-QA-012/` documents the final inspected surface.
+- [x] Unity Foundation CI passed at exact PR head before merge: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28293845486.
+- [x] Closeout verdict recorded: CLOSE EPIC-009.
 
 ## Verification requirements
 
@@ -143,14 +143,14 @@ Human-approved answers:
 
 ## DONE gate
 
-- [ ] Review/implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists or sufficient inherited evidence is documented.
-- [ ] Required tests/CI pass or human-approved exceptions are documented.
-- [ ] Closeout verdict is recorded.
-- [ ] PR/code review is complete if a Unity branch is opened.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Review/implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists under Unity `production/evidence/STORY-QA-012/`.
+- [x] Required tests/CI pass. Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28293845486. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28294198935.
+- [x] Closeout verdict is recorded: CLOSE EPIC-009.
+- [x] PR/code review is complete: Unity PR #85.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for implementation. Use `production/sprints/codex-story-qa-012.prompt.txt`; branch `story/STORY-QA-012-epic-009-playtest-closeout-review`; PR title `STORY-QA-012 EPIC-009 playtest and closeout review`.
+DONE / merged. Unity PR #85: https://github.com/myriwe-bot/neon-champions-unity/pull/85. Merge commit: `8679799b15bf14239f886201de9b6ea440d1b5b3`. Exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28293845486. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28294198935. Closeout verdict: CLOSE EPIC-009; no known closeout blocker remains.

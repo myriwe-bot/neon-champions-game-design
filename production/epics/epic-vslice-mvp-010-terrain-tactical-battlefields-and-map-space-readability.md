@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001` and `STORY-TERRAIN-002` are DONE / merged. Current READY / approved Unity implementation packet is `STORY-TERRAIN-003`. No Unity implementation is authorized directly by this epic. Agents and Codex may only implement READY child stories.
+APPROVED / IN PROGRESS. `STORY-TERRAIN-001`, `STORY-TERRAIN-002`, and `STORY-TERRAIN-003` are DONE / merged. No current READY / approved Unity implementation packet is active. Next candidate is `STORY-TERRAIN-004`, approval pending. No Unity implementation is authorized directly by this epic. Agents and Codex may only implement READY child stories.
 
 ## Priority tier
 
@@ -130,8 +130,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract](../stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md) | DONE / merged | Data + Contract + Validation | EPIC-010 approval; EPIC-009 DONE | PR #86; exact-head CI; post-merge CI |
 | [STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones](../stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md) | DONE / merged | Tactical Data + Presentation | TERRAIN-001 DONE | PR #89; exact-head CI; post-merge CI |
-| [STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain](../stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md) | READY / approved | Tactical Rules + UI | TERRAIN-002 DONE | Runnable prompt prepared |
-| STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass | Draft placeholder | Tactical UI + Playability | TERRAIN-003 DONE | TBD |
+| [STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain](../stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md) | DONE / merged | Tactical Rules + UI | TERRAIN-002 DONE | PR #92; exact-head CI; post-merge CI |
+| [STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass](../stories/story-terrain-004-range-threat-and-terrain-readability-pass.md) | READY-candidate / approval pending | Tactical UI + Playability | TERRAIN-003 DONE | Guarded prompt prepared |
 | STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke | Draft placeholder | Integration Smoke | TERRAIN-001-004 DONE | TBD |
 | STORY-QA-013 EPIC-010 Playtest and Closeout Review | Draft placeholder | QA + Playability Review | EPIC-010 implementation stories DONE | TBD |
 
@@ -205,4 +205,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001` and `STORY-TERRAIN-002` are DONE / merged. Current READY / approved Unity implementation packet: `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain` with a runnable prompt.
+APPROVED / IN PROGRESS. `STORY-TERRAIN-001`, `STORY-TERRAIN-002`, and `STORY-TERRAIN-003` are DONE / merged. Next candidate: `STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass`, guarded until human approval.

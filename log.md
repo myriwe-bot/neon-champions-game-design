@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-06-28] merge | STORY-TERRAIN-003 merged and STORY-TERRAIN-004 prepared
+
+- Unity PR #92 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/92
+- Merge commit: `74badf31fc10a91dbd8723242263be6d39b94711`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28325537773
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28326050382
+- Merge-gate fix replaced stale committed CI placeholder wording with PR-comment exact-head CI evidence.
+- Marked `STORY-TERRAIN-003` DONE / merged in design-control.
+- Added `STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-terrain-004.prompt.txt`. No next Unity implementation story is currently READY / approved.
+
 ## [2026-06-28] approval | STORY-TERRAIN-003 tactical blockers and simple defensive terrain
 
 - Human approval recorded: "Approved next story".

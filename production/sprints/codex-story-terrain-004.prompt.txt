@@ -1,0 +1,48 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Preflight guard: before coding, confirm `production/stories/story-terrain-004-range-threat-and-terrain-readability-pass.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch. This prompt is currently guarded because the story is a READY-candidate / approval pending.
+
+Repository context:
+- Design/control repo: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Unity repo: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+- Unity branch: `story/STORY-TERRAIN-004-range-threat-terrain-readability-pass`
+- PR title: `STORY-TERRAIN-004 Range threat and terrain readability pass`
+
+Required source authority:
+1. `production/stories/story-terrain-004-range-threat-and-terrain-readability-pass.md`
+2. `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+3. `design/gdd/tactical-combat.md` §§3-6 and §6.2A
+4. `docs/architecture/control-manifest.md`
+5. `docs/architecture/testing-strategy.md`
+6. `docs/architecture/ci-build-automation.md`
+7. Unity repo `AGENTS.md` and `README.md`
+
+Implementation scope:
+- Improve existing tactical presentation snapshots/UI/debug text so the active stack's legal movement, attack targets, attack range, and non-attackable enemies are readable together with terrain cells.
+- Surface blocked cells as explicitly non-movable / non-occupiable in labels or summaries.
+- Surface defensive cells as readability-only prototype terrain cells, not cover/damage effects.
+- Add concise terrain/range/threat summaries connecting selected layout family, deployment zones, blocked terrain, defensive terrain, current stack, legal moves, legal targets, and out-of-range enemies.
+- Add tests/evidence for at least two layout-family contexts.
+
+Strict exclusions:
+- Do not add or alter movement, attack, damage, AP, Defend, retaliation, Sensor Lock, CombatAI, battle-end, strategic result, or objective mechanics.
+- Do not implement elevation, LoS rewrite, overwatch, destructible terrain, hazards, weather, fog, supply, strategic terrain movement costs, topology changes, strategic AI terrain valuation, cover system, facing, ranged accuracy, broad damage formula changes, final art, localization, or map editor UI.
+
+Required verification:
+- EditMode tests for presentation snapshot summaries/markers in at least two terrain layout-family contexts.
+- PlayMode smoke or equivalent evidence proving UI-visible range/threat/readability text/markers with blocked and defensive terrain.
+- Evidence under `production/evidence/STORY-TERRAIN-004/`.
+- Run available local checks. If local Unity cannot run, explain and still push the branch/PR for GitHub Actions.
+
+Required git/PR behavior:
+- Create or update branch `story/STORY-TERRAIN-004-range-threat-terrain-readability-pass`.
+- Commit scoped changes.
+- Push the branch.
+- Open or update a GitHub PR titled `STORY-TERRAIN-004 Range threat and terrain readability pass`.
+- PR body must include summary, tests/checks run, evidence paths, omissions/deferred work, and CI status if available.
+
+Stop conditions:
+- Stop if story frontmatter is not READY / approved.
+- Stop if unrelated uncommitted changes exist.
+- Stop if implementation requires excluded mechanics or design decisions.
+- Stop if required source docs are missing or contradictory.

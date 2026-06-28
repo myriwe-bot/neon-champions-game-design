@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-28
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-28: "Approved next story". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
+DONE / merged. Unity PR #92 merged on 2026-06-28 as `74badf31fc10a91dbd8723242263be6d39b94711`; exact-head PR CI and post-merge main CI passed.
 
 ## Story type
 
@@ -82,14 +82,14 @@ As a player, I want tactical battlefields to contain a few readable blocked and 
 
 ## Acceptance criteria
 
-- [ ] Authored layout definitions can express blocked and simple defensive terrain cells per layout family.
-- [ ] Blocked cells are present in board state or presentation snapshots and are not legal movement destinations.
-- [ ] Defensive cells are present in board state or presentation snapshots and have either a narrow tested prototype effect or a clearly documented inert/readability-only behavior.
-- [ ] At least two layout families produce visibly/testably distinct terrain-cell patterns.
-- [ ] Invalid terrain cell definitions fail validation clearly.
-- [ ] Existing tactical loop behavior remains intact outside the scoped blocker/defensive-cell behavior.
-- [ ] Evidence shows selected layout family plus blocked/defensive cells for at least two contexts.
-- [ ] The implementation leaves a clean extension point for `STORY-TERRAIN-004` range, threat, and terrain readability.
+- [x] Authored layout definitions can express blocked and simple defensive terrain cells per layout family.
+- [x] Blocked cells are present in board state or presentation snapshots and are not legal movement destinations.
+- [x] Defensive cells are present in board state or presentation snapshots and have either a narrow tested prototype effect or a clearly documented inert/readability-only behavior.
+- [x] At least two layout families produce visibly/testably distinct terrain-cell patterns.
+- [x] Invalid terrain cell definitions fail validation clearly.
+- [x] Existing tactical loop behavior remains intact outside the scoped blocker/defensive-cell behavior.
+- [x] Evidence shows selected layout family plus blocked/defensive cells for at least two contexts.
+- [x] The implementation leaves a clean extension point for `STORY-TERRAIN-004` range, threat, and terrain readability.
 
 ## Verification requirements
 
@@ -152,16 +152,25 @@ Human-approved answers:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-003.prompt.txt`.
+DONE / merged via Unity PR #92. Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28325537773. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28326050382.
+
+
+## Merge evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/92
+- Merge commit: `74badf31fc10a91dbd8723242263be6d39b94711`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28325537773
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28326050382
+- Evidence: `production/evidence/STORY-TERRAIN-003/README.md` in the Unity repo.

@@ -8,6 +8,10 @@
 - Promoted `STORY-TERRAIN-003` from READY-candidate / approval pending to READY / approved.
 - Converted `production/sprints/codex-story-terrain-003.prompt.txt` from guarded candidate prompt to runnable implementation prompt with a frontmatter preflight guard.
 - Next Unity implementation branch: `story/STORY-TERRAIN-003-tactical-blockers-simple-defensive-terrain`.
+- Unity README pointer PR #91 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/91
+- Unity pointer commit: `f69abad121f3d51b3017226342ce7e8976383201`
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28319294795
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28319455284
 
 ## [2026-06-28] merge | STORY-TERRAIN-002 merged and STORY-TERRAIN-003 prepared
 

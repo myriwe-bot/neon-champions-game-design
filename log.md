@@ -8,6 +8,14 @@
 - Promoted `STORY-TERRAIN-005` from READY-candidate / approval pending to READY / approved.
 - Converted `production/sprints/codex-story-terrain-005.prompt.txt` from guarded candidate prompt to runnable implementation prompt with a frontmatter preflight guard.
 - Next Unity implementation branch: `story/STORY-TERRAIN-005-strategic-context-tactical-battlefield-smoke`.
+- Unity README pointer PR #97 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/97
+- Unity pointer commit: `034f7acff3006840eef4b9dd3da6644e6077f399`
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28331924619
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28332056860
+- Unity README pointer PR #97 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/97
+- Unity pointer commit: `034f7acff3006840eef4b9dd3da6644e6077f399`
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28331846024
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28332056860
 
 ## [2026-06-28] merge | STORY-TERRAIN-004 merged and STORY-TERRAIN-005 prepared
 

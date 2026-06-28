@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-28
@@ -20,14 +20,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed next EPIC-010 Unity implementation packet after `STORY-TERRAIN-004`; no Unity implementation is authorized until a human explicitly promotes this story to READY / approved.
+READY / approved for Unity implementation. Human approval recorded 2026-06-28: "aPPROVED". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
 
 ## Story type
 
@@ -92,7 +92,7 @@ As a player, I want the strategic place I choose to attack to visibly carry thro
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate review; implementation remains blocked until human approval.
+Status: PASS.
 
 Open questions:
 
@@ -111,6 +111,12 @@ Out of scope:
 Allowed stubs/mocks:
 
 - Prototype labels, colors, debug/evidence markers generated from real runtime state.
+
+Human-approved answers:
+
+- Approved 2026-06-28 via user instruction: "aPPROVED".
+- Use the story's listed assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as the implementation contract.
+- Keep this story integration-smoke/readability-only; do not add new strategic or tactical mechanics.
 
 ## Branch / PR requirements
 
@@ -133,7 +139,7 @@ Allowed stubs/mocks:
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined.
 - [x] Ambiguity Check status is PASS for candidate review.
-- [ ] Human implementation approval has been given and recorded.
+- [x] Human implementation approval has been given and recorded.
 
 ## DONE gate
 
@@ -149,4 +155,4 @@ Allowed stubs/mocks:
 
 ## Verdict
 
-READY-candidate / approval pending. Guarded Codex prompt prepared at `production/sprints/codex-story-terrain-005.prompt.txt`; it must self-block until human approval promotes this story to READY / approved.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-005.prompt.txt`.

@@ -205,4 +205,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001`, `STORY-TERRAIN-002`, and `STORY-TERRAIN-003` are DONE / merged. Current READY / approved Unity implementation packet: `STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke` with a runnable prompt.
+APPROVED / IN PROGRESS. `STORY-TERRAIN-001`, `STORY-TERRAIN-002`, `STORY-TERRAIN-003`, and `STORY-TERRAIN-004` are DONE / merged. Current READY / approved Unity implementation packet: `STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke` with a runnable prompt.

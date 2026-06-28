@@ -117,7 +117,8 @@
 - [[production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract]] — DONE / merged first EPIC-010 implementation story.
 - [[production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones]] — DONE / merged EPIC-010 tactical layout definitions and deployment zones story.
 - [[production/stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain]] — DONE / merged EPIC-010 terrain-cell packet.
-- [[production/stories/story-terrain-004-range-threat-and-terrain-readability-pass]] — READY / approved next EPIC-010 tactical readability packet.
+- [[production/stories/story-terrain-004-range-threat-and-terrain-readability-pass]] — DONE / merged EPIC-010 range/threat/terrain readability packet.
+- [[production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke]] — READY-candidate / approval pending next EPIC-010 integration smoke packet.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

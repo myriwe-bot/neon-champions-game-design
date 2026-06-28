@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-28
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-28: "Approved next story". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
+DONE / merged. Unity PR #95 merged on 2026-06-28 as `88f7fca9ec1ab30bc9d58a5ad0f09de8ca802987`; exact-head PR CI and post-merge main CI passed.
 
 ## Story type
 
@@ -76,13 +76,13 @@ As a player, I want the tactical board to clearly show movement range, attack ra
 
 ## Acceptance criteria
 
-- [ ] Active-stack movement range and legal movement destinations are visible/readable in presentation snapshots and UI/evidence.
-- [ ] Active-stack attack range, legal attack targets, and out-of-range/non-attackable enemies are visible/readable in presentation snapshots and UI/evidence.
-- [ ] Blocked terrain is clearly presented as not movable/occupiable and does not appear as a legal movement destination.
-- [ ] Defensive terrain is clearly presented as readability-only prototype terrain, with no implied cover/damage effect.
-- [ ] At least two layout-family contexts produce evidence showing terrain plus range/threat/readability output.
-- [ ] Existing tactical mechanics remain unchanged outside presentation/readability and evidence surfaces.
-- [ ] Evidence and tests distinguish this readability pass from future LoS/cover/hazard systems.
+- [x] Active-stack movement range and legal movement destinations are visible/readable in presentation snapshots and UI/evidence.
+- [x] Active-stack attack range, legal attack targets, and out-of-range/non-attackable enemies are visible/readable in presentation snapshots and UI/evidence.
+- [x] Blocked terrain is clearly presented as not movable/occupiable and does not appear as a legal movement destination.
+- [x] Defensive terrain is clearly presented as readability-only prototype terrain, with no implied cover/damage effect.
+- [x] At least two layout-family contexts produce evidence showing terrain plus range/threat/readability output.
+- [x] Existing tactical mechanics remain unchanged outside presentation/readability and evidence surfaces.
+- [x] Evidence and tests distinguish this readability pass from future LoS/cover/hazard systems.
 
 ## Verification requirements
 
@@ -144,16 +144,26 @@ Human-approved answers:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-004.prompt.txt`.
+DONE / merged via Unity PR #95. Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28330459722. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28330933532.
+
+
+## Merge evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/95
+- Merge commit: `88f7fca9ec1ab30bc9d58a5ad0f09de8ca802987`
+- Merge-gate fix: patched committed evidence wording to avoid a stale CI-pending/self-reference loop; final exact-head CI was recorded on the PR.
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28330459722
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28330933532
+- Evidence: `production/evidence/STORY-TERRAIN-004/README.md` in the Unity repo.

@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-06-28] merge | STORY-TERRAIN-004 merged and STORY-TERRAIN-005 prepared
+
+- Unity PR #95 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/95
+- Merge commit: `88f7fca9ec1ab30bc9d58a5ad0f09de8ca802987`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28330459722
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28330933532
+- Merge-gate fix replaced stale committed CI-pending evidence wording with PR-recorded exact-head CI evidence.
+- Marked `STORY-TERRAIN-004` DONE / merged in design-control.
+- Added `STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-terrain-005.prompt.txt`. No next Unity implementation story is currently READY / approved.
+
 ## [2026-06-28] approval | STORY-TERRAIN-004 range threat and terrain readability pass
 
 - Human approval recorded: "Approved next story".

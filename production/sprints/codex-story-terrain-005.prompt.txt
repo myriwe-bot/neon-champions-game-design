@@ -1,0 +1,48 @@
+You are Codex working in the Neon Champions Unity repo.
+
+Preflight guard: before coding, confirm `production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch. This prompt is currently guarded because the story is a READY-candidate / approval pending.
+
+Repository context:
+- Design/control repo: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Unity repo: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+- Unity branch: `story/STORY-TERRAIN-005-strategic-context-tactical-battlefield-smoke`
+- PR title: `STORY-TERRAIN-005 Strategic context to tactical battlefield smoke`
+
+Required source authority:
+1. `production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md`
+2. `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+3. `design/gdd/strategic-map.md` §§1-10
+4. `design/gdd/tactical-combat.md` §§3-6 and §6.2A
+5. `docs/architecture/control-manifest.md`
+6. `docs/architecture/testing-strategy.md`
+7. `docs/architecture/ci-build-automation.md`
+8. Unity repo `AGENTS.md` and `README.md`
+
+Implementation scope:
+- Add or tighten a connected smoke path proving strategic site/terrain context selects the expected tactical layout family and carries expected terrain context tags into tactical snapshots.
+- Show at least two strategic contexts/sites that launch into distinct tactical layout-family/readability outputs.
+- Verify tactical presentation/evidence includes layout family, terrain context, deployment zones, blocked terrain, defensive terrain, legal moves, legal attack targets, and non-attackable/out-of-range enemies after strategic-to-tactical handoff.
+- Add focused regression tests that strategic BattleSetup/handoff source data and tactical presentation snapshot stay aligned.
+- Add PlayMode/evidence screenshots or text evidence under `production/evidence/STORY-TERRAIN-005/`.
+
+Strict exclusions:
+- Do not add or alter strategic map topology, nodes, routes, sites, factions, resources, facilities, recruitment offers, objectives, win/loss rules, battle-result rules, strategic AI, movement, attack, damage, AP, Defend, retaliation, Sensor Lock, CombatAI, battle-end, result-return, tactical objective mechanics, elevation, LoS, cover, hazards, weather, fog, supply, strategic terrain movement costs, topology rewrites, strategic AI terrain valuation, final art, localization, or map editor UI.
+
+Required verification:
+- EditMode tests for strategic handoff/BattleSetup context and tactical snapshot alignment across at least two contexts.
+- PlayMode smoke or equivalent evidence proving visible strategic-to-tactical transition/readability for at least two contexts.
+- Evidence under `production/evidence/STORY-TERRAIN-005/`.
+- Run available local checks. If local Unity cannot run, explain and still push the branch/PR for GitHub Actions.
+
+Required git/PR behavior:
+- Create or update branch `story/STORY-TERRAIN-005-strategic-context-tactical-battlefield-smoke`.
+- Commit scoped changes.
+- Push the branch.
+- Open or update a GitHub PR titled `STORY-TERRAIN-005 Strategic context to tactical battlefield smoke`.
+- PR body must include summary, tests/checks run, evidence paths, omissions/deferred work, and CI status if available.
+
+Stop conditions:
+- Stop if story frontmatter is not READY / approved.
+- Stop if unrelated uncommitted changes exist.
+- Stop if implementation requires excluded mechanics or design decisions.
+- Stop if required source docs are missing or contradictory.

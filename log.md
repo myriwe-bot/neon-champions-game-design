@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-28] approval | STORY-TERRAIN-004 range threat and terrain readability pass
+
+- Human approval recorded: "Approved next story".
+- Promoted `STORY-TERRAIN-004` from READY-candidate / approval pending to READY / approved.
+- Converted `production/sprints/codex-story-terrain-004.prompt.txt` from guarded candidate prompt to runnable implementation prompt with a frontmatter preflight guard.
+- Next Unity implementation branch: `story/STORY-TERRAIN-004-range-threat-terrain-readability-pass`.
+
 ## [2026-06-28] merge | STORY-TERRAIN-003 merged and STORY-TERRAIN-004 prepared
 
 - Unity PR #92 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/92

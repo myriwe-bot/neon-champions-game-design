@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass
 type: story
-status: draft
+status: ready
 phase: production
 owner: shared
 created: 2026-06-28
@@ -18,14 +18,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed next EPIC-010 Unity implementation packet after `STORY-TERRAIN-003`; no Unity implementation is authorized until a human explicitly promotes this story to READY / approved.
+READY / approved for Unity implementation. Human approval recorded 2026-06-28: "Approved next story". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
 
 ## Story type
 
@@ -93,7 +93,7 @@ As a player, I want the tactical board to clearly show movement range, attack ra
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate review; implementation remains blocked until human approval.
+Status: PASS.
 
 Open questions:
 
@@ -112,6 +112,12 @@ Out of scope:
 Allowed stubs/mocks:
 
 - Prototype labels, colors, and debug/evidence markers.
+
+Human-approved answers:
+
+- Approved 2026-06-28 via user instruction: "Approved next story".
+- Use the story's listed assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as the implementation contract.
+- Keep this story presentation/readability-only; do not add new tactical mechanics.
 
 ## Branch / PR requirements
 
@@ -134,7 +140,7 @@ Allowed stubs/mocks:
 - [x] Acceptance criteria are observable and testable.
 - [x] Verification requirements are defined.
 - [x] Ambiguity Check status is PASS for candidate review.
-- [ ] Human implementation approval has been given and recorded.
+- [x] Human implementation approval has been given and recorded.
 
 ## DONE gate
 
@@ -150,4 +156,4 @@ Allowed stubs/mocks:
 
 ## Verdict
 
-READY-candidate / approval pending. Guarded Codex prompt prepared at `production/sprints/codex-story-terrain-004.prompt.txt`; it must self-block until human approval promotes this story to READY / approved.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-004.prompt.txt`.

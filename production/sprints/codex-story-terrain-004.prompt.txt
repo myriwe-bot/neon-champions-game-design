@@ -1,6 +1,6 @@
 You are Codex working in the Neon Champions Unity repo.
 
-Preflight guard: before coding, confirm `production/stories/story-terrain-004-range-threat-and-terrain-readability-pass.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch. This prompt is currently guarded because the story is a READY-candidate / approval pending.
+Preflight guard: before coding, confirm `production/stories/story-terrain-004-range-threat-and-terrain-readability-pass.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch.
 
 Repository context:
 - Design/control repo: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`

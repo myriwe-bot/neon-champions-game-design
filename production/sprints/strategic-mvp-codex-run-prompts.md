@@ -87,15 +87,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain` is a READY-candidate / approval pending.
+**Current READY / approved Unity implementation packet:** `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain`.
 
-EPIC-009 is DONE / closed. EPIC-010 is APPROVED / IN PROGRESS. `STORY-TERRAIN-001` and `STORY-TERRAIN-002` are DONE / merged. No Unity implementation is authorized until a human approves the next candidate.
+EPIC-009 is DONE / closed. EPIC-010 is APPROVED / IN PROGRESS. `STORY-TERRAIN-001` and `STORY-TERRAIN-002` are DONE / merged. `STORY-TERRAIN-003` is READY / approved as the current Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded candidate prompt file: `production/sprints/codex-story-terrain-003.prompt.txt`. It self-blocks until `STORY-TERRAIN-003` is promoted to READY / approved. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-terrain-003.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -116,7 +116,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-No prompt is currently runnable. If human approval promotes `STORY-TERRAIN-003`, use checked-in prompt file `production/sprints/codex-story-terrain-003.prompt.txt`.
+Use checked-in prompt file `production/sprints/codex-story-terrain-003.prompt.txt` for `STORY-TERRAIN-003`.
 
 ## Historical prompt-file runs
 
@@ -234,9 +234,9 @@ codex exec --sandbox danger-full-access $prompt
 Codex should produce a PR for `STORY-TERRAIN-001`; review against the story acceptance criteria and require exact-head Unity Foundation CI before merge.
 
 
-## Guarded STORY-TERRAIN-003 candidate handoff
+## Copy-safe STORY-TERRAIN-003 handoff
 
-Do not run Codex for implementation until human approval promotes `STORY-TERRAIN-003` to READY / approved. After approval, use:
+Use:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -252,7 +252,7 @@ $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-ga
 codex exec --sandbox workspace-write $prompt
 ```
 
-Trusted-repo fallback after approval only:
+Trusted-repo fallback:
 
 ```powershell
 codex exec --sandbox danger-full-access $prompt

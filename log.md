@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-06-28] approval | STORY-TERRAIN-003 tactical blockers and simple defensive terrain
+
+- Human approval recorded: "Approved next story".
+- Promoted `STORY-TERRAIN-003` from READY-candidate / approval pending to READY / approved.
+- Converted `production/sprints/codex-story-terrain-003.prompt.txt` from guarded candidate prompt to runnable implementation prompt with a frontmatter preflight guard.
+- Next Unity implementation branch: `story/STORY-TERRAIN-003-tactical-blockers-simple-defensive-terrain`.
+
 ## [2026-06-28] merge | STORY-TERRAIN-002 merged and STORY-TERRAIN-003 prepared
 
 - Unity PR #89 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/89

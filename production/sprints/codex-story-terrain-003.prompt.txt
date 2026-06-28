@@ -1,6 +1,6 @@
 # Codex prompt — STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain
 
-Preflight guard: before coding, confirm `production/stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch. This prompt is currently guarded because the story is a READY-candidate / approval pending.
+Preflight guard: before coding, confirm `production/stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch.
 
 Implement only `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain`.
 

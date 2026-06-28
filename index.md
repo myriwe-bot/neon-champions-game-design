@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-27
+> Last updated: 2026-06-28
 > Current phase: Phase 1 — Concept
 > Review mode: Lean default, Full for major gates
 
@@ -115,7 +115,8 @@
 - [[production/stories/story-qa-012-epic-009-playtest-and-closeout-review]] — DONE / merged EPIC-009 playtest and closeout review.
 - [[production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability]] — APPROVED / IN PROGRESS terrain, tactical battlefields, and map-space readability epic.
 - [[production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract]] — DONE / merged first EPIC-010 implementation story.
-- [[production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones]] — READY / approved next EPIC-010 implementation packet.
+- [[production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones]] — DONE / merged EPIC-010 tactical layout definitions and deployment zones story.
+- [[production/stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain]] — READY-candidate / approval pending next EPIC-010 terrain-cell packet.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

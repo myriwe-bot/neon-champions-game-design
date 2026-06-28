@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-010 Terrain, Tactical Battlefields, and Map-Space Readability
 type: epic
-status: approved / planned
+status: approved / in-progress
 phase: production
 owner: shared
 created: 2026-06-27
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001` is DONE / merged. Current READY / approved Unity implementation packet is `STORY-TERRAIN-002`. No Unity implementation is authorized directly by this epic. Agents and Codex may only implement READY child stories.
+APPROVED / IN PROGRESS. `STORY-TERRAIN-001` and `STORY-TERRAIN-002` are DONE / merged. No current READY / approved Unity implementation packet is active. Next candidate is `STORY-TERRAIN-003`, approval pending. No Unity implementation is authorized directly by this epic. Agents and Codex may only implement READY child stories.
 
 ## Priority tier
 
@@ -129,8 +129,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-TERRAIN-001 Strategic Terrain Tags and Tactical Layout Family Contract](../stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md) | DONE / merged | Data + Contract + Validation | EPIC-010 approval; EPIC-009 DONE | PR #86; exact-head CI; post-merge CI |
-| [STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones](../stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md) | READY / approved | Tactical Data + Presentation | TERRAIN-001 DONE | Runnable prompt prepared |
-| STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain | Draft placeholder | Tactical Rules + UI | TERRAIN-002 DONE | TBD |
+| [STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones](../stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md) | DONE / merged | Tactical Data + Presentation | TERRAIN-001 DONE | PR #89; exact-head CI; post-merge CI |
+| [STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain](../stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md) | READY-candidate / approval pending | Tactical Rules + UI | TERRAIN-002 DONE | Guarded prompt prepared |
 | STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass | Draft placeholder | Tactical UI + Playability | TERRAIN-003 DONE | TBD |
 | STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke | Draft placeholder | Integration Smoke | TERRAIN-001-004 DONE | TBD |
 | STORY-QA-013 EPIC-010 Playtest and Closeout Review | Draft placeholder | QA + Playability Review | EPIC-010 implementation stories DONE | TBD |
@@ -205,4 +205,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001` is DONE / merged. Current READY / approved Unity implementation packet: `STORY-TERRAIN-002` with a runnable prompt.
+APPROVED / IN PROGRESS. `STORY-TERRAIN-001` and `STORY-TERRAIN-002` are DONE / merged. Next candidate: `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain`, guarded until human approval.

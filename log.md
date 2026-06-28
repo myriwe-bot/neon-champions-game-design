@@ -2,6 +2,20 @@
 
 > Append-only project log.
 
+## [2026-06-28] merge | STORY-TERRAIN-002 merged and STORY-TERRAIN-003 prepared
+
+- Unity PR #89 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/89
+- Merge commit: `b317ed22e262ac4ce61e7d211bc88bf8b21f5537`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28317517461
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28317867413
+- Merge-gate fix added focused EditMode coverage for all approved prototype layout families and unknown layout-family failure.
+- Marked `STORY-TERRAIN-002` DONE / merged in design-control.
+- Added `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-terrain-003.prompt.txt`. No next Unity implementation story is currently READY / approved.
+- Cleared the Unity README current-task pointer via docs PR #90: https://github.com/myriwe-bot/neon-champions-unity/pull/90
+- Pointer cleanup commit: `3a4b28ea8b45ca222eb5d5e27718ffb7f03189a5`
+- Pointer cleanup PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28318151206
+- Pointer cleanup post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28318307861
+
 ## [2026-06-27] control | Unity current-task pointer set to STORY-TERRAIN-002
 
 - Unity docs PR #88 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/88

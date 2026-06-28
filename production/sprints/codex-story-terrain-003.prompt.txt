@@ -1,0 +1,57 @@
+# Codex prompt — STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain
+
+Preflight guard: before coding, confirm `production/stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md` has `status: ready` and `approval: approved`. If not, stop immediately and report the mismatch. This prompt is currently guarded because the story is a READY-candidate / approval pending.
+
+Implement only `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain`.
+
+Required repository context:
+
+- Design/control repo on Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Unity repo on Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Before coding, pull both repos to latest `main` and read:
+
+- `production/stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md`
+- `production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md`
+- `production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract.md`
+- `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+- `design/gdd/tactical-combat.md` §§3-6 and §6.2A
+- `design/gdd/strategic-map.md` §9.5
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+- Unity root `AGENTS.md` and scoped `AGENTS.md` files for touched directories.
+
+Branch:
+
+- `story/STORY-TERRAIN-003-tactical-blockers-simple-defensive-terrain`
+
+PR title:
+
+- `STORY-TERRAIN-003 Tactical blockers and simple defensive terrain`
+
+Scope:
+
+- Authored terrain cell metadata on existing tactical layout definitions.
+- Blocked/obstacle cells that cannot be occupied or moved into.
+- Simple defensive cells that are visible and either have a narrow tested prototype effect or are explicitly documented as inert/readability-only.
+- Validation for non-board terrain coordinates, duplicate/ambiguous terrain cells, unknown terrain cell types, and illegal overlaps where applicable.
+- Presentation/evidence for blocked and defensive cells in at least two layout-family contexts.
+
+Hard out of scope:
+
+- No elevation, LoS rewrite, overwatch, destructible terrain, hazards, weather, fog, supply, strategic terrain movement costs, strategic topology changes, strategic AI terrain valuation, full cover system, facing rules, ranged accuracy, broad damage formula changes, final art, new units/resources/sites/facilities/objectives, or map editor UI.
+
+Required finish state:
+
+- Commit and push the actual Unity implementation branch.
+- Open/update the PR against `main`.
+- PR body includes story links, implementation summary, tests/evidence, omissions/deferred work, and confirmation that no unauthorized design decisions were introduced.
+- If unable to push/open PR, state exact blocker and leave the local branch committed with `git status --short --branch` output.
+
+Required verification:
+
+- Run focused EditMode/unit tests for terrain-cell validation, layout-family terrain selection, and blocked-cell movement exclusion.
+- Run or rely on Unity Foundation CI after opening/updating the PR.
+- Produce evidence under `production/evidence/STORY-TERRAIN-003/` showing at least two layout-family contexts and their blocked/defensive cells.
+- Keep generated root `artifacts/` output uncommitted; story evidence belongs under `production/evidence/STORY-TERRAIN-003/`.

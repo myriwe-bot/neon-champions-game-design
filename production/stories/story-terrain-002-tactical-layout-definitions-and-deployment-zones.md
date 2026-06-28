@@ -1,7 +1,7 @@
 ---
 title: STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-27
@@ -17,14 +17,20 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: approved
+approval: implemented
 ---
 
 # STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-27: "Approved next story". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
+DONE / merged. Unity PR #89 merged on 2026-06-28.
+
+- PR: https://github.com/myriwe-bot/neon-champions-unity/pull/89
+- Merge commit: `b317ed22e262ac4ce61e7d211bc88bf8b21f5537`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28317517461
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28317867413
+- Merge-gate fix added during review: focused EditMode coverage for all approved prototype layout families and unknown layout-family failure.
 
 Human-approved answers:
 
@@ -168,4 +174,4 @@ Human-approved answers:
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-002.prompt.txt`.
+DONE / merged. Tactical layout definitions and deployment zones are implemented and verified. Next candidate: `STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain`.

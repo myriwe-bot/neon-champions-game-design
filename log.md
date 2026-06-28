@@ -11,6 +11,10 @@
 - Merge-gate fix replaced stale committed CI placeholder wording with PR-comment exact-head CI evidence.
 - Marked `STORY-TERRAIN-003` DONE / merged in design-control.
 - Added `STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-terrain-004.prompt.txt`. No next Unity implementation story is currently READY / approved.
+- Cleared the Unity README current-task pointer via docs PR #93: https://github.com/myriwe-bot/neon-champions-unity/pull/93
+- Pointer cleanup commit: `c8e8760a069a52c19f427f3326e716340db39af7`
+- Pointer cleanup PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28326419513
+- Pointer cleanup post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28326622826
 
 ## [2026-06-28] approval | STORY-TERRAIN-003 tactical blockers and simple defensive terrain
 

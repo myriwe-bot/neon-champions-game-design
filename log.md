@@ -8,6 +8,10 @@
 - Promoted `STORY-TERRAIN-004` from READY-candidate / approval pending to READY / approved.
 - Converted `production/sprints/codex-story-terrain-004.prompt.txt` from guarded candidate prompt to runnable implementation prompt with a frontmatter preflight guard.
 - Next Unity implementation branch: `story/STORY-TERRAIN-004-range-threat-terrain-readability-pass`.
+- Unity README pointer PR #94 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/94
+- Unity pointer commit: `ec90c906dc0e521bc0dbe84217d8fd020d15a64c`
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28327836851
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28328088575
 
 ## [2026-06-28] merge | STORY-TERRAIN-003 merged and STORY-TERRAIN-004 prepared
 

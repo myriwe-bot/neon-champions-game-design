@@ -1377,8 +1377,8 @@
 - Activated prompt `production/sprints/codex-story-army-002.prompt.txt`.
 
 
-## [2026-06-29] fix | PowerShell Codex prompt quoting
+## [2026-06-29] fix | PowerShell Codex prompt stdin handoff
 
-- Fixed Codex handoff commands to pass prompt-file contents as one quoted argument: `codex exec --sandbox ... -- "$prompt"`.
-- Cause: unquoted `$prompt` can be split into separate native-command arguments in Windows PowerShell, producing errors like `unexpected argument 'use' found`.
-- Added a copy-safe `STORY-UX-002` handoff block using the corrected invocation.
+- Fixed Codex handoff commands to pipe prompt-file contents through stdin: `Get-Content -Raw <prompt-file> | codex exec --sandbox ...`.
+- Cause: passing large/multiline prompt text as a native-command argument to the Windows Codex shim can be split or reparsed, even when quoted, producing errors like `unexpected argument 'use' found`.
+- Supersedes the earlier quoted-argument attempt; future handoffs should use stdin piping, not `$prompt` argv passing.

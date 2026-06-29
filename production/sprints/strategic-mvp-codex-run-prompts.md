@@ -212,31 +212,19 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt"
-codex exec --sandbox workspace-write -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt" | codex exec --sandbox workspace-write
 ```
 
-Trusted fallback if workspace-write cannot complete required Unity edits:
+Trusted-repo fallback:
 
 ```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git checkout main
-git pull --ff-only origin main
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt"
-codex exec --sandbox danger-full-access -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt" | codex exec --sandbox danger-full-access
 ```
 
 
 ## After Codex finishes
 
 Codex should produce a PR for `STORY-TERRAIN-001`; review against the story acceptance criteria and require exact-head Unity Foundation CI before merge.
-
 
 ## Copy-safe STORY-TERRAIN-003 handoff
 
@@ -250,18 +238,16 @@ git pull --ff-only origin main
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git checkout main
 git pull --ff-only origin main
+git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-003.prompt.txt"
-
-codex exec --sandbox workspace-write -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-003.prompt.txt" | codex exec --sandbox workspace-write
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-003.prompt.txt" | codex exec --sandbox danger-full-access
 ```
-
 
 ## Copy-safe STORY-TERRAIN-004 handoff
 
@@ -275,18 +261,16 @@ git pull --ff-only origin main
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git checkout main
 git pull --ff-only origin main
+git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-004.prompt.txt"
-
-codex exec --sandbox workspace-write -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-004.prompt.txt" | codex exec --sandbox workspace-write
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-004.prompt.txt" | codex exec --sandbox danger-full-access
 ```
-
 
 ## Copy-safe STORY-TERRAIN-005 handoff
 
@@ -300,18 +284,16 @@ git pull --ff-only origin main
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git checkout main
 git pull --ff-only origin main
+git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-005.prompt.txt"
-
-codex exec --sandbox workspace-write -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-005.prompt.txt" | codex exec --sandbox workspace-write
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-005.prompt.txt" | codex exec --sandbox danger-full-access
 ```
-
 
 ## Copy-safe STORY-QA-013 handoff
 
@@ -325,22 +307,20 @@ git pull --ff-only origin main
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 git checkout main
 git pull --ff-only origin main
+git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-013.prompt.txt"
-
-codex exec --sandbox workspace-write -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-013.prompt.txt" | codex exec --sandbox workspace-write
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-013.prompt.txt" | codex exec --sandbox danger-full-access
 ```
-
 
 ## Copy-safe STORY-UX-002 handoff
 
-Use quoted prompt-variable invocation. In Windows PowerShell, passing `$prompt` unquoted can split the prompt text into separate CLI arguments and produce errors like `unexpected argument 'use' found`.
+Use stdin piping instead of passing prompt contents as an argv argument. On the Windows Codex shim, large/multiline prompt arguments can still be split or reparsed and produce errors like `unexpected argument 'use' found`.
 
 Primary workspace-write run:
 
@@ -354,12 +334,11 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt"
-codex exec --sandbox workspace-write -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt" | codex exec --sandbox workspace-write
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access -- "$prompt"
+Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt" | codex exec --sandbox danger-full-access
 ```

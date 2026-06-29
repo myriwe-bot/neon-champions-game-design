@@ -1,7 +1,7 @@
 ---
 title: Next Implementation Direction Brief — 2026-06-29
 type: decision-brief
-status: ready-candidate
+status: approved
 phase: production
 owner: shared
 created: 2026-06-29
@@ -13,7 +13,7 @@ related:
   - design/gdd/tactical-combat
   - design/gdd/faction-unit-rosters
   - design/gdd/intel-resource
-approval: pending
+approval: approved
 ---
 
 # Next Implementation Direction Brief — 2026-06-29
@@ -56,4 +56,10 @@ Why:
 
 ## Approval gate
 
-Before implementation, human should choose one direction or provide a different one. If Champion Assets / Operations is approved, prepare a dedicated epic plus first READY story and runnable Codex prompt. Until then, any prompt remains guarded / non-runnable.
+Human approval recorded 2026-06-29: "Approved". Approved direction: **Champion Assets / Operations depth**. Prepared implementation authority:
+
+- `production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth.md`
+- `production/stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp.md`
+- `production/sprints/codex-story-champ-ops-001.prompt.txt`
+
+`STORY-CHAMP-OPS-001` is READY / approved for Unity implementation after the Unity current-task pointer is updated and verified.

@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-06-29] approval | EPIC-011 Champion Assets / Operations depth and STORY-CHAMP-OPS-001
+
+- Human approval recorded: "Approved".
+- Approved next direction from `production/planning/next-implementation-direction-brief-2026-06-29.md`: Champion Assets / Operations depth.
+- Created `EPIC-VSLICE-MVP-011 Champion Assets and Operations Depth` as APPROVED / PLANNED.
+- Created and promoted `STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp` to READY / approved.
+- Runnable prompt: `production/sprints/codex-story-champ-ops-001.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-CHAMP-OPS-001-champion-asset-operation-on-ramp`.
+- Authorized scope: one minimal active-Champion Asset/Operation surface, one prototype strategic Operation option, visible cost/availability/result feedback, validation/tests/evidence.
+- Explicit exclusions remain: full Champion inventory, full Operations spellbook/loadouts, new resources/economy, dirty information/fog, Bio/Echo channels, new map/tactical mechanics/content, final art/audio/VFX/localization.
+
 ## [2026-06-28] approval | STORY-TERRAIN-005 strategic context to tactical battlefield smoke
 
 - Human approval recorded: "aPPROVED".

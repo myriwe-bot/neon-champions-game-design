@@ -113,12 +113,17 @@
 - [[production/stories/story-map-site-001-site-route-base-and-objective-readability-pass]] — DONE / merged EPIC-009 strategic-map readability pass.
 - [[production/stories/story-base-loop-001-base-building-scenario-smoke]] — DONE / merged EPIC-009 connected base-building smoke story.
 - [[production/stories/story-qa-012-epic-009-playtest-and-closeout-review]] — DONE / merged EPIC-009 playtest and closeout review.
-- [[production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability]] — APPROVED / IN PROGRESS terrain, tactical battlefields, and map-space readability epic.
+- [[production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability]] — DONE / closed terrain, tactical battlefields, and map-space readability epic.
 - [[production/stories/story-terrain-001-strategic-terrain-tags-and-tactical-layout-family-contract]] — DONE / merged first EPIC-010 implementation story.
 - [[production/stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones]] — DONE / merged EPIC-010 tactical layout definitions and deployment zones story.
 - [[production/stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain]] — DONE / merged EPIC-010 terrain-cell packet.
 - [[production/stories/story-terrain-004-range-threat-and-terrain-readability-pass]] — DONE / merged EPIC-010 range/threat/terrain readability packet.
-- [[production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke]] — READY / approved next EPIC-010 integration smoke packet.
+- [[production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke]] — DONE / merged EPIC-010 integration smoke packet.
+- [[production/stories/story-qa-013-epic-010-playtest-and-closeout-review]] — DONE / merged EPIC-010 closeout review.
+- [[production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity]] — DONE / merged cross-epic UX/readability repair.
+- [[production/planning/next-implementation-direction-brief-2026-06-29]] — APPROVED next direction: Champion Assets / Operations depth.
+- [[production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth]] — APPROVED / planned Champion assets and operations depth epic.
+- [[production/stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp]] — READY / approved first EPIC-011 implementation story.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

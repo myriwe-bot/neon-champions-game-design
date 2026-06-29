@@ -1,0 +1,157 @@
+# Codex prompt — STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp
+
+You are Codex working in the Neon Champions Unity repository.
+
+## Mandatory source-authority preflight
+
+Before editing Unity files, read the approved story in the design/control repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp.md`
+
+Stop immediately without modifying files unless that story frontmatter says exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also confirm the story Ambiguity Check is PASS. If any check fails, report that `STORY-CHAMP-OPS-001` is not authorized in the local checkout and stop.
+
+## Repositories
+
+Design/control repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity implementation repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Run all Unity implementation work from the Unity repository.
+
+## Required reading
+
+Read these before planning or editing:
+
+1. Story authority:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp.md`
+2. Parent epic and approval source:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-011-champion-assets-and-operations-depth.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\planning\next-implementation-direction-brief-2026-06-29.md`
+3. Design references:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\intel-resource.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\tactical-combat.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\tactical-combat\champion-operations-and-progression.md`
+4. Architecture / process references:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md`
+5. Unity repo instructions/context:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-unity\README.md`
+   - any applicable `AGENTS.md` files in the Unity repo
+
+## Branch and PR
+
+Work in the Unity repo on:
+
+- Branch: `story/STORY-CHAMP-OPS-001-champion-asset-operation-on-ramp`
+- PR title: `STORY-CHAMP-OPS-001 champion asset operation on-ramp`
+
+Start from updated `main`. If the branch does not exist locally or on origin, create it from updated `main`; branch absence is not a blocker.
+
+## Authorized scope
+
+Implement the smallest Unity change set that satisfies the approved story:
+
+- add a minimal active-Champion Asset/Operation presentation/runtime surface;
+- show one prototype command-layer Asset slot or prepared Asset label;
+- show one prototype Operation option tied to that Asset;
+- show a player-facing cost/availability summary using existing resource/Command/Intel language;
+- implement exactly one small strategic prototype Operation, preferably a scouting/forecasting/marking operation that improves map readability without changing combat/victory rules;
+- produce visible result/feedback after preview/apply;
+- reject insufficient/unavailable/duplicate operation attempts with diagnostics/feedback and no partial mutation;
+- add focused tests and PlayMode evidence;
+- capture evidence under `production/evidence/STORY-CHAMP-OPS-001/` in the Unity repo.
+
+Use prototype labels if needed, but mark them as prototype/non-final in code-facing text/evidence where appropriate.
+
+## Strict exclusions
+
+Do not add or alter:
+
+- full Champion asset inventory, equipment slots, drag/drop UI, rarity, tiers, upgrades, dismantling, transfer, loss on defeat, or loot rules;
+- full Operations spellbook, operation loadout preparation, multiple Operations, cooldown system, reaction windows, counter-operations, or round cadence rules;
+- new resources, Intel subtypes, new income, markets, dirty information/fog-of-war, misinformation, blackmail, feed pollution, legitimacy, or PR systems;
+- new map topology, new sites/routes/objectives, new factions/units, new tactical combat mechanics, damage/action rules, AI, win/loss rules;
+- final art/audio/VFX/icons/portraits/localization/accessibility framework;
+- Bio/Echo special channels or faction-locked operation suites.
+
+If satisfying the story seems to require any excluded design/system, stop and report the blocker instead of expanding scope.
+
+## Acceptance focus
+
+1. Active Champion UI/status shows a clearly labeled prototype Asset/Operation surface.
+2. The operation option is visible in player-facing language, with cost/availability and a short explanation.
+3. Applying or previewing the operation produces a visible strategic-map result/feedback without entering tactical combat or changing victory rules.
+4. Insufficient/unavailable/duplicate operation attempts are rejected with clear diagnostics/feedback and no partial mutation.
+5. Existing strategic movement, site interaction, resource HUD, objective, and tactical handoff smokes continue to pass.
+6. Evidence under Unity `production/evidence/STORY-CHAMP-OPS-001/` includes notes/screenshots for the operation option, cost/availability, result feedback, and omissions/deferred work.
+
+## Required verification
+
+Run what is available locally. If local Unity execution is unavailable, say so in PR evidence and rely on GitHub Actions after pushing.
+
+Required unless impossible and documented:
+
+- `git diff --check`
+- focused EditMode tests for any application/domain/presentation snapshot or validation changes
+- PlayMode smoke test or generated screenshot/text evidence for the strategic UI path
+- placeholder validator if available locally
+- exact-head Unity Foundation CI before merge
+
+## Evidence requirements
+
+Create or update:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity\production\evidence\STORY-CHAMP-OPS-001\README.md`
+
+Evidence must include:
+
+- operation option and prototype Asset/Operation surface notes/screenshots;
+- cost/availability notes/screenshots;
+- visible result/feedback notes/screenshots;
+- tests/checks run;
+- omissions/deferred work, or `No known omissions`.
+
+## Required git/PR behavior
+
+- Start from updated Unity `main`.
+- Create or update branch `story/STORY-CHAMP-OPS-001-champion-asset-operation-on-ramp`.
+- Keep changes scoped to the approved story.
+- Commit scoped changes.
+- Push the branch.
+- Open or update a GitHub PR titled `STORY-CHAMP-OPS-001 champion asset operation on-ramp`.
+- PR body must include summary, tests/checks run, evidence path, omissions/deferred work, and CI status if available.
+
+## Stop conditions
+
+Stop and report clearly if:
+
+- story frontmatter is not `status: ready` and `approval: approved`;
+- Ambiguity Check is not PASS;
+- unrelated uncommitted changes exist and cannot be safely separated;
+- required source docs are missing;
+- source docs contradict the implementation requirements;
+- satisfying the request requires excluded mechanics or new design decisions.
+
+Do not stop merely because the branch is not pre-existing; create it from updated `main`.
+
+## Output required
+
+When finished, report:
+
+- branch name;
+- commit SHA;
+- files changed;
+- tests/checks run;
+- evidence path;
+- PR URL, or exact reason no PR was opened.

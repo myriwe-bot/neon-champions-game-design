@@ -13,7 +13,10 @@
 - Marked `STORY-CHAMP-OPS-002` DONE / merged.
 - Prepared `STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke` as READY-candidate / approval pending.
 - Guarded prompt prepared at `production/sprints/codex-story-champ-ops-003.prompt.txt`; no new Unity implementation is authorized until human approval promotes the story.
-- Unity README current-task pointer should be cleared because there is no current READY / approved implementation task after the merge.
+- Unity README current-task pointer cleared via PR #112: https://github.com/myriwe-bot/neon-champions-unity/pull/112
+- Pointer cleanup commit: `a8f3e142cbc120bd9db94c2de9505d06453fe172`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28393018912
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28393445309
 
 ## [2026-06-29] approval | STORY-CHAMP-OPS-002 operation targeting forecast readability
 

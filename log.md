@@ -11,6 +11,11 @@
 - Authorized scope: make the existing prototype forecast Operation target explicit/readable, expose legal/illegal target reasons, prevent failed attempts from spending Intel or mutating markers, and prove the path with focused tests plus PlayMode evidence.
 - Explicit exclusions remain: no new Operations, full spellbook/loadouts/cooldowns, Champion inventory/progression, new resources/economy/fog/dirty-info, tactical/map-content expansion, or final art/audio/VFX/localization.
 
+- Unity README pointer PR #110 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/110
+- Unity pointer commit: `74aa2875e0367d8f19360ac33bacd2026a00c7d5`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28386404137
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28386983058
+
 ## [2026-06-29] merge | STORY-CHAMP-OPS-001 merged and STORY-CHAMP-OPS-002 prepared
 
 - Reviewed Unity PR #108 for `STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp`: https://github.com/myriwe-bot/neon-champions-unity/pull/108

@@ -1,7 +1,7 @@
 ---
 title: STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-29
@@ -25,7 +25,14 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-29: "Approved". This approves `STORY-CHAMP-OPS-002` as the next narrow EPIC-011 implementation packet after `STORY-CHAMP-OPS-001` merged.
+DONE / merged.
+
+- Unity PR #111: https://github.com/myriwe-bot/neon-champions-unity/pull/111
+- Merge commit: `acde35ebf7d4dcfb10cfdc2da813112f7205754d`
+- Exact-head PR Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28391297678
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28392228609
+
+Implemented selected/default Champion Operation target readability for `prototype_operation_site_forecast`, legal/illegal target denial language, 1 Intel spend/no partial mutation coverage, and strategic marker evidence under Unity `production/evidence/STORY-CHAMP-OPS-002/`.
 
 ## Story type
 
@@ -78,14 +85,14 @@ Required sources:
 
 ## Acceptance criteria
 
-- [ ] The selected/previewed forecast target is explicit in the active Champion operation UI/status.
-- [ ] Selecting or inspecting an adjacent guarded site can make it the forecast target, or the implementation clearly explains why the default target is used.
-- [ ] Illegal/unavailable targets produce readable denial reasons and do not spend Intel or mutate site markers.
-- [ ] Applying the forecast operation marks exactly one legal target and spends exactly 1 Intel.
-- [ ] A forecasted target is visible in strategic node/card/HUD text after application.
-- [ ] Existing `STORY-CHAMP-OPS-001` operation surface, resource HUD, strategic movement, site interaction, objective, and tactical handoff smokes continue to pass.
-- [ ] Evidence under Unity `production/evidence/STORY-CHAMP-OPS-002/` includes available-target, denied-target, applied-marker, and omissions/deferred-work notes/screenshots.
-- [ ] Exact-head Unity Foundation CI passes before merge.
+- [x] The selected/previewed forecast target is explicit in the active Champion operation UI/status.
+- [x] Selecting or inspecting an adjacent guarded site can make it the forecast target, or the implementation clearly explains why the default target is used.
+- [x] Illegal/unavailable targets produce readable denial reasons and do not spend Intel or mutate site markers.
+- [x] Applying the forecast operation marks exactly one legal target and spends exactly 1 Intel.
+- [x] A forecasted target is visible in strategic node/card/HUD text after application.
+- [x] Existing `STORY-CHAMP-OPS-001` operation surface, resource HUD, strategic movement, site interaction, objective, and tactical handoff smokes continue to pass.
+- [x] Evidence under Unity `production/evidence/STORY-CHAMP-OPS-002/` includes available-target, denied-target, applied-marker, and omissions/deferred-work notes/screenshots.
+- [x] Exact-head Unity Foundation CI passes before merge.
 
 ## Verification requirements
 
@@ -131,13 +138,13 @@ Candidate assumptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists.
-- [ ] Required tests/CI pass, or human-approved exceptions are documented.
-- [ ] PR/code review is complete if a Unity PR is opened.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists.
+- [x] Required tests/CI pass, or human-approved exceptions are documented.
+- [x] PR/code review is complete if a Unity PR is opened.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-champ-ops-002.prompt.txt`.
+DONE / merged via Unity PR #111. Next candidate: `STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke` is drafted as READY-candidate / approval pending; no new Unity implementation is authorized until human approval promotes it.

@@ -2,6 +2,19 @@
 
 > Append-only project log.
 
+## [2026-06-29] merge | STORY-CHAMP-OPS-002 merged and STORY-CHAMP-OPS-003 prepared
+
+- Reviewed Unity PR #111 for `STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass`: https://github.com/myriwe-bot/neon-champions-unity/pull/111
+- Applied one evidence-doc correction before merge so committed evidence no longer claimed pending CI after CI had already passed.
+- Merge verdict: PASS. Scope matched the approved narrow targeting/readability pass; no blockers found.
+- Unity merge commit: `acde35ebf7d4dcfb10cfdc2da813112f7205754d`.
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28391297678
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28392228609
+- Marked `STORY-CHAMP-OPS-002` DONE / merged.
+- Prepared `STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke` as READY-candidate / approval pending.
+- Guarded prompt prepared at `production/sprints/codex-story-champ-ops-003.prompt.txt`; no new Unity implementation is authorized until human approval promotes the story.
+- Unity README current-task pointer should be cleared because there is no current READY / approved implementation task after the merge.
+
 ## [2026-06-29] approval | STORY-CHAMP-OPS-002 operation targeting forecast readability
 
 - Human approval recorded: "Approved".

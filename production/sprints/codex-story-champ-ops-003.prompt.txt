@@ -1,0 +1,166 @@
+# Codex prompt — STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke
+
+DO NOT RUN YET. This is a guarded candidate prompt. Stop immediately unless the story frontmatter has been promoted to `status: ready` and `approval: approved`.
+
+You are implementing one approved Neon Champions Unity story.
+
+## Repositories
+
+Design/control repo:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+## Mandatory preflight
+
+1. In the design repo:
+   - `git checkout main`
+   - `git pull --ff-only origin main`
+   - Read `production/stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke.md`.
+   - Confirm frontmatter says exactly:
+     - `status: ready`
+     - `approval: approved`
+   - If either value is missing or different, STOP. Do not edit Unity.
+2. In the Unity repo:
+   - `git checkout main`
+   - `git pull --ff-only origin main`
+   - Create branch `story/STORY-CHAMP-OPS-003-operation-aftermath-closeout-smoke`.
+
+## Source authority
+
+Use only these implementation sources unless the story explicitly references more:
+
+- `production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth.md`
+- `production/stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp.md`
+- `production/stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass.md`
+- `design/gdd/tactical-combat/champion-operations-and-progression.md` §§29-80 and §§98-198 under the EPIC-011 narrow source-authority exception
+- `design/gdd/intel-resource.md`
+- `design/gdd/strategic-map.md`
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+
+## Story goal
+
+Implement / verify the post-use readability smoke for the existing prototype Champion Operation.
+
+After spending Intel on `prototype_operation_site_forecast`, the player must understand:
+
+- which site was forecasted;
+- that 1 Intel was spent;
+- that the forecast marker exists;
+- that repeating the same operation target is denied without spending more Intel or mutating other markers;
+- that ordinary strategic movement/site/tactical interaction remains unbroken around the marker.
+
+## Hard scope limits
+
+Do NOT add:
+
+- new Operations;
+- multiple operation choices;
+- cooldowns;
+- loadouts;
+- reaction windows;
+- counter-operations;
+- operation cadence systems;
+- Champion inventory/assets/progression/skill trees;
+- new resources, Intel subtypes, income rules, dirty information, fog, misinformation, PR, legitimacy, feeds, or strategic AI;
+- new map topology, new sites/routes, tactical combat rules, victory rules, final art/audio/VFX/icons/localization/accessibility framework.
+
+Keep the existing `prototype_operation_site_forecast` operation ID and 1 Intel cost.
+
+Prototype labels are acceptable.
+
+## Expected implementation shape
+
+Prefer the smallest safe change. If the existing runtime already satisfies a requirement, add tests/evidence instead of inventing new UI scope.
+
+Likely areas to inspect:
+
+- Champion operation domain/service result and duplicate marker denial.
+- Strategic input/session target selection and commit behavior.
+- Strategic presentation snapshot fields / text summaries.
+- Existing CHAMP-OPS-001 and CHAMP-OPS-002 PlayMode tests.
+
+The connected smoke should cover at minimum:
+
+1. Select `champion_1`.
+2. Acquire/use enough Intel through the existing approved loop.
+3. Select/apply the forecast operation to a legal target.
+4. Inspect the forecasted target after application.
+5. Attempt/select repeat use on the already-forecasted target.
+6. Prove repeat use is denied, spends 0 additional Intel, and does not change any other marker.
+7. Prove one normal strategic path remains usable after the marker exists: movement, non-operation site interaction, or guarded-site tactical handoff.
+
+## Required evidence
+
+Create Unity evidence under:
+
+`production/evidence/STORY-CHAMP-OPS-003/`
+
+Include at minimum:
+
+- `README.md` with:
+  - story summary;
+  - implementation notes;
+  - omissions/deferred work section;
+  - commands/tests run;
+  - CI status placeholder until PR CI runs;
+  - changed Unity assets/settings/packages section.
+- generated screenshots or text evidence for:
+  - after-apply state;
+  - repeat-denied state;
+  - surrounding-loop-unbroken state.
+
+Use existing PlayMode evidence capture patterns. Keep generated evidence paths repository-relative and validator-clean.
+
+## Required tests / checks before PR
+
+Run locally where available:
+
+- `git diff --check`
+- focused EditMode tests for duplicate/repeat denial and no-partial-mutation if existing coverage is insufficient
+- PlayMode smoke/evidence generation for after-apply, repeat-denied, and surrounding-loop-unbroken states
+- `./ci/RunPlaceholderValidator.ps1`
+- `./ci/BuildStandaloneWindows64.ps1` if available/expected
+
+If a command cannot run in your environment, record the exact command, failure, and why in evidence and PR body.
+
+## PR requirements
+
+Open PR against Unity `main`:
+
+- Branch: `story/STORY-CHAMP-OPS-003-operation-aftermath-closeout-smoke`
+- Title: `STORY-CHAMP-OPS-003 operation aftermath closeout smoke`
+- Body must include:
+  - source authority summary;
+  - implementation summary;
+  - tests/checks run;
+  - evidence paths;
+  - omissions/deferred work;
+  - CI status pending exact-head Unity Foundation CI.
+
+Do not claim final CI success until GitHub Actions has completed on the PR head.
+
+## Stop conditions
+
+Stop and report instead of pushing broad changes if:
+
+- story is not promoted to `status: ready` and `approval: approved`;
+- implementation requires a new operation or system outside this story;
+- you need new design authority;
+- tests reveal a regression that cannot be fixed narrowly;
+- Unity asset/package/project settings would need non-obvious changes.
+
+## Final response
+
+Return:
+
+- PR URL;
+- branch/head SHA;
+- tests/checks run;
+- evidence paths;
+- any omissions or blockers.
+
+Do not stop merely because the branch is not pre-existing; create it from updated `main` after approval.

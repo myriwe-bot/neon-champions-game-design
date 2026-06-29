@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-010 Terrain, Tactical Battlefields, and Map-Space Readability
 type: epic
-status: approved / in-progress
+status: done
 phase: production
 owner: shared
 created: 2026-06-27
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IMPLEMENTATION COMPLETE; QA CLOSEOUT READY. `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. Current READY / approved Unity implementation packet is `STORY-QA-013 EPIC-010 Playtest and Closeout Review`. Unity README current-task pointer was updated to this approved packet in PR #101 and verified by post-merge Unity CI.
+DONE / closed. `STORY-TERRAIN-001` through `STORY-TERRAIN-005` and `STORY-QA-013` are DONE / merged. Closeout verdict: CLOSE EPIC-010. A separate cross-epic UX/readability packet, `STORY-UX-002`, preserves remaining playtest pain around tactical area scale, resource visibility, and unit-stack clarity.
 
 ## Priority tier
 
@@ -133,7 +133,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain](../stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md) | DONE / merged | Tactical Rules + UI | TERRAIN-002 DONE | PR #92; exact-head CI; post-merge CI |
 | [STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass](../stories/story-terrain-004-range-threat-and-terrain-readability-pass.md) | DONE / merged | Tactical UI + Playability | TERRAIN-003 DONE | PR #95; exact-head CI; post-merge CI |
 | [STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke](../stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md) | DONE / merged | Integration Smoke | TERRAIN-001-004 DONE | PR #99; exact-head CI; post-merge CI |
-| [STORY-QA-013 EPIC-010 Playtest and Closeout Review](../stories/story-qa-013-epic-010-playtest-and-closeout-review.md) | READY / approved | QA + Playability Review | EPIC-010 implementation stories DONE | Runnable prompt prepared; Unity README pointer PR #101 / CI passed |
+| [STORY-QA-013 EPIC-010 Playtest and Closeout Review](../stories/story-qa-013-epic-010-playtest-and-closeout-review.md) | DONE / merged | QA + Playability Review | EPIC-010 implementation stories DONE | PR #102; exact-head CI; post-merge CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -184,14 +184,14 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
-- [ ] Human review accepts the epic as complete.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented; broader UX/readability pain is split to `STORY-UX-002`.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists.
+- [x] No open EPIC-010 blocker remains hidden.
+- [x] Human review accepted closeout/merge and requested next implementation packet preparation.
 
 ## Anti-pattern check
 
@@ -205,4 +205,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IMPLEMENTATION COMPLETE; QA CLOSEOUT READY. `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. Current READY / approved Unity implementation packet: `STORY-QA-013 EPIC-010 Playtest and Closeout Review` with runnable prompt prepared; Unity README pointer PR #101 and post-merge CI passed.
+DONE / closed. Terrain/context implementation and QA closeout merged through Unity PR #102. Exact-head closeout CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28362523794. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28363271858. Remaining cross-epic UX/readability work is prepared separately as `STORY-UX-002`.

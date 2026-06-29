@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-013 EPIC-010 Playtest and Closeout Review
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-29
@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-29: "Approved". This approves the listed QA/playability closeout scope, narrow-fix allowance, exclusions, branch/PR requirements, and verification requirements as written. Unity README current-task pointer updated in PR #101 (`2746271`) with exact-head CI and post-merge main CI passing.
+DONE / merged. Unity PR #102 merged on 2026-06-29 as `01aab3ed0da7595cf57de3bbe2eba3eb42a20b9f`. Exact-head PR CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28362523794. Post-merge main CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28363271858. Review found concrete playtest/readability blockers and fixed the in-scope EPIC-010 closeout surface narrowly.
 
 ## Story type
 
@@ -92,12 +92,12 @@ Not authorized by this story:
 
 ## Acceptance criteria
 
-- [ ] The merged EPIC-010 terrain/context surface can be reviewed on current Unity `main` at 1280x720.
-- [ ] The review explicitly addresses strategic context tags, tactical layout family, deployment zones, blocked terrain, defensive terrain, legal moves, legal attack targets, out-of-range/non-attackable enemies, and strategic-to-tactical handoff readability.
-- [ ] Any concrete in-scope closeout blocker discovered is fixed narrowly and covered by PlayMode/regression evidence.
-- [ ] Evidence under `production/evidence/STORY-QA-013/` documents the final inspected surface if a Unity PR is opened or if new closeout evidence is needed.
-- [ ] Unity Foundation CI passes at exact PR head before merge if Unity changes are made.
-- [ ] Closeout verdict is recorded: `CLOSE EPIC-010`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT / NEEDS HUMAN PLAYTEST`.
+- [x] The merged EPIC-010 terrain/context surface was reviewed on current Unity `main` at 1280x720.
+- [x] The review explicitly addressed strategic context tags, tactical layout family, deployment zones, blocked terrain, defensive terrain, legal moves, legal attack targets, out-of-range/non-attackable enemies, and strategic-to-tactical handoff readability.
+- [x] Concrete in-scope closeout blockers were fixed narrowly: central objective affordance/capture readability, misleading Champion engagement affordance, Champion battle regression coverage, resource text visibility, stack label clarity, and tactical board scale/readability within the current prototype layout.
+- [x] Evidence under Unity `production/evidence/STORY-QA-013/` documents the final inspected surface.
+- [x] Unity Foundation CI passed at exact PR head before merge: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28362523794.
+- [x] Closeout verdict recorded: `CLOSE EPIC-010` with a separate UX/readability implementation packet prepared for remaining cross-epic playtest pain.
 
 ## Verification requirements
 
@@ -148,14 +148,14 @@ Assumptions:
 
 ## DONE gate
 
-- [ ] Review/implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists if needed.
-- [ ] Required tests/CI pass, or human-approved exceptions are documented.
-- [ ] Closeout verdict is recorded.
-- [ ] PR/code review is complete if a Unity PR is opened.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Review/implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists under Unity `production/evidence/STORY-QA-013/`.
+- [x] Required tests/CI pass. Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28362523794. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28363271858.
+- [x] Closeout verdict is recorded: CLOSE EPIC-010; remaining cross-epic playtest pain is split into `STORY-UX-002`.
+- [x] PR/code review is complete: Unity PR #102.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-qa-013.prompt.txt`. Unity README pointer PR #101: https://github.com/myriwe-bot/neon-champions-unity/pull/101. Pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28353962438. Pointer post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28354249041.
+DONE / merged. Unity PR #102: https://github.com/myriwe-bot/neon-champions-unity/pull/102. Merge commit: `01aab3ed0da7595cf57de3bbe2eba3eb42a20b9f`. Exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28362523794. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28363271858. Closeout verdict: CLOSE EPIC-010. Remaining human playtest pain that is broader than terrain closeout is preserved in `STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity`.

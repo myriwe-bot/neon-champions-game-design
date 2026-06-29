@@ -1,0 +1,36 @@
+STORY-UX-002 is prepared as a READY-candidate only. Do not implement unless the design-control story has been promoted to READY / approved.
+
+Purpose: Unity implementation handoff for STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity.
+
+Current state:
+- EPIC-010 terrain/context implementation and QA closeout are DONE / merged.
+- Human playtest notes preserved as source authority:
+  - "Resource use is unclear, resources are not displayed anywhere."
+  - "Unit stacks also unclear."
+  - "Tactical area still small."
+- STORY-QA-013 already addressed objective/Champion affordance regressions narrowly; do not regress them.
+
+Stop conditions:
+- Stop unless `production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity.md` has `status: ready` and `approval: approved`.
+- Stop if Unity `README.md` current-task pointer names a different approved story.
+- Do not add new resources, economy rules, tactical mechanics, damage rules, objective rules, AI, roster content, final UI art, or broad UI framework rewrites.
+- If the requested readability repair requires new gameplay rules, stop and report the blocker instead of expanding scope.
+
+Task:
+1. Read the story and source docs.
+2. Create branch `story/STORY-UX-002-tactical-scale-resource-stack-clarity` from latest Unity `main`.
+3. Make the 1280x720 tactical battle area materially less cramped / more usable within current prototype UI constraints.
+4. Make existing resource state visible and legible wherever resource-relevant actions are shown.
+5. Improve tactical stack labels/details for owner/side, role/name, count, status/actionability, and legal target state.
+6. Preserve/non-regress objective/guard-site interaction and Champion-vs-Champion engage affordances from STORY-QA-013.
+7. Add/repair tests and presentation snapshot coverage where feasible.
+8. Capture evidence under `production/evidence/STORY-UX-002/`.
+9. Run required checks/CI locally where available.
+10. Commit and push the actual implementation branch, then open/update a PR, or clearly explain why pushing was not done.
+
+Output required:
+- Branch name and commit SHA.
+- Files changed.
+- Tests/evidence run.
+- Evidence path.
+- PR URL if opened, or exact reason no PR was opened.

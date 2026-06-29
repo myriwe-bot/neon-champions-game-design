@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-28
+updated: 2026-06-29
 source_lore: []
 related:
   [
@@ -81,6 +81,7 @@ related:
     production/stories/story-terrain-004-range-threat-and-terrain-readability-pass,
     production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke,
     production/stories/story-qa-013-epic-010-playtest-and-closeout-review,
+    production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity,
     production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability,
   ]
 approval: approved
@@ -90,15 +91,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-QA-013 EPIC-010 Playtest and Closeout Review`.
+**Current READY-candidate Unity implementation packet:** `STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity` (approval pending).
 
-EPIC-009 is DONE / closed. EPIC-010 implementation stories `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. `STORY-QA-013` is READY / approved as the current Unity implementation packet.
+EPIC-009 and EPIC-010 are DONE / closed. `STORY-QA-013` is DONE / merged. `STORY-UX-002` is prepared as the next READY-candidate from remaining playtest notes, but is not runnable until human approval promotes it to READY / approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-qa-013.prompt.txt`. Historical prompt files remain for audit only.
+Current candidate prompt file: `production/sprints/codex-story-ux-002.prompt.txt`. It has a stop condition until approval is recorded. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -119,7 +120,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-qa-013.prompt.txt` for `STORY-QA-013`.
+After human approval, use checked-in prompt file `production/sprints/codex-story-ux-002.prompt.txt` for `STORY-UX-002`. Do not run it while approval is pending.
 
 ## Historical prompt-file runs
 

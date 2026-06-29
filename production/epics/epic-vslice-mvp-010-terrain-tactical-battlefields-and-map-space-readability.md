@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IMPLEMENTATION COMPLETE; AWAITING QA CLOSEOUT APPROVAL. `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. No current READY / approved Unity implementation packet is active. Next recommended packet is `STORY-QA-013 EPIC-010 Playtest and Closeout Review` as READY-candidate / approval pending.
+APPROVED / IMPLEMENTATION COMPLETE; AWAITING QA CLOSEOUT APPROVAL. `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. No current READY / approved Unity implementation packet is active. Next recommended packet is `STORY-QA-013 EPIC-010 Playtest and Closeout Review` as READY-candidate / approval pending. Unity README current-task pointer was cleared in PR #100 after CI passed.
 
 ## Priority tier
 
@@ -133,7 +133,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain](../stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md) | DONE / merged | Tactical Rules + UI | TERRAIN-002 DONE | PR #92; exact-head CI; post-merge CI |
 | [STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass](../stories/story-terrain-004-range-threat-and-terrain-readability-pass.md) | DONE / merged | Tactical UI + Playability | TERRAIN-003 DONE | PR #95; exact-head CI; post-merge CI |
 | [STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke](../stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md) | DONE / merged | Integration Smoke | TERRAIN-001-004 DONE | PR #99; exact-head CI; post-merge CI |
-| [STORY-QA-013 EPIC-010 Playtest and Closeout Review](../stories/story-qa-013-epic-010-playtest-and-closeout-review.md) | READY-candidate / approval pending | QA + Playability Review | EPIC-010 implementation stories DONE | Guarded prompt prepared |
+| [STORY-QA-013 EPIC-010 Playtest and Closeout Review](../stories/story-qa-013-epic-010-playtest-and-closeout-review.md) | READY-candidate / approval pending | QA + Playability Review | EPIC-010 implementation stories DONE; Unity README pointer cleared in PR #100 | Guarded prompt prepared |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 

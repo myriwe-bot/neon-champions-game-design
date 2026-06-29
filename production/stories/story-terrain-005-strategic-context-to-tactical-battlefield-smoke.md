@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-DONE / merged. Unity PR #99 merged on 2026-06-29 as `08d7c66fffe4ad902a4e0a9c6f180765ad3dbdcf`. Merge-gate verdict: PASS. Exact-head PR Unity Foundation CI passed on `61f92d26d44427d0bd64e9cd847e82830c023c32` at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28351445229. Post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28352578645.
+DONE / merged. Unity PR #99 merged on 2026-06-29 as `08d7c66fffe4ad902a4e0a9c6f180765ad3dbdcf`. Merge-gate verdict: PASS. Exact-head PR Unity Foundation CI passed on `61f92d26d44427d0bd64e9cd847e82830c023c32` at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28351445229. Post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28352578645. Unity README current-task pointer cleanup merged in PR #100 with PR CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28353097517 and post-merge main CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28353377725.
 
 ## Story type
 
@@ -155,4 +155,4 @@ Human-approved answers:
 
 ## Verdict
 
-DONE / merged. Unity PR #99: https://github.com/myriwe-bot/neon-champions-unity/pull/99. Merge commit: `08d7c66fffe4ad902a4e0a9c6f180765ad3dbdcf`. Exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28351445229. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28352578645. No known implementation blocker remains; EPIC-010 should move to QA/playtest closeout review.
+DONE / merged. Unity PR #99: https://github.com/myriwe-bot/neon-champions-unity/pull/99. Merge commit: `08d7c66fffe4ad902a4e0a9c6f180765ad3dbdcf`. Exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28351445229. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28352578645. Unity README current-task pointer cleanup: PR #100, PR CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28353097517, post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28353377725. No known implementation blocker remains; EPIC-010 should move to QA/playtest closeout review.

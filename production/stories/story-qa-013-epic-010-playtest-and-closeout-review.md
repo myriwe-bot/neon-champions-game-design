@@ -27,7 +27,7 @@ approval: pending
 
 ## Status
 
-READY-candidate / approval pending. This packet is prepared as the recommended next step after `STORY-TERRAIN-005` merged and post-merge Unity CI passed. It is not authorized for Unity implementation until a human promotes frontmatter to `status: ready` and `approval: approved`.
+READY-candidate / approval pending. This packet is prepared as the recommended next step after `STORY-TERRAIN-005` merged and post-merge Unity CI passed. It is not authorized for Unity implementation until a human promotes frontmatter to `status: ready` and `approval: approved`. Unity README currently has no READY task pointer and names this story only as an approval-pending candidate.
 
 ## Story type
 

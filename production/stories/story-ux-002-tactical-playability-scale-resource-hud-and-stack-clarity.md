@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-29: "<Approved". This approves the listed tactical playability scale, resource HUD, unit-stack clarity, non-regression, branch/PR, evidence, and verification requirements as written.
+READY / approved for Unity implementation. Human approval recorded 2026-06-29: "<Approved". This approves the listed tactical playability scale, resource HUD, unit-stack clarity, non-regression, branch/PR, evidence, and verification requirements as written. Unity README current-task pointer updated in PR #104 (`870bea6`) with exact-head CI and post-merge main CI passing.
 
 ## Story type
 
@@ -139,4 +139,4 @@ Human-approved assumptions:
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-ux-002.prompt.txt`. Unity README pointer update pending.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-ux-002.prompt.txt`. Unity README pointer PR #104: https://github.com/myriwe-bot/neon-champions-unity/pull/104. Pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28365510156. Pointer post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28365897982.

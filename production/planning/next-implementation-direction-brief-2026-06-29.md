@@ -22,7 +22,7 @@ approval: pending
 
 `STORY-UX-002` is DONE / merged. Unity PR #105 merged as `6e22e844fba6c8744424d1963f3a6a35ccfb9b2f`; exact-head PR CI and post-merge `main` CI passed.
 
-The immediate EPIC-010 + cross-epic UX/readability repair train is complete. There is no current READY / approved Unity implementation story after `STORY-UX-002`.
+The immediate EPIC-010 + cross-epic UX/readability repair train is complete. Unity current-task pointer cleanup PR #106 merged as `fda58fe7d880b557357f834d80041b3c39cbce32`; pointer PR CI and post-merge `main` CI passed. There is no current READY / approved Unity implementation story after `STORY-UX-002`.
 
 This brief is not implementation authorization. A next epic/story must be explicitly approved before Codex starts runtime work.
 

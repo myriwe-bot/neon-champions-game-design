@@ -1,7 +1,7 @@
 ---
 title: STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-29
@@ -23,7 +23,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-29: "<Approved". This approves the listed tactical playability scale, resource HUD, unit-stack clarity, non-regression, branch/PR, evidence, and verification requirements as written. Unity README current-task pointer updated in PR #104 (`870bea6`) with exact-head CI and post-merge main CI passing.
+DONE / merged. Unity PR #105 merged on 2026-06-29 as `6e22e844fba6c8744424d1963f3a6a35ccfb9b2f`. Exact-head PR CI passed on `72aa0bba0f2e994517b968ff691a301920c8d498`: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28370117987. Post-merge `main` CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28372400692. Human approval recorded 2026-06-29: "<Approved".
 
 ## Story type
 
@@ -130,13 +130,13 @@ Human-approved assumptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists.
-- [ ] Required tests/CI pass, or human-approved exceptions are documented.
-- [ ] PR/code review is complete if a Unity PR is opened.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists.
+- [x] Required tests/CI pass, or human-approved exceptions are documented.
+- [x] PR/code review is complete if a Unity PR is opened.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-ux-002.prompt.txt`. Unity README pointer PR #104: https://github.com/myriwe-bot/neon-champions-unity/pull/104. Pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28365510156. Pointer post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28365897982.
+DONE / merged in Unity PR #105: https://github.com/myriwe-bot/neon-champions-unity/pull/105. Merge commit: `6e22e844fba6c8744424d1963f3a6a35ccfb9b2f`. Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28370117987. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28372400692. The immediate approved UX/readability repair packet is complete; no next Unity implementation story is approved yet. Next step is a human decision on the next implementation direction, prepared in `production/planning/next-implementation-direction-brief-2026-06-29.md` with a guarded, non-runnable prompt at `production/sprints/codex-next-implementation-direction-brief-2026-06-29.prompt.txt`.

@@ -1,0 +1,38 @@
+Prepare the next Neon Champions implementation direction for human approval, but do not implement Unity runtime changes yet.
+
+Current state:
+- STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity is DONE / merged.
+- Unity PR #105: https://github.com/myriwe-bot/neon-champions-unity/pull/105
+- Merge commit: 6e22e844fba6c8744424d1963f3a6a35ccfb9b2f
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28370117987
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28372400692
+- There is no current READY / approved Unity implementation story.
+
+Stop conditions:
+- Do not create a Unity implementation branch.
+- Do not modify Unity runtime, tests, scenes, prefabs, assets, packages, or ProjectSettings.
+- Do not promote any story to READY unless the human explicitly approves that specific next packet.
+- If asked to implement from this prompt alone, stop and report that a READY story and approval are required.
+
+Task:
+1. Pull latest game-design and Unity main.
+2. Read:
+   - production/planning/next-implementation-direction-brief-2026-06-29.md
+   - production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity.md
+   - production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md
+   - design/gdd/strategic-map.md
+   - design/gdd/tactical-combat.md
+   - design/gdd/faction-unit-rosters.md
+   - design/gdd/intel-resource.md
+   - docs/architecture/control-manifest.md
+3. Present a concise human approval brief:
+   - confirm no READY Unity task is active;
+   - list the 4 candidate directions from the 2026-06-29 brief;
+   - recommend Champion Assets / Operations depth as default;
+   - ask the human to approve one direction or choose a different direction.
+4. If the human approves Champion Assets / Operations depth, create a new epic plus first story only as DRAFT / READY-candidate first unless the approval explicitly authorizes implementation.
+
+Output format:
+- No runtime changes.
+- No Unity PR.
+- Concise numbered decision brief only.

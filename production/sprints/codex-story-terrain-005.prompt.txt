@@ -8,15 +8,16 @@ Repository context:
 - Unity branch: `story/STORY-TERRAIN-005-strategic-context-tactical-battlefield-smoke`
 - PR title: `STORY-TERRAIN-005 Strategic context to tactical battlefield smoke`
 
-Required source authority:
-1. `production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md`
-2. `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
-3. `design/gdd/strategic-map.md` §§1-10
-4. `design/gdd/tactical-combat.md` §§3-6 and §6.2A
-5. `docs/architecture/control-manifest.md`
-6. `docs/architecture/testing-strategy.md`
-7. `docs/architecture/ci-build-automation.md`
-8. Unity repo `AGENTS.md` and `README.md`
+Required source authority and conflict policy:
+1. Primary implementation authority: `production/stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md`. This story's READY / approved frontmatter, branch, PR title, scope, exclusions, and verification requirements control this run.
+2. Supporting authority: `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`.
+3. Supporting authority: `design/gdd/strategic-map.md` §§1-10.
+4. Supporting authority: `design/gdd/tactical-combat.md` §§3-6 and §6.2A.
+5. Supporting authority: `docs/architecture/control-manifest.md`.
+6. Supporting authority: `docs/architecture/testing-strategy.md`.
+7. Supporting authority: `docs/architecture/ci-build-automation.md`.
+8. Unity repo `AGENTS.md` and `README.md` are repo-local instructions/context, but their current-task pointer is not allowed to override the approved story above. If Unity `README.md` still names `STORY-TERRAIN-004` or another older task as current, treat that as a stale pointer to fix on this branch, not as a source contradiction that blocks coding.
+9. Stop for contradictions only when the primary story or supporting design/architecture sources conflict on required implementation behavior. Do not stop merely because a generated/current-task pointer in the Unity repo is stale.
 
 Implementation scope:
 - Add or tighten a connected smoke path proving strategic site/terrain context selects the expected tactical layout family and carries expected terrain context tags into tactical snapshots.
@@ -35,7 +36,10 @@ Required verification:
 - Run available local checks. If local Unity cannot run, explain and still push the branch/PR for GitHub Actions.
 
 Required git/PR behavior:
+- Start from an updated `main` branch in the Unity repo.
+- If branch `story/STORY-TERRAIN-005-strategic-context-tactical-battlefield-smoke` does not exist locally or on `origin`, create it from updated `main`; absence of the branch before this run is expected and is not a blocker.
 - Create or update branch `story/STORY-TERRAIN-005-strategic-context-tactical-battlefield-smoke`.
+- If Unity `README.md` current-task metadata still points at `STORY-TERRAIN-004`, update it to `STORY-TERRAIN-005` as part of this implementation branch unless `AGENTS.md` explicitly forbids README edits.
 - Commit scoped changes.
 - Push the branch.
 - Open or update a GitHub PR titled `STORY-TERRAIN-005 Strategic context to tactical battlefield smoke`.
@@ -45,4 +49,6 @@ Stop conditions:
 - Stop if story frontmatter is not READY / approved.
 - Stop if unrelated uncommitted changes exist.
 - Stop if implementation requires excluded mechanics or design decisions.
-- Stop if required source docs are missing or contradictory.
+- Stop if primary story/supporting design/architecture source docs are missing or contradictory on implementation behavior.
+- Do not stop solely because the Unity branch is not pre-existing; create it from updated `main`.
+- Do not stop solely because Unity `README.md` still points at an older current task; fix the stale pointer on the implementation branch.

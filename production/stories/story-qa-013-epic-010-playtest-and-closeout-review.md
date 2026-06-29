@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-29: "Approved". This approves the listed QA/playability closeout scope, narrow-fix allowance, exclusions, branch/PR requirements, and verification requirements as written.
+READY / approved for Unity implementation. Human approval recorded 2026-06-29: "Approved". This approves the listed QA/playability closeout scope, narrow-fix allowance, exclusions, branch/PR requirements, and verification requirements as written. Unity README current-task pointer updated in PR #101 (`2746271`) with exact-head CI and post-merge main CI passing.
 
 ## Story type
 
@@ -158,4 +158,4 @@ Assumptions:
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-qa-013.prompt.txt`.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-qa-013.prompt.txt`. Unity README pointer PR #101: https://github.com/myriwe-bot/neon-champions-unity/pull/101. Pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28353962438. Pointer post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28354249041.

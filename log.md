@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-29] approval | STORY-CHAMP-OPS-002 operation targeting forecast readability
+
+- Human approval recorded: "Approved".
+- Promoted `STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass` from READY-candidate / approval pending to READY / approved.
+- Activated runnable prompt: `production/sprints/codex-story-champ-ops-002.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-CHAMP-OPS-002-operation-targeting-forecast-readability`.
+- Authorized scope: make the existing prototype forecast Operation target explicit/readable, expose legal/illegal target reasons, prevent failed attempts from spending Intel or mutating markers, and prove the path with focused tests plus PlayMode evidence.
+- Explicit exclusions remain: no new Operations, full spellbook/loadouts/cooldowns, Champion inventory/progression, new resources/economy/fog/dirty-info, tactical/map-content expansion, or final art/audio/VFX/localization.
+
 ## [2026-06-29] merge | STORY-CHAMP-OPS-001 merged and STORY-CHAMP-OPS-002 prepared
 
 - Reviewed Unity PR #108 for `STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp`: https://github.com/myriwe-bot/neon-champions-unity/pull/108

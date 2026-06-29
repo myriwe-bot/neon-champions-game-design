@@ -1,7 +1,5 @@
 # Codex prompt — STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass
 
-DO NOT RUN YET. This is a guarded candidate prompt. Stop immediately unless the story frontmatter has been promoted to `status: ready` and `approval: approved`.
-
 You are Codex working in the Neon Champions Unity repository.
 
 ## Mandatory source-authority preflight
@@ -141,7 +139,7 @@ Stop and report clearly if:
 - source docs contradict the implementation requirements;
 - satisfying the request requires excluded mechanics or new design decisions.
 
-Do not stop merely because the branch is not pre-existing; create it from updated `main` after approval.
+Do not stop merely because the branch is not pre-existing; create it from updated `main`.
 
 ## Output required
 

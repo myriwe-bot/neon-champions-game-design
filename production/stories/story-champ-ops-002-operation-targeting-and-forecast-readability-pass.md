@@ -1,7 +1,7 @@
 ---
 title: STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-29
@@ -18,14 +18,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass
 
 ## Status
 
-READY-candidate / approval pending. Drafted after `STORY-CHAMP-OPS-001` merged. Do not run implementation until this story is explicitly promoted to `status: ready` and `approval: approved`.
+READY / approved for Unity implementation. Human approval recorded 2026-06-29: "Approved". This approves `STORY-CHAMP-OPS-002` as the next narrow EPIC-011 implementation packet after `STORY-CHAMP-OPS-001` merged.
 
 ## Story type
 
@@ -100,7 +100,7 @@ Required unless a blocker is documented in PR evidence:
 
 ## Ambiguity Check
 
-Status: PASS for candidate review; NOT implementation authority.
+Status: PASS. Human approval recorded 2026-06-29: "Approved".
 
 Candidate assumptions:
 
@@ -127,7 +127,7 @@ Candidate assumptions:
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Ambiguity Check is PASS for candidate review.
-- [ ] Human approval has been recorded.
+- [x] Human approval has been recorded.
 
 ## DONE gate
 
@@ -140,4 +140,4 @@ Candidate assumptions:
 
 ## Verdict
 
-READY-candidate / approval pending. If approved, activate `production/sprints/codex-story-champ-ops-002.prompt.txt` and update the Unity current-task pointer.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-champ-ops-002.prompt.txt`.

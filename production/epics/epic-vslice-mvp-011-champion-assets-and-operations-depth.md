@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. Human approval recorded 2026-06-29: "Approved". This approves the next direction recommended in `production/planning/next-implementation-direction-brief-2026-06-29.md`: Champion Assets / Operations depth. `STORY-CHAMP-OPS-001` is DONE / merged; `STORY-CHAMP-OPS-002` is READY-candidate / approval pending.
+APPROVED / IN PROGRESS. Human approval recorded 2026-06-29: "Approved". This approves the next direction recommended in `production/planning/next-implementation-direction-brief-2026-06-29.md`: Champion Assets / Operations depth. `STORY-CHAMP-OPS-001` is DONE / merged; `STORY-CHAMP-OPS-002` is READY / approved.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -112,7 +112,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp](../stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | STORY-UX-002 DONE; EPIC-011 approved | Unity PR #108; exact-head CI and post-merge main CI passed |
-| [STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass](../stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass.md) | READY-candidate / approval pending | Strategic UX + Domain/Presentation + PlayMode Evidence | STORY-CHAMP-OPS-001 DONE; EPIC-011 approved | Targeting/denial tests, PlayMode smoke + PNG evidence, placeholder validator, Unity CI |
+| [STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass](../stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass.md) | READY / approved | Strategic UX + Domain/Presentation + PlayMode Evidence | STORY-CHAMP-OPS-001 DONE; EPIC-011 approved | Targeting/denial tests, PlayMode smoke + PNG evidence, placeholder validator, Unity CI |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -164,4 +164,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-CHAMP-OPS-001` is DONE / merged. `STORY-CHAMP-OPS-002` is READY-candidate / approval pending as the next narrow implementation packet; no new Unity implementation is authorized until human approval promotes it.
+APPROVED / IN PROGRESS. `STORY-CHAMP-OPS-001` is DONE / merged. `STORY-CHAMP-OPS-002` is READY / approved as the next narrow implementation packet.

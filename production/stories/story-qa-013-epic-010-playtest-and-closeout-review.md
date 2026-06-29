@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-013 EPIC-010 Playtest and Closeout Review
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-29
@@ -20,14 +20,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-QA-013 EPIC-010 Playtest and Closeout Review
 
 ## Status
 
-READY-candidate / approval pending. This packet is prepared as the recommended next step after `STORY-TERRAIN-005` merged and post-merge Unity CI passed. It is not authorized for Unity implementation until a human promotes frontmatter to `status: ready` and `approval: approved`. Unity README currently has no READY task pointer and names this story only as an approval-pending candidate.
+READY / approved for Unity implementation. Human approval recorded 2026-06-29: "Approved". This approves the listed QA/playability closeout scope, narrow-fix allowance, exclusions, branch/PR requirements, and verification requirements as written.
 
 ## Story type
 
@@ -110,11 +110,14 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: PASS for candidate drafting only.
+Status: PASS.
 
-Open questions:
+Human-approved answers:
 
-- Human approval is required before Unity implementation.
+- Approved 2026-06-29 via user instruction: "Approved".
+- Run this QA/playtest closeout packet as the next Unity step.
+- Allow only narrow readability/clickability/evidence fixes directly tied to EPIC-010 commitments.
+- Record a closeout verdict; do not close EPIC-010 or start a next-epic implementation story without separate human direction.
 
 Assumptions:
 
@@ -140,8 +143,8 @@ Assumptions:
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [x] Ambiguity Check status is PASS for candidate drafting.
-- [ ] Human approval has been recorded.
+- [x] Ambiguity Check status is PASS.
+- [x] Human approval has been recorded.
 
 ## DONE gate
 
@@ -155,4 +158,4 @@ Assumptions:
 
 ## Verdict
 
-READY-candidate / approval pending. Guarded Codex prompt prepared at `production/sprints/codex-story-qa-013.prompt.txt`; it self-blocks until this story is promoted to READY / approved.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-qa-013.prompt.txt`.

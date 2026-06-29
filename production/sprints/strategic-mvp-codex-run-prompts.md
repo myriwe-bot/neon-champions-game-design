@@ -90,15 +90,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. `STORY-QA-013 EPIC-010 Playtest and Closeout Review` is READY-candidate / approval pending.
+**Current READY / approved Unity implementation packet:** `STORY-QA-013 EPIC-010 Playtest and Closeout Review`.
 
-EPIC-009 is DONE / closed. EPIC-010 implementation stories `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. No current READY / approved Unity implementation packet is active. `STORY-QA-013` is the guarded next candidate and requires human approval before Codex may edit Unity files.
+EPIC-009 is DONE / closed. EPIC-010 implementation stories `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. `STORY-QA-013` is READY / approved as the current Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Guarded next-candidate prompt file: `production/sprints/codex-story-qa-013.prompt.txt`; it self-blocks until the story is promoted to READY / approved. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-qa-013.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -119,7 +119,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-No READY prompt is currently authorized. If `STORY-QA-013` is approved, use checked-in prompt file `production/sprints/codex-story-qa-013.prompt.txt`.
+Use checked-in prompt file `production/sprints/codex-story-qa-013.prompt.txt` for `STORY-QA-013`.
 
 ## Historical prompt-file runs
 
@@ -312,11 +312,9 @@ codex exec --sandbox danger-full-access $prompt
 ```
 
 
-## Copy-safe STORY-QA-013 guarded handoff
+## Copy-safe STORY-QA-013 handoff
 
-This prompt is guarded and will stop unless `STORY-QA-013` is promoted to READY / approved.
-
-Use after approval:
+Use:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design

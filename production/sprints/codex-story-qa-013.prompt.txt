@@ -13,7 +13,7 @@ Stop immediately without modifying files unless the story frontmatter says exact
 - `status: ready`
 - `approval: approved`
 
-Also confirm the story Ambiguity Check is PASS. If any of these checks fail, report that STORY-QA-013 is not authorized and stop.
+Also confirm the story Ambiguity Check is PASS. If any of these checks fail, report that STORY-QA-013 is not authorized in the local checkout and stop.
 
 ## Repositories
 

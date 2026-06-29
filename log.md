@@ -1375,3 +1375,10 @@
 - Home Rule counterplay remains deferred.
 - Sled Logistics Team remains visible support/mobility role only; no special mobility ability in ARMY-002.
 - Activated prompt `production/sprints/codex-story-army-002.prompt.txt`.
+
+
+## [2026-06-29] fix | PowerShell Codex prompt quoting
+
+- Fixed Codex handoff commands to pass prompt-file contents as one quoted argument: `codex exec --sandbox ... -- "$prompt"`.
+- Cause: unquoted `$prompt` can be split into separate native-command arguments in Windows PowerShell, producing errors like `unexpected argument 'use' found`.
+- Added a copy-safe `STORY-UX-002` handoff block using the corrected invocation.

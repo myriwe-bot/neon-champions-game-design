@@ -213,7 +213,7 @@ git pull --ff-only origin main
 git status --short
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt"
-codex exec --sandbox workspace-write $prompt
+codex exec --sandbox workspace-write -- "$prompt"
 ```
 
 Trusted fallback if workspace-write cannot complete required Unity edits:
@@ -229,7 +229,7 @@ git pull --ff-only origin main
 git status --short
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt"
-codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox danger-full-access -- "$prompt"
 ```
 
 
@@ -253,13 +253,13 @@ git pull --ff-only origin main
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-003.prompt.txt"
 
-codex exec --sandbox workspace-write $prompt
+codex exec --sandbox workspace-write -- "$prompt"
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox danger-full-access -- "$prompt"
 ```
 
 
@@ -278,13 +278,13 @@ git pull --ff-only origin main
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-004.prompt.txt"
 
-codex exec --sandbox workspace-write $prompt
+codex exec --sandbox workspace-write -- "$prompt"
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox danger-full-access -- "$prompt"
 ```
 
 
@@ -303,13 +303,13 @@ git pull --ff-only origin main
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-005.prompt.txt"
 
-codex exec --sandbox workspace-write $prompt
+codex exec --sandbox workspace-write -- "$prompt"
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox danger-full-access -- "$prompt"
 ```
 
 
@@ -328,11 +328,38 @@ git pull --ff-only origin main
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-013.prompt.txt"
 
-codex exec --sandbox workspace-write $prompt
+codex exec --sandbox workspace-write -- "$prompt"
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access $prompt
+codex exec --sandbox danger-full-access -- "$prompt"
+```
+
+
+## Copy-safe STORY-UX-002 handoff
+
+Use quoted prompt-variable invocation. In Windows PowerShell, passing `$prompt` unquoted can split the prompt text into separate CLI arguments and produce errors like `unexpected argument 'use' found`.
+
+Primary workspace-write run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt"
+codex exec --sandbox workspace-write -- "$prompt"
+```
+
+Trusted-repo fallback:
+
+```powershell
+codex exec --sandbox danger-full-access -- "$prompt"
 ```

@@ -13,6 +13,11 @@
 - Authorized scope: one minimal active-Champion Asset/Operation surface, one prototype strategic Operation option, visible cost/availability/result feedback, validation/tests/evidence.
 - Explicit exclusions remain: full Champion inventory, full Operations spellbook/loadouts, new resources/economy, dirty information/fog, Bio/Echo channels, new map/tactical mechanics/content, final art/audio/VFX/localization.
 
+- Unity README pointer PR #107 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/107
+- Unity pointer commit: `fed96341b0f96a688a6992b373c6e3337fbe843e`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28376578122
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28377076758
+
 ## [2026-06-28] approval | STORY-TERRAIN-005 strategic context to tactical battlefield smoke
 
 - Human approval recorded: "aPPROVED".

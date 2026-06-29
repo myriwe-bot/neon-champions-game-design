@@ -1,7 +1,7 @@
 ---
 title: STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-29
@@ -16,14 +16,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity
 
 ## Status
 
-READY-candidate / approval pending. Prepared after `STORY-QA-013` review/merge. Do not run Codex or update the Unity current-task pointer until human approval promotes this story to READY / approved.
+READY / approved for Unity implementation. Human approval recorded 2026-06-29: "<Approved". This approves the listed tactical playability scale, resource HUD, unit-stack clarity, non-regression, branch/PR, evidence, and verification requirements as written.
 
 ## Story type
 
@@ -100,9 +100,9 @@ Required unless a blocker is documented in PR evidence:
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate.
+Status: PASS.
 
-Assumptions requiring human approval:
+Human-approved assumptions:
 
 - This story is the next implementation packet after `STORY-QA-013`.
 - It should repair readability/scale/HUD/stack clarity only, not add new mechanics.
@@ -126,7 +126,7 @@ Assumptions requiring human approval:
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Ambiguity Check status is PASS for READY-candidate.
-- [ ] Human approval has been recorded.
+- [x] Human approval has been recorded.
 
 ## DONE gate
 
@@ -139,4 +139,4 @@ Assumptions requiring human approval:
 
 ## Verdict
 
-READY-candidate / approval pending. Prepared as the next implementation packet from the remaining playtest notes after `STORY-QA-013` merged and EPIC-010 closed.
+READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-ux-002.prompt.txt`. Unity README pointer update pending.

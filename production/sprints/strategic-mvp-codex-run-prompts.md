@@ -91,15 +91,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY-candidate Unity implementation packet:** `STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity` (approval pending).
+**Current READY / approved Unity implementation packet:** `STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity`.
 
-EPIC-009 and EPIC-010 are DONE / closed. `STORY-QA-013` is DONE / merged. `STORY-UX-002` is prepared as the next READY-candidate from remaining playtest notes, but is not runnable until human approval promotes it to READY / approved.
+EPIC-009 and EPIC-010 are DONE / closed. `STORY-QA-013` is DONE / merged. `STORY-UX-002` is READY / approved as the current Unity implementation packet from remaining playtest notes.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current candidate prompt file: `production/sprints/codex-story-ux-002.prompt.txt`. It has a stop condition until approval is recorded. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-ux-002.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -120,7 +120,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-After human approval, use checked-in prompt file `production/sprints/codex-story-ux-002.prompt.txt` for `STORY-UX-002`. Do not run it while approval is pending.
+Use checked-in prompt file `production/sprints/codex-story-ux-002.prompt.txt` for `STORY-UX-002`.
 
 ## Historical prompt-file runs
 

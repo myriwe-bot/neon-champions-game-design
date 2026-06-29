@@ -1,4 +1,4 @@
-STORY-UX-002 is prepared as a READY-candidate only. Do not implement unless the design-control story has been promoted to READY / approved.
+STORY-UX-002 is approved for Unity implementation.
 
 Purpose: Unity implementation handoff for STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity.
 
@@ -10,8 +10,8 @@ Current state:
   - "Tactical area still small."
 - STORY-QA-013 already addressed objective/Champion affordance regressions narrowly; do not regress them.
 
-Stop conditions:
-- Stop unless `production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity.md` has `status: ready` and `approval: approved`.
+Preflight guard:
+- Before implementation, verify `production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity.md` has `status: ready` and `approval: approved`. Stop if not.
 - Stop if Unity `README.md` current-task pointer names a different approved story.
 - Do not add new resources, economy rules, tactical mechanics, damage rules, objective rules, AI, roster content, final UI art, or broad UI framework rewrites.
 - If the requested readability repair requires new gameplay rules, stop and report the blocker instead of expanding scope.

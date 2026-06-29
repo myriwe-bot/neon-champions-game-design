@@ -1,36 +1,163 @@
-STORY-UX-002 is approved for Unity implementation.
+# Codex prompt — STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity
 
-Purpose: Unity implementation handoff for STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity.
+You are Codex working in the Neon Champions Unity repository.
 
-Current state:
-- EPIC-010 terrain/context implementation and QA closeout are DONE / merged.
-- Human playtest notes preserved as source authority:
-  - "Resource use is unclear, resources are not displayed anywhere."
-  - "Unit stacks also unclear."
-  - "Tactical area still small."
-- STORY-QA-013 already addressed objective/Champion affordance regressions narrowly; do not regress them.
+## Mandatory source-authority preflight
 
-Preflight guard:
-- Before implementation, verify `production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity.md` has `status: ready` and `approval: approved`. Stop if not.
-- Stop if Unity `README.md` current-task pointer names a different approved story.
-- Do not add new resources, economy rules, tactical mechanics, damage rules, objective rules, AI, roster content, final UI art, or broad UI framework rewrites.
-- If the requested readability repair requires new gameplay rules, stop and report the blocker instead of expanding scope.
+Before editing Unity files, read the approved story in the design/control repository:
 
-Task:
-1. Read the story and source docs.
-2. Create branch `story/STORY-UX-002-tactical-scale-resource-stack-clarity` from latest Unity `main`.
-3. Make the 1280x720 tactical battle area materially less cramped / more usable within current prototype UI constraints.
-4. Make existing resource state visible and legible wherever resource-relevant actions are shown.
-5. Improve tactical stack labels/details for owner/side, role/name, count, status/actionability, and legal target state.
-6. Preserve/non-regress objective/guard-site interaction and Champion-vs-Champion engage affordances from STORY-QA-013.
-7. Add/repair tests and presentation snapshot coverage where feasible.
-8. Capture evidence under `production/evidence/STORY-UX-002/`.
-9. Run required checks/CI locally where available.
-10. Commit and push the actual implementation branch, then open/update a PR, or clearly explain why pushing was not done.
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity.md`
 
-Output required:
-- Branch name and commit SHA.
-- Files changed.
-- Tests/evidence run.
-- Evidence path.
-- PR URL if opened, or exact reason no PR was opened.
+Stop immediately without modifying files unless that story frontmatter says exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also confirm the story Ambiguity Check is PASS. If any check fails, report that `STORY-UX-002` is not authorized in the local checkout and stop.
+
+## Repositories
+
+Design/control repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity implementation repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Run all Unity implementation work from the Unity repository.
+
+## Required reading
+
+Read these before planning or editing:
+
+1. Story authority:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity.md`
+2. Prior closeout story / non-regression source:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-qa-013-epic-010-playtest-and-closeout-review.md`
+3. Parent epic context:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+4. Design / architecture references:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\tactical-combat.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md`
+5. Unity repo instructions/context:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-unity\README.md`
+   - any applicable `AGENTS.md` files in the Unity repo
+
+## Branch and PR
+
+Work in the Unity repo on:
+
+- Branch: `story/STORY-UX-002-tactical-scale-resource-stack-clarity`
+- PR title: `STORY-UX-002 tactical scale resource HUD and stack clarity`
+
+Start from updated `main`. If the branch does not exist locally or on origin, create it from updated `main`; branch absence is not a blocker.
+
+## Human playtest authority
+
+The approved story preserves the exact human complaints. Treat them as source authority, but do not invent new mechanics to satisfy them. The implementation target is readability/UX over existing prototype state:
+
+- resource visibility/readability is insufficient;
+- unit stack identity/count/status readability is insufficient;
+- the tactical area is still too small/cramped.
+
+The same playtest also reported objective/Champion affordance issues that were addressed in `STORY-QA-013`. This story must not regress those fixes.
+
+## Authorized scope
+
+You may:
+
+- increase the usable tactical battle area at 1280x720 within the current prototype UI;
+- reduce avoidable panel waste, dead space, or over-small tactical board scaling;
+- make existing resource state visible and legible wherever resource-relevant actions are shown;
+- display existing resource names and amounts in player-facing language;
+- improve tactical stack labels and selected-stack details so owner/side, role/name, count, status/actionability, and legal target state are clear;
+- preserve or improve objective/guard-site and Champion-vs-Champion affordance readability from `STORY-QA-013`;
+- add or repair focused tests / presentation snapshot coverage where feasible;
+- capture evidence under `production/evidence/STORY-UX-002/` in the Unity repo.
+
+## Strict exclusions
+
+Do not add or alter:
+
+- new resources, resource income rules, resource costs, economy rules, recruitment model, facilities, or balance;
+- tactical combat mechanics, damage rules, action rules, objective capture rules, stack stats, roster content, Champion powers, AI, or win/loss rules;
+- strategic map topology, nodes, routes, sites, scenario flow, or new content;
+- final UI art, icons, animation, VFX, audio, localization, accessibility framework, or broad UI framework rewrites.
+
+If a requested readability improvement requires new gameplay rules, stop and report the blocker instead of expanding scope.
+
+## Acceptance focus
+
+Implement the smallest Unity change set that satisfies the approved story acceptance criteria:
+
+1. At 1280x720, the tactical board/area is visibly larger or materially less cramped than current `main`.
+2. Existing resource state is visible in strategic and tactical/interaction contexts where actions can consume, award, or depend on resources.
+3. Resource labels include current amounts and player-facing resource names.
+4. Tactical stack labels distinguish friendly/enemy/guard identity and show role/name plus current count clearly.
+5. Selecting or inspecting a stack shows readable count/status/actionability and relevant command/AP/resource context where currently implemented.
+6. Legal move and legal attack/target state remains clear after layout/scale changes.
+7. Objective/guard-site interaction does not display `Engage Champion`; Champion-vs-Champion engage affordance remains limited to actual same-node enemy Champions.
+8. Existing `STORY-QA-013` objective capture and Champion battle regression coverage continues to pass.
+
+## Required verification
+
+Run what is available locally. If local Unity execution is unavailable, say so in PR evidence and rely on GitHub Actions after pushing.
+
+Required unless impossible and documented:
+
+- `git diff --check`
+- focused EditMode tests for any application/domain/presentation snapshot logic changes
+- PlayMode smoke tests or generated screenshot/text evidence for the 1280x720 tactical surface
+- placeholder validator if available locally
+- exact-head Unity Foundation CI before merge
+
+## Evidence requirements
+
+Create or update:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity\production\evidence\STORY-UX-002\README.md`
+
+Evidence must include:
+
+- final tactical area scale/readability notes or screenshots;
+- resource HUD/label visibility notes or screenshots;
+- stack label/detail clarity notes or screenshots;
+- objective/Champion affordance non-regression notes;
+- tests/checks run;
+- omissions/deferred work, or `No known omissions`.
+
+## Required git/PR behavior
+
+- Start from updated Unity `main`.
+- Create or update branch `story/STORY-UX-002-tactical-scale-resource-stack-clarity`.
+- Keep changes scoped to the approved story.
+- Commit scoped changes.
+- Push the branch.
+- Open or update a GitHub PR titled `STORY-UX-002 tactical scale resource HUD and stack clarity`.
+- PR body must include summary, tests/checks run, evidence path, omissions/deferred work, and CI status if available.
+
+## Stop conditions
+
+Stop and report clearly if:
+
+- story frontmatter is not `status: ready` and `approval: approved`;
+- unrelated uncommitted changes exist and cannot be safely separated;
+- required source docs are missing;
+- source docs contradict the implementation requirements;
+- satisfying the request requires excluded mechanics or new design decisions.
+
+Do not stop merely because the branch is not pre-existing; create it from updated `main`.
+
+## Output required
+
+When finished, report:
+
+- branch name;
+- commit SHA;
+- files changed;
+- tests/checks run;
+- evidence path;
+- PR URL, or exact reason no PR was opened.

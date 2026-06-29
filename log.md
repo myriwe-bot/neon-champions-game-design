@@ -1382,3 +1382,10 @@
 - Fixed Codex handoff commands to pipe prompt-file contents through stdin: `Get-Content -Raw <prompt-file> | codex exec --sandbox ...`.
 - Cause: passing large/multiline prompt text as a native-command argument to the Windows Codex shim can be split or reparsed, even when quoted, producing errors like `unexpected argument 'use' found`.
 - Supersedes the earlier quoted-argument attempt; future handoffs should use stdin piping, not `$prompt` argv passing.
+
+
+## [2026-06-29] fix | STORY-UX-002 Codex prompt shape
+
+- Rewrote `production/sprints/codex-story-ux-002.prompt.txt` from a terse task note into the proven full Codex handoff format used by successful story prompts.
+- Added absolute Windows source paths, required reading, branch/PR requirements, authorized scope, strict exclusions, verification/evidence requirements, git/PR behavior, and explicit stop conditions.
+- Updated future approval workflow guidance so runnable prompts must use the full handoff shape rather than the terse Purpose/Current-state/Task format.

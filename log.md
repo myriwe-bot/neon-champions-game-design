@@ -14,7 +14,10 @@
 - Marked `STORY-CHAMP-OPS-001` DONE / merged and moved EPIC-011 to APPROVED / IN PROGRESS.
 - Prepared `STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass` as READY-candidate / approval pending.
 - Guarded prompt prepared at `production/sprints/codex-story-champ-ops-002.prompt.txt`; no new Unity implementation is authorized until human approval promotes the story.
-- Unity README current-task pointer should be cleared because there is no current READY / approved implementation task after the merge.
+- Unity README current-task pointer cleared via PR #109: https://github.com/myriwe-bot/neon-champions-unity/pull/109
+- Pointer cleanup commit: `0800a216cc338ad822dabb085a469046145a6cc2`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28384708876
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28385278881
 
 ## [2026-06-29] approval | EPIC-011 Champion Assets / Operations depth and STORY-CHAMP-OPS-001
 

@@ -1,0 +1,111 @@
+# Codex prompt — STORY-QA-013 EPIC-010 Playtest and Closeout Review
+
+You are preparing/reviewing Neon Champions Unity story `STORY-QA-013 EPIC-010 Playtest and Closeout Review`.
+
+## Mandatory source-authority preflight
+
+Before editing Unity files, read:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-qa-013-epic-010-playtest-and-closeout-review.md`
+
+Stop immediately without modifying files unless the story frontmatter says exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also confirm the story Ambiguity Check is PASS. If any of these checks fail, report that STORY-QA-013 is not authorized and stop.
+
+## Repositories
+
+Design/control repo:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity implementation repo:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+## Required reading
+
+Read these before planning or editing:
+
+1. Story authority:
+   - `production/stories/story-qa-013-epic-010-playtest-and-closeout-review.md`
+2. Parent epic:
+   - `production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability.md`
+3. Merged story evidence in Unity:
+   - `production/evidence/STORY-TERRAIN-001/`
+   - `production/evidence/STORY-TERRAIN-002/`
+   - `production/evidence/STORY-TERRAIN-003/`
+   - `production/evidence/STORY-TERRAIN-004/`
+   - `production/evidence/STORY-TERRAIN-005/`
+4. Design/control:
+   - `design/gdd/strategic-map.md` §§1-10
+   - `design/gdd/tactical-combat.md` §§3-6 and §6.2A
+   - `docs/architecture/control-manifest.md`
+   - `docs/architecture/testing-strategy.md`
+   - `docs/architecture/ci-build-automation.md`
+5. Unity repo instructions:
+   - root `README.md`
+   - any applicable `AGENTS.md` files
+
+## Branch and PR
+
+Work in the Unity repo on:
+
+- Branch: `story/STORY-QA-013-epic-010-playtest-closeout-review`
+- PR title: `STORY-QA-013 EPIC-010 playtest and closeout review`
+
+## Authorized scope
+
+This is a QA/playability closeout pass, not a new mechanics packet.
+
+You may:
+
+- Review/run current Unity `main` at 1280x720 against the EPIC-010 terrain/context surface.
+- Inspect strategic context tags, tactical layout-family selection, deployment zones, blocked terrain, defensive terrain, legal moves, legal attack targets, out-of-range/non-attackable enemies, and strategic-to-tactical handoff readability.
+- Fix only concrete player-facing readability/clickability/evidence blockers directly tied to EPIC-010 commitments.
+- Add or update PlayMode smoke tests and PNG/text evidence under `production/evidence/STORY-QA-013/` if a fix is made or if new closeout evidence is needed.
+- Record a closeout verdict: `CLOSE EPIC-010`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT / NEEDS HUMAN PLAYTEST`.
+
+Do not add:
+
+- strategic terrain movement costs, movement-type rules, supply/logistics, weather, fog, stealth/reveal, strategic AI terrain valuation, topology rewrites, procedural maps, or map editor UI;
+- new tactical combat mechanics, damage/AP/Defend/retaliation/Sensor Lock/CombatAI changes, objectives, elevation, LoS/cover systems, hazards, overwatch, destructible terrain, facing, accuracy, or balance expansion;
+- new strategic nodes/routes/sites/factions/resources/facilities/recruitment offers/win-loss/battle-result rules;
+- broad UI redesign, final art/icons/VFX/audio/localization, or next-epic implementation promotion.
+
+## Required verification
+
+If a Unity branch is opened:
+
+- Placeholder validator must pass.
+- EditMode tests must pass if any application/domain projection changes are made.
+- PlayMode tests must pass if any Unity code/UI/evidence changes are made.
+- Standalone Windows64 build must pass.
+- Commit evidence under `production/evidence/STORY-QA-013/` as needed.
+- Open/update the PR with story/design links, changed files summary, tests run, evidence paths, omissions/deferred work, and closeout verdict.
+- Push the branch and verify exact-head GitHub Actions CI if local Unity cannot run.
+
+If no code changes are needed after review:
+
+- Still record what was inspected and why no fix was needed.
+- Preserve a clear closeout verdict.
+- Do not invent new design direction.
+
+## Required git/PR behavior
+
+- Start from updated Unity `main`.
+- Create or update branch `story/STORY-QA-013-epic-010-playtest-closeout-review`.
+- Commit scoped changes if any.
+- Push the branch if there are changes.
+- Open or update a GitHub PR titled `STORY-QA-013 EPIC-010 playtest and closeout review` if there are Unity changes or evidence/docs to merge.
+
+## Stop conditions
+
+Stop and report instead of guessing if:
+
+- STORY-QA-013 is not `ready` / `approved` or Ambiguity Check is not PASS.
+- You find a blocker that requires new mechanics/design outside this story.
+- Required source files are missing or contradictory.
+- Unity tests or build cannot run and no GitHub Actions path is available.

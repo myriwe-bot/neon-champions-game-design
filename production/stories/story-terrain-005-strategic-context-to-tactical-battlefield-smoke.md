@@ -1,11 +1,11 @@
 ---
 title: STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-28
-updated: 2026-06-28
+updated: 2026-06-29
 source_lore: [greenland, white-sky, digital-net]
 related:
   [
@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-28: "aPPROVED". This approves the listed scope, assumptions, exclusions, allowed placeholders, branch/PR requirements, and verification requirements as written.
+DONE / merged. Unity PR #99 merged on 2026-06-29 as `08d7c66fffe4ad902a4e0a9c6f180765ad3dbdcf`. Merge-gate verdict: PASS. Exact-head PR Unity Foundation CI passed on `61f92d26d44427d0bd64e9cd847e82830c023c32` at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28351445229. Post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28352578645.
 
 ## Story type
 
@@ -76,12 +76,12 @@ As a player, I want the strategic place I choose to attack to visibly carry thro
 
 ## Acceptance criteria
 
-- [ ] At least two strategic site/context paths launch tactical battles with distinct tactical layout-family IDs.
-- [ ] Each covered handoff carries expected strategic terrain context tags into `BattleSetup` and tactical presentation snapshots.
-- [ ] Each covered tactical snapshot/evidence shows layout family, terrain context, deployment zones, blocked terrain, defensive terrain, movement range/legal moves, attack range/legal targets, and out-of-range/non-attackable enemies.
-- [ ] Strategic-to-tactical handoff tests use real runtime state/projection paths rather than hardcoded presentation-only demo strings.
-- [ ] Existing terrain stories remain intact; no new mechanics are introduced outside integration smoke/readability evidence.
-- [ ] Evidence distinguishes this integration smoke from future strategic terrain movement costs, supply, weather, fog, LoS/cover, hazard, objective, and AI systems.
+- [x] At least two strategic site/context paths launch tactical battles with distinct tactical layout-family IDs.
+- [x] Each covered handoff carries expected strategic terrain context tags into `BattleSetup` and tactical presentation snapshots.
+- [x] Each covered tactical snapshot/evidence shows layout family, terrain context, deployment zones, blocked terrain, defensive terrain, movement range/legal moves, attack range/legal targets, and out-of-range/non-attackable enemies.
+- [x] Strategic-to-tactical handoff tests use real runtime state/projection paths rather than hardcoded presentation-only demo strings.
+- [x] Existing terrain stories remain intact; no new mechanics are introduced outside integration smoke/readability evidence.
+- [x] Evidence distinguishes this integration smoke from future strategic terrain movement costs, supply, weather, fog, LoS/cover, hazard, objective, and AI systems.
 
 ## Verification requirements
 
@@ -143,16 +143,16 @@ Human-approved answers:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists under Unity `production/evidence/STORY-TERRAIN-005/`.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass. Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28351445229. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28352578645.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete: Unity PR #99.
+- [x] CI passes.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-terrain-005.prompt.txt`.
+DONE / merged. Unity PR #99: https://github.com/myriwe-bot/neon-champions-unity/pull/99. Merge commit: `08d7c66fffe4ad902a4e0a9c6f180765ad3dbdcf`. Exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28351445229. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28352578645. No known implementation blocker remains; EPIC-010 should move to QA/playtest closeout review.

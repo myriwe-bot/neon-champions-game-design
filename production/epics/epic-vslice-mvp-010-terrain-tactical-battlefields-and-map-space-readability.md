@@ -5,7 +5,7 @@ status: approved / in-progress
 phase: production
 owner: shared
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-06-29
 source_lore: [greenland, white-sky, digital-net]
 related:
   [
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001`, `STORY-TERRAIN-002`, `STORY-TERRAIN-003`, and `STORY-TERRAIN-004` are DONE / merged. Current READY / approved Unity implementation packet is `STORY-TERRAIN-005`. No Unity implementation is authorized directly by this epic. Agents and Codex may only implement READY child stories.
+APPROVED / IMPLEMENTATION COMPLETE; AWAITING QA CLOSEOUT APPROVAL. `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. No current READY / approved Unity implementation packet is active. Next recommended packet is `STORY-QA-013 EPIC-010 Playtest and Closeout Review` as READY-candidate / approval pending.
 
 ## Priority tier
 
@@ -132,8 +132,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-TERRAIN-002 Tactical Layout Definitions and Deployment Zones](../stories/story-terrain-002-tactical-layout-definitions-and-deployment-zones.md) | DONE / merged | Tactical Data + Presentation | TERRAIN-001 DONE | PR #89; exact-head CI; post-merge CI |
 | [STORY-TERRAIN-003 Tactical Blockers and Simple Defensive Terrain](../stories/story-terrain-003-tactical-blockers-and-simple-defensive-terrain.md) | DONE / merged | Tactical Rules + UI | TERRAIN-002 DONE | PR #92; exact-head CI; post-merge CI |
 | [STORY-TERRAIN-004 Range, Threat, and Terrain Readability Pass](../stories/story-terrain-004-range-threat-and-terrain-readability-pass.md) | DONE / merged | Tactical UI + Playability | TERRAIN-003 DONE | PR #95; exact-head CI; post-merge CI |
-| [STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke](../stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md) | READY / approved | Integration Smoke | TERRAIN-001-004 DONE | Runnable prompt prepared |
-| STORY-QA-013 EPIC-010 Playtest and Closeout Review | Draft placeholder | QA + Playability Review | EPIC-010 implementation stories DONE | TBD |
+| [STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke](../stories/story-terrain-005-strategic-context-to-tactical-battlefield-smoke.md) | DONE / merged | Integration Smoke | TERRAIN-001-004 DONE | PR #99; exact-head CI; post-merge CI |
+| [STORY-QA-013 EPIC-010 Playtest and Closeout Review](../stories/story-qa-013-epic-010-playtest-and-closeout-review.md) | READY-candidate / approval pending | QA + Playability Review | EPIC-010 implementation stories DONE | Guarded prompt prepared |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -205,4 +205,4 @@ Invalid epic behavior:
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-TERRAIN-001`, `STORY-TERRAIN-002`, `STORY-TERRAIN-003`, and `STORY-TERRAIN-004` are DONE / merged. Current READY / approved Unity implementation packet: `STORY-TERRAIN-005 Strategic Context to Tactical Battlefield Smoke` with a runnable prompt.
+APPROVED / IMPLEMENTATION COMPLETE; AWAITING QA CLOSEOUT APPROVAL. `STORY-TERRAIN-001` through `STORY-TERRAIN-005` are DONE / merged. Next recommended packet is `STORY-QA-013 EPIC-010 Playtest and Closeout Review` as READY-candidate / approval pending; no new Unity implementation is authorized until human approval promotes it to READY.

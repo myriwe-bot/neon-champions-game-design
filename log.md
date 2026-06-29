@@ -2,6 +2,20 @@
 
 > Append-only project log.
 
+## [2026-06-29] merge | STORY-CHAMP-OPS-001 merged and STORY-CHAMP-OPS-002 prepared
+
+- Reviewed Unity PR #108 for `STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp`: https://github.com/myriwe-bot/neon-champions-unity/pull/108
+- Applied one evidence-doc correction before merge so committed evidence no longer claimed pending CI after CI had passed.
+- Merge verdict: PASS. Scope matched the approved narrow Champion Asset / prototype Operation on-ramp; no blockers found.
+- Unity merge commit: `785de9850a010d0f6678552aecb22139c44ddaaa`.
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28382658503
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28383682889
+- Artifact-storage quota warnings persisted, but all CI jobs concluded success.
+- Marked `STORY-CHAMP-OPS-001` DONE / merged and moved EPIC-011 to APPROVED / IN PROGRESS.
+- Prepared `STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass` as READY-candidate / approval pending.
+- Guarded prompt prepared at `production/sprints/codex-story-champ-ops-002.prompt.txt`; no new Unity implementation is authorized until human approval promotes the story.
+- Unity README current-task pointer should be cleared because there is no current READY / approved implementation task after the merge.
+
 ## [2026-06-29] approval | EPIC-011 Champion Assets / Operations depth and STORY-CHAMP-OPS-001
 
 - Human approval recorded: "Approved".

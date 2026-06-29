@@ -1,0 +1,155 @@
+# Codex prompt — STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass
+
+DO NOT RUN YET. This is a guarded candidate prompt. Stop immediately unless the story frontmatter has been promoted to `status: ready` and `approval: approved`.
+
+You are Codex working in the Neon Champions Unity repository.
+
+## Mandatory source-authority preflight
+
+Before editing Unity files, read the story in the design/control repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-champ-ops-002-operation-targeting-and-forecast-readability-pass.md`
+
+Stop immediately without modifying files unless that story frontmatter says exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also confirm the story Ambiguity Check is PASS. If any check fails, report that `STORY-CHAMP-OPS-002` is not authorized in the local checkout and stop.
+
+## Repositories
+
+Design/control repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity implementation repository:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Run all Unity implementation work from the Unity repository.
+
+## Required reading
+
+Read these before planning or editing:
+
+1. Story authority:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-champ-ops-002-operation-targeting-and-forecast-readability-pass.md`
+2. Parent epic and prior implemented baseline:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\epics\epic-vslice-mvp-011-champion-assets-and-operations-depth.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp.md`
+3. Design references:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\strategic-map.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\intel-resource.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\design\gdd\tactical-combat\champion-operations-and-progression.md`
+4. Architecture / process references:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\control-manifest.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\testing-strategy.md`
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\docs\architecture\ci-build-automation.md`
+5. Unity repo instructions/context:
+   - `C:\Users\NordicGamer\CodexProjects\neon-champions-unity\README.md`
+   - any applicable `AGENTS.md` files in the Unity repo
+
+## Branch and PR
+
+Work in the Unity repo on:
+
+- Branch: `story/STORY-CHAMP-OPS-002-operation-targeting-forecast-readability`
+- PR title: `STORY-CHAMP-OPS-002 operation targeting forecast readability`
+
+Start from updated `main`. If the branch does not exist locally or on origin, create it from updated `main`; branch absence is not a blocker.
+
+## Authorized scope
+
+Implement the smallest Unity change set that satisfies the approved story:
+
+- make the existing prototype forecast operation target explicit and readable;
+- support selected adjacent guarded site targeting, or clearly explain the implementation's default target before spending Intel;
+- expose denial reasons for no Champion, no adjacent target, non-adjacent target, unguarded target, already forecasted target, and insufficient Intel;
+- keep the existing operation ID `prototype_operation_site_forecast` and 1 Intel cost;
+- preserve the existing Asset/Operation surface from `STORY-CHAMP-OPS-001`;
+- show applied forecast markers in strategic node/card/HUD text;
+- add focused EditMode tests and PlayMode evidence;
+- capture evidence under `production/evidence/STORY-CHAMP-OPS-002/` in the Unity repo.
+
+## Strict exclusions
+
+Do not add or alter:
+
+- new Operations or multiple operation choices;
+- cooldowns, loadouts, reaction windows, counter-operations, or full operation cadence rules;
+- full Champion inventory/assets, progression, skill trees, asset tiers, loss/transfer, or loot;
+- new resources, Intel subtypes, economy/income changes, dirty-information/fog, misinformation, PR, legitimacy, or feed systems;
+- new sites/routes/map topology, tactical combat rules, AI, victory rules, final art/audio/VFX/icons/localization/accessibility framework.
+
+If satisfying the story seems to require any excluded design/system, stop and report the blocker instead of expanding scope.
+
+## Acceptance focus
+
+1. Selected/previewed forecast target is explicit in the active Champion operation UI/status.
+2. Legal target selection or default-target reasoning is visible before spending Intel.
+3. Illegal/unavailable targets produce readable denial reasons and no resource/site mutation.
+4. Applying the forecast operation marks exactly one legal target and spends exactly 1 Intel.
+5. Forecasted target remains visible in strategic node/card/HUD text.
+6. Existing CHAMP-OPS-001, resource HUD, strategic movement, site interaction, objective, and tactical handoff smokes continue to pass.
+7. Evidence exists under Unity `production/evidence/STORY-CHAMP-OPS-002/`.
+
+## Required verification
+
+Run what is available locally. If local Unity execution is unavailable, say so in PR evidence and rely on GitHub Actions after pushing.
+
+Required unless impossible and documented:
+
+- `git diff --check`
+- focused EditMode tests for target selection/denial/no-partial-mutation behavior
+- PlayMode smoke test or generated screenshot/text evidence for selected target, denied target, and applied marker
+- placeholder validator if available locally
+- exact-head Unity Foundation CI before merge
+
+## Evidence requirements
+
+Create or update:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity\production\evidence\STORY-CHAMP-OPS-002\README.md`
+
+Evidence must include:
+
+- available target notes/screenshots;
+- denied target notes/screenshots;
+- applied marker notes/screenshots;
+- tests/checks run;
+- omissions/deferred work, or `No known omissions`.
+
+## Required git/PR behavior
+
+- Start from updated Unity `main`.
+- Create or update branch `story/STORY-CHAMP-OPS-002-operation-targeting-forecast-readability`.
+- Keep changes scoped to the approved story.
+- Commit scoped changes.
+- Push the branch.
+- Open or update a GitHub PR titled `STORY-CHAMP-OPS-002 operation targeting forecast readability`.
+- PR body must include summary, tests/checks run, evidence path, omissions/deferred work, and CI status if available.
+
+## Stop conditions
+
+Stop and report clearly if:
+
+- story frontmatter is not `status: ready` and `approval: approved`;
+- Ambiguity Check is not PASS;
+- unrelated uncommitted changes exist and cannot be safely separated;
+- required source docs are missing;
+- source docs contradict the implementation requirements;
+- satisfying the request requires excluded mechanics or new design decisions.
+
+Do not stop merely because the branch is not pre-existing; create it from updated `main` after approval.
+
+## Output required
+
+When finished, report:
+
+- branch name;
+- commit SHA;
+- files changed;
+- tests/checks run;
+- evidence path;
+- PR URL, or exact reason no PR was opened.

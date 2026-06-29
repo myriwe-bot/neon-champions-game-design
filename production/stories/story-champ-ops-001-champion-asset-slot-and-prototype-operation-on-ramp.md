@@ -1,7 +1,7 @@
 ---
 title: STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-29
@@ -25,7 +25,14 @@ approval: approved
 
 ## Status
 
-READY / approved for Unity implementation. Human approval recorded 2026-06-29: "Approved". This approves the Champion Assets / Operations direction from `production/planning/next-implementation-direction-brief-2026-06-29.md` and this first narrow implementation packet.
+DONE / merged.
+
+- Unity PR #108: https://github.com/myriwe-bot/neon-champions-unity/pull/108
+- Merge commit: `785de9850a010d0f6678552aecb22139c44ddaaa`
+- Exact-head PR Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28382658503
+- Post-merge main Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28383682889
+
+Implemented as a narrow Champion Asset / Operation on-ramp after human approval recorded 2026-06-29: "Approved". This approved the Champion Assets / Operations direction from `production/planning/next-implementation-direction-brief-2026-06-29.md` and this first narrow implementation packet.
 
 ## Story type
 
@@ -82,13 +89,13 @@ Source authority note: the Champion Operations split article remains draft/pendi
 
 ## Acceptance criteria
 
-- [ ] Active Champion UI/status shows a clearly labeled prototype Asset/Operation surface.
-- [ ] The operation option is visible in player-facing language, with cost/availability and a short explanation.
-- [ ] Applying or previewing the operation produces a visible strategic-map result/feedback without entering tactical combat or changing victory rules.
-- [ ] Insufficient/unavailable/duplicate operation attempts are rejected with clear diagnostics/feedback and no partial mutation.
-- [ ] Existing strategic movement, site interaction, resource HUD, objective, and tactical handoff smokes continue to pass.
-- [ ] Evidence under Unity `production/evidence/STORY-CHAMP-OPS-001/` includes notes/screenshots for the operation option, cost/availability, result feedback, and any omissions.
-- [ ] Exact-head Unity Foundation CI passes before merge.
+- [x] Active Champion UI/status shows a clearly labeled prototype Asset/Operation surface.
+- [x] The operation option is visible in player-facing language, with cost/availability and a short explanation.
+- [x] Applying or previewing the operation produces a visible strategic-map result/feedback without entering tactical combat or changing victory rules.
+- [x] Insufficient/unavailable/duplicate operation attempts are rejected with clear diagnostics/feedback and no partial mutation.
+- [x] Existing strategic movement, site interaction, resource HUD, objective, and tactical handoff smokes continue to pass.
+- [x] Evidence under Unity `production/evidence/STORY-CHAMP-OPS-001/` includes notes/screenshots for the operation option, cost/availability, result feedback, and any omissions.
+- [x] Exact-head Unity Foundation CI passes before merge.
 
 ## Verification requirements
 
@@ -135,13 +142,13 @@ Human-approved assumptions:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists.
-- [ ] Required tests/CI pass, or human-approved exceptions are documented.
-- [ ] PR/code review is complete if a Unity PR is opened.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists.
+- [x] Required tests/CI pass, or human-approved exceptions are documented.
+- [x] PR/code review is complete if a Unity PR is opened.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved for Unity implementation. Runnable Codex prompt prepared at `production/sprints/codex-story-champ-ops-001.prompt.txt`.
+DONE / merged via Unity PR #108. Next candidate: `STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass` is drafted as READY-candidate / approval pending; no new Unity implementation is authorized until human approval promotes it.

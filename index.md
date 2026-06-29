@@ -122,8 +122,9 @@
 - [[production/stories/story-qa-013-epic-010-playtest-and-closeout-review]] — DONE / merged EPIC-010 closeout review.
 - [[production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity]] — DONE / merged cross-epic UX/readability repair.
 - [[production/planning/next-implementation-direction-brief-2026-06-29]] — APPROVED next direction: Champion Assets / Operations depth.
-- [[production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth]] — APPROVED / planned Champion assets and operations depth epic.
-- [[production/stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp]] — READY / approved first EPIC-011 implementation story.
+- [[production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth]] — APPROVED / IN PROGRESS Champion assets and operations depth epic.
+- [[production/stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp]] — DONE / merged first EPIC-011 implementation story.
+- [[production/stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass]] — READY-candidate / approval pending next EPIC-011 story.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

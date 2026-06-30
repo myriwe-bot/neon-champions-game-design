@@ -11,6 +11,8 @@
 - Post-merge Unity Foundation CI on `main`: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28438916776
 - Marked `STORY-INTEL-DIRTY-001` DONE / merged.
 - Prepared `STORY-INTEL-DIRTY-002 Contested or Stale Intel Readability` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-intel-dirty-002.prompt.txt`.
+- Unity README pointer cleanup PR #118 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/118
+- Pointer cleanup commit: `c1ecd83142c62bc5f2ffcdb5ffdc038822f9ab05`; exact-head PR CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28439576051; post-merge main CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28439984278.
 - No current READY / approved Unity implementation task remains until the user approves story 002 and chooses `Stale Lead` vs `Contested Lead`.
 
 ## [2026-06-30] approval | STORY-INTEL-DIRTY-001 intel lead verification on-ramp

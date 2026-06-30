@@ -1,0 +1,142 @@
+# Codex prompt: STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke
+
+You are Codex working in the Neon Champions Unity repository.
+
+## Repositories
+
+Design/control source of truth:
+- Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Linux/reference path: `/root/wiki/neon-champions-game-design`
+
+Unity implementation repo:
+- Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+- Linux/reference path: `/root/wiki/neon-champions-unity`
+
+## Mandatory preflight guard
+
+Before editing Unity files, read this design/control story:
+
+`production/stories/story-intel-dirty-003-intel-layer-closeout-smoke.md`
+
+Stop and report `BLOCKED: STORY-INTEL-DIRTY-003 is not approved in this checkout` unless the story frontmatter contains exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also verify the Unity README current-task pointer names `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke`. If it does not, stop and report the mismatch.
+
+## Required reading
+
+Read before implementation:
+
+1. `production/stories/story-intel-dirty-003-intel-layer-closeout-smoke.md`
+2. `production/stories/story-intel-dirty-002-stale-intel-readability.md`
+3. `production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md`
+4. `production/epics/epic-vslice-mvp-012-intel-leads-and-verification.md`
+5. `production/planning/next-implementation-direction-brief-2026-06-30.md`
+6. `design/gdd/intel-resource.md`
+7. `design/gdd/strategic-map.md`
+8. `docs/architecture/control-manifest.md`
+9. `docs/architecture/testing-strategy.md`
+10. `docs/architecture/ci-build-automation.md`
+11. Unity `README.md`
+12. Existing Unity implementation/tests/evidence from `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002`.
+
+Narrow source-authority note: `design/gdd/intel-resource.md` may still be draft/pending. For this story, use only Intel-as-actionable-secrets, existing MVP source/sink language, and no-subtypes-for-MVP guidance. Do not implement the full Intel economy.
+
+## Branch and PR
+
+Create/use branch:
+
+`story/STORY-INTEL-DIRTY-003-intel-layer-closeout-smoke`
+
+PR title:
+
+`STORY-INTEL-DIRTY-003 intel layer closeout smoke`
+
+## Authorized scope
+
+Implement only the connected Intel-layer smoke and closeout-readiness packet:
+
+- Show at least one normal `Intel Lead` before verification.
+- Verify the normal lead into `Verified` using active Champion and existing Intel rules.
+- Show at least one `Stale Lead` before verification.
+- Verify the stale lead into a clearer `Verified` defender-strength / tactical-risk preview.
+- Prove repeat/already-verified attempts spend 0 extra Intel and do not mutate unrelated site markers/state.
+- Prove at least one normal strategic interaction remains visibly usable after the Intel markers exist.
+- Add minimal HUD/status/evidence-label adjustments only if the connected evidence cannot be understood without them.
+- Add an EPIC-012 closeout recommendation in evidence/PR summary: close epic, defer named gaps, or prepare exactly one more candidate if a real blocker remains.
+
+## Strict exclusions
+
+Do not implement:
+
+- New Intel Lead types beyond existing `Intel Lead`, `Stale Lead`, and `Verified` prototype states.
+- `Contested Lead` gameplay, false information, random lying, hidden truth tables, counter-intel, probabilistic misinformation, or active deception.
+- Full fog-of-war or hidden map reveal.
+- Public PR, legitimacy, scandal feed, blackmail, social graph, or dirty-information campaign systems.
+- Strategic AI valuation of hidden/verified information.
+- New resources, Intel subtypes, recurring income, economy rebalance, markets, or exchanges.
+- New map topology, routes, sites, objectives, tactical combat rules, victory rules, final art/audio/VFX/icons/localization/accessibility framework.
+- Full Champion operation loadouts, cooldowns, inventory, or progression.
+
+## Acceptance criteria
+
+- Connected evidence shows a normal `Intel Lead` before verification and `Verified` after active-Champion verification.
+- Connected evidence shows a `Stale Lead` before verification and a clearer `Verified` defender-strength / tactical-risk preview after verification.
+- The sequence makes the difference between `Intel Lead`, `Stale Lead`, and `Verified` readable without introducing false/contested information.
+- Repeat/already-verified attempts spend 0 additional Intel and do not mutate unrelated site markers/state.
+- At least one normal strategic interaction remains visibly usable after the Intel markers exist.
+- Existing story-001 and story-002 focused tests/evidence expectations continue to pass or are updated with equivalent stronger coverage.
+- Evidence under Unity `production/evidence/STORY-INTEL-DIRTY-003/` includes lead-before, lead-verified, stale-before, stale-verified, repeat/already-verified, surrounding-loop-unbroken, and omissions/deferred-work notes.
+- EPIC-012 closeout recommendation is documented in Unity evidence and returned in the PR summary.
+
+## Required tests and evidence
+
+Required checks before PR:
+
+- `git diff --check`
+- Focused EditMode/domain tests for any changed Intel Lead / Stale Lead / Verified behavior, repeat no-spend, unrelated-state preservation, and baseline story-001/story-002 regression.
+- PlayMode smoke or generated PNG/text evidence for:
+  - lead-before
+  - lead-verified
+  - stale-before
+  - stale-verified
+  - repeat/already-verified
+  - surrounding-loop-unbroken
+- Placeholder validator.
+- Standalone Windows64 build if the Unity CI workflow runs it.
+
+Required checked-in evidence path:
+
+`production/evidence/STORY-INTEL-DIRTY-003/`
+
+Evidence README must include:
+
+- Story ID and source authority.
+- Exact commands/checks run.
+- Screenshots/files generated or inspected.
+- Closeout recommendation for EPIC-012.
+- Known omissions/deferred work, explicitly including deferred contested/false/fog/PR/AI/economy systems or `No known omissions` where appropriate.
+
+## Git / PR behavior
+
+- Keep the implementation branch scoped to this story.
+- Do not commit unrelated cleanup.
+- If Unity-generated `.meta` files are added, ensure `git diff --check` passes; remove trailing whitespace if necessary.
+- Commit and push the implementation branch to remote, or clearly explain why you stopped without pushing.
+- Open a PR against `main` using the required title.
+- The PR body must summarize scope, tests, evidence, omissions, closeout recommendation, and exact source story.
+- Do not merge the implementation PR yourself unless the supervising agent explicitly tells you to after review.
+
+## Final response requirements
+
+Return:
+
+- Branch name and PR URL.
+- Summary of implementation.
+- Files changed.
+- Tests/checks run and their results.
+- Evidence path and generated evidence files.
+- EPIC-012 closeout recommendation.
+- Any blockers or known omissions.

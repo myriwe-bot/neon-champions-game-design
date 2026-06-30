@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-30] approval | STORY-INTEL-DIRTY-003 intel layer closeout smoke
+
+- Human approval recorded: "Please prepare next story for implementation."
+- Promoted planned `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` to READY / approved as the current EPIC-012 Unity implementation packet.
+- Activated runnable prompt: `production/sprints/codex-story-intel-dirty-003.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-INTEL-DIRTY-003-intel-layer-closeout-smoke`.
+- Authorized scope: connected smoke covering normal `Intel Lead` -> `Verified`, `Stale Lead` -> `Verified`, repeat/already-verified no-spend/no unrelated mutation, surrounding strategic interaction remains usable, and EPIC-012 closeout recommendation.
+- Explicit exclusions remain: no `Contested Lead` gameplay, false information, fog, PR/legitimacy/blackmail/social graph systems, strategic AI valuation, economy/resource/subtype changes, map/tactical/victory changes, or final art/audio/VFX/localization/accessibility.
+
 ## [2026-06-30] approval | STORY-INTEL-DIRTY-002 stale intel readability
 
 - Human approval recorded: "Okay, excellent, agreed."

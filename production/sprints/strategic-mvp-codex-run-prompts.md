@@ -83,6 +83,10 @@ related:
     production/stories/story-qa-013-epic-010-playtest-and-closeout-review,
     production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity,
     production/epics/epic-vslice-mvp-010-terrain-tactical-battlefields-and-map-space-readability,
+    production/epics/epic-vslice-mvp-012-intel-leads-and-verification,
+    production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp,
+    production/stories/story-intel-dirty-002-stale-intel-readability,
+    production/stories/story-intel-dirty-003-intel-layer-closeout-smoke,
   ]
 approval: approved
 ---
@@ -91,15 +95,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-INTEL-DIRTY-002 Stale Intel Readability`.
+**Current READY / approved Unity implementation packet:** `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke`.
 
-EPIC-011 is DONE / closed. EPIC-012 Intel Leads and Verification is APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002 Stale Intel Readability` is READY / approved as the current Unity implementation packet.
+EPIC-011 is DONE / closed. EPIC-012 Intel Leads and Verification is APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` is READY / approved as the current Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-intel-dirty-002.prompt.txt`. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-intel-dirty-003.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -120,10 +124,10 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-intel-dirty-002.prompt.txt` for `STORY-INTEL-DIRTY-002 Stale Intel Readability`. The prompt still contains a preflight guard requiring `status: ready`, `approval: approved`, and Unity README pointer agreement.
+Use checked-in prompt file `production/sprints/codex-story-intel-dirty-003.prompt.txt` for `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke`. The prompt still contains a preflight guard requiring `status: ready`, `approval: approved`, and Unity README pointer agreement.
 
 
-### Copy-safe STORY-INTEL-DIRTY-002 handoff
+### Copy-safe STORY-INTEL-DIRTY-003 handoff
 
 Primary workspace-write run:
 
@@ -137,7 +141,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-dirty-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-dirty-003.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 
@@ -183,6 +187,8 @@ Historical prompt-file runs are retained in this folder for audit only:
 - `production/sprints/codex-story-intel-002.prompt.txt`
 - `production/sprints/codex-story-intel-003.prompt.txt`
 - `production/sprints/codex-story-intel-004.prompt.txt`
+- `production/sprints/codex-story-intel-dirty-001.prompt.txt`
+- `production/sprints/codex-story-intel-dirty-002.prompt.txt`
 - `production/sprints/codex-story-ux-001.prompt.txt`
 - `production/sprints/codex-story-qa-005.prompt.txt`
 - `production/sprints/codex-story-cmd-001.prompt.txt`

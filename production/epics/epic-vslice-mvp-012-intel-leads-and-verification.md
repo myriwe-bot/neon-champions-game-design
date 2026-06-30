@@ -19,6 +19,7 @@ related:
     production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth,
     production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp,
     production/stories/story-intel-dirty-002-stale-intel-readability,
+    production/stories/story-intel-dirty-003-intel-layer-closeout-smoke,
   ]
 approval: approved
 ---
@@ -27,7 +28,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` remains a draft placeholder; no next Unity implementation is approved.
+APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` is READY / approved as the current Unity implementation packet.
 
 Approved defaults:
 
@@ -79,7 +80,7 @@ Intel should feel like operational knowledge, not abstract dust. The player shou
 
 ### Deferred
 
-- Contested, stale, or false leads.
+- Contested or false leads.
 - Counter-intel cleanup.
 - Dirty-information operations beyond verification.
 - PR/hearts-and-minds warfare.
@@ -93,7 +94,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp](../stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | EPIC-012 approved; EPIC-011 DONE | Unity PR #117; exact-head and post-merge CI passed |
 | [STORY-INTEL-DIRTY-002 Stale Intel Readability](../stories/story-intel-dirty-002-stale-intel-readability.md) | DONE / merged | Strategic UX + Information-state readability | STORY-INTEL-DIRTY-001 DONE | Unity PR #120; exact-head and post-merge CI passed |
-| STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke | Draft placeholder | Integration smoke + closeout recommendation | STORY-INTEL-DIRTY-002 DONE or deferred | TBD |
+| [STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke](../stories/story-intel-dirty-003-intel-layer-closeout-smoke.md) | READY / approved | Integration smoke + closeout recommendation | STORY-INTEL-DIRTY-002 DONE | Pending Unity PR/evidence |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -127,4 +128,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. No next Unity implementation story is approved; `STORY-INTEL-DIRTY-003` remains a draft placeholder until human direction/approval.
+APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` is READY / approved as the current implementation packet; it must produce a closeout recommendation before EPIC-012 is closed.

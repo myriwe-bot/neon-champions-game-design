@@ -10,7 +10,10 @@
 - Next Unity implementation branch: `story/STORY-CHAMP-OPS-003-operation-aftermath-closeout-smoke`.
 - Authorized scope: after-apply operation feedback, repeat-denial/no extra Intel spend/no marker mutation, and one surrounding strategic path remaining usable after the forecast marker exists.
 - Explicit exclusions remain: no new Operations, full operation loadouts/cadence/cooldowns, Champion inventory/progression, new resources/economy/fog/dirty-info, new map/tactical mechanics/content, or final art/audio/VFX/localization.
-- Unity README current-task pointer update pending.
+- Unity README pointer PR #113 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/113
+- Unity pointer commit: `6099a643ce34b81cc6e1c3962aeec4d38cf6a0c0`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28421704731
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28421954008
 
 ## [2026-06-29] merge | STORY-CHAMP-OPS-002 merged and STORY-CHAMP-OPS-003 prepared
 

@@ -1,7 +1,7 @@
 ---
 title: Next Implementation Direction Brief — 2026-06-30
 type: decision-brief
-status: draft
+status: approved
 phase: production
 owner: shared
 created: 2026-06-30
@@ -12,7 +12,7 @@ related:
   - design/gdd/intel-resource
   - design/gdd/strategic-map
   - design/gdd/tactical-combat
-approval: pending
+approval: approved
 ---
 
 # Next Implementation Direction Brief — 2026-06-30
@@ -54,4 +54,10 @@ Why:
 
 ## Approval gate
 
-Approval pending. If the human approves this direction, create/approve a bounded epic and first READY story/prompt before updating the Unity current-task pointer.
+Human approval recorded 2026-06-30: "Okay, A" followed by "Okay, agreed and approved". Approved direction: Intel Leads / Verification. Prepared implementation authority as approval-pending child story:
+
+- `production/epics/epic-vslice-mvp-012-intel-leads-and-verification.md`
+- `production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md`
+- `production/sprints/codex-story-intel-dirty-001.prompt.txt`
+
+`STORY-INTEL-DIRTY-001` remains READY-candidate / approval pending until explicitly promoted to READY for Unity implementation.

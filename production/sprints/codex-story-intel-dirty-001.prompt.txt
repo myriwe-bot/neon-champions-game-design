@@ -1,0 +1,16 @@
+Guarded candidate prompt for STORY-INTEL-DIRTY-001. Do not run Unity implementation from this prompt until the story is promoted to READY / approved.
+
+Stop conditions:
+- If `production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md` does not have `status: ready` and `approval: approved`, stop immediately.
+- Do not create a Unity implementation branch.
+- Do not modify Unity runtime, tests, scenes, prefabs, assets, packages, or ProjectSettings while this story is READY-candidate / approval pending.
+- Do not implement from EPIC-012 alone.
+
+Candidate summary for future promotion:
+- Story: STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp.
+- Branch: story/STORY-INTEL-DIRTY-001-intel-lead-verification-on-ramp.
+- PR title: STORY-INTEL-DIRTY-001 intel lead verification on-ramp.
+- Evidence path: production/evidence/STORY-INTEL-DIRTY-001/.
+- Approved defaults once promoted: Lead -> Verified, active Champion actor, guarded-site target, existing Intel cost, defender strength/tactical risk preview payoff, false/contested/stale Intel deferred.
+
+If promoted later, this prompt must be rewritten into a runnable implementation prompt with full preflight, source-reading, implementation, test, evidence, commit, push, and PR instructions.

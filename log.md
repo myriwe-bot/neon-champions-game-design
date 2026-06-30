@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-06-30] planning | EPIC-012 Intel Leads and Verification approved direction
+
+- Human selected next direction option A: Intel Leads / Verification, then confirmed: "Okay, agreed and approved".
+- Approved `EPIC-VSLICE-MVP-012 Intel Leads and Verification` as the next planned capability container.
+- Approved defaults: `Lead` -> `Verified`, active Champion actor, guarded-site target, existing Intel cost, defender strength / tactical risk preview payoff, false/contested/stale Intel deferred.
+- Created `STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp` as READY-candidate / approval pending.
+- Created guarded prompt: `production/sprints/codex-story-intel-dirty-001.prompt.txt`; no Unity implementation is authorized until the story is explicitly promoted to READY / approved and the Unity pointer is updated.
+
 ## [2026-06-30] merge | STORY-CHAMP-OPS-003 merged and EPIC-011 closed
 
 - Reviewed Unity PR #114 for `STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke`: https://github.com/myriwe-bot/neon-champions-unity/pull/114

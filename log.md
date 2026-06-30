@@ -11,6 +11,10 @@
 - Next Unity implementation branch: `story/STORY-INTEL-DIRTY-002-stale-intel-readability`.
 - Authorized scope: deterministic `Stale Lead` readability state for existing Intel Lead, active Champion verification using existing Intel, Verified defender-risk preview payoff, repeat no-spend, baseline story-001 Lead regression, and surrounding-loop evidence.
 - Explicit exclusions remain: `Contested Lead` gameplay, false information, full fog-of-war, PR/legitimacy/blackmail/social graph systems, strategic AI valuation, economy/resource/subtype changes, map/tactical/victory changes, and final art/audio/VFX/localization/accessibility.
+- Unity README pointer PR #119 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/119
+- Unity pointer commit: `8200b134e60ede9a3128998ec73ddec72290b7f9`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28441263945
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28441678186
 
 ## [2026-06-30] merge | STORY-INTEL-DIRTY-001 intel lead verification on-ramp
 

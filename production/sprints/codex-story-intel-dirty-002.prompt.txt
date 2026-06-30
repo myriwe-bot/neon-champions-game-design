@@ -1,0 +1,26 @@
+# Guarded prompt: STORY-INTEL-DIRTY-002 Contested or Stale Intel Readability
+
+This is a guarded candidate prompt, not runnable implementation authority yet.
+
+Before coding, stop unless the design/control story file:
+
+`production/stories/story-intel-dirty-002-contested-or-stale-intel-readability.md`
+
+has frontmatter exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also stop unless the story records the human-approved label choice: `Stale Lead` or `Contested Lead`.
+
+If the story is still `ready-candidate` / `approval: pending`, report:
+
+`BLOCKED: STORY-INTEL-DIRTY-002 is approval pending. Do not implement.`
+
+Candidate direction if later approved:
+
+- Add one deterministic stale/contested Intel Lead readability state.
+- Verify it through the active Champion using existing Intel.
+- Resolve it into Verified defender strength / tactical risk preview.
+- Preserve story-001 baseline Lead -> Verified behavior.
+- Keep full fog-of-war, false information, PR systems, AI valuation, economy/resource changes, tactical rules, and final art out of scope.

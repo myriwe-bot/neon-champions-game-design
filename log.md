@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-06-30] merge | STORY-INTEL-DIRTY-001 intel lead verification on-ramp
+
+- Reviewed and merged Unity PR #117: https://github.com/myriwe-bot/neon-champions-unity/pull/117
+- Merge commit: `148a0070d88de804853051e74ffffee11a52daf0`.
+- Merge-gate fix: removed trailing whitespace from new C# `.meta` files so committed `git diff --check` passes.
+- Exact-head PR Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28438106381
+- Post-merge Unity Foundation CI on `main`: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28438916776
+- Marked `STORY-INTEL-DIRTY-001` DONE / merged.
+- Prepared `STORY-INTEL-DIRTY-002 Contested or Stale Intel Readability` as READY-candidate / approval pending with guarded prompt `production/sprints/codex-story-intel-dirty-002.prompt.txt`.
+- No current READY / approved Unity implementation task remains until the user approves story 002 and chooses `Stale Lead` vs `Contested Lead`.
+
 ## [2026-06-30] approval | STORY-INTEL-DIRTY-001 intel lead verification on-ramp
 
 - Human implementation approval recorded: "Approved yes".

@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-30
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human implementation approval recorded 2026-06-30: "Approved yes". This story is authorized for one Unity implementation branch with the human-approved EPIC-012 defaults.
+DONE / merged. Unity PR #117 merged 2026-06-30; merge commit `148a0070d88de804853051e74ffffee11a52daf0`. Exact-head PR Unity Foundation CI passed on `4d95e6bebc7a67af360ffea542a6da51a693e542` and post-merge `main` CI passed on the merge commit.
 
 ## Story type
 
@@ -140,13 +140,13 @@ Epic direction/defaults approved 2026-06-30. Implementation approval recorded 20
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists.
-- [ ] Required tests/CI pass, or human-approved exceptions are documented.
-- [ ] PR/code review is complete if a Unity PR is opened.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists.
+- [x] Required tests/CI pass, or human-approved exceptions are documented.
+- [x] PR/code review is complete if a Unity PR is opened.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved. Activate `production/sprints/codex-story-intel-dirty-001.prompt.txt` and update the Unity current-task pointer before Codex implementation.
+DONE / merged. Evidence: Unity PR #117, exact-head CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28438106381, post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28438916776.

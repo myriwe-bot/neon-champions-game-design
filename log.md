@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-06-30] approval | STORY-INTEL-DIRTY-002 stale intel readability
+
+- Human approval recorded: "Okay, excellent, agreed."
+- Approved the recommended `Stale Lead` label; `Contested Lead` remains deferred.
+- Promoted `STORY-INTEL-DIRTY-002 Stale Intel Readability` from READY-candidate / approval pending to READY / approved.
+- Activated runnable prompt: `production/sprints/codex-story-intel-dirty-002.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-INTEL-DIRTY-002-stale-intel-readability`.
+- Authorized scope: deterministic `Stale Lead` readability state for existing Intel Lead, active Champion verification using existing Intel, Verified defender-risk preview payoff, repeat no-spend, baseline story-001 Lead regression, and surrounding-loop evidence.
+- Explicit exclusions remain: `Contested Lead` gameplay, false information, full fog-of-war, PR/legitimacy/blackmail/social graph systems, strategic AI valuation, economy/resource/subtype changes, map/tactical/victory changes, and final art/audio/VFX/localization/accessibility.
+
 ## [2026-06-30] merge | STORY-INTEL-DIRTY-001 intel lead verification on-ramp
 
 - Reviewed and merged Unity PR #117: https://github.com/myriwe-bot/neon-champions-unity/pull/117

@@ -18,6 +18,7 @@ related:
     production/planning/next-implementation-direction-brief-2026-06-30,
     production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth,
     production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp,
+    production/stories/story-intel-dirty-002-stale-intel-readability,
   ]
 approval: approved
 ---
@@ -26,7 +27,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. The next planned slice is `STORY-INTEL-DIRTY-002`, but it is only READY-candidate / approval pending until human implementation approval.
+APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002 Stale Intel Readability` is READY / approved for the next Unity implementation packet.
 
 Approved defaults:
 
@@ -37,6 +38,7 @@ Approved defaults:
 5. First model: leads are true-for-now; contested/false information is deferred.
 6. UI should use `Intel Lead` / `Verified`, not dirty-information terminology yet.
 7. Story sizing: medium-batched epic with three planned stories.
+8. Story 002 label: `Stale Lead`; `Contested Lead` remains deferred.
 
 ## Capability goal
 
@@ -90,7 +92,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp](../stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | EPIC-012 approved; EPIC-011 DONE | Unity PR #117; exact-head and post-merge CI passed |
-| [STORY-INTEL-DIRTY-002 Contested or Stale Intel Readability](../stories/story-intel-dirty-002-contested-or-stale-intel-readability.md) | READY-candidate / approval pending | Strategic UX + Information-state readability | STORY-INTEL-DIRTY-001 DONE | Required if approved |
+| [STORY-INTEL-DIRTY-002 Stale Intel Readability](../stories/story-intel-dirty-002-stale-intel-readability.md) | READY / approved | Strategic UX + Information-state readability | STORY-INTEL-DIRTY-001 DONE | Required if approved |
 | STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke | Draft placeholder | Integration smoke + closeout recommendation | STORY-INTEL-DIRTY-002 DONE or deferred | TBD |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -125,4 +127,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002` is prepared as READY-candidate / approval pending; do not update Unity current-task pointer or run Codex until human approval promotes it to READY / approved.
+APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002 Stale Intel Readability` is READY / approved; Unity current-task pointer may be updated and Codex may run from the checked-in prompt after pointer CI passes.

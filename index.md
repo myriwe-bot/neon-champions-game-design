@@ -129,7 +129,7 @@
 - [[production/planning/next-implementation-direction-brief-2026-06-30]] — APPROVED next direction: Intel Leads / Verification.
 - [[production/epics/epic-vslice-mvp-012-intel-leads-and-verification]] — APPROVED / PLANNED Intel leads and verification epic.
 - [[production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp]] — DONE / merged Intel Lead verification story.
-- [[production/stories/story-intel-dirty-002-contested-or-stale-intel-readability]] — READY-candidate / approval pending stale/contested Intel readability story.
+- [[production/stories/story-intel-dirty-002-stale-intel-readability]] — READY / approved Stale Lead readability story.
 - `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt` — guarded decision-brief prompt only; no Unity runtime implementation authorized.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.

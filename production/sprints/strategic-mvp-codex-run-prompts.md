@@ -91,15 +91,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-INTEL-DIRTY-002 Stale Intel Readability`.
 
-EPIC-011 is DONE / closed. EPIC-012 Intel Leads and Verification is APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002` is READY-candidate / approval pending, so no new Unity implementation packet is READY / approved.
+EPIC-011 is DONE / closed. EPIC-012 Intel Leads and Verification is APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002 Stale Intel Readability` is READY / approved as the current Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Guarded candidate prompt exists at `production/sprints/codex-story-intel-dirty-002.prompt.txt`, but it must not be run until the story is promoted to READY / approved and the Stale vs Contested label choice is recorded. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-intel-dirty-002.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -120,7 +120,32 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-No READY / approved Unity implementation prompt is active. Do not run Unity implementation from historical story prompts or from `production/sprints/codex-story-intel-dirty-002.prompt.txt` while `STORY-INTEL-DIRTY-002` is READY-candidate / approval pending.
+Use checked-in prompt file `production/sprints/codex-story-intel-dirty-002.prompt.txt` for `STORY-INTEL-DIRTY-002 Stale Intel Readability`. The prompt still contains a preflight guard requiring `status: ready`, `approval: approved`, and Unity README pointer agreement.
+
+
+### Copy-safe STORY-INTEL-DIRTY-002 handoff
+
+Primary workspace-write run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-dirty-002.prompt.txt"
+$prompt | codex exec --sandbox workspace-write
+```
+
+Trusted-repo fallback:
+
+```powershell
+$prompt | codex exec --sandbox danger-full-access
+```
 
 ## Historical prompt-file runs
 

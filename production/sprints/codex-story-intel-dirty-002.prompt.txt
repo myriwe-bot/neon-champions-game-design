@@ -1,26 +1,157 @@
-# Guarded prompt: STORY-INTEL-DIRTY-002 Contested or Stale Intel Readability
+# Codex prompt: STORY-INTEL-DIRTY-002 Stale Intel Readability
 
-This is a guarded candidate prompt, not runnable implementation authority yet.
+You are Codex working in the Neon Champions Unity repository.
 
-Before coding, stop unless the design/control story file:
+## Repositories
 
-`production/stories/story-intel-dirty-002-contested-or-stale-intel-readability.md`
+Design/control source of truth:
+- Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Linux/reference path: `/root/wiki/neon-champions-game-design`
 
-has frontmatter exactly:
+Unity implementation repo:
+- Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+- Linux/reference path: `/root/wiki/neon-champions-unity`
+
+## Mandatory preflight guard
+
+Before editing Unity files, read this design/control story:
+
+`production/stories/story-intel-dirty-002-stale-intel-readability.md`
+
+Stop and report `BLOCKED: STORY-INTEL-DIRTY-002 is not approved in this checkout` unless the story frontmatter contains exactly:
 
 - `status: ready`
 - `approval: approved`
 
-Also stop unless the story records the human-approved label choice: `Stale Lead` or `Contested Lead`.
+Also verify the story records the human-approved label: `Stale Lead`.
 
-If the story is still `ready-candidate` / `approval: pending`, report:
+If the Unity README current-task pointer does not name `STORY-INTEL-DIRTY-002 Stale Intel Readability`, stop and report the mismatch.
 
-`BLOCKED: STORY-INTEL-DIRTY-002 is approval pending. Do not implement.`
+## Required reading
 
-Candidate direction if later approved:
+Read before implementation:
 
-- Add one deterministic stale/contested Intel Lead readability state.
-- Verify it through the active Champion using existing Intel.
-- Resolve it into Verified defender strength / tactical risk preview.
-- Preserve story-001 baseline Lead -> Verified behavior.
-- Keep full fog-of-war, false information, PR systems, AI valuation, economy/resource changes, tactical rules, and final art out of scope.
+1. `production/stories/story-intel-dirty-002-stale-intel-readability.md`
+2. `production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md`
+3. `production/epics/epic-vslice-mvp-012-intel-leads-and-verification.md`
+4. `production/planning/next-implementation-direction-brief-2026-06-30.md`
+5. `design/gdd/intel-resource.md`
+6. `design/gdd/strategic-map.md`
+7. `docs/architecture/control-manifest.md`
+8. `docs/architecture/testing-strategy.md`
+9. `docs/architecture/ci-build-automation.md`
+10. Unity `README.md`
+11. Existing Unity implementation and tests from `STORY-INTEL-DIRTY-001`.
+
+Narrow source-authority note: `design/gdd/intel-resource.md` may still be draft/pending. For this story, use only Intel-as-actionable-secrets, existing MVP source/sink language, and no-subtypes-for-MVP guidance. Do not implement the full Intel economy.
+
+## Branch and PR
+
+Create/use branch:
+
+`story/STORY-INTEL-DIRTY-002-stale-intel-readability`
+
+PR title:
+
+`STORY-INTEL-DIRTY-002 stale intel readability`
+
+## Authorized scope
+
+Implement only the approved `Stale Lead` readability path:
+
+- Add one deterministic information-freshness/readability state for an existing Intel Lead using the visible label `Stale Lead`.
+- The stale state means: probably true when acquired, but old enough that verification is needed to refresh confidence.
+- Show `Stale Lead` in the same strategic site/HUD surfaces used by story 001.
+- Active Champion verifies the stale lead using existing Intel.
+- Verification resolves the stale lead into `Verified` or equivalent prototype verified presentation.
+- Verification confirms defender strength / tactical risk preview.
+- Result text should explain what changed: stale lead refreshed/resolved, cost paid, defender risk preview confirmed.
+- Repeat/already-verified attempts spend 0 additional Intel and do not mutate unrelated site markers/state.
+- Baseline story-001 `Intel Lead` -> `Verified` behavior must remain intact for a normal non-stale lead.
+- At least one normal strategic interaction remains visibly usable after verification.
+
+## Strict exclusions
+
+Do not implement:
+
+- `Contested Lead` gameplay or primary UI label.
+- False information, random lying, hidden truth tables, counter-intel, probabilistic misinformation, or active deception.
+- Full fog-of-war or hidden map reveal.
+- Public PR, legitimacy, scandal feed, blackmail, social graph, or dirty-information campaign systems.
+- Strategic AI valuation of hidden/verified information.
+- New resources, Intel subtypes, recurring income, economy rebalance, markets, or exchanges.
+- New map topology, routes, sites, objectives, tactical combat rules, victory rules, final art/audio/VFX/icons/localization/accessibility framework.
+- Full Champion operation loadouts, cooldowns, inventory, or progression.
+
+## Implementation guidance
+
+Prefer a narrow extension of the story-001 Intel Lead model rather than a new system.
+
+Acceptable prototype terms:
+
+- `StaleLead`
+- `Stale Lead`
+- `Verified`
+- `Intel Lead`
+
+Avoid using `Contested Lead` except in comments/evidence deferred-work notes if needed.
+
+Keep behavior deterministic and authored/runtime-visible. Do not add randomness or hidden truth models.
+
+## Acceptance criteria
+
+- At least one existing guarded site or approved current strategic site can present `Stale Lead` before verification.
+- `Stale Lead` is visibly distinct from story-001 `Intel Lead` and `Verified` states.
+- The active Champion can verify the stale lead using existing Intel, with feedback naming `Stale Lead` and the resolved verified result.
+- Verification changes presentation to `Verified` or equivalent prototype language and confirms defender strength / tactical risk preview.
+- Repeat verification spends 0 additional Intel and does not mutate unrelated site markers/state.
+- Baseline story-001 `Intel Lead` -> `Verified` behavior remains intact for a non-stale lead.
+- At least one normal strategic interaction remains visibly usable after stale-lead verification.
+
+## Required tests and evidence
+
+Add/update focused tests and evidence as needed.
+
+Required checks before PR:
+
+- `git diff --check`
+- Focused EditMode/domain tests covering stale lead state, verification resolution, Intel spend, repeat no-spend, unrelated-state preservation, and baseline story-001 Lead -> Verified regression.
+- PlayMode smoke or generated PNG/text evidence for:
+  - stale-before
+  - verified-after
+  - repeat/already-verified
+  - baseline-lead-regression
+  - surrounding-loop-unbroken
+- Placeholder validator.
+- Standalone Windows64 build if the Unity CI workflow runs it.
+
+Required checked-in evidence path:
+
+`production/evidence/STORY-INTEL-DIRTY-002/`
+
+Evidence README must include:
+
+- Story ID and source authority.
+- Exact commands/checks run.
+- Screenshots/files generated or inspected.
+- Known omissions/deferred work, explicitly including deferred contested/false/fog/PR/AI/economy systems or `No known omissions` where appropriate.
+
+## Git / PR behavior
+
+- Keep the implementation branch scoped to this story.
+- Do not commit unrelated cleanup.
+- If Unity-generated `.meta` files are added, ensure `git diff --check` passes; remove trailing whitespace if necessary.
+- Open a PR against `main` using the required title.
+- The PR body must summarize scope, tests, evidence, omissions, and exact source story.
+- Do not merge the implementation PR yourself unless the supervising agent explicitly tells you to after review.
+
+## Final response requirements
+
+Return:
+
+- Branch name and PR URL.
+- Summary of implementation.
+- Files changed.
+- Tests/checks run and their results.
+- Evidence path and generated evidence files.
+- Any blockers or known omissions.

@@ -1,6 +1,6 @@
 # Codex prompt — STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke
 
-DO NOT RUN YET. This is a guarded candidate prompt. Stop immediately unless the story frontmatter has been promoted to `status: ready` and `approval: approved`.
+Runnable approved prompt. Preflight must still confirm the story frontmatter says `status: ready` and `approval: approved`; stop if a stale checkout says otherwise.
 
 You are implementing one approved Neon Champions Unity story.
 

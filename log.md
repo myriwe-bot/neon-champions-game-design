@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-06-30] approval | STORY-CHAMP-OPS-003 operation aftermath closeout readability smoke
+
+- Human approval recorded: "Approved STORY-CHAMP-OPS-003".
+- Promoted `STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke` from READY-candidate / approval pending to READY / approved.
+- Activated runnable prompt: `production/sprints/codex-story-champ-ops-003.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-CHAMP-OPS-003-operation-aftermath-closeout-smoke`.
+- Authorized scope: after-apply operation feedback, repeat-denial/no extra Intel spend/no marker mutation, and one surrounding strategic path remaining usable after the forecast marker exists.
+- Explicit exclusions remain: no new Operations, full operation loadouts/cadence/cooldowns, Champion inventory/progression, new resources/economy/fog/dirty-info, new map/tactical mechanics/content, or final art/audio/VFX/localization.
+- Unity README current-task pointer update pending.
+
 ## [2026-06-29] merge | STORY-CHAMP-OPS-002 merged and STORY-CHAMP-OPS-003 prepared
 
 - Reviewed Unity PR #111 for `STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass`: https://github.com/myriwe-bot/neon-champions-unity/pull/111

@@ -1,11 +1,11 @@
 ---
 title: STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-06-30
 source_lore: [champions, digital-net, greenland, white-sky]
 related:
   [
@@ -19,14 +19,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke
 
 ## Status
 
-READY-candidate / approval pending. Drafted after `STORY-CHAMP-OPS-002` merged. Do not run implementation until this story is explicitly promoted to `status: ready` and `approval: approved`.
+READY / approved. Human approval recorded 2026-06-30: "Approved STORY-CHAMP-OPS-003". This story is now authorized for one Unity implementation branch.
 
 ## Story type
 
@@ -121,6 +121,10 @@ Candidate assumptions:
 - Required evidence path: `production/evidence/STORY-CHAMP-OPS-003/` in Unity.
 - Required omissions section: explicitly list deferred Operations/Assets systems or state `No known omissions`.
 
+## Human approval
+
+Recorded 2026-06-30: "Approved STORY-CHAMP-OPS-003".
+
 ## Story readiness gate
 
 - [x] Story has stable ID, title, type, status, and parent/context.
@@ -131,7 +135,7 @@ Candidate assumptions:
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Ambiguity Check is PASS for candidate review.
-- [ ] Human approval has been recorded.
+- [x] Human approval has been recorded.
 
 ## DONE gate
 
@@ -144,4 +148,4 @@ Candidate assumptions:
 
 ## Verdict
 
-READY-candidate / approval pending. If approved, activate `production/sprints/codex-story-champ-ops-003.prompt.txt` and update the Unity current-task pointer.
+READY / approved. Activate `production/sprints/codex-story-champ-ops-003.prompt.txt` and update the Unity current-task pointer before Codex implementation.

@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002 Stale Intel Readability` is READY / approved for the next Unity implementation packet.
+APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` remains a draft placeholder; no next Unity implementation is approved.
 
 Approved defaults:
 
@@ -92,7 +92,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp](../stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | EPIC-012 approved; EPIC-011 DONE | Unity PR #117; exact-head and post-merge CI passed |
-| [STORY-INTEL-DIRTY-002 Stale Intel Readability](../stories/story-intel-dirty-002-stale-intel-readability.md) | READY / approved | Strategic UX + Information-state readability | STORY-INTEL-DIRTY-001 DONE | Required if approved |
+| [STORY-INTEL-DIRTY-002 Stale Intel Readability](../stories/story-intel-dirty-002-stale-intel-readability.md) | DONE / merged | Strategic UX + Information-state readability | STORY-INTEL-DIRTY-001 DONE | Unity PR #120; exact-head and post-merge CI passed |
 | STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke | Draft placeholder | Integration smoke + closeout recommendation | STORY-INTEL-DIRTY-002 DONE or deferred | TBD |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
@@ -127,4 +127,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is DONE / merged. `STORY-INTEL-DIRTY-002 Stale Intel Readability` is READY / approved; Unity current-task pointer may be updated and Codex may run from the checked-in prompt after pointer CI passes.
+APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. No next Unity implementation story is approved; `STORY-INTEL-DIRTY-003` remains a draft placeholder until human direction/approval.

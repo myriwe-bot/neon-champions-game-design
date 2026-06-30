@@ -1529,3 +1529,13 @@
 - Rewrote `production/sprints/codex-story-ux-002.prompt.txt` from a terse task note into the proven full Codex handoff format used by successful story prompts.
 - Added absolute Windows source paths, required reading, branch/PR requirements, authorized scope, strict exclusions, verification/evidence requirements, git/PR behavior, and explicit stop conditions.
 - Updated future approval workflow guidance so runnable prompts must use the full handoff shape rather than the terse Purpose/Current-state/Task format.
+
+## 2026-06-30 — STORY-INTEL-DIRTY-002 merged
+
+- Unity PR #120 merged `STORY-INTEL-DIRTY-002 Stale Intel Readability` to `main`.
+- Merge commit: `e479fb92302255237f706a48041fbd327744b19a`.
+- Exact-head Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28452805652
+- Post-merge Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28453767810
+- Independent review initially blocked on thin evidence directory; fixed by adding checked-in per-state evidence notes under Unity `production/evidence/STORY-INTEL-DIRTY-002/`, then reran exact-head CI before merge.
+- `Contested Lead`, false information, fog-of-war, PR/social graph systems, strategic AI valuation, new resources/economy, map/tactical/victory changes, and final art/audio/VFX/localization/accessibility remain deferred.
+- No next Unity implementation story is approved after this merge; Unity current-task pointer should be cleared.

@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-DIRTY-002 Stale Intel Readability
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-30
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-30: "Okay, excellent, agreed." This approves the recommended `Stale Lead` label, not `Contested Lead`, and authorizes one Unity implementation branch for this story.
+DONE / merged. Human approval recorded 2026-06-30: "Okay, excellent, agreed." This approved the recommended `Stale Lead` label, not `Contested Lead`. Unity PR #120 merged to `main` as `e479fb92302255237f706a48041fbd327744b19a`; exact-head CI and post-merge CI passed.
 
 ## Story type
 
@@ -74,15 +74,15 @@ Required sources:
 
 ## Acceptance criteria
 
-- [ ] At least one existing guarded site or approved current strategic site can present a stale Intel Lead state before verification.
-- [ ] The stale state is visibly distinct from the story-001 `Intel Lead` and `Verified` states.
-- [ ] The active Champion can verify the stale lead using existing Intel, with clear feedback naming the prior state and the resolved/verified result.
-- [ ] Verification changes presentation to `Verified` or equivalent prototype language and confirms defender strength / tactical risk preview.
-- [ ] Repeat verification spends 0 additional Intel and does not mutate unrelated site markers/state.
-- [ ] Baseline story-001 Lead -> Verified behavior remains intact for a non-stale/non-contested lead.
-- [ ] At least one normal strategic interaction remains visibly usable after verification.
-- [ ] Evidence under Unity `production/evidence/STORY-INTEL-DIRTY-002/` includes stale-before, verified-after, repeat/already-verified, baseline-lead-regression, and surrounding-loop-unbroken screenshots/notes plus omissions/deferred-work notes.
-- [ ] Exact-head Unity Foundation CI passes before merge.
+- [x] At least one existing guarded site or approved current strategic site can present a stale Intel Lead state before verification.
+- [x] The stale state is visibly distinct from the story-001 `Intel Lead` and `Verified` states.
+- [x] The active Champion can verify the stale lead using existing Intel, with clear feedback naming the prior state and the resolved/verified result.
+- [x] Verification changes presentation to `Verified` or equivalent prototype language and confirms defender strength / tactical risk preview.
+- [x] Repeat verification spends 0 additional Intel and does not mutate unrelated site markers/state.
+- [x] Baseline story-001 Lead -> Verified behavior remains intact for a non-stale/non-contested lead.
+- [x] At least one normal strategic interaction remains visibly usable after verification.
+- [x] Evidence under Unity `production/evidence/STORY-INTEL-DIRTY-002/` includes stale-before, verified-after, repeat/already-verified, baseline-lead-regression, and surrounding-loop-unbroken checked-in notes plus omissions/deferred-work notes. CI generated screenshot artifacts but GitHub artifact upload was blocked by storage quota; notes record exact PlayMode assertions and run URLs.
+- [x] Exact-head Unity Foundation CI passes before merge.
 
 ## Verification requirements
 
@@ -129,6 +129,14 @@ Human-approved answers / assumptions:
 - [x] Human implementation approval has been recorded.
 - [x] Stale-vs-Contested label choice has been recorded: `Stale Lead`.
 
+## Evidence
+
+- Unity PR #120: https://github.com/myriwe-bot/neon-champions-unity/pull/120
+- Merge commit: `e479fb92302255237f706a48041fbd327744b19a`
+- Exact-head Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28452805652
+- Post-merge Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28453767810
+- Unity evidence path: `production/evidence/STORY-INTEL-DIRTY-002/`
+
 ## Verdict
 
-READY / approved for Unity implementation. Use `production/sprints/codex-story-intel-dirty-002.prompt.txt`. Scope is the approved `Stale Lead` readability path only; `Contested Lead`, false information, and active deception remain deferred.
+DONE / merged. Scope remained the approved `Stale Lead` readability path only; `Contested Lead`, false information, and active deception remain deferred.

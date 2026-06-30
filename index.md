@@ -127,9 +127,9 @@
 - [[production/stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass]] — DONE / merged EPIC-011 target readability story.
 - [[production/stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke]] — DONE / merged EPIC-011 closeout-readability smoke story.
 - [[production/planning/next-implementation-direction-brief-2026-06-30]] — APPROVED next direction: Intel Leads / Verification.
-- [[production/epics/epic-vslice-mvp-012-intel-leads-and-verification]] — APPROVED / PLANNED Intel leads and verification epic.
+- [[production/epics/epic-vslice-mvp-012-intel-leads-and-verification]] — APPROVED / IN PROGRESS Intel leads and verification epic.
 - [[production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp]] — DONE / merged Intel Lead verification story.
-- [[production/stories/story-intel-dirty-002-stale-intel-readability]] — READY / approved Stale Lead readability story.
+- [[production/stories/story-intel-dirty-002-stale-intel-readability]] — DONE / merged Stale Lead readability story.
 - `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt` — guarded decision-brief prompt only; no Unity runtime implementation authorized.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.

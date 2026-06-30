@@ -10,6 +10,10 @@
 - Next Unity implementation branch: `story/STORY-INTEL-DIRTY-001-intel-lead-verification-on-ramp`.
 - Authorized scope: Intel Lead -> Verified for an existing guarded site, active Champion verification using existing Intel, defender strength / tactical risk preview payoff, repeat/already-verified no extra spend, and surrounding-loop evidence.
 - Explicit exclusions remain: full fog-of-war, false/contested/stale Intel, PR/legitimacy/blackmail/social graph systems, strategic AI valuation, new resources/subtypes/economy, new map/tactical/victory rules, and final art/audio/VFX/localization/accessibility.
+- Unity README pointer PR #116 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/116
+- Unity pointer commit: `334e7fb67cf4f1fc6a97c9e312be79358c2d89a5`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28429733779
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28430162494
 
 ## [2026-06-30] planning | EPIC-012 Intel Leads and Verification approved direction
 

@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-011 Champion Assets and Operations Depth
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-06-29
@@ -29,7 +29,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. Human approval recorded 2026-06-29: "Approved". This approves the next direction recommended in `production/planning/next-implementation-direction-brief-2026-06-29.md`: Champion Assets / Operations depth. `STORY-CHAMP-OPS-001` and `STORY-CHAMP-OPS-002` are DONE / merged; `STORY-CHAMP-OPS-003` is READY / approved for implementation.
+DONE / closed. Human approval recorded 2026-06-29: "Approved" for Champion Assets / Operations depth. `STORY-CHAMP-OPS-001`, `STORY-CHAMP-OPS-002`, and `STORY-CHAMP-OPS-003` are DONE / merged; the closeout recommendation accepts this epic as complete for the approved vertical-slice scope.
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -114,7 +114,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-CHAMP-OPS-001 Champion Asset Slot and Prototype Operation On-Ramp](../stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | STORY-UX-002 DONE; EPIC-011 approved | Unity PR #108; exact-head CI and post-merge main CI passed |
 | [STORY-CHAMP-OPS-002 Operation Targeting and Forecast Readability Pass](../stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | STORY-CHAMP-OPS-001 DONE; EPIC-011 approved | Unity PR #111; exact-head CI and post-merge main CI passed |
-| [STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke](../stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke.md) | READY / approved | Strategic UX + Integration Smoke + Closeout Recommendation | STORY-CHAMP-OPS-002 DONE; EPIC-011 approved | After-apply/repeat-denied/surrounding-loop evidence required |
+| [STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke](../stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke.md) | DONE / merged | Strategic UX + Integration Smoke + Closeout Recommendation | STORY-CHAMP-OPS-002 DONE; EPIC-011 approved | Unity PR #114; exact-head CI and post-merge main CI passed |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -156,14 +156,14 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] Playtest/QA evidence exists if required.
-- [ ] No open blocker remains hidden.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, PlayMode/smoke evidence, and manual/PNG evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] Playtest/QA evidence exists if required.
+- [x] No open blocker remains hidden.
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-CHAMP-OPS-001` and `STORY-CHAMP-OPS-002` are DONE / merged. `STORY-CHAMP-OPS-003` is READY / approved as the next narrow closeout-readiness implementation packet.
+DONE / closed for the approved EPIC-011 vertical-slice scope. The three-story train now provides a visible Champion Asset/Operation surface, target readability, post-use/repeat-denial readability, zero-additional-spend coverage, and connected surrounding-loop smoke evidence. Full Operations, Champion Asset inventory/progression, dirty-information/fog, and expanded Intel economy remain deferred to later approved epics/stories.

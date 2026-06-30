@@ -122,10 +122,12 @@
 - [[production/stories/story-qa-013-epic-010-playtest-and-closeout-review]] — DONE / merged EPIC-010 closeout review.
 - [[production/stories/story-ux-002-tactical-playability-scale-resource-hud-and-stack-clarity]] — DONE / merged cross-epic UX/readability repair.
 - [[production/planning/next-implementation-direction-brief-2026-06-29]] — APPROVED next direction: Champion Assets / Operations depth.
-- [[production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth]] — APPROVED / IN PROGRESS Champion assets and operations depth epic.
+- [[production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth]] — DONE / closed Champion assets and operations depth epic.
 - [[production/stories/story-champ-ops-001-champion-asset-slot-and-prototype-operation-on-ramp]] — DONE / merged first EPIC-011 implementation story.
 - [[production/stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass]] — DONE / merged EPIC-011 target readability story.
-- [[production/stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke]] — READY / approved EPIC-011 closeout-readability smoke story.
+- [[production/stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke]] — DONE / merged EPIC-011 closeout-readability smoke story.
+- [[production/planning/next-implementation-direction-brief-2026-06-30]] — guarded next implementation direction brief after EPIC-011 closeout; approval pending.
+- `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt` — guarded decision-brief prompt only; no Unity runtime implementation authorized.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
 - [[production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]] — DONE / merged EPIC-008 story for tactical role behaviors and Sensor Lock.

@@ -2,6 +2,22 @@
 
 > Append-only project log.
 
+## [2026-06-30] merge | STORY-CHAMP-OPS-003 merged and EPIC-011 closed
+
+- Reviewed Unity PR #114 for `STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke`: https://github.com/myriwe-bot/neon-champions-unity/pull/114
+- Applied one evidence-doc correction before merge so committed evidence does not claim pending CI after CI passes.
+- Merge verdict: PASS. Scope matched the approved narrow operation aftermath/readability smoke; no blockers remained.
+- Unity merge commit: `bee8f80459cdaff36f618dfe95b6810a5fabd817`.
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28425751130
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28426411847
+- Unity README current-task pointer cleared via PR #115: https://github.com/myriwe-bot/neon-champions-unity/pull/115
+- Pointer cleanup commit: `dfeae1dd4c34bac12c712b7df1eb45fb97cff14f`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28426823109
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28427177376
+- Marked `STORY-CHAMP-OPS-003` DONE / merged and closed `EPIC-VSLICE-MVP-011` for the approved vertical-slice scope.
+- Prepared guarded next-implementation direction brief: `production/planning/next-implementation-direction-brief-2026-06-30.md`.
+- Guarded prompt prepared at `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt`; no new Unity implementation is authorized until human approval promotes the next story.
+
 ## [2026-06-30] approval | STORY-CHAMP-OPS-003 operation aftermath closeout readability smoke
 
 - Human approval recorded: "Approved STORY-CHAMP-OPS-003".

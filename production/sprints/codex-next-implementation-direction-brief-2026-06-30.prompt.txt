@@ -1,0 +1,41 @@
+Prepare the next Neon Champions implementation direction for human approval, but do not implement Unity runtime changes yet.
+
+Current state:
+- STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke is DONE / merged.
+- Unity PR #114: https://github.com/myriwe-bot/neon-champions-unity/pull/114
+- Merge commit: bee8f80459cdaff36f618dfe95b6810a5fabd817
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28425751130
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28426411847
+- Unity current-task cleanup PR #115: https://github.com/myriwe-bot/neon-champions-unity/pull/115
+- Pointer cleanup commit: dfeae1dd4c34bac12c712b7df1eb45fb97cff14f
+- Pointer cleanup post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28427177376
+- EPIC-VSLICE-MVP-011 Champion Assets and Operations Depth is DONE / closed.
+- There is no current READY / approved Unity implementation story.
+
+Stop conditions:
+- Do not create a Unity implementation branch.
+- Do not modify Unity runtime, tests, scenes, prefabs, assets, packages, or ProjectSettings.
+- Do not promote any story to READY unless the human explicitly approves that specific next packet.
+- If asked to implement from this prompt alone, stop and report that a READY story and approval are required.
+
+Task:
+1. Pull latest game-design and Unity main.
+2. Read:
+   - production/planning/next-implementation-direction-brief-2026-06-30.md
+   - production/epics/epic-vslice-mvp-011-champion-assets-and-operations-depth.md
+   - production/stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke.md
+   - design/gdd/intel-resource.md
+   - design/gdd/strategic-map.md
+   - design/gdd/tactical-combat.md
+   - docs/architecture/control-manifest.md
+3. Present a concise human approval brief:
+   - confirm no READY Unity task is active;
+   - list 2-4 candidate directions from the 2026-06-30 brief;
+   - recommend Intel and dirty-information layer as default;
+   - ask the human to approve one direction or choose a different direction.
+4. If the human approves Intel and dirty-information layer, create a bounded epic plus first story as DRAFT / READY-candidate first unless the approval explicitly authorizes implementation.
+
+Output format:
+- No runtime changes.
+- No Unity PR.
+- Concise numbered decision brief only.

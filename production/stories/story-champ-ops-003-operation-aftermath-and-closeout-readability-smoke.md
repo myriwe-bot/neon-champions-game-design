@@ -1,7 +1,7 @@
 ---
 title: STORY-CHAMP-OPS-003 Operation Aftermath and Closeout Readability Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-29
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-30: "Approved STORY-CHAMP-OPS-003". This story is now authorized for one Unity implementation branch.
+DONE / merged. Human approval recorded 2026-06-30: "Approved STORY-CHAMP-OPS-003". Unity PR #114 merged after exact-head CI passed; post-merge Unity `main` CI also passed.
 
 ## Story type
 
@@ -82,14 +82,14 @@ Required sources:
 
 ## Acceptance criteria
 
-- [ ] After applying `prototype_operation_site_forecast`, the active UI/status clearly shows the forecasted site and spent-result feedback.
-- [ ] Inspecting or reselecting the forecasted target clearly reports that it is already forecasted / unavailable for repeat use.
-- [ ] Repeat attempts on the same forecasted target spend 0 additional Intel and do not mutate any other site marker.
-- [ ] At least one normal strategic path remains visibly usable after the operation marker exists: movement, non-operation site interaction, or guarded-site tactical handoff.
-- [ ] Existing `STORY-CHAMP-OPS-001` and `STORY-CHAMP-OPS-002` tests/evidence expectations continue to pass.
-- [ ] Evidence under Unity `production/evidence/STORY-CHAMP-OPS-003/` includes after-apply, repeat-denied, surrounding-loop-unbroken screenshots/notes, and omissions/deferred-work notes.
-- [ ] Exact-head Unity Foundation CI passes before merge.
-- [ ] EPIC-011 closeout recommendation is documented in design-control after review.
+- [x] After applying `prototype_operation_site_forecast`, the active UI/status clearly shows the forecasted site and spent-result feedback.
+- [x] Inspecting or reselecting the forecasted target clearly reports that it is already forecasted / unavailable for repeat use.
+- [x] Repeat attempts on the same forecasted target spend 0 additional Intel and do not mutate any other site marker.
+- [x] At least one normal strategic path remains visibly usable after the operation marker exists: movement, non-operation site interaction, or guarded-site tactical handoff.
+- [x] Existing `STORY-CHAMP-OPS-001` and `STORY-CHAMP-OPS-002` tests/evidence expectations continue to pass.
+- [x] Evidence under Unity `production/evidence/STORY-CHAMP-OPS-003/` includes after-apply, repeat-denied, surrounding-loop-unbroken screenshots/notes, and omissions/deferred-work notes.
+- [x] Exact-head Unity Foundation CI passes before merge.
+- [x] EPIC-011 closeout recommendation is documented in design-control after review.
 
 ## Verification requirements
 
@@ -139,13 +139,13 @@ Recorded 2026-06-30: "Approved STORY-CHAMP-OPS-003".
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required evidence exists.
-- [ ] Required tests/CI pass, or human-approved exceptions are documented.
-- [ ] PR/code review is complete if a Unity PR is opened.
-- [ ] Required docs were updated in the correct source-of-truth layer.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists.
+- [x] Required tests/CI pass, or human-approved exceptions are documented.
+- [x] PR/code review is complete if a Unity PR is opened.
+- [x] Required docs were updated in the correct source-of-truth layer.
 
 ## Verdict
 
-READY / approved. Activate `production/sprints/codex-story-champ-ops-003.prompt.txt` and update the Unity current-task pointer before Codex implementation.
+DONE / merged. Unity PR #114 (`bee8f80459cdaff36f618dfe95b6810a5fabd817`) delivered the approved closeout-readability smoke. Exact-head Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28425751130 and post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28426411847. Unity pointer cleanup PR #115 (`dfeae1dd4c34bac12c712b7df1eb45fb97cff14f`) cleared the current implementation pointer, with post-merge `main` CI passing at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28427177376.

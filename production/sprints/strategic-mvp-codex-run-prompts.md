@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-29
+updated: 2026-06-30
 source_lore: []
 related:
   [
@@ -91,15 +91,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-UX-002 Tactical Playability Scale, Resource HUD, and Stack Clarity`.
+**Current READY / approved Unity implementation packet:** none.
 
-EPIC-009 and EPIC-010 are DONE / closed. `STORY-QA-013` is DONE / merged. `STORY-UX-002` is READY / approved as the current Unity implementation packet from remaining playtest notes.
+EPIC-011 is DONE / closed. `STORY-CHAMP-OPS-003` is DONE / merged and the Unity current-task pointer has been cleared. No new Unity implementation packet is READY / approved.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-ux-002.prompt.txt`. Historical prompt files remain for audit only.
+Current implementation prompt file: none. The active next-step artifact is guarded design-control only: `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -120,7 +120,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-ux-002.prompt.txt` for `STORY-UX-002`.
+No READY / approved Unity implementation prompt is active. Do not run Unity implementation from historical story prompts. Use checked-in guarded decision-brief prompt `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt` only to prepare a human decision brief.
 
 ## Historical prompt-file runs
 

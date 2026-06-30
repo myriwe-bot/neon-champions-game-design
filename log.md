@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-06-30] fix | STORY-INTEL-DIRTY-003 Unity README pointer context
+
+- Fixed Unity README stale context that still listed `STORY-INTEL-DIRTY-001` as the latest merged implementation story below the current-task pointer.
+- Current-task pointer remains `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke`.
+- Corrected latest merged implementation story to `STORY-INTEL-DIRTY-002 Stale Intel Readability` so Codex preflight does not confuse stale historical context with the active pointer.
+- Unity PR #123 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/123
+- Unity pointer-context commit: `4698d8f51090a2740a64496fc5c228bc0705fd09`.
+- Exact-head pointer-context PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28468054650
+- Post-merge pointer-context main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28468521447
+
 ## [2026-06-30] approval | STORY-INTEL-DIRTY-003 intel layer closeout smoke
 
 - Human approval recorded: "Please prepare next story for implementation."

@@ -10,6 +10,10 @@
 - Next Unity implementation branch: `story/STORY-INTEL-DIRTY-003-intel-layer-closeout-smoke`.
 - Authorized scope: connected smoke covering normal `Intel Lead` -> `Verified`, `Stale Lead` -> `Verified`, repeat/already-verified no-spend/no unrelated mutation, surrounding strategic interaction remains usable, and EPIC-012 closeout recommendation.
 - Explicit exclusions remain: no `Contested Lead` gameplay, false information, fog, PR/legitimacy/blackmail/social graph systems, strategic AI valuation, economy/resource/subtype changes, map/tactical/victory changes, or final art/audio/VFX/localization/accessibility.
+- Unity README pointer PR #122 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/122
+- Unity pointer commit: `5af5571803b70f1894ece689cd914dfe4c082e95`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28464845155
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28465349004
 
 ## [2026-06-30] approval | STORY-INTEL-DIRTY-002 stale intel readability
 

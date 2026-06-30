@@ -1,16 +1,108 @@
-Guarded candidate prompt for STORY-INTEL-DIRTY-001. Do not run Unity implementation from this prompt until the story is promoted to READY / approved.
+# STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp
 
-Stop conditions:
-- If `production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md` does not have `status: ready` and `approval: approved`, stop immediately.
-- Do not create a Unity implementation branch.
-- Do not modify Unity runtime, tests, scenes, prefabs, assets, packages, or ProjectSettings while this story is READY-candidate / approval pending.
-- Do not implement from EPIC-012 alone.
+You are Codex working in the Neon Champions Unity repository. Implement exactly the approved READY story and no adjacent systems.
 
-Candidate summary for future promotion:
-- Story: STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp.
-- Branch: story/STORY-INTEL-DIRTY-001-intel-lead-verification-on-ramp.
-- PR title: STORY-INTEL-DIRTY-001 intel lead verification on-ramp.
-- Evidence path: production/evidence/STORY-INTEL-DIRTY-001/.
-- Approved defaults once promoted: Lead -> Verified, active Champion actor, guarded-site target, existing Intel cost, defender strength/tactical risk preview payoff, false/contested/stale Intel deferred.
+## Repositories
 
-If promoted later, this prompt must be rewritten into a runnable implementation prompt with full preflight, source-reading, implementation, test, evidence, commit, push, and PR instructions.
+- Design/control repo, Windows path: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Unity repo, Windows path: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+## Mandatory preflight
+
+1. In the design/control repo, confirm latest `main` is pulled.
+2. In the Unity repo, confirm latest `main` is pulled and the working tree is clean.
+3. Read `production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md`. Stop unless its frontmatter says exactly `status: ready` and `approval: approved`.
+4. Read required source docs before coding:
+   - `production/epics/epic-vslice-mvp-012-intel-leads-and-verification.md`
+   - `production/planning/next-implementation-direction-brief-2026-06-30.md`
+   - `design/gdd/intel-resource.md`
+   - `design/gdd/strategic-map.md` §§1-8, §§9-10, and current site/guarded interaction boundaries
+   - `docs/architecture/control-manifest.md`
+   - `docs/architecture/testing-strategy.md`
+   - `docs/architecture/ci-build-automation.md`
+
+## Branch and PR
+
+- Create branch: `story/STORY-INTEL-DIRTY-001-intel-lead-verification-on-ramp`
+- PR title: `STORY-INTEL-DIRTY-001 intel lead verification on-ramp`
+- Required story ID in PR body: `STORY-INTEL-DIRTY-001`
+- Required evidence path in Unity repo: `production/evidence/STORY-INTEL-DIRTY-001/`
+
+## Authorized scope
+
+Implement the first Intel Lead / Verification on-ramp only:
+
+- Add a minimal `Intel Lead` state/presentation for an existing guarded site or equivalent current strategic site.
+- Show the pre-verification state as `Lead` or equivalent non-final prototype label.
+- Let the active Champion verify the lead using existing Intel resource language and existing strategic-map/HUD surfaces.
+- First payoff: reveal or confirm guarded-site defender strength / tactical risk preview.
+- After verification, show the site as `Verified` or equivalent non-final prototype label.
+- Deny repeat verification or report already-verified state without spending extra Intel or mutating unrelated site state.
+- Prove at least one normal strategic interaction remains usable after verification: movement, site interaction, or guarded-site tactical handoff.
+- Preserve existing EPIC-011 Champion Operation behavior unless a narrow integration adjustment is required and documented in evidence.
+
+Human-approved defaults:
+
+- Vocabulary: `Lead` -> `Verified`.
+- Actor: active Champion.
+- Target: guarded site.
+- Cost: existing Intel.
+- First payoff: defender strength / tactical risk preview.
+- Leads are true-for-now; false/contested/stale information is deferred.
+- UI says Intel Lead / Verified, not dirty-information terminology yet.
+
+## Strict exclusions
+
+Do not add:
+
+- full fog-of-war or hidden map reveal;
+- actual false/contested/stale Intel behavior;
+- PR, legitimacy, scandal feed, blackmail, social graph, or dirty-information campaign systems;
+- strategic AI information valuation;
+- new resources, Intel subtypes, recurring income, economy rebalance, markets, or exchanges;
+- new map topology, sites, routes, objectives, tactical combat rules, victory rules;
+- final art/audio/VFX/icons/localization/accessibility framework;
+- full Champion operation loadouts, cooldowns, inventory, or progression.
+
+If implementation requires one of these, stop and report the blocker instead of broadening scope.
+
+## Required acceptance evidence
+
+- At least one existing guarded site presents an Intel Lead / unverified state before verification.
+- Active Champion can verify that lead using existing Intel, with clear feedback naming what was verified and how much Intel was spent.
+- Verification changes the site presentation from Lead to Verified or equivalent prototype language.
+- The verified payoff reveals/confirms defender strength or tactical risk preview without full fog-of-war or false information.
+- Repeat verification spends 0 additional Intel and does not mutate unrelated site markers/state.
+- At least one normal strategic interaction remains visibly usable after verification.
+- Evidence under `production/evidence/STORY-INTEL-DIRTY-001/` includes before-lead, verified, repeat-denied/already-verified, surrounding-loop-unbroken screenshots/notes, and omissions/deferred-work notes.
+
+## Required checks
+
+Run locally where available and record results in the PR/evidence:
+
+- `git diff --check`
+- focused EditMode/domain tests for Lead -> Verified, Intel spend, repeat no-spend, and no unrelated state mutation
+- PlayMode smoke or generated PNG/text evidence for before-lead, verified, repeat/already-verified, and surrounding-loop-unbroken states
+- placeholder validator
+- full EditMode tests
+- full PlayMode smoke tests
+- standalone Windows64 build if available via repo CI scripts
+
+## Git/PR requirements
+
+- Commit the implementation and evidence to the story branch.
+- Push the branch to origin.
+- Open a PR against `main`.
+- PR body must include summary, source authority, tests/checks, evidence paths, known omissions/deferred work, and explicit statement if no known story-scope omissions.
+- Do not merge the PR. Review/merge is a separate gate.
+
+## Output
+
+Report:
+
+- branch name;
+- PR URL;
+- commit SHA;
+- tests/checks run and results;
+- evidence path;
+- any blockers or deviations.

@@ -89,7 +89,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp](../stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md) | READY-candidate / approval pending | Strategic UX + Domain/Presentation + PlayMode Evidence | EPIC-012 approved; EPIC-011 DONE | Required if approved |
+| [STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp](../stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md) | READY / approved | Strategic UX + Domain/Presentation + PlayMode Evidence | EPIC-012 approved; EPIC-011 DONE | Lead/Verified, repeat no-spend, and PlayMode evidence required |
 | STORY-INTEL-DIRTY-002 Contested or Stale Intel Readability | Draft placeholder | Strategic UX + Information-state readability | STORY-INTEL-DIRTY-001 DONE | TBD |
 | STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke | Draft placeholder | Integration smoke + closeout recommendation | STORY-INTEL-DIRTY-002 DONE or deferred | TBD |
 
@@ -125,4 +125,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / PLANNED. Prepare `STORY-INTEL-DIRTY-001` as READY-candidate / approval pending. Do not update the Unity current-task pointer or run Codex implementation until the story is explicitly promoted to READY / approved.
+APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is READY / approved as the first Unity implementation packet. Agents may not implement later draft placeholders until separately approved.

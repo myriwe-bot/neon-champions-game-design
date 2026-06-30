@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-06-30] approval | STORY-INTEL-DIRTY-001 intel lead verification on-ramp
+
+- Human implementation approval recorded: "Approved yes".
+- Promoted `STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp` from READY-candidate / approval pending to READY / approved.
+- Activated runnable prompt: `production/sprints/codex-story-intel-dirty-001.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-INTEL-DIRTY-001-intel-lead-verification-on-ramp`.
+- Authorized scope: Intel Lead -> Verified for an existing guarded site, active Champion verification using existing Intel, defender strength / tactical risk preview payoff, repeat/already-verified no extra spend, and surrounding-loop evidence.
+- Explicit exclusions remain: full fog-of-war, false/contested/stale Intel, PR/legitimacy/blackmail/social graph systems, strategic AI valuation, new resources/subtypes/economy, new map/tactical/victory rules, and final art/audio/VFX/localization/accessibility.
+
 ## [2026-06-30] planning | EPIC-012 Intel Leads and Verification approved direction
 
 - Human selected next direction option A: Intel Leads / Verification, then confirmed: "Okay, agreed and approved".

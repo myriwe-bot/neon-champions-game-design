@@ -1,7 +1,7 @@
 ---
 title: STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-06-30
@@ -17,14 +17,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp
 
 ## Status
 
-READY-candidate / approval pending. Human approved the EPIC-012 direction and defaults on 2026-06-30, but this story is not Unity implementation authority until explicitly promoted to READY / approved.
+READY / approved. Human implementation approval recorded 2026-06-30: "Approved yes". This story is authorized for one Unity implementation branch with the human-approved EPIC-012 defaults.
 
 ## Story type
 
@@ -96,7 +96,7 @@ Required unless a blocker is documented in PR evidence:
 
 ## Ambiguity Check
 
-Status: PASS for candidate review; NOT implementation authority.
+Status: PASS. Human implementation approval recorded 2026-06-30.
 
 Human-approved defaults:
 
@@ -108,7 +108,7 @@ Human-approved defaults:
 - Leads are true-for-now; false/contested/stale information is deferred.
 - UI says Intel Lead / Verified, not dirty-info yet.
 
-Candidate assumptions:
+Approved assumptions:
 
 - Prototype labels are acceptable and not final canon terminology.
 - If an existing Champion Operation surface is the narrowest place to expose verification, it may be reused, but this story must not add full operation loadouts/cooldowns or a second operation suite.
@@ -124,7 +124,7 @@ Candidate assumptions:
 
 ## Human approval
 
-Epic direction and defaults approved 2026-06-30. This story still requires explicit implementation approval before READY promotion.
+Epic direction/defaults approved 2026-06-30. Implementation approval recorded 2026-06-30: "Approved yes".
 
 ## Story readiness gate
 
@@ -136,7 +136,7 @@ Epic direction and defaults approved 2026-06-30. This story still requires expli
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Ambiguity Check is PASS for candidate review.
-- [ ] Human implementation approval has been recorded.
+- [x] Human implementation approval has been recorded.
 
 ## DONE gate
 
@@ -149,4 +149,4 @@ Epic direction and defaults approved 2026-06-30. This story still requires expli
 
 ## Verdict
 
-READY-candidate / approval pending. Do not run Codex implementation or update the Unity current-task pointer until human approval promotes this story to READY / approved.
+READY / approved. Activate `production/sprints/codex-story-intel-dirty-001.prompt.txt` and update the Unity current-task pointer before Codex implementation.

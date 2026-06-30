@@ -91,15 +91,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp`.
 
-EPIC-011 is DONE / closed. EPIC-012 Intel Leads and Verification is APPROVED / PLANNED. `STORY-INTEL-DIRTY-001` is READY-candidate / approval pending, so no new Unity implementation packet is READY / approved.
+EPIC-011 is DONE / closed. EPIC-012 Intel Leads and Verification is APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` is READY / approved as the current Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Guarded candidate prompt exists at `production/sprints/codex-story-intel-dirty-001.prompt.txt`, but it must not be run until the story is promoted to READY / approved. Historical prompt files remain for audit only.
+Current implementation prompt file: `production/sprints/codex-story-intel-dirty-001.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -120,7 +120,7 @@ If `git status --short` prints anything, stop and inspect before running Codex.
 
 ## Current READY implementation prompt
 
-No READY / approved Unity implementation prompt is active. Do not run Unity implementation from historical story prompts or from `production/sprints/codex-story-intel-dirty-001.prompt.txt` while `STORY-INTEL-DIRTY-001` is READY-candidate / approval pending.
+Use checked-in prompt file `production/sprints/codex-story-intel-dirty-001.prompt.txt` for `STORY-INTEL-DIRTY-001`. The prompt still contains a preflight guard requiring `status: ready` and `approval: approved`.
 
 ## Historical prompt-file runs
 

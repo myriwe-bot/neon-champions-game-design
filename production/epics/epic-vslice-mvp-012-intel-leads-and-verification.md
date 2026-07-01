@@ -1,11 +1,11 @@
 ---
 title: EPIC-VSLICE-MVP-012 Intel Leads and Verification
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 source_lore: [digital-net, greenland, white-sky]
 related:
   [
@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` is READY / approved as the current Unity implementation packet.
+DONE / closed for the approved MVP slice. `STORY-INTEL-DIRTY-001`, `STORY-INTEL-DIRTY-002 Stale Intel Readability`, and `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` are DONE / merged. Closeout evidence recommends no further EPIC-012 implementation blocker; contested/false/fog/PR/AI/economy systems remain deferred for future human-approved epics.
 
 Approved defaults:
 
@@ -90,22 +90,22 @@ Intel should feel like operational knowledge, not abstract dust. The player shou
 
 Agents and Codex may not implement this epic directly. They may only implement READY child stories.
 
-| Story | Status | Type | Depends On | Evidence |
-| --- | --- | --- | --- | --- |
-| [STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp](../stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | EPIC-012 approved; EPIC-011 DONE | Unity PR #117; exact-head and post-merge CI passed |
-| [STORY-INTEL-DIRTY-002 Stale Intel Readability](../stories/story-intel-dirty-002-stale-intel-readability.md) | DONE / merged | Strategic UX + Information-state readability | STORY-INTEL-DIRTY-001 DONE | Unity PR #120; exact-head and post-merge CI passed |
-| [STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke](../stories/story-intel-dirty-003-intel-layer-closeout-smoke.md) | READY / approved | Integration smoke + closeout recommendation | STORY-INTEL-DIRTY-002 DONE | Pending Unity PR/evidence |
+| Story                                                                                                                                | Status        | Type                                                   | Depends On                       | Evidence                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------- |
+| [STORY-INTEL-DIRTY-001 Intel Lead and Verification On-Ramp](../stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp.md) | DONE / merged | Strategic UX + Domain/Presentation + PlayMode Evidence | EPIC-012 approved; EPIC-011 DONE | Unity PR #117; exact-head and post-merge CI passed                                 |
+| [STORY-INTEL-DIRTY-002 Stale Intel Readability](../stories/story-intel-dirty-002-stale-intel-readability.md)                         | DONE / merged | Strategic UX + Information-state readability           | STORY-INTEL-DIRTY-001 DONE       | Unity PR #120; exact-head and post-merge CI passed                                 |
+| [STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke](../stories/story-intel-dirty-003-intel-layer-closeout-smoke.md)                   | DONE / merged | Integration smoke + closeout recommendation            | STORY-INTEL-DIRTY-002 DONE       | Unity PR #124; exact-head and post-merge CI passed; pointer cleanup PR #125 passed |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
 ## Risks
 
-| Risk | Type | Impact | Mitigation |
-| --- | --- | --- | --- |
-| Intel verification becomes full fog-of-war | Scope | Large hidden-info system before core is ready | First story only uses Lead -> Verified on existing guarded site |
-| Dirty-info framing becomes fake/deceptive too early | Design | Confusing player with false info before UI has trust language | First story keeps leads true-for-now; false/contested deferred |
-| Verification duplicates Champion Operation forecast | UX/System | Mechanic feels redundant after EPIC-011 | Verification should reveal defender strength/risk, not simply repeat site forecast marker |
-| Draft Intel GDD status blocks agents | Process | Codex stops correctly | Epic and story record narrow human-approved source exception |
+| Risk                                                | Type      | Impact                                                        | Mitigation                                                                                |
+| --------------------------------------------------- | --------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Intel verification becomes full fog-of-war          | Scope     | Large hidden-info system before core is ready                 | First story only uses Lead -> Verified on existing guarded site                           |
+| Dirty-info framing becomes fake/deceptive too early | Design    | Confusing player with false info before UI has trust language | First story keeps leads true-for-now; false/contested deferred                            |
+| Verification duplicates Champion Operation forecast | UX/System | Mechanic feels redundant after EPIC-011                       | Verification should reveal defender strength/risk, not simply repeat site forecast marker |
+| Draft Intel GDD status blocks agents                | Process   | Codex stops correctly                                         | Epic and story record narrow human-approved source exception                              |
 
 ## Epic readiness gate
 
@@ -119,13 +119,13 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Required child stories are DONE or explicitly deferred by human closeout.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, PlayMode/smoke evidence, and visual/readability evidence are complete or accepted as documented exceptions.
-- [ ] Unresolved omissions are documented.
-- [ ] Docs have been updated in the correct source-of-truth layer.
-- [ ] No open blocker remains hidden.
+- [x] Required child stories are DONE or explicitly deferred by human closeout.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, PlayMode/smoke evidence, and visual/readability evidence are complete or accepted as documented exceptions.
+- [x] Unresolved omissions are documented.
+- [x] Docs have been updated in the correct source-of-truth layer.
+- [x] No open blocker remains hidden.
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` is READY / approved as the current implementation packet; it must produce a closeout recommendation before EPIC-012 is closed.
+DONE / closed for the approved MVP slice. Unity evidence from `STORY-INTEL-DIRTY-003` recommends closing EPIC-012; no active implementation blocker remains. Deferred systems require a new human-approved direction/story before Unity implementation.

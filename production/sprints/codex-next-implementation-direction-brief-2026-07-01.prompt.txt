@@ -1,0 +1,29 @@
+# Codex prompt: guarded next implementation direction brief — 2026-07-01
+
+You are Codex working in the Neon Champions design/control repository, not the Unity implementation repo.
+
+## Mandatory guard
+
+This prompt is a decision-brief/update task only. Do not create a Unity branch. Do not edit Unity runtime/tests/scenes/prefabs/packages/ProjectSettings. Do not promote any story to READY unless the human explicitly approves a next direction.
+
+## Required reading
+
+- `production/planning/next-implementation-direction-brief-2026-07-01.md`
+- `production/epics/epic-vslice-mvp-012-intel-leads-and-verification.md`
+- `production/stories/story-intel-dirty-003-intel-layer-closeout-smoke.md`
+- Unity README current-task pointer after cleanup PR #125
+
+## Task
+
+Prepare a concise human decision brief with 2-4 next-direction options and a recommended default. Treat `Scenario pressure and victory readability` as the current recommended default unless the human provides a different preference.
+
+## Output requirements
+
+Return only:
+
+- Current state after EPIC-012 closeout.
+- Options.
+- Recommended default.
+- Exact approval phrase needed before a runnable Unity implementation story/prompt can be promoted.
+
+Reminder: no Unity implementation is authorized by this guarded prompt.

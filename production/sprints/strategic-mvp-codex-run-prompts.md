@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-06-30
+updated: 2026-07-01
 source_lore: []
 related:
   [
@@ -95,15 +95,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke`.
+**Current READY / approved Unity implementation packet:** none. Unity implementation is blocked until the human approves a new direction/story.
 
-EPIC-011 is DONE / closed. EPIC-012 Intel Leads and Verification is APPROVED / IN PROGRESS. `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002 Stale Intel Readability` are DONE / merged. `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke` is READY / approved as the current Unity implementation packet.
+EPIC-012 Intel Leads and Verification is DONE / closed for the approved MVP slice. `STORY-INTEL-DIRTY-001`, `STORY-INTEL-DIRTY-002`, and `STORY-INTEL-DIRTY-003` are DONE / merged. The current next artifact is a guarded decision brief only: `production/planning/next-implementation-direction-brief-2026-07-01.md`.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-intel-dirty-003.prompt.txt`. Historical prompt files remain for audit only.
+Current runnable Unity implementation prompt file: none. Guarded decision-brief prompt file: `production/sprints/codex-next-implementation-direction-brief-2026-07-01.prompt.txt`. Historical prompt files remain for audit only.
 
 ## Windows PowerShell preflight
 
@@ -122,12 +122,11 @@ git status --short
 
 If `git status --short` prints anything, stop and inspect before running Codex.
 
-## Current READY implementation prompt
+## Current guarded decision-brief prompt
 
-Use checked-in prompt file `production/sprints/codex-story-intel-dirty-003.prompt.txt` for `STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke`. The prompt still contains a preflight guard requiring `status: ready`, `approval: approved`, and Unity README pointer agreement.
+No Unity implementation is currently approved. Use checked-in guarded prompt file `production/sprints/codex-next-implementation-direction-brief-2026-07-01.prompt.txt` only to prepare/refresh the human decision brief. It must not create a Unity branch or edit Unity runtime files.
 
-
-### Copy-safe STORY-INTEL-DIRTY-003 handoff
+### Copy-safe guarded next-direction handoff
 
 Primary workspace-write run:
 
@@ -141,7 +140,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-intel-dirty-003.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-next-implementation-direction-brief-2026-07-01.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 
@@ -251,7 +250,6 @@ Trusted-repo fallback:
 ```powershell
 Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-terrain-001.prompt.txt" | codex exec --sandbox danger-full-access
 ```
-
 
 ## After Codex finishes
 

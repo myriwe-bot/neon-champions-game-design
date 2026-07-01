@@ -1,11 +1,11 @@
 ---
 title: STORY-INTEL-DIRTY-003 Intel Layer Closeout Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-01
 source_lore: [digital-net, greenland, white-sky]
 related:
   [
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-06-30: "Please prepare next story for implementation." This approves the next narrow EPIC-012 implementation packet only: a connected Intel-layer smoke and closeout recommendation after `STORY-INTEL-DIRTY-001` and `STORY-INTEL-DIRTY-002` merged.
+DONE / merged. Unity PR #124 merged 2026-07-01 as `a94f83b651bf181fa85dd23165e4ae7a9a1b5b93`. Exact-head PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28527741768 after a whitespace evidence fix; post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28528869421. Unity pointer cleanup PR #125 merged as `362a407bf8a6f3c1955544981ad38d25950904ec`; post-cleanup `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28529985831.
 
 ## Story type
 
@@ -80,15 +80,15 @@ Required sources:
 
 ## Acceptance criteria
 
-- [ ] Connected evidence shows a normal `Intel Lead` before verification and `Verified` after active-Champion verification.
-- [ ] Connected evidence shows a `Stale Lead` before verification and a clearer `Verified` defender-strength / tactical-risk preview after verification.
-- [ ] The sequence makes the difference between `Intel Lead`, `Stale Lead`, and `Verified` readable without introducing false/contested information.
-- [ ] Repeat/already-verified attempts spend 0 additional Intel and do not mutate unrelated site markers/state.
-- [ ] At least one normal strategic interaction remains visibly usable after the Intel markers exist.
-- [ ] Existing story-001 and story-002 focused tests/evidence expectations continue to pass or are updated with equivalent stronger coverage.
-- [ ] Evidence under Unity `production/evidence/STORY-INTEL-DIRTY-003/` includes lead-before, lead-verified, stale-before, stale-verified, repeat/already-verified, surrounding-loop-unbroken, and omissions/deferred-work notes.
-- [ ] Exact-head Unity Foundation CI passes before merge.
-- [ ] EPIC-012 closeout recommendation is documented in Unity evidence and returned in the PR summary.
+- [x] Connected evidence shows a normal `Intel Lead` before verification and `Verified` after active-Champion verification.
+- [x] Connected evidence shows a `Stale Lead` before verification and a clearer `Verified` defender-strength / tactical-risk preview after verification.
+- [x] The sequence makes the difference between `Intel Lead`, `Stale Lead`, and `Verified` readable without introducing false/contested information.
+- [x] Repeat/already-verified attempts spend 0 additional Intel and do not mutate unrelated site markers/state.
+- [x] At least one normal strategic interaction remains visibly usable after the Intel markers exist.
+- [x] Existing story-001 and story-002 focused tests/evidence expectations continue to pass or are updated with equivalent stronger coverage.
+- [x] Evidence under Unity `production/evidence/STORY-INTEL-DIRTY-003/` includes lead-before, lead-verified, stale-before, stale-verified, repeat/already-verified, surrounding-loop-unbroken, and omissions/deferred-work notes.
+- [x] Exact-head Unity Foundation CI passes before merge.
+- [x] EPIC-012 closeout recommendation is documented in Unity evidence and returned in the PR summary.
 
 ## Verification requirements
 
@@ -134,4 +134,4 @@ Human-approved answers / assumptions:
 
 ## Verdict
 
-READY for implementation. This story authorizes only the connected EPIC-012 Intel-layer smoke and closeout recommendation; broader dirty-information systems remain deferred.
+DONE / merged. The connected EPIC-012 Intel-layer smoke passed review, exact-head PR CI, and post-merge `main` CI. Evidence recommends closing EPIC-012 for the approved MVP slice, with contested/false/fog/PR/AI/economy systems explicitly deferred.

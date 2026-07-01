@@ -12,7 +12,10 @@
 - Next Unity implementation branch: `story/STORY-PRESSURE-001-objective-pressure-victory-readability`.
 - Authorized scope: one connected objective-pressure/victory-readability smoke over existing objective/victory/strategic-loop surfaces, with state-backed HUD/status/readability evidence.
 - Explicit exclusions remain: no new campaign mode, broad AI, economy, tactical mechanics, dirty-information systems, map topology, final content, art/audio/VFX/localization/accessibility.
-- Unity README pointer evidence will be recorded after the CI-gated pointer PR merges.
+- Unity README pointer PR #126 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/126
+- Unity pointer commit: `3b69cc1a22658d2b7caf9b7a32e10739bcc2ad52`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28534876195
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28535330443
 
 ## [2026-06-30] fix | STORY-INTEL-DIRTY-003 Unity README pointer context
 

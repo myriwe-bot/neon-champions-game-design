@@ -28,6 +28,8 @@ approval: approved
 
 READY / approved. Human approval recorded 2026-07-01: "approved" for the recommended Scenario pressure and victory readability direction. This story authorizes only the first narrow objective-pressure/victory-readability smoke.
 
+Unity current-task pointer PR #126 merged as `3b69cc1a22658d2b7caf9b7a32e10739bcc2ad52`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28534876195 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28535330443.
+
 ## Story type
 
 Strategic UX + connected PlayMode smoke / readability pass.

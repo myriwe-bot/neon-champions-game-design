@@ -2,6 +2,18 @@
 
 > Append-only project log.
 
+## [2026-07-01] approval | STORY-PRESSURE-001 objective pressure and victory readability smoke
+
+- Human approval recorded: "approved".
+- Approved the recommended next direction: Scenario pressure and victory readability.
+- Created `EPIC-VSLICE-MVP-013 Scenario Pressure and Victory Readability` as APPROVED / IN PROGRESS.
+- Promoted `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` to READY / approved.
+- Activated runnable prompt: `production/sprints/codex-story-pressure-001.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-PRESSURE-001-objective-pressure-victory-readability`.
+- Authorized scope: one connected objective-pressure/victory-readability smoke over existing objective/victory/strategic-loop surfaces, with state-backed HUD/status/readability evidence.
+- Explicit exclusions remain: no new campaign mode, broad AI, economy, tactical mechanics, dirty-information systems, map topology, final content, art/audio/VFX/localization/accessibility.
+- Unity README pointer evidence will be recorded after the CI-gated pointer PR merges.
+
 ## [2026-06-30] fix | STORY-INTEL-DIRTY-003 Unity README pointer context
 
 - Fixed Unity README stale context that still listed `STORY-INTEL-DIRTY-001` as the latest merged implementation story below the current-task pointer.
@@ -300,7 +312,6 @@
 - Added next implementation direction brief: `production/planning/next-implementation-direction-brief-2026-06-27.md`. Recommended default: Champion Assets / Operations depth, pending human direction.
 - Guarded next-direction prompt refreshed: `production/sprints/codex-next-epic-direction-brief.prompt.txt`. No current READY / approved Unity implementation story remains.
 
-
 ## [2026-06-27] approval | Promote STORY-QA-012 for closeout review
 
 - Human approved `STORY-QA-012 EPIC-009 Playtest and Closeout Review` with: `Approved`.
@@ -373,7 +384,6 @@
 - Explicit exclusions remain: income chain effects, recruitment/dwelling refresh, base capture/siege, editor UI, strategic AI, topology rewrite, and final art.
 - Unity README pointer commit `ca47102` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28234791612.
 
-
 ## [2026-06-26] merge | STORY-MAP-REAL-001 merged and STORY-BASE-001 drafted
 
 - Unity PR #79 `STORY-MAP-REAL-001 Scenario-authored strategic map shell` merged. Merge commit: `5c57448f4e1538986d679ff71ca856be02d85f72`.
@@ -384,14 +394,12 @@
 - Unity README pointer-clear commit `b46a004` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28229095893.
 - Async review blocker on node/site back-reference validation was fixed directly on Unity main in commit `b829cce`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28229707819.
 
-
 ## [2026-06-26] approval | Promote STORY-MAP-REAL-001 for implementation
 
 - Human approved `STORY-MAP-REAL-001 Scenario-Authored Strategic Map Shell` with: `Approved`.
 - Promoted STORY-MAP-REAL-001 to READY / approved as the current Unity implementation packet.
 - Converted `production/sprints/codex-story-map-real-001.prompt.txt` from guarded candidate to runnable implementation handoff.
 - Updated EPIC-009, run prompts, index, and story status.
-
 
 ## [2026-06-26] planning | Draft EPIC-009 and STORY-MAP-REAL-001
 
@@ -795,14 +803,12 @@
 - Added `production/sprints/codex-story-strat-004.prompt.txt` as the copy-safe Codex prompt for the first closeout implementation story.
 - Updated Codex run prompts, epic traceability, and index discoverability.
 
-
 ## [2026-06-04] approve | STORY-TAC-002 implementation packet
 
 - Recorded human approval for `production/stories/story-tac-002-minimal-hex-board-and-stack-placement.md`.
 - Promoted STORY-TAC-002 from READY-candidate to READY with approved assumptions: tiny fixed hex board, exactly one attacker stack, exactly one neutral guard stack, and domain/test focus unless safe placeholder visual proof is needed.
 - Added `production/sprints/codex-story-tac-002.prompt.txt` as the copy-safe Codex implementation prompt.
 - Updated closeout train, epic traceability, run prompts, and index discoverability.
-
 
 ## [2026-06-04] fix | STORY-TAC-002 source-authority blocker
 
@@ -826,7 +832,6 @@
 - Added `production/sprints/codex-story-tac-004.prompt.txt` as the copy-safe Codex implementation prompt.
 - Updated closeout train, epic traceability, run prompts, and index discoverability.
 
-
 ## [2026-06-04] approve | STORY-TAC-005 tactical player controls
 
 - Marked `STORY-LOOP-002` DONE / merged after Unity PR #19 and post-merge main CI passed.
@@ -847,14 +852,12 @@
 - Updated `production/stories/story-map-001-larger-two-base-strategic-map-slice.md` to READY-candidate after user decisions: central objective gets a minimal non-victory interaction, base/hub is a real minimal site type, and PlayMode smoke must prove two possible guarded neutral choices.
 - Updated epic, story train, run prompts, and index traceability. `STORY-MAP-001` remains approval-pending and must not be implemented until explicitly promoted to READY.
 
-
 ## [2026-06-08] approve | STORY-MAP-001 implementation packet
 
 - Recorded explicit human implementation approval for `production/stories/story-map-001-larger-two-base-strategic-map-slice.md`.
 - Promoted STORY-MAP-001 from READY-candidate to READY with approved scope: larger deterministic two-base map, real minimal base/hub site type, minimal non-victory central objective interaction, and two guarded neutral choices in PlayMode smoke.
 - Added `production/sprints/codex-story-map-001.prompt.txt` as the copy-safe Codex implementation prompt.
 - Updated `EPIC-VSLICE-MVP-002`, closeout train, run prompts, and index discoverability.
-
 
 ## [2026-06-08] close | STORY-MAP-001 merged and STRAT-006 drafted
 
@@ -863,7 +866,6 @@
 - Recorded final PR-head CI and post-merge main CI run `27127890489`, which passed Compile, EditMode, Placeholder Validator, and PlayMode.
 - Drafted `production/stories/story-strat-006-simple-recruitment-site-fixed-offer.md` as the next candidate; it remains READY-candidate / approval pending with ambiguity questions before implementation.
 - Updated `EPIC-VSLICE-MVP-002`, run prompts, and index traceability.
-
 
 ## [2026-06-08] approve | STORY-STRAT-006 implementation packet
 
@@ -1006,7 +1008,6 @@
 - Recorded that EPIC-VSLICE-MVP-003 must not close automatically from CI alone; LOOP-004 evidence informs the next human closeout/playtest decision.
 - Activated `production/sprints/codex-story-loop-004.prompt.txt` as the current copy-safe Codex prompt.
 
-
 ## [2026-06-12] approve | EPIC-004 Intel on-ramp and STORY-INTEL-001 implementation prep
 
 - Closed `EPIC-VSLICE-MVP-003` as DONE after LOOP-004 evidence, post-merge Unity CI, and human closeout acceptance.
@@ -1040,6 +1041,7 @@
 - Approved scope: one guarded Intel reward path; reuse an existing guarded site if technically clean, otherwise add one placeholder guarded data site; award exactly 5 Intel to the active/claiming faction only after successful guarded-site capture / battle-result return.
 - Kept recurring economy, Intel subtypes, hidden/dirty information, tactical optional objectives beyond the single approved path, operations/hacks/doctrine, upgrade trees, asset inventory, final content/art/UI redesign, save/load, and strategic AI spending out of scope.
 - Activated `production/sprints/codex-story-intel-003.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-003.
+
 ## [2026-06-12] merge | STORY-INTEL-003 closeout and next candidate prep
 
 - Reviewed Unity PR #35 for `STORY-INTEL-003 Guarded Data Site Intel Reward` against the approved story contract.
@@ -1049,10 +1051,12 @@
 - Marked `STORY-INTEL-003` DONE / merged.
 - Prepared `STORY-INTEL-004 Intel On-Ramp Closeout Smoke` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
 - Added guarded non-runnable prompt `production/sprints/codex-story-intel-004.prompt.txt`; no Unity implementation is currently authorized.
+
 ## [2026-06-12] decision | Field Upgrade placeholder
 
 - Human clarified that `field_upgrade_alpha` / “Field Upgrade” is acceptable for now as a placeholder only.
 - It is not a canon final Champion upgrade system and may be renamed, re-fictionalized, or replaced when Champion assets/upgrades are designed properly.
+
 ## [2026-06-12] approve | STORY-INTEL-004 implementation prep
 
 - Recorded human approval for `STORY-INTEL-004 Intel On-Ramp Closeout Smoke`.
@@ -1060,6 +1064,7 @@
 - Approved scope: one connected smoke/evidence path for cache -> placeholder `field_upgrade_alpha` / “Field Upgrade” spend -> guarded Intel reward, with no new Intel mechanics.
 - Recorded that “Field Upgrade” remains approved for now as placeholder only and may be renamed/replaced later.
 - Activated `production/sprints/codex-story-intel-004.prompt.txt` and repointed current Codex run prompts to STORY-INTEL-004.
+
 ## [2026-06-12] merge | STORY-INTEL-004 closeout and next candidate prep
 
 - Reviewed Unity PR #36 for `STORY-INTEL-004 Intel On-Ramp Closeout Smoke` against the approved story contract.
@@ -1069,6 +1074,7 @@
 - Marked `STORY-INTEL-004` DONE / merged.
 - Prepared `STORY-UX-001 Strategic Map Readability and Action Clarity Pass` as DRAFT / READY-candidate only, with approval pending and Ambiguity Check FAIL until human review.
 - Added guarded non-runnable prompt `production/sprints/codex-story-ux-001.prompt.txt`; no Unity implementation is currently authorized.
+
 ## [2026-06-12] approve | STORY-UX-001 implementation prep
 
 - Recorded human approval for `STORY-UX-001 Strategic Map Readability and Action Clarity Pass`.
@@ -1216,6 +1222,7 @@
 - Expanded `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction` only to READY-candidate / approval pending with Ambiguity Check FAIL; objective-rule design remains unapproved.
 - Created guarded non-runnable prompt `production/sprints/codex-story-strat-objective-001.prompt.txt` and updated run prompts to say no Unity implementation packet is currently approved.
 - Cleared the Unity repo current-task pointer on `main` as commit `60c30cf316023c79e4afd71ac58c90f01676fe09`; Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27502974784.
+
 ## 2026-06-14 — Approved STORY-STRAT-OBJECTIVE-001 implementation packet
 
 - Recorded human approval for `STORY-STRAT-OBJECTIVE-001 Multi-Turn Objective Contest Direction`.
@@ -1223,7 +1230,6 @@
 - Promoted the story to READY / approved with Ambiguity Check PASS.
 - Replaced the guarded prompt with runnable Codex prompt `production/sprints/codex-story-strat-objective-001.prompt.txt`.
 - Updated EPIC-005, the playability repair train, run prompts, and index so this story is the current implementation packet.
-
 
 ## 2026-06-15 — STORY-STRAT-OBJECTIVE-001 merged; EPIC-005 closeout review ready
 
@@ -1328,6 +1334,7 @@
 
 - Design/control publish CI passed for `STORY-TAC-AP-001` candidate packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27620455931
 - Unity README pointer-clear PR #52 merged as `1aeb8f193e1371884c0a44a9c027b53623bbc4d9`; Unity Foundation CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27620829960
+
 ## [2026-06-17] approval | STORY-TAC-AP-001 promoted to READY
 
 - Human approval recorded for `STORY-TAC-AP-001 Minimal Tactical AP and Defend State`.
@@ -1335,7 +1342,6 @@
 - Promoted story to READY / approved, passed ambiguity check, and recorded the narrow source-authority exception for draft AP/Defend planning sources.
 - Replaced guarded `production/sprints/codex-story-tac-ap-001.prompt.txt` with the runnable implementation prompt.
 - Updated EPIC-006, index, and Codex run prompts to point at `STORY-TAC-AP-001` as the current approved Unity implementation packet.
-
 
 ## [2026-06-17] merge | STORY-TAC-AP-001 minimal tactical AP and Defend state
 
@@ -1359,7 +1365,6 @@
 - Unity README pointer commit `607bf03c091d13dd43ecdf01b4d6636f8aa8539c` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27693503026
 - Unity README now states no READY / approved implementation task is active and points to the guarded `STORY-TAC-AI-001` candidate packet only.
 
-
 ## [2026-06-17] approval | STORY-TAC-AI-001 promoted to READY
 
 - Human approval recorded for `STORY-TAC-AI-001 Neutral Guard One-Step CombatAI`.
@@ -1368,13 +1373,11 @@
 - Replaced the guarded prompt `production/sprints/codex-story-tac-ai-001.prompt.txt` with the runnable implementation prompt.
 - Updated EPIC-006, index, and Codex run prompts to point at `STORY-TAC-AI-001` as the current approved Unity implementation packet.
 
-
 ## [2026-06-17] verify | STORY-TAC-AI-001 approval publish and Unity pointer
 
 - Design/control publish CI passed for `STORY-TAC-AI-001` approval packet: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/27694739627
 - Unity README approved-task pointer commit `0e54ac1d99616ab3b1f3d9e4800238b35f871e1f` passed Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/27694848108
 - Unity README now names `STORY-TAC-AI-001 Neutral Guard One-Step CombatAI` as the current READY / approved implementation task.
-
 
 ## [2026-06-17] merge | STORY-TAC-AI-001 neutral guard one-step CombatAI
 
@@ -1390,7 +1393,6 @@
 - Status is READY-candidate / approval pending. The prompt self-blocks until human approval promotes the story to READY.
 - Proposed scope: strategic map readability improvements for reachable routes/sites, path-cost preview, site category/state labels, interaction preview, and post-battle return summary using existing graph-backed state.
 - Explicitly excludes tile/hex topology, new base/recruitment systems, strategic AI, fog/logistics/weather, full economy, new tactical rules, and final map art/content.
-
 
 ## [2026-06-17] verify | STORY-STRAT-READ-002 candidate publish and Unity pointer clear
 
@@ -1539,13 +1541,11 @@
 - Sled Logistics Team remains visible support/mobility role only; no special mobility ability in ARMY-002.
 - Activated prompt `production/sprints/codex-story-army-002.prompt.txt`.
 
-
 ## [2026-06-29] fix | PowerShell Codex prompt stdin handoff
 
 - Fixed Codex handoff commands to pipe prompt-file contents through stdin: `Get-Content -Raw <prompt-file> | codex exec --sandbox ...`.
 - Cause: passing large/multiline prompt text as a native-command argument to the Windows Codex shim can be split or reparsed, even when quoted, producing errors like `unexpected argument 'use' found`.
 - Supersedes the earlier quoted-argument attempt; future handoffs should use stdin piping, not `$prompt` argv passing.
-
 
 ## [2026-06-29] fix | STORY-UX-002 Codex prompt shape
 

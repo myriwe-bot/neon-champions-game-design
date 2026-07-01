@@ -1,0 +1,134 @@
+# Codex prompt: STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke
+
+You are Codex working in the Neon Champions Unity repository.
+
+## Repositories
+
+Design/control source of truth:
+- Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Linux/reference path: `/root/wiki/neon-champions-game-design`
+
+Unity implementation repo:
+- Windows: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+- Linux/reference path: `/root/wiki/neon-champions-unity`
+
+## Mandatory preflight guard
+
+Before editing Unity files, read this design/control story:
+
+`production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke.md`
+
+Stop and report `BLOCKED: STORY-PRESSURE-001 is not approved in this checkout` unless the story frontmatter contains exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also verify the Unity README current-task pointer names `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke`. If it does not, stop and report the mismatch. A missing local/remote story branch is expected; create it from updated `main`.
+
+## Required reading
+
+Read before implementation:
+
+1. `production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke.md`
+2. `production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability.md`
+3. `production/planning/next-implementation-direction-brief-2026-07-01.md`
+4. `production/epics/epic-vslice-mvp-003-scenario-objective-champion-combat-and-casualty-stakes.md`
+5. `production/stories/story-obj-001-scenario-objective-state-and-victory-feedback.md`
+6. `production/stories/story-loop-004-objective-champion-combat-and-casualty-stakes-smoke.md`
+7. `production/epics/epic-vslice-mvp-012-intel-leads-and-verification.md`
+8. `design/gdd/strategic-map.md`
+9. `design/gdd/tactical-combat.md`
+10. `docs/architecture/control-manifest.md`
+11. `docs/architecture/testing-strategy.md`
+12. `docs/architecture/ci-build-automation.md`
+13. Unity `README.md`
+
+## Branch and PR
+
+Create/use branch:
+
+`story/STORY-PRESSURE-001-objective-pressure-victory-readability`
+
+PR title:
+
+`STORY-PRESSURE-001 objective pressure and victory readability smoke`
+
+## Authorized scope
+
+Implement only the narrow objective-pressure/victory-readability smoke:
+
+- Show current objective/pressure status before the player changes it.
+- Show what player action/path can reduce, contest, or resolve current pressure using existing mechanics.
+- Show pressure/victory direction after that action.
+- Show clear success/failure/victory/loss-direction feedback where current systems support it.
+- Prove at least one normal strategic interaction remains visibly usable after the pressure/victory messaging exists.
+- Add minimal HUD/status/evidence-label copy only if the current pressure/victory evidence cannot be understood without it.
+- Add focused tests only where needed for state-backed pressure/victory/readability behavior and regressions.
+- Add a concise evidence note naming any remaining pressure/victory/playability gaps for human review.
+
+## Strict exclusions
+
+Do not implement:
+
+- New campaign mode, scenario generator, save/load, meta-progression, or multiple objective archetype framework.
+- Broad strategic AI, enemy planning, autonomous turns, diplomacy, public PR, legitimacy, blackmail, social graph, or economy systems.
+- New tactical combat mechanics, unit abilities, morale/cohesion, AP rules, terrain rules, balance, or battle-result semantics.
+- New Intel Lead types, false/contested information, fog-of-war, counter-intel, or dirty-information operations.
+- New map topology, routes, sites, objectives, resources, recruitment rules, base/facility systems, final content/lore names, art/audio/VFX/icons/localization/accessibility framework.
+
+## Acceptance criteria
+
+- Connected evidence shows objective/pressure status before the player changes it.
+- Connected evidence shows a clear player action/path that changes or resolves current pressure using existing mechanics.
+- Connected evidence shows after-state pressure/victory direction in player-facing text.
+- The pressure/victory messaging is backed by runtime/application state or existing result objects, not screenshot-only copy.
+- At least one normal strategic interaction remains visibly usable after the pressure/victory messaging exists.
+- Existing objective/victory, tactical handoff/result, Intel readability, and surrounding-loop tests/evidence expectations continue to pass or are updated with equivalent stronger coverage.
+- Evidence under Unity `production/evidence/STORY-PRESSURE-001/` includes before-pressure, pressure-action, after-pressure/victory-direction, surrounding-loop-unbroken, and omissions/deferred-work notes.
+
+## Required tests and evidence
+
+Required checks before PR:
+
+- `git diff --check`
+- Focused EditMode/domain/application tests for any changed objective pressure, victory feedback, status copy, or result-state behavior.
+- PlayMode smoke or generated PNG/text evidence for:
+  - before-pressure
+  - pressure-action
+  - after-pressure-victory-direction
+  - surrounding-loop-unbroken
+- Placeholder validator.
+- Standalone Windows64 build if the Unity CI workflow runs it.
+
+Required checked-in evidence path:
+
+`production/evidence/STORY-PRESSURE-001/`
+
+Evidence README must include:
+
+- Story ID and source authority.
+- Exact commands/checks run.
+- Screenshots/files generated or inspected.
+- What pressure/victory/readability path is proven.
+- Known omissions/deferred work, explicitly including deferred campaign/AI/economy/tactical/dirty-information systems or `No known omissions` where appropriate.
+
+## Git / PR behavior
+
+- Keep the implementation branch scoped to this story.
+- Do not commit unrelated cleanup.
+- If Unity-generated `.meta` files are added, ensure `git diff --check` passes; remove trailing whitespace if necessary.
+- Commit and push the implementation branch to remote, or clearly explain why you stopped without pushing.
+- Open a PR against `main` using the required title.
+- The PR body must summarize scope, tests, evidence, omissions, and exact source story.
+- Do not merge the implementation PR yourself unless the supervising agent explicitly tells you to after review.
+
+## Final response requirements
+
+Return:
+
+- Branch name and PR URL.
+- Summary of implementation.
+- Files changed.
+- Tests/checks run and their results.
+- Evidence path and generated evidence files.
+- Any blockers or known omissions.

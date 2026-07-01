@@ -1,7 +1,7 @@
 ---
 title: Next Implementation Direction Brief — 2026-07-01
 type: decision-brief
-status: ready-candidate
+status: approved
 phase: production
 owner: shared
 created: 2026-07-01
@@ -12,7 +12,7 @@ related:
   - design/gdd/intel-resource
   - design/gdd/strategic-map
   - design/gdd/tactical-combat
-approval: pending
+approval: approved
 ---
 
 # Next Implementation Direction Brief — 2026-07-01
@@ -23,7 +23,7 @@ approval: pending
 
 `EPIC-VSLICE-MVP-012 Intel Leads and Verification` is DONE / closed for the approved MVP slice. The game now has visible normal `Intel Lead`, deterministic `Stale Lead`, active-Champion verification, defender-strength / tactical-risk previews, repeat no-spend feedback, unrelated-marker preservation, and connected strategic-loop smoke evidence.
 
-This brief is not implementation authorization. A next epic/story must be explicitly approved before Codex starts Unity runtime work.
+Human approval recorded 2026-07-01: "approved". This approves the recommended Scenario pressure and victory readability direction and authorizes creating the first narrow implementation story/prompt only.
 
 ## Viable next directions
 
@@ -54,4 +54,4 @@ Why:
 
 ## Approval gate
 
-Approval pending. If the human approves option 1 / Scenario pressure, promote a narrow first story and runnable Codex prompt to READY / approved, then update the Unity README current-task pointer through a CI-gated docs PR before handing off implementation.
+Approved 2026-07-01. Promote `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` to READY / approved, create the runnable Codex prompt, and update the Unity README current-task pointer through a CI-gated docs PR before implementation.

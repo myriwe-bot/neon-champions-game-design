@@ -1610,4 +1610,7 @@
 - Created `EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability`.
 - Promoted first story to READY / approved: `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
 - Created runnable Codex prompt: `production/sprints/codex-story-tac-role-001.prompt.txt`.
-- Unity README pointer update pending CI-gated docs PR.
+- Unity README pointer PR #135 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/135 (`46ace36caecae6d4b35aee3ec3905311fa957e95`).
+- Exact-head pointer PR CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28602424622.
+- Post-merge Unity `main` CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28603024548.
+- Unity README now points at `STORY-TAC-ROLE-001` as the current READY / approved implementation task.

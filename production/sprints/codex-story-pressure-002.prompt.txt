@@ -1,0 +1,39 @@
+# Guarded Codex prompt — STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke
+
+This prompt is intentionally guarded.
+
+STOP unless all of the following are true in the design/control repo:
+
+- `production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke.md` has `status: ready`.
+- The same story has `approval: approved`.
+- Unity `README.md` points to `STORY-PRESSURE-002` as the current READY / approved Unity implementation task.
+
+If any guard is false, do not edit Unity source. Report:
+
+- `BLOCKED: STORY-PRESSURE-002 is approval-pending / not the current approved Unity task.`
+- The current story status and approval fields you found.
+- The Unity README current-task pointer you found.
+
+If the guards are later promoted by a human, implement only the approved story:
+
+- Story: `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`.
+- Design/control source: `production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke.md`.
+- Branch: `story/STORY-PRESSURE-002-opponent-contest-loss-pressure`.
+- PR title: `STORY-PRESSURE-002 opponent contest and loss pressure smoke`.
+- Evidence path: `production/evidence/STORY-PRESSURE-002/`.
+
+Scope summary if approved:
+
+- Use existing mechanics to show opponent contest/loss-pressure readability over the objective loop.
+- Prefer state-backed HUD/status text and focused EditMode/PlayMode coverage.
+- If a true opponent contest path is not executable with current mechanics, document the exact blocker with evidence and do not fake it.
+- Do not add strategic AI, campaign systems, economy/base/recruitment mechanics, new tactical mechanics, dirty-information systems, map topology, final art/audio/VFX/icons/localization/accessibility, or final lore names.
+
+Required verification if approved:
+
+- `git diff --check`.
+- Focused EditMode tests.
+- PlayMode smoke/evidence for before-contest, contest-action-or-blocker, after-contest/loss-direction, and surrounding-loop-unbroken states.
+- Placeholder validator.
+- Standalone Windows64 build if the Unity CI workflow runs it.
+- Commit and push the implementation branch; open/update a PR for exact-head Unity Foundation CI.

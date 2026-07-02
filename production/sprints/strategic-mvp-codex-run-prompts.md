@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-07-01
+updated: 2026-07-02
 source_lore: []
 related:
   [
@@ -89,6 +89,7 @@ related:
     production/stories/story-intel-dirty-003-intel-layer-closeout-smoke,
     production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability,
     production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke,
+    production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke,
   ]
 approval: approved
 ---
@@ -97,40 +98,25 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke`.
+No current READY / approved Unity implementation packet is active.
 
-EPIC-012 Intel Leads and Verification is DONE / closed. EPIC-013 Scenario Pressure and Victory Readability is APPROVED / IN PROGRESS. `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is READY / approved as the current Unity implementation packet.
+`STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is DONE / merged. Unity PR #127 merged as `a0292f1bb2683e28a4284d29e6b090d8bb7552ed`; exact-head PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28539704598 and post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916.
+
+Next recommended candidate: `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`. It is READY-candidate / approval pending and must not be run until human approval promotes it to READY / approved and the Unity README current-task pointer is updated through a CI-gated PR. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-pressure-001.prompt.txt`. Historical prompt files remain for audit only.
+Guarded candidate prompt file: `production/sprints/codex-story-pressure-002.prompt.txt`. It self-blocks unless the story is promoted to `status: ready`, `approval: approved`, and the Unity README points to `STORY-PRESSURE-002`.
 
-## Windows PowerShell preflight
+## Current implementation prompt
 
-Run this in PowerShell:
+There is no runnable current implementation prompt.
 
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git pull --ff-only origin main
+### Guarded STORY-PRESSURE-002 candidate handoff after approval only
 
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git fetch origin
-git checkout main
-git pull --ff-only origin main
-git status --short
-```
-
-If `git status --short` prints anything, stop and inspect before running Codex.
-
-## Current READY implementation prompt
-
-Use checked-in prompt file `production/sprints/codex-story-pressure-001.prompt.txt` for `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, and Unity README pointer agreement.
-
-### Copy-safe STORY-PRESSURE-001 handoff
-
-Primary workspace-write run:
+Primary workspace-write run after approval/pointer activation:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -142,11 +128,11 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-pressure-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-pressure-002.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 
-Trusted-repo fallback:
+Trusted-repo fallback after approval/pointer activation:
 
 ```powershell
 $prompt | codex exec --sandbox danger-full-access

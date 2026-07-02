@@ -1,11 +1,11 @@
 ---
 title: STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 source_lore: []
 related:
   [
@@ -26,7 +26,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-01: "approved" for the recommended Scenario pressure and victory readability direction. This story authorizes only the first narrow objective-pressure/victory-readability smoke.
+DONE / merged. Unity PR #127 merged as `a0292f1bb2683e28a4284d29e6b090d8bb7552ed`; exact-head PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28539704598 and post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916.
 
 Unity current-task pointer PR #126 merged as `3b69cc1a22658d2b7caf9b7a32e10739bcc2ad52`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28534876195 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28535330443.
 
@@ -134,4 +134,4 @@ Human-approved answers / assumptions:
 
 ## Verdict
 
-READY for implementation. This story authorizes only the narrow objective-pressure/victory-readability smoke; broader campaign, AI, economy, tactical, and dirty-information systems remain deferred.
+DONE. The narrow objective-pressure/victory-readability smoke merged in Unity PR #127 and post-merge `main` CI passed. Broader campaign, AI, economy, tactical, and dirty-information systems remain deferred.

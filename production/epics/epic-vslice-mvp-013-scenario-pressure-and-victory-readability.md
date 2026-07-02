@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-07-02
 source_lore: []
 related:
   [
@@ -18,6 +18,7 @@ related:
     production/planning/next-implementation-direction-brief-2026-07-01,
     production/epics/epic-vslice-mvp-012-intel-leads-and-verification,
     production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke,
+    production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke,
   ]
 approval: approved
 ---
@@ -26,7 +27,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. Human approval recorded 2026-07-01: "approved" for the recommended next direction in `production/planning/next-implementation-direction-brief-2026-07-01.md`. `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is READY / approved as the current Unity implementation packet.
+APPROVED / IN PROGRESS. `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is DONE / merged in Unity PR #127 (`a0292f1bb2683e28a4284d29e6b090d8bb7552ed`); post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916. `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke` is the next READY-candidate / approval-pending packet; no new Unity implementation is currently approved. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
 
 ## Capability goal
 
@@ -66,9 +67,10 @@ As a player/tester, I need the prototype to tell me what is pressuring me and ho
 
 Agents and Codex may not implement this epic directly. They may only implement READY child stories.
 
-| Story                                                                                                                                                    | Status           | Type                                       | Depends On                                       | Evidence                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------ | ------------------------------------------------ | ------------------------- |
-| [STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke](../stories/story-pressure-001-objective-pressure-and-victory-readability-smoke.md) | READY / approved | Strategic UX + connected smoke/readability | EPIC-012 DONE; objective/victory baseline exists | Pending Unity PR/evidence |
+| Story                                                                                                                                                    | Status                             | Type                                       | Depends On                                       | Evidence                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| [STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke](../stories/story-pressure-001-objective-pressure-and-victory-readability-smoke.md) | DONE                               | Strategic UX + connected smoke/readability | EPIC-012 DONE; objective/victory baseline exists | Unity PR #127; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916 |
+| [STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke](../stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke.md)                 | READY-candidate / approval pending | Strategic UX + connected smoke/readability | STORY-PRESSURE-001 DONE                          | Guarded prompt `production/sprints/codex-story-pressure-002.prompt.txt`                                  |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -92,4 +94,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / IN PROGRESS. Implement only READY child stories. `STORY-PRESSURE-001` is the current approved implementation packet; broader campaign, AI, economy, tactical, and dirty-information systems remain deferred.
+APPROVED / IN PROGRESS. `STORY-PRESSURE-001` is DONE. `STORY-PRESSURE-002` is the next recommended READY-candidate only; implement no new Unity story until a human promotes it to READY / approved. Broader campaign, AI, economy, tactical, and dirty-information systems remain deferred.

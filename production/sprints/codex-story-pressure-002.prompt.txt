@@ -1,39 +1,113 @@
-# Guarded Codex prompt — STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke
+# Codex prompt — STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke
 
-This prompt is intentionally guarded.
+You are Codex working in the Neon Champions Unity repository.
 
-STOP unless all of the following are true in the design/control repo:
+## Repositories / local paths
 
-- `production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke.md` has `status: ready`.
-- The same story has `approval: approved`.
-- Unity `README.md` points to `STORY-PRESSURE-002` as the current READY / approved Unity implementation task.
+- Design/control repo: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Unity repo: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
 
-If any guard is false, do not edit Unity source. Report:
+## Preflight guard
 
-- `BLOCKED: STORY-PRESSURE-002 is approval-pending / not the current approved Unity task.`
-- The current story status and approval fields you found.
-- The Unity README current-task pointer you found.
+Before editing Unity source, read the design/control story and Unity README pointer.
 
-If the guards are later promoted by a human, implement only the approved story:
+Required design/control story:
 
-- Story: `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`.
-- Design/control source: `production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke.md`.
-- Branch: `story/STORY-PRESSURE-002-opponent-contest-loss-pressure`.
-- PR title: `STORY-PRESSURE-002 opponent contest and loss pressure smoke`.
-- Evidence path: `production/evidence/STORY-PRESSURE-002/`.
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-pressure-002-opponent-contest-and-loss-pressure-smoke.md`
 
-Scope summary if approved:
+Required Unity pointer:
 
-- Use existing mechanics to show opponent contest/loss-pressure readability over the objective loop.
-- Prefer state-backed HUD/status text and focused EditMode/PlayMode coverage.
-- If a true opponent contest path is not executable with current mechanics, document the exact blocker with evidence and do not fake it.
-- Do not add strategic AI, campaign systems, economy/base/recruitment mechanics, new tactical mechanics, dirty-information systems, map topology, final art/audio/VFX/icons/localization/accessibility, or final lore names.
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity\README.md`
 
-Required verification if approved:
+STOP and report `BLOCKED` unless all are true:
 
-- `git diff --check`.
-- Focused EditMode tests.
-- PlayMode smoke/evidence for before-contest, contest-action-or-blocker, after-contest/loss-direction, and surrounding-loop-unbroken states.
-- Placeholder validator.
-- Standalone Windows64 build if the Unity CI workflow runs it.
-- Commit and push the implementation branch; open/update a PR for exact-head Unity Foundation CI.
+- The design story has `status: ready`.
+- The design story has `approval: approved`.
+- Unity README names `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke` as the current READY / approved Unity implementation task.
+
+If any guard fails, do not edit source, do not create a branch, and report the exact status/approval/pointer values found.
+
+## Branch / PR
+
+If the guard passes:
+
+- Create/use branch: `story/STORY-PRESSURE-002-opponent-contest-loss-pressure`
+- PR title: `STORY-PRESSURE-002 opponent contest and loss pressure smoke`
+- Required evidence path: `production/evidence/STORY-PRESSURE-002/`
+
+## Required reading
+
+Read before changing code:
+
+- Design story: `production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke.md`
+- Parent epic: `production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability.md`
+- Prior story/evidence: `production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke.md`
+- Unity prior evidence: `production/evidence/STORY-PRESSURE-001/README.md`
+- Unity README current task pointer
+- Relevant architecture docs named by the story: control manifest, testing strategy, CI/build automation
+
+## Authorized scope
+
+Implement only `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`.
+
+Goal: show opponent contest/loss-pressure readability over the existing objective loop using current systems.
+
+In scope:
+
+- One connected hotseat/manual-opponent smoke over existing mechanics.
+- A state where the player holds objective pressure.
+- Player-facing text for opponent contest/loss-pressure direction.
+- Existing contest path if currently supported.
+- If contest is not executable with existing mechanics, produce state-backed blocker evidence and the narrowest follow-up recommendation; do not fake the path.
+- After-state text for contested, reset, reversed, or still-holder pressure.
+- One normal strategic interaction still visibly usable after the messaging exists.
+- Focused EditMode and PlayMode coverage.
+- Evidence notes / generated PNGs under `production/evidence/STORY-PRESSURE-002/`.
+
+Strict exclusions:
+
+- No strategic AI or autonomous enemy planning.
+- No campaign mode, scenario generator, save/load, or meta-progression.
+- No new economy/base/recruitment mechanics.
+- No new tactical combat mechanics, unit abilities, AP rules, terrain rules, balance, or battle-result semantics.
+- No new Intel/dirty-information mechanics, fog-of-war, false leads, PR/hearts-and-minds, counter-intel, or social graph.
+- No new map topology, final content/lore names, art/audio/VFX/icons/localization/accessibility framework.
+
+## Acceptance criteria to satisfy
+
+- Connected evidence shows the player-side objective pressure state before opponent contest/loss-pressure changes it.
+- Connected evidence shows the opponent contest/loss-pressure path using existing mechanics, or clearly records the exact currently unsupported blocker.
+- After-state player-facing text clearly distinguishes contested/reset/reversed/still-holder pressure and victory/loss direction.
+- Messaging is backed by runtime/application state or existing result objects, not screenshot-only copy.
+- At least one normal strategic interaction remains visibly usable afterward.
+- Existing `STORY-PRESSURE-001` tests/evidence expectations continue to pass or are updated with equivalent stronger coverage.
+- Evidence under `production/evidence/STORY-PRESSURE-002/` includes before-contest, contest-action-or-blocker, after-contest/loss-direction, surrounding-loop-unbroken, and omissions/deferred-work notes.
+
+## Verification
+
+Run the strongest available local verification, then push for CI:
+
+- `git diff --check`
+- Focused EditMode tests for changed status/result-state behavior
+- PlayMode smoke/evidence for STORY-PRESSURE-002 states
+- Placeholder validator
+- Standalone Windows64 build if available / if workflow expects it
+
+If Unity local scripts fail because of environment/tooling, diagnose and fix story-scope issues. If blocked by local environment only, document the blocker and still push the branch/PR if the code and evidence are reviewable, so GitHub Unity Foundation CI can verify.
+
+## Git / PR behavior
+
+- Commit the implementation and evidence.
+- Push branch `story/STORY-PRESSURE-002-opponent-contest-loss-pressure`.
+- Open or update the PR with source story, scope, checks run, evidence files, omissions/deferred work, and CI expectations.
+- Do not merge. Human/Hermes will run the merge gate.
+
+## Output requirements
+
+When done, report:
+
+- Branch and PR URL.
+- Exact files changed.
+- Tests/checks run and results.
+- Evidence files produced.
+- Any deferred work or blockers, especially if opponent contest is not executable with existing mechanics.

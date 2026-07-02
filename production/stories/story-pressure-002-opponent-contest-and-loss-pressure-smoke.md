@@ -1,7 +1,7 @@
 ---
 title: STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-02
@@ -17,14 +17,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke
 
 ## Status
 
-READY-candidate / approval pending. This is the proposed next implementation packet after `STORY-PRESSURE-001` merged. It is not authorized for Codex until human approval promotes it to READY / approved. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
+READY / approved. Human approval recorded 2026-07-02: "Approved". This is the current approved implementation packet after `STORY-PRESSURE-001` merged. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
 
 ## Story type
 
@@ -96,9 +96,9 @@ Required unless a blocker is documented in PR evidence:
 
 ## Ambiguity Check
 
-Status: BLOCKED pending human approval.
+Status: PASS. Human approval recorded 2026-07-02.
 
-Default recommendation if approved:
+Implementation defaults:
 
 - Keep this as a narrow readability/connected-smoke story, not an AI/campaign story.
 - If opponent contest is not currently executable with existing mechanics, Codex should produce state-backed blocker evidence and the narrowest follow-up recommendation rather than faking the path.
@@ -120,8 +120,8 @@ Default recommendation if approved:
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human implementation approval has been recorded.
+- [x] Human implementation approval has been recorded.
 
 ## Verdict
 
-READY-candidate only. Do not implement until human approval promotes this story to READY / approved.
+READY for implementation. Implement only this narrow opponent-contest/loss-pressure smoke; broader AI/campaign/economy/tactical/dirty-information systems remain deferred.

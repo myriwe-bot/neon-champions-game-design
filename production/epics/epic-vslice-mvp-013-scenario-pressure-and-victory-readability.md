@@ -27,7 +27,7 @@ approval: approved
 
 ## Status
 
-APPROVED / IN PROGRESS. `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is DONE / merged in Unity PR #127 (`a0292f1bb2683e28a4284d29e6b090d8bb7552ed`); post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916. `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke` is the next READY-candidate / approval-pending packet; no new Unity implementation is currently approved. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
+APPROVED / IN PROGRESS. `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is DONE / merged in Unity PR #127 (`a0292f1bb2683e28a4284d29e6b090d8bb7552ed`); post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916. `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke` is READY / approved as the current Unity implementation packet. Human approval recorded 2026-07-02: "Approved". Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
 
 ## Capability goal
 
@@ -94,4 +94,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / IN PROGRESS. `STORY-PRESSURE-001` is DONE. `STORY-PRESSURE-002` is the next recommended READY-candidate only; implement no new Unity story until a human promotes it to READY / approved. Broader campaign, AI, economy, tactical, and dirty-information systems remain deferred.
+APPROVED / IN PROGRESS. `STORY-PRESSURE-001` is DONE. `STORY-PRESSURE-002` is READY / approved as the current implementation packet; Unity pointer evidence pending. Broader campaign, AI, economy, tactical, and dirty-information systems remain deferred.

@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-02: "Approved". This is the current approved Unity implementation packet after `STORY-PRESSURE-002` merged; implementation is authorized once the Unity README pointer names `STORY-QA-014`.
+READY / approved. Human approval recorded 2026-07-02: "Approved". This is the current approved Unity implementation packet after `STORY-PRESSURE-002` merged. Unity README pointer PR #132 merged as `7d8c9739432512181b3afe3683c0fb197468b115`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28580428245 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28580953928.
 
 ## Story type
 

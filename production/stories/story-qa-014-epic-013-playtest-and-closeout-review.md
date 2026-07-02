@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-014 EPIC-013 Playtest and Closeout Review
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-02
@@ -18,14 +18,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-QA-014 EPIC-013 Playtest and Closeout Review
 
 ## Status
 
-READY-candidate / approval pending. Prepared after `STORY-PRESSURE-002` merged and the Unity current-task pointer was cleared. No Unity implementation is authorized until human approval promotes this story to `status: ready` and `approval: approved`, and the Unity README current-task pointer is updated.
+READY / approved. Human approval recorded 2026-07-02: "Approved". This is the current approved Unity implementation packet after `STORY-PRESSURE-002` merged; implementation is authorized once the Unity README pointer names `STORY-QA-014`.
 
 ## Story type
 
@@ -101,11 +101,14 @@ Not authorized by this story:
 
 ## Ambiguity Check
 
-Status: BLOCKED pending human approval.
+Status: PASS. Implementation authority granted for a narrow EPIC-013 playtest/closeout review only.
 
-Open question for approval:
+Human-approved answers / assumptions:
 
-- Run this QA/playtest closeout packet next, or choose a different next capability direction?
+- Approved 2026-07-02 via user instruction: "Approved".
+- Run this QA/playtest closeout packet as the next Unity step.
+- Allow only narrow readability/clickability/evidence fixes directly tied to EPIC-013 commitments.
+- Record a closeout verdict; do not close EPIC-013 or start a next-epic implementation story without separate human direction.
 
 ## Branch / PR requirements
 
@@ -126,8 +129,8 @@ Open question for approval:
 - [x] Acceptance criteria are observable.
 - [x] Verification requirements are defined.
 - [x] Branch / PR / CI traceability requirements are stated.
-- [ ] Human approval has been recorded.
+- [x] Human approval has been recorded.
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next step is a narrow EPIC-013 playtest and closeout review before closing the pressure/readability epic or starting a new capability train.
+READY for implementation. Implement only this narrow EPIC-013 playtest/closeout review; broader campaign, AI, economy, tactical, dirty-information, map/content, and next-epic systems remain deferred.

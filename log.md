@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-02] approval | STORY-QA-014 EPIC-013 playtest and closeout review
+
+- Human approval recorded: "Approved".
+- Promoted `STORY-QA-014 EPIC-013 Playtest and Closeout Review` from READY-candidate / approval pending to READY / approved.
+- Activated runnable prompt: `production/sprints/codex-story-qa-014.prompt.txt`.
+- Next Unity implementation branch: `story/STORY-QA-014-epic-013-playtest-closeout-review`.
+- Authorized scope: narrow EPIC-013 playtest/closeout review over the merged pressure/readability surface, with only direct readability/clickability/evidence fixes if needed and a closeout verdict.
+- Explicit exclusions remain: no strategic AI, campaign/meta systems, economy, tactical mechanics, Intel/dirty-information, map topology/content expansion, final art/audio/VFX/localization/accessibility, or next-epic promotion.
+
 ## [2026-07-02] merge | STORY-PRESSURE-002 merged and EPIC-013 closeout candidate prepared
 
 - Reviewed Unity PR #130 for `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`: https://github.com/myriwe-bot/neon-champions-unity/pull/130

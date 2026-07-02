@@ -1,19 +1,25 @@
 # Codex prompt — STORY-QA-014 EPIC-013 Playtest and Closeout Review
 
-You are preparing/reviewing Neon Champions Unity story `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
+You are Codex working in the Neon Champions Unity repository on approved story `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
 
 ## Mandatory source-authority preflight
 
 Before editing Unity files, read:
 
 - `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-qa-014-epic-013-playtest-and-closeout-review.md`
+- Unity repo root `README.md`
 
 Stop immediately without modifying files unless the story frontmatter says exactly:
 
 - `status: ready`
 - `approval: approved`
 
-Also confirm the story Ambiguity Check is PASS and the Unity README current-task pointer names `STORY-QA-014`. If any check fails, report that STORY-QA-014 is not authorized in the local checkout and stop.
+Also confirm:
+
+- the story Ambiguity Check is PASS;
+- Unity README current-task pointer names `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
+
+If any check fails, report the found values and stop without creating a branch or editing files.
 
 ## Repositories
 
@@ -52,6 +58,8 @@ Work in the Unity repo on:
 
 - Branch: `story/STORY-QA-014-epic-013-playtest-closeout-review`
 - PR title: `STORY-QA-014 EPIC-013 playtest and closeout review`
+
+Start from updated Unity `main`.
 
 ## Authorized scope
 
@@ -92,6 +100,14 @@ If no code changes are needed after review:
 - Preserve a clear closeout verdict.
 - Do not invent new design direction.
 
+## Required git/PR behavior
+
+- Start from updated Unity `main`.
+- Create or update branch `story/STORY-QA-014-epic-013-playtest-closeout-review`.
+- Commit scoped changes if any.
+- Push the branch if there are changes.
+- Open or update a GitHub PR titled `STORY-QA-014 EPIC-013 playtest and closeout review` if there are Unity changes or evidence/docs to merge.
+
 ## Stop conditions
 
 Stop and report instead of guessing if:
@@ -100,3 +116,14 @@ Stop and report instead of guessing if:
 - You find a blocker that requires new mechanics/design outside this story.
 - Required source files are missing or contradictory.
 - Unity tests or build cannot run and no GitHub Actions path is available.
+
+## Output requirements
+
+Report:
+
+- branch name and PR URL, if opened;
+- changed files summary;
+- tests/validation run and exact results;
+- evidence paths;
+- closeout verdict;
+- omissions/deferred work.

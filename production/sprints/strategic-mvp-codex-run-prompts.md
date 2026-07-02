@@ -99,23 +99,23 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `none`.
+**Current READY / approved Unity implementation packet:** `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
 
-`STORY-PRESSURE-001` and `STORY-PRESSURE-002` are DONE / merged. EPIC-013 Scenario Pressure and Victory Readability is IMPLEMENTATION COMPLETE / awaiting closeout approval. The Unity README current-task pointer has been cleared; no Unity branch is authorized until a candidate is explicitly approved and the pointer is updated.
+`STORY-PRESSURE-001` and `STORY-PRESSURE-002` are DONE / merged. EPIC-013 Scenario Pressure and Victory Readability is APPROVED / CLOSEOUT IN PROGRESS. Human approval recorded 2026-07-02: "Approved" for `STORY-QA-014` as the next narrow closeout/playtest packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current guarded candidate prompt file: `production/sprints/codex-story-qa-014.prompt.txt`. This prompt intentionally self-blocks until `STORY-QA-014` is promoted to `status: ready`, `approval: approved`, Ambiguity Check PASS, and the Unity README pointer names `STORY-QA-014`.
+Current implementation prompt file: `production/sprints/codex-story-qa-014.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, and Unity README pointer agreement.
 
-## Guarded next candidate
+## Current READY implementation prompt
 
-Prepared candidate: `STORY-QA-014 EPIC-013 Playtest and Closeout Review`. It is a closeout/playability review, not a new mechanics packet. Human approval is required before implementation.
+Use checked-in prompt file `production/sprints/codex-story-qa-014.prompt.txt` for `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
 
-### Copy-safe STORY-QA-014 approval-time handoff
+### Copy-safe STORY-QA-014 handoff
 
-Only run after approval/pointer activation:
+Primary workspace-write run:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design

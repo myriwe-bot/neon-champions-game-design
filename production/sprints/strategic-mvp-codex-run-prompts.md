@@ -91,6 +91,8 @@ related:
     production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke,
     production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke,
     production/stories/story-qa-014-epic-013-playtest-and-closeout-review,
+    production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability,
+    production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke,
   ]
 approval: approved
 ---
@@ -99,23 +101,43 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `none`.
+**Current READY / approved Unity implementation packet:** `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
 
-`STORY-PRESSURE-001`, `STORY-PRESSURE-002`, and `STORY-QA-014` are DONE / merged. EPIC-013 Scenario Pressure and Victory Readability is DONE / closed. The next implementation direction brief is `production/planning/next-implementation-direction-brief-2026-07-02.md` and is pending human approval; no Unity implementation is currently authorized.
+EPIC-013 Scenario Pressure and Victory Readability is DONE / closed. Human approval recorded 2026-07-02: "approved" for Tactical role counterplay and combat decision readability. EPIC-014 is APPROVED and `STORY-TAC-ROLE-001` is READY / approved as the next narrow Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: none. Do not run Codex against Unity until a new design-control story is approved and the Unity README pointer is updated through CI.
+Current implementation prompt file: `production/sprints/codex-story-tac-role-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, and Unity README pointer agreement.
 
 ## Current READY implementation prompt
 
-No current READY implementation prompt. Pending approval: review `production/planning/next-implementation-direction-brief-2026-07-02.md`.
+Use checked-in prompt file `production/sprints/codex-story-tac-role-001.prompt.txt` for `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
 
-### Copy-safe handoff
+### Copy-safe STORY-TAC-ROLE-001 handoff
 
-No current Codex handoff. After approval of the next direction/story, add a new checked-in prompt file and update this section.
+Primary workspace-write run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-role-001.prompt.txt"
+$prompt | codex exec --sandbox workspace-write
+```
+
+Trusted-repo fallback:
+
+```powershell
+$prompt | codex exec --sandbox danger-full-access
+```
 
 ## Historical prompt-file runs
 

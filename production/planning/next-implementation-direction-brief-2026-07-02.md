@@ -1,7 +1,7 @@
 ---
 title: Next Implementation Direction Brief — 2026-07-02
 type: decision-brief
-status: candidate
+status: approved
 phase: production
 owner: shared
 created: 2026-07-02
@@ -12,7 +12,7 @@ related:
   - design/gdd/strategic-map
   - design/gdd/tactical-combat
   - design/gdd/intel-resource
-approval: pending
+approval: approved
 ---
 
 # Next Implementation Direction Brief — 2026-07-02
@@ -52,4 +52,4 @@ Why:
 
 ## Approval gate
 
-Pending. If approved, create/approve the narrow parent epic and first READY story/prompt, then update the Unity README current-task pointer through a CI-gated docs PR before Codex implementation.
+Approved 2026-07-02 via user instruction: "approved". Create/approve the narrow parent epic `EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability` and first READY story `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`, then update the Unity README current-task pointer through a CI-gated docs PR before Codex implementation.

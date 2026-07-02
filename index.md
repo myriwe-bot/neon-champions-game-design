@@ -188,3 +188,6 @@
 - [[production/stories/story-army-007-strategic-map-pan-input-repair]] — DONE / merged final EPIC-008 pan input repair.
 
 - Next implementation direction candidate: [2026-07-02](production/planning/next-implementation-direction-brief-2026-07-02.md) — pending approval.
+
+- [[production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability|EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability]] — APPROVED / first story READY.
+- [[production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke|STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke]] — READY / approved.

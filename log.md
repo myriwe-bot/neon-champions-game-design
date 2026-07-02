@@ -1602,3 +1602,12 @@
 - Review fix before merge: trimmed `STORY-QA-014` checked-in evidence from broad generated smoke-suite screenshots to focused EPIC-013 evidence only.
 - EPIC-013 closeout verdict: CLOSE / DONE for approved MVP pressure/readability slice.
 - Prepared pending next-direction candidate: `production/planning/next-implementation-direction-brief-2026-07-02.md`, recommending Tactical Role Counterplay and Combat Decision Readability as the next implementation direction if approved.
+
+## 2026-07-02 — EPIC-014 and STORY-TAC-ROLE-001 approved
+
+- Human approval recorded: "approved".
+- Approved next implementation direction: Tactical role counterplay and combat decision readability.
+- Created `EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability`.
+- Promoted first story to READY / approved: `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
+- Created runnable Codex prompt: `production/sprints/codex-story-tac-role-001.prompt.txt`.
+- Unity README pointer update pending CI-gated docs PR.

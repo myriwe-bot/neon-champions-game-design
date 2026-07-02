@@ -1,0 +1,151 @@
+# STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke
+
+You are Codex working in the Neon Champions Unity repository.
+
+## Repositories and paths
+
+Design/control repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+You must implement in the Unity repo, not the design repo.
+
+## Preflight guard — stop if any fail
+
+Before changing Unity code, verify all of these from your local checkouts:
+
+1. In the design repo, `production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke.md` exists.
+2. That story frontmatter says exactly:
+   - `status: ready`
+   - `approval: approved`
+3. The story Ambiguity Check says `Status: PASS`.
+4. In the Unity repo, `README.md` current task pointer names `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
+5. Your Unity branch is not `main` after branch creation.
+
+If any preflight check fails, stop and report the blocker. Do not implement from chat memory.
+
+## Required reading
+
+Read these files before coding:
+
+Design/control:
+- `production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke.md`
+- `production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability.md`
+- `production/planning/next-implementation-direction-brief-2026-07-02.md`
+- `design/gdd/tactical-combat.md` §§3-6, especially §§6.2A, 6.3, 6.4, 6.5, and 6.6
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+
+Unity:
+- Root `AGENTS.md`
+- Any scoped `AGENTS.md` files in Runtime, Tests, or evidence directories you touch
+- Existing tactical runtime, presentation, PlayMode smoke, and evidence-generation code
+- Existing evidence records for tactical AP/Defend, retaliation/range/threat, terrain readability, and tactical smoke where useful
+
+## Branch and PR
+
+Create and work on:
+`story/STORY-TAC-ROLE-001-tactical-role-counterplay-readability-smoke`
+
+PR title:
+`STORY-TAC-ROLE-001 tactical role counterplay readability smoke`
+
+Required evidence path:
+`production/evidence/STORY-TAC-ROLE-001/`
+
+## Authorized scope
+
+Implement exactly one tactical role/counterplay decision pattern using existing systems where practical. Choose the lowest-risk pattern after inspecting current code, but keep it to one pattern. Acceptable examples:
+
+- a marked/sensor-locked target choice;
+- a ranged-threat or out-of-range choice made clearer and consequential;
+- a Defend tradeoff made clearer in relation to incoming/retaliation risk;
+- a simple focus-fire/assault/support counter cue using existing stack and event-feed state.
+
+The chosen pattern must be:
+- state-backed, not screenshot-only text;
+- visible in player-facing tactical UI/snapshot/event-feed/evidence;
+- covered by focused tests;
+- documented in PR evidence as the chosen pattern.
+
+You may add or clarify UI/status/event-feed/evidence text for:
+- before-choice context;
+- choice availability and why it matters;
+- action result / consequence;
+- invalid/unavailable/repeat/no-op denial without partial mutation, if applicable;
+- surrounding-loop-unbroken proof.
+
+## Strict exclusions
+
+Do not implement:
+- broad tactical AI;
+- initiative rewrite;
+- LOS rewrite;
+- full cover system;
+- universal overwatch;
+- ability trees;
+- faction-wide roster redesign;
+- new tactical unit families;
+- broad balance pass;
+- new strategic economy;
+- campaign/meta systems;
+- new victory rules;
+- new map topology/content;
+- dirty-information/PR/counter-intel systems;
+- Champion spellbook/loadout/progression expansion;
+- final art/audio/VFX/icons/localization/accessibility framework;
+- implementation from draft/lore-only sources or chat memory.
+
+If a tempting improvement is outside scope, document it as deferred work and do not code it.
+
+## Implementation expectations
+
+- Preserve architecture boundaries from the control manifest.
+- Prefer domain/application/presentation changes that fit existing ownership.
+- Do not create duplicate tactical systems.
+- Keep prototype constants/text clearly marked and listed in omissions.
+- Existing tactical behavior must not intentionally regress.
+- If you cannot find a safe one-pattern implementation, stop and explain the blocker instead of broadening scope.
+
+## Verification
+
+Run what is available locally and record exact commands/results in PR evidence:
+
+- `git diff --check`
+- focused EditMode tests for the chosen decision pattern, state-backed result/consequence, and denial/no-partial-mutation where applicable
+- PlayMode smoke/evidence generation for before-choice, choice-available, action-result, and surrounding-loop-unbroken states
+- placeholder/evidence validators if present
+
+The GitHub PR must get exact-head Unity Foundation CI before merge.
+
+## Evidence requirements
+
+Create `production/evidence/STORY-TAC-ROLE-001/` with at minimum:
+
+- `README.md` summarizing story ID, chosen pattern, files changed, tests run, evidence produced, and CI placeholder/URL;
+- generated screenshots or text evidence for before-choice, choice-available, action-result, and surrounding-loop-unbroken states;
+- omissions/deferred-work notes, or a clear `No known omissions` statement.
+
+Generated evidence must be focused on this story. Do not commit broad unrelated smoke-suite artifacts.
+
+## Git behavior
+
+- Commit the implementation on `story/STORY-TAC-ROLE-001-tactical-role-counterplay-readability-smoke`.
+- Push the branch to remote.
+- Open or update the GitHub PR.
+- If you stop before pushing, clearly state why and give the exact local state.
+
+## Final response requirements
+
+Report:
+
+- chosen tactical decision pattern;
+- files changed;
+- tests/commands run and results;
+- evidence path and screenshots/text evidence produced;
+- PR URL;
+- any omissions/deferred work;
+- whether the branch was pushed.

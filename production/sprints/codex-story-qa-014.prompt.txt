@@ -1,0 +1,102 @@
+# Codex prompt — STORY-QA-014 EPIC-013 Playtest and Closeout Review
+
+You are preparing/reviewing Neon Champions Unity story `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
+
+## Mandatory source-authority preflight
+
+Before editing Unity files, read:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\stories\story-qa-014-epic-013-playtest-and-closeout-review.md`
+
+Stop immediately without modifying files unless the story frontmatter says exactly:
+
+- `status: ready`
+- `approval: approved`
+
+Also confirm the story Ambiguity Check is PASS and the Unity README current-task pointer names `STORY-QA-014`. If any check fails, report that STORY-QA-014 is not authorized in the local checkout and stop.
+
+## Repositories
+
+Design/control repo:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity implementation repo:
+
+- `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+## Required reading
+
+Read these before planning or editing:
+
+1. Story authority:
+   - `production/stories/story-qa-014-epic-013-playtest-and-closeout-review.md`
+2. Parent epic:
+   - `production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability.md`
+3. Merged Unity evidence:
+   - `production/evidence/STORY-PRESSURE-001/`
+   - `production/evidence/STORY-PRESSURE-002/`
+4. Design/control:
+   - `design/gdd/strategic-map.md` §§6, 8, 10-14
+   - `design/gdd/tactical-combat.md` current tactical handoff/result boundaries
+   - `docs/architecture/control-manifest.md`
+   - `docs/architecture/testing-strategy.md`
+   - `docs/architecture/ci-build-automation.md`
+5. Unity repo instructions:
+   - root `README.md`
+   - any applicable `AGENTS.md` files
+
+## Branch and PR
+
+Work in the Unity repo on:
+
+- Branch: `story/STORY-QA-014-epic-013-playtest-closeout-review`
+- PR title: `STORY-QA-014 EPIC-013 playtest and closeout review`
+
+## Authorized scope
+
+This is a QA/playability closeout pass, not a new mechanics packet.
+
+You may:
+
+- Review/run current Unity `main` at 1280x720 against the complete EPIC-013 pressure/readability surface.
+- Inspect player objective pressure, action/victory direction, opponent contest/loss-pressure direction, after-contest messaging, and surrounding-loop usability.
+- Fix only concrete player-facing readability/clickability/evidence blockers directly tied to EPIC-013 commitments.
+- Add or update PlayMode smoke tests and PNG/text evidence under `production/evidence/STORY-QA-014/` if a fix is made or if new closeout evidence is needed.
+- Record a closeout verdict: `CLOSE EPIC-013`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT / NEEDS HUMAN PLAYTEST`.
+
+Do not add:
+
+- strategic AI/autonomous opponent planning, campaign scheduling, scenario generation, save/load, meta-progression, diplomacy, PR/legitimacy, or economy systems;
+- new tactical combat mechanics, unit abilities, AP, terrain, balance, battle-result semantics, or tactical AI;
+- Intel/dirty-information mechanics, fog-of-war, false leads, counter-intel, or social graph;
+- new map topology/nodes/routes/sites/objectives/factions/resources/facilities/recruitment offers/final content/art/audio/VFX/icons/localization/accessibility;
+- next-epic implementation promotion.
+
+## Required verification
+
+If a Unity branch is opened:
+
+- `git diff --check` must pass.
+- Placeholder validator must pass.
+- EditMode tests must pass if any application/domain/projection changes are made.
+- PlayMode tests must pass if any Unity code/UI/evidence changes are made.
+- Standalone Windows64 build must pass.
+- Commit evidence under `production/evidence/STORY-QA-014/` as needed.
+- Open/update the PR with story/design links, changed files summary, tests run, evidence paths, omissions/deferred work, and closeout verdict.
+- Push the branch and verify exact-head GitHub Actions CI if local Unity cannot run.
+
+If no code changes are needed after review:
+
+- Still record what was inspected and why no fix was needed.
+- Preserve a clear closeout verdict.
+- Do not invent new design direction.
+
+## Stop conditions
+
+Stop and report instead of guessing if:
+
+- STORY-QA-014 is not `ready` / `approved`, Ambiguity Check is not PASS, or Unity README does not name STORY-QA-014.
+- You find a blocker that requires new mechanics/design outside this story.
+- Required source files are missing or contradictory.
+- Unity tests or build cannot run and no GitHub Actions path is available.

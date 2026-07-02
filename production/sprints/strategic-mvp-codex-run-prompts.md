@@ -90,6 +90,7 @@ related:
     production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability,
     production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke,
     production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke,
+    production/stories/story-qa-014-epic-013-playtest-and-closeout-review,
   ]
 approval: approved
 ---
@@ -98,23 +99,23 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`.
+**Current READY / approved Unity implementation packet:** `none`.
 
-`STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is DONE / merged. EPIC-013 Scenario Pressure and Victory Readability is APPROVED / IN PROGRESS. Human approval recorded 2026-07-02: "Approved" for `STORY-PRESSURE-002` as the next narrow pressure-readability packet.
+`STORY-PRESSURE-001` and `STORY-PRESSURE-002` are DONE / merged. EPIC-013 Scenario Pressure and Victory Readability is IMPLEMENTATION COMPLETE / awaiting closeout approval. The Unity README current-task pointer has been cleared; no Unity branch is authorized until a candidate is explicitly approved and the pointer is updated.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-pressure-002.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, and Unity README pointer agreement. Unity current-task pointer PR #129 merged as `764d8e9d1ca6e7fafb6e6fb9f1119a6ba08ca424`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28570996363 after rerunning a transient Compile job failure, and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28571390526.
+Current guarded candidate prompt file: `production/sprints/codex-story-qa-014.prompt.txt`. This prompt intentionally self-blocks until `STORY-QA-014` is promoted to `status: ready`, `approval: approved`, Ambiguity Check PASS, and the Unity README pointer names `STORY-QA-014`.
 
-## Current READY implementation prompt
+## Guarded next candidate
 
-Use checked-in prompt file `production/sprints/codex-story-pressure-002.prompt.txt` for `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`.
+Prepared candidate: `STORY-QA-014 EPIC-013 Playtest and Closeout Review`. It is a closeout/playability review, not a new mechanics packet. Human approval is required before implementation.
 
-### Copy-safe STORY-PRESSURE-002 handoff
+### Copy-safe STORY-QA-014 approval-time handoff
 
-Primary workspace-write run:
+Only run after approval/pointer activation:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
@@ -126,7 +127,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-pressure-002.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-014.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 

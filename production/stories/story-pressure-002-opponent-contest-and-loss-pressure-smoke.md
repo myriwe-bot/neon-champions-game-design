@@ -1,7 +1,7 @@
 ---
 title: STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-02
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-02: "Approved". This is the current approved implementation packet after `STORY-PRESSURE-001` merged. Unity current-task pointer PR #129 merged as `764d8e9d1ca6e7fafb6e6fb9f1119a6ba08ca424`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28570996363 after rerunning a transient Compile job failure, and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28571390526. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
+DONE / merged. Unity PR #130 merged 2026-07-02 as `885797fc964ab25966bba60c7e1b140855f7b506`. Exact-head PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28576921916 after merge-gate whitespace fix `eb3bc48eb81c0e0e60f887483419a79ba0706440`; post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28577767555. Unity current-task pointer cleanup PR #131 merged as `8d1e606322a3f6aff1ea7b4e696c4f9e7dff19b3`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28578241307 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28578773977. Unity current-task pointer PR #129 merged as `764d8e9d1ca6e7fafb6e6fb9f1119a6ba08ca424`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28570996363 after rerunning a transient Compile job failure, and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28571390526. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898.
 
 ## Story type
 
@@ -74,14 +74,14 @@ Required sources:
 
 ## Acceptance criteria
 
-- [ ] Connected evidence shows the player-side objective pressure state before opponent contest/loss-pressure changes it.
-- [ ] Connected evidence shows the opponent contest/loss-pressure path using existing mechanics or clearly records the exact currently unsupported blocker.
-- [ ] After-state player-facing text clearly distinguishes contested/reset/reversed/still-holder pressure and victory/loss direction.
-- [ ] The contest/loss-pressure messaging is backed by runtime/application state or existing result objects, not screenshot-only copy.
-- [ ] At least one normal strategic interaction remains visibly usable after the contest/loss-pressure messaging exists.
-- [ ] Existing `STORY-PRESSURE-001` objective pressure tests/evidence expectations continue to pass or are updated with equivalent stronger coverage.
-- [ ] Evidence under Unity `production/evidence/STORY-PRESSURE-002/` includes before-contest, contest-action-or-blocker, after-contest/loss-direction, surrounding-loop-unbroken, and omissions/deferred-work notes.
-- [ ] Exact-head Unity Foundation CI passes before merge.
+- [x] Connected evidence shows the player-side objective pressure state before opponent contest/loss-pressure changes it.
+- [x] Connected evidence shows the opponent contest/loss-pressure path using existing mechanics or clearly records the exact currently unsupported blocker.
+- [x] After-state player-facing text clearly distinguishes contested/reset/reversed/still-holder pressure and victory/loss direction.
+- [x] The contest/loss-pressure messaging is backed by runtime/application state or existing result objects, not screenshot-only copy.
+- [x] At least one normal strategic interaction remains visibly usable after the contest/loss-pressure messaging exists.
+- [x] Existing `STORY-PRESSURE-001` objective pressure tests/evidence expectations continue to pass or are updated with equivalent stronger coverage.
+- [x] Evidence under Unity `production/evidence/STORY-PRESSURE-002/` includes before-contest, contest-action-or-blocker, after-contest/loss-direction, surrounding-loop-unbroken, and omissions/deferred-work notes.
+- [x] Exact-head Unity Foundation CI passes before merge.
 
 ## Verification requirements
 
@@ -122,6 +122,15 @@ Implementation defaults:
 - [x] Branch / PR / CI traceability requirements are stated.
 - [x] Human implementation approval has been recorded.
 
+## DONE gate
+
+- [x] Review/implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required evidence exists under Unity `production/evidence/STORY-PRESSURE-002/`.
+- [x] Required tests/CI pass. Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28576921916. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28577767555.
+- [x] PR/code review is complete: Unity PR #130.
+- [x] Unity current-task pointer was cleared after merge: PR #131; post-cleanup main CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28578773977.
+
 ## Verdict
 
-READY for implementation. Implement only this narrow opponent-contest/loss-pressure smoke; broader AI/campaign/economy/tactical/dirty-information systems remain deferred.
+DONE / merged. Unity PR #130: https://github.com/myriwe-bot/neon-champions-unity/pull/130. Merge commit: `885797fc964ab25966bba60c7e1b140855f7b506`. Exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28576921916. Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28577767555. Evidence recommends no known story-scope omissions; broader AI/campaign/economy/tactical/dirty-information systems remain deferred. Next prepared packet is guarded `STORY-QA-014` EPIC-013 playtest and closeout review.

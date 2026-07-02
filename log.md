@@ -2,6 +2,21 @@
 
 > Append-only project log.
 
+## [2026-07-02] merge | STORY-PRESSURE-002 merged and EPIC-013 closeout candidate prepared
+
+- Reviewed Unity PR #130 for `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke`: https://github.com/myriwe-bot/neon-champions-unity/pull/130
+- Merge-gate fix: removed extra blank EOF lines from new evidence notes so `git diff --check origin/main...HEAD` passed.
+- Merge verdict: PASS. Scope matched the approved narrow opponent contest/loss-pressure smoke; no blockers remained.
+- Unity merge commit: `885797fc964ab25966bba60c7e1b140855f7b506`.
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28576921916
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28577767555
+- Unity README current-task pointer cleared via PR #131: https://github.com/myriwe-bot/neon-champions-unity/pull/131
+- Pointer cleanup commit: `8d1e606322a3f6aff1ea7b4e696c4f9e7dff19b3`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28578241307
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28578773977
+- Marked `STORY-PRESSURE-002` DONE / merged and moved EPIC-013 to implementation-complete / awaiting closeout approval.
+- Prepared guarded next candidate `STORY-QA-014 EPIC-013 Playtest and Closeout Review` and guarded prompt `production/sprints/codex-story-qa-014.prompt.txt`; no Unity implementation is authorized until human approval promotes it.
+
 ## [2026-07-01] approval | STORY-PRESSURE-001 objective pressure and victory readability smoke
 
 - Human approval recorded: "approved".

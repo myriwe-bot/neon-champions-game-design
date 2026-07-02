@@ -131,6 +131,10 @@
 - [[production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp]] — DONE / merged Intel Lead verification story.
 - [[production/stories/story-intel-dirty-002-stale-intel-readability]] — DONE / merged Stale Lead readability story.
 - [[production/stories/story-intel-dirty-003-intel-layer-closeout-smoke]] — READY / approved Intel-layer closeout smoke story.
+- [[production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability]] — IMPLEMENTATION COMPLETE / awaiting closeout approval.
+- [[production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke]] — DONE / merged EPIC-013 objective pressure and victory readability smoke story.
+- [[production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke]] — DONE / merged EPIC-013 opponent contest and loss-pressure smoke story.
+- [[production/stories/story-qa-014-epic-013-playtest-and-closeout-review]] — READY-candidate / approval pending EPIC-013 playtest and closeout review.
 - `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt` — guarded decision-brief prompt only; no Unity runtime implementation authorized.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.

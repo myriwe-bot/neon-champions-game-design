@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-013 Scenario Pressure and Victory Readability
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-07-01
@@ -28,7 +28,7 @@ approval: approved
 
 ## Status
 
-APPROVED / CLOSEOUT IN PROGRESS. `STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke` is DONE / merged in Unity PR #127 (`a0292f1bb2683e28a4284d29e6b090d8bb7552ed`); post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916. `STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke` is DONE / merged in Unity PR #130 (`885797fc964ab25966bba60c7e1b140855f7b506`); exact-head PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28576921916 and post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28577767555. `STORY-QA-014 EPIC-013 Playtest and Closeout Review` is READY / approved as the current Unity implementation packet. Human approval recorded 2026-07-02: "Approved". Unity current-task pointer PR #132 merged as `7d8c9739432512181b3afe3683c0fb197468b115`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28580428245 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28580953928. Unity current-task pointer PR #129 merged as `764d8e9d1ca6e7fafb6e6fb9f1119a6ba08ca424`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28570996363 after rerunning a transient Compile job failure, and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28571390526. Unity current-task pointer cleanup PR #128 merged as `0ae348848268e61946344d31cbffcea63221a2f4`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567972315 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28568289898. After `STORY-PRESSURE-002`, Unity pointer cleanup PR #131 merged as `8d1e606322a3f6aff1ea7b4e696c4f9e7dff19b3`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28578241307 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28578773977.
+DONE / closed. `STORY-PRESSURE-001`, `STORY-PRESSURE-002`, and `STORY-QA-014` are DONE / merged. `STORY-QA-014 EPIC-013 Playtest and Closeout Review` merged in Unity PR #133 as `9e27b6b63abda739392f10af3a9d5adf97fa4a16`; exact-head PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28588347108 and post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28589373917. The closeout verdict is `CLOSE EPIC-013`: the approved pressure/readability MVP slice is complete; campaign systems, broad AI, economy expansion, tactical rules, Intel/dirty-information expansion, new topology/content, and final polish remain deferred.
 
 ## Capability goal
 
@@ -72,7 +72,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------ | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
 | [STORY-PRESSURE-001 Objective Pressure and Victory Readability Smoke](../stories/story-pressure-001-objective-pressure-and-victory-readability-smoke.md) | DONE   | Strategic UX + connected smoke/readability | EPIC-012 DONE; objective/victory baseline exists | Unity PR #127; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28567436916 |
 | [STORY-PRESSURE-002 Opponent Contest and Loss Pressure Smoke](../stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke.md)                 | DONE   | Strategic UX + connected smoke/readability | STORY-PRESSURE-001 DONE                          | Unity PR #130; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28577767555 |
-| [STORY-QA-014 EPIC-013 Playtest and Closeout Review](../stories/story-qa-014-epic-013-playtest-and-closeout-review.md)                                   | READY  | QA/playability closeout review             | STORY-PRESSURE-002 DONE                          | Runnable prompt `production/sprints/codex-story-qa-014.prompt.txt`                                       |
+| [STORY-QA-014 EPIC-013 Playtest and Closeout Review](../stories/story-qa-014-epic-013-playtest-and-closeout-review.md)                                   | DONE   | QA/playability closeout review             | STORY-PRESSURE-002 DONE                          | Unity PR #133; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28589373917 |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -96,4 +96,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / CLOSEOUT IN PROGRESS. `STORY-PRESSURE-001` and `STORY-PRESSURE-002` are DONE / merged. `STORY-QA-014` is READY / approved as the current closeout/playtest implementation packet; broader campaign, AI, economy, tactical, and dirty-information systems remain deferred.
+DONE / closed for the approved MVP pressure/readability slice. `STORY-QA-014` closeout accepted the epic as complete; broader campaign, AI, economy, tactical, and dirty-information systems remain deferred to separately approved future epics.

@@ -99,43 +99,23 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
+**Current READY / approved Unity implementation packet:** `none`.
 
-`STORY-PRESSURE-001` and `STORY-PRESSURE-002` are DONE / merged. EPIC-013 Scenario Pressure and Victory Readability is APPROVED / CLOSEOUT IN PROGRESS. Human approval recorded 2026-07-02: "Approved" for `STORY-QA-014` as the next narrow closeout/playtest packet.
+`STORY-PRESSURE-001`, `STORY-PRESSURE-002`, and `STORY-QA-014` are DONE / merged. EPIC-013 Scenario Pressure and Victory Readability is DONE / closed. The next implementation direction brief is `production/planning/next-implementation-direction-brief-2026-07-02.md` and is pending human approval; no Unity implementation is currently authorized.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-qa-014.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, and Unity README pointer agreement.
+Current implementation prompt file: none. Do not run Codex against Unity until a new design-control story is approved and the Unity README pointer is updated through CI.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-qa-014.prompt.txt` for `STORY-QA-014 EPIC-013 Playtest and Closeout Review`.
+No current READY implementation prompt. Pending approval: review `production/planning/next-implementation-direction-brief-2026-07-02.md`.
 
-### Copy-safe STORY-QA-014 handoff
+### Copy-safe handoff
 
-Primary workspace-write run:
-
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git checkout main
-git pull --ff-only origin main
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-qa-014.prompt.txt"
-$prompt | codex exec --sandbox workspace-write
-```
-
-Trusted-repo fallback:
-
-```powershell
-$prompt | codex exec --sandbox danger-full-access
-```
+No current Codex handoff. After approval of the next direction/story, add a new checked-in prompt file and update this section.
 
 ## Historical prompt-file runs
 

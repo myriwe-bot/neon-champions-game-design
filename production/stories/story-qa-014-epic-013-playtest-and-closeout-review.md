@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-014 EPIC-013 Playtest and Closeout Review
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-02

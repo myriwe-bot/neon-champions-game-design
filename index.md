@@ -186,3 +186,5 @@
 - [[production/stories/story-qa-005-playmode-evidence-artifact-hygiene|STORY-QA-005 PlayMode Evidence Artifact Hygiene]] — DONE / merged maintenance story after UX-001 merge.
 
 - [[production/stories/story-army-007-strategic-map-pan-input-repair]] — DONE / merged final EPIC-008 pan input repair.
+
+- Next implementation direction candidate: [2026-07-02](production/planning/next-implementation-direction-brief-2026-07-02.md) — pending approval.

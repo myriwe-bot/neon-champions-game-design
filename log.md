@@ -1593,3 +1593,12 @@
 - Independent review initially blocked on thin evidence directory; fixed by adding checked-in per-state evidence notes under Unity `production/evidence/STORY-INTEL-DIRTY-002/`, then reran exact-head CI before merge.
 - `Contested Lead`, false information, fog-of-war, PR/social graph systems, strategic AI valuation, new resources/economy, map/tactical/victory changes, and final art/audio/VFX/localization/accessibility remain deferred.
 - No next Unity implementation story is approved after this merge; Unity current-task pointer should be cleared.
+
+## 2026-07-02 — STORY-QA-014 merged; EPIC-013 closed; next direction candidate prepared
+
+- Unity PR #133 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/133 (`9e27b6b63abda739392f10af3a9d5adf97fa4a16`).
+- Exact-head PR CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28588347108.
+- Post-merge Unity `main` CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28589373917.
+- Review fix before merge: trimmed `STORY-QA-014` checked-in evidence from broad generated smoke-suite screenshots to focused EPIC-013 evidence only.
+- EPIC-013 closeout verdict: CLOSE / DONE for approved MVP pressure/readability slice.
+- Prepared pending next-direction candidate: `production/planning/next-implementation-direction-brief-2026-07-02.md`, recommending Tactical Role Counterplay and Combat Decision Readability as the next implementation direction if approved.

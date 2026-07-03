@@ -194,6 +194,6 @@
 - [[production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke|STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke]] — READY / approved.
 - [[production/planning/post-audit-foundation-pivot-2026-07-03]] — APPROVED post-audit foundation pivot brief.
 - [[production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation]] — APPROVED / queued after EPIC-014 post-audit foundation/reconciliation epic.
-- [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — READY-candidate / queued after EPIC-014 first data/scenario extraction packet.
+- [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — READY-candidate / approved + queued after EPIC-014 first data/scenario extraction packet; guarded prompt prepared.
 - [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — READY-candidate playtest journal/gate hook.
 - [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — READY-candidate hollow-gate/source-truth reconciliation.

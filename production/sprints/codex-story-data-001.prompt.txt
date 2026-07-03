@@ -1,0 +1,127 @@
+# STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep — GUARDED
+
+You are Codex working in the Neon Champions Unity repository.
+
+## Current state
+
+This prompt is prepared in advance and is intentionally guarded.
+
+`STORY-DATA-001` is approved as the queued next packet after EPIC-014, but it is not authorized for Unity implementation yet.
+
+## Preflight guard — stop unless all are true
+
+Before changing Unity code, verify all of these from your local checkouts:
+
+1. In the design repo, `production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md` exists.
+2. That story frontmatter says exactly:
+   - `status: ready`
+   - `approval: approved`
+3. The story Ambiguity Check says implementation is allowed / PASS for implementation, not merely READY-candidate.
+4. `EPIC-VSLICE-MVP-014` and `STORY-TAC-ROLE-001` are DONE/closed in the design repo.
+5. In the Unity repo, `README.md` current task pointer names `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`.
+6. Your Unity branch is not `main` after branch creation.
+
+If any preflight check fails, stop and report the blocker. Do not implement from chat memory.
+
+## Repositories and paths
+
+Design/control repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+You must implement in the Unity repo, not the design repo.
+
+## Required reading once preflight passes
+
+Design/control:
+- `production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md`
+- `production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation.md`
+- `production/planning/post-audit-foundation-pivot-2026-07-03.md`
+- `docs/architecture/data-scenario-save-format-adr.md`
+- `docs/architecture/data-authoring-options.md`
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+
+Unity:
+- Root `AGENTS.md`
+- Any scoped `AGENTS.md` files in Runtime, Tests, or evidence directories you touch
+- `StrategicMapPresentationSmokeScenario` and related scenario/runtime factories
+- Existing strategic/tactical PlayMode smoke and evidence-generation code
+
+## Branch and PR after activation
+
+Create and work on:
+`story/STORY-DATA-001-static-scenario-data-contract`
+
+PR title:
+`STORY-DATA-001 static scenario data contract and extraction prep`
+
+Required evidence path:
+`production/evidence/STORY-DATA-001/`
+
+## Authorized scope after activation
+
+- Inspect current Unity scenario construction and define the smallest static/scenario data contract needed to represent the current playable scenario.
+- Add one checked-in sample scenario data file for the current smoke/playable scenario.
+- Add importer/converter code that creates the same domain/application definitions/runtime state currently created by code.
+- Add validation for duplicate IDs, missing required fields, unknown references, empty/blank IDs, and basic numeric ranges used by the scenario.
+- Add focused EditMode tests for valid load and invalid data rejection.
+- Add PlayMode or smoke evidence that the current visible loop still works with the data-backed scenario.
+- Keep old hardcoded factory path only as temporary fallback if needed, explicitly documented as deferred work.
+
+## Strict exclusions
+
+Do not implement:
+- full map/scenario editor;
+- full save/load UI;
+- full conversion of every unit/faction/tactical/action/facility constant;
+- new gameplay, map topology, balance, factions, sites, objectives, dirty-information, or AI behavior;
+- ScriptableObject authoring UI;
+- localization framework completion;
+- implementation from draft/lore-only sources or chat memory.
+
+If a tempting improvement is outside scope, document it as deferred work and do not code it.
+
+## Verification after activation
+
+Run what is available locally and record exact commands/results in PR evidence:
+
+- `git diff --check`
+- focused EditMode importer/validator tests
+- relevant scenario/domain tests updated only where the data path changes source construction
+- PlayMode smoke or generated evidence showing the current scenario still loads and is playable
+- placeholder/evidence validators if present
+
+The GitHub PR must get exact-head Unity Foundation CI before merge.
+
+## Evidence requirements after activation
+
+Create `production/evidence/STORY-DATA-001/` with at minimum:
+
+- `README.md` summarizing story ID, data contract, files changed, tests run, evidence produced, and CI placeholder/URL;
+- notes listing which values remain hardcoded and why;
+- omissions/deferred-work notes, or a clear `No known omissions` statement.
+
+Generated evidence must be focused on this story. Do not commit broad unrelated smoke-suite artifacts.
+
+## Git behavior after activation
+
+- Commit the implementation on `story/STORY-DATA-001-static-scenario-data-contract`.
+- Push the branch to remote.
+- Open or update the GitHub PR.
+- If you stop before pushing, clearly state why and give the exact local state.
+
+## Final response requirements
+
+Report:
+
+- data format and contract boundaries chosen;
+- files changed;
+- tests/commands run and results;
+- evidence path and evidence produced;
+- PR URL;
+- omissions/deferred work;
+- whether the branch was pushed.

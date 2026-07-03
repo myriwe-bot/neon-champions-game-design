@@ -17,14 +17,14 @@ related:
     docs/architecture/testing-strategy,
     docs/architecture/ci-build-automation,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep
 
 ## Status
 
-READY-candidate / sequenced after current epic. Human sequencing decision recorded 2026-07-03: wait until current EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and promote this story for implementation. Unity implementation is not authorized until EPIC-014 is complete, this story is explicitly promoted to READY, and the Unity current-task pointer is updated.
+READY-candidate / approved and queued after current epic. Human approval recorded 2026-07-03: "Okay prepare next story and approve." Human sequencing decision remains: wait until current EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and promote this story for implementation. Unity implementation is not authorized until EPIC-014 is complete, this story is explicitly promoted to READY, and the Unity current-task pointer is updated.
 
 ## Story type
 
@@ -98,7 +98,7 @@ As a designer/system, I want the current playable scenario represented by valida
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate, FAIL for implementation until EPIC-014 completes and this story is explicitly promoted.
+Status: PASS for approved READY-candidate, FAIL for implementation until EPIC-014 completes and this story is explicitly promoted to READY.
 
 Resolved sequencing decision:
 
@@ -111,7 +111,7 @@ Assumptions:
 
 Human-approved exceptions:
 
-- The mini-epic is approved, but this specific Unity implementation packet must wait until EPIC-014 completes and still requires explicit promotion to READY.
+- This story is human-approved as the next post-EPIC-014 packet, but must wait until EPIC-014 completes and still requires explicit promotion to READY plus Unity current-task pointer update.
 
 ## Branch / PR requirements
 
@@ -129,10 +129,14 @@ Human-approved exceptions:
 - [x] In-scope work is concrete and bounded.
 - [x] Out-of-scope work is explicit.
 - [x] Verification requirements are defined.
-- [ ] Human explicitly promotes this story to READY.
+- [x] Human approved this story as the queued next packet after EPIC-014.
 - [ ] Unity current-task pointer is updated to this story.
 - [x] Active task sequencing with `STORY-TAC-ROLE-001` is resolved: wait until EPIC-014 completes, then pivot.
 
+## Guarded prompt
+
+Prepared guarded prompt: `production/sprints/codex-story-data-001.prompt.txt`. It is not runnable until EPIC-014 completes, this story is promoted to `status: ready`, and the Unity README current-task pointer names `STORY-DATA-001`.
+
 ## Verdict
 
-READY-candidate / queued after EPIC-014.
+READY-candidate / approved and queued after EPIC-014.

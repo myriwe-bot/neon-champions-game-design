@@ -111,6 +111,8 @@ If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-s
 
 Current implementation prompt file: `production/sprints/codex-story-tac-role-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, and Unity README pointer agreement.
 
+Queued after EPIC-014: `production/sprints/codex-story-data-001.prompt.txt` is prepared as a guarded prompt for `STORY-DATA-001`, but it must not be run until EPIC-014 completes, the story is promoted to READY, and the Unity README pointer is updated.
+
 ## Current READY implementation prompt
 
 Use checked-in prompt file `production/sprints/codex-story-tac-role-001.prompt.txt` for `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.

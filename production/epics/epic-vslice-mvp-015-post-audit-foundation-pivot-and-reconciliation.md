@@ -88,7 +88,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep](../stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md) | READY-candidate / queued after EPIC-014 | Config/Data + Architecture | EPIC-014 complete; this epic; data/scenario/save ADR | ADR, Unity diff/evidence when promoted |
+| [STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep](../stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md) | READY-candidate / approved + queued after EPIC-014 | Config/Data + Architecture | EPIC-014 complete; this epic; data/scenario/save ADR | Guarded prompt `production/sprints/codex-story-data-001.prompt.txt`; Unity diff/evidence when promoted |
 | [STORY-PLAYTEST-001 Playtest Journal and Gate Hook](../stories/story-playtest-001-playtest-journal-and-gate-hook.md) | READY-candidate | Playtest + Process | This epic | New journal template + gate wording |
 | [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | READY-candidate | Process/Tooling | This epic | Reconciliation report + targeted doc updates |
 | STORY-AI-001 Dumb Strategic AI Playtest Opponent | Draft | Logic/AI | Data/scenario contract preferred | Future story |
@@ -127,4 +127,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / queued. After EPIC-014 completes, pivot to this epic and promote `STORY-DATA-001` through the normal READY + Unity pointer workflow. Execute only through READY child stories.
+APPROVED / queued. `STORY-DATA-001` is approved as the next post-EPIC-014 packet, with guarded prompt prepared. After EPIC-014 completes, pivot to this epic and promote `STORY-DATA-001` through the normal READY + Unity pointer workflow. Execute only through READY child stories.

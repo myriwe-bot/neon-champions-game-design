@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-03] approval | STORY-DATA-001 queued after EPIC-014
+
+- Human approval recorded: "Okay prepare next story and approve".
+- Approved `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep` as the queued next packet after EPIC-014 completes.
+- Preserved sequencing decision: do not supersede current `STORY-TAC-ROLE-001`; no Unity implementation is authorized for `STORY-DATA-001` until EPIC-014 completes, the story is promoted to READY, and the Unity README current-task pointer is updated.
+- Prepared guarded prompt `production/sprints/codex-story-data-001.prompt.txt`; it self-blocks until the later activation conditions are true.
+
 ## [2026-07-03] decision | EPIC-015 sequencing after current epic
 
 - Human sequencing decision recorded: "Wait until the current epic completes, then pivot to this epic and that story."

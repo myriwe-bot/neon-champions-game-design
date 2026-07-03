@@ -1,7 +1,7 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-06-30
-> Current phase: Phase 1 — Concept
+> Last updated: 2026-07-03
+> Current phase: Production — post-audit foundation pivot + vertical-slice implementation
 > Review mode: Lean default, Full for major gates
 
 ## Start Here
@@ -172,6 +172,7 @@
 - [[docs/architecture/unity-technical-scheme]] — Unity technical boundaries and defaults.
 - [[docs/architecture/technical-decision-priorities]] — technical decision gate priorities.
 - [[docs/architecture/data-authoring-options]] — data authoring options and phased-hybrid decision.
+- [[docs/architecture/data-scenario-save-format-adr]] — approved post-audit data/static/scenario/runtime/save boundaries and first scenario-extraction direction.
 - [[docs/architecture/testing-strategy]] — strict layered testing ADR.
 - [[docs/architecture/ci-build-automation]] — strict CI/build automation ADR.
 - [[docs/architecture/merge-to-main-gate]] — approved workflow for rigorous PR merge gates before implementation branches land on main.
@@ -191,3 +192,8 @@
 
 - [[production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability|EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability]] — APPROVED / first story READY.
 - [[production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke|STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke]] — READY / approved.
+- [[production/planning/post-audit-foundation-pivot-2026-07-03]] — APPROVED post-audit foundation pivot brief.
+- [[production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation]] — APPROVED post-audit foundation/reconciliation epic.
+- [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — READY-candidate first data/scenario extraction packet.
+- [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — READY-candidate playtest journal/gate hook.
+- [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — READY-candidate hollow-gate/source-truth reconciliation.

@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-03] approval | Post-audit foundation pivot and reconciliation
+
+- Human approval recorded: "Approved" for the recommended post-audit mini-epic.
+- Created `production/planning/post-audit-foundation-pivot-2026-07-03.md` as the approved direction brief.
+- Created `EPIC-VSLICE-MVP-015 Post-Audit Foundation Pivot and Reconciliation` as APPROVED / planning-control active.
+- Added approved ADR `docs/architecture/data-scenario-save-format-adr.md` for static definitions, scenario data, runtime state, and save-data boundaries.
+- Drafted READY-candidate child stories: `STORY-DATA-001`, `STORY-PLAYTEST-001`, and `STORY-GATE-001`.
+- Important sequencing note: no Unity implementation is authorized by EPIC-015 yet; `STORY-DATA-001` remains READY-candidate until explicitly promoted and the Unity README current-task pointer is updated.
+
 ## [2026-07-02] approval | STORY-QA-014 EPIC-013 playtest and closeout review
 
 - Human approval recorded: "Approved".

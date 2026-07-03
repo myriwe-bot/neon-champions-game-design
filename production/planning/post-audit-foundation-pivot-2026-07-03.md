@@ -45,6 +45,11 @@ Approved outputs:
 5. Determinism ADR/decision record.
 6. Hollow-gate and source-of-truth reconciliation sweep.
 
+
+## Sequencing decision
+
+Human decision recorded 2026-07-03: wait until the current EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and `STORY-DATA-001`. Do not supersede the currently READY tactical role story.
+
 ## Scope guard
 
 This pivot is not a content expansion and not a new feature buffet. It should reduce future drift and make the next differentiator experiments cheaper.

@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-03] decision | EPIC-015 sequencing after current epic
+
+- Human sequencing decision recorded: "Wait until the current epic completes, then pivot to this epic and that story."
+- Interpreted as: do not supersede current EPIC-014 / `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
+- After EPIC-014 completes, pivot to `EPIC-VSLICE-MVP-015 Post-Audit Foundation Pivot and Reconciliation` and promote `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep` through the normal READY + Unity current-task pointer workflow.
+- Updated EPIC-015, `STORY-DATA-001`, the post-audit pivot brief, and index discoverability to preserve this sequencing.
+
 ## [2026-07-03] approval | Post-audit foundation pivot and reconciliation
 
 - Human approval recorded: "Approved" for the recommended post-audit mini-epic.

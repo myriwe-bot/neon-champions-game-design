@@ -24,7 +24,7 @@ approval: pending
 
 ## Status
 
-READY-candidate / approval pending. This story is drafted from the approved post-audit pivot, but Unity implementation is not authorized until it is explicitly promoted to READY and the Unity current-task pointer is updated.
+READY-candidate / sequenced after current epic. Human sequencing decision recorded 2026-07-03: wait until current EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and promote this story for implementation. Unity implementation is not authorized until EPIC-014 is complete, this story is explicitly promoted to READY, and the Unity current-task pointer is updated.
 
 ## Story type
 
@@ -76,7 +76,7 @@ As a designer/system, I want the current playable scenario represented by valida
 - EPIC-015 approved.
 - ADR approved.
 - Unity README current-task pointer must name this story before implementation.
-- Current `STORY-TAC-ROLE-001` pointer/task sequencing must be resolved before this becomes the active Unity task.
+- Current `STORY-TAC-ROLE-001` / EPIC-014 must complete before this becomes the active Unity task. Human sequencing decision 2026-07-03: wait, then pivot to EPIC-015 and this story.
 
 ## Acceptance criteria
 
@@ -98,11 +98,11 @@ As a designer/system, I want the current playable scenario represented by valida
 
 ## Ambiguity Check
 
-Status: PASS for READY-candidate, FAIL for implementation until active-task sequencing is resolved.
+Status: PASS for READY-candidate, FAIL for implementation until EPIC-014 completes and this story is explicitly promoted.
 
-Open questions:
+Resolved sequencing decision:
 
-- Should this supersede the currently READY `STORY-TAC-ROLE-001` Unity task, or wait until that story lands?
+- Human decision 2026-07-03: do not supersede the currently READY `STORY-TAC-ROLE-001`; wait until the current epic completes, then pivot to EPIC-015 and this story.
 
 Assumptions:
 
@@ -111,7 +111,7 @@ Assumptions:
 
 Human-approved exceptions:
 
-- The mini-epic is approved, but this specific Unity implementation packet still requires explicit promotion to READY.
+- The mini-epic is approved, but this specific Unity implementation packet must wait until EPIC-014 completes and still requires explicit promotion to READY.
 
 ## Branch / PR requirements
 
@@ -131,8 +131,8 @@ Human-approved exceptions:
 - [x] Verification requirements are defined.
 - [ ] Human explicitly promotes this story to READY.
 - [ ] Unity current-task pointer is updated to this story.
-- [ ] Active task sequencing with `STORY-TAC-ROLE-001` is resolved.
+- [x] Active task sequencing with `STORY-TAC-ROLE-001` is resolved: wait until EPIC-014 completes, then pivot.
 
 ## Verdict
 
-READY-candidate / approval pending.
+READY-candidate / queued after EPIC-014.

@@ -10,7 +10,12 @@
 - Post-merge main Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28699834813
 - Marked `STORY-TAC-ROLE-001` DONE / merged and closed `EPIC-VSLICE-MVP-014` for the approved narrow tactical role/counterplay scope.
 - Activated the queued post-audit pivot sequence: `EPIC-VSLICE-MVP-015` is now active and `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep` is promoted to READY / approved.
-- Updated runnable prompt `production/sprints/codex-story-data-001.prompt.txt`; Unity README current-task pointer update is the next required gating step before Codex implementation.
+- Updated runnable prompt `production/sprints/codex-story-data-001.prompt.txt`.
+- Unity README current-task pointer PR #137 merged: https://github.com/myriwe-bot/neon-champions-unity/pull/137
+- Unity pointer commit: `c192f756373cd173aa54f9a9b1e452802e50e4bf`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28700100148
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28700269430
+- Design publish for activation commit passed: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28700088064
 
 ## [2026-07-03] approval | STORY-DATA-001 queued after EPIC-014
 

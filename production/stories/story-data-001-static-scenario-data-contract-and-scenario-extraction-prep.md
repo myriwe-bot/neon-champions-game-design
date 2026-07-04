@@ -24,7 +24,14 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-03: "Okay prepare next story and approve." Human sequencing decision recorded 2026-07-03: wait until EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and this story. EPIC-014 completed on 2026-07-04 via Unity PR #136, so this story is now promoted to the active Unity implementation packet once the Unity README current-task pointer is updated.
+READY / approved. Human approval recorded 2026-07-03: "Okay prepare next story and approve." Human sequencing decision recorded 2026-07-03: wait until EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and this story. EPIC-014 completed on 2026-07-04 via Unity PR #136, and Unity pointer PR #137 now names this story as the active implementation packet.
+
+Pointer evidence:
+
+- Unity pointer PR: https://github.com/myriwe-bot/neon-champions-unity/pull/137
+- Pointer merge commit: `c192f756373cd173aa54f9a9b1e452802e50e4bf`
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28700100148
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28700269430
 
 ## Story type
 
@@ -75,7 +82,7 @@ As a designer/system, I want the current playable scenario represented by valida
 
 - EPIC-015 approved.
 - ADR approved.
-- Unity README current-task pointer must name this story before implementation.
+- Unity README current-task pointer names this story via PR #137.
 - `STORY-TAC-ROLE-001` / EPIC-014 completed 2026-07-04 via Unity PR #136; sequencing blocker resolved.
 
 ## Acceptance criteria
@@ -111,7 +118,7 @@ Assumptions:
 
 Human-approved exceptions:
 
-- This story was human-approved as the next post-EPIC-014 packet and is now READY after EPIC-014 completion. Unity current-task pointer update remains required before Codex implementation.
+- This story was human-approved as the next post-EPIC-014 packet, is READY after EPIC-014 completion, and has Unity current-task pointer evidence via PR #137.
 
 ## Branch / PR requirements
 
@@ -130,7 +137,7 @@ Human-approved exceptions:
 - [x] Out-of-scope work is explicit.
 - [x] Verification requirements are defined.
 - [x] Human approved this story as the queued next packet after EPIC-014.
-- [ ] Unity current-task pointer is updated to this story.
+- [x] Unity current-task pointer is updated to this story.
 - [x] Active task sequencing with `STORY-TAC-ROLE-001` is resolved: EPIC-014 completed and this story is promoted.
 
 ## Runnable prompt
@@ -139,4 +146,4 @@ Runnable prompt: `production/sprints/codex-story-data-001.prompt.txt`. It keeps 
 
 ## Verdict
 
-READY / approved. Implement `STORY-DATA-001` only after the Unity README current-task pointer names this story.
+READY / approved. Unity README current-task pointer names `STORY-DATA-001`; Codex implementation is authorized through the checked-in prompt.

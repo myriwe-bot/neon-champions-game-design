@@ -1,11 +1,11 @@
 ---
 title: EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-04
 source_lore: []
 related:
   [
@@ -25,7 +25,14 @@ approval: approved
 
 ## Status
 
-APPROVED / first story READY. Human approval recorded 2026-07-02: "approved" for the recommended Tactical role counterplay and combat decision readability direction from `production/planning/next-implementation-direction-brief-2026-07-02.md`. `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke` is READY / approved as the current Unity implementation packet.
+DONE / closed for the approved narrow scope. Human approval recorded 2026-07-02: "approved" for the recommended Tactical role counterplay and combat decision readability direction from `production/planning/next-implementation-direction-brief-2026-07-02.md`. `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke` merged via Unity PR #136 on 2026-07-04.
+
+Closeout evidence:
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/136
+- Merge commit: `4ef4f10cc74f2f9b424de6d993502acb6c46cd1a`
+- Exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28698804629
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28699834813
 
 This epic is not direct implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -66,7 +73,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story                                                                                                                                          | Status | Type                                  | Depends On                                                           | Evidence                                                                 |
 | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke](../stories/story-tac-role-001-tactical-role-counterplay-readability-smoke.md) | READY  | Tactical UX + rules/readability smoke | EPIC-013 DONE; tactical AP/range/terrain/readability baseline exists | Runnable prompt `production/sprints/codex-story-tac-role-001.prompt.txt` |
+| [STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke](../stories/story-tac-role-001-tactical-role-counterplay-readability-smoke.md) | DONE / merged | Tactical UX + rules/readability smoke | EPIC-013 DONE; tactical AP/range/terrain/readability baseline exists | Unity PR #136; merge `4ef4f10`; post-merge CI passed |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -91,4 +98,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / first story READY. Implement only `STORY-TAC-ROLE-001` until another child story is explicitly approved.
+DONE / closed for the approved first-slice scope. EPIC-014 proved one readable tactical role/counterplay decision pattern through Sensor Lock / Marked target choice evidence. Pivot to approved EPIC-015 / `STORY-DATA-001` per the 2026-07-03 sequencing decision.

@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-07-02
+updated: 2026-07-04
 source_lore: []
 related:
   [
@@ -101,23 +101,21 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
+**Current READY / approved Unity implementation packet:** `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`.
 
-EPIC-013 Scenario Pressure and Victory Readability is DONE / closed. Human approval recorded 2026-07-02: "approved" for Tactical role counterplay and combat decision readability. EPIC-014 is APPROVED and `STORY-TAC-ROLE-001` is READY / approved as the next narrow Unity implementation packet.
+EPIC-014 Tactical Role Counterplay and Combat Decision Readability is DONE / closed after Unity PR #136. Human approval/sequencing recorded 2026-07-03 promotes EPIC-015 and `STORY-DATA-001` after EPIC-014 completion. `STORY-DATA-001` is READY / approved as the next Unity implementation packet.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-tac-role-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, and Unity README pointer agreement.
-
-Queued after EPIC-014: `production/sprints/codex-story-data-001.prompt.txt` is prepared as a guarded prompt for `STORY-DATA-001`, but it must not be run until EPIC-014 completes, the story is promoted to READY, and the Unity README pointer is updated.
+Current implementation prompt file: `production/sprints/codex-story-data-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS for implementation, EPIC-014 DONE/closed, and Unity README pointer agreement.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-tac-role-001.prompt.txt` for `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`.
+Use checked-in prompt file `production/sprints/codex-story-data-001.prompt.txt` for `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`.
 
-### Copy-safe STORY-TAC-ROLE-001 handoff
+### Copy-safe STORY-DATA-001 handoff
 
 Primary workspace-write run:
 
@@ -131,7 +129,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-tac-role-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-data-001.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 

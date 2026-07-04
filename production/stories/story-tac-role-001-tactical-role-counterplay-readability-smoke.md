@@ -1,11 +1,11 @@
 ---
 title: STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-04
 source_lore: []
 related:
   [
@@ -23,7 +23,16 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-02: "approved". This is the current narrow implementation packet for EPIC-014 after EPIC-013 closed.
+DONE / merged. Human approval recorded 2026-07-02: "approved". Unity PR #136 merged 2026-07-04 as `STORY-TAC-ROLE-001 role counterplay readability smoke (#136)`.
+
+Merge evidence:
+
+- PR: https://github.com/myriwe-bot/neon-champions-unity/pull/136
+- PR head: `cc8e726e7953efd67af7ed0a2a22ddb5c283edb7`
+- Merge commit: `4ef4f10cc74f2f9b424de6d993502acb6c46cd1a`
+- Exact-head Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28698804629
+- Post-merge main Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28699834813
+- Chosen pattern: existing state-backed Sensor Lock / Marked target choice, with before-choice, choice-available, action-result, and surrounding-loop-unbroken evidence.
 
 ## Story type
 
@@ -90,14 +99,14 @@ Required sources:
 
 ## Acceptance criteria
 
-- [ ] A single chosen tactical role/counterplay decision pattern is named in code/evidence and remains inside this story's scope.
-- [ ] Before the choice, the tactical UI/snapshot/evidence shows enough context for the player to understand the available decision.
-- [ ] The choice itself is visible in player-facing text/labels/event feed and explains why it matters.
-- [ ] Applying the choice produces a visible state-backed result or consequence; it is not screenshot-only text.
-- [ ] Invalid/unavailable/repeat/no-op use, if applicable to the chosen pattern, gives clear feedback and does not partially mutate tactical state.
-- [ ] Existing movement, attack, AP/Defend, retaliation, range/threat, tactical handoff, and surrounding loop smokes are not intentionally regressed.
-- [ ] Evidence under Unity `production/evidence/STORY-TAC-ROLE-001/` includes before-choice, choice-available, action-result, surrounding-loop-unbroken screenshots/notes, and omissions/deferred-work notes.
-- [ ] Exact-head Unity Foundation CI passes before merge.
+- [x] A single chosen tactical role/counterplay decision pattern is named in code/evidence and remains inside this story's scope.
+- [x] Before the choice, the tactical UI/snapshot/evidence shows enough context for the player to understand the available decision.
+- [x] The choice itself is visible in player-facing text/labels/event feed and explains why it matters.
+- [x] Applying the choice produces a visible state-backed result or consequence; it is not screenshot-only text.
+- [x] Invalid/unavailable/repeat/no-op use, if applicable to the chosen pattern, gives clear feedback and does not partially mutate tactical state.
+- [x] Existing movement, attack, AP/Defend, retaliation, range/threat, tactical handoff, and surrounding loop smokes are not intentionally regressed.
+- [x] Evidence under Unity `production/evidence/STORY-TAC-ROLE-001/` includes before-choice, choice-available, action-result, surrounding-loop-unbroken screenshots/notes, and omissions/deferred-work notes.
+- [x] Exact-head Unity Foundation CI passes before merge.
 
 ## Verification requirements
 
@@ -149,11 +158,11 @@ Human-approved answers recorded 2026-07-02:
 
 ## DONE gate
 
-- [ ] Implementation matches approved story scope.
-- [ ] Acceptance criteria pass.
-- [ ] Required verification evidence exists.
-- [ ] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
-- [ ] No unauthorized design or architecture decisions were introduced.
-- [ ] Omissions/stubs/mocks/deferred work are explicitly documented.
-- [ ] PR/code review is complete.
-- [ ] CI passes or human-approved exceptions are documented.
+- [x] Implementation matches approved story scope.
+- [x] Acceptance criteria pass.
+- [x] Required verification evidence exists.
+- [x] Required automated tests, validators, and PlayMode/smoke evidence pass, or human-approved exceptions are documented.
+- [x] No unauthorized design or architecture decisions were introduced.
+- [x] Omissions/stubs/mocks/deferred work are explicitly documented.
+- [x] PR/code review is complete.
+- [x] CI passes or human-approved exceptions are documented.

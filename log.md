@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-04] activation | STORY-DATA-001 active after STORY-TAC-ROLE-001 merge
+
+- Reviewed and merged Unity PR #136 for `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`: https://github.com/myriwe-bot/neon-champions-unity/pull/136
+- Merge commit: `4ef4f10cc74f2f9b424de6d993502acb6c46cd1a`.
+- Exact-head Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28698804629
+- Post-merge main Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28699834813
+- Marked `STORY-TAC-ROLE-001` DONE / merged and closed `EPIC-VSLICE-MVP-014` for the approved narrow tactical role/counterplay scope.
+- Activated the queued post-audit pivot sequence: `EPIC-VSLICE-MVP-015` is now active and `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep` is promoted to READY / approved.
+- Updated runnable prompt `production/sprints/codex-story-data-001.prompt.txt`; Unity README current-task pointer update is the next required gating step before Codex implementation.
+
 ## [2026-07-03] approval | STORY-DATA-001 queued after EPIC-014
 
 - Human approval recorded: "Okay prepare next story and approve".

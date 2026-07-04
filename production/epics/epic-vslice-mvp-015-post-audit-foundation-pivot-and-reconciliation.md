@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 source_lore: []
 related:
   [
@@ -32,7 +32,7 @@ approval: approved
 
 ## Status
 
-APPROVED / queued after EPIC-014. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. Human sequencing decision recorded 2026-07-03: wait until the current EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to this epic and `STORY-DATA-001`.
+APPROVED / active first story READY. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. Human sequencing decision recorded 2026-07-03: wait until EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to this epic and `STORY-DATA-001`. EPIC-014 completed 2026-07-04, so `STORY-DATA-001` is now promoted to READY pending Unity pointer update.
 
 This epic is not direct Unity implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -88,7 +88,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
-| [STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep](../stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md) | READY-candidate / approved + queued after EPIC-014 | Config/Data + Architecture | EPIC-014 complete; this epic; data/scenario/save ADR | Guarded prompt `production/sprints/codex-story-data-001.prompt.txt`; Unity diff/evidence when promoted |
+| [STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep](../stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md) | READY / approved | Config/Data + Architecture | EPIC-014 complete; this epic; data/scenario/save ADR | Runnable prompt `production/sprints/codex-story-data-001.prompt.txt`; Unity pointer PR pending |
 | [STORY-PLAYTEST-001 Playtest Journal and Gate Hook](../stories/story-playtest-001-playtest-journal-and-gate-hook.md) | READY-candidate | Playtest + Process | This epic | New journal template + gate wording |
 | [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | READY-candidate | Process/Tooling | This epic | Reconciliation report + targeted doc updates |
 | STORY-AI-001 Dumb Strategic AI Playtest Opponent | Draft | Logic/AI | Data/scenario contract preferred | Future story |
@@ -112,7 +112,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Audit-derived source requirements are explicit.
 - [x] Scope and out-of-scope are bounded.
 - [x] Child stories are identified.
-- [x] First implementation-facing story remains READY-candidate until EPIC-014 completes; sequencing decision is wait-then-pivot.
+- [x] First implementation-facing story promoted to READY after EPIC-014 completion; sequencing decision satisfied.
 - [x] Required test/evidence layers are known.
 - [x] No Unity implementation is authorized by the epic alone.
 
@@ -127,4 +127,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / queued. `STORY-DATA-001` is approved as the next post-EPIC-014 packet, with guarded prompt prepared. After EPIC-014 completes, pivot to this epic and promote `STORY-DATA-001` through the normal READY + Unity pointer workflow. Execute only through READY child stories.
+APPROVED / active first story READY. `STORY-DATA-001` is the next implementation packet after EPIC-014 completion. Execute only through READY child stories; the Unity pointer must name `STORY-DATA-001` before Codex implementation starts.

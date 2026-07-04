@@ -1,11 +1,11 @@
 ---
 title: STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-04
 source_lore: []
 related:
   [
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY-candidate / approved and queued after current epic. Human approval recorded 2026-07-03: "Okay prepare next story and approve." Human sequencing decision remains: wait until current EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and promote this story for implementation. Unity implementation is not authorized until EPIC-014 is complete, this story is explicitly promoted to READY, and the Unity current-task pointer is updated.
+READY / approved. Human approval recorded 2026-07-03: "Okay prepare next story and approve." Human sequencing decision recorded 2026-07-03: wait until EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and this story. EPIC-014 completed on 2026-07-04 via Unity PR #136, so this story is now promoted to the active Unity implementation packet once the Unity README current-task pointer is updated.
 
 ## Story type
 
@@ -76,7 +76,7 @@ As a designer/system, I want the current playable scenario represented by valida
 - EPIC-015 approved.
 - ADR approved.
 - Unity README current-task pointer must name this story before implementation.
-- Current `STORY-TAC-ROLE-001` / EPIC-014 must complete before this becomes the active Unity task. Human sequencing decision 2026-07-03: wait, then pivot to EPIC-015 and this story.
+- `STORY-TAC-ROLE-001` / EPIC-014 completed 2026-07-04 via Unity PR #136; sequencing blocker resolved.
 
 ## Acceptance criteria
 
@@ -98,11 +98,11 @@ As a designer/system, I want the current playable scenario represented by valida
 
 ## Ambiguity Check
 
-Status: PASS for approved READY-candidate, FAIL for implementation until EPIC-014 completes and this story is explicitly promoted to READY.
+Status: PASS for implementation after EPIC-014 completion and READY promotion.
 
 Resolved sequencing decision:
 
-- Human decision 2026-07-03: do not supersede the currently READY `STORY-TAC-ROLE-001`; wait until the current epic completes, then pivot to EPIC-015 and this story.
+- Human decision 2026-07-03: do not supersede `STORY-TAC-ROLE-001`; after EPIC-014 completes, pivot to EPIC-015 and this story. EPIC-014 completion verified 2026-07-04.
 
 Assumptions:
 
@@ -111,7 +111,7 @@ Assumptions:
 
 Human-approved exceptions:
 
-- This story is human-approved as the next post-EPIC-014 packet, but must wait until EPIC-014 completes and still requires explicit promotion to READY plus Unity current-task pointer update.
+- This story was human-approved as the next post-EPIC-014 packet and is now READY after EPIC-014 completion. Unity current-task pointer update remains required before Codex implementation.
 
 ## Branch / PR requirements
 
@@ -131,12 +131,12 @@ Human-approved exceptions:
 - [x] Verification requirements are defined.
 - [x] Human approved this story as the queued next packet after EPIC-014.
 - [ ] Unity current-task pointer is updated to this story.
-- [x] Active task sequencing with `STORY-TAC-ROLE-001` is resolved: wait until EPIC-014 completes, then pivot.
+- [x] Active task sequencing with `STORY-TAC-ROLE-001` is resolved: EPIC-014 completed and this story is promoted.
 
-## Guarded prompt
+## Runnable prompt
 
-Prepared guarded prompt: `production/sprints/codex-story-data-001.prompt.txt`. It is not runnable until EPIC-014 completes, this story is promoted to `status: ready`, and the Unity README current-task pointer names `STORY-DATA-001`.
+Runnable prompt: `production/sprints/codex-story-data-001.prompt.txt`. It keeps preflight guards for `status: ready`, `approval: approved`, Ambiguity Check PASS, EPIC-014 DONE/closed, and Unity README pointer agreement.
 
 ## Verdict
 
-READY-candidate / approved and queued after EPIC-014.
+READY / approved. Implement `STORY-DATA-001` only after the Unity README current-task pointer names this story.

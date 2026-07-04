@@ -1,14 +1,12 @@
-# STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep — GUARDED
+# STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep
 
 You are Codex working in the Neon Champions Unity repository.
 
 ## Current state
 
-This prompt is prepared in advance and is intentionally guarded.
+`STORY-DATA-001` is READY / approved as the active post-EPIC-014 implementation packet. The prompt remains preflight-guarded so stale checkouts stop safely.
 
-`STORY-DATA-001` is approved as the queued next packet after EPIC-014, but it is not authorized for Unity implementation yet.
-
-## Preflight guard — stop unless all are true
+## Preflight guard — stop if any fail
 
 Before changing Unity code, verify all of these from your local checkouts:
 
@@ -16,7 +14,7 @@ Before changing Unity code, verify all of these from your local checkouts:
 2. That story frontmatter says exactly:
    - `status: ready`
    - `approval: approved`
-3. The story Ambiguity Check says implementation is allowed / PASS for implementation, not merely READY-candidate.
+3. The story Ambiguity Check says `Status: PASS for implementation`.
 4. `EPIC-VSLICE-MVP-014` and `STORY-TAC-ROLE-001` are DONE/closed in the design repo.
 5. In the Unity repo, `README.md` current task pointer names `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`.
 6. Your Unity branch is not `main` after branch creation.
@@ -33,7 +31,7 @@ Unity repo on Windows:
 
 You must implement in the Unity repo, not the design repo.
 
-## Required reading once preflight passes
+## Required reading
 
 Design/control:
 - `production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md`
@@ -51,7 +49,7 @@ Unity:
 - `StrategicMapPresentationSmokeScenario` and related scenario/runtime factories
 - Existing strategic/tactical PlayMode smoke and evidence-generation code
 
-## Branch and PR after activation
+## Branch and PR
 
 Create and work on:
 `story/STORY-DATA-001-static-scenario-data-contract`
@@ -62,7 +60,7 @@ PR title:
 Required evidence path:
 `production/evidence/STORY-DATA-001/`
 
-## Authorized scope after activation
+## Authorized scope
 
 - Inspect current Unity scenario construction and define the smallest static/scenario data contract needed to represent the current playable scenario.
 - Add one checked-in sample scenario data file for the current smoke/playable scenario.
@@ -85,7 +83,7 @@ Do not implement:
 
 If a tempting improvement is outside scope, document it as deferred work and do not code it.
 
-## Verification after activation
+## Verification
 
 Run what is available locally and record exact commands/results in PR evidence:
 
@@ -97,7 +95,7 @@ Run what is available locally and record exact commands/results in PR evidence:
 
 The GitHub PR must get exact-head Unity Foundation CI before merge.
 
-## Evidence requirements after activation
+## Evidence requirements
 
 Create `production/evidence/STORY-DATA-001/` with at minimum:
 
@@ -107,7 +105,7 @@ Create `production/evidence/STORY-DATA-001/` with at minimum:
 
 Generated evidence must be focused on this story. Do not commit broad unrelated smoke-suite artifacts.
 
-## Git behavior after activation
+## Git behavior
 
 - Commit the implementation on `story/STORY-DATA-001-static-scenario-data-contract`.
 - Push the branch to remote.

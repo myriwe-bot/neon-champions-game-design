@@ -103,7 +103,7 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved design/control packet:** `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`.
+**Current design/control packet in review:** `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`.
 
 There is no current READY / approved Unity runtime implementation packet after `STORY-DATA-001` merged.
 
@@ -113,7 +113,7 @@ There is no current READY / approved Unity runtime implementation packet after `
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-playtest-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-DATA-001` DONE/merged, and no Unity runtime edits.
+Current implementation branch: `story/STORY-PLAYTEST-001-playtest-journal-gate-hook`. The prompt file remains at `production/sprints/codex-story-playtest-001.prompt.txt` as the source handoff used for the branch; do not rerun it unless the branch/PR is abandoned or reset.
 
 ## Current READY implementation prompt
 

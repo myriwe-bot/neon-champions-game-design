@@ -5,7 +5,7 @@ status: draft
 phase: production
 owner: shared
 created: 2026-05-22
-updated: 2026-05-25
+updated: 2026-07-05
 source_lore: []
 related:
   [
@@ -88,7 +88,7 @@ Use `docs/architecture/ci-build-automation.md` for CI evidence and merge-blockin
 - Screenshot/video evidence:
 - Performance budget or N/A:
 - CI evidence:
-- Playtest evidence, if applicable:
+- Playtest evidence, if applicable: link `production/playtests/playtest-journal.md#...`, or state `N/A` with reason.
 - TDD evidence required? Yes / No / N/A with reason:
 - Automation deferred? No, or explain approved temporary exception:
 
@@ -131,6 +131,8 @@ If status is FAIL, this story is not READY.
 - Required omissions section:
 
 PR must explicitly list known omissions, stubs, mocks, assumptions, deferred work, or state `No known omissions`.
+
+Closeout/playtest/readability/UX/visual-feel stories must preserve exact human complaints in quotes and link the journal entry used as evidence, or explicitly state why no playtest evidence applies.
 
 ## Story readiness gate
 

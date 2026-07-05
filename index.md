@@ -165,6 +165,10 @@
 - [[production/spikes/spike-001-unity-project-ci-foundation]] — approved first Unity technical foundation spike.
 - [[production/checklists/codex-pr-review-checklist]] — future implementation PR review checklist for Codex/agents.
 
+## Production Evidence and Playtests
+
+- [[production/playtests/playtest-journal]] — active playtest journal template and exact-complaint preservation index.
+
 ## Architecture
 
 - [[docs/architecture/control-manifest]] — agent implementation rules scaffold.
@@ -195,5 +199,5 @@
 - [[production/planning/post-audit-foundation-pivot-2026-07-03]] — APPROVED post-audit foundation pivot brief.
 - [[production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation]] — APPROVED / active post-audit foundation/reconciliation epic.
 - [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — DONE / merged first data/scenario extraction packet.
-- [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — READY / approved playtest journal/gate hook; runnable design-control prompt prepared.
+- [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — REVIEW playtest journal/gate hook; design-control PR pending.
 - [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — READY-candidate hollow-gate/source-truth reconciliation.

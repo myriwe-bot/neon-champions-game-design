@@ -5,7 +5,7 @@ status: draft
 phase: concept
 owner: shared
 created: 2026-05-22
-updated: 2026-05-22
+updated: 2026-07-05
 source_lore: []
 related: [production/gates/review-mode]
 approval: pending
@@ -23,6 +23,19 @@ approval: pending
 ## Required checks
 
 - [ ] ...
+
+## Playtest / subjective evidence
+
+Required for closeout, playability, readability, UX/visual/feel, or fun-verdict gates.
+
+- Journal entry: `production/playtests/playtest-journal.md#...` or `N/A — <reason>`
+- Build / commit / PR tested:
+- Scenario / mode tested:
+- Exact preserved complaints, if any:
+  - "..."
+- Fun/readability verdict: KEEP / REVISE / REJECT / RETEST / N/A
+- Gate consequence:
+
 
 ## Blockers
 

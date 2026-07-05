@@ -1,11 +1,11 @@
 ---
 title: STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-07-05
 source_lore: []
 related:
   [
@@ -24,7 +24,14 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-03: "Okay prepare next story and approve." Human sequencing decision recorded 2026-07-03: wait until EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and this story. EPIC-014 completed on 2026-07-04 via Unity PR #136, and Unity pointer PR #137 now names this story as the active implementation packet.
+DONE / merged. Unity PR #138 merged 2026-07-05 after exact-head PR CI and post-merge `main` CI passed. Human approval recorded 2026-07-03: "Okay prepare next story and approve." Human sequencing decision recorded 2026-07-03: wait until EPIC-014 / `STORY-TAC-ROLE-001` completes, then pivot to EPIC-015 and this story.
+
+Implementation evidence:
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/138
+- Merge commit: `008b2df7e6a499172c5cbd8144348f78e601dc7a`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28735640226
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28736009022
 
 Pointer evidence:
 
@@ -146,4 +153,4 @@ Runnable prompt: `production/sprints/codex-story-data-001.prompt.txt`. It keeps 
 
 ## Verdict
 
-READY / approved. Unity README current-task pointer names `STORY-DATA-001`; Codex implementation is authorized through the checked-in prompt.
+DONE / merged. `STORY-DATA-001` landed the first checked-in scenario data contract/import path and validator hook through Unity PR #138.

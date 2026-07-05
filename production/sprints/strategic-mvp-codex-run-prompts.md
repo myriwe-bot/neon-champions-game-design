@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-07-04
+updated: 2026-07-05
 source_lore: []
 related:
   [
@@ -93,6 +93,8 @@ related:
     production/stories/story-qa-014-epic-013-playtest-and-closeout-review,
     production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability,
     production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke,
+    production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep,
+    production/stories/story-playtest-001-playtest-journal-and-gate-hook,
   ]
 approval: approved
 ---
@@ -101,21 +103,25 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`.
+**Current READY / approved design/control packet:** `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`.
 
-EPIC-014 Tactical Role Counterplay and Combat Decision Readability is DONE / closed after Unity PR #136. Human approval/sequencing recorded 2026-07-03 promotes EPIC-015 and `STORY-DATA-001` after EPIC-014 completion. `STORY-DATA-001` is READY / approved as the next Unity implementation packet.
+There is no current READY / approved Unity runtime implementation packet after `STORY-DATA-001` merged.
+
+`STORY-DATA-001` is DONE / merged through Unity PR #138. Human delegation on 2026-07-05 promotes the next EPIC-015 child, `STORY-PLAYTEST-001`, to READY / approved as a design/control-only packet. It must not modify Unity runtime code.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-data-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS for implementation, EPIC-014 DONE/closed, and Unity README pointer agreement.
+Current implementation prompt file: `production/sprints/codex-story-playtest-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-DATA-001` DONE/merged, and no Unity runtime edits.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-data-001.prompt.txt` for `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`.
+Use checked-in prompt file `production/sprints/codex-story-playtest-001.prompt.txt` for `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`.
 
-### Copy-safe STORY-DATA-001 handoff
+This is a design/control repo packet. It creates/updates playtest journal and gate documents only; it must not modify Unity runtime code.
+
+### Copy-safe STORY-PLAYTEST-001 handoff
 
 Primary workspace-write run:
 
@@ -129,7 +135,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-data-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-playtest-001.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 

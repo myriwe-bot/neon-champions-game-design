@@ -1,11 +1,11 @@
 ---
 title: STORY-PLAYTEST-001 Playtest Journal and Gate Hook
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-05
 source_lore: []
 related:
   [
@@ -14,14 +14,14 @@ related:
     production/gates/review-mode,
     production/stories/story-template,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-PLAYTEST-001 Playtest Journal and Gate Hook
 
 ## Status
 
-READY-candidate / approval pending.
+READY / approved. Human delegation recorded 2026-07-05 from the merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." This promotes the next EPIC-015 child packet after `STORY-DATA-001` merged.
 
 ## Story type
 
@@ -60,6 +60,10 @@ As the project owner, I want playtest feel notes captured as first-class evidenc
 
 Status: PASS.
 
+## Runnable prompt
+
+Runnable prompt: `production/sprints/codex-story-playtest-001.prompt.txt`. This is a design/control repo packet only; it must not modify Unity runtime code.
+
 ## Verdict
 
-READY-candidate / approval pending.
+READY / approved. Prepare the playtest journal and gate hook in the design/control repo only.

@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-07-05] merge | STORY-DATA-001 merged and STORY-PLAYTEST-001 prepared
+
+- Reviewed and merged Unity PR #138 for `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`: https://github.com/myriwe-bot/neon-champions-unity/pull/138
+- Merge commit: `008b2df7e6a499172c5cbd8144348f78e601dc7a`.
+- Exact-head PR Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28735640226
+- Post-merge main Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28736009022
+- Marked `STORY-DATA-001` DONE / merged and recorded the first scenario data contract/import path as complete.
+- Promoted `STORY-PLAYTEST-001 Playtest Journal and Gate Hook` to READY / approved as the next EPIC-015 design/control packet.
+- Added runnable prompt `production/sprints/codex-story-playtest-001.prompt.txt`.
+- No Unity runtime task is active; the Unity README current-task pointer still needs to be cleared through a docs-only PR and recorded here after CI passes.
+
 ## [2026-07-04] activation | STORY-DATA-001 active after STORY-TAC-ROLE-001 merge
 
 - Reviewed and merged Unity PR #136 for `STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke`: https://github.com/myriwe-bot/neon-champions-unity/pull/136

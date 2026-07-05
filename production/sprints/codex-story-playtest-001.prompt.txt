@@ -1,0 +1,104 @@
+# STORY-PLAYTEST-001 Playtest Journal and Gate Hook
+
+You are Codex working in the Neon Champions game-design/control repository.
+
+## Current state
+
+`STORY-PLAYTEST-001` is READY / approved as the next EPIC-015 design/control packet after `STORY-DATA-001` merged. This packet is process/documentation work only.
+
+## Preflight guard — stop if any fail
+
+Before changing files, verify all of these from your local checkouts:
+
+1. In the design repo, `production/stories/story-playtest-001-playtest-journal-and-gate-hook.md` exists.
+2. That story frontmatter says exactly:
+   - `status: ready`
+   - `approval: approved`
+3. The story Ambiguity Check says `Status: PASS`.
+4. `production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md` says DONE / merged and links Unity PR #138.
+5. Your design repo branch is not `main` after branch creation.
+
+If any preflight check fails, stop and report the blocker. Do not implement from chat memory.
+
+## Repositories and paths
+
+Design/control repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Implement only in the design/control repo. Do not modify Unity runtime code, tests, scenes, prefabs, assets, packages, or ProjectSettings.
+
+## Required reading
+
+Design/control:
+- `production/stories/story-playtest-001-playtest-journal-and-gate-hook.md`
+- `production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation.md`
+- `production/planning/post-audit-foundation-pivot-2026-07-03.md`
+- `production/gates/review-mode.md`
+- `production/stories/story-template.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/control-manifest.md`
+
+## Branch and PR
+
+Create and work on:
+`story/STORY-PLAYTEST-001-playtest-journal-gate-hook`
+
+PR title:
+`STORY-PLAYTEST-001 playtest journal and gate hook`
+
+## Authorized scope
+
+- Create `production/playtests/playtest-journal.md` with a reusable dated-entry template.
+- Add gate wording requiring closeout stories to link playtest notes or state why playtest evidence is N/A.
+- Preserve exact human complaints as acceptance drivers.
+- Update index/log/run-prompt discoverability as needed.
+
+## Strict exclusions
+
+Do not implement:
+- Unity runtime, tests, scenes, prefabs, assets, packages, or ProjectSettings;
+- analytics tooling;
+- external playtester recruitment;
+- long survey design;
+- broad GDD rewrites;
+- new mechanics, content, balance, lore, UI, AI, save/load, or data-schema changes.
+
+If a tempting improvement is outside scope, document it as deferred and do not make the change.
+
+## Verification
+
+Run what is available locally and record exact commands/results in the PR body:
+
+- `git diff --check`
+- `npm run build`
+
+## Evidence / output requirements
+
+The PR body must include:
+
+- story ID and source story path;
+- files changed;
+- exact checks run and results;
+- confirmation that Unity runtime was not changed;
+- omissions/deferred work or `No known omissions`.
+
+## Git behavior
+
+- Commit the design/control changes on `story/STORY-PLAYTEST-001-playtest-journal-gate-hook`.
+- Push the branch to remote.
+- Open or update the GitHub PR.
+- If you stop before pushing, clearly state why and give the exact local state.
+
+## Final response requirements
+
+Report:
+
+- journal/gate artifacts created or updated;
+- files changed;
+- tests/commands run and results;
+- PR URL;
+- omissions/deferred work;
+- whether the branch was pushed.

@@ -1,7 +1,7 @@
 ---
 title: Hollow Gates and Source-Truth Reconciliation - 2026-07-05
 type: qa
-status: draft
+status: approved
 phase: production
 owner: shared
 created: 2026-07-05
@@ -19,7 +19,7 @@ related:
     design/registry/terms,
     design/world/faction-game-briefs,
   ]
-approval: pending
+approval: approved
 ---
 
 # Hollow Gates and Source-Truth Reconciliation - 2026-07-05

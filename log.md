@@ -11,7 +11,11 @@
 - Marked `STORY-DATA-001` DONE / merged and recorded the first scenario data contract/import path as complete.
 - Promoted `STORY-PLAYTEST-001 Playtest Journal and Gate Hook` to READY / approved as the next EPIC-015 design/control packet.
 - Added runnable prompt `production/sprints/codex-story-playtest-001.prompt.txt`.
-- No Unity runtime task is active; the Unity README current-task pointer still needs to be cleared through a docs-only PR and recorded here after CI passes.
+- Unity README current-task pointer cleared via PR #139: https://github.com/myriwe-bot/neon-champions-unity/pull/139
+- Pointer cleanup commit: `bbcb742c3d9c6ab7a620aa99b3db18f2513946d8`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28736305607
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28736476717
+- No Unity runtime task is active; next approved packet is design/control-only `STORY-PLAYTEST-001`.
 
 ## [2026-07-04] activation | STORY-DATA-001 active after STORY-TAC-ROLE-001 merge
 

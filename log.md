@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-05] implementation | STORY-DETERMINISM-001 determinism and RNG ADR
+
+- Implemented `STORY-DETERMINISM-001 Determinism and RNG Decision Record` in design/control branch `story/STORY-DETERMINISM-001-determinism-rng-adr`.
+- Created `docs/architecture/determinism-and-rng-adr.md` with near-term MVP policy: deterministic-by-default; future numeric randomness requires an explicit seeded RNG service story.
+- Recorded the boundary between dirty/source-tagged uncertainty and numeric randomness, plus stop conditions for random damage, randomized rewards, procedural generation, AI randomness, hidden-info rolls, and save/replay-affecting random behavior.
+- Recorded testing, replay/debug, save, data/scenario, and CI implications, with compact follow-up stories for seeded RNG, replay/debug, dirty information, and random table validation if later approved.
+- Read-only Unity scan found no obvious `UnityEngine.Random`, `System.Random`, `Random.Range`, `RNG`, or `random` usage under `Assets`, `Packages`, or `ProjectSettings`.
+- Unity runtime scope: no Unity repo code, tests, scenes, prefabs, assets, packages, or ProjectSettings changes authorized or made.
+
 ## [2026-07-05] merge | STORY-GATE-001 merged and STORY-DETERMINISM-001 prepared
 
 - Reviewed and merged game-design PR #2 for `STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation`: https://github.com/myriwe-bot/neon-champions-game-design/pull/2

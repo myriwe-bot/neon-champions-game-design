@@ -1,7 +1,7 @@
 ---
 title: STORY-DETERMINISM-001 Determinism and RNG Decision Record
 type: story
-status: ready
+status: review
 phase: production
 owner: shared
 created: 2026-07-05
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human delegation recorded 2026-07-05 after `STORY-GATE-001` merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." This promotes the next EPIC-015 child packet after the hollow-gate/source-truth reconciliation landed.
+REVIEW. Human delegation recorded 2026-07-05 after `STORY-GATE-001` merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." This promoted the next EPIC-015 child packet after the hollow-gate/source-truth reconciliation landed. Implementation branch `story/STORY-DETERMINISM-001-determinism-rng-adr` created the ADR and awaits PR review/merge.
 
 ## Story type
 
@@ -63,12 +63,12 @@ As a designer and implementer, I need a clear determinism/RNG stance, so future 
 
 ## Acceptance criteria
 
-- [ ] `docs/architecture/determinism-and-rng-adr.md` exists and is indexed.
-- [ ] ADR chooses either deterministic-by-default or seeded RNG service for near-term MVP work.
-- [ ] ADR explains how dirty/source-tagged uncertainty differs from numeric randomness.
-- [ ] ADR states stop conditions for future stories that want random damage, AI randomness, procedural generation, hidden info rolls, or randomized rewards.
-- [ ] ADR records test/save/replay implications.
-- [ ] Follow-up stories are listed compactly if needed.
+- [x] `docs/architecture/determinism-and-rng-adr.md` exists and is indexed.
+- [x] ADR chooses either deterministic-by-default or seeded RNG service for near-term MVP work.
+- [x] ADR explains how dirty/source-tagged uncertainty differs from numeric randomness.
+- [x] ADR states stop conditions for future stories that want random damage, AI randomness, procedural generation, hidden info rolls, or randomized rewards.
+- [x] ADR records test/save/replay implications.
+- [x] Follow-up stories are listed compactly if needed.
 
 ## Verification requirements
 
@@ -92,4 +92,4 @@ Runnable prompt: `production/sprints/codex-story-determinism-001.prompt.txt`. Th
 
 ## Verdict
 
-READY / approved. Prepare the determinism/RNG ADR in the design/control repo only.
+REVIEW. Determinism/RNG ADR prepared in the design/control repo only; PR review and merge remain.

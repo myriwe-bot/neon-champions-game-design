@@ -95,6 +95,7 @@ related:
     production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke,
     production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep,
     production/stories/story-playtest-001-playtest-journal-and-gate-hook,
+    production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation,
   ]
 approval: approved
 ---
@@ -103,25 +104,25 @@ approval: approved
 
 ## Recommended mode
 
-**Current design/control packet in review:** `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`.
+**Current READY / approved design/control packet:** `STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation`.
 
 There is no current READY / approved Unity runtime implementation packet after `STORY-DATA-001` merged.
 
-`STORY-DATA-001` is DONE / merged through Unity PR #138. Human delegation on 2026-07-05 promotes the next EPIC-015 child, `STORY-PLAYTEST-001`, to READY / approved as a design/control-only packet. It must not modify Unity runtime code.
+`STORY-PLAYTEST-001` is DONE / merged through game-design PR #1. Human delegation on 2026-07-05 promotes the next EPIC-015 child, `STORY-GATE-001`, to READY / approved as a design/control-only packet. It must not modify Unity runtime code.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation branch: `story/STORY-PLAYTEST-001-playtest-journal-gate-hook`. The prompt file remains at `production/sprints/codex-story-playtest-001.prompt.txt` as the source handoff used for the branch; do not rerun it unless the branch/PR is abandoned or reset.
+Current implementation prompt file: `production/sprints/codex-story-gate-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-PLAYTEST-001` DONE/merged, and no Unity runtime edits.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-playtest-001.prompt.txt` for `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`.
+Use checked-in prompt file `production/sprints/codex-story-gate-001.prompt.txt` for `STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation`.
 
-This is a design/control repo packet. It creates/updates playtest journal and gate documents only; it must not modify Unity runtime code.
+This is a design/control repo packet. It creates a reconciliation report and patches low-risk control/source-truth drift only; it must not modify Unity runtime code.
 
-### Copy-safe STORY-PLAYTEST-001 handoff
+### Copy-safe STORY-GATE-001 handoff
 
 Primary workspace-write run:
 
@@ -135,7 +136,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-playtest-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-gate-001.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 

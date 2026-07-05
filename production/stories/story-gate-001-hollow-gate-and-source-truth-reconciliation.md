@@ -1,11 +1,11 @@
 ---
 title: STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-07-05
 source_lore: []
 related:
   [
@@ -17,14 +17,14 @@ related:
     design/world/faction-game-briefs,
     docs/architecture/control-manifest,
   ]
-approval: pending
+approval: approved
 ---
 
 # STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation
 
 ## Status
 
-READY-candidate / approval pending.
+READY / approved. Human approval recorded 2026-07-05 via instruction after `STORY-PLAYTEST-001` merge: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." This promotes the next EPIC-015 child packet after the playtest journal/gate hook landed.
 
 ## Story type
 
@@ -36,10 +36,11 @@ As a producer/reviewer, I want hollow control surfaces named and either filled, 
 
 ## In scope
 
-- Create a reconciliation report listing hollow gates/templates/statuses found by the audit.
+- Create `production/reconciliation/hollow-gates-and-source-truth-2026-07-05.md` listing hollow gates/templates/statuses found by the audit.
 - Classify each as `fill`, `demote`, `delete`, or `needs owner decision`.
 - Patch at least one low-risk source-truth drift item in the design repo.
 - Add rule: no READY story may claim registry/validator coverage while the referenced file/check is a stub.
+- Update index/log/run-prompt discoverability.
 
 ## Out of scope
 
@@ -64,6 +65,16 @@ As a producer/reviewer, I want hollow control surfaces named and either filled, 
 
 Status: PASS.
 
+Approved assumptions / constraints:
+
+- This is design/control repository work only.
+- Draft/pending/empty sources such as `design/world/faction-game-briefs.md` and the registry YAML stubs are in scope as hollow surfaces to classify; Codex must not treat them as approved content authority.
+- At least one low-risk correction is required, but broad GDD rewrites, world canon approvals, and Unity validator implementation remain out of scope.
+
+## Runnable prompt
+
+Runnable prompt: `production/sprints/codex-story-gate-001.prompt.txt`. This is a design/control repo packet only; it must not modify Unity runtime code.
+
 ## Verdict
 
-READY-candidate / approval pending.
+READY / approved. Prepare the hollow-gate/source-truth reconciliation report and one or more low-risk design-control drift fixes only.

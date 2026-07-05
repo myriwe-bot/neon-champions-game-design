@@ -1,7 +1,7 @@
 ---
 title: STORY-PLAYTEST-001 Playtest Journal and Gate Hook
 type: story
-status: review
+status: done
 phase: production
 owner: shared
 created: 2026-07-03
@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-REVIEW. Human approval recorded 2026-07-05: "Approved". Implementation branch `story/STORY-PLAYTEST-001-playtest-journal-gate-hook` creates the journal and gate hook for review; story is not DONE until PR review/CI/merge complete. Earlier delegation recorded 2026-07-05 from the merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet."
+DONE / merged. Game-design PR #1 merged 2026-07-05 as `40e75d89cd6b3ec8b973862595a3737f966bdfe0`; post-merge publish CI passed at https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28739597588. Human approval recorded 2026-07-05: "Approved". Earlier delegation recorded 2026-07-05 from the merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet."
 
 ## Story type
 
@@ -70,6 +70,13 @@ Runnable prompt: `production/sprints/codex-story-playtest-001.prompt.txt`. This 
 - Gate hook docs: `production/gates/gate-template.md`, `production/gates/review-mode.md`, and `production/stories/story-template.md`.
 - Unity runtime scope: N/A; this packet is design/control only.
 
+## DONE evidence
+
+- Game-design PR: https://github.com/myriwe-bot/neon-champions-game-design/pull/1
+- Merge commit: `40e75d89cd6b3ec8b973862595a3737f966bdfe0`
+- Post-merge publish CI: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28739597588
+- Local verification before merge: `git diff origin/main...HEAD --check`; `npm run build` parsed 175 Markdown files and emitted 483 files.
+
 ## Verdict
 
-REVIEW. Scope implemented in the design/control repo; awaiting PR review/CI/merge before DONE.
+DONE / merged. Playtest journal and closeout/playtest gate hooks are available in the design/control repo.

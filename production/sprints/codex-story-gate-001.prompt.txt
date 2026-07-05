@@ -1,0 +1,118 @@
+# STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation
+
+You are Codex working in the Neon Champions game-design/control repository.
+
+## Current state
+
+`STORY-GATE-001` is READY / approved as the next EPIC-015 design/control packet after `STORY-PLAYTEST-001` merged. This packet is process/documentation work only.
+
+## Preflight guard — stop if any fail
+
+Before changing files, verify all of these from your local checkouts:
+
+1. In the design repo, `production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md` exists.
+2. That story frontmatter says exactly:
+   - `status: ready`
+   - `approval: approved`
+3. The story Ambiguity Check says `Status: PASS`.
+4. `production/stories/story-playtest-001-playtest-journal-and-gate-hook.md` says DONE / merged and links game-design PR #1.
+5. Your design repo branch is not `main` after branch creation.
+
+If any preflight check fails, stop and report the blocker. Do not implement from chat memory.
+
+## Repositories and paths
+
+Design/control repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Implement only in the design/control repo. Do not modify Unity runtime code, tests, scenes, prefabs, assets, packages, or ProjectSettings.
+
+## Required reading
+
+Design/control:
+- `production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md`
+- `production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation.md`
+- `production/planning/post-audit-foundation-pivot-2026-07-03.md`
+- `production/playtests/playtest-journal.md`
+- `production/gates/review-mode.md`
+- `production/gates/gate-template.md`
+- `production/stories/story-template.md`
+- `design/registry/entities.yaml`
+- `design/registry/formulas.yaml`
+- `design/registry/terms.yaml`
+- `design/world/faction-game-briefs.md`
+- `docs/architecture/control-manifest.md`
+
+## Branch and PR
+
+Create and work on:
+`story/STORY-GATE-001-hollow-gate-source-truth`
+
+PR title:
+`STORY-GATE-001 hollow gate and source-truth reconciliation`
+
+## Authorized scope
+
+- Create `production/reconciliation/hollow-gates-and-source-truth-2026-07-05.md`.
+- Classify these known hollow/control surfaces at minimum:
+  - empty registry YAML files: `design/registry/entities.yaml`, `formulas.yaml`, `terms.yaml`;
+  - draft faction game brief bridge: `design/world/faction-game-briefs.md`;
+  - placeholder/always-green validator risk called out by the audit;
+  - draft-source exceptions used by implementation stories;
+  - stale index/status claims found during the pass.
+- Use classifications: `fill`, `demote`, `delete`, or `needs owner decision`.
+- Patch at least one low-risk design-control drift item.
+- Add or tighten a rule that no READY story may claim registry/validator coverage while the referenced file/check is a stub.
+- Update index/log/run-prompt discoverability as needed.
+
+## Strict exclusions
+
+Do not implement:
+- Unity runtime, tests, scenes, prefabs, assets, packages, ProjectSettings, or validator code;
+- broad GDD rewrites;
+- world-repo canon approval;
+- final faction canon, campaign canon, or hard-canon setting decisions;
+- resolution of every open question;
+- new mechanics, content, balance, lore, UI, AI, save/load, or data-schema changes.
+
+If a tempting improvement is outside scope, classify it or list it as a follow-up owner decision; do not make the broad change.
+
+## Verification
+
+Run what is available locally and record exact commands/results in the PR body:
+
+- `git diff --check`
+- `npm run build`
+
+## Evidence / output requirements
+
+The PR body must include:
+
+- story ID and source story path;
+- reconciliation report path;
+- files changed;
+- exact checks run and results;
+- confirmation that Unity runtime was not changed;
+- omissions/deferred work or `No known omissions`.
+
+## Git behavior
+
+- Commit the design/control changes on `story/STORY-GATE-001-hollow-gate-source-truth`.
+- Push the branch to remote.
+- Open or update the GitHub PR.
+- If you stop before pushing, clearly state why and give the exact local state.
+
+## Final response requirements
+
+Report:
+
+- reconciliation report path and classifications added;
+- low-risk drift fix made;
+- files changed;
+- tests/commands run and results;
+- PR URL;
+- omissions/deferred work;
+- whether the branch was pushed.

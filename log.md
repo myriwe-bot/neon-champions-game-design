@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-05] merge | STORY-PLAYTEST-001 merged and STORY-GATE-001 prepared
+
+- Reviewed and merged game-design PR #1 for `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`: https://github.com/myriwe-bot/neon-champions-game-design/pull/1
+- Merge commit: `40e75d89cd6b3ec8b973862595a3737f966bdfe0`.
+- Post-merge publish CI: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28739597588
+- Marked `STORY-PLAYTEST-001` DONE / merged.
+- Promoted `STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation` to READY / approved as the next EPIC-015 design/control packet.
+- Added runnable prompt `production/sprints/codex-story-gate-001.prompt.txt`.
+- No Unity runtime task is active; next approved packet is design/control-only `STORY-GATE-001`.
+
 ## [2026-07-05] implementation | STORY-PLAYTEST-001 playtest journal and gate hook
 
 - Human approval recorded: "Approved".

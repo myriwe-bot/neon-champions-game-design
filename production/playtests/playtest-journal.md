@@ -50,19 +50,19 @@ Copy this section for each playtest.
 
 ### What dragged
 
-- 
+-
 
 ### What surprised
 
-- 
+-
 
 ### What confused
 
-- 
+-
 
 ### What felt off-fiction
 
-- 
+-
 
 ### Exact complaints to preserve
 

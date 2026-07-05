@@ -24,6 +24,7 @@ related:
     production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep,
     production/stories/story-playtest-001-playtest-journal-and-gate-hook,
     production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation,
+    production/stories/story-determinism-001-determinism-and-rng-decision-record,
   ]
 approval: approved
 ---
@@ -32,7 +33,7 @@ approval: approved
 
 ## Status
 
-APPROVED / active third child READY. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` merged 2026-07-05 through game-design PR #1, creating the journal/gate hook. `STORY-GATE-001` is now READY / approved as the next design/control packet; no Unity runtime implementation task is active until a later child story is promoted and the Unity pointer is updated.
+APPROVED / active fourth child READY. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` merged 2026-07-05 through game-design PR #1, creating the journal/gate hook. `STORY-GATE-001` merged 2026-07-05 through game-design PR #2, creating the hollow-gate reconciliation report and rule hooks. `STORY-DETERMINISM-001` is now READY / approved as the next design/control packet; no Unity runtime implementation task is active until a later child story is promoted and the Unity pointer is updated.
 
 This epic is not direct Unity implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -90,9 +91,9 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | --- | --- | --- | --- | --- |
 | [STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep](../stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md) | DONE / merged | Config/Data + Architecture | EPIC-014 complete; this epic; data/scenario/save ADR | Unity PR #138 merged; post-merge CI passed |
 | [STORY-PLAYTEST-001 Playtest Journal and Gate Hook](../stories/story-playtest-001-playtest-journal-and-gate-hook.md) | DONE / merged | Playtest + Process | This epic; DATA-001 merged | Game-design PR #1 merged; publish CI passed |
-| [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | READY / approved | Process/Tooling | This epic; PLAYTEST-001 merged | Runnable prompt `production/sprints/codex-story-gate-001.prompt.txt` |
-| STORY-AI-001 Dumb Strategic AI Playtest Opponent | Draft | Logic/AI | Data/scenario contract preferred | Future story |
-| STORY-DETERMINISM-001 Determinism Decision Record | Draft | Architecture/Design | Tactical GDD + current Unity state | Future story or folded into ADR |
+| [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | DONE / merged | Process/Tooling | This epic; PLAYTEST-001 merged | Game-design PR #2 merged; publish CI passed |
+| [STORY-DETERMINISM-001 Determinism and RNG Decision Record](../stories/story-determinism-001-determinism-and-rng-decision-record.md) | READY / approved | Architecture/Design | This epic; data/scenario/save ADR; testing strategy | Runnable prompt `production/sprints/codex-story-determinism-001.prompt.txt` |
+| STORY-AI-001 Dumb Strategic AI Playtest Opponent | Draft | Logic/AI | Data/scenario contract preferred; determinism ADR preferred | Future story |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -122,9 +123,9 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 - [x] Current scenario has a data contract/extraction path or a documented blocker.
 - [x] Playtest journal exists and is referenced by future closeout gates.
 - [ ] Determinism decision is recorded.
-- [ ] Hollow-gate/source-truth reconciliation report exists and at least one hollow control surface is filled/demoted/deleted.
+- [x] Hollow-gate/source-truth reconciliation report exists and at least one hollow control surface is filled/demoted/deleted.
 - [ ] Follow-up implementation stories are created only where needed.
 
 ## Verdict
 
-APPROVED / active third child READY. `STORY-DATA-001` and `STORY-PLAYTEST-001` are DONE / merged. Execute next only through READY child stories; `STORY-GATE-001` is the current approved design/control packet and does not authorize Unity runtime changes.
+APPROVED / active fourth child READY. `STORY-DATA-001`, `STORY-PLAYTEST-001`, and `STORY-GATE-001` are DONE / merged. Execute next only through READY child stories; `STORY-DETERMINISM-001` is the current approved design/control packet and does not authorize Unity runtime changes.

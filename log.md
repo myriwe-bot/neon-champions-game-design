@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-05] merge | STORY-GATE-001 merged and STORY-DETERMINISM-001 prepared
+
+- Reviewed and merged game-design PR #2 for `STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation`: https://github.com/myriwe-bot/neon-champions-game-design/pull/2
+- Merge commit: `a63aeb36832ecead9ef7eb2309d07fddab1169c8`.
+- Post-merge publish CI: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28741706267
+- Marked `STORY-GATE-001` DONE / merged.
+- Promoted `STORY-DETERMINISM-001 Determinism and RNG Decision Record` to READY / approved as the next EPIC-015 design/control packet.
+- Added runnable prompt `production/sprints/codex-story-determinism-001.prompt.txt`.
+- No Unity runtime task is active; next approved packet is design/control-only `STORY-DETERMINISM-001`.
+
 ## [2026-07-05] implementation | STORY-GATE-001 hollow gate/source-truth reconciliation
 
 - Implemented `STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation` in design/control branch `story/STORY-GATE-001-hollow-gate-source-truth`.

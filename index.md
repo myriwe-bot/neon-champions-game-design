@@ -200,7 +200,8 @@
 - [[production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation]] — APPROVED / active post-audit foundation/reconciliation epic.
 - [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — DONE / merged first data/scenario extraction packet.
 - [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — DONE / merged playtest journal/gate hook.
-- [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — READY / approved hollow-gate/source-truth reconciliation; runnable design-control prompt prepared.
+- [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — DONE / merged hollow-gate/source-truth reconciliation.
+- [[production/stories/story-determinism-001-determinism-and-rng-decision-record]] — READY / approved determinism and RNG decision record; runnable design-control prompt prepared.
 
 ## Production Reconciliation
 

@@ -1,0 +1,113 @@
+# STORY-DETERMINISM-001 Determinism and RNG Decision Record
+
+You are Codex working in the Neon Champions game-design/control repository.
+
+## Current state
+
+`STORY-DETERMINISM-001` is READY / approved as the next EPIC-015 design/control packet after `STORY-GATE-001` merged. This packet is architecture/design-control documentation only.
+
+## Preflight guard — stop if any fail
+
+Before changing files, verify all of these from your local checkouts:
+
+1. In the design repo, `production/stories/story-determinism-001-determinism-and-rng-decision-record.md` exists.
+2. That story frontmatter says exactly:
+   - `status: ready`
+   - `approval: approved`
+3. The story Ambiguity Check says `Status: PASS`.
+4. `production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md` says DONE / merged and links game-design PR #2.
+5. Your design repo branch is not `main` after branch creation.
+
+If any preflight check fails, stop and report the blocker. Do not implement from chat memory.
+
+## Repositories and paths
+
+Design/control repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Implement only in the design/control repo. Do not modify Unity runtime code, tests, scenes, prefabs, assets, packages, or ProjectSettings.
+
+## Required reading
+
+Design/control:
+- `production/stories/story-determinism-001-determinism-and-rng-decision-record.md`
+- `production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation.md`
+- `production/planning/post-audit-foundation-pivot-2026-07-03.md`
+- `docs/architecture/data-scenario-save-format-adr.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/control-manifest.md`
+- `design/gdd/strategic-map.md`
+- `design/gdd/tactical-combat.md`
+
+Unity, read-only context only:
+- Root `README.md` current-task pointer
+- Search for obvious random/RNG usage only if useful for the ADR evidence; do not change Unity files.
+
+## Branch and PR
+
+Create and work on:
+`story/STORY-DETERMINISM-001-determinism-rng-adr`
+
+PR title:
+`STORY-DETERMINISM-001 determinism and RNG ADR`
+
+## Authorized scope
+
+- Create `docs/architecture/determinism-and-rng-adr.md`.
+- Decide and record near-term MVP policy: deterministic-by-default vs seeded RNG service.
+- Recommended default: deterministic-by-default for MVP; future randomness must use an explicit seeded RNG service story.
+- Explain how dirty/source-tagged uncertainty differs from numeric randomness.
+- Define stop conditions for future random damage, randomized rewards, procedural generation, AI randomness, hidden info rolls, or save/replay-affecting random behavior.
+- Record testing, replay/debug, save, data/scenario, and CI implications.
+- List compact follow-up stories if needed.
+- Update index/log/run-prompt discoverability as needed.
+
+## Strict exclusions
+
+Do not implement:
+- Unity runtime, tests, scenes, prefabs, assets, packages, ProjectSettings, or RNG service code;
+- random damage, hit/crit rolls, AI randomness, procedural generation, randomized rewards, hidden-info rolls, fog/false intel, save/load, replay/debug tooling, or scenario schema changes;
+- broad GDD rewrites;
+- final dirty-information system design.
+
+If a tempting improvement is outside scope, document it as a follow-up and do not make the broad change.
+
+## Verification
+
+Run what is available locally and record exact commands/results in the PR body:
+
+- `git diff --check`
+- `npm run build`
+
+## Evidence / output requirements
+
+The PR body must include:
+
+- story ID and source story path;
+- ADR path;
+- decision chosen;
+- files changed;
+- exact checks run and results;
+- confirmation that Unity runtime was not changed;
+- omissions/deferred work or `No known omissions`.
+
+## Git behavior
+
+- Commit the design/control changes on `story/STORY-DETERMINISM-001-determinism-rng-adr`.
+- Push the branch to remote.
+- Open or update the GitHub PR.
+- If you stop before pushing, clearly state why and give the exact local state.
+
+## Final response requirements
+
+Report:
+
+- ADR path and decision chosen;
+- files changed;
+- tests/commands run and results;
+- PR URL;
+- omissions/deferred work;
+- whether the branch was pushed.

@@ -1,7 +1,7 @@
 ---
 title: STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation
 type: story
-status: review
+status: done
 phase: production
 owner: shared
 created: 2026-07-03
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-REVIEW. Human approval recorded 2026-07-05 via instruction after `STORY-PLAYTEST-001` merge: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." Implementation branch `story/STORY-GATE-001-hollow-gate-source-truth` creates the reconciliation report and gate/source-truth rule updates for review; story is not DONE until PR review/merge/publish CI complete.
+DONE / merged. Game-design PR #2 merged 2026-07-05 as `a63aeb36832ecead9ef7eb2309d07fddab1169c8`; post-merge publish CI passed at https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28741706267. Human approval recorded 2026-07-05 via instruction after `STORY-PLAYTEST-001` merge: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet."
 
 ## Story type
 
@@ -82,6 +82,13 @@ Runnable prompt: `production/sprints/codex-story-gate-001.prompt.txt`. This is a
 - Rule hook: `docs/architecture/control-manifest.md` and `production/stories/story-template.md` now block registry/validator coverage claims from stub or always-green checks.
 - Unity runtime scope: N/A; this packet is design/control only.
 
+## DONE evidence
+
+- Game-design PR: https://github.com/myriwe-bot/neon-champions-game-design/pull/2
+- Merge commit: `a63aeb36832ecead9ef7eb2309d07fddab1169c8`
+- Post-merge publish CI: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28741706267
+- Local verification before merge: `git diff --check`; `git diff origin/main...HEAD --check`; `npm run build` parsed 176 Markdown files and emitted 487 files.
+
 ## Verdict
 
-REVIEW. Scope implemented in the design/control repo; awaiting PR review/merge/publish CI before DONE.
+DONE / merged. Hollow-gate/source-truth reconciliation report and registry/validator guard hooks are available in the design/control repo.

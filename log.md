@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-05] implementation | STORY-PLAYTEST-001 playtest journal and gate hook
+
+- Human approval recorded: "Approved".
+- Implemented `STORY-PLAYTEST-001 Playtest Journal and Gate Hook` in design/control branch `story/STORY-PLAYTEST-001-playtest-journal-gate-hook`.
+- Created `production/playtests/playtest-journal.md` with dated-entry template, gate summary format, and exact complaint seeds from prior playtest-driven stories.
+- Added playtest/journal gate hook wording to `production/gates/gate-template.md`, `production/gates/review-mode.md`, and `production/stories/story-template.md`.
+- Updated index discoverability and EPIC-015/story status to REVIEW pending PR/CI/merge.
+- Unity runtime scope: no Unity repo changes authorized or made.
+
 ## [2026-07-05] merge | STORY-DATA-001 merged and STORY-PLAYTEST-001 prepared
 
 - Reviewed and merged Unity PR #138 for `STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep`: https://github.com/myriwe-bot/neon-champions-unity/pull/138

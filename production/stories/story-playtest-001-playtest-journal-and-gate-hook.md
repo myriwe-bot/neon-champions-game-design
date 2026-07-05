@@ -1,7 +1,7 @@
 ---
 title: STORY-PLAYTEST-001 Playtest Journal and Gate Hook
 type: story
-status: ready
+status: review
 phase: production
 owner: shared
 created: 2026-07-03
@@ -21,7 +21,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human delegation recorded 2026-07-05 from the merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." This promotes the next EPIC-015 child packet after `STORY-DATA-001` merged.
+REVIEW. Human approval recorded 2026-07-05: "Approved". Implementation branch `story/STORY-PLAYTEST-001-playtest-journal-gate-hook` creates the journal and gate hook for review; story is not DONE until PR review/CI/merge complete. Earlier delegation recorded 2026-07-05 from the merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet."
 
 ## Story type
 
@@ -47,9 +47,9 @@ As the project owner, I want playtest feel notes captured as first-class evidenc
 
 ## Acceptance criteria
 
-- [ ] Playtest journal exists and has a template for: build/commit, scenario, what dragged, what surprised, what confused, what felt off-fiction, fun verdict, next decision.
-- [ ] Closeout/gate docs reference the journal as evidence for subjective/fun claims.
-- [ ] Index/log discoverability is updated.
+- [x] Playtest journal exists and has a template for: build/commit, scenario, what dragged, what surprised, what confused, what felt off-fiction, fun verdict, next decision.
+- [x] Closeout/gate docs reference the journal as evidence for subjective/fun claims.
+- [x] Index/log discoverability is updated.
 
 ## Verification requirements
 
@@ -64,6 +64,12 @@ Status: PASS.
 
 Runnable prompt: `production/sprints/codex-story-playtest-001.prompt.txt`. This is a design/control repo packet only; it must not modify Unity runtime code.
 
+## Implementation notes
+
+- Journal artifact: `production/playtests/playtest-journal.md`.
+- Gate hook docs: `production/gates/gate-template.md`, `production/gates/review-mode.md`, and `production/stories/story-template.md`.
+- Unity runtime scope: N/A; this packet is design/control only.
+
 ## Verdict
 
-READY / approved. Prepare the playtest journal and gate hook in the design/control repo only.
+REVIEW. Scope implemented in the design/control repo; awaiting PR review/CI/merge before DONE.

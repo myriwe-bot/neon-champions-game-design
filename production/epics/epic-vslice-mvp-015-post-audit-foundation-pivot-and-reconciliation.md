@@ -32,7 +32,7 @@ approval: approved
 
 ## Status
 
-APPROVED / active second child READY. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` is now READY / approved as the next design/control packet; no Unity runtime implementation task is active until a later child story is promoted and the Unity pointer is updated.
+APPROVED / second child in review. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` is now in REVIEW as the next design/control packet; no Unity runtime implementation task is active until a later child story is promoted and the Unity pointer is updated.
 
 This epic is not direct Unity implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -89,7 +89,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | Story | Status | Type | Depends On | Evidence |
 | --- | --- | --- | --- | --- |
 | [STORY-DATA-001 Static/Scenario Data Contract and Scenario Extraction Prep](../stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep.md) | DONE / merged | Config/Data + Architecture | EPIC-014 complete; this epic; data/scenario/save ADR | Unity PR #138 merged; post-merge CI passed |
-| [STORY-PLAYTEST-001 Playtest Journal and Gate Hook](../stories/story-playtest-001-playtest-journal-and-gate-hook.md) | READY / approved | Playtest + Process | This epic; DATA-001 merged | Runnable prompt `production/sprints/codex-story-playtest-001.prompt.txt` |
+| [STORY-PLAYTEST-001 Playtest Journal and Gate Hook](../stories/story-playtest-001-playtest-journal-and-gate-hook.md) | REVIEW | Playtest + Process | This epic; DATA-001 merged | PR pending; journal + gate hook implemented in branch |
 | [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | READY-candidate | Process/Tooling | This epic | Reconciliation report + targeted doc updates |
 | STORY-AI-001 Dumb Strategic AI Playtest Opponent | Draft | Logic/AI | Data/scenario contract preferred | Future story |
 | STORY-DETERMINISM-001 Determinism Decision Record | Draft | Architecture/Design | Tactical GDD + current Unity state | Future story or folded into ADR |
@@ -120,11 +120,11 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 - [ ] Data/scenario/save ADR is accepted or replaced.
 - [x] Current scenario has a data contract/extraction path or a documented blocker.
-- [ ] Playtest journal exists and is referenced by future closeout gates.
+- [ ] Playtest journal exists and is referenced by future closeout gates. Pending PR merge for `STORY-PLAYTEST-001`.
 - [ ] Determinism decision is recorded.
 - [ ] Hollow-gate/source-truth reconciliation report exists and at least one hollow control surface is filled/demoted/deleted.
 - [ ] Follow-up implementation stories are created only where needed.
 
 ## Verdict
 
-APPROVED / active second child READY. `STORY-DATA-001` is DONE / merged. Execute next only through READY child stories; `STORY-PLAYTEST-001` is the current approved design/control packet and does not authorize Unity runtime changes.
+APPROVED / second child in review. `STORY-DATA-001` is DONE / merged. `STORY-PLAYTEST-001` is implemented in a design/control branch for PR review and does not authorize Unity runtime changes.

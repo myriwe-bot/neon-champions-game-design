@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-05] implementation | STORY-GATE-001 hollow gate/source-truth reconciliation
+
+- Implemented `STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation` in design/control branch `story/STORY-GATE-001-hollow-gate-source-truth`.
+- Created `production/reconciliation/hollow-gates-and-source-truth-2026-07-05.md`, classifying empty registry YAML files, draft faction bridge template, placeholder validator risk, draft-source exceptions, and stale status/index claims.
+- Added READY-story guard wording to `docs/architecture/control-manifest.md` and `production/stories/story-template.md`: registry/validator coverage cannot be claimed from stub, placeholder, comment-only, or always-green checks.
+- Low-risk drift fix: updated stale `index.md` status lines and corrected `production/stories/story-qa-014-epic-013-playtest-and-closeout-review.md` body status/verdict to match DONE / merged evidence.
+- Updated run-prompt discoverability for the STORY-GATE-001 reconciliation report.
+- Unity runtime scope: no Unity repo code, tests, scenes, prefabs, assets, packages, or ProjectSettings changes authorized or made.
+
 ## [2026-07-05] merge | STORY-PLAYTEST-001 merged and STORY-GATE-001 prepared
 
 - Reviewed and merged game-design PR #1 for `STORY-PLAYTEST-001 Playtest Journal and Gate Hook`: https://github.com/myriwe-bot/neon-champions-game-design/pull/1

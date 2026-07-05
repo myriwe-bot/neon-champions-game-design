@@ -38,6 +38,7 @@ As a [player/designer/system], I want [capability], so that [value].
 ## Source requirements
 
 Exact source references are required. Vague references such as "see tactical combat GDD" are not enough.
+READY stories may not claim registry or validator coverage while the referenced registry/check is a stub, placeholder, comment-only file, or always-green check. Mark that evidence N/A/deferred/blocking unless the story fills the registry/check or links an approved follow-up blocker.
 
 - GDD path + section/rule:
 - ADR / architecture section / control-manifest rule:
@@ -151,6 +152,7 @@ A story may be marked READY only when all items are true:
 - [ ] Acceptance criteria are observable and testable.
 - [ ] Verification requirements are defined according to `docs/architecture/testing-strategy.md`.
 - [ ] Required automated tests/validators/PlayMode evidence are listed, or approved exceptions are documented.
+- [ ] Any claimed registry/validator coverage points to a non-stub file/check, or the story explicitly records the gap as N/A/deferred/blocking with an approved follow-up.
 - [ ] Ambiguity Check status is PASS.
 - [ ] Branch / PR / CI traceability requirements are stated.
 - [ ] Human approval has been given or delegated gate approval is recorded.

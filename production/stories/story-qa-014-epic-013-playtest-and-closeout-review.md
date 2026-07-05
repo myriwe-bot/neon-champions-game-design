@@ -5,7 +5,7 @@ status: done
 phase: production
 owner: shared
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-07-05
 source_lore: []
 related:
   [
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-02: "Approved". This is the current approved Unity implementation packet after `STORY-PRESSURE-002` merged. Unity README pointer PR #132 merged as `7d8c9739432512181b3afe3683c0fb197468b115`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28580428245 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28580953928.
+DONE / merged. Human approval recorded 2026-07-02: "Approved". Unity PR #133 merged 2026-07-02 as `9e27b6b63abda739392f10af3a9d5adf97fa4a16`; exact-head PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28588347108 and post-merge `main` CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28589373917. The closeout verdict was `CLOSE EPIC-013`, as recorded in the parent epic.
 
 ## Story type
 
@@ -133,4 +133,4 @@ Human-approved answers / assumptions:
 
 ## Verdict
 
-READY for implementation. Implement only this narrow EPIC-013 playtest/closeout review; broader campaign, AI, economy, tactical, dirty-information, map/content, and next-epic systems remain deferred.
+DONE / merged. The narrow EPIC-013 playtest/closeout review completed through Unity PR #133 and closed EPIC-013 for the approved MVP pressure/readability slice. Broader campaign, AI, economy, tactical, dirty-information, map/content, and final polish systems remain deferred.

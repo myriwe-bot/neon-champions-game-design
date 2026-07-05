@@ -127,14 +127,14 @@
 - [[production/stories/story-champ-ops-002-operation-targeting-and-forecast-readability-pass]] — DONE / merged EPIC-011 target readability story.
 - [[production/stories/story-champ-ops-003-operation-aftermath-and-closeout-readability-smoke]] — DONE / merged EPIC-011 closeout-readability smoke story.
 - [[production/planning/next-implementation-direction-brief-2026-06-30]] — APPROVED next direction: Intel Leads / Verification.
-- [[production/epics/epic-vslice-mvp-012-intel-leads-and-verification]] — APPROVED / IN PROGRESS Intel leads and verification epic.
+- [[production/epics/epic-vslice-mvp-012-intel-leads-and-verification]] — DONE / closed Intel leads and verification epic.
 - [[production/stories/story-intel-dirty-001-intel-lead-and-verification-on-ramp]] — DONE / merged Intel Lead verification story.
 - [[production/stories/story-intel-dirty-002-stale-intel-readability]] — DONE / merged Stale Lead readability story.
-- [[production/stories/story-intel-dirty-003-intel-layer-closeout-smoke]] — READY / approved Intel-layer closeout smoke story.
-- [[production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability]] — APPROVED / CLOSEOUT IN PROGRESS.
+- [[production/stories/story-intel-dirty-003-intel-layer-closeout-smoke]] — DONE / merged Intel-layer closeout smoke story.
+- [[production/epics/epic-vslice-mvp-013-scenario-pressure-and-victory-readability]] — DONE / closed scenario pressure and victory readability epic.
 - [[production/stories/story-pressure-001-objective-pressure-and-victory-readability-smoke]] — DONE / merged EPIC-013 objective pressure and victory readability smoke story.
 - [[production/stories/story-pressure-002-opponent-contest-and-loss-pressure-smoke]] — DONE / merged EPIC-013 opponent contest and loss-pressure smoke story.
-- [[production/stories/story-qa-014-epic-013-playtest-and-closeout-review]] — READY / approved EPIC-013 playtest and closeout review.
+- [[production/stories/story-qa-014-epic-013-playtest-and-closeout-review]] — DONE / merged EPIC-013 playtest and closeout review.
 - `production/sprints/codex-next-implementation-direction-brief-2026-06-30.prompt.txt` — guarded decision-brief prompt only; no Unity runtime implementation authorized.
 - [[production/planning/epic-008-faction-armies-recruitment-and-role-identity-plan]] — approved EPIC-008 slice plan and roster seed.
 - [[production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed]] — DONE / merged first EPIC-008 story for MVP faction unit definitions and roster seed.
@@ -194,10 +194,14 @@
 
 - Next implementation direction candidate: [2026-07-02](production/planning/next-implementation-direction-brief-2026-07-02.md) — pending approval.
 
-- [[production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability|EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability]] — APPROVED / first story READY.
-- [[production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke|STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke]] — READY / approved.
+- [[production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability|EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability]] — DONE / closed tactical role counterplay readability epic.
+- [[production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke|STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke]] — DONE / merged.
 - [[production/planning/post-audit-foundation-pivot-2026-07-03]] — APPROVED post-audit foundation pivot brief.
 - [[production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation]] — APPROVED / active post-audit foundation/reconciliation epic.
 - [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — DONE / merged first data/scenario extraction packet.
 - [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — DONE / merged playtest journal/gate hook.
 - [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — READY / approved hollow-gate/source-truth reconciliation; runnable design-control prompt prepared.
+
+## Production Reconciliation
+
+- [[production/reconciliation/hollow-gates-and-source-truth-2026-07-05]] — STORY-GATE-001 hollow gate/source-truth classification report.

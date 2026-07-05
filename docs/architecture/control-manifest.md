@@ -5,7 +5,7 @@ status: approved
 phase: technical-setup
 owner: shared
 created: 2026-05-22
-updated: 2026-05-28
+updated: 2026-07-05
 source_lore: []
 related:
   [
@@ -120,6 +120,7 @@ Rules:
 - Temporary data must be marked as placeholder and listed in PR omissions.
 - Data schema changes require validation evidence.
 - If the data-authoring path is undecided, stop instead of inventing it.
+- A READY story may not claim registry coverage from a comment-only, empty, placeholder, or draft-pending registry file. It must either fill the registry/check in scope, mark the evidence N/A/deferred with a blocker, or link an approved follow-up story.
 
 ## 6. Testing and Verification
 
@@ -136,6 +137,7 @@ Minimum expectations:
 - CI failures must be fixed or explicitly human-accepted.
 - After Unity project creation, CI evidence is required for spike completion and production PRs according to `docs/architecture/ci-build-automation.md`.
 - "Could not test" is not acceptable without a documented blocker or human-approved exception.
+- Passing a placeholder or always-green validator is not data/content/localization validation evidence. Stories and PRs must label that evidence as placeholder-only unless the check enforces the referenced registry or content rules.
 
 Evidence must be linked or summarized in the PR.
 

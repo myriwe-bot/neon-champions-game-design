@@ -1,7 +1,7 @@
 ---
 title: STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation
 type: story
-status: ready
+status: review
 phase: production
 owner: shared
 created: 2026-07-03
@@ -24,7 +24,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Human approval recorded 2026-07-05 via instruction after `STORY-PLAYTEST-001` merge: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." This promotes the next EPIC-015 child packet after the playtest journal/gate hook landed.
+REVIEW. Human approval recorded 2026-07-05 via instruction after `STORY-PLAYTEST-001` merge: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." Implementation branch `story/STORY-GATE-001-hollow-gate-source-truth` creates the reconciliation report and gate/source-truth rule updates for review; story is not DONE until PR review/merge/publish CI complete.
 
 ## Story type
 
@@ -51,10 +51,10 @@ As a producer/reviewer, I want hollow control surfaces named and either filled, 
 
 ## Acceptance criteria
 
-- [ ] Reconciliation report exists and is indexed.
-- [ ] Empty registry, faction brief template, placeholder validator, draft-source exceptions, and stale index/statuses are classified.
-- [ ] At least one concrete drift fix is committed.
-- [ ] Follow-up owner decisions are listed compactly.
+- [x] Reconciliation report exists and is indexed.
+- [x] Empty registry, faction brief template, placeholder validator, draft-source exceptions, and stale index/statuses are classified.
+- [x] At least one concrete drift fix is committed.
+- [x] Follow-up owner decisions are listed compactly.
 
 ## Verification requirements
 
@@ -75,6 +75,13 @@ Approved assumptions / constraints:
 
 Runnable prompt: `production/sprints/codex-story-gate-001.prompt.txt`. This is a design/control repo packet only; it must not modify Unity runtime code.
 
+## Implementation notes
+
+- Reconciliation report: `production/reconciliation/hollow-gates-and-source-truth-2026-07-05.md`.
+- Low-risk drift fix: stale `index.md` status lines and `STORY-QA-014` body/verdict corrected to match DONE / merged evidence.
+- Rule hook: `docs/architecture/control-manifest.md` and `production/stories/story-template.md` now block registry/validator coverage claims from stub or always-green checks.
+- Unity runtime scope: N/A; this packet is design/control only.
+
 ## Verdict
 
-READY / approved. Prepare the hollow-gate/source-truth reconciliation report and one or more low-risk design-control drift fixes only.
+REVIEW. Scope implemented in the design/control repo; awaiting PR review/merge/publish CI before DONE.

@@ -114,7 +114,7 @@ There is no current READY / approved Unity runtime implementation packet after `
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-gate-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-PLAYTEST-001` DONE/merged, and no Unity runtime edits.
+Current implementation prompt file: `production/sprints/codex-story-gate-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-PLAYTEST-001` DONE/merged, and no Unity runtime edits. Expected design/control output includes `production/reconciliation/hollow-gates-and-source-truth-2026-07-05.md`.
 
 ## Current READY implementation prompt
 

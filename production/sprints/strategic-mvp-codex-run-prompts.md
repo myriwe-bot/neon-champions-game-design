@@ -105,17 +105,17 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved design/control packet:** `STORY-DETERMINISM-001 Determinism and RNG Decision Record`.
+**Current design/control packet under PR review:** `STORY-DETERMINISM-001 Determinism and RNG Decision Record`.
 
 There is no current READY / approved Unity runtime implementation packet after `STORY-DATA-001` merged.
 
-`STORY-GATE-001` is DONE / merged through game-design PR #2. Human delegation on 2026-07-05 promotes the next EPIC-015 child, `STORY-DETERMINISM-001`, to READY / approved as a design/control-only packet. It must not modify Unity runtime code.
+`STORY-GATE-001` is DONE / merged through game-design PR #2. Human delegation on 2026-07-05 promoted the next EPIC-015 child, `STORY-DETERMINISM-001`, to READY / approved as a design/control-only packet. Its implementation branch prepares `docs/architecture/determinism-and-rng-adr.md` for PR review. It must not modify Unity runtime code.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-determinism-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-GATE-001` DONE/merged, and no Unity runtime edits. Expected design/control output includes `docs/architecture/determinism-and-rng-adr.md`.
+Current implementation prompt file: `production/sprints/codex-story-determinism-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-GATE-001` DONE/merged, and no Unity runtime edits. Design/control output is `docs/architecture/determinism-and-rng-adr.md`.
 
 ## Current READY implementation prompt
 

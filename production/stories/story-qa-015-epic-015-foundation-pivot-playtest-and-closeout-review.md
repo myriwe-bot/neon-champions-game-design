@@ -74,6 +74,7 @@ If approved/run, this story may:
 - Run/review current Unity `main` at 1280x720 against the complete EPIC-015 surface.
 - Inspect the current scenario data path and confirm the checked-in smoke scenario still loads from reviewable data without gameplay drift.
 - Inspect the human -> dumb strategic AI -> human turn cycle and confirm AI control/action status is player-visible.
+- Specifically review the late async-review concern that `StrategicDumbAiTurnService.ExecuteTurn` may leave partial mutation if AI movement/site interaction succeeds but turn completion later fails; if reproducible, fix narrowly or record why the current scenario/service contract makes it non-blocking.
 - Inspect that deterministic-by-default policy is not contradicted by new runtime random/entropy use.
 - Confirm playtest journal and hollow-gate/source-truth outputs are discoverable from design/control docs.
 - Fix only concrete closeout blockers directly tied to EPIC-015 commitments, such as broken AI turn smoke, stale pointer/evidence wording, missing visibility text, or a regression in scenario data loading.
@@ -94,7 +95,7 @@ Not authorized by this story:
 ## Acceptance criteria
 
 - [ ] The merged EPIC-015 surface is reviewed on current Unity `main` at 1280x720.
-- [ ] The review explicitly addresses scenario data loading, dumb StrategicAI turn cycle, deterministic/no-randomness policy, playtest journal hook, and hollow-gate/source-truth reconciliation discoverability.
+- [ ] The review explicitly addresses scenario data loading, dumb StrategicAI turn cycle, failed-turn partial-mutation risk, deterministic/no-randomness policy, playtest journal hook, and hollow-gate/source-truth reconciliation discoverability.
 - [ ] Any concrete in-scope closeout blockers are fixed narrowly, or the story records why no fix was needed.
 - [ ] Evidence under Unity `production/evidence/STORY-QA-015/` documents the inspected surface if a Unity PR is opened.
 - [ ] Exact-head Unity Foundation CI passes before merge if any Unity PR is opened.
@@ -104,7 +105,7 @@ Not authorized by this story:
 
 - `git diff --check`.
 - Placeholder validator remains green.
-- Focused EditMode tests pass if any domain/application/scenario data changes are made.
+- Focused EditMode tests pass if any domain/application/scenario data changes are made; if the AI failed-turn mutation concern is fixed, include a regression test for the no-partial-mutation behavior.
 - PlayMode smoke tests pass if any Unity code/UI/evidence changes are made.
 - Runtime entropy scan still finds no unapproved `UnityEngine.Random`, `System.Random`, `Random.Range`, `Guid.NewGuid`, `DateTime.Now`, or `DateTime.UtcNow` under `Assets/NeonChampions/Runtime`.
 - Standalone Windows64 build passes if a Unity PR is opened and the workflow runs it.

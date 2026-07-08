@@ -71,11 +71,12 @@ Run/review current Unity `main` at 1280x720 against the complete EPIC-015 surfac
 
 - scenario data loading still uses the reviewable current scenario path without gameplay drift;
 - human -> dumb StrategicAI -> human turn cycle remains visible and deterministic;
+- late async-review concern is checked: `StrategicDumbAiTurnService.ExecuteTurn` may leave partial mutation if movement/site interaction succeeds but turn completion later fails; if reproducible, fix narrowly and add focused regression coverage, otherwise document why it is non-blocking for the current service contract/scenario;
 - no unapproved runtime randomness/entropy has appeared;
 - playtest journal and hollow-gate/source-truth outputs are discoverable from design/control docs;
 - evidence records what was inspected and recommends exactly one closeout verdict: `CLOSE EPIC-015`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT / NEEDS HUMAN PLAYTEST`.
 
-You may fix only concrete closeout blockers directly tied to EPIC-015 commitments, such as broken AI turn smoke, stale pointer/evidence wording, missing visibility text, or a regression in scenario data loading.
+You may fix only concrete closeout blockers directly tied to EPIC-015 commitments, such as broken AI turn smoke, stale pointer/evidence wording, missing visibility text, failed-turn partial mutation in the dumb AI service, or a regression in scenario data loading.
 
 ## Strict exclusions
 

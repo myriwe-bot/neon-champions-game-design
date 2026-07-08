@@ -16,6 +16,7 @@
 - Pointer merge commit: `ceb19fbb33dd7cd7a1ec6ba7275696df3dc3e715`.
 - Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936548067
 - Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936935049
+- Late async reviewer returned after merge; stale draft/CI/body blockers were already resolved, but the AI failed-turn partial-mutation concern was preserved as an explicit `STORY-QA-015` closeout review check.
 
 ## [2026-07-08] merge | STORY-DETERMINISM-001 merged and STORY-AI-001 prepared
 

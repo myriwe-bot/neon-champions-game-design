@@ -29,7 +29,14 @@ approval: approved
 
 ## Status
 
-READY / approved. Prepared 2026-07-08 after `STORY-AI-001` merged through Unity PR #141 and post-merge `main` CI passed. This is a narrow Unity QA/playtest closeout packet for EPIC-015, not a new feature train.
+READY / approved. Prepared 2026-07-08 after `STORY-AI-001` merged through Unity PR #141 and post-merge `main` CI passed. Unity README current-task pointer PR #142 merged as `ceb19fbb33dd7cd7a1ec6ba7275696df3dc3e715`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936548067 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936935049. This is a narrow Unity QA/playtest closeout packet for EPIC-015, not a new feature train.
+
+Pointer evidence:
+
+- Unity pointer PR: https://github.com/myriwe-bot/neon-champions-unity/pull/142
+- Pointer merge commit: `ceb19fbb33dd7cd7a1ec6ba7275696df3dc3e715`
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936548067
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936935049
 
 ## Story type
 

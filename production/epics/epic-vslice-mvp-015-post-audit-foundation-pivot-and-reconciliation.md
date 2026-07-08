@@ -96,7 +96,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | DONE / merged | Process/Tooling | This epic; PLAYTEST-001 merged | Game-design PR #2 merged; publish CI passed |
 | [STORY-DETERMINISM-001 Determinism and RNG Decision Record](../stories/story-determinism-001-determinism-and-rng-decision-record.md) | DONE / merged | Architecture/Design | This epic; data/scenario/save ADR; testing strategy | Game-design PR #3 merged; publish CI passed |
 | [STORY-AI-001 Dumb Strategic AI Playtest Opponent](../stories/story-ai-001-dumb-strategic-ai-playtest-opponent.md) | DONE / merged | Logic/AI | Data/scenario contract; determinism ADR | Unity PR #141 merged; exact-head and post-merge CI passed |
-| [STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review](../stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review.md) | READY / approved | QA / Closeout | All EPIC-015 child outputs merged | Runnable prompt `production/sprints/codex-story-qa-015.prompt.txt`; Unity pointer pending |
+| [STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review](../stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review.md) | READY / approved | QA / Closeout | All EPIC-015 child outputs merged | Runnable prompt `production/sprints/codex-story-qa-015.prompt.txt`; Unity pointer PR #142 merged; pointer CI passed |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -131,4 +131,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / implementation complete, closeout READY. `STORY-DATA-001`, `STORY-PLAYTEST-001`, `STORY-GATE-001`, `STORY-DETERMINISM-001`, and `STORY-AI-001` are DONE / merged. Execute next only through READY child stories; `STORY-QA-015` is the current approved narrow Unity closeout packet and the Unity README pointer must be updated before Codex runs.
+APPROVED / implementation complete, closeout READY. `STORY-DATA-001`, `STORY-PLAYTEST-001`, `STORY-GATE-001`, `STORY-DETERMINISM-001`, and `STORY-AI-001` are DONE / merged. Execute next only through READY child stories; `STORY-QA-015` is the current approved narrow Unity closeout packet and the Unity README pointer is updated.

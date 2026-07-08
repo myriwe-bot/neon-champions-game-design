@@ -12,7 +12,10 @@
 - Marked `STORY-AI-001` DONE / merged.
 - Promoted `STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review` to READY / approved as the next narrow Unity closeout packet.
 - Added runnable prompt `production/sprints/codex-story-qa-015.prompt.txt`.
-- Unity README current-task pointer still needs a CI-gated update before Codex runs this packet.
+- Unity README current-task pointer updated via PR #142: https://github.com/myriwe-bot/neon-champions-unity/pull/142
+- Pointer merge commit: `ceb19fbb33dd7cd7a1ec6ba7275696df3dc3e715`.
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936548067
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936935049
 
 ## [2026-07-08] merge | STORY-DETERMINISM-001 merged and STORY-AI-001 prepared
 

@@ -1,7 +1,7 @@
 ---
 title: Determinism and RNG ADR
 type: adr
-status: in-review
+status: approved
 phase: production
 owner: shared
 created: 2026-07-05
@@ -18,7 +18,7 @@ related:
     design/gdd/strategic-map,
     design/gdd/tactical-combat,
   ]
-approval: pending
+approval: approved
 ---
 
 # Determinism and RNG ADR

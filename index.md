@@ -177,7 +177,7 @@
 - [[docs/architecture/technical-decision-priorities]] — technical decision gate priorities.
 - [[docs/architecture/data-authoring-options]] — data authoring options and phased-hybrid decision.
 - [[docs/architecture/data-scenario-save-format-adr]] — approved post-audit data/static/scenario/runtime/save boundaries and first scenario-extraction direction.
-- [[docs/architecture/determinism-and-rng-adr]] — in-review ADR choosing deterministic-by-default MVP behavior and seeded-RNG stop conditions.
+- [[docs/architecture/determinism-and-rng-adr]] — approved ADR choosing deterministic-by-default MVP behavior and seeded-RNG stop conditions.
 - [[docs/architecture/testing-strategy]] — strict layered testing ADR.
 - [[docs/architecture/ci-build-automation]] — strict CI/build automation ADR.
 - [[docs/architecture/merge-to-main-gate]] — approved workflow for rigorous PR merge gates before implementation branches land on main.
@@ -202,7 +202,8 @@
 - [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — DONE / merged first data/scenario extraction packet.
 - [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — DONE / merged playtest journal/gate hook.
 - [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — DONE / merged hollow-gate/source-truth reconciliation.
-- [[production/stories/story-determinism-001-determinism-and-rng-decision-record]] — REVIEW determinism and RNG decision record; ADR PR prepared.
+- [[production/stories/story-determinism-001-determinism-and-rng-decision-record]] — DONE / merged determinism and RNG decision record.
+- [[production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent]] — READY / approved dumb strategic AI playtest opponent packet.
 
 ## Production Reconciliation
 

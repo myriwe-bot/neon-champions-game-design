@@ -1,0 +1,130 @@
+# STORY-AI-001 Dumb Strategic AI Playtest Opponent
+
+You are Codex working in the Neon Champions Unity repository.
+
+## Current state
+
+`STORY-AI-001` is READY / approved as the active EPIC-015 implementation packet after the determinism/RNG ADR merged. The prompt remains preflight-guarded so stale checkouts stop safely.
+
+## Preflight guard — stop if any fail
+
+Before changing Unity code, verify all of these from your local checkouts:
+
+1. In the design repo, `production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent.md` exists.
+2. That story frontmatter says exactly:
+   - `status: ready`
+   - `approval: approved`
+3. The story Ambiguity Check says `Status: PASS for implementation`.
+4. `production/stories/story-determinism-001-determinism-and-rng-decision-record.md` says DONE / merged and links game-design PR #3.
+5. `docs/architecture/determinism-and-rng-adr.md` says deterministic-by-default and blocks unseeded random behavior.
+6. In the Unity repo, `README.md` current task pointer names `STORY-AI-001 Dumb Strategic AI Playtest Opponent`.
+7. Your Unity branch is not `main` after branch creation.
+
+If any preflight check fails, stop and report the blocker. Do not implement from chat memory.
+
+## Repositories and paths
+
+Design/control repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+
+Unity repo on Windows:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+You must implement in the Unity repo, not the design repo.
+
+## Required reading
+
+Design/control:
+- `production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent.md`
+- `production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation.md`
+- `production/planning/post-audit-foundation-pivot-2026-07-03.md`
+- `docs/architecture/data-scenario-save-format-adr.md`
+- `docs/architecture/determinism-and-rng-adr.md`
+- `docs/architecture/control-manifest.md`
+- `docs/architecture/testing-strategy.md`
+- `docs/architecture/ci-build-automation.md`
+- `design/gdd/strategic-map.md`
+
+Unity:
+- Root `AGENTS.md`
+- Any scoped `AGENTS.md` files in Runtime, Tests, or evidence directories you touch
+- `Assets/NeonChampions/Runtime/Domain/Strategic/StrategicDefinitions.cs`
+- `Assets/NeonChampions/Runtime/Domain/Strategic/StrategicTurnService.cs`
+- `Assets/NeonChampions/Runtime/Domain/Strategic/StrategicMovementService.cs`
+- `Assets/NeonChampions/Runtime/Application/Strategic/StrategicMapInputSession.cs`
+- `Assets/NeonChampions/Runtime/Application/Strategic/StrategicMapPresentationSmokeScenario.cs`
+- Existing strategic input, turn ownership, scenario data importer, and presentation snapshot tests
+
+## Branch and PR
+
+Create and work on:
+`story/STORY-AI-001-dumb-strategic-ai-playtest-opponent`
+
+PR title:
+`STORY-AI-001 dumb strategic AI playtest opponent`
+
+Required evidence path:
+`production/evidence/STORY-AI-001/`
+
+## Authorized scope
+
+- Add the smallest deterministic strategic AI controller/service needed for a `ControllerType.StrategicAI` faction to take one legal strategic turn in the current smoke scenario.
+- Prefer a simple priority order such as: select active AI Champion, take the first deterministic legal route toward useful pressure/objective/site interaction, apply one available site interaction when legal and useful, then end the AI turn.
+- Add or update scenario data so faction 2 can be marked `StrategicAI` for the AI smoke path without breaking current hotseat/human-local tests.
+- Expose clear snapshot/HUD/status text that the active faction is AI-controlled and what action the dumb AI took.
+- Add focused EditMode tests for deterministic choice order, invalid/no-legal-action handling, turn advancement, and no unseeded random use.
+- Add PlayMode/smoke evidence showing a human-to-AI-to-human turn cycle in the current scenario.
+
+## Strict exclusions
+
+Do not implement:
+- sophisticated strategic planning, minimax, utility scoring, learning, personality, diplomacy, fog/dirty-information reasoning, deception, or hidden-info rolls;
+- tactical CombatAI changes beyond preserving existing tactical handoff behavior;
+- new factions, new map topology, new campaign content, new objective rules, or balance changes;
+- seeded or unseeded randomness;
+- full save/load or replay implementation;
+- editor UI or scenario-authoring tools;
+- implementation from draft/lore-only sources or chat memory.
+
+If a tempting improvement is outside scope, document it as deferred work and do not code it.
+
+## Verification
+
+Run what is available locally and record exact commands/results in PR evidence:
+
+- `git diff --check`
+- focused EditMode tests for the strategic AI controller/service and scenario controller data
+- relevant strategic input/turn/snapshot tests
+- PlayMode smoke or generated evidence for human -> AI -> human turn cycle
+- placeholder/evidence validators if present
+
+The GitHub PR must get exact-head Unity Foundation CI before merge.
+
+## Evidence requirements
+
+Create `production/evidence/STORY-AI-001/` with at minimum:
+
+- `README.md` summarizing story ID, deterministic AI policy, files changed, tests run, evidence produced, and CI placeholder/URL;
+- notes or bullets documenting the deterministic priority order;
+- omissions/deferred-work notes covering sophisticated AI, randomness, fog/dirty info, diplomacy, and tactical AI changes, or a clear `No known omissions` statement if none beyond story exclusions.
+
+Generated evidence must be focused on this story. Do not commit broad unrelated smoke-suite artifacts.
+
+## Git behavior
+
+- Commit the implementation on `story/STORY-AI-001-dumb-strategic-ai-playtest-opponent`.
+- Push the branch to remote.
+- Open or update the GitHub PR.
+- If you stop before pushing, clearly state why and give the exact local state.
+
+## Final response requirements
+
+Report:
+
+- deterministic AI behavior implemented;
+- files changed;
+- tests/commands run and results;
+- evidence path and evidence produced;
+- PR URL;
+- omissions/deferred work;
+- whether the branch was pushed.

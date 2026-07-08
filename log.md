@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-08] merge | STORY-DETERMINISM-001 merged and STORY-AI-001 prepared
+
+- Reviewed and merged game-design PR #3 for `STORY-DETERMINISM-001 Determinism and RNG Decision Record`: https://github.com/myriwe-bot/neon-champions-game-design/pull/3
+- Merge commit: `6018c308aa82006db0baa35009fc09c363b3a64e`.
+- Post-merge publish CI: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28923259895
+- Marked `STORY-DETERMINISM-001` DONE / merged and approved `docs/architecture/determinism-and-rng-adr.md`.
+- Promoted `STORY-AI-001 Dumb Strategic AI Playtest Opponent` to READY / approved as the next EPIC-015 Unity implementation packet.
+- Added runnable prompt `production/sprints/codex-story-ai-001.prompt.txt`.
+- Unity README current-task pointer must be updated through a CI-gated docs PR before Codex runs the packet.
+
 ## [2026-07-05] implementation | STORY-DETERMINISM-001 determinism and RNG ADR
 
 - Implemented `STORY-DETERMINISM-001 Determinism and RNG Decision Record` in design/control branch `story/STORY-DETERMINISM-001-determinism-rng-adr`.

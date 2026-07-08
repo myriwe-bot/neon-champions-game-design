@@ -1,7 +1,7 @@
 ---
 title: STORY-DETERMINISM-001 Determinism and RNG Decision Record
 type: story
-status: review
+status: done
 phase: production
 owner: shared
 created: 2026-07-05
@@ -24,7 +24,15 @@ approval: approved
 
 ## Status
 
-REVIEW. Human delegation recorded 2026-07-05 after `STORY-GATE-001` merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet." This promoted the next EPIC-015 child packet after the hollow-gate/source-truth reconciliation landed. Implementation branch `story/STORY-DETERMINISM-001-determinism-rng-adr` created the ADR and awaits PR review/merge.
+DONE / merged. Game-design PR #3 merged 2026-07-08 after local whitespace checks, PR-range whitespace checks, and Quartz build passed. Post-merge Publish Quartz site CI passed. Human delegation recorded 2026-07-05 after `STORY-GATE-001` merge request: "Verify and review, fix issues if any, then merge when done, then prepare next implementation packet."
+
+Implementation evidence:
+
+- Game-design PR: https://github.com/myriwe-bot/neon-champions-game-design/pull/3
+- Merge commit: `6018c308aa82006db0baa35009fc09c363b3a64e`
+- Post-merge publish CI: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/28923259895
+- Local review checks: `git diff --check`, `git diff origin/main...HEAD --check`, `npm run build` all passed.
+- GitHub PR checks: none configured/reported for the branch.
 
 ## Story type
 
@@ -92,4 +100,4 @@ Runnable prompt: `production/sprints/codex-story-determinism-001.prompt.txt`. Th
 
 ## Verdict
 
-REVIEW. Determinism/RNG ADR prepared in the design/control repo only; PR review and merge remain.
+DONE / merged. Determinism/RNG ADR is approved as the near-term MVP policy: deterministic-by-default, with seeded RNG deferred to an explicit future story.

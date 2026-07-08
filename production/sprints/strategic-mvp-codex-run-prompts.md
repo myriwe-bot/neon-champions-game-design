@@ -97,6 +97,7 @@ related:
     production/stories/story-playtest-001-playtest-journal-and-gate-hook,
     production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation,
     production/stories/story-determinism-001-determinism-and-rng-decision-record,
+    production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent,
   ]
 approval: approved
 ---
@@ -105,25 +106,23 @@ approval: approved
 
 ## Recommended mode
 
-**Current design/control packet under PR review:** `STORY-DETERMINISM-001 Determinism and RNG Decision Record`.
+**Current READY / approved Unity implementation packet:** `STORY-AI-001 Dumb Strategic AI Playtest Opponent`.
 
-There is no current READY / approved Unity runtime implementation packet after `STORY-DATA-001` merged.
-
-`STORY-GATE-001` is DONE / merged through game-design PR #2. Human delegation on 2026-07-05 promoted the next EPIC-015 child, `STORY-DETERMINISM-001`, to READY / approved as a design/control-only packet. Its implementation branch prepares `docs/architecture/determinism-and-rng-adr.md` for PR review. It must not modify Unity runtime code.
+`STORY-DETERMINISM-001` is DONE / merged through game-design PR #3. Human delegation promoted the next EPIC-015 child, `STORY-AI-001`, to READY / approved as a narrow Unity runtime implementation packet. It must implement only a deterministic dumb strategic AI playtest opponent; sophisticated AI and all random behavior remain out of scope.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-determinism-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-GATE-001` DONE/merged, and no Unity runtime edits. Design/control output is `docs/architecture/determinism-and-rng-adr.md`.
+Current implementation prompt file: `production/sprints/codex-story-ai-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-DETERMINISM-001` DONE/merged, deterministic-by-default ADR approval, and Unity README current-task pointer agreement.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-determinism-001.prompt.txt` for `STORY-DETERMINISM-001 Determinism and RNG Decision Record`.
+Use checked-in prompt file `production/sprints/codex-story-ai-001.prompt.txt` for `STORY-AI-001 Dumb Strategic AI Playtest Opponent`.
 
-This is a design/control repo packet. It creates a determinism/RNG ADR only; it must not modify Unity runtime code.
+This is a narrow Unity runtime packet for deterministic playtest pressure. It must not add randomness, sophisticated strategic AI, fog/dirty-info reasoning, diplomacy, new map content, or tactical CombatAI changes.
 
-### Copy-safe STORY-DETERMINISM-001 handoff
+### Copy-safe STORY-AI-001 handoff
 
 Primary workspace-write run:
 
@@ -137,7 +136,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-determinism-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ai-001.prompt.txt"
 $prompt | codex exec --sandbox workspace-write
 ```
 

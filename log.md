@@ -11,6 +11,8 @@
 - Review fix: resolved dumb StrategicAI failed-turn partial mutation with runtime rollback and focused EditMode regression coverage.
 - Closeout verdict: `CLOSE EPIC-015`. Marked `STORY-QA-015` DONE / merged and `EPIC-VSLICE-MVP-015` DONE / closed.
 - Non-fatal CI artifact quota/cache annotations appeared, but all required jobs concluded success.
+- Unity README pointer cleanup merged via PR #144: https://github.com/myriwe-bot/neon-champions-unity/pull/144
+- Pointer cleanup merge commit: `6c0e9addff25c519053edc3f3be8ab52b932bc0c`; exact-head CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28941480954; post-merge CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28941898319.
 
 ## [2026-07-08] merge | STORY-AI-001 merged and STORY-QA-015 prepared
 

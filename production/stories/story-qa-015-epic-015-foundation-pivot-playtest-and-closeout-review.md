@@ -37,6 +37,10 @@ Merge evidence:
 - Merge commit: `a504588edbb96b4b048293ef0eb8ec45aad832d6`
 - Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28939994181
 - Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28940806507
+- Unity README pointer cleanup PR: https://github.com/myriwe-bot/neon-champions-unity/pull/144
+- Pointer cleanup merge commit: `6c0e9addff25c519053edc3f3be8ab52b932bc0c`
+- Pointer cleanup exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28941480954
+- Pointer cleanup post-merge CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28941898319
 - Closeout evidence: `production/evidence/STORY-QA-015/README.md` in the Unity repo.
 
 Pointer evidence:

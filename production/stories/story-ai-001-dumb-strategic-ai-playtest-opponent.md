@@ -1,7 +1,7 @@
 ---
 title: STORY-AI-001 Dumb Strategic AI Playtest Opponent
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-08
@@ -25,7 +25,7 @@ approval: approved
 
 ## Status
 
-READY / approved. Promoted 2026-07-08 after `STORY-DETERMINISM-001` merged and post-merge publish CI passed. This is the next EPIC-015 implementation packet and authorizes a narrow Unity runtime slice only through the scope below.
+DONE / merged. Unity PR #141 merged 2026-07-08 as `e3332be2030b5b58d3f12ca8ad52bcbd4b5ed751`. Exact-head PR Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28935107742 after review fix `3d93e275e877c61f325c5821cfa34a4e6326cfeb`; post-merge `main` Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28935898198.
 
 Pointer evidence:
 
@@ -86,13 +86,13 @@ As a solo tester, I need a dumb deterministic strategic opponent, so playtests c
 
 ## Acceptance criteria
 
-- [ ] A `ControllerType.StrategicAI` faction can execute a deterministic one-turn strategic action path in the current scenario.
-- [ ] The AI never uses `UnityEngine.Random`, `System.Random`, time/GUID entropy, or unordered collection iteration as choice behavior.
-- [ ] The AI action path is reproducible from the same scenario/runtime state and command order.
-- [ ] Existing human-local hotseat path remains valid.
-- [ ] Snapshot/HUD/status text makes AI control and AI action results visible enough for playtest notes.
-- [ ] Tests cover deterministic priority order, no-legal-action/invalid-state handling, and turn handoff back to the human faction.
-- [ ] Evidence records exact commands, CI URL placeholder/final URL, omissions, and what remains dumb/deferred.
+- [x] A `ControllerType.StrategicAI` faction can execute a deterministic one-turn strategic action path in the current scenario.
+- [x] The AI never uses `UnityEngine.Random`, `System.Random`, time/GUID entropy, or unordered collection iteration as choice behavior.
+- [x] The AI action path is reproducible from the same scenario/runtime state and command order.
+- [x] Existing human-local hotseat path remains valid.
+- [x] Snapshot/HUD/status text makes AI control and AI action results visible enough for playtest notes.
+- [x] Tests cover deterministic priority order, no-legal-action/invalid-state handling, and turn handoff back to the human faction.
+- [x] Evidence records exact commands, CI URL placeholder/final URL, omissions, and what remains dumb/deferred.
 
 ## Verification requirements
 
@@ -137,6 +137,14 @@ Resolved assumptions:
 
 Runnable prompt: `production/sprints/codex-story-ai-001.prompt.txt`. It keeps preflight guards for `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-DETERMINISM-001` DONE/merged, and Unity README pointer agreement.
 
+## DONE gate
+
+- [x] Review/implementation matches approved narrow deterministic dumb-AI scope.
+- [x] Acceptance criteria pass.
+- [x] Required Unity evidence exists under `production/evidence/STORY-AI-001/`.
+- [x] Required CI passed: exact-head PR CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28935107742 and post-merge main CI https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28935898198.
+- [x] PR/code review is complete: Unity PR #141.
+
 ## Verdict
 
-READY / approved. Implement only the narrow deterministic playtest-opponent slice; defer sophisticated AI and all random behavior.
+DONE / merged. The narrow deterministic dumb strategic AI playtest opponent landed in Unity PR #141. It remains intentionally crude and deterministic; sophisticated AI, random behavior, fog/dirty-info reasoning, diplomacy, new map content, save/replay, editor tooling, and tactical CombatAI changes remain deferred.

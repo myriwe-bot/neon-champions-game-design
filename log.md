@@ -2,6 +2,18 @@
 
 > Append-only project log.
 
+## [2026-07-08] merge | STORY-AI-001 merged and STORY-QA-015 prepared
+
+- Reviewed and merged Unity PR #141 for `STORY-AI-001 Dumb Strategic AI Playtest Opponent`: https://github.com/myriwe-bot/neon-champions-unity/pull/141
+- Merge commit: `e3332be2030b5b58d3f12ca8ad52bcbd4b5ed751`.
+- Exact-head PR Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28935107742
+- Post-merge main Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28935898198
+- Review fix: refreshed committed `STORY-AI-001` evidence wording to remove stale draft-PR phrasing; CI artifact quota annotations were non-fatal and all required jobs concluded success.
+- Marked `STORY-AI-001` DONE / merged.
+- Promoted `STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review` to READY / approved as the next narrow Unity closeout packet.
+- Added runnable prompt `production/sprints/codex-story-qa-015.prompt.txt`.
+- Unity README current-task pointer still needs a CI-gated update before Codex runs this packet.
+
 ## [2026-07-08] merge | STORY-DETERMINISM-001 merged and STORY-AI-001 prepared
 
 - Reviewed and merged game-design PR #3 for `STORY-DETERMINISM-001 Determinism and RNG Decision Record`: https://github.com/myriwe-bot/neon-champions-game-design/pull/3

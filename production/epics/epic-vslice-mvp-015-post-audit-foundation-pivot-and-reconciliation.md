@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-07-03
-updated: 2026-07-05
+updated: 2026-07-08
 source_lore: []
 related:
   [
@@ -25,6 +25,8 @@ related:
     production/stories/story-playtest-001-playtest-journal-and-gate-hook,
     production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation,
     production/stories/story-determinism-001-determinism-and-rng-decision-record,
+    production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent,
+    production/stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review,
   ]
 approval: approved
 ---
@@ -33,7 +35,7 @@ approval: approved
 
 ## Status
 
-APPROVED / active fifth child READY. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` merged 2026-07-05 through game-design PR #1, creating the journal/gate hook. `STORY-GATE-001` merged 2026-07-05 through game-design PR #2, creating the hollow-gate reconciliation report and rule hooks. `STORY-DETERMINISM-001` merged 2026-07-08 through game-design PR #3, approving deterministic-by-default MVP behavior. `STORY-AI-001` is READY / approved as the next narrow Unity implementation packet.
+APPROVED / implementation complete, closeout READY. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` merged 2026-07-05 through game-design PR #1, creating the journal/gate hook. `STORY-GATE-001` merged 2026-07-05 through game-design PR #2, creating the hollow-gate reconciliation report and rule hooks. `STORY-DETERMINISM-001` merged 2026-07-08 through game-design PR #3, approving deterministic-by-default MVP behavior. `STORY-AI-001` merged 2026-07-08 through Unity PR #141, adding the narrow deterministic dumb strategic AI playtest opponent. `STORY-QA-015` is READY / approved as the closeout review packet.
 
 This epic is not direct Unity implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -93,7 +95,8 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-PLAYTEST-001 Playtest Journal and Gate Hook](../stories/story-playtest-001-playtest-journal-and-gate-hook.md) | DONE / merged | Playtest + Process | This epic; DATA-001 merged | Game-design PR #1 merged; publish CI passed |
 | [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | DONE / merged | Process/Tooling | This epic; PLAYTEST-001 merged | Game-design PR #2 merged; publish CI passed |
 | [STORY-DETERMINISM-001 Determinism and RNG Decision Record](../stories/story-determinism-001-determinism-and-rng-decision-record.md) | DONE / merged | Architecture/Design | This epic; data/scenario/save ADR; testing strategy | Game-design PR #3 merged; publish CI passed |
-| [STORY-AI-001 Dumb Strategic AI Playtest Opponent](../stories/story-ai-001-dumb-strategic-ai-playtest-opponent.md) | READY / approved | Logic/AI | Data/scenario contract; determinism ADR | Runnable prompt `production/sprints/codex-story-ai-001.prompt.txt`; Unity pointer PR #140 merged; pointer CI passed |
+| [STORY-AI-001 Dumb Strategic AI Playtest Opponent](../stories/story-ai-001-dumb-strategic-ai-playtest-opponent.md) | DONE / merged | Logic/AI | Data/scenario contract; determinism ADR | Unity PR #141 merged; exact-head and post-merge CI passed |
+| [STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review](../stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review.md) | READY / approved | QA / Closeout | All EPIC-015 child outputs merged | Runnable prompt `production/sprints/codex-story-qa-015.prompt.txt`; Unity pointer pending |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -119,7 +122,7 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Epic DONE gate
 
-- [ ] Data/scenario/save ADR is accepted or replaced.
+- [x] Data/scenario/save ADR is accepted or replaced.
 - [x] Current scenario has a data contract/extraction path or a documented blocker.
 - [x] Playtest journal exists and is referenced by future closeout gates.
 - [x] Determinism decision is recorded.
@@ -128,4 +131,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / active fifth child READY. `STORY-DATA-001`, `STORY-PLAYTEST-001`, `STORY-GATE-001`, and `STORY-DETERMINISM-001` are DONE / merged. Execute next only through READY child stories; `STORY-AI-001` is the current approved narrow Unity implementation packet and the Unity README pointer is updated.
+APPROVED / implementation complete, closeout READY. `STORY-DATA-001`, `STORY-PLAYTEST-001`, `STORY-GATE-001`, `STORY-DETERMINISM-001`, and `STORY-AI-001` are DONE / merged. Execute next only through READY child stories; `STORY-QA-015` is the current approved narrow Unity closeout packet and the Unity README pointer must be updated before Codex runs.

@@ -1,7 +1,7 @@
 ---
 title: EPIC-VSLICE-MVP-015 Post-Audit Foundation Pivot and Reconciliation
 type: epic
-status: approved
+status: done
 phase: production
 owner: shared
 created: 2026-07-03
@@ -35,7 +35,7 @@ approval: approved
 
 ## Status
 
-APPROVED / implementation complete, closeout READY. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` merged 2026-07-05 through game-design PR #1, creating the journal/gate hook. `STORY-GATE-001` merged 2026-07-05 through game-design PR #2, creating the hollow-gate reconciliation report and rule hooks. `STORY-DETERMINISM-001` merged 2026-07-08 through game-design PR #3, approving deterministic-by-default MVP behavior. `STORY-AI-001` merged 2026-07-08 through Unity PR #141, adding the narrow deterministic dumb strategic AI playtest opponent. `STORY-QA-015` is READY / approved as the closeout review packet.
+DONE / closed. Closeout verdict `CLOSE EPIC-015` recorded by `STORY-QA-015` through Unity PR #143; post-merge main CI passed. Human approval recorded 2026-07-03: "Approved" for the post-audit mini-epic recommended after the full three-repo audit. `STORY-DATA-001` merged 2026-07-05 through Unity PR #138, proving the first data/scenario extraction slice. `STORY-PLAYTEST-001` merged 2026-07-05 through game-design PR #1, creating the journal/gate hook. `STORY-GATE-001` merged 2026-07-05 through game-design PR #2, creating the hollow-gate reconciliation report and rule hooks. `STORY-DETERMINISM-001` merged 2026-07-08 through game-design PR #3, approving deterministic-by-default MVP behavior. `STORY-AI-001` merged 2026-07-08 through Unity PR #141, adding the narrow deterministic dumb strategic AI playtest opponent. `STORY-QA-015` merged 2026-07-08 through Unity PR #143, closing the epic.
 
 This epic is not direct Unity implementation authority. Agents and Codex may only implement READY child stories.
 
@@ -96,7 +96,7 @@ Agents and Codex may not implement this epic directly. They may only implement R
 | [STORY-GATE-001 Hollow Gate and Source-Truth Reconciliation](../stories/story-gate-001-hollow-gate-and-source-truth-reconciliation.md) | DONE / merged | Process/Tooling | This epic; PLAYTEST-001 merged | Game-design PR #2 merged; publish CI passed |
 | [STORY-DETERMINISM-001 Determinism and RNG Decision Record](../stories/story-determinism-001-determinism-and-rng-decision-record.md) | DONE / merged | Architecture/Design | This epic; data/scenario/save ADR; testing strategy | Game-design PR #3 merged; publish CI passed |
 | [STORY-AI-001 Dumb Strategic AI Playtest Opponent](../stories/story-ai-001-dumb-strategic-ai-playtest-opponent.md) | DONE / merged | Logic/AI | Data/scenario contract; determinism ADR | Unity PR #141 merged; exact-head and post-merge CI passed |
-| [STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review](../stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review.md) | READY / approved | QA / Closeout | All EPIC-015 child outputs merged | Runnable prompt `production/sprints/codex-story-qa-015.prompt.txt`; Unity pointer PR #142 merged; pointer CI passed |
+| [STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review](../stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review.md) | DONE / merged | QA / Closeout | All EPIC-015 child outputs merged | Unity PR #143 merged; exact-head and post-merge CI passed; verdict `CLOSE EPIC-015` |
 
 Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, REVIEW, DONE, BLOCKED.
 
@@ -131,4 +131,4 @@ Allowed story statuses: Draft, NEEDS WORK, READY-candidate, READY, IN PROGRESS, 
 
 ## Verdict
 
-APPROVED / implementation complete, closeout READY. `STORY-DATA-001`, `STORY-PLAYTEST-001`, `STORY-GATE-001`, `STORY-DETERMINISM-001`, and `STORY-AI-001` are DONE / merged. Execute next only through READY child stories; `STORY-QA-015` is the current approved narrow Unity closeout packet and the Unity README pointer is updated.
+DONE / closed. `STORY-DATA-001`, `STORY-PLAYTEST-001`, `STORY-GATE-001`, `STORY-DETERMINISM-001`, `STORY-AI-001`, and `STORY-QA-015` are DONE / merged. Closeout verdict: `CLOSE EPIC-015`. No next capability train is authorized without separate human direction.

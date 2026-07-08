@@ -1,7 +1,7 @@
 ---
 title: STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-08
@@ -29,7 +29,15 @@ approval: approved
 
 ## Status
 
-READY / approved. Prepared 2026-07-08 after `STORY-AI-001` merged through Unity PR #141 and post-merge `main` CI passed. Unity README current-task pointer PR #142 merged as `ceb19fbb33dd7cd7a1ec6ba7275696df3dc3e715`; exact-head pointer PR CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936548067 and post-merge pointer main CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28936935049. This is a narrow Unity QA/playtest closeout packet for EPIC-015, not a new feature train.
+DONE / merged. Unity PR #143 merged 2026-07-08 with closeout verdict `CLOSE EPIC-015`. Merge commit: `a504588edbb96b4b048293ef0eb8ec45aad832d6`. Exact-head Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28939994181 for head `9ae43f98bb646338c24a0d2d1550bd737631f327`; post-merge main Unity Foundation CI passed at https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28940806507. Review fix: dumb StrategicAI failed-turn partial mutation edge case was fixed with rollback regression coverage. Non-fatal artifact quota/cache annotations appeared while required jobs concluded success.
+
+Merge evidence:
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/143
+- Merge commit: `a504588edbb96b4b048293ef0eb8ec45aad832d6`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28939994181
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28940806507
+- Closeout evidence: `production/evidence/STORY-QA-015/README.md` in the Unity repo.
 
 Pointer evidence:
 
@@ -94,12 +102,12 @@ Not authorized by this story:
 
 ## Acceptance criteria
 
-- [ ] The merged EPIC-015 surface is reviewed on current Unity `main` at 1280x720.
-- [ ] The review explicitly addresses scenario data loading, dumb StrategicAI turn cycle, failed-turn partial-mutation risk, deterministic/no-randomness policy, playtest journal hook, and hollow-gate/source-truth reconciliation discoverability.
-- [ ] Any concrete in-scope closeout blockers are fixed narrowly, or the story records why no fix was needed.
-- [ ] Evidence under Unity `production/evidence/STORY-QA-015/` documents the inspected surface if a Unity PR is opened.
-- [ ] Exact-head Unity Foundation CI passes before merge if any Unity PR is opened.
-- [ ] Closeout verdict is recorded: `CLOSE EPIC-015`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT / NEEDS HUMAN PLAYTEST`.
+- [x] The merged EPIC-015 surface is reviewed on current Unity `main` at 1280x720.
+- [x] The review explicitly addresses scenario data loading, dumb StrategicAI turn cycle, failed-turn partial-mutation risk, deterministic/no-randomness policy, playtest journal hook, and hollow-gate/source-truth reconciliation discoverability.
+- [x] Any concrete in-scope closeout blockers are fixed narrowly, or the story records why no fix was needed.
+- [x] Evidence under Unity `production/evidence/STORY-QA-015/` documents the inspected surface if a Unity PR is opened.
+- [x] Exact-head Unity Foundation CI passes before merge if any Unity PR is opened.
+- [x] Closeout verdict is recorded: `CLOSE EPIC-015`, `ONE NARROW FOLLOW-UP`, or `REJECT CLOSEOUT / NEEDS HUMAN PLAYTEST`.
 
 ## Verification requirements
 
@@ -145,4 +153,4 @@ Human-approved answers / assumptions:
 
 ## Verdict
 
-READY / approved. Run only the narrow EPIC-015 closeout review and direct blocker-fix scope. Do not promote or implement the next capability train from this packet.
+DONE / merged. Closeout verdict: `CLOSE EPIC-015`. The EPIC-015 foundation pivot is closed; do not promote or implement the next capability train without separate human direction.

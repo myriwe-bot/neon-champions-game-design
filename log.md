@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-08] merge | STORY-QA-015 merged and EPIC-015 closed
+
+- Reviewed and merged Unity PR #143 for `STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review`: https://github.com/myriwe-bot/neon-champions-unity/pull/143
+- Merge commit: `a504588edbb96b4b048293ef0eb8ec45aad832d6`.
+- Exact-head PR Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28939994181
+- Post-merge main Unity Foundation CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28940806507
+- Review fix: resolved dumb StrategicAI failed-turn partial mutation with runtime rollback and focused EditMode regression coverage.
+- Closeout verdict: `CLOSE EPIC-015`. Marked `STORY-QA-015` DONE / merged and `EPIC-VSLICE-MVP-015` DONE / closed.
+- Non-fatal CI artifact quota/cache annotations appeared, but all required jobs concluded success.
+
 ## [2026-07-08] merge | STORY-AI-001 merged and STORY-QA-015 prepared
 
 - Reviewed and merged Unity PR #141 for `STORY-AI-001 Dumb Strategic AI Playtest Opponent`: https://github.com/myriwe-bot/neon-champions-unity/pull/141

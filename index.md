@@ -198,14 +198,14 @@
 - [[production/epics/epic-vslice-mvp-014-tactical-role-counterplay-and-combat-decision-readability|EPIC-VSLICE-MVP-014 Tactical Role Counterplay and Combat Decision Readability]] — DONE / closed tactical role counterplay readability epic.
 - [[production/stories/story-tac-role-001-tactical-role-counterplay-readability-smoke|STORY-TAC-ROLE-001 Tactical Role Counterplay Readability Smoke]] — DONE / merged.
 - [[production/planning/post-audit-foundation-pivot-2026-07-03]] — APPROVED post-audit foundation pivot brief.
-- [[production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation]] — APPROVED / implementation complete, closeout READY post-audit foundation/reconciliation epic.
+- [[production/epics/epic-vslice-mvp-015-post-audit-foundation-pivot-and-reconciliation]] — DONE / closed post-audit foundation/reconciliation epic.
 - [[production/stories/story-data-001-static-scenario-data-contract-and-scenario-extraction-prep]] — DONE / merged first data/scenario extraction packet.
 - [[production/stories/story-playtest-001-playtest-journal-and-gate-hook]] — DONE / merged playtest journal/gate hook.
 - [[production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation]] — DONE / merged hollow-gate/source-truth reconciliation.
 - [[production/stories/story-determinism-001-determinism-and-rng-decision-record]] — DONE / merged determinism and RNG decision record.
 - [[production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent]] — DONE / merged dumb strategic AI playtest opponent packet.
-- [[production/stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review]] — READY / approved EPIC-015 foundation pivot playtest and closeout review.
-- [[production/sprints/codex-story-qa-015.prompt.txt]] — runnable Codex handoff for STORY-QA-015 after Unity README pointer update.
+- [[production/stories/story-qa-015-epic-015-foundation-pivot-playtest-and-closeout-review]] — DONE / merged EPIC-015 foundation pivot playtest and closeout review.
+- [[production/sprints/codex-story-qa-015.prompt.txt]] — historical Codex handoff used for STORY-QA-015.
 
 ## Production Reconciliation
 

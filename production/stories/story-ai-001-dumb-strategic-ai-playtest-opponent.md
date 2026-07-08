@@ -29,8 +29,10 @@ READY / approved. Promoted 2026-07-08 after `STORY-DETERMINISM-001` merged and p
 
 Pointer evidence:
 
-- Unity README current-task pointer must name this story before Codex implementation starts.
-- Pointer update PR/CI evidence is recorded in the design log after the docs-only Unity pointer PR merges.
+- Unity pointer PR: https://github.com/myriwe-bot/neon-champions-unity/pull/140
+- Pointer merge commit: `d18b25bf21441005ac543ef7b542c0c1cf5236db`
+- Exact-head pointer PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28923730106
+- Post-merge pointer main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/28924095023
 
 ## Story type
 
@@ -80,7 +82,7 @@ As a solo tester, I need a dumb deterministic strategic opponent, so playtests c
 
 - `STORY-DATA-001` DONE / merged.
 - `STORY-DETERMINISM-001` DONE / merged; deterministic-by-default policy approved.
-- Unity README current-task pointer names this story through a CI-gated docs PR.
+- Unity README current-task pointer names this story through PR #140; exact-head and post-merge pointer CI passed.
 
 ## Acceptance criteria
 

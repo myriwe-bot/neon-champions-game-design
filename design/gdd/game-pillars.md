@@ -5,7 +5,7 @@ status: draft
 phase: concept
 owner: shared
 created: 2026-05-22
-updated: 2026-05-30
+updated: 2026-07-10
 source_lore:
   [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
 related: [design/gdd/game-concept, design/game-design-principles]
@@ -50,11 +50,11 @@ Served by: faction buildings, unit lines, resource preferences, Intel use, body 
 
 ### Pillar: Wilderness Without Escapism
 
-Definition: The first campaign should recover the wonder and danger of fantasy wilderness through grounded cyberpunk Arctic distance, weather, animals, logistics, and small outposts with global stakes.
+Definition: The first campaign should recover the wonder and danger of fantasy wilderness through grounded cyberpunk Arctic distance, weather, animals, logistics, and small outposts with global stakes. Its unnamed fictional region is internally Greenland-inspired without being publicly identified as Greenland.
 
 Design test: If wilderness becomes empty scenery, turn it into route risk, sensor uncertainty, local knowledge, convoy cost, survival infrastructure, or moral pressure.
 
-Served by: Greenland routes, weather events, isolated hubs, wilderness patrols, wildlife systems, air/sea mobility, local consent, search-and-rescue.
+Served by: Arctic routes, weather events, isolated hubs, wilderness patrols, wildlife systems, air/sea mobility, local consent, search-and-rescue.
 
 ### Pillar: Intel Turns Secrets Into Power
 
@@ -78,9 +78,9 @@ The map should preserve recognizable states and places but make lived power visi
 
 The UNP can coordinate Treaty Net and AGI Compact systems, but it cannot solve corporate capture, private grids, dark nets, pirate meshes, or political conflict.
 
-### Anti-Pillar: No Fertile-Greenland Fantasy
+### Anti-Pillar: No Fertile-Arctic Fantasy
 
-Greenland should be newly accessible and contested, not magically transformed into a broad agricultural paradise. Food systems are fisheries, greenhouses, cold-chain logistics, nutrients, and symbolic green zones.
+The first region should be newly accessible and contested, not magically transformed into a broad agricultural paradise. Food systems are fisheries, greenhouses, cold-chain logistics, nutrients, and symbolic green zones.
 
 ### Anti-Pillar: No Agent-Authored Design Drift
 
@@ -88,4 +88,4 @@ Agents may propose and critique but may not silently turn exploratory ideas into
 
 ## Gate Status
 
-Draft, stronger than prior scaffold, not yet approved. Needs user decision on first campaign name, faction start, Blue Monday / Blue Week cause framing, and remaining MVP scope boundaries. Current naming direction: Blue Monday is the initial sky-break event; Blue Week is later/retrospective framing.
+Draft, stronger than prior scaffold, not yet approved. First-campaign geography is now constrained to an unnamed fictional Arctic region internally inspired by Greenland; its exact name/polity remains open. Further decisions remain on faction start, Blue Monday / Blue Week cause detail, and product-depth boundaries. Blue Monday is the initial sky-break event; Blue Week is later/retrospective framing.

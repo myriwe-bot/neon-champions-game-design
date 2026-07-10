@@ -306,14 +306,14 @@ Matchup meaning:
 - The first MVP faction pair becomes **certification versus concession** as much as **sensors versus steel**.
 - Barents asks: _what is safe, legal, visible, measurable, and certified?_
 - Janus-Kestrel asks: _what is cleared, routed, extracted, delivered, bonded, and enforced?_
-- This gives the MVP matchup a grounded corporate conflict over Arctic/Greenland logistics, extraction, data, route truth, and physical control.
+- This gives the prototype matchup a grounded corporate conflict over Arctic logistics, extraction, data, route truth, and physical control.
 
 Naming notes:
 
 - Use **Barents Research Group** for the parent/global faction name.
 - Use **Polar Certification Combine** when a more battlefield-facing or campaign-map formation label is useful.
 - Use **Janus-Kestrel Continuity Group** for the parent/global faction name.
-- Use **Mining-Logistics Consortium** when a more battlefield-facing or Greenland/extraction-specific formation label is useful.
+- Use **Mining-Logistics Consortium** when a more battlefield-facing or Arctic-extraction-specific formation label is useful.
 - Avoid shortening Janus-Kestrel to only Janus or only Kestrel; the dual name preserves both threshold/legal control and fast relay/drone movement.
 
 Implementation readiness gates:

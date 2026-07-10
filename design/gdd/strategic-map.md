@@ -5,7 +5,7 @@ status: approved
 phase: systems-design
 owner: shared
 created: 2026-05-30
-updated: 2026-06-26
+updated: 2026-07-10
 source_lore: [greenland, blue-monday, blue-week, white-sky, digital-net]
 related:
   [
@@ -26,7 +26,7 @@ approval: approved
 
 ## 1. Summary
 
-The strategic map is the main HoMM-like decision surface for Neon Champions. The MVP should prove that the game is not only a tactics demo: two factions contest a small Greenland scenario through Champion movement, site control, resource gains, recruitment/reinforcement, and tactical battles.
+The strategic map is the main HoMM-like decision surface for Neon Champions. The first playable product should prove that the game is not only a tactics demo: factions contest an unnamed fictional Arctic region through Champion movement, site control, resource gains, recruitment/reinforcement, and tactical battles. The region is internally grounded in Greenland research but is not publicly identified as Greenland.
 
 Quick reference:
 
@@ -181,7 +181,7 @@ The first playable strategic map must make these visible:
 
 ### Packet C Decision: C/D Hybrid
 
-Approved direction: use an authored node-route graph for MVP rules, presented over a visual Greenland map. Keep the data model abstract enough that a later tile/grid or richer spatial layer is not blocked.
+Approved direction: use an authored node-route graph for prototype rules, presented over a visual Arctic-region map. Keep the data model abstract enough that a later tile/grid or richer spatial layer is not blocked.
 
 This is a hybrid of:
 
@@ -329,7 +329,7 @@ MVP infrastructure/theme types:
 | Theme Type                               | Can Use Categories               | Notes                                                                    |
 | ---------------------------------------- | -------------------------------- | ------------------------------------------------------------------------ |
 | Mining / Extraction Site                 | Resource, Guard, Objective       | Good for material resources and faction conflict.                        |
-| Fishery / Cold-Chain Site                | Resource, Objective, Visit       | Grounds Greenland economy and logistics.                                 |
+| Fishery / Cold-Chain Site                | Resource, Objective, Visit       | Grounds the Arctic regional economy and logistics.                        |
 | Sensor / White Sky Node                  | Intel, Objective, Guard, Visit   | Connects climate/geoengineering and information control.                 |
 | Clinic / Bodytech Site                   | Recruitment, Upgrade, Visit      | Supports bodies, recovery, legitimacy, later Champion/army consequences. |
 | Recruitment Contractor / Local Ally Site | Recruitment, Visit, Guard        | Provides units or reinforcement access without a full town system.       |

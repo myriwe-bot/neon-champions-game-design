@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-07-10] decision | Accelerated prototype and Early Access direction
+
+- Recorded owner direction for a fully playable prototype in approximately eight weeks with normal UI, initial graphics, sound, and game-feel presentation.
+- Recorded the six-month target as a near-shipping Early Access candidate rather than a narrow demo, including four factions, broad Claude-plan systems, campaign/skirmish, save/load, editor/tooling, mod packaging, async multiplayer beta, graphics, audio, accessibility, performance, packaging, and polish.
+- Created `production/planning/accelerated-prototype-and-early-access-plan-2026-07-10.md` as an in-review detailed sequencing proposal; it is not implementation authority until approved.
+- Reframed the first campaign as an unnamed fictional Arctic region, internally grounded in Greenland after ice-shelf retreat but not player-facing as Greenland; rejected `Meridian Shelf` and left the final name/polity open.
+- Corrected `docs/architecture/determinism-and-rng-adr.md`: deterministic behavior is a temporary prototype engineering baseline, not a human-approved permanent identity; likely damage ranges and seeded randomness will be revisited after a stable playtestable baseline.
+- Preserved Command / Operations / Doctrine as current authority and recorded army-generated Bandwidth as an exploratory idea rather than an approved replacement.
+- Recorded the world-vault rename from Tryzub Systems to Vezha Systems, retaining Dnipro Systems and Sich Dynamics as subsidiaries and keeping Vezha separate from Janus-Kestrel.
+- Updated concept, pillars, strategic-map, faction-roster, tactical-roster, index, and architecture wording to reflect the new direction.
+
 ## [2026-07-08] merge | STORY-QA-015 merged and EPIC-015 closed
 
 - Reviewed and merged Unity PR #143 for `STORY-QA-015 EPIC-015 Foundation Pivot Playtest and Closeout Review`: https://github.com/myriwe-bot/neon-champions-unity/pull/143

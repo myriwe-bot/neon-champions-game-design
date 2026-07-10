@@ -5,7 +5,7 @@ status: draft
 phase: concept
 owner: shared
 created: 2026-05-22
-updated: 2026-05-30
+updated: 2026-07-10
 source_lore:
   [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
 related:
@@ -23,11 +23,11 @@ approval: pending
 
 Neon Champions is a single-player-first turn-based strategy/RPG inspired by Heroes of Might and Magic III and Olden Era, translated into a no-magic cyberpunk world where Champions lead factions through infrastructure wars, polluted information, body technology, and public legitimacy struggles.
 
-The strongest first campaign direction is Greenland during Blue Monday, later remembered as the start of Blue Week: a sparse Arctic strategic theater of outposts, mines, fishery hubs, sensor stations, White Sky infrastructure, Treaty Net nodes, and corporate development spectacle. The player should feel like they are commanding a mythic public operator in a world where every road, feed, body, mine, and sky system is owned, contested, or failing.
+The first campaign takes place in an as-yet-unnamed fictional Arctic region during Blue Monday, later remembered as the start of Blue Week: a sparse strategic theater of outposts, mines, fishery hubs, sensor stations, White Sky infrastructure, Treaty Net nodes, and corporate development spectacle. Internally, geography and material conditions are grounded in research on Greenland after major ice-shelf retreat, but the player-facing location is not explicitly Greenland and no final replacement name or polity is approved. The player should feel like they are commanding a mythic public operator in a world where every road, feed, body, mine, and sky system is owned, contested, or failing.
 
 ## Elevator Pitch
 
-Lead Champions across Greenland’s Blue Monday crisis: capture outposts, recruit crews, raid guarded sites, steal Intel, upgrade cyberpunk assets, manipulate proof and public legitimacy, and decide who controls the infrastructure that keeps the world alive under the White Sky.
+Lead Champions through an Arctic Blue Monday crisis: capture outposts, recruit crews, raid guarded sites, steal Intel, upgrade cyberpunk assets, manipulate proof and public legitimacy, and decide who controls the infrastructure that keeps the world alive under the White Sky.
 
 ## Core Fantasy
 
@@ -67,7 +67,7 @@ Complete one campaign objective or scenario beat: secure a hub, expose a lie, ca
 
 ### Long-Term Progression
 
-Develop Champions, asset sets, faction hubs, recruitment networks, Intel upgrade paths, relationship/legitimacy states, and campaign consequences across multiple Greenland scenarios and later megacity/corporate-grid campaigns.
+Develop Champions, asset sets, faction hubs, recruitment networks, Intel upgrade paths, relationship/legitimacy states, and campaign consequences across multiple Arctic-region scenarios and later megacity/corporate-grid campaigns.
 
 ## Player Motivation Fit
 
@@ -77,9 +77,9 @@ Develop Champions, asset sets, faction hubs, recruitment networks, Intel upgrade
 
 ## Scope Tiers
 
-### MVP
+### Eight-Week Playable Prototype
 
-One Greenland region map with:
+One complete Arctic-region scenario with normal player-facing UI, initial graphics/audio, and:
 
 - 2 playable factions;
 - 2 Champions;
@@ -87,32 +87,34 @@ One Greenland region map with:
 - 8-12 map sites;
 - movement constraints;
 - full tactical battle prototype for guarded sites;
-- 4 prototype resources: Credits, Energy, Proof, Intel;
+- 3 active prototype resources: Credits, Materials, Intel;
 - basic asset equipment and Intel upgrade;
 - simple Digital-Net/proof overlay;
 - one Blue Monday / Blue Week crisis clock.
 
-### Vertical Slice
+### Six-Month Early Access Candidate
 
-A polished Blue Monday / Blue Week scenario with:
+A near-shipping Blue Monday / Blue Week product milestone with:
 
-- 3-4 factions;
+- 4 playable factions;
 - 4-6 Champions;
 - hub building trees;
 - recruitment sites;
-- tactical battle prototype;
+- complete strategic/tactical loop and AI;
 - asset sets;
 - local legitimacy mechanics;
 - physical and Digital-Net layers;
-- authored events and multiple victory paths.
+- authored events and multiple victory paths;
+- campaign, skirmish, save/load, editor, mod packaging, and async multiplayer beta;
+- graphics, sound, accessibility, performance, packaging, and polish sufficient for an Early Access launch decision.
 
-### Alpha
+### Post-Early Access Expansion
 
-Complete first Greenland campaign arc with multiple scenarios, editor-ready map data, richer faction rosters, AI opponents, campaign persistence, and narrative consequences.
+Complete and expand the first Arctic campaign arc beyond the Early Access candidate with additional scenarios, factions, content depth, and narrative consequences.
 
 ### Full Vision
 
-Multiple campaigns including Greenland wilderness/infrastructure, a megacity/corporate-grid setting, and player/community map editor support with templates and scenario scripting.
+Multiple campaigns including Arctic wilderness/infrastructure, a megacity/corporate-grid setting, and player/community map editor support with templates and scenario scripting.
 
 ## Visual Identity Anchor
 
@@ -123,8 +125,8 @@ White daylight cyberpunk: pale engineered sky, hard Arctic terrain, neon against
 | Risk                                      | Type             | Severity | Mitigation                                                                                  |
 | ----------------------------------------- | ---------------- | -------: | ------------------------------------------------------------------------------------------- |
 | Core fun hypothesis untested              | Design           |     High | Build MVP prototype before production.                                                      |
-| Greenland becomes exotic scenery          | Narrative/design |     High | Make local consent, sovereignty, and infrastructure dependency mechanically visible.        |
-| Too many resources                        | Systems          |     High | Prototype with Credits, Energy, Proof, Intel only.                                          |
+| Arctic region becomes exotic scenery      | Narrative/design |     High | Make local consent, sovereignty, and infrastructure dependency mechanically visible.        |
+| Too many resources                        | Systems          |     High | Keep the prototype economy to Credits, Materials, and Intel.                                |
 | Intel becomes generic mana                | Systems/theme    |   Medium | Tie sources/sinks to secrets, proof, research, and asset upgrades.                          |
 | No-magic cyberpunk loses HoMM readability | UX/design        |     High | Preserve towns, guarded sites, resources, routes, dwellings, hero assets, and turn clarity. |
 | UNP Net authority cleans up the setting   | Worldbuilding    |   Medium | Keep it treaty-bound, partial, contested, and dependent on corporate/state cooperation.     |
@@ -134,7 +136,7 @@ White daylight cyberpunk: pale engineered sky, hard Arctic terrain, neon against
 
 | Question                                                                                                       | Owner  | Deadline                    | Resolution                                                                                     |
 | -------------------------------------------------------------------------------------------------------------- | ------ | --------------------------- | ---------------------------------------------------------------------------------------------- |
-| Should the first campaign use real Greenland/Kalaallit Nunaat or a fictionalized Arctic autonomy?              | Human  | Before concept approval     | Pending                                                                                        |
+| Should the first campaign use real Greenland/Kalaallit Nunaat or a fictionalized Arctic autonomy?              | Human  | Before concept approval     | Resolved 2026-07-10: fictional Arctic region, internally Greenland-inspired; exact name/polity remains open.   |
 | Is Blue Monday primarily the initial sky-break event, with Blue Week as the later/retrospective crisis period? | Human  | Before concept approval     | Current direction: Blue Monday is the initial event; Blue Week is later/retrospective framing. |
 | What is the first player faction?                                                                              | Human  | Before systems design       | Pending                                                                                        |
 | What should the UNP Net security body be called?                                                               | Human  | Before world slice approval | Digital Peacekeeping Directorate; commonly the Blue / the Blues.                               |

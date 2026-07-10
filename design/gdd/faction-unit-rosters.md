@@ -1,5 +1,5 @@
 ---
-title: Greenland Faction Unit Rosters
+title: Arctic Campaign Faction Unit Rosters
 type: system-gdd
 status: draft
 phase: systems-design
@@ -18,7 +18,7 @@ related:
 approval: pending
 ---
 
-# Greenland Faction Unit Rosters
+# Arctic Campaign Faction Unit Rosters
 
 ## One-Line Summary
 
@@ -41,9 +41,9 @@ The best antagonist/side-faction layer is:
 
 ## Cultural Naming Note
 
-Avoid using **Kalaallit** as a faction brand. It is the real endonym connected to Greenlandic national and cultural identity, and using it as a playable strategy-faction label risks turning a living people into game IP.
+Avoid using **Kalaallit** or another living national/Indigenous endonym as a faction brand. The first campaign is now an unnamed fictional Arctic region, internally informed by Greenland research; that does not authorize turning real cultural identity into game IP.
 
-Safer current placeholder: **Home Rule Coalition**. It describes a political formation in the fiction without claiming to represent all Greenlandic people or appropriating the endonym as a brand. Real Greenland / Kalaallit Nunaat can still be treated respectfully as a place with local sovereignty, municipalities, languages, communities, and interests.
+Safer current placeholder: **Home Rule Coalition**. It describes a political formation in the fiction without claiming to represent a whole living people. Greenland / Kalaallit Nunaat remains internal research context, not the player-facing campaign location.
 
 ## Shared Unit Design Rules
 
@@ -77,7 +77,7 @@ Local sovereignty under pressure. The faction wins by knowing the land, protecti
 
 ### Visual Identity
 
-Weathered civic gear, sealift containers, municipal rescue orange, hunter/fisher equipment, patched drones, sled/ATV logistics, community mesh radios, snow camouflage, old Danish/Greenlandic/UN markings repainted by local councils.
+Weathered civic gear, sealift containers, municipal rescue orange, hunter/fisher equipment, patched drones, sled/ATV logistics, community mesh radios, snow camouflage, and old municipal/UN/corporate markings repainted by local councils.
 
 ### Tactical Identity
 
@@ -174,7 +174,7 @@ Scouting, targeting, route control, drones, debuffs through sensor superiority, 
 ### Strongest Unit Ideas
 
 - **Risk Actuaries**: ridiculous name on purpose, but cyberpunk-strong — people whose models decide who is allowed to move.
-- **Cable Divers**: great Greenland-specific unit; ports, cables, under-ice infrastructure, sabotage.
+- **Cable Divers**: strong Arctic-specific unit; ports, cables, under-ice infrastructure, sabotage.
 - **Black-Ice Wardens**: elite polar cyber-security / physical exclusion team; name also nods to cyberpunk ICE.
 
 ## Digital Peacekeeping Directorate — the Blue / the Blues

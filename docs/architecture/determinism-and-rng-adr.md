@@ -1,11 +1,11 @@
 ---
 title: Determinism and RNG ADR
 type: adr
-status: approved
+status: accepted-with-risk
 phase: production
 owner: shared
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-10
 source_lore: []
 related:
   [
@@ -18,18 +18,31 @@ related:
     design/gdd/strategic-map,
     design/gdd/tactical-combat,
   ]
-approval: approved
+approval: accepted-with-risk
 ---
 
 # Determinism and RNG ADR
 
 ## Decision
 
-Near-term MVP gameplay is deterministic by default.
+Current prototype gameplay remains deterministic by default **as a temporary engineering baseline**, not as the final product identity.
 
-Neon Champions should not add random damage, hit/crit rolls, randomized rewards, procedural generation, AI randomness, hidden information rolls, or other save/replay-affecting random behavior until a separate READY story approves an explicit seeded RNG service and its test, save, replay, debug, data, and CI rules.
+Neon Champions should not add random damage, hit/crit rolls, randomized rewards, procedural generation, AI randomness, hidden information rolls, or other save/replay-affecting random behavior until the current loop is stably playtestable and a separate READY story approves an explicit seeded RNG service and its test, save, replay, debug, data, preview, and CI rules.
 
-This chooses the first branch left open by the data/scenario/save ADR: embrace deterministic runtime behavior for MVP and move uncertainty into authored state, player knowledge, and dirty/source-tagged information instead of implicit numeric randomness.
+The likely product direction includes visible tactical damage ranges and controlled seeded randomness. The exact range, stream ownership, and affected systems remain deliberately undecided until baseline combat can be evaluated by humans.
+
+## Human correction — 2026-07-10
+
+The owner clarified that the earlier deterministic-by-default decision did not receive meaningful human design input. It must not be treated as a locked creative decision or faction identity.
+
+Therefore:
+
+1. Existing deterministic runtime behavior remains valid and should not be destabilized prematurely.
+2. Determinism is not the intended permanent product rule by default.
+3. Reach a readable, fully playable combat baseline first.
+4. Then run a focused damage-range/randomness design and playtest packet.
+5. Any adopted randomness must be seeded, reproducible, serializable, replay/debug visible, and honestly previewed to the player.
+6. This correction supersedes language elsewhere that describes pure determinism as the settled game identity.
 
 ## Context
 
@@ -151,7 +164,7 @@ Compact follow-ups if future scope needs them:
 
 This ADR is ready for story PR review when:
 
-- it records deterministic-by-default as the near-term MVP policy;
+- it records deterministic-by-default as the temporary prototype engineering baseline;
 - it separates dirty/source-tagged uncertainty from numeric randomness;
 - it names future randomness stop conditions;
 - it records testing, replay/debug, save, data/scenario, and CI implications;

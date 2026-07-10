@@ -1,7 +1,7 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-07-08
-> Current phase: Production — post-audit foundation pivot + vertical-slice implementation
+> Last updated: 2026-07-10
+> Current phase: Production — accelerated eight-week prototype and six-month Early Access planning
 > Review mode: Lean default, Full for major gates
 
 ## Start Here
@@ -15,12 +15,12 @@
 ## Concept and GDDs
 
 - [[design/gdd/README]] — GDD reading guide for humans and LLM agents.
-- [[design/gdd/game-concept]] — current draft concept: HoMM3-inspired cyberpunk strategy/RPG beginning with Greenland during Blue Monday, later remembered as the start of Blue Week.
+- [[design/gdd/game-concept]] — current draft concept: HoMM3-inspired cyberpunk strategy/RPG beginning in an unnamed fictional Arctic region during Blue Monday, later remembered as the start of Blue Week.
 - [[design/gdd/game-pillars]] — current draft pillars and anti-pillars, including Intel, infrastructure power, dirty information, and wilderness without escapism.
 - [[design/gdd/systems-index]] — system map scaffold.
 - [[design/gdd/strategic-map]] — strategic-map MVP scope: two-faction local hotseat, duel/race scenario pacing, site control, resources, recruitment/reinforcement, and tactical battle handoff.
 - [[design/gdd/intel-resource]] — draft system GDD for Intel as Neon Champions' Alchemical Dust analogue.
-- [[design/gdd/faction-unit-rosters]] — draft unit roster concepts and faction tactical identities for the Greenland campaign.
+- [[design/gdd/faction-unit-rosters]] — draft unit roster concepts and faction tactical identities for the Arctic campaign.
 - [[design/gdd/tactical-combat]] — concise active tactical combat GDD for first-read design and AI implementation planning.
 - [[design/gdd/tactical-combat/section-map]] — preservation map for the tactical-combat split; confirms every original top-level section is still present in smaller articles.
 
@@ -55,6 +55,7 @@
 
 ## Production Planning
 
+- [[production/planning/accelerated-prototype-and-early-access-plan-2026-07-10]] — IN REVIEW plan for a fully playable eight-week prototype and near-shipping six-month Early Access candidate with four factions, editor/tooling, graphics, audio, broad systems, and polish.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.
@@ -177,7 +178,7 @@
 - [[docs/architecture/technical-decision-priorities]] — technical decision gate priorities.
 - [[docs/architecture/data-authoring-options]] — data authoring options and phased-hybrid decision.
 - [[docs/architecture/data-scenario-save-format-adr]] — approved post-audit data/static/scenario/runtime/save boundaries and first scenario-extraction direction.
-- [[docs/architecture/determinism-and-rng-adr]] — approved ADR choosing deterministic-by-default MVP behavior and seeded-RNG stop conditions.
+- [[docs/architecture/determinism-and-rng-adr]] — accepted-with-risk ADR: current deterministic runtime is a temporary prototype baseline; likely visible damage ranges/seeded randomness are revisited after the combat loop is playtestable.
 - [[docs/architecture/testing-strategy]] — strict layered testing ADR.
 - [[docs/architecture/ci-build-automation]] — strict CI/build automation ADR.
 - [[docs/architecture/merge-to-main-gate]] — approved workflow for rigorous PR merge gates before implementation branches land on main.

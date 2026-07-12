@@ -271,7 +271,7 @@ The first playable combat slice should be intentionally small.
 
 | Content            | Target                                                                                                                       |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| Factions           | 2 factions for contrast. Current candidate direction: Barents-aligned force vs Janus-Kestrel/corporate-security style force. |
+| Factions           | 2 factions for contrast. Current approved proof direction: Home Rule Coalition (HRC) vs QXZ Meridian Arctic Mandate.       |
 | Units per faction  | 4-6 unit lines for prototype; not full roster.                                                                               |
 | Abilities per unit | 1 standard attack + 0-2 defining abilities.                                                                                  |
 | Champions          | 1 Marshal-like and 1 Operator-like test profile if needed.                                                                   |
@@ -410,7 +410,7 @@ The original design-session work is preserved in smaller readable articles. Use 
 | Ammo, charges, cooldowns, logistics, reload/recharge, indirect/area attacks                                | [[design/gdd/tactical-combat/ammo-capacity-and-logistics]]         |
 | Champion operations, doctrine, progression, builds, assets, secondary skills, AP abilities                 | [[design/gdd/tactical-combat/champion-operations-and-progression]] |
 | MVP cut, implementation contracts, ability/effect schema, status/objective/info/save/replay contracts      | [[design/gdd/tactical-combat/implementation-contracts]]            |
-| MVP content matrix, faction-pair candidates, Barents role/stat/ability skeletons                           | [[design/gdd/tactical-combat/mvp-content-and-faction-rosters]]     |
+| Historical MVP content matrix and superseded Barents/Janus-Kestrel roster exploration; reference only     | [[design/gdd/tactical-combat/mvp-content-and-faction-rosters]]     |
 | Stack action principle, deferred elevation, open questions                                                 | [[design/gdd/tactical-combat/deferred-and-open-questions]]         |
 
 ## 14. Other Cross-References

@@ -16,6 +16,8 @@ approval: pending
 
 > This article preserves and reorganizes design-session content from [[design/research/tactical-combat-deep-reference]]. It is part of the tactical combat GDD split for readability. Do not treat missing context as permission to invent rules; check the active overview at [[design/gdd/tactical-combat]].
 
+> **Authority notice — 2026-07-12:** The former Barents-versus-Janus-Kestrel MVP faction direction preserved below has been superseded for the four-week proof and eight-week prototype by the owner-approved **HRC versus QXZ** direction in [[production/planning/full-project-review-and-completion-plan-2026-07-12]]. Use [[design/gdd/prototype-faction-contracts]] for the current proposed three-line prototype roster contract. The material below remains design history/reference and does not authorize implementation of Barents or Janus-Kestrel in the current proof.
+
 ## Article Contents
 
 - Tactical MVP Content Matrix

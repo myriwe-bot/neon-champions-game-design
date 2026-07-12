@@ -2,6 +2,11 @@
 
 > Append-only project log.
 
+## [2026-07-12] reconciliation | Prototype faction authority corrected
+
+- Corrected the active tactical-combat GDD from the superseded Barents-versus-Janus-Kestrel candidate to the owner-approved HRC-versus-QXZ proof direction.
+- Preserved the detailed Barents/Janus-Kestrel roster article as historical design reference, with an explicit notice that it does not authorize current proof implementation.
+
 ## [2026-07-12] planning | Four-week proof production packets drafted
 
 - Drafted the Product Constitution, HRC/QXZ six-facility and three-line prototype contracts, month-one proof scenario/capture plan, White Sky visual target and provenance ledger contract, and the normal player-shell UX specification.

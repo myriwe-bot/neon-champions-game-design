@@ -1,12 +1,12 @@
 ---
 title: STORY-UI-SHELL-001 Map-First Strategic UI and Normal Player Shell
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-12
 updated: 2026-07-12
-approval: pending
+approval: approved
 related: [production/epics/epic-016-accelerated-playable-product-foundation, design/ux/player-shell, docs/architecture/unity-technical-scheme]
 ---
 
@@ -46,8 +46,12 @@ EditMode tests for presentation-state mapping where logic exists; PlayMode journ
 
 ## Ambiguity gate
 
-FAIL until the Product Constitution and `design/ux/player-shell.md` are human-approved and current Unity presentation boundaries are inspected in the implementation branch. Do not run Codex implementation from this candidate yet.
+PASS. The Product Constitution, multi-reference player-shell direction, provisional HRC/QXZ identity contract, and proof scenario structure were human-approved on 2026-07-12. Before coding, inspect current Unity presentation boundaries; if implementation would require a UI framework migration, broad architecture rewrite, or gameplay-rule change, stop and report the conflict rather than inventing authority.
 
 ## Proposed branch
 
 `story/STORY-UI-SHELL-001-map-first-player-shell`
+
+## Verdict
+
+READY. Human-approved for implementation on 2026-07-12.

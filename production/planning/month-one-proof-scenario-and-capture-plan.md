@@ -1,12 +1,12 @@
 ---
 title: Month-One Proof Scenario and Capture Plan
 type: production-plan
-status: in-review
+status: approved
 phase: pre-production
 owner: shared
 created: 2026-07-12
 updated: 2026-07-12
-approval: pending
+approval: approved-provisional
 related: [production/planning/full-project-review-and-completion-plan-2026-07-12, design/gdd/prototype-faction-contracts, design/ux/player-shell]
 ---
 
@@ -15,6 +15,8 @@ related: [production/planning/full-project-review-and-completion-plan-2026-07-12
 ## Proof question
 
 Can Neon Champions communicate its complete identity—exploration, base choice, faction composition, tactical conflict, and contested public truth—in a coherent 20–30 minute slice?
+
+Human-approved on 2026-07-12 as the proof structure. Narrative details remain provisional and may be tuned without changing the required gameplay beats or faction-selectable HRC/QXZ frame.
 
 ## Scenario frame
 

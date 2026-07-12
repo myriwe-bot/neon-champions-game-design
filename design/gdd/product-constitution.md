@@ -1,12 +1,12 @@
 ---
 title: Neon Champions Product Constitution
 type: concept
-status: in-review
+status: approved
 phase: pre-production
 owner: human
 created: 2026-07-12
 updated: 2026-07-12
-approval: pending
+approval: approved
 related: [design/gdd/game-concept, design/gdd/game-pillars, production/planning/full-project-review-and-completion-plan-2026-07-12]
 ---
 
@@ -59,4 +59,4 @@ Every prototype feature must produce a player verb, an immediate readable conseq
 
 ## Approval gate
 
-Pending human approval as the north star. Approval authorizes reconciliation of `game-concept.md` and `game-pillars.md`; it does not approve final campaign canon, final balance, final region name, or post-prototype feature depth.
+Human-approved as the working north star on 2026-07-12. This does not approve final campaign canon, final balance, final randomness, final region name, or post-prototype feature depth.

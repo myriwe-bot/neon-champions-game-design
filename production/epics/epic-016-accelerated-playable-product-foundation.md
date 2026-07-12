@@ -22,7 +22,7 @@ A new player can complete a faction-selectable 20–30 minute HRC/QXZ slice and 
 
 ## Capability sequence
 
-1. `STORY-UI-SHELL-001` — map-first strategic shell and normal player flow (READY-candidate; approval blocked on UI spec/constitution review).
+1. `STORY-UI-SHELL-001` — READY map-first strategic shell and normal player flow; first authorized implementation packet.
 2. Vertical-look and asset-provenance integration spike.
 3. HRC/QXZ six-facility prototype content and base presentation.
 4. Three-line faction composition and tactical identity pass.

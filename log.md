@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-12] approval | EPIC-016 product direction and first implementation packet
+
+- Approved the Product Constitution as the working north star.
+- Approved the multi-reference player-shell direction as testable rather than a permanently fixed layout.
+- Approved the HRC/QXZ facility and unit-line contract provisionally; faction identities, names, values, tactical emphasis, and presentation may be tuned through implementation/playtesting.
+- Approved the month-one proof scenario structure with narrative details remaining provisional.
+- Promoted `STORY-UI-SHELL-001` to READY and converted its guarded prompt into the first runnable EPIC-016 implementation handoff.
+
 ## [2026-07-12] reconciliation | Prototype faction authority corrected
 
 - Corrected the active tactical-combat GDD from the superseded Barents-versus-Janus-Kestrel candidate to the owner-approved HRC-versus-QXZ proof direction.

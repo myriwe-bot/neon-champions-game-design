@@ -1,12 +1,12 @@
 ---
 title: HRC and QXZ Prototype Faction Contracts
 type: system-gdd
-status: in-review
+status: approved
 phase: systems-design
 owner: shared
 created: 2026-07-12
 updated: 2026-07-12
-approval: pending
+approval: approved-provisional
 related: [design/gdd/faction-unit-rosters, design/gdd/strategic-map, design/gdd/product-constitution]
 ---
 
@@ -14,7 +14,7 @@ related: [design/gdd/faction-unit-rosters, design/gdd/strategic-map, design/gdd/
 
 ## Scope
 
-Working contract for the four-week proof: six possible facilities and three tactical lines per faction. Names and exact values remain tunable; functions, tradeoffs, and anti-overlap require human approval before implementation.
+Human-approved provisional contract for the four-week proof: six possible facilities and three tactical lines per faction. HRC/QXZ identities, facility and unit names, exact values, tactical emphasis, and presentation may be tuned through implementation and playtesting without reopening the faction-pair decision. Material changes to moral framing or core strategic identity still require human approval.
 
 ## Home Rule Coalition
 

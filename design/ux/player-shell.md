@@ -1,12 +1,12 @@
 ---
 title: Player Shell and UI Reference Synthesis
 type: ux-spec
-status: in-review
+status: approved
 phase: pre-production
 owner: shared
 created: 2026-07-12
 updated: 2026-07-12
-approval: pending
+approval: approved
 related: [design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12, design/gdd/product-constitution]
 ---
 
@@ -15,6 +15,8 @@ related: [design/research/zero-budget-prototype-assets-and-reference-games-2026-
 ## Direction
 
 The shell is not “Civilization V UI.” It combines lessons from several references while preserving a distinct White Sky cyberpunk identity. No single game owns the layout.
+
+Human-approved on 2026-07-12 as a testable direction. Exact layouts remain subject to implementation evidence and playtesting rather than permanent lock.
 
 ## Reference responsibilities
 

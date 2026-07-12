@@ -1,0 +1,44 @@
+---
+title: Prototype Visual Target and Asset Ledger Contract
+type: art-spec
+status: in-review
+phase: pre-production
+owner: shared
+created: 2026-07-12
+updated: 2026-07-12
+approval: pending
+related: [design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12, design/ux/player-shell]
+---
+
+# Prototype Visual Target and Asset Ledger Contract
+
+## Target
+
+White-daylight cyberpunk: pale engineered sky, dark industrial infrastructure, snow/ice/rust, highly controlled faction emissions, readable silhouettes, and a restrained player shell. The proof should look intentionally stylized, not like unrelated free packs hidden by bloom.
+
+## Faction language
+
+- HRC: repaired layers, civic/rescue orange, warm practical lights, reused structures, visible local modification.
+- QXZ: pearl/white sealed geometry, pale-blue hazard light, sensor precision, branded climate systems, controlled cleanliness.
+
+## Zero-budget pipeline
+
+CC0 modular geometry + controlled PBR material library + shared White Sky shaders + custom decals/icons/VFX/UI. Use generated imagery only as provenance-tracked temporary direction or replace-later material.
+
+## Asset acceptance gate
+
+Every imported asset must pass license, provenance, silhouette, camera readability, scale, material-remap, animation, performance, and replacement-status checks.
+
+## Canonical ledger
+
+Unity repository path: `Assets/Provenance/asset-ledger.csv`.
+Required columns: `asset_id, source_url, author, license, license_url, downloaded_date, original_filename, local_path, modifications, attribution_text, intended_use, status, reviewer`.
+Allowed status: `prototype`, `replace-later`, `candidate-final`, `rejected`.
+
+## Vertical-look spike
+
+Before broad asset import, produce one representative scene containing: strategic site/base silhouette, one HRC unit group, one QXZ unit group, snow/industrial terrain, selection state, one action VFX/SFX event, and player-shell framing. Approve or revise that image before scaling content.
+
+## Capture quality gate
+
+No raw IDs; stable hierarchy at 1080p; factions distinguishable without labels; interactable sites readable by silhouette; selected/reachable/hostile states remain distinguishable without color alone; license ledger complete for every visible external asset.

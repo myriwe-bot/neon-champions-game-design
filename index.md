@@ -17,6 +17,8 @@
 - [[design/gdd/README]] — GDD reading guide for humans and LLM agents.
 - [[design/gdd/game-concept]] — current draft concept: HoMM3-inspired cyberpunk strategy/RPG beginning in an unnamed fictional Arctic region during Blue Monday, later remembered as the start of Blue Week.
 - [[design/gdd/game-pillars]] — current draft pillars and anti-pillars, including Intel, infrastructure power, dirty information, and wilderness without escapism.
+- [[design/gdd/product-constitution]] — IN REVIEW concise north-star contract for the proof, prototype, and launch-capable candidate.
+- [[design/gdd/prototype-faction-contracts]] — IN REVIEW HRC/QXZ six-facility and three-unit-line prototype contracts.
 - [[design/gdd/systems-index]] — system map scaffold.
 - [[design/gdd/strategic-map]] — strategic-map MVP scope: two-faction local hotseat, duel/race scenario pacing, site control, resources, recruitment/reinforcement, and tactical battle handoff.
 - [[design/gdd/intel-resource]] — draft system GDD for Intel as Neon Champions' Alchemical Dust analogue.
@@ -48,6 +50,11 @@
 - [[design/research/homm-town-building-reference]] — HoMM3 and Olden Era town/building/dwelling reference for Neon Champions base facilities.
 - [[design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12]] — easy-access reference list covering HoMM3, Olden Era, XCOM, Shadowrun, Civilization V, Songs of Conquest, Invisible Inc., Jagged Alliance 3, BATTLETECH, Into the Breach, Against the Storm, and Age of Wonders 4, plus researched zero-budget asset sources and visual-pipeline guidance.
 
+## UX and Art Direction
+
+- [[design/ux/player-shell]] — IN REVIEW multi-reference player-shell synthesis and strategic/tactical UI contract.
+- [[design/art/prototype-visual-target-and-asset-ledger]] — IN REVIEW White Sky visual target, faction language, provenance ledger, and vertical-look gate.
+
 ## World Import Layer
 
 - [[design/world/lore-import-policy]] — rules for importing world wiki content.
@@ -58,6 +65,9 @@
 
 - [[production/planning/accelerated-prototype-and-early-access-plan-2026-07-10]] — IN REVIEW plan for a fully playable eight-week prototype and near-shipping six-month Early Access candidate with four factions, editor/tooling, graphics, audio, broad systems, and polish.
 - [[production/planning/full-project-review-and-completion-plan-2026-07-12]] — APPROVED full cross-repository audit, three-gate delivery model, revised completion plan, owner decisions, prototype contract, risks, and production gates.
+- [[production/planning/month-one-proof-scenario-and-capture-plan]] — IN REVIEW faction-selectable proof scenario, map/beat budget, capture shot list, and gate metrics.
+- [[production/epics/epic-016-accelerated-playable-product-foundation]] — ACTIVE four-week proof-build foundation epic.
+- [[production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell]] — READY-CANDIDATE first implementation packet; blocked until constitution/UI approval.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.

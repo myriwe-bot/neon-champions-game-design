@@ -1,0 +1,14 @@
+GUARDED READY-CANDIDATE — DO NOT IMPLEMENT YET
+
+STORY-UI-SHELL-001 is not READY. The Product Constitution and design/ux/player-shell.md require human approval, and the story ambiguity gate is FAIL.
+
+After approval, implement only from:
+- production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell.md
+- design/ux/player-shell.md
+- design/gdd/product-constitution.md
+- docs/architecture/unity-technical-scheme.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+
+Before coding, inspect current Unity presentation boundaries and report any conflict that would require a UI framework migration or broad architecture rewrite. Do not invent design, rewrite gameplay rules, or expose raw IDs in normal mode.

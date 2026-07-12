@@ -284,12 +284,15 @@ Do not copy Civilization's city/empire scale, diplomacy breadth, or hex-map assu
 ## Reference synthesis for Neon Champions
 
 - **Strategic map and base loop:** HoMM3 + Songs of Conquest.
-- **Overall UI feel and strategic authority:** Civilization V, adapted to a smaller Champion-led map.
-- **Modern tactical clarity:** XCOM + Into the Breach.
+- **Player-shell authority and map-first hierarchy:** Civilization V, adapted to a smaller Champion-led map.
+- **Strategic interaction and base readability:** HoMM3 + Olden Era + Songs of Conquest.
+- **Modern tactical clarity and consequence previews:** XCOM + Into the Breach.
+- **Fair uncertainty and cyberpunk information design:** Invisible, Inc. + Shadowrun Returns.
+- **Champion/army continuity across layers:** Jagged Alliance 3.
 - **Cyberpunk presentation on constrained budget:** Shadowrun Returns + Invisible, Inc.
 - **Character consequence and strategic/tactical continuity:** Jagged Alliance 3.
 - **Maintenance as meaningful pressure:** BATTLETECH.
 - **Variable building decisions and replayability:** Against the Storm.
 - **Faction-system breadth:** Age of Wonders 4, used cautiously to avoid scope explosion.
 
-No single reference should define the game. Neon Champions should combine HoMM's map desire, XCOM's interaction clarity, Shadowrun's cyberpunk authorship, and its own infrastructure/information/Champion thesis.
+No single reference should define the game or its UI. The player shell should synthesize Civilization V's calm authority, HoMM and Songs of Conquest's strategic anticipation, XCOM and Into the Breach's action/consequence clarity, Invisible Inc.'s fair uncertainty, Shadowrun's constrained-budget cyberpunk cohesion, and Jagged Alliance 3's character continuity. Neon Champions' White Sky, infrastructure, information, and Champion thesis remains the governing identity.

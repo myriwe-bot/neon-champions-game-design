@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-12] planning | Four-week proof production packets drafted
+
+- Drafted the Product Constitution, HRC/QXZ six-facility and three-line prototype contracts, month-one proof scenario/capture plan, White Sky visual target and provenance ledger contract, and the normal player-shell UX specification.
+- Defined the player UI as a synthesis of Civilization V, HoMM3, Olden Era, Songs of Conquest, XCOM, Into the Breach, Invisible Inc., Shadowrun Returns, Jagged Alliance 3, and BATTLETECH rather than a Civilization-only direction.
+- Activated `EPIC-016 Accelerated Playable Product Foundation` under the owner-approved three-gate roadmap.
+- Created `STORY-UI-SHELL-001` and a guarded Codex prompt as READY-candidate only. Implementation remains blocked until the Product Constitution and player-shell specification receive human approval.
+
 ## [2026-07-12] approval | Three-gate roadmap and prototype base scope
 
 - Approved the three-gate delivery model: four-week Presentable Proof Build, eight-week Fully Playable Prototype, and six-month Launch-Capable Early Access Candidate with a launch/no-launch decision.

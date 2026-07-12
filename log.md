@@ -2,6 +2,17 @@
 
 > Append-only project log.
 
+## [2026-07-12] decision | Full project review, references, and prototype direction
+
+- Added `production/planning/full-project-review-and-completion-plan-2026-07-12.md` with the cross-repository audit and revised production gates.
+- Added `design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12.md` as the easy-access reference list and zero-budget asset research brief.
+- Recorded HRC and QXZ as opposing, morally non-binary, playable prototype factions.
+- Recorded meaningful Heroes-style base construction as required prototype direction, with one construction decision per base per strategic day/cycle and no routine Champion-presence requirement.
+- Recorded the one-month marketing proof requirement: strategic exploration, base construction, tactical combat, and one Feed/narrative moment.
+- Recorded that campaign scenarios may use different HRC/QXZ viewpoints; exact scenario content remains for later authorship.
+- Recorded async multiplayer as movable past first Early Access if it threatens the single-player game, editor, or campaign quality.
+- Added Civilization V as a primary UI-feel reference alongside HoMM3, Olden Era, XCOM, and Shadowrun; additional focused references include Songs of Conquest, Invisible Inc., Jagged Alliance 3, BATTLETECH, Into the Breach, Against the Storm, and Age of Wonders 4.
+
 ## [2026-07-10] decision | Accelerated prototype and Early Access direction
 
 - Recorded owner direction for a fully playable prototype in approximately eight weeks with normal UI, initial graphics, sound, and game-feel presentation.

@@ -1,7 +1,7 @@
 ---
 title: Full Project Review and Completion Plan — 2026-07-12
 type: decision-brief
-status: in-review
+status: approved
 phase: production
 owner: shared
 created: 2026-07-12
@@ -16,7 +16,7 @@ related:
   - design/gdd/tactical-combat
   - docs/architecture/data-scenario-save-format-adr
   - docs/architecture/determinism-and-rng-adr
-approval: pending
+approval: approved
 ---
 
 # Full Project Review and Completion Plan — 2026-07-12
@@ -242,6 +242,42 @@ An internal authoring tool that reliably creates and validates scenarios can sav
 A striking map view, Champion close-up, tactical clash, White Sky transition, and one dirty-information reveal can become the first trailer/GIF language. This also forces the product fantasy to remain visually comprehensible.
 
 ## Revised production model
+
+## Approved three-gate delivery model — 2026-07-12
+
+The owner approved this delivery structure:
+
+1. **Four weeks — Presentable Proof Build:** investor/player-facing proof capable of showing strategic exploration, meaningful base construction, readable tactical combat, and a Feed/narrative consequence.
+2. **Eight weeks — Fully Playable Prototype:** complete scenario, save/resume, functional strategic and tactical AI, onboarding, internal scenario tool, outside testing, and clear Neon Champions differentiation.
+3. **Six months — Launch-Capable Early Access Candidate:** followed by an evidence-based launch/no-launch decision rather than an unconditional release date.
+
+### Approved four-week proof scope
+
+- One faction-selectable HRC-versus-QXZ scenario; both are playable and neither is framed as the canonical hero or villain.
+- Target play slice: approximately 20–30 minutes for presentation/testing, without redefining the longer eight-week prototype scenario.
+- Strategic exploration, base construction, tactical combat, and one Feed/narrative consequence must all be visible in the build and capture plan.
+- One base per faction and a compact 10–14-location strategic slice are recommended working targets, subject to map-design proof.
+- Three strongly varied unit lines per faction are acceptable only if composition, upgrades/loadouts, Champion interaction, and tactical roles create sufficient variety.
+- Normal player-facing UI, coherent zero-budget visual treatment, basic audio, scenario start, and victory/defeat flow are required.
+- Save/load, full tutorial, public editor UX, full strategic AI, five complete tiers, multiplayer, and final art are not required at the four-week gate.
+
+### Approved prototype base-building model
+
+- **Six possible facilities per faction.**
+- Approximately **three to four facilities constructible during the short proof scenario**, forcing build-order tradeoffs.
+- One construction decision per base per strategic day/cycle.
+- Routine construction does not require Champion presence; Champion presence may later unlock bonuses or special projects.
+- Use a shared functional skeleton only where useful — economy/administration, materials, recruitment, specialist recruitment, Intel/information, and Champion/Operations — while ensuring HRC and QXZ express those functions through different incentives, costs, dependencies, and consequences.
+- This is prototype scope, not a permanent cap on town/base depth or future town types.
+
+### Public exposure decision
+
+Deferred until the four-week build can be inspected. At that gate choose between:
+
+1. private investor/tester distribution; or
+2. public development footage plus a signup/community page, without a public downloadable build.
+
+Do not force this choice before the presentation quality and messaging can be judged. A public downloadable pre-alpha is not the current recommendation.
 
 ### Production Definition Gate — before Week 1
 

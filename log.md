@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-12] approval | Three-gate roadmap and prototype base scope
+
+- Approved the three-gate delivery model: four-week Presentable Proof Build, eight-week Fully Playable Prototype, and six-month Launch-Capable Early Access Candidate with a launch/no-launch decision.
+- Approved one faction-selectable HRC-versus-QXZ proof scenario; both factions remain playable and morally non-binary.
+- Approved the recommended prototype base-building breadth: six possible facilities per faction, approximately three to four constructible during the short proof scenario, with one construction decision per base per strategic day/cycle.
+- Preserved the need for varied unit compositions: three prototype lines per faction are acceptable only if roles, upgrades/loadouts, Champion interaction, and combinations provide sufficient depth.
+- Deferred the four-week public-exposure choice until the build can be judged: private investor/tester use versus public footage plus signup page. Public downloadable pre-alpha is not currently recommended.
+
 ## [2026-07-12] decision | Full project review, references, and prototype direction
 
 - Added `production/planning/full-project-review-and-completion-plan-2026-07-12.md` with the cross-repository audit and revised production gates.

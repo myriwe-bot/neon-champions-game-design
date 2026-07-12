@@ -57,7 +57,7 @@
 ## Production Planning
 
 - [[production/planning/accelerated-prototype-and-early-access-plan-2026-07-10]] — IN REVIEW plan for a fully playable eight-week prototype and near-shipping six-month Early Access candidate with four factions, editor/tooling, graphics, audio, broad systems, and polish.
-- [[production/planning/full-project-review-and-completion-plan-2026-07-12]] — IN REVIEW full cross-repository audit, revised completion plan, owner decisions, prototype contract, risks, and production gates.
+- [[production/planning/full-project-review-and-completion-plan-2026-07-12]] — APPROVED full cross-repository audit, three-gate delivery model, revised completion plan, owner decisions, prototype contract, risks, and production gates.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.

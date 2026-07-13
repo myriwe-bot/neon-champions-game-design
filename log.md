@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-13] decision | White Sky and frontier scene direction
+
+- Approved a localized blue-grey wound in the engineered White Sky above the disputed calibration station.
+- Approved luminous, subtly stratified, partly soft/shadowless daylight: engineered and memorable, industrial and clean in places, but explicitly not ugly.
+- Approved a varied cyberpunk frontier combining untouched natural beauty, settlements and utilities, industrial coast, exposed post-retreat terrain, abandoned/temporary infrastructure, and localized careless extraction such as open-cut mining scars.
+- The landscape must not collapse into endless white snow/glacier imagery; exposed rock, water, tundra, spoil, rust, concrete, habitation, and restrained faction emissions provide variation.
+- Champion/army strategic-map representation remains open pending reference and implementation-cost comparison.
+
 ## [2026-07-13] decision | Strategic-map visual model
 
 - Approved a hybrid physical strategic map for the proof build: real elevated terrain, structures, sites, and embodied Champion/unit presence remain dominant.

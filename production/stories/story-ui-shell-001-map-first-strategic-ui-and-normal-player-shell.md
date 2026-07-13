@@ -61,3 +61,8 @@ DONE / merged. Unity PR #145 merged 2026-07-13: https://github.com/myriwe-bot/ne
 - Final exact-head branch CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29228561251
 - Post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29229309937
 - Merge-gate fixes removed normal-mode route-label clutter, corrected overlapping/wrapped debug controls, refreshed current visual evidence, and replaced stale CI-pending evidence wording.
+- Late independent review found two post-merge selection/action-routing defects. Unity PR #147 repaired independent site/base inspection after empty-map selection and prevented starting-hub recruitment from dispatching through generic `Interact`.
+- Post-merge repair PR: https://github.com/myriwe-bot/neon-champions-unity/pull/147
+- Repair merge commit: `d43c8e4795865c5a4204e38ce0319fd7f16eaea0`.
+- Repair exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29231994971
+- Repair post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29232394942

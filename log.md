@@ -2,6 +2,18 @@
 
 > Append-only project log.
 
+## [2026-07-13] repair | Late STORY-UI-SHELL-001 review blockers closed
+
+- A late independent review of already-merged Unity PR #145 found that empty-map selection could not transition to independent site/base inspection because `SelectSite` required a selected Champion.
+- The same review found that dedicated starting-hub/recruitment preview state also enabled generic `Interact`, which dispatched to the wrong command path. Current smoke data correctly uses the normal shell's existing `Recruit` action for the fixed starting-hub offer.
+- Replaced the false-positive PlayMode assertion that merely found a persistent `HRC base` world label with explicit result, selected-site, selected-Champion, selection-kind, and selection-title assertions.
+- Added EditMode and PlayMode regressions for independent site/base inspection and starting-hub recruitment dispatch.
+- Repair PR: https://github.com/myriwe-bot/neon-champions-unity/pull/147
+- Repair merge commit: `d43c8e4795865c5a4204e38ce0319fd7f16eaea0`.
+- Exact-head repair CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29231994971
+- Post-merge repair CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29232394942
+- `STORY-ART-LOOK-001` remains guarded; the next implementation story was not activated while this blocker was open.
+
 ## [2026-07-13] merge | STORY-UI-SHELL-001 merged; vertical-look candidate prepared
 
 - Reviewed, repaired, and merged Unity PR #145 for `STORY-UI-SHELL-001`: https://github.com/myriwe-bot/neon-champions-unity/pull/145

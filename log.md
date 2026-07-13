@@ -13,6 +13,8 @@
 - Root cause of the initial missing remote implementation: the checked-in Codex prompt asked for `PR-ready` work but never explicitly required commit, push, remote verification, or PR creation. The implementation remained local until manually committed and pushed.
 - Strengthened `docs/architecture/control-manifest.md` so implementation agents must commit, push, verify the remote branch, and create/update a non-draft PR or report the exact blocker and recovery commands.
 - Prepared `STORY-ART-LOOK-001` and a guarded Codex prompt as READY-candidate only. Implementation remains blocked until the White Sky visual target and asset/provenance contract receive human approval.
+- Cleared the Unity runnable-task pointer through docs PR #146: https://github.com/myriwe-bot/neon-champions-unity/pull/146
+- Unity pointer merge commit: `94e7cb4fd3927c479666c0575e6835bcd48ba6a7`; PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29230003354; post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29230322754
 
 ## [2026-07-12] approval | EPIC-016 product direction and first implementation packet
 

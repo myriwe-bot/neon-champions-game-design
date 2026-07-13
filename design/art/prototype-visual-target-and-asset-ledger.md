@@ -40,7 +40,7 @@ Human-approved on 2026-07-13:
 
 ## Faction language
 
-- HRC: repaired layers, civic/rescue orange, warm practical lights, reused structures, visible local modification. Exact coalition breadth and physical grammar remain under review.
+- HRC: human-approved controlled heterogeneity. Repaired layers, civic/rescue orange, warm practical lights, reused structures, visible local modification, coalition markings, mesh beacons, labour/rescue/activist/volunteer patches, and occasional repurposed corporate technology unify groups that retain distinct origins. HRC should look technologically capable, countercultural in places, and politically broad—not primitive, ethnically uniform, uniformly peaceful, or anti-development by default.
 - QXZ: human-approved blend of climate-engineering expedition and sleek corporate futurism. Use pearl/white sealed geometry, pale-blue hazard light, sensor precision, atmospheric and marine-maintenance machinery, premium clean surfaces, and discreet security embedded inside infrastructure and procedure. QXZ should read first as a builder of useful, beautiful megaprojects—not as a generic occupying army.
 
 ## Neon distribution and security posture

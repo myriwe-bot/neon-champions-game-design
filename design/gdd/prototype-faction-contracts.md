@@ -5,7 +5,7 @@ status: approved
 phase: systems-design
 owner: shared
 created: 2026-07-12
-updated: 2026-07-12
+updated: 2026-07-13
 approval: approved-provisional
 related: [design/gdd/faction-unit-rosters, design/gdd/strategic-map, design/gdd/product-constitution]
 ---
@@ -20,11 +20,15 @@ Human-approved provisional contract for the four-week proof: six possible facili
 
 Player fantasy: defend local autonomy through adaptation, trusted networks, rescue capacity, and terrain knowledge.
 
+Faction form: before Blue Monday, HRC is a loose umbrella for anti-overexploitation campaigns, mutual aid, labour/civic networks, environmental and sovereignty activists, technical volunteers, and sympathetic outsiders. During the crisis, different Champions pull parts of that network into temporary operational coalitions. HRC is not a constitutional entity, ethnic faction, conventional army, or uniformly peaceful/anti-development movement.
+
 Strategic advantage: flexible low-cost adaptation and benefits from civic/local infrastructure.
-Strategic liability: weaker centralized scaling and less efficient conversion into elite force.
+Strategic liability: weaker centralized scaling, internal friction, dependence on Champion-mediated cooperation, and conflict between locally controlled development and ecological protection.
 Tactical rhythm: mobile defense, marking, sustain, and objective rescue.
 Information relationship: witnesses, local mesh, and recovered proof.
 Infrastructure relationship: repair, reuse, distribute, and protect.
+
+Visual relationship: controlled heterogeneity rather than a single uniform kit. Civic/rescue orange, warm practical lights, coalition markings, mesh beacons, and repeated repair practices unify visibly different local, labour, activist, rescue, volunteer, and defector equipment. HRC must read as technologically capable and politically multifaceted, not as a primitive or stereotyped “native faction.”
 
 ### Six-facility prototype tree
 
@@ -52,6 +56,10 @@ Strategic liability: high costs, dependency on controlled systems, and visible l
 Tactical rhythm: forecast, establish control, then execute with protected combined arms.
 Information relationship: predictive models, sensors, and liability-grade records.
 Infrastructure relationship: stabilize, instrument, own, and enforce.
+
+Development relationship: deliver genuinely useful, beautiful megaprojects through bundled finance, climate integration, insurance, standards, and long-term operation. QXZ leverage comes through debt, concessions, proprietary maintenance/data, extraterritorial privileges, emergency-control clauses, arbitration, and the ability to define whether infrastructure remains safe and insurable. It is a master developer and continuity integrator, not the direct owner of every builder, train, turbine, port, or mine.
+
+Visual relationship: sleek climate-engineering expedition and premium corporate futurism with discreet security embedded inside useful infrastructure and procedure—not a generic occupation army. Candidate broader-world projects include climate-conditioned ports/settlements, major bridges and tunnels, high-speed or maglev freight corridors, tidal/current energy, offshore maintenance systems, and sensor infrastructure.
 
 ### Six-facility prototype tree
 

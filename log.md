@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-13] design | HRC/QXZ soft-canon production mirror and Champion audit
+
+- Mirrored the reviewed HRC world direction into the proof faction contract: pre-crisis informal protection umbrella, Champion-mediated crisis coalition, broad local/labour/rescue/ecological/counterculture/volunteer composition, and no constitutional/ethnic/primitive-faction framing.
+- Recorded locally controlled development versus ecological protection as HRC's primary first-campaign internal fault line.
+- Mirrored QXZ's genuine-benefit megaproject model, extraterritorial privileges, concessions, debt/maintenance/data dependency, and master-developer boundary into the prototype faction contract.
+- Approved HRC controlled-heterogeneity visual grammar and narrowed `STORY-ART-LOOK-001`'s remaining ambiguity blocker to the asset-ledger/provenance contract.
+- World-vault audit `00-start-here/champions-documentation-audit-2026-07-13.md` found Champion ontology and mechanics substantially recorded but fragmented; it repaired the missing faction-gravity/coalition-formation bridge without imposing a universal explanation for Champion authority.
+
 ## [2026-07-13] decision | QXZ, neon, and regional security posture
 
 - Approved QXZ as a blend of climate-engineering expedition and sleek corporate futurism: beautiful/useful megaproject identity first, with discreet security embedded in infrastructure and procedure rather than generic occupation-army presentation.

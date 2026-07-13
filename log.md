@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-13] decision | Strategic-map visual model
+
+- Approved a hybrid physical strategic map for the proof build: real elevated terrain, structures, sites, and embodied Champion/unit presence remain dominant.
+- Routes, reachability, ownership, and objective pressure use restrained operational overlays rather than preserving the current colored node graph as the world metaphor.
+- Node-route gameplay rules remain authoritative beneath the physical presentation.
+- `STORY-ART-LOOK-001` remains READY-candidate; White Sky scene rules, faction physical grammar, and the provenance/import contract still require approval.
+
 ## [2026-07-13] repair | Late STORY-UI-SHELL-001 review blockers closed
 
 - A late independent review of already-merged Unity PR #145 found that empty-map selection could not transition to independent site/base inspection because `SelectSite` required a selected Champion.

@@ -16,6 +16,16 @@ related: [design/research/zero-budget-prototype-assets-and-reference-games-2026-
 
 White-daylight cyberpunk: pale engineered sky, dark industrial infrastructure, snow/ice/rust, highly controlled faction emissions, readable silhouettes, and a restrained player shell. The proof should look intentionally stylized, not like unrelated free packs hidden by bloom.
 
+## Strategic-map visual model
+
+Human-approved on 2026-07-13: use a **hybrid physical map**. The dominant read is a real elevated landscape with terrain, structures, sites, and embodied Champion/unit presence. Routes, reachability, ownership, and objective pressure appear as restrained operational overlays on that world rather than as the world itself.
+
+- Do not preserve the current colored node graph as the final visual metaphor.
+- Replace abstract region rectangles and luminous connection lines with physical terrain boundaries, roads/tracks/corridors, and recognizable site silhouettes wherever the authored topology allows.
+- Overlays may clarify legal routes and pressure, but should recede when not relevant and must not obscure terrain or structures.
+- The map need not simulate free movement: the approved node-route rules remain authoritative beneath the physical presentation.
+- Avoid both extremes: neither a fully abstract command dashboard nor an unmarked realistic landscape that hides game state.
+
 ## Faction language
 
 - HRC: repaired layers, civic/rescue orange, warm practical lights, reused structures, visible local modification.

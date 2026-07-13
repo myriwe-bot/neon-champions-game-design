@@ -19,7 +19,7 @@ As a player or reviewer, I want one coherent White Sky strategic presentation fr
 ## In scope
 
 - Create `Assets/Provenance/asset-ledger.csv` with the approved columns, allowed statuses, one schema/example row, and automated validation for required fields and allowed status values.
-- Build one representative vertical-look scene or bounded presentation mode using the merged player shell and existing strategic presentation boundary.
+- Build one representative vertical-look scene or bounded presentation mode using the merged player shell, existing strategic presentation boundary, and approved hybrid physical-map model: real terrain/structures with restrained route and objective overlays.
 - Show all of these in the same reviewable frame or tightly paired captures:
   - one strategic site/base silhouette;
   - one HRC unit group;
@@ -58,7 +58,7 @@ Broad asset-pack import; final art; full scenario reskin; final HRC/QXZ units or
 
 ## Ambiguity gate
 
-FAIL. `design/art/prototype-visual-target-and-asset-ledger.md` and the zero-budget asset research remain `in-review` / `approval: pending`. Human approval must confirm the White Sky target, HRC/QXZ visual languages, ledger path/columns, and bounded external-asset rule before this story becomes READY. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, or invented faction visual canon, stop.
+FAIL. The hybrid physical-map model was human-approved on 2026-07-13, but `design/art/prototype-visual-target-and-asset-ledger.md` and the zero-budget asset research otherwise remain `in-review` / `approval: pending`. Human approval must still confirm the White Sky target, HRC/QXZ visual languages, ledger path/columns, and bounded external-asset rule before this story becomes READY. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, or invented faction visual canon, stop.
 
 ## Proposed branch
 

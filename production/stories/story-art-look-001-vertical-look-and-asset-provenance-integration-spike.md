@@ -29,6 +29,7 @@ As a player or reviewer, I want one coherent White Sky strategic presentation fr
   - one small action VFX event and one temporary/provenanced SFX event or an explicitly documented audio-N/A result if no legally suitable zero-cost source can be integrated safely;
   - normal player-shell framing without raw IDs.
 - Establish a small reusable White Sky material/palette contract and faction-shape accents without broad asset-system or shader-framework replacement.
+- Represent each strategic force as one selectable Champion with a small cosmetic, composition-informed entourage. Followers must not gain independent gameplay state, pathfinding, occupancy, targeting, or exact stack-count semantics.
 - Express the approved scene rules: luminous engineered White Sky with a localized blue-grey wound, beautiful frontier wilderness interrupted by infrastructure and localized exploitative industrial scars, and restrained cyberpunk emissions rather than an ugly or monotonous snowfield.
 - Prefer existing/procedural geometry for the spike. Import at most a narrowly justified CC0/acceptable-license sample needed to prove the ledger/import path.
 - Produce current 1920×1080 PNG evidence and a concise before/after and provenance review.
@@ -59,7 +60,7 @@ Broad asset-pack import; final art; full scenario reskin; final HRC/QXZ units or
 
 ## Ambiguity gate
 
-FAIL. The hybrid physical-map model and White Sky/regional scene rules were human-approved on 2026-07-13, but `design/art/prototype-visual-target-and-asset-ledger.md` and the zero-budget asset research otherwise remain `in-review` / `approval: pending`. Human approval must still confirm Champion/army representation, HRC/QXZ physical languages, ledger path/columns, and the bounded external-asset rule before this story becomes READY. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, or invented faction visual canon, stop.
+FAIL. The hybrid physical-map model, White Sky/regional scene rules, and Champion-plus-cosmetic-entourage representation were human-approved on 2026-07-13, but `design/art/prototype-visual-target-and-asset-ledger.md` and the zero-budget asset research otherwise remain `in-review` / `approval: pending`. Human approval must still confirm HRC/QXZ physical languages, ledger path/columns, and the bounded external-asset rule before this story becomes READY. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, or invented faction visual canon, stop.
 
 ## Proposed branch
 

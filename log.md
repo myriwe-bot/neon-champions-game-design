@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-13] decision | Strategic Champion and entourage representation
+
+- Approved one embodied, selectable Champion plus a small cosmetic, composition-informed entourage on the strategic map.
+- The entourage may suggest dominant army roles through two or three follower, drone, or vehicle silhouettes, but has no independent pathfinding, occupancy, targeting, actions, or exact stack-count semantics.
+- Distant/crowded views may collapse the entourage into the Champion marker for readability.
+- The vertical-look spike must prove a traveling-force read without building a composition-accurate convoy simulation.
+
 ## [2026-07-13] decision | White Sky and frontier scene direction
 
 - Approved a localized blue-grey wound in the engineered White Sky above the disputed calibration station.

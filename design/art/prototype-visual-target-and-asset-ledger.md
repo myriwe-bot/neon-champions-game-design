@@ -43,6 +43,18 @@ Human-approved on 2026-07-13:
 - HRC: repaired layers, civic/rescue orange, warm practical lights, reused structures, visible local modification.
 - QXZ: pearl/white sealed geometry, pale-blue hazard light, sensor precision, branded climate systems, controlled cleanliness.
 
+## Champion and army representation
+
+Human-approved on 2026-07-13: the strategic-map actor is one embodied Champion accompanied by a small, cosmetic, composition-informed entourage.
+
+- The Champion remains the single selectable gameplay actor and owns movement, occupancy, interaction, and route state.
+- Two or three compact follower, drone, or vehicle silhouettes may communicate dominant army roles or faction character.
+- The entourage is presentation-only: it has no independent pathfinding, occupancy, targeting, action authority, or one-to-one promise with stack counts.
+- Composition changes may alter the entourage's broad silhouette mix, but exact unit/count representation is not required for the proof.
+- At distant zoom or in crowded views, the entourage may collapse into the Champion silhouette/marker to preserve readability.
+- HRC expression should resemble an improvised rescue/security column using adapted vehicles, local equipment, and drones. QXZ expression should resemble a disciplined protected mandate team with controlled formation and sensor escorts.
+- The vertical-look spike may use bounded placeholder entourage silhouettes, but must prove that the model reads more like a traveling force than a lone token.
+
 ## Zero-budget pipeline
 
 CC0 modular geometry + controlled PBR material library + shared White Sky shaders + custom decals/icons/VFX/UI. Use generated imagery only as provenance-tracked temporary direction or replace-later material.

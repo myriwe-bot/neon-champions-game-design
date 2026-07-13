@@ -31,6 +31,8 @@ As a player or reviewer, I want one coherent White Sky strategic presentation fr
 - Establish a small reusable White Sky material/palette contract and faction-shape accents without broad asset-system or shader-framework replacement.
 - Represent each strategic force as one selectable Champion with a small cosmetic, composition-informed entourage. Followers must not gain independent gameplay state, pathfinding, occupancy, targeting, or exact stack-count semantics.
 - Express the approved scene rules: luminous engineered White Sky with a localized blue-grey wound, beautiful frontier wilderness interrupted by infrastructure and localized exploitative industrial scars, and restrained cyberpunk emissions rather than an ugly or monotonous snowfield.
+- Express QXZ first as a sleek climate-engineering/megaproject expedition with discreet embedded security, not a generic corporate army. Concentrate neon around Champions, inhabited frontier culture, vehicles, sensors, public systems, and infrastructure rather than applying it uniformly to wilderness.
+- Keep Champion-led forces at small task-group/special-operations visual scale; do not imply conventional mass armies or permanent front lines.
 - Prefer existing/procedural geometry for the spike. Import at most a narrowly justified CC0/acceptable-license sample needed to prove the ledger/import path.
 - Produce current 1920×1080 PNG evidence and a concise before/after and provenance review.
 
@@ -60,7 +62,7 @@ Broad asset-pack import; final art; full scenario reskin; final HRC/QXZ units or
 
 ## Ambiguity gate
 
-FAIL. The hybrid physical-map model, White Sky/regional scene rules, and Champion-plus-cosmetic-entourage representation were human-approved on 2026-07-13, but `design/art/prototype-visual-target-and-asset-ledger.md` and the zero-budget asset research otherwise remain `in-review` / `approval: pending`. Human approval must still confirm HRC/QXZ physical languages, ledger path/columns, and the bounded external-asset rule before this story becomes READY. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, or invented faction visual canon, stop.
+FAIL. The hybrid physical-map model, White Sky/regional scene rules, Champion-plus-cosmetic-entourage representation, QXZ visual direction, neon distribution, and small-task-group scale were human-approved on 2026-07-13. Human approval must still confirm the broadened HRC coalition/physical language, ledger path/columns, and bounded external-asset rule before this story becomes READY. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, or invented faction visual canon, stop.
 
 ## Proposed branch
 

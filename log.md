@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-13] decision | QXZ, neon, and regional security posture
+
+- Approved QXZ as a blend of climate-engineering expedition and sleek corporate futurism: beautiful/useful megaproject identity first, with discreet security embedded in infrastructure and procedure rather than generic occupation-army presentation.
+- Approved concentrated neon around Champions, inhabited frontier culture, vehicles, public systems, sensors, and faction infrastructure while wilderness remains visually natural enough to preserve contrast.
+- Approved uneven militarization: civilian safe/local sites, securitized extraction/continuity sites, and improvised escalation along contested corridors.
+- Champion-led forces are small high-capability task groups or special-operations-scale formations, not conventional corporate or national mass armies.
+- QXZ ocean-energy and broader bridge/tunnel/maglev megaproject scope remains a worldbuilding proposal pending institutional-boundary review.
+
 ## [2026-07-13] decision | Strategic Champion and entourage representation
 
 - Approved one embodied, selectable Champion plus a small cosmetic, composition-informed entourage on the strategic map.

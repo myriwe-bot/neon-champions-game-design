@@ -40,8 +40,17 @@ Human-approved on 2026-07-13:
 
 ## Faction language
 
-- HRC: repaired layers, civic/rescue orange, warm practical lights, reused structures, visible local modification.
-- QXZ: pearl/white sealed geometry, pale-blue hazard light, sensor precision, branded climate systems, controlled cleanliness.
+- HRC: repaired layers, civic/rescue orange, warm practical lights, reused structures, visible local modification. Exact coalition breadth and physical grammar remain under review.
+- QXZ: human-approved blend of climate-engineering expedition and sleek corporate futurism. Use pearl/white sealed geometry, pale-blue hazard light, sensor precision, atmospheric and marine-maintenance machinery, premium clean surfaces, and discreet security embedded inside infrastructure and procedure. QXZ should read first as a builder of useful, beautiful megaprojects—not as a generic occupying army.
+
+## Neon distribution and security posture
+
+Human-approved on 2026-07-13:
+
+- Concentrate neon and controlled emissions around Champions, inhabited frontier culture, vehicles, public screens, repair shops, sensors, and faction infrastructure. Wilderness remains dark/natural enough for these islands of identity and power to matter.
+- Ordinary infrastructure has an uneven security posture. Safe/local places may remain recognizably civilian; corporate extraction and continuity sites are more controlled; contested corridors show improvised escalation.
+- Do not depict the region as uniformly fortified or occupied by mass armies.
+- Champion-led forces are small, high-capability task groups or special-operations-scale formations. They may be called armies in strategy-game terms, but their visual scale should not imply conventional divisions or permanent front lines.
 
 ## Champion and army representation
 

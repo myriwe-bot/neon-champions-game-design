@@ -1,0 +1,35 @@
+GUARDED READY-CANDIDATE — DO NOT IMPLEMENT YET
+
+Preflight gate:
+1. Read `production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike.md`.
+2. Stop without editing Unity unless its frontmatter says `status: ready` and `approval: approved`.
+3. Stop unless `design/art/prototype-visual-target-and-asset-ledger.md` says `status: approved` and `approval: approved`.
+4. If any required visual direction, external-asset license, render-pipeline choice, or faction visual language is ambiguous, report the exact blocker instead of inventing authority.
+
+After human approval, implement only from:
+- production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike.md
+- design/art/prototype-visual-target-and-asset-ledger.md
+- design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12.md
+- design/ux/player-shell.md
+- design/gdd/product-constitution.md
+- docs/architecture/unity-technical-scheme.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+
+Create branch `story/STORY-ART-LOOK-001-vertical-look-provenance-spike` from current Unity `main`.
+
+Keep the spike bounded. Prefer existing/procedural geometry. Do not broadly import asset packs, invent final faction visual canon, migrate the render pipeline, replace the shader architecture, rewrite gameplay, or alter the merged player shell outside narrow integration needs. Verify every external asset license and ledger row before use.
+
+Use TDD for ledger validation and any production logic. Run the required EditMode, PlayMode, validator, standalone-build, and evidence checks. Produce current 1920×1080 PNG evidence and a complete omissions/provenance summary.
+
+Completion contract — mandatory after implementation and verification:
+- inspect `git status --short` and remove only disposable generated scratch;
+- ensure the story diff contains the intended implementation, tests, evidence, and `.meta` files;
+- run `git diff --check`;
+- commit the actual story-scoped changes on the story branch;
+- push the committed HEAD with `git push -u origin HEAD:story/STORY-ART-LOOK-001-vertical-look-provenance-spike`;
+- create a non-draft PR to `main` with the story ID, source links, verification, evidence, provenance, and omissions;
+- print the final local branch, commit SHA, pushed remote branch, PR URL, and any CI still pending.
+
+Do not stop at “PR-ready,” a dirty local worktree, or an unpushed branch. If commit, push, or PR creation cannot be completed, preserve the work and report the exact failed command/error and the exact recovery commands. Never claim remote publication without verifying the remote branch/PR.

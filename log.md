@@ -2,6 +2,18 @@
 
 > Append-only project log.
 
+## [2026-07-13] merge | STORY-UI-SHELL-001 merged; vertical-look candidate prepared
+
+- Reviewed, repaired, and merged Unity PR #145 for `STORY-UI-SHELL-001`: https://github.com/myriwe-bot/neon-champions-unity/pull/145
+- Merge commit: `014f6c426461da4c59f055c73d19793d51e17fd1`.
+- Final exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29228563537
+- Final exact-head branch CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29228561251
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29229309937
+- Merge-gate fixes removed normal-mode route/cost-label clutter, resolved overlapping and wrapped diagnostic controls, added layout regressions, refreshed current 1920×1080 evidence despite GitHub artifact quota blocking normal download, and repaired stale evidence/empty PR metadata.
+- Root cause of the initial missing remote implementation: the checked-in Codex prompt asked for `PR-ready` work but never explicitly required commit, push, remote verification, or PR creation. The implementation remained local until manually committed and pushed.
+- Strengthened `docs/architecture/control-manifest.md` so implementation agents must commit, push, verify the remote branch, and create/update a non-draft PR or report the exact blocker and recovery commands.
+- Prepared `STORY-ART-LOOK-001` and a guarded Codex prompt as READY-candidate only. Implementation remains blocked until the White Sky visual target and asset/provenance contract receive human approval.
+
 ## [2026-07-12] approval | EPIC-016 product direction and first implementation packet
 
 - Approved the Product Constitution as the working north star.

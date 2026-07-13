@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-07-12
+> Last updated: 2026-07-13
 > Current phase: Production — accelerated eight-week prototype and six-month Early Access planning
 > Review mode: Lean default, Full for major gates
 
@@ -67,7 +67,8 @@
 - [[production/planning/full-project-review-and-completion-plan-2026-07-12]] — APPROVED full cross-repository audit, three-gate delivery model, revised completion plan, owner decisions, prototype contract, risks, and production gates.
 - [[production/planning/month-one-proof-scenario-and-capture-plan]] — APPROVED PROVISIONAL faction-selectable proof scenario, map/beat budget, capture shot list, and gate metrics.
 - [[production/epics/epic-016-accelerated-playable-product-foundation]] — ACTIVE four-week proof-build foundation epic.
-- [[production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell]] — READY first authorized EPIC-016 implementation packet.
+- [[production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell]] — DONE / merged first EPIC-016 player-shell implementation packet.
+- [[production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike]] — READY-CANDIDATE / approval pending vertical-look and provenance spike; guarded prompt only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.

@@ -1,11 +1,11 @@
 ---
 title: STORY-UI-SHELL-001 Map-First Strategic UI and Normal Player Shell
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-12
-updated: 2026-07-12
+updated: 2026-07-13
 approval: approved
 related: [production/epics/epic-016-accelerated-playable-product-foundation, design/ux/player-shell, docs/architecture/unity-technical-scheme]
 ---
@@ -54,4 +54,10 @@ PASS. The Product Constitution, multi-reference player-shell direction, provisio
 
 ## Verdict
 
-READY. Human-approved for implementation on 2026-07-12.
+DONE / merged. Unity PR #145 merged 2026-07-13: https://github.com/myriwe-bot/neon-champions-unity/pull/145
+
+- Merge commit: `014f6c426461da4c59f055c73d19793d51e17fd1`.
+- Final exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29228563537
+- Final exact-head branch CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29228561251
+- Post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29229309937
+- Merge-gate fixes removed normal-mode route-label clutter, corrected overlapping/wrapped debug controls, refreshed current visual evidence, and replaced stale CI-pending evidence wording.

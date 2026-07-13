@@ -5,7 +5,7 @@ status: approved
 phase: technical-setup
 owner: shared
 created: 2026-05-22
-updated: 2026-07-05
+updated: 2026-07-13
 source_lore: []
 related:
   [
@@ -184,6 +184,9 @@ Rules:
 - No unrelated cleanup bundled into feature PRs.
 - No direct push to main for production work.
 - Do not hide generated or tool-created changes.
+- After implementation and verification, the coding agent must commit the actual story-scoped changes, push the committed story-branch HEAD, and create or update a non-draft PR unless the prompt explicitly limits the run to local investigation.
+- The agent must verify and report the local branch, commit SHA, remote branch, and PR URL. “PR-ready,” an uncommitted dirty worktree, or a branch name that still points at `main` is not a completed implementation handoff.
+- If commit, push, or PR creation fails, the agent must preserve the work, report the exact failed command/error, and provide exact recovery commands. It may not silently stop after local implementation.
 
 ## 10. Stop Conditions
 

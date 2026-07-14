@@ -8,6 +8,9 @@
 - Added a binding cross-asset rule for every AI-generated non-code asset type: literal `ai-generated__` filename prefix, isolated AI asset path, complete generation/provenance metadata, default `replace-later` status, and a stable logical replacement boundary. Code is exempt.
 - Human/contractor replacements must be separately named and repointed through the stable boundary; they must not overwrite generated files while retaining an AI-generated filename.
 - Converted the checked-in Codex prompt from guarded candidate to runnable and updated EPIC-016, run-prompt, index, and source-authority traceability.
+- Design approval commit: `110e91c04af0d307c1d5e2fe3163690e831366aa`; publish CI passed: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/29322142419
+- Activated the Unity current-task pointer through PR #148: https://github.com/myriwe-bot/neon-champions-unity/pull/148
+- Unity pointer merge commit: `8cf0b015b99a1ff78dbbf295ec6aef3b3cfce6f2`; post-merge Unity CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29322649217
 
 ## [2026-07-13] design | HRC/QXZ soft-canon production mirror and Champion audit
 

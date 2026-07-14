@@ -11,6 +11,9 @@
 - Added a deterministic project-authored procedural terrain plate with checked-in generator, `replace-later` ledger status, and stable registry/resource replacement boundary. No AI-generated or external non-code asset was integrated.
 - Removed the temporary evidence-refresh workflow before merge.
 - Prepared `STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation` and a guarded Codex prompt as READY-candidate / approval pending. There is no current READY Unity implementation packet.
+- Design closeout/candidate commit: `8584462d9e29ecca6c6a7459c97768358e166127`; publish CI passed: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/29333372777
+- Cleared the Unity runnable pointer and exposed the next story as approval-pending through PR #150: https://github.com/myriwe-bot/neon-champions-unity/pull/150
+- Pointer merge commit: `f494421384c20ab9190f03002e182286bfd26e64`; exact-head PR CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29333439242; post-merge `main` CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29333921979
 
 ## [2026-07-14] approval | STORY-ART-LOOK-001 and replaceable AI-asset contract
 

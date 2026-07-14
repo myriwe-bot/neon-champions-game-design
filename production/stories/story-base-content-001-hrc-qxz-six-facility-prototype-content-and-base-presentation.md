@@ -44,7 +44,7 @@ These implementation values were human-approved on 2026-07-14. They are prototyp
 | QXZ | Concession Office | Starting/prebuilt administration; +7 Credits at active-faction turn start | prebuilt baseline |
 | QXZ | Climate Fabricator | +6 Materials at active-faction turn start | 25 Credits + 1 Intel; Concession Office |
 | QXZ | Mandate Barracks | Unlock Meridian Security recruitment offer | 20 Credits + 1 Intel; Concession Office |
-| QXZ | Stratospheric Lab | Unlock Aerosol Techs recruitment offer | 25 Credits + 2 Intel; Concession Office |
+| QXZ | Stratospheric Lab | Unlock existing Strato Sensor Swarm recruitment offer; this fills the provisional Aerosol Techs line role without renaming the unit | 25 Credits + 2 Intel; Concession Office |
 | QXZ | Risk Analytics Cell | +1 Intel at active-faction turn start | 25 Credits + 2 Intel; Concession Office |
 | QXZ | Continuity Suite | Apply an authored 10 Credits / 2 Intel discount to the existing starting-hub reinforcement/support action | 35 Credits + 3 Intel; Climate Fabricator |
 
@@ -65,6 +65,22 @@ The first implementation preflight found that both existing starting-hub fixed o
 - Preview, affordability, resource deduction, and result summaries must use the same effective-cost calculation.
 - The discount applies only when the relevant support facility is constructed at the active faction's owned starting base.
 - Preserve current fixed-offer stock and major-interaction rules; this clarification does not authorize additional stock or refresh behavior.
+
+### Facility-gated recruitment offers
+
+The four recruitment facilities use the following exact prototype offers:
+
+| Facility | Offer ID | Existing unit ID / display | Stack | Initial stock | Refresh / active-faction turn | Cost |
+|---|---|---|---:|---:|---:|---|
+| Watch Muster | `offer_home_rule_base_dwelling_settlement_watch` | `settlement_watch` / Settlement Watch | 8 | 1 | 1 | 15 Credits |
+| Scout Relay | `offer_hrc_scout_relay_hunter_scouts` | `hunter_scouts` / Hunter-Scouts | 6 | 1 | 1 | 20 Credits + 5 Materials |
+| Mandate Barracks | `offer_qxz_base_dwelling_meridian_security` | `meridian_security` / Meridian Security | 8 | 1 | 1 | 15 Credits |
+| Stratospheric Lab | `offer_qxz_stratospheric_lab_strato_sensor_swarm` | `strato_sensor_swarm` / Strato Sensor Swarm | 5 | 1 | 1 | 20 Credits + 2 Intel |
+
+- All four are normal existing-unit recruitment offers and use the existing recruitment service.
+- `strato_sensor_swarm` is the authorized implementation mapping for the provisional Aerosol Techs tactical-line role. Retain its current ID, display name, stats, role, and sensor-lock behavior; do not create or rename a tactical unit in this story.
+- Preserve the two existing offer IDs for Settlement Watch and Meridian Security to avoid unnecessary compatibility churn. The Hunter-Scouts and Strato Sensor Swarm offer IDs above are new stable IDs.
+- Each offer requires its row's facility stable ID below. Preview/apply, stock decrement, active-faction refresh, affordability, and resource deduction follow existing recruitment rules.
 
 ### Stable new facility IDs
 
@@ -137,7 +153,8 @@ Migration rules:
 - [ ] No player-facing base panel, build result, or evidence capture shows placeholder localization text or raw facility IDs.
 - [ ] Facility definitions and effects are scenario-authored, serializable, validated, and resolved without faction-specific UI/service branches.
 - [ ] Credits, Materials, and Intel recurring effects apply once at the active-faction turn boundary, only from owned constructed facilities, with visible feedback and no preview/failed-turn mutation.
-- [ ] Watch Muster, Scout Relay, Mandate Barracks, and Stratospheric Lab gate their authored existing-unit recruitment offers with deterministic stock/refresh behavior.
+- [ ] Watch Muster, Scout Relay, Mandate Barracks, and Stratospheric Lab gate exactly the four authored offer IDs, existing unit IDs, stack sizes, costs, initial stock, and refresh values in the binding recruitment table.
+- [ ] Stratospheric Lab recruits `strato_sensor_swarm` displayed as `Strato Sensor Swarm`; this story does not add an Aerosol Techs unit or rename/re-stat the existing unit.
 - [ ] Operations Garage and Continuity Suite visibly change the cost/affordability of the existing starting-hub reinforcement/support action through authored effect metadata.
 - [ ] Undiscounted/effective starting-hub costs are exactly HRC `20 Credits + 10 Materials` → `10 Credits + 5 Materials` and QXZ `20 Credits + 4 Intel` → `10 Credits + 2 Intel`; preview and apply use identical clamped calculations.
 - [ ] Every known legacy facility ID migrates according to the binding table; duplicate IDs collapse, grandfathered prerequisite conflicts remain constructed with a non-fatal diagnostic, and unknown removed IDs fail closed without state loss.
@@ -160,7 +177,7 @@ Migration rules:
 
 ## Ambiguity gate
 
-PASS. On 2026-07-14 the human explicitly approved `STORY-BASE-CONTENT-001 as proposed`, including the facility mapping, prototype values, prerequisites, three-to-four-affordable target, recruitment gates, and reinforcement/support discounts. The first Codex preflight then correctly stopped because current fixed offers were free and legacy migration was underspecified. A clarification request timed out with explicit instruction to use best judgment, so the bounded recommended correction now authorizes the exact fixed-offer prices and migration rules above. These values remain tunable prototype balance rather than final canon. If implementation would require a new Champion system rather than a narrow extension of the existing starting-hub reinforcement action, stop and return the blocker.
+PASS. On 2026-07-14 the human explicitly approved `STORY-BASE-CONTENT-001 as proposed`, including the facility mapping, prototype values, prerequisites, three-to-four-affordable target, recruitment gates, and reinforcement/support discounts. The first Codex preflight then correctly stopped because current fixed offers were free and legacy migration was underspecified. A clarification request timed out with explicit instruction to use best judgment, so the bounded recommended correction now authorizes the exact fixed-offer prices and migration rules above. A second preflight found no existing Aerosol Techs unit; the same use-best-judgment fallback authorizes `strato_sensor_swarm` / `Strato Sensor Swarm` without rename or re-stat and locks the exact four-offer table above. These values remain tunable prototype balance rather than final canon. If implementation would require a new Champion system or tactical unit behavior rather than the bounded existing-system extensions above, stop and return the blocker.
 
 ## Proposed branch
 

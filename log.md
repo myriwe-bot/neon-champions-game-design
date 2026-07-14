@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-14] clarification | Stratospheric Lab existing-unit mapping locked
+
+- Codex correctly stopped because the READY story named provisional `Aerosol Techs` while Unity contains no such unit or approved alias.
+- The clarification prompt timed out with an explicit use-best-judgment fallback; selected the bounded existing-unit mapping.
+- Stratospheric Lab now recruits existing `strato_sensor_swarm`, retaining `Strato Sensor Swarm`, current stats/role, and sensor-lock behavior. No tactical unit rename, alias, new definition, or re-stat is authorized.
+- Added exact offer IDs, unit IDs, stack sizes, initial stock, active-faction refresh, and costs for all four facility-gated recruitment offers to prevent another implementation-tuning ambiguity.
+- No Unity files, remote implementation branch, PR, tests, or evidence existed at this second blocked preflight; the corrected prompt remains the sole READY implementation packet.
+
 ## [2026-07-14] clarification | STORY-BASE-CONTENT-001 preflight blocker resolved
 
 - Codex correctly stopped before Unity edits because the approved support discounts targeted free starting-hub offers and the READY story lacked an old-ID migration table.

@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-07-05
+updated: 2026-07-14
 source_lore: []
 related:
   [
@@ -98,6 +98,7 @@ related:
     production/stories/story-gate-001-hollow-gate-and-source-truth-reconciliation,
     production/stories/story-determinism-001-determinism-and-rng-decision-record,
     production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent,
+    production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike,
   ]
 approval: approved
 ---
@@ -106,23 +107,23 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-AI-001 Dumb Strategic AI Playtest Opponent`.
+**Current READY / approved Unity implementation packet:** `STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike`.
 
-`STORY-DETERMINISM-001` is DONE / merged through game-design PR #3. Human delegation promoted the next EPIC-015 child, `STORY-AI-001`, to READY / approved as a narrow Unity runtime implementation packet. It must implement only a deterministic dumb strategic AI playtest opponent; sophisticated AI and all random behavior remain out of scope.
+`STORY-UI-SHELL-001` and its post-merge repair are DONE / merged. The human approved `STORY-ART-LOOK-001` on 2026-07-14, including the ledger contract and a cross-asset rule requiring every AI-generated non-code asset to be visibly filename-labeled, provenance-tracked, isolated, and cleanly replaceable. Code is exempt. The packet remains a bounded vertical-look/provenance spike, not broad asset import or final art.
 
 ## Copy-safe prompt-file mode
 
 If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
 
-Current implementation prompt file: `production/sprints/codex-story-ai-001.prompt.txt`. The prompt contains a preflight guard requiring `status: ready`, `approval: approved`, Ambiguity Check PASS, `STORY-DETERMINISM-001` DONE/merged, deterministic-by-default ADR approval, and Unity README current-task pointer agreement.
+Current implementation prompt file: `production/sprints/codex-story-art-look-001.prompt.txt`. Its preflight requires the READY/approved story, approved art/provenance contract, Ambiguity gate PASS, and Unity README current-task pointer agreement.
 
 ## Current READY implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-ai-001.prompt.txt` for `STORY-AI-001 Dumb Strategic AI Playtest Opponent`.
+Use checked-in prompt file `production/sprints/codex-story-art-look-001.prompt.txt` for `STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike`.
 
-This is a narrow Unity runtime packet for deterministic playtest pressure. It must not add randomness, sophisticated strategic AI, fog/dirty-info reasoning, diplomacy, new map content, or tactical CombatAI changes.
+This is a narrow Unity presentation/provenance spike. It must not broadly import asset packs, establish final art, migrate the render pipeline, redesign gameplay, or hide AI-generated asset provenance.
 
-### Copy-safe STORY-AI-001 handoff
+### Copy-safe STORY-ART-LOOK-001 handoff
 
 Primary workspace-write run:
 
@@ -136,14 +137,14 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ai-001.prompt.txt"
-$prompt | codex exec --sandbox workspace-write
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-art-look-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-$prompt | codex exec --sandbox danger-full-access
+codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Historical prompt-file runs

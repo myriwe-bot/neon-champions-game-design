@@ -21,11 +21,13 @@ Use a **deliberately stylized hybrid placeholder pipeline** for the one-month pr
 1. CC0 low-poly/modular 3D geometry for terrain, infrastructure, and simple unit bases;
 2. CC0 PBR materials/HDRIs for snow, ice, rock, metal, concrete, rust, and industrial surfaces;
 3. custom faction materials, decals, silhouettes, lights, VFX, UI, and color/shape language;
-4. generated concept images only as internal direction or clearly provenance-tracked temporary portraits/backgrounds;
+4. generated non-code assets only as clearly marked, provenance-tracked, replace-later material under the approved `ai-generated__<name>` filename and isolated-path contract;
 5. CC0 or carefully attributed UI icons and sound effects;
 6. no attempt to disguise unrelated packs as final art.
 
 The goal is not “free assets that look final.” The goal is a coherent, screenshot-worthy prototype whose visual system can later be replaced by original/contracted art without redesigning the game.
+
+This research is reference-only. Binding implementation authority for AI-generated asset labeling, provenance, and replacement lives in `design/art/prototype-visual-target-and-asset-ledger.md`.
 
 ## Can shaders make free assets distinctive?
 

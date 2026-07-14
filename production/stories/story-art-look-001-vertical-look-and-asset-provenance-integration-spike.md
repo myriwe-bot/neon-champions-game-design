@@ -1,12 +1,12 @@
 ---
 title: STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-13
-updated: 2026-07-13
-approval: pending
+updated: 2026-07-14
+approval: approved
 related: [production/epics/epic-016-accelerated-playable-product-foundation, design/art/prototype-visual-target-and-asset-ledger, design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12, design/ux/player-shell]
 ---
 
@@ -18,7 +18,8 @@ As a player or reviewer, I want one coherent White Sky strategic presentation fr
 
 ## In scope
 
-- Create `Assets/Provenance/asset-ledger.csv` with the approved columns, allowed statuses, one schema/example row, and automated validation for required fields and allowed status values.
+- Create `Assets/Provenance/asset-ledger.csv` with the approved columns, allowed values, one schema/example row, and automated validation for required fields and values.
+- Enforce the approved cross-asset AI rule for every AI-generated non-code asset used by the spike: literal `ai-generated__` filename prefix, isolated `Assets/Generated/AI/<asset-type>/` path, complete generation/provenance metadata, default `replace-later` status, and a stable logical replacement boundary. Code is exempt.
 - Build one representative vertical-look scene or bounded presentation mode using the merged player shell, existing strategic presentation boundary, and approved hybrid physical-map model: real terrain/structures with restrained route and objective overlays.
 - Show all of these in the same reviewable frame or tightly paired captures:
   - one strategic site/base silhouette;
@@ -35,6 +36,7 @@ As a player or reviewer, I want one coherent White Sky strategic presentation fr
 - Express HRC through controlled heterogeneity: a shared civic/rescue-orange and warm-mesh recognition layer across visibly different local, labour, rescue, ecological/counterculture, volunteer, and defector equipment. Do not reduce HRC to primitive locals, peaceful environmentalists, or a standardized militia.
 - Keep Champion-led forces at small task-group/special-operations visual scale; do not imply conventional mass armies or permanent front lines.
 - Prefer existing/procedural geometry for the spike. Import at most a narrowly justified CC0/acceptable-license sample needed to prove the ledger/import path.
+- Do not overwrite a later human/contractor replacement under an AI-generated filename. Add the replacement separately, repoint the stable reference, and safely remove/archive the generated asset and `.meta`.
 - Produce current 1920×1080 PNG evidence and a concise before/after and provenance review.
 
 ## Out of scope
@@ -43,7 +45,9 @@ Broad asset-pack import; final art; full scenario reskin; final HRC/QXZ units or
 
 ## Acceptance criteria
 
-- The ledger exists at `Assets/Provenance/asset-ledger.csv`, validates required columns/allowed statuses, and every visible external asset in the evidence has a complete ledger row.
+- The ledger exists at `Assets/Provenance/asset-ledger.csv`, validates required columns/allowed values, and every visible external or AI-generated asset in the evidence has a complete ledger row.
+- Validation fails for an AI-generated non-code asset missing the `ai-generated__` filename prefix, isolated AI path, `origin_type=ai-generated`, generation record, replacement target, or default `replace-later` status, and for a marked AI-generated file missing from the ledger.
+- A test/evidence example proves that presentation references use a stable logical asset boundary and can be repointed to a separately named replacement without gameplay or presentation-architecture redesign.
 - Evidence visibly reads as White Sky cyberpunk rather than default primitives or unrelated free packs.
 - HRC and QXZ groups are distinguishable without labels through at least two of silhouette, material treatment, equipment shape, structural language, or controlled emissions.
 - Strategic site/base, selected/reachable/hostile states, and the player shell remain readable at 1920×1080 without raw IDs.
@@ -63,7 +67,7 @@ Broad asset-pack import; final art; full scenario reskin; final HRC/QXZ units or
 
 ## Ambiguity gate
 
-FAIL. The hybrid physical-map model, White Sky/regional scene rules, Champion-plus-cosmetic-entourage representation, HRC/QXZ physical languages, neon distribution, and small-task-group scale were human-approved on 2026-07-13. Human approval must still confirm the ledger path/columns and bounded external-asset rule before this story becomes READY. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, or invented faction visual canon, stop.
+PASS. The hybrid physical-map model, White Sky/regional scene rules, Champion-plus-cosmetic-entourage representation, HRC/QXZ physical languages, neon distribution, and small-task-group scale were human-approved on 2026-07-13. On 2026-07-14 the human approved the ledger path/columns and bounded external-asset rule, adding the binding requirement that every AI-generated non-code asset type be visibly labeled in its filename and provenance, isolated, and cleanly replaceable; code is exempt. The research note is reference-only, not authority for exact assets. If implementation would require render-pipeline migration, broad shader architecture, uncertain asset licensing, hidden AI provenance, or invented faction visual canon, stop.
 
 ## Proposed branch
 
@@ -71,4 +75,4 @@ FAIL. The hybrid physical-map model, White Sky/regional scene rules, Champion-pl
 
 ## Verdict
 
-READY-CANDIDATE / approval pending. Do not run Codex implementation yet.
+READY / human-approved on 2026-07-14. Codex may implement this bounded story from the checked-in runnable prompt.

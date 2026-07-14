@@ -1,12 +1,12 @@
-GUARDED READY-CANDIDATE — DO NOT IMPLEMENT YET
+RUNNABLE READY STORY — STORY-ART-LOOK-001
 
 Preflight gate:
 1. Read `production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike.md`.
-2. Stop without editing Unity unless its frontmatter says `status: ready` and `approval: approved`.
+2. Stop without editing Unity unless its frontmatter says `status: ready` and `approval: approved` and its Ambiguity gate says PASS.
 3. Stop unless `design/art/prototype-visual-target-and-asset-ledger.md` says `status: approved` and `approval: approved`.
 4. If any required visual direction, external-asset license, render-pipeline choice, or faction visual language is ambiguous, report the exact blocker instead of inventing authority.
 
-After human approval, implement only from:
+Implement only from:
 - production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike.md
 - design/art/prototype-visual-target-and-asset-ledger.md
 - design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12.md
@@ -20,6 +20,15 @@ After human approval, implement only from:
 Create branch `story/STORY-ART-LOOK-001-vertical-look-provenance-spike` from current Unity `main`.
 
 Keep the spike bounded. Prefer existing/procedural geometry. Do not broadly import asset packs, invent final faction visual canon, migrate the render pipeline, replace the shader architecture, rewrite gameplay, or alter the merged player shell outside narrow integration needs. Verify every external asset license and ledger row before use.
+
+Binding AI-generated non-code asset rule:
+- This applies to every generated non-code asset type now or later; code is exempt.
+- Every AI-generated asset filename begins literally with `ai-generated__` and lives under `Assets/Generated/AI/<asset-type>/`.
+- Every generated asset has a complete ledger row with `origin_type=ai-generated`, generator/model when known, durable prompt/recipe or generation-record path, source inputs, default `status=replace-later`, and a non-empty replacement target.
+- Use a stable logical ID/registry/configuration boundary so the generated file can be replaced without redesign.
+- Never overwrite a human/contractor replacement under an `ai-generated__` filename. Add it separately, repoint the stable reference, and safely remove/archive the generated file and `.meta`.
+- Add validator coverage for both directions: generated files without compliant ledger/labels fail, and marked ledger/files that disagree fail.
+- Stop rather than obscuring, guessing, or stripping AI provenance.
 
 Use TDD for ledger validation and any production logic. Run the required EditMode, PlayMode, validator, standalone-build, and evidence checks. Produce current 1920×1080 PNG evidence and a complete omissions/provenance summary.
 

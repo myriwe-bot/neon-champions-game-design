@@ -5,7 +5,7 @@ status: approved
 phase: technical-setup
 owner: shared
 created: 2026-05-22
-updated: 2026-07-13
+updated: 2026-07-14
 source_lore: []
 related:
   [
@@ -27,6 +27,10 @@ This is the mandatory implementation rulebook for Codex and all coding agents.
 It does not replace GDDs, ADRs, stories, tests, or human approval. It constrains how implementation happens.
 
 Core rule: Codex is an implementer, not a designer or architect.
+
+## Non-code AI-generated asset control
+
+All AI-generated non-code assets, regardless of asset type, must follow `design/art/prototype-visual-target-and-asset-ledger.md`: literal `ai-generated__` filename prefix, isolated `Assets/Generated/AI/<asset-type>/` storage, complete provenance ledger metadata, default `replace-later` status, and a stable replacement boundary. Code is exempt. Agents may not hide, rename away, or guess provenance, and may not overwrite a human/contractor replacement under an AI-generated filename.
 
 ## 1. Implementation Authority
 

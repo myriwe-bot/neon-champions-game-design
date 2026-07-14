@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-14] approval | STORY-ART-LOOK-001 and replaceable AI-asset contract
+
+- Approved the canonical asset-ledger/provenance contract and promoted `STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike` to READY as the current Unity implementation packet.
+- Added a binding cross-asset rule for every AI-generated non-code asset type: literal `ai-generated__` filename prefix, isolated AI asset path, complete generation/provenance metadata, default `replace-later` status, and a stable logical replacement boundary. Code is exempt.
+- Human/contractor replacements must be separately named and repointed through the stable boundary; they must not overwrite generated files while retaining an AI-generated filename.
+- Converted the checked-in Codex prompt from guarded candidate to runnable and updated EPIC-016, run-prompt, index, and source-authority traceability.
+
 ## [2026-07-13] design | HRC/QXZ soft-canon production mirror and Champion audit
 
 - Mirrored the reviewed HRC world direction into the proof faction contract: pre-crisis informal protection umbrella, Champion-mediated crisis coalition, broad local/labour/rescue/ecological/counterculture/volunteer composition, and no constitutional/ethnic/primitive-faction framing.

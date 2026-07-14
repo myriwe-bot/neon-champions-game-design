@@ -1,12 +1,12 @@
 ---
 title: Prototype Visual Target and Asset Ledger Contract
 type: art-spec
-status: in-review
+status: approved
 phase: pre-production
 owner: shared
 created: 2026-07-12
-updated: 2026-07-12
-approval: pending
+updated: 2026-07-14
+approval: approved
 related: [design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12, design/ux/player-shell]
 ---
 
@@ -75,8 +75,25 @@ Every imported asset must pass license, provenance, silhouette, camera readabili
 ## Canonical ledger
 
 Unity repository path: `Assets/Provenance/asset-ledger.csv`.
-Required columns: `asset_id, source_url, author, license, license_url, downloaded_date, original_filename, local_path, modifications, attribution_text, intended_use, status, reviewer`.
+Required columns: `asset_id, source_url, author, license, license_url, downloaded_date, original_filename, local_path, modifications, attribution_text, intended_use, origin_type, generator, generation_record, replacement_target, status, reviewer`.
 Allowed status: `prototype`, `replace-later`, `candidate-final`, `rejected`.
+
+Allowed `origin_type` values: `human-authored`, `external`, `procedural`, `ai-generated`.
+
+## AI-generated non-code asset rule
+
+Human-approved on 2026-07-14. This rule applies to every non-code game asset type now or later, including images, textures, materials, models, animation, audio, music, voice, video, VFX source media, UI art, icons, portraits, and generated narrative/content files used as runtime assets. Code is explicitly exempt.
+
+- Every AI-generated non-code asset filename must begin with the literal marker `ai-generated__`, for example `ai-generated__hrc-champion-portrait-01.png` or `ai-generated__white-sky-wind-loop-01.wav`.
+- Store such files under an obvious isolated path such as `Assets/Generated/AI/<asset-type>/` as well as marking the filename. A directory alone is not sufficient.
+- Every such asset must have an `asset-ledger.csv` row with `origin_type=ai-generated`, the generator/tool and model when known, a durable prompt/recipe or generation-record path, source-input provenance, intended use, and a non-empty `replacement_target`.
+- AI-generated assets default to `status=replace-later`. Promoting one to `candidate-final` requires explicit human review; promotion never removes the AI label or provenance history.
+- Runtime/content references must use a stable logical asset ID or replaceable registry/configuration boundary rather than depending on the generated filename as permanent identity.
+- Replacing an AI-generated asset must add the replacement as a separately named file, repoint the stable reference, and then remove or archive the generated file and its Unity `.meta` safely. Do not overwrite a human/contractor replacement under an `ai-generated__` filename.
+- Validators must fail when an AI-generated file lacks the filename marker, isolated path, complete ledger metadata, `replace-later` status by default, or a replacement target; they must also fail when a file marked `ai-generated__` is absent from the ledger.
+- Agents must stop rather than obscure, guess, or strip AI provenance.
+
+The same replaceability principle applies across future non-code asset categories: generated assets must remain isolated from authored replacements and swappable without redesigning gameplay or presentation architecture.
 
 ## Vertical-look spike
 

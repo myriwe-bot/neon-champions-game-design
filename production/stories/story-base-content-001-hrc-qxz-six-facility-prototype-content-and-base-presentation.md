@@ -1,12 +1,12 @@
 ---
 title: STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-14
 updated: 2026-07-14
-approval: pending
+approval: approved
 related: [production/epics/epic-016-accelerated-playable-product-foundation, design/gdd/prototype-faction-contracts, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, production/stories/story-base-001-base-definition-and-facility-construction-core, production/stories/story-base-002-administration-income-chain-and-recruitment-dwellings]
 ---
 
@@ -31,7 +31,7 @@ Performance budget: no measurable regression to the current strategic-shell fram
 
 ## Proposed prototype mapping and tuning
 
-These are candidate implementation values for human approval. They are prototype tuning, not final balance.
+These implementation values were human-approved on 2026-07-14. They are prototype tuning, not final balance.
 
 | Faction | Facility | Candidate effect | Candidate cost / prerequisite |
 |---|---|---|---|
@@ -103,7 +103,7 @@ The scenario economy must make roughly three or four facilities per faction real
 
 ## Ambiguity gate
 
-PASS for READY-candidate. The faction pair, six facility names/functions, one-build-per-cycle rule, proof affordability target, normal-shell requirement, and existing strategic effect boundaries are already approved or implemented. Human approval is still required for the candidate mapping/tuning table above and for promotion to READY. If the support-discount mapping would require a new Champion system rather than a narrow extension of the existing starting-hub reinforcement action, stop and return the blocker.
+PASS. On 2026-07-14 the human explicitly approved `STORY-BASE-CONTENT-001 as proposed`, including the facility mapping, prototype values, prerequisites, three-to-four-affordable target, recruitment gates, and reinforcement/support discounts. These values remain tunable prototype balance rather than final canon. If the support-discount mapping would require a new Champion system rather than a narrow extension of the existing starting-hub reinforcement action, stop and return the blocker.
 
 ## Proposed branch
 
@@ -111,4 +111,4 @@ PASS for READY-candidate. The faction pair, six facility names/functions, one-bu
 
 ## Verdict
 
-READY-candidate / approval pending. Codex must not implement this story until frontmatter is promoted to `status: ready` and `approval: approved`, and the guarded prompt is activated.
+READY / human-approved on 2026-07-14. Codex may implement only this bounded story from the activated checked-in prompt.

@@ -69,7 +69,7 @@
 - [[production/epics/epic-016-accelerated-playable-product-foundation]] — ACTIVE four-week proof-build foundation epic.
 - [[production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell]] — DONE / merged first EPIC-016 player-shell implementation packet.
 - [[production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike]] — DONE / merged vertical-look and provenance spike through Unity PR #149.
-- [[production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation]] — READY-candidate / approval pending next EPIC-016 facility-content and base-presentation packet.
+- [[production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation]] — READY / approved current EPIC-016 facility-content and base-presentation packet.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.

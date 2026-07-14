@@ -1,6 +1,6 @@
-GUARDED CANDIDATE — DO NOT IMPLEMENT YET
+RUNNABLE READY STORY — STORY-BASE-CONTENT-001
 
-Candidate story: STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation
+Approved story: STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation
 
 Preflight gate:
 1. Read `production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation.md`.
@@ -8,7 +8,7 @@ Preflight gate:
 3. Stop unless `design/gdd/prototype-faction-contracts.md` remains approved and the Unity README current-task pointer names this exact READY story.
 4. If facility mapping/tuning, old-ID migration, support-discount behavior, or asset provenance is ambiguous, report the exact blocker rather than inventing authority.
 
-When activated, implement only from:
+Implement only from:
 - production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation.md
 - design/gdd/prototype-faction-contracts.md
 - design/gdd/strategic-map.md

@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-14] approval | STORY-BASE-CONTENT-001 activated
+
+- Human explicitly approved `STORY-BASE-CONTENT-001 as proposed`, including the twelve-facility mapping, prototype effects/costs/prerequisites, recruitment gates, authored reinforcement/support discounts, and three-to-four-affordable proof target.
+- Promoted the story to READY / approved and activated `production/sprints/codex-story-base-content-001.prompt.txt` as the sole current Unity implementation packet.
+- Kept prototype tuning replaceable and non-canonical; support facilities may only extend the existing starting-hub reinforcement action and must stop rather than introduce a new Champion system.
+- Unity README activation pointer must pass its own PR and post-merge CI gate before Codex implementation begins.
+
 ## [2026-07-14] merge | STORY-ART-LOOK-001 closed; six-facility candidate prepared
 
 - Reviewed, repaired, and squash-merged Unity PR #149 for `STORY-ART-LOOK-001`: https://github.com/myriwe-bot/neon-champions-unity/pull/149

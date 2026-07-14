@@ -108,15 +108,37 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation`.
 
-`STORY-ART-LOOK-001` is DONE / merged through Unity PR #149. The next proposed packet is `STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation`, currently READY-candidate / approval pending.
+`STORY-ART-LOOK-001` is DONE / merged through Unity PR #149. The human approved `STORY-BASE-CONTENT-001 as proposed` on 2026-07-14, including the facility effects, prototype costs/prerequisites, recruitment gates, support discounts, and three-to-four-affordable proof target.
 
-## Candidate prompt-file mode
+## Current READY implementation prompt
 
-Candidate prompt file: `production/sprints/codex-story-base-content-001.prompt.txt`.
+Use `production/sprints/codex-story-base-content-001.prompt.txt`. Its preflight requires the READY/approved story, approved faction contract, Ambiguity gate PASS, and matching Unity README current-task pointer.
 
-It is guarded and must not be run while the story remains `status: ready-candidate` and `approval: pending`. Human approval must first accept or revise the proposed facility effect/cost mapping, promote exactly this story to READY, activate the prompt, and update the Unity README current-task pointer through its own reviewed PR.
+### Copy-safe STORY-BASE-CONTENT-001 handoff
+
+Primary workspace-write run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-base-content-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+Trusted-repo fallback:
+
+```powershell
+codex exec --sandbox danger-full-access $prompt
+```
 
 ## Most recently completed implementation prompt
 

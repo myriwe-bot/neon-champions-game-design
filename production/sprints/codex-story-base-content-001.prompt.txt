@@ -18,7 +18,7 @@ Implement only from:
 - docs/architecture/testing-strategy.md
 - docs/architecture/ci-build-automation.md
 
-Create branch `story/STORY-BASE-CONTENT-001-six-facility-content-and-presentation` from current Unity `main`.
+Use branch `story/STORY-BASE-CONTENT-001-six-facility-content-and-presentation`. Create it from current `main` if absent; if the unchanged clean preflight branch already exists, reuse it after updating it to current `main`.
 
 Keep the story bounded. Reuse the implemented base facility, recurring-income, recruitment, starting-hub reinforcement, player-shell, provenance, and White Sky presentation boundaries. Do not add new strategic systems, tactical unit behavior, final art, or faction canon. Do not hardcode faction-specific UI/service branches.
 

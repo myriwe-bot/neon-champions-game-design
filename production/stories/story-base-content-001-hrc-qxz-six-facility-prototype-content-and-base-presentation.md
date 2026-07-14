@@ -50,6 +50,61 @@ These implementation values were human-approved on 2026-07-14. They are prototyp
 
 The scenario economy must make roughly three or four facilities per faction realistically constructible during the proof, not all six. If current scenario length or resource rewards make that impossible, adjust only prototype costs/rewards and document the tuning; do not expand the economy system.
 
+## Preflight clarification: reinforcement pricing and legacy migration
+
+The first implementation preflight found that both existing starting-hub fixed offers were free and that the old facility IDs did not have an authoritative migration table. The following correction is binding implementation authority:
+
+### Starting-hub fixed-offer prices
+
+| Faction | Undiscounted fixed-offer cost | Support facility | Effective cost after support |
+|---|---|---|---|
+| HRC | 20 Credits + 10 Materials | Operations Garage: −10 Credits and −5 Materials | 10 Credits + 5 Materials |
+| QXZ | 20 Credits + 4 Intel | Continuity Suite: −10 Credits and −2 Intel | 10 Credits + 2 Intel |
+
+- Apply discounts per resource, clamped at zero; never create resources from an over-discount.
+- Preview, affordability, resource deduction, and result summaries must use the same effective-cost calculation.
+- The discount applies only when the relevant support facility is constructed at the active faction's owned starting base.
+- Preserve current fixed-offer stock and major-interaction rules; this clarification does not authorize additional stock or refresh behavior.
+
+### Stable new facility IDs
+
+| Faction | Facility | Stable ID |
+|---|---|---|
+| HRC | Council Office | `facility_hrc_council_office` |
+| HRC | Repair Cooperative | `facility_hrc_repair_cooperative` |
+| HRC | Watch Muster | `facility_hrc_watch_muster` |
+| HRC | Scout Relay | `facility_hrc_scout_relay` |
+| HRC | Witness Mesh | `facility_hrc_witness_mesh` |
+| HRC | Operations Garage | `facility_hrc_operations_garage` |
+| QXZ | Concession Office | `facility_qxz_concession_office` |
+| QXZ | Climate Fabricator | `facility_qxz_climate_fabricator` |
+| QXZ | Mandate Barracks | `facility_qxz_mandate_barracks` |
+| QXZ | Stratospheric Lab | `facility_qxz_stratospheric_lab` |
+| QXZ | Risk Analytics Cell | `facility_qxz_risk_analytics_cell` |
+| QXZ | Continuity Suite | `facility_qxz_continuity_suite` |
+
+### Legacy facility-ID migration
+
+| Legacy ID | New stable ID |
+|---|---|
+| `facility_home_rule_admin_core` | `facility_hrc_council_office` |
+| `facility_home_rule_admin_uplink` | `facility_hrc_repair_cooperative` |
+| `facility_home_rule_regional_command` | `facility_hrc_operations_garage` |
+| `facility_home_rule_sensor_annex` | `facility_hrc_watch_muster` |
+| `facility_qxz_admin_core` | `facility_qxz_concession_office` |
+| `facility_qxz_admin_uplink` | `facility_qxz_climate_fabricator` |
+| `facility_qxz_regional_command` | `facility_qxz_continuity_suite` |
+| `facility_qxz_signal_annex` | `facility_qxz_mandate_barracks` |
+
+Migration rules:
+
+1. Replace each known legacy constructed-facility ID with the corresponding stable new ID before normal runtime use.
+2. A migrated facility remains constructed even if imported state conflicts with a new prerequisite. Do not auto-construct a missing prerequisite and do not delete or roll back the migrated facility.
+3. Emit a non-fatal migration/validation diagnostic for grandfathered prerequisite inconsistency. Normal prerequisite enforcement applies to future construction only.
+4. Collapse duplicate old/new IDs to one constructed entry deterministically.
+5. Unknown removed facility IDs must not be silently discarded: preserve the source state, emit a blocking migration diagnostic, and stop loading/applying that state until explicitly resolved.
+6. Scout Relay, Witness Mesh, Stratospheric Lab, and Risk Analytics Cell have no legacy equivalents and start unbuilt.
+
 ## In scope
 
 - Replace generic/placeholder facility presentation in the proof scenario with exactly the six approved-provisional facilities for each faction.
@@ -84,6 +139,8 @@ The scenario economy must make roughly three or four facilities per faction real
 - [ ] Credits, Materials, and Intel recurring effects apply once at the active-faction turn boundary, only from owned constructed facilities, with visible feedback and no preview/failed-turn mutation.
 - [ ] Watch Muster, Scout Relay, Mandate Barracks, and Stratospheric Lab gate their authored existing-unit recruitment offers with deterministic stock/refresh behavior.
 - [ ] Operations Garage and Continuity Suite visibly change the cost/affordability of the existing starting-hub reinforcement/support action through authored effect metadata.
+- [ ] Undiscounted/effective starting-hub costs are exactly HRC `20 Credits + 10 Materials` → `10 Credits + 5 Materials` and QXZ `20 Credits + 4 Intel` → `10 Credits + 2 Intel`; preview and apply use identical clamped calculations.
+- [ ] Every known legacy facility ID migrates according to the binding table; duplicate IDs collapse, grandfathered prerequisite conflicts remain constructed with a non-fatal diagnostic, and unknown removed IDs fail closed without state loss.
 - [ ] One build per base per strategic cycle, affordability, prerequisites, duplicate protection, and no-partial-mutation behavior remain green.
 - [ ] The base panel communicates all six choices and built/available/blocked states at 1920×1080 in the normal player shell.
 - [ ] Prototype scenario tuning allows approximately three or four facilities per faction to be constructed during the proof but does not make all six routine purchases.
@@ -103,7 +160,7 @@ The scenario economy must make roughly three or four facilities per faction real
 
 ## Ambiguity gate
 
-PASS. On 2026-07-14 the human explicitly approved `STORY-BASE-CONTENT-001 as proposed`, including the facility mapping, prototype values, prerequisites, three-to-four-affordable target, recruitment gates, and reinforcement/support discounts. These values remain tunable prototype balance rather than final canon. If the support-discount mapping would require a new Champion system rather than a narrow extension of the existing starting-hub reinforcement action, stop and return the blocker.
+PASS. On 2026-07-14 the human explicitly approved `STORY-BASE-CONTENT-001 as proposed`, including the facility mapping, prototype values, prerequisites, three-to-four-affordable target, recruitment gates, and reinforcement/support discounts. The first Codex preflight then correctly stopped because current fixed offers were free and legacy migration was underspecified. A clarification request timed out with explicit instruction to use best judgment, so the bounded recommended correction now authorizes the exact fixed-offer prices and migration rules above. These values remain tunable prototype balance rather than final canon. If implementation would require a new Champion system rather than a narrow extension of the existing starting-hub reinforcement action, stop and return the blocker.
 
 ## Proposed branch
 

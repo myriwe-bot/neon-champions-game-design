@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-14] clarification | STORY-BASE-CONTENT-001 preflight blocker resolved
+
+- Codex correctly stopped before Unity edits because the approved support discounts targeted free starting-hub offers and the READY story lacked an old-ID migration table.
+- The clarification prompt timed out with an explicit use-best-judgment fallback; selected the bounded recommended correction rather than broadening the system.
+- Fixed undiscounted/effective costs: HRC `20 Credits + 10 Materials` → `10 Credits + 5 Materials`; QXZ `20 Credits + 4 Intel` → `10 Credits + 2 Intel`.
+- Added deterministic legacy mappings from admin core/uplink/regional command/recruitment annex to Council/Concession, Repair/Fabricator, Operations/Continuity, and Watch/Mandate respectively.
+- Grandfathered migrated construction is preserved with non-fatal prerequisite diagnostics; duplicates collapse; unknown removed IDs fail closed without silent state loss. New facilities without legacy equivalents start unbuilt.
+- No Unity files, remote implementation branch, PR, tests, or evidence existed at the blocked preflight; the corrected prompt remains the sole READY implementation packet.
+
 ## [2026-07-14] approval | STORY-BASE-CONTENT-001 activated
 
 - Human explicitly approved `STORY-BASE-CONTENT-001 as proposed`, including the twelve-facility mapping, prototype effects/costs/prerequisites, recruitment gates, authored reinforcement/support discounts, and three-to-four-affordable proof target.

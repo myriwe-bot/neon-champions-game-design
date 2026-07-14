@@ -22,6 +22,14 @@ Create branch `story/STORY-BASE-CONTENT-001-six-facility-content-and-presentatio
 
 Keep the story bounded. Reuse the implemented base facility, recurring-income, recruitment, starting-hub reinforcement, player-shell, provenance, and White Sky presentation boundaries. Do not add new strategic systems, tactical unit behavior, final art, or faction canon. Do not hardcode faction-specific UI/service branches.
 
+Binding preflight clarification:
+- Change the HRC starting-hub fixed offer from free to `20 Credits + 10 Materials`; Operations Garage discounts it by `10 Credits + 5 Materials`, producing `10 Credits + 5 Materials` effective cost.
+- Change the QXZ starting-hub fixed offer from free to `20 Credits + 4 Intel`; Continuity Suite discounts it by `10 Credits + 2 Intel`, producing `10 Credits + 2 Intel` effective cost.
+- Clamp each discounted resource cost at zero and use one shared effective-cost calculation for preview, affordability, apply, deduction, and summaries.
+- Preserve existing fixed-offer stock and major-interaction rules.
+- Apply the exact legacy-ID migration table and conflict rules in the story: known IDs map deterministically; duplicates collapse; grandfathered prerequisite conflicts stay constructed with a non-fatal diagnostic; missing prerequisites are neither auto-built nor used to delete migrated construction; unknown removed IDs fail closed without silent state loss.
+- The initial blocked local Unity branch was unchanged at `main`; continue from the current clean branch after pulling the corrected design source.
+
 Binding non-code asset rule:
 - Prefer existing or project-authored procedural presentation.
 - Any external/generated visible non-code asset must be source-identifiable, ledgered where required, isolated, and replaceable.

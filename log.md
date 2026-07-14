@@ -8,6 +8,9 @@
 - Promoted the story to READY / approved and activated `production/sprints/codex-story-base-content-001.prompt.txt` as the sole current Unity implementation packet.
 - Kept prototype tuning replaceable and non-canonical; support facilities may only extend the existing starting-hub reinforcement action and must stop rather than introduce a new Champion system.
 - Unity README activation pointer must pass its own PR and post-merge CI gate before Codex implementation begins.
+- Design approval commit: `a90789f335de5e2958c5dd42f2f3dd2970e0eecb`; publish CI passed: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/29335020473
+- Activated the Unity current-task pointer through PR #151: https://github.com/myriwe-bot/neon-champions-unity/pull/151
+- Pointer merge commit: `a982cc446fbe21a2ac763f20dcf64c835177bc5c`; exact-head PR CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29335088059; post-merge `main` CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29335595644
 
 ## [2026-07-14] merge | STORY-ART-LOOK-001 closed; six-facility candidate prepared
 

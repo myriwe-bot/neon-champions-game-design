@@ -1,7 +1,7 @@
 ---
 title: STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-13
@@ -73,6 +73,16 @@ PASS. The hybrid physical-map model, White Sky/regional scene rules, Champion-pl
 
 `story/STORY-ART-LOOK-001-vertical-look-provenance-spike`
 
+## Completion evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/149
+- Final PR head: `b8bea3a1a034c43ef990cfb9678337c419fa8442`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29331732275
+- Squash merge commit: `686db4b618ed55111d0ee97ca43a7a6bfc358794`
+- Post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29332199330
+- Evidence: `production/evidence/STORY-ART-LOOK-001/` in the Unity repository, including current 1920×1080 normal and selected/action captures.
+- Delivered provenance boundary: validated asset ledger plus a deterministic, project-authored, replace-later procedural terrain plate behind a stable registry/resource boundary. No AI-generated or external non-code asset was integrated.
+
 ## Verdict
 
-READY / human-approved on 2026-07-14. Codex may implement this bounded story from the checked-in runnable prompt.
+DONE / merged on 2026-07-14. The bounded White Sky look/provenance spike passed final visual review, exact-head CI, and post-merge `main` CI. Replace-later prototype art remains explicitly non-final.

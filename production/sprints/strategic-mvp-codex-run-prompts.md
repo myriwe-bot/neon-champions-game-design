@@ -99,6 +99,7 @@ related:
     production/stories/story-determinism-001-determinism-and-rng-decision-record,
     production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent,
     production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike,
+    production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation,
   ]
 approval: approved
 ---
@@ -107,45 +108,19 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike`.
+**Current READY / approved Unity implementation packet:** none.
 
-`STORY-UI-SHELL-001` and its post-merge repair are DONE / merged. The human approved `STORY-ART-LOOK-001` on 2026-07-14, including the ledger contract and a cross-asset rule requiring every AI-generated non-code asset to be visibly filename-labeled, provenance-tracked, isolated, and cleanly replaceable. Code is exempt. The packet remains a bounded vertical-look/provenance spike, not broad asset import or final art.
+`STORY-ART-LOOK-001` is DONE / merged through Unity PR #149. The next proposed packet is `STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation`, currently READY-candidate / approval pending.
 
-## Copy-safe prompt-file mode
+## Candidate prompt-file mode
 
-If PowerShell shows `>>`, the here-string was not closed correctly. Avoid here-strings entirely and run Codex from checked-in prompt files instead.
+Candidate prompt file: `production/sprints/codex-story-base-content-001.prompt.txt`.
 
-Current implementation prompt file: `production/sprints/codex-story-art-look-001.prompt.txt`. Its preflight requires the READY/approved story, approved art/provenance contract, Ambiguity gate PASS, and Unity README current-task pointer agreement.
+It is guarded and must not be run while the story remains `status: ready-candidate` and `approval: pending`. Human approval must first accept or revise the proposed facility effect/cost mapping, promote exactly this story to READY, activate the prompt, and update the Unity README current-task pointer through its own reviewed PR.
 
-## Current READY implementation prompt
+## Most recently completed implementation prompt
 
-Use checked-in prompt file `production/sprints/codex-story-art-look-001.prompt.txt` for `STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike`.
-
-This is a narrow Unity presentation/provenance spike. It must not broadly import asset packs, establish final art, migrate the render pipeline, redesign gameplay, or hide AI-generated asset provenance.
-
-### Copy-safe STORY-ART-LOOK-001 handoff
-
-Primary workspace-write run:
-
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git checkout main
-git pull --ff-only origin main
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-art-look-001.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-```
-
-Trusted-repo fallback:
-
-```powershell
-codex exec --sandbox danger-full-access $prompt
-```
+Historical completed prompt: `production/sprints/codex-story-art-look-001.prompt.txt` for the merged vertical-look/provenance spike.
 
 ## Historical prompt-file runs
 

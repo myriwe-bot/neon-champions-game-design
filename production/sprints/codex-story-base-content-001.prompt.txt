@@ -1,0 +1,42 @@
+GUARDED CANDIDATE — DO NOT IMPLEMENT YET
+
+Candidate story: STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation
+
+Preflight gate:
+1. Read `production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation.md`.
+2. Stop without editing Unity unless its frontmatter says `status: ready` and `approval: approved`, its Ambiguity gate says PASS, and its Verdict says READY.
+3. Stop unless `design/gdd/prototype-faction-contracts.md` remains approved and the Unity README current-task pointer names this exact READY story.
+4. If facility mapping/tuning, old-ID migration, support-discount behavior, or asset provenance is ambiguous, report the exact blocker rather than inventing authority.
+
+When activated, implement only from:
+- production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation.md
+- design/gdd/prototype-faction-contracts.md
+- design/gdd/strategic-map.md
+- design/ux/player-shell.md
+- design/art/prototype-visual-target-and-asset-ledger.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+
+Create branch `story/STORY-BASE-CONTENT-001-six-facility-content-and-presentation` from current Unity `main`.
+
+Keep the story bounded. Reuse the implemented base facility, recurring-income, recruitment, starting-hub reinforcement, player-shell, provenance, and White Sky presentation boundaries. Do not add new strategic systems, tactical unit behavior, final art, or faction canon. Do not hardcode faction-specific UI/service branches.
+
+Binding non-code asset rule:
+- Prefer existing or project-authored procedural presentation.
+- Any external/generated visible non-code asset must be source-identifiable, ledgered where required, isolated, and replaceable.
+- Every AI-generated asset filename begins literally with `ai-generated__`, lives under `Assets/Generated/AI/<asset-type>/`, has complete generation/provenance metadata, defaults to `replace-later`, and is referenced through a stable logical replacement boundary.
+- Stop rather than obscuring or guessing provenance.
+
+Use TDD for facility effects, validation, migration, and production rules. Run required EditMode, PlayMode, validator, standalone-build, and evidence checks. Produce the three required current 1920×1080 captures.
+
+Completion contract after implementation and verification:
+- inspect `git status --short` and remove only disposable scratch;
+- ensure the diff contains implementation, tests, evidence, and required `.meta` files;
+- run `git diff --check`;
+- commit the actual story-scoped changes;
+- push with `git push -u origin HEAD:story/STORY-BASE-CONTENT-001-six-facility-content-and-presentation`;
+- create a non-draft PR to `main` with source links, verification, evidence, provenance, migration, prototype tuning, and omissions;
+- print final branch, commit SHA, remote branch, PR URL, and pending CI.
+
+Do not stop at “PR-ready,” a dirty worktree, or an unpushed branch. If publication fails, preserve work and report the exact command/error and recovery commands.

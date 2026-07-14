@@ -23,8 +23,8 @@ A new player can complete a faction-selectable 20–30 minute HRC/QXZ slice and 
 ## Capability sequence
 
 1. `STORY-UI-SHELL-001` — DONE / merged map-first strategic shell and normal player flow; Unity PR #145.
-2. `STORY-ART-LOOK-001` — READY / approved vertical-look and asset-provenance integration spike; current implementation packet.
-3. HRC/QXZ six-facility prototype content and base presentation.
+2. `STORY-ART-LOOK-001` — DONE / merged vertical-look and asset-provenance integration spike; Unity PR #149, merge `686db4b618ed55111d0ee97ca43a7a6bfc358794`, post-merge CI passed.
+3. `STORY-BASE-CONTENT-001` — READY-candidate / approval pending for HRC/QXZ six-facility prototype content and base presentation.
 4. Three-line faction composition and tactical identity pass.
 5. Month-one scenario topology, pressure, Feed consequence, and capture flow.
 6. Human proof-build playtest and gate review.

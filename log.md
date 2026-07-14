@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-14] merge | STORY-ART-LOOK-001 closed; six-facility candidate prepared
+
+- Reviewed, repaired, and squash-merged Unity PR #149 for `STORY-ART-LOOK-001`: https://github.com/myriwe-bot/neon-champions-unity/pull/149
+- Final exact-head PR SHA: `b8bea3a1a034c43ef990cfb9678337c419fa8442`; CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29331732275
+- Merge commit: `686db4b618ed55111d0ee97ca43a7a6bfc358794`; post-merge `main` CI passed: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29332199330
+- Merge-gate repairs improved camera framing, White Sky terrain/atmospheric presentation, HRC/QXZ forms, state markers, runtime cleanup, provenance validation, and tests; refreshed 1920×1080 evidence passed the bounded visual gate.
+- Added a deterministic project-authored procedural terrain plate with checked-in generator, `replace-later` ledger status, and stable registry/resource replacement boundary. No AI-generated or external non-code asset was integrated.
+- Removed the temporary evidence-refresh workflow before merge.
+- Prepared `STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation` and a guarded Codex prompt as READY-candidate / approval pending. There is no current READY Unity implementation packet.
+
 ## [2026-07-14] approval | STORY-ART-LOOK-001 and replaceable AI-asset contract
 
 - Approved the canonical asset-ledger/provenance contract and promoted `STORY-ART-LOOK-001 Vertical Look and Asset Provenance Integration Spike` to READY as the current Unity implementation packet.

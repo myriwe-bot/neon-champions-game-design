@@ -1,0 +1,49 @@
+GUARDED IMPLEMENTATION PACKET — STORY-FACTION-COMPOSITION-001
+
+Proposed story: STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof
+
+Preflight gate:
+1. Read `production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof.md`.
+2. STOP WITHOUT EDITING UNITY unless its frontmatter says `status: ready` and `approval: approved`, its Ambiguity gate says PASS, and its Verdict says READY.
+3. STOP unless `design/gdd/prototype-faction-contracts.md` remains approved and the Unity README current-task pointer names this exact READY story.
+4. If the HRC Sled Logistics Team proxy, QXZ Strato Sensor Swarm proxy, starting stack mapping, imported-army compatibility, or evidence contract remains ambiguous, report the exact blocker rather than inventing authority.
+
+When and only when the gate passes, implement from:
+- production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof.md
+- design/gdd/prototype-faction-contracts.md
+- design/gdd/faction-unit-rosters.md
+- design/gdd/tactical-combat.md
+- design/ux/player-shell.md
+- production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation.md
+- docs/architecture/control-manifest.md
+- docs/architecture/testing-strategy.md
+- docs/architecture/ci-build-automation.md
+
+Use branch `story/STORY-FACTION-COMPOSITION-001-three-line-identity-proof`. Create it from current `main` if absent; if a clean preflight branch exists, update it to current `main` before editing.
+
+Keep the story bounded:
+- Replace the proof scenario's HRC starting Placeholder Infantry with `sled_logistics_team` count 5.
+- Replace the proof scenario's QXZ starting Placeholder Infantry with `climate_bulwark` count 7.
+- Preserve the four STORY-BASE-CONTENT-001 facility-gated offers exactly.
+- Preserve all six existing stable unit IDs, display names, stats, role tags, and behaviors.
+- Reuse existing army persistence, recruitment, encounter setup, tactical stack, Sensor Lock, return-summary, player-shell, White Sky, and provenance boundaries.
+- Update superseded player-facing proof assertions without broadly deleting explicitly scoped placeholder-compatibility coverage.
+- Do not add new tactical mechanics, unit definitions, final faction names, broad AI/pathfinding work, final art, or unapproved external/generated assets.
+
+Binding non-code asset rule:
+- Prefer existing or project-authored procedural presentation.
+- Any external/generated visible non-code asset must be source-identifiable, ledgered where required, isolated, replaceable, and compliant with the literal `ai-generated__` filename/path/provenance contract where applicable.
+- Stop rather than obscuring or guessing provenance.
+
+Use TDD for scenario mapping, persistence/compatibility, recruitment-to-encounter flow, and player-facing identity. Run required EditMode, PlayMode, validator, standalone-build, and evidence checks. Produce the required current 1920×1080 captures with active-render-state bounds/non-overlap/text-fit assertions.
+
+Completion contract after implementation and verification:
+- inspect `git status --short` and remove only disposable scratch;
+- ensure the diff contains implementation, tests, evidence, and required `.meta` files;
+- run `git diff --check`;
+- commit the actual story-scoped changes;
+- push with `git push -u origin HEAD:story/STORY-FACTION-COMPOSITION-001-three-line-identity-proof`;
+- create a non-draft PR to `main` with source links, verification, evidence, provenance, compatibility, placeholders retained, and omissions;
+- print final branch, commit SHA, remote branch, PR URL, and pending CI.
+
+Do not stop at “PR-ready,” a dirty worktree, or an unpushed branch. If publication fails, preserve work and report the exact command/error and recovery commands.

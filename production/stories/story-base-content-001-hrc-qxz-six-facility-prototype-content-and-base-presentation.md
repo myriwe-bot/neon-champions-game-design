@@ -1,11 +1,11 @@
 ---
 title: STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-14
-updated: 2026-07-14
+updated: 2026-07-15
 approval: approved
 related: [production/epics/epic-016-accelerated-playable-product-foundation, design/gdd/prototype-faction-contracts, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, production/stories/story-base-001-base-definition-and-facility-construction-core, production/stories/story-base-002-administration-income-chain-and-recruitment-dwellings]
 ---
@@ -183,6 +183,16 @@ PASS. On 2026-07-14 the human explicitly approved `STORY-BASE-CONTENT-001 as pro
 
 `story/STORY-BASE-CONTENT-001-six-facility-content-and-presentation`
 
+## Completion evidence
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/152
+- Final PR head: `a4a5d1d824142c7d0ae968ce2ebec84f1a4431f0`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29393301644
+- Squash merge commit: `d0fcc4d4921c398e52993794ac067d6e439d580d`
+- Post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29393833902
+- Evidence: `production/evidence/STORY-BASE-CONTENT-001/` in the Unity repository, including sharp current 1920×1080 HRC, QXZ, and construction-result captures.
+- Independent closure review passed after null imported-facility migration and active-render-state layout/readability blockers were repaired.
+
 ## Verdict
 
-READY / human-approved on 2026-07-14. Codex may implement only this bounded story from the activated checked-in prompt.
+DONE / merged on 2026-07-15. The six-facility HRC/QXZ content, migration, recruitment/economy effects, normal-shell presentation, exact-head CI, and post-merge `main` CI passed.

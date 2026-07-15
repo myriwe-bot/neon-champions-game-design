@@ -100,6 +100,7 @@ related:
     production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent,
     production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike,
     production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation,
+    production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof,
   ]
 approval: approved
 ---
@@ -108,15 +109,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-BASE-CONTENT-001 HRC/QXZ Six-Facility Prototype Content and Base Presentation`.
+**Current READY / approved Unity implementation packet:** none. Do not start Unity implementation until the next candidate is human-approved and activated.
 
-`STORY-ART-LOOK-001` is DONE / merged through Unity PR #149. The human approved `STORY-BASE-CONTENT-001 as proposed` on 2026-07-14, including the facility effects, prototype costs/prerequisites, recruitment gates, support discounts, and three-to-four-affordable proof target.
+`STORY-BASE-CONTENT-001` is DONE / merged through Unity PR #152 with post-merge CI passed. The next candidate is `STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof`; it remains PROPOSED pending human approval of the bounded Sled Logistics Team and Strato Sensor Swarm proxy mapping.
 
-## Current READY implementation prompt
+## Next guarded implementation packet
 
-Use `production/sprints/codex-story-base-content-001.prompt.txt`. Its preflight requires the READY/approved story, approved faction contract, Ambiguity gate PASS, and matching Unity README current-task pointer.
+Prepared but not activated: `production/sprints/codex-story-faction-composition-001.prompt.txt`. Its preflight must stop unless the candidate becomes READY/approved, its Ambiguity gate passes, and the Unity README current-task pointer is activated in a separate control change.
 
-### Copy-safe STORY-BASE-CONTENT-001 handoff
+### Copy-safe STORY-FACTION-COMPOSITION-001 handoff after approval and activation only
 
 Primary workspace-write run:
 
@@ -130,7 +131,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-base-content-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-faction-composition-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -142,7 +143,7 @@ codex exec --sandbox danger-full-access $prompt
 
 ## Most recently completed implementation prompt
 
-Historical completed prompt: `production/sprints/codex-story-art-look-001.prompt.txt` for the merged vertical-look/provenance spike.
+Historical completed prompt: `production/sprints/codex-story-base-content-001.prompt.txt` for the merged HRC/QXZ six-facility content and base-presentation story.
 
 ## Historical prompt-file runs
 

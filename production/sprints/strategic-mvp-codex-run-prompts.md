@@ -109,15 +109,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none. Do not start Unity implementation until the next candidate is human-approved and activated.
+**Current READY / approved Unity implementation packet:** `STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof`.
 
-`STORY-BASE-CONTENT-001` is DONE / merged through Unity PR #152 with post-merge CI passed. The next candidate is `STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof`; it remains PROPOSED pending human approval of the bounded Sled Logistics Team and Strato Sensor Swarm proxy mapping.
+`STORY-BASE-CONTENT-001` is DONE / merged through Unity PR #152 with post-merge CI passed. `STORY-FACTION-COMPOSITION-001` is READY; the explicit use-best-judgment fallback approves the recommended bounded Sled Logistics Team and Strato Sensor Swarm proxy mapping.
 
-## Next guarded implementation packet
+## Current READY implementation packet
 
-Prepared but not activated: `production/sprints/codex-story-faction-composition-001.prompt.txt`. Its preflight must stop unless the candidate becomes READY/approved, its Ambiguity gate passes, and the Unity README current-task pointer is activated in a separate control change.
+Use `production/sprints/codex-story-faction-composition-001.prompt.txt`. Its preflight requires this READY/approved story, Ambiguity gate PASS, approved faction contract, and matching Unity README current-task pointer.
 
-### Copy-safe STORY-FACTION-COMPOSITION-001 handoff after approval and activation only
+### Copy-safe STORY-FACTION-COMPOSITION-001 handoff
 
 Primary workspace-write run:
 

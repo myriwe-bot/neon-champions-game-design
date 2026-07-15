@@ -1,12 +1,12 @@
 ---
 title: STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof
 type: story
-status: proposed
+status: ready
 phase: production
 owner: shared
 created: 2026-07-15
 updated: 2026-07-15
-approval: required
+approval: approved
 related: [production/epics/epic-016-accelerated-playable-product-foundation, design/gdd/prototype-faction-contracts, design/gdd/faction-unit-rosters, design/gdd/tactical-combat, design/ux/player-shell, production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation, production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed, production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]
 ---
 
@@ -103,7 +103,7 @@ For this implementation slice, Sled Logistics Team is the existing mobility/supp
 
 ## Ambiguity gate
 
-READY-CANDIDATE / HUMAN APPROVAL REQUIRED. The existing six-line mapping is the lowest-risk way to execute EPIC-016's approved next capability without inventing final names or new mechanics. Human approval is still required for the two proxy decisions: retain Sled Logistics Team as the HRC rescue/support proxy and retain Strato Sensor Swarm as the QXZ Aerosol technical/control proxy for this proof. If exact SAR Drone Crew or Aerosol Techs implementations are required now, this packet must be revised before activation.
+PASS. The existing six-line mapping is the lowest-risk way to execute EPIC-016's approved next capability without inventing final names or new mechanics. On 2026-07-15 the human decision prompt timed out with explicit instruction to use best judgment, so the recommended bounded mapping is approved: retain Sled Logistics Team as the HRC rescue/support proxy and Strato Sensor Swarm as the QXZ Aerosol technical/control proxy for this proof. Exact SAR Drone Crew and Aerosol Techs implementations remain deferred. If implementation requires a new unit definition, rename, re-stat, or new tactical mechanic, stop and return the blocker.
 
 ## Proposed branch
 
@@ -111,4 +111,4 @@ READY-CANDIDATE / HUMAN APPROVAL REQUIRED. The existing six-line mapping is the 
 
 ## Verdict
 
-PROPOSED / NOT READY. Do not activate a Unity README pointer or runnable Codex prompt until the human approves the bounded proxy mapping and this story is changed to `status: ready`, `approval: approved`, Ambiguity gate PASS, and Verdict READY.
+READY / approved through the explicit use-best-judgment fallback on 2026-07-15. Codex may implement only this bounded existing-line composition proof from the activated checked-in prompt.

@@ -70,8 +70,9 @@
 - [[production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell]] — DONE / merged first EPIC-016 player-shell implementation packet.
 - [[production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike]] — DONE / merged vertical-look and provenance spike through Unity PR #149.
 - [[production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation]] — DONE / merged EPIC-016 facility-content and base-presentation packet through Unity PR #152.
-- [[production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof]] — READY / approved current EPIC-016 three-line faction composition proof; draft roster GDD explicitly excluded from implementation authority.
-- [[production/sprints/codex-story-faction-composition-001.prompt.txt]] — runnable current Codex implementation packet with complete required-source approval matrix.
+- [[production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof]] — DONE / merged EPIC-016 three-line faction-composition proof through Unity PR #155.
+- [[production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow]] — READY-candidate / approval pending next EPIC-016 connected proof packet; not runnable before explicit approval and Unity pointer activation.
+- [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — guarded candidate Codex packet; intentionally stops until approval/pointer gates pass.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.

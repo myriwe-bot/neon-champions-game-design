@@ -101,6 +101,7 @@ related:
     production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike,
     production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation,
     production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof,
+    production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow,
   ]
 approval: approved
 ---
@@ -109,15 +110,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof`.
+**Current READY / approved Unity implementation packet:** none.
 
-`STORY-BASE-CONTENT-001` is DONE / merged through Unity PR #152 with post-merge CI passed. `STORY-FACTION-COMPOSITION-001` is READY; the explicit use-best-judgment fallback approves the recommended bounded Sled Logistics Team and Strato Sensor Swarm proxy mapping.
+`STORY-FACTION-COMPOSITION-001` is DONE / merged through Unity PR #155 with post-merge CI passed. `STORY-PROOF-SCENARIO-001` is READY-candidate / approval pending; its guarded prompt must not run before explicit approval and Unity README pointer activation.
 
-## Current READY implementation packet
+## Current implementation packet state
 
-Use `production/sprints/codex-story-faction-composition-001.prompt.txt`. Its preflight requires this READY/approved story, Ambiguity gate PASS, approved faction contract, and matching Unity README current-task pointer.
+No READY packet is active. Candidate packet: `production/sprints/codex-story-proof-scenario-001.prompt.txt`. Its preflight intentionally stops unless the authoritative story is promoted to `status: ready`, `approval: approved`, and the Unity README current-task pointer matches.
 
-### Copy-safe STORY-FACTION-COMPOSITION-001 handoff
+### Historical STORY-FACTION-COMPOSITION-001 handoff
 
 Primary workspace-write run:
 
@@ -141,9 +142,11 @@ Trusted-repo fallback:
 codex exec --sandbox danger-full-access $prompt
 ```
 
+Do not rerun the completed faction-composition handoff. No copy-safe candidate command is published for `STORY-PROOF-SCENARIO-001` until approval.
+
 ## Most recently completed implementation prompt
 
-Historical completed prompt: `production/sprints/codex-story-base-content-001.prompt.txt` for the merged HRC/QXZ six-facility content and base-presentation story.
+Historical completed prompt: `production/sprints/codex-story-faction-composition-001.prompt.txt` for the merged three-line faction-composition story.
 
 ## Historical prompt-file runs
 
@@ -367,10 +370,6 @@ Trusted-repo fallback:
 Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt" | codex exec --sandbox danger-full-access
 ```
 
-## Current READY packet — STORY-FACTION-COMPOSITION-001
+## Final control-surface state
 
-The sole active Unity implementation packet is `production/sprints/codex-story-faction-composition-001.prompt.txt`.
-
-Its implementation sources were re-audited on 2026-07-15. Every required source is approved/non-draft. `design/gdd/faction-unit-rosters.md` remains draft/pending and is explicitly excluded because the approved story contains the complete binding six-line mapping.
-
-Use the checked-in packet after pulling both repositories. Do not substitute older story prompts.
+No Unity implementation packet is currently READY or active. `STORY-FACTION-COMPOSITION-001` is historical and DONE. `STORY-PROOF-SCENARIO-001` is proposed / approval pending, and its guarded prompt must stop until explicit human approval and CI-gated Unity pointer activation.

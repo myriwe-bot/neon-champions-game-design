@@ -1,7 +1,7 @@
 ---
 title: STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-15
@@ -11,6 +11,24 @@ related: [production/epics/epic-016-accelerated-playable-product-foundation, des
 ---
 
 # STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof
+
+## Status
+
+DONE / merged on 2026-07-15.
+
+- Unity PR: https://github.com/myriwe-bot/neon-champions-unity/pull/155
+- Exact reviewed head: `dbc58a5a0f275348c822b39b06df112f85fc8728`
+- Merge commit: `892672180b3c6e79d810b767fac371a369197e78`
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29426901664
+- Exact-head push CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29426896617
+- Post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29428210031
+- Unity pointer cleanup PR: https://github.com/myriwe-bot/neon-champions-unity/pull/156
+- Pointer cleanup merge: `2560f5c952d7d3d36ca607b0e899e39877f469ad`
+- Pointer cleanup exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29428890056
+- Pointer cleanup post-merge `main` CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29429652160
+- Independent immutable domain/runtime review: PASS.
+- Independent immutable UI/tests/evidence review: PASS.
+- Evidence: `production/evidence/STORY-FACTION-COMPOSITION-001/` in the Unity repo.
 
 ## Value
 
@@ -79,18 +97,18 @@ For this implementation slice, Sled Logistics Team is the existing mobility/supp
 
 ## Acceptance criteria
 
-- [ ] The HRC proof Champion starts with `sled_logistics_team` count 5 and no player-facing Placeholder Infantry.
-- [ ] The QXZ proof Champion starts with `climate_bulwark` count 7 and no player-facing Placeholder Infantry.
-- [ ] HRC can field exactly the mapped three-line proof composition by combining Sled Logistics Team with Watch Muster's Settlement Watch and Scout Relay's Hunter-Scouts.
-- [ ] QXZ can field exactly the mapped three-line proof composition by combining Climate Bulwark with Mandate Barracks' Meridian Security and Stratospheric Lab's Strato Sensor Swarm.
-- [ ] All six stable IDs, display names, stats, role tags, recruitment values, and existing tactical behaviors remain unchanged.
-- [ ] Strategic army summary, recruitment result, encounter setup, tactical labels/details, losses, and return summary preserve correct names/counts without raw IDs or unresolved localization keys.
-- [ ] The tactical proof visibly distinguishes all three lines through current role behavior and presentation; Strato Sensor Lock remains usable and readable.
-- [ ] Imported/legacy army state is preserved or fails closed with a controlled diagnostic; no partial mutation or silent stack deletion.
-- [ ] Existing strategic movement, base construction/effects, recruitment, objective pressure, AI, tactical handoff, battle result, and save/runtime smoke remain green.
-- [ ] Existing placeholder-compatibility tests remain only where explicitly scoped; superseded player-facing proof assertions no longer require Placeholder Infantry.
-- [ ] Asset/provenance validation passes; no hidden or untracked generated/external non-code asset enters scope.
-- [ ] EditMode, PlayMode, validator, standalone build, exact-head PR CI, and post-merge main CI pass.
+- [x] The HRC proof Champion starts with `sled_logistics_team` count 5 and no player-facing Placeholder Infantry.
+- [x] The QXZ proof Champion starts with `climate_bulwark` count 7 and no player-facing Placeholder Infantry.
+- [x] HRC can field exactly the mapped three-line proof composition by combining Sled Logistics Team with Watch Muster's Settlement Watch and Scout Relay's Hunter-Scouts.
+- [x] QXZ can field exactly the mapped three-line proof composition by combining Climate Bulwark with Mandate Barracks' Meridian Security and Stratospheric Lab's Strato Sensor Swarm.
+- [x] All six stable IDs, display names, stats, role tags, recruitment values, and existing tactical behaviors remain unchanged.
+- [x] Strategic army summary, recruitment result, encounter setup, tactical labels/details, losses, and return summary preserve correct names/counts without raw IDs or unresolved localization keys.
+- [x] The tactical proof visibly distinguishes all three lines through current role behavior and presentation; Strato Sensor Lock remains usable and readable.
+- [x] Imported/legacy army state is preserved or fails closed with a controlled diagnostic; no partial mutation or silent stack deletion.
+- [x] Existing strategic movement, base construction/effects, recruitment, objective pressure, AI, tactical handoff, battle result, and save/runtime smoke remain green.
+- [x] Existing placeholder-compatibility tests remain only where explicitly scoped; superseded player-facing proof assertions no longer require Placeholder Infantry.
+- [x] Asset/provenance validation passes; no hidden or untracked generated/external non-code asset enters scope.
+- [x] EditMode, PlayMode, validator, standalone build, exact-head PR CI, and post-merge main CI pass.
 
 ## Verification and evidence
 
@@ -113,4 +131,4 @@ PASS. The existing six-line mapping is the lowest-risk way to execute EPIC-016's
 
 ## Verdict
 
-READY / approved through the explicit use-best-judgment fallback on 2026-07-15. Codex may implement only this bounded existing-line composition proof from the activated checked-in prompt.
+DONE / merged through Unity PR #155 on 2026-07-15. This historical packet must not be rerun; no Unity implementation packet is currently READY.

@@ -1,0 +1,58 @@
+You are implementing `STORY-PROOF-SCENARIO-001 Month-One Route, Pressure, Feed, and Capture Flow` in the Neon Champions Unity repository.
+
+STOP GATE — this prompt is guarded:
+
+1. Read the authoritative story in the design repo:
+   `production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow.md`
+2. Stop immediately unless its frontmatter is exactly implementation-ready: `status: ready` and `approval: approved`.
+3. Stop immediately unless the Unity `README.md` current-task pointer names this story as the sole active READY task and gives this prompt path.
+4. Stop if either repository is dirty, Unity `main` is not current with `origin/main`, or required sources are missing/draft/unapproved contrary to the story source-authority matrix.
+5. Do not treat this candidate prompt, branch name, or user intent as approval.
+
+When the gates pass:
+
+- Work from current Unity `main` on branch `story/STORY-PROOF-SCENARIO-001-month-one-route-pressure-feed`.
+- Use the story as binding authority. Do not broaden its exact ten-node topology, briefing, asymmetric opening implications, literal HRC/QXZ routes, provisional labels, Feed copy, or reuse boundaries.
+- Preserve all existing stable IDs and current mechanics unless the story explicitly adds an ID or presentation behavior.
+- Keep legacy internal `greenland`/`placeholder` identifiers internal; no raw IDs, placeholder labels, unresolved localization keys, `Greenland`, `Kalaallit Nunaat`, or `Meridian Shelf` may appear in story-owned normal UI.
+- Reuse the existing faction entry, dumb strategic opponent, movement, base, economy, recruitment, three-line composition, tactical handoff/result, return summary, objective pressure, and victory systems. Set only the unchosen faction to `StrategicAI`; make the exact scenario-only central guard flag, `holdRequiredCount: 5`, and route-order changes authorized by the story; do not change AI policy or objective engine/rules. Stop rather than inventing new AI, campaign, narrative, information-state, Proof, reputation, resource, or objective mechanics.
+- Implement and test the exact faction-choice briefing and the literal HRC/QXZ action sequences. Use normal input/turn APIs only; no resource mutation, teleport, opponent suppression, direct runtime setup masquerading as connected evidence, or substitution of “resolution direction” for real existing-rule victory/defeat.
+- Implement both the proof-cache route-reversal cue and Calibration Archive outcome as exact state-backed, one-time Feed results. Preserve cache rewards and route legality; faction choice must not alter rewards or hidden simulation state.
+- Follow TDD: add focused failing EditMode/PlayMode tests before implementation, then implement the minimum production change, then rerun the full required regression suite.
+- Validate imported and fallback scenario data, exact node count, new IDs, route references, site behavior, and duplicate/missing-reference rejection.
+- Capture the approved eight named shots plus the supplemental QXZ Feed counterpart at 1920×1080 under `production/evidence/STORY-PROOF-SCENARIO-001/`. Bind assertions to named player-facing UI objects and prove fit, bounds, non-overlap, exact copy, and absence of raw IDs/placeholders. Add the required `capture-sequence.md` real-gameplay 30–60 second recording script; do not claim that the later human-gate video has already been recorded.
+- Do not add generated/external non-code assets. If one becomes necessary, stop and report the provenance blocker.
+- Do not modify workflows, packages, project settings, unrelated scenes/prefabs, broad architecture, or completed-story evidence unless the story explicitly requires it.
+- Keep Unity `.meta` pairing correct and run `git diff --check`.
+
+Required verification before PR:
+
+- focused scenario-data/domain tests;
+- focused faction-entry/opponent tests;
+- connected HRC and QXZ PlayMode routes;
+- deterministic cycle-2 opponent movement and central capture/pressure proof from both player-faction choices using unchanged AI;
+- movement/base/economy/recruitment/composition/tactical/AI/objective/import/fallback regressions;
+- evidence authenticity, semantic binding, fit/bounds, and placeholder/raw-ID checks;
+- Placeholder Validator;
+- full EditMode suite;
+- full PlayMode suite;
+- standalone compile/build;
+- one timed normal-input run from title entry to real resolution, recorded in the evidence README and required to land within 20–30 minutes without developer intervention;
+- clean worktree after committing.
+
+Open a PR titled:
+`STORY-PROOF-SCENARIO-001 month-one route pressure Feed and capture flow`
+
+The PR body must include:
+
+- exact story and source references;
+- exact branch head SHA;
+- exact topology and Feed-contract summary;
+- test and build commands/results;
+- evidence inventory and hashes;
+- changed-asset/provenance inventory;
+- explicit out-of-scope confirmation;
+- known omissions/blockers;
+- exact CI URLs once available.
+
+Do not merge. Return the PR URL and immutable head SHA for independent merge-gate review.

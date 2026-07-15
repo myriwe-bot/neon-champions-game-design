@@ -228,6 +228,16 @@ PASS / approved. The exact topology additions, route order, five-check pacing, p
 - PR title: `STORY-PROOF-SCENARIO-001 month-one route pressure Feed and capture flow`
 - Evidence path: `production/evidence/STORY-PROOF-SCENARIO-001/`
 
+## Activation evidence
+
+- Human approval: `Approved, prepare implementation packet` on 2026-07-15.
+- Design activation commit: `d53fc399186cce09915df9f291edd8bdf678d8d4`.
+- Unity pointer PR: [#157](https://github.com/myriwe-bot/neon-champions-unity/pull/157).
+- Pointer PR exact head: `aaa18beb566c55f135562c986ac142a9b1302910`.
+- Pointer PR exact-head CI: [Unity Foundation CI 29432868607](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29432868607) — PASS.
+- Pointer merge commit: `8674bdd2ba626e17bbd1dadf6b95637fd6538353`.
+- Pointer post-merge `main` CI: [Unity Foundation CI 29433433445](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29433433445) — PASS.
+
 ## Verdict
 
 READY / approved. This is the sole current EPIC-016 Unity implementation packet after the merged faction-composition proof. Run only from the published prompt after the CI-gated Unity pointer activation.

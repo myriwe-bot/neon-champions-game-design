@@ -110,15 +110,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-PROOF-SCENARIO-001 Month-One Route, Pressure, Feed, and Capture Flow`.
 
-`STORY-FACTION-COMPOSITION-001` is DONE / merged through Unity PR #155 with post-merge CI passed. `STORY-PROOF-SCENARIO-001` is READY-candidate / approval pending; its guarded prompt must not run before explicit approval and Unity README pointer activation.
+`STORY-FACTION-COMPOSITION-001` is DONE / merged through Unity PR #155 with post-merge CI passed. `STORY-PROOF-SCENARIO-001` was explicitly approved on 2026-07-15 and is the sole active implementation packet.
 
-## Current implementation packet state
+## Current READY implementation packet
 
-No READY packet is active. Candidate packet: `production/sprints/codex-story-proof-scenario-001.prompt.txt`. Its preflight intentionally stops unless the authoritative story is promoted to `status: ready`, `approval: approved`, and the Unity README current-task pointer matches.
+Use `production/sprints/codex-story-proof-scenario-001.prompt.txt`. Its preflight requires the READY/approved story, source-authority matrix closure, and matching Unity README current-task pointer.
 
-### Historical STORY-FACTION-COMPOSITION-001 handoff
+### Copy-safe STORY-PROOF-SCENARIO-001 handoff
 
 Primary workspace-write run:
 
@@ -132,17 +132,17 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-faction-composition-001.prompt.txt"
-codex exec --sandbox workspace-write $prompt
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-proof-scenario-001.prompt.txt"
+$prompt | codex exec --sandbox workspace-write
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access $prompt
+$prompt | codex exec --sandbox danger-full-access
 ```
 
-Do not rerun the completed faction-composition handoff. No copy-safe candidate command is published for `STORY-PROOF-SCENARIO-001` until approval.
+Do not rerun the completed faction-composition handoff. Pull both repositories before starting this current packet.
 
 ## Most recently completed implementation prompt
 
@@ -372,4 +372,4 @@ Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\
 
 ## Final control-surface state
 
-No Unity implementation packet is currently READY or active. `STORY-FACTION-COMPOSITION-001` is historical and DONE. `STORY-PROOF-SCENARIO-001` is proposed / approval pending, and its guarded prompt must stop until explicit human approval and CI-gated Unity pointer activation.
+`STORY-PROOF-SCENARIO-001` is the sole current READY / approved Unity implementation packet. `STORY-FACTION-COMPOSITION-001` remains historical and DONE.

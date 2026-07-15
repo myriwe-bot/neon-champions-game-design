@@ -26,7 +26,7 @@ A new player can complete a faction-selectable 20–30 minute HRC/QXZ slice and 
 2. `STORY-ART-LOOK-001` — DONE / merged vertical-look and asset-provenance integration spike; Unity PR #149, merge `686db4b618ed55111d0ee97ca43a7a6bfc358794`, post-merge CI passed.
 3. `STORY-BASE-CONTENT-001` — DONE / merged HRC/QXZ six-facility prototype content and base presentation; Unity PR #152, merge `d0fcc4d4921c398e52993794ac067d6e439d580d`, post-merge CI passed.
 4. `STORY-FACTION-COMPOSITION-001` — DONE / merged through Unity PR #155, merge `892672180b3c6e79d810b767fac371a369197e78`; exact-head and post-merge CI passed.
-5. `STORY-PROOF-SCENARIO-001` — READY-candidate / approval pending; prepared month-one route, pressure, Feed consequence, and capture-flow packet, not runnable until explicit human approval and Unity pointer activation.
+5. `STORY-PROOF-SCENARIO-001` — READY / approved on 2026-07-15; current month-one route, pressure, Feed consequence, and capture-flow implementation packet.
 6. Human proof-build playtest and gate review.
 
 ## Boundaries

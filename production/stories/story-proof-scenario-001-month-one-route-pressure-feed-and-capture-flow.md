@@ -1,12 +1,12 @@
 ---
 title: STORY-PROOF-SCENARIO-001 Month-One Route, Pressure, Feed, and Capture Flow
 type: story
-status: proposed
+status: ready
 phase: production
 owner: shared
 created: 2026-07-15
 updated: 2026-07-15
-approval: pending
+approval: approved
 related: [production/epics/epic-016-accelerated-playable-product-foundation, production/planning/month-one-proof-scenario-and-capture-plan, design/gdd/product-constitution, design/ux/player-shell, production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof]
 ---
 
@@ -14,7 +14,7 @@ related: [production/epics/epic-016-accelerated-playable-product-foundation, pro
 
 ## Status
 
-READY-candidate / approval pending. This packet is prepared for review but is not implementation authority. Do not run Codex until the human promotes it to `status: ready` and `approval: approved`, design/control publishes that promotion, and the Unity README current-task pointer is updated through CI.
+READY / approved for implementation on 2026-07-15. Human approval: “Approved, prepare implementation packet.” Codex may run only after design/control publishes this promotion and the Unity README current-task pointer is activated through CI.
 
 ## Value
 
@@ -216,13 +216,13 @@ Required evidence under `production/evidence/STORY-PROOF-SCENARIO-001/`:
 
 Automated capture assertions must bind semantics to named player-facing objects, verify active 1920×1080 render state, bounds/non-overlap/text fit, exact labels/Feed lines, and absence of raw IDs/placeholders. Regenerate each materially different full-shell capture from a fresh scene/process if sequential capture causes ghosting.
 
-The approved plan's 30–60 second video remains required at EPIC-016 capability-sequence step 6, the human proof-build playtest/gate review. This story must add `capture-sequence.md` beside the stills with an exact ordered real-gameplay recording script, target duration per segment totaling 30–60 seconds, shot-to-acceptance mapping, and a prohibition on camera-only mockups. Video recording/editing/export is intentionally sequenced to the human gate rather than smuggled into this Unity integration story; promoting this candidate constitutes explicit approval of that sequencing, not cancellation of the video target.
+The approved plan's 30–60 second video remains required at EPIC-016 capability-sequence step 6, the human proof-build playtest/gate review. This story must add `capture-sequence.md` beside the stills with an exact ordered real-gameplay recording script, target duration per segment totaling 30–60 seconds, shot-to-acceptance mapping, and a prohibition on camera-only mockups. Video recording/editing/export is intentionally sequenced to the human gate rather than smuggled into this Unity integration story. Human approval on 2026-07-15 explicitly accepts that sequencing; it does not cancel the video target.
 
 ## Ambiguity gate
 
-PASS as a candidate design: the exact topology additions, provisional labels, Feed copy, reuse boundaries, and evidence contract are specified. Implementation approval is still pending. Human approval may accept this packet as written or revise its scenario labels/copy before promotion. Do not infer approval from preparation alone.
+PASS / approved. The exact topology additions, route order, five-check pacing, provisional labels, briefing, route-reversal cue, Feed copy, connected routes, reuse boundaries, and evidence contract are specified. Human approval on 2026-07-15 authorizes implementation exactly as written; any scope expansion still requires a separate approved amendment.
 
-## Proposed branch / PR
+## Implementation branch / PR
 
 - Branch: `story/STORY-PROOF-SCENARIO-001-month-one-route-pressure-feed`
 - PR title: `STORY-PROOF-SCENARIO-001 month-one route pressure Feed and capture flow`
@@ -230,4 +230,4 @@ PASS as a candidate design: the exact topology additions, provisional labels, Fe
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next EPIC-016 packet after the merged faction-composition proof; not runnable until explicit human approval and Unity pointer activation.
+READY / approved. This is the sole current EPIC-016 Unity implementation packet after the merged faction-composition proof. Run only from the published prompt after the CI-gated Unity pointer activation.

@@ -1,6 +1,6 @@
-GUARDED IMPLEMENTATION PACKET — STORY-FACTION-COMPOSITION-001
+RUNNABLE READY STORY — STORY-FACTION-COMPOSITION-001
 
-Proposed story: STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof
+Approved story: STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof
 
 Preflight gate:
 1. Read `production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof.md`.

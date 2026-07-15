@@ -6,12 +6,13 @@ Preflight gate:
 1. Read `production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof.md`.
 2. STOP WITHOUT EDITING UNITY unless its frontmatter says `status: ready` and `approval: approved`, its Ambiguity gate says PASS, and its Verdict says READY.
 3. STOP unless `design/gdd/prototype-faction-contracts.md` remains approved and the Unity README current-task pointer names this exact READY story.
-4. If the HRC Sled Logistics Team proxy, QXZ Strato Sensor Swarm proxy, starting stack mapping, imported-army compatibility, or evidence contract remains ambiguous, report the exact blocker rather than inventing authority.
+4. `design/gdd/faction-unit-rosters.md` is draft/pending and is explicitly excluded: do not treat it as required reading or implementation authority. The approved story's self-contained six-line mapping controls this packet.
+5. Verify the required implementation-source matrix before editing: story `ready/approved`; prototype faction contract `approved/approved-provisional`; tactical combat `approved/approved`; player shell `approved/approved`; completed base-content story `done/approved`; control manifest, testing strategy, and CI automation each `approved/approved`. STOP and report any status drift.
+6. If the HRC Sled Logistics Team proxy, QXZ Strato Sensor Swarm proxy, starting stack mapping, imported-army compatibility, or evidence contract remains ambiguous, report the exact blocker rather than inventing authority.
 
 When and only when the gate passes, implement from:
 - production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof.md
 - design/gdd/prototype-faction-contracts.md
-- design/gdd/faction-unit-rosters.md
 - design/gdd/tactical-combat.md
 - design/ux/player-shell.md
 - production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation.md

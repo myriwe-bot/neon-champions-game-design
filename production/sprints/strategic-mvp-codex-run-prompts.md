@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-07-14
+updated: 2026-07-15
 source_lore: []
 related:
   [
@@ -366,3 +366,11 @@ Trusted-repo fallback:
 ```powershell
 Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt" | codex exec --sandbox danger-full-access
 ```
+
+## Current READY packet — STORY-FACTION-COMPOSITION-001
+
+The sole active Unity implementation packet is `production/sprints/codex-story-faction-composition-001.prompt.txt`.
+
+Its implementation sources were re-audited on 2026-07-15. Every required source is approved/non-draft. `design/gdd/faction-unit-rosters.md` remains draft/pending and is explicitly excluded because the approved story contains the complete binding six-line mapping.
+
+Use the checked-in packet after pulling both repositories. Do not substitute older story prompts.

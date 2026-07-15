@@ -7,7 +7,7 @@ owner: shared
 created: 2026-07-15
 updated: 2026-07-15
 approval: approved
-related: [production/epics/epic-016-accelerated-playable-product-foundation, design/gdd/prototype-faction-contracts, design/gdd/faction-unit-rosters, design/gdd/tactical-combat, design/ux/player-shell, production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation, production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed, production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]
+related: [production/epics/epic-016-accelerated-playable-product-foundation, design/gdd/prototype-faction-contracts, design/gdd/tactical-combat, design/ux/player-shell, production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation, production/stories/story-army-001-mvp-faction-unit-definitions-and-roster-seed, production/stories/story-army-002-tactical-role-behaviors-and-sensor-lock]
 ---
 
 # STORY-FACTION-COMPOSITION-001 Three-Line Faction Composition and Tactical Identity Proof
@@ -27,7 +27,9 @@ Performance budget: no measurable regression to the current strategic or tactica
 - `design/gdd/prototype-faction-contracts.md` governs the approved-provisional three-line faction contrast.
 - Existing stable runtime unit IDs and completed ARMY-001/002 remain authoritative for this bounded proof; this story does not rename, re-stat, or replace tactical definitions.
 - `STORY-BASE-CONTENT-001` governs the four facility-gated recruitment offers.
+- `design/gdd/tactical-combat.md` governs existing tactical role behavior.
 - `design/ux/player-shell.md` governs normal-shell army, recruitment, encounter, and tactical readability.
+- `design/gdd/faction-unit-rosters.md` is draft/pending, is deliberately excluded from this packet, and is not implementation authority or required reading. The self-contained binding mapping below supersedes any need to consult it.
 
 ## Binding prototype mapping
 

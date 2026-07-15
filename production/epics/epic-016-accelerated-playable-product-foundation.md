@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-12
-updated: 2026-07-14
+updated: 2026-07-15
 approval: approved
 related: [production/planning/full-project-review-and-completion-plan-2026-07-12, design/gdd/product-constitution, design/ux/player-shell]
 ---

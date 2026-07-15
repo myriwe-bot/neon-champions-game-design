@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-15] blocker repair | STORY-FACTION-COMPOSITION-001 source-authority preflight
+
+- Codex correctly stopped before Unity edits because the activated prompt listed `design/gdd/faction-unit-rosters.md` as a required implementation source even though its frontmatter is `status: draft` / `approval: pending`.
+- Re-audited every implementation source in one pass. The story is READY/approved; the prototype faction contract is approved/approved-provisional; tactical combat and player shell are approved; STORY-BASE-CONTENT-001 is DONE/approved; and the control manifest, testing strategy, and CI automation ADRs are approved.
+- Removed the draft roster GDD from the story's `related` authority chain and prompt implementation-source list. The approved story's self-contained six-line mapping is the binding authority; the draft roster is explicitly excluded and must not be consulted for implementation.
+- Added an explicit required-source status matrix to the Codex preflight, refreshed the current-run/index traceability surfaces, and preserved the existing Unity pointer because it already names the corrected READY story.
+- No Unity code, branch, tests, evidence, or assets were changed; Codex may retry only after pulling this correction from design `main`.
+
 ## [2026-07-14] clarification | Stratospheric Lab existing-unit mapping locked
 
 - Codex correctly stopped because the READY story named provisional `Aerosol Techs` while Unity contains no such unit or approved alias.

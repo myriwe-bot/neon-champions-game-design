@@ -1,12 +1,12 @@
 ---
 title: EPIC-017 Fully Playable Prototype Continuity and Opponent Pressure
 type: epic
-status: proposed
+status: active
 phase: production
 owner: shared
 created: 2026-07-16
 updated: 2026-07-16
-approval: pending
+approval: approved
 related: [production/planning/full-project-review-and-completion-plan-2026-07-12, production/epics/epic-016-accelerated-playable-product-foundation, docs/architecture/data-scenario-save-format-adr, design/gdd/product-constitution]
 ---
 
@@ -28,7 +28,7 @@ This epic may proceed as a parallel implementation train without claiming that d
 
 ## Capability sequence
 
-1. `STORY-SAVE-001` — READY-candidate / approval pending; bounded prototype strategic save/resume.
+1. `STORY-SAVE-001` — READY / approved; bounded prototype strategic save/resume and sole current implementation packet.
 2. `STORY-AI-PLAY-001` — unformed follow-up; deterministic site value, recruitment, contest, and favorable-attack pressure after save state is stable.
 3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — unformed human/automation gate for resume continuity and opponent pressure.
 
@@ -41,6 +41,6 @@ Only the first child is formed. Later children remain unapproved and must not be
 - No sophisticated AI, hidden-information cheating, random choice, diplomacy, or broad tactical-AI rewrite in the first story.
 - EPIC-016 human QA remains deferred and separately approval-gated.
 
-## Approval packet
+## Approval
 
-Approval of this epic authorizes only promotion of `STORY-SAVE-001` with the proposed prototype save ADR. It does not authorize later AI or QA children.
+Human-approved on 2026-07-16 with `STORY-SAVE-001` and the prototype save ADR as proposed. This approval authorizes only the first child. It does not authorize later AI or QA children.

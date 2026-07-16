@@ -1,17 +1,79 @@
-GUARDED READY-CANDIDATE — DO NOT IMPLEMENT YET
+Implement STORY-SAVE-001 Prototype Strategic Save and Resume in the Neon Champions Unity repository.
 
-Target: STORY-SAVE-001 Prototype Strategic Save and Resume
+Repositories
+- Design/control source: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 
-This file is intentionally non-runnable. Stop before editing either repository unless all preflight conditions are true:
+Required implementation branch
+- story/STORY-SAVE-001-prototype-strategic-save-resume
 
-1. production/stories/story-save-001-prototype-strategic-save-and-resume.md has frontmatter status: ready and approval: approved.
-2. docs/architecture/prototype-strategic-save-resume-adr.md has status: approved and approval: approved.
-3. The story Ambiguity Check says PASS, not PASS-candidate.
-4. production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure.md is approved/active and names STORY-SAVE-001 as READY.
-5. production/sprints/strategic-mvp-codex-run-prompts.md names this exact file as the sole current READY implementation packet.
-6. C:\Users\NordicGamer\CodexProjects\neon-champions-unity\README.md names STORY-SAVE-001 as current READY work, including this branch and PR title, and that pointer is merged with passing CI.
-7. Both repositories are on clean, current main branches.
+Required PR title
+- STORY-SAVE-001 prototype strategic save and resume
 
-If any condition is false, print the exact mismatch and stop without creating a branch, modifying files, running implementation tests, committing, pushing, or opening a PR.
+Preflight — stop without Unity edits if any check fails
+1. Both repositories must be clean, on current main, and fast-forwarded from origin/main before creating the story branch.
+2. Read the full story: production/stories/story-save-001-prototype-strategic-save-and-resume.md.
+3. Confirm story frontmatter is status: ready and approval: approved; Ambiguity Check is PASS; Verdict is READY / approved.
+4. Read the full approved save ADR: docs/architecture/prototype-strategic-save-resume-adr.md. Confirm status: approved and approval: approved.
+5. Read these exact approved sources:
+   - docs/architecture/data-scenario-save-format-adr.md, especially Runtime state and Save data.
+   - docs/architecture/unity-technical-scheme.md, especially Core Technical Principle, Project Layout, Assembly Boundary, and Data Authoring Policy.
+   - docs/architecture/control-manifest.md §§1, 4, 6, 9, 10.
+   - docs/architecture/testing-strategy.md.
+   - docs/architecture/ci-build-automation.md.
+   - design/ux/player-shell.md.
+   - production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure.md.
+6. Confirm the Unity README current-task pointer names STORY-SAVE-001, this branch, this prompt, and this PR title, with no contradictory current task nearby.
+7. Inspect the current scenario importer, runtime-state model, title/pause/player shell, tactical transition state, tests, and assembly boundaries before designing code.
+8. If a required source is missing/draft/pending/contradictory, the pointer is absent, the worktree is dirty, or implementation requires changing the approved serializer/ownership/boundary, stop and report the exact mismatch. Do not invent a workaround.
 
-The runnable implementation contract will replace this guard after human approval. Do not infer implementation authority from the proposed epic, approved roadmap, or this candidate file.
+Binding implementation contract
+- Implement one version-1 Continue slot plus protected last-valid backup.
+- Save only at the approved stable strategic boundary: normal strategic map active; valid scenario and active faction; no tactical battle, transition, result application, modal decision, or command pending.
+- Add a dedicated ordered persistence DTO map. It may mirror state for serialization but must not become a second mutable gameplay model or source of truth.
+- Reuse System.Runtime.Serialization.Json.DataContractJsonSerializer. Do not add a package or substitute another serializer.
+- Envelope fields and behavior must exactly follow docs/architecture/prototype-strategic-save-resume-adr.md: literal format ID, schema version 1, payload with scenario ID/content version/runtime state, and lowercase SHA-256 over the exact UTF-8 serialized payload bytes.
+- Give persistence DTO members explicit data-contract ordering. Preserve list order. Do not make integrity depend on dictionary or arbitrary JSON object-property order.
+- Domain owns state and validation without UnityEngine or file I/O. Application owns save/validate/restore use cases. Infrastructure owns serializer/hash/path/atomic file behavior. Presentation owns player affordances and readable errors.
+- Use Unity persistentDataPath under a project-owned Saves directory with continue-v1.json, continue-v1.tmp, and continue-v1.backup.json.
+- Write temp, close/flush, read back and validate, preserve the previous valid slot as backup, then replace safely. Use injectable file/path boundaries for deterministic tests.
+- Treat saves as untrusted input. Reject malformed JSON, unsupported format/schema, scenario identity/version mismatch, integrity mismatch, missing references, invalid IDs, bad ranges, and invalid runtime state before activating gameplay.
+- Failure must not delete or overwrite the last valid save. New Scenario must remain usable.
+- Title shows Continue only for a valid compatible save. Pause/settings exposes Save and Return to Title only at a stable strategic boundary. Successful save returns to title; Continue restores the exact normal-shell state.
+- Preserve all current mutable strategic state named by the story, including faction/controller/resources, Champion status/position/movement/army, bases/facilities/cadence, sites/ownership/guard/visit/consumed/recruitment stock, objective/victory/turn/order, Intel/Lead state, and one-time Feed consequence state.
+- Add explicit scenario content version to the imported scenario contract and fallback parity without changing gameplay data or scenario identity.
+- The next legal command after restore must match the result from an equivalent unsaved state.
+
+Strict exclusions
+- No tactical mid-battle save.
+- No multiple slots/profiles, autosave cadence, naming/thumbnails, cloud sync, compression, encryption, migration, replay, seeded RNG, campaign/meta persistence, editor tooling, or new packages.
+- No gameplay, balance, topology, AI, faction, tutorial, content, or audiovisual expansion.
+- No broad unrelated refactor, duplicate state system, direct Unity-object serialization, or weakening of validation/atomic behavior.
+- Do not commit real machine save files, credentials, absolute machine paths, stack traces in normal UI, temporary workflows, or generated scratch outside the approved evidence path.
+
+TDD and verification
+- Start with focused failing tests for envelope validation, deterministic payload bytes/hash, round-trip mapping, scenario/version incompatibility, corruption, invalid references/ranges, stable-boundary rejection, and backup preservation.
+- Add EditMode structural-equality coverage for every current runtime collection/field used by the merged proof route.
+- Add a PlayMode route using normal player flow: title, faction start, meaningful strategic mutations, Save and Return to Title, Continue, visible restored state, and one legal post-resume action.
+- Add 1920x1080 layout/text-fit checks for Continue, unavailable reason, save confirmation, and corrupt/incompatible error.
+- Run all focused tests, then the repository's complete required EditMode, PlayMode, placeholder/provenance validator, and standalone compile/build checks available locally.
+- Run git diff --check and verify Unity asset/.meta pairing.
+- Create production/evidence/STORY-SAVE-001/ with a concise README, exact tests/results, one pre-save screenshot, one resumed-state screenshot, a non-sensitive save-envelope fixture, omissions, and CI placeholders/URLs as available.
+- Do not fabricate test, screenshot, build, timing, or CI evidence. Report exact blockers.
+
+Review before publication
+- Re-read the story and ADR against the final diff.
+- Verify no out-of-scope systems changed and no hidden architecture decision was introduced.
+- Verify normal UI exposes no raw internal IDs, machine paths, stack traces, forbidden geography, or placeholder claims.
+- Verify temporary save files and generated machine saves are not tracked.
+- PR body must link STORY-SAVE-001, the save/data ADRs, Unity scheme, control manifest, test/evidence paths, and list every omission, stub, assumption, and deferred item, or state No known omissions.
+
+Mandatory Git/GitHub completion contract
+Before stopping, commit the actual story-scoped implementation and evidence, push the committed branch, and create or update a non-draft PR.
+- Final local branch must be story/STORY-SAVE-001-prototype-strategic-save-resume.
+- Push the committed HEAD to origin/story/STORY-SAVE-001-prototype-strategic-save-resume.
+- Verify local HEAD equals the remote story-branch SHA and differs from origin/main.
+- Create or update a non-draft PR titled STORY-SAVE-001 prototype strategic save and resume against main.
+- Print final branch, commit SHA, remote ref/SHA, PR URL/number, tests run with results, evidence paths, and omissions.
+- If git status shows modified or untracked story files after tests/evidence, do not claim completion; add, commit, and push them first.
+- If commit, push, PR creation, tests, evidence generation, or publication fails, preserve the work and report the exact command/error plus exact recovery commands. Do not stop at PR-ready local work.

@@ -1,12 +1,12 @@
 ---
 title: STORY-SAVE-001 Prototype Strategic Save and Resume
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-16
 updated: 2026-07-16
-approval: pending
+approval: approved
 related: [production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure, production/planning/full-project-review-and-completion-plan-2026-07-12, docs/architecture/prototype-strategic-save-resume-adr, docs/architecture/data-scenario-save-format-adr, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, design/ux/player-shell]
 ---
 
@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY-candidate / approval pending. This packet and its proposed ADR are prepared for one human approval. No Codex or Unity implementation is authorized until both are promoted to approved/READY and the Unity README pointer passes CI.
+READY / approved by the human owner on 2026-07-16 as proposed. Implementation becomes runnable only after the Unity README activation pointer is merged with passing CI.
 
 ## Story type
 
@@ -33,7 +33,7 @@ As a prototype player, I want to leave a real strategic match and continue it la
 Required on activation:
 
 - `production/planning/full-project-review-and-completion-plan-2026-07-12.md` §§ Recommended eight-week prototype contract and Week 3 — strategic pressure and save/resume.
-- `docs/architecture/prototype-strategic-save-resume-adr.md` — proposed exact save boundary, envelope, ownership, failure, and player-flow contract; must be approved with this story.
+- `docs/architecture/prototype-strategic-save-resume-adr.md` — approved exact save boundary, envelope, ownership, failure, and player-flow contract.
 - `docs/architecture/data-scenario-save-format-adr.md` §§ Runtime state and Save data.
 - `docs/architecture/unity-technical-scheme.md` §§ Core Technical Principle, Project Layout, Assembly Boundary, and Data Authoring Policy.
 - `docs/architecture/control-manifest.md` §§ 1, 4, 6, 9, and 10.
@@ -68,7 +68,7 @@ No draft campaign, roster, worldbuilding, or future editor document is implement
 ## Dependencies
 
 - EPIC-016 implementation sequence DONE/merged; deferred `STORY-PROOF-QA-001` remains separately pending and is not claimed complete.
-- Proposed save ADR approved in the same human decision as this story.
+- Save ADR approved in the same human decision as this story.
 - Existing scenario import/runtime separation and Unity CI remain green.
 - Unity README pointer must name this story through a separate CI-gated pointer PR before Codex runs.
 
@@ -96,9 +96,9 @@ No draft campaign, roster, worldbuilding, or future editor document is implement
 
 ## Ambiguity Check
 
-Status: PASS-candidate.
+Status: PASS.
 
-Proposed resolved assumptions:
+Human-approved assumptions:
 
 - One continue slot plus last-valid backup is enough for the first prototype.
 - Stable strategic boundary only; no tactical mid-battle save.
@@ -106,7 +106,7 @@ Proposed resolved assumptions:
 - Successful manual save returns to title; Continue is title-owned.
 - Current deterministic state is preserved without declaring determinism permanent product identity.
 
-Activation blocker: human approval of this story and `docs/architecture/prototype-strategic-save-resume-adr.md`. If any assumption changes, revise both before READY.
+Human approval: `Approved` on 2026-07-16, accepting the story and ADR exactly as proposed. Any change to these assumptions requires an approved amendment before implementation continues.
 
 ## Branch / PR requirements
 
@@ -121,14 +121,14 @@ Activation blocker: human approval of this story and `docs/architecture/prototyp
 
 - [x] Stable ID, value, scope, acceptance criteria, verification, branch, and evidence are defined.
 - [x] Exact approved roadmap/data/Unity/control/test sources are linked.
-- [x] Proposed save ADR resolves the architecture choices required for implementation.
-- [x] Ambiguity Check is PASS-candidate.
-- [ ] Save ADR approved.
-- [ ] Human approval recorded.
-- [ ] Story promoted to READY / approved.
-- [ ] Guarded prompt converted to runnable.
+- [x] Approved save ADR resolves the architecture choices required for implementation.
+- [x] Ambiguity Check is PASS.
+- [x] Save ADR approved.
+- [x] Human approval recorded.
+- [x] Story promoted to READY / approved.
+- [x] Guarded prompt converted to runnable.
 - [ ] Unity README pointer activated through CI.
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next implementation step after the connected proof; no implementation may begin yet.
+READY / approved. Sole current implementation packet after the connected proof. Codex may begin only after the Unity README activation pointer is merged with passing CI.

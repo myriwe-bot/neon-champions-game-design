@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-16] approval | STORY-SAVE-001 activated
+
+- Human approved `STORY-SAVE-001` and its version-1 strategic save/resume ADR exactly as proposed.
+- Activated EPIC-017 and promoted STORY-SAVE-001 to READY / approved as the sole current Unity implementation packet.
+- Locked one Continue slot plus last-valid backup, stable strategic saves only, existing DataContract JSON serialization with ordered persistence DTOs, scenario versioning, SHA-256 integrity, atomic replacement, and fail-closed corruption/incompatibility handling.
+- Tactical mid-battle save, multiple slots, migration, cloud sync, replay, campaign persistence, and unrelated gameplay remain out of scope.
+- Unity implementation must wait for the separate README activation pointer PR and passing pointer CI.
+
 ## [2026-07-16] preparation | Next implementation candidate: strategic save/resume
 
 - Prepared proposed `EPIC-017 Fully Playable Prototype Continuity and Opponent Pressure` without claiming the deferred EPIC-016 human QA gate has passed.

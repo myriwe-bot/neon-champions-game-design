@@ -111,13 +111,35 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-SAVE-001 Prototype Strategic Save and Resume`.
 
-`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` remains a deferred human-owned READY-candidate. `STORY-SAVE-001` is the recommended next implementation-facing READY-candidate, but its proposed save ADR and story are approval pending; its checked-in prompt is guarded and non-runnable.
+`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` remains a deferred human-owned READY-candidate. `STORY-SAVE-001` and its save ADR were human-approved on 2026-07-16; `production/sprints/codex-story-save-001.prompt.txt` is the sole current implementation prompt. Codex may run only after the Unity README activation pointer is merged with passing CI.
 
 ## Current READY implementation packet
 
-None. Do not run `production/sprints/codex-story-save-001.prompt.txt` or any historical implementation prompt until `STORY-SAVE-001` and its ADR are explicitly approved, the guard is replaced with a runnable contract, and the Unity README pointer is activated through CI.
+`production/sprints/codex-story-save-001.prompt.txt`
+
+Primary workspace-write handoff:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-save-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+Trusted-repo fallback:
+
+```powershell
+codex exec --sandbox danger-full-access $prompt
+```
 
 ### Historical STORY-PROOF-SCENARIO-001 handoff — do not rerun
 

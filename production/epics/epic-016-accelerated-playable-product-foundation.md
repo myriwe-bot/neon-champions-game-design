@@ -31,7 +31,7 @@ A new player can complete a faction-selectable 20–30 minute HRC/QXZ slice and 
 
 Implementation sequence is complete. EPIC-016 remains ACTIVE / awaiting deferred human QA closeout rather than DONE.
 
-The next implementation-facing train is proposed separately as `EPIC-017 Fully Playable Prototype Continuity and Opponent Pressure`, beginning with approval-pending `STORY-SAVE-001`. That parallel preparation does not waive or complete this epic's deferred human QA gate.
+The next implementation-facing train is active separately as `EPIC-017 Fully Playable Prototype Continuity and Opponent Pressure`, beginning with approved `STORY-SAVE-001`. That parallel implementation does not waive or complete this epic's deferred human QA gate.
 
 ## Boundaries
 

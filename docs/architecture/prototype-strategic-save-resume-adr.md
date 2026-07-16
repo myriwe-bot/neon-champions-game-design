@@ -1,18 +1,18 @@
 ---
 title: Prototype Strategic Save and Resume ADR
 type: adr
-status: proposed
+status: approved
 phase: technical-setup
 owner: shared
 created: 2026-07-16
 updated: 2026-07-16
-approval: pending
+approval: approved
 related: [docs/architecture/data-scenario-save-format-adr, docs/architecture/unity-technical-scheme, docs/architecture/control-manifest, production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure, production/stories/story-save-001-prototype-strategic-save-and-resume]
 ---
 
 # Prototype Strategic Save and Resume ADR
 
-## Decision proposed for approval
+## Decision
 
 Implement a versioned JSON save envelope around the existing plain-C# strategic runtime state. The first prototype supports one user-managed continue slot plus one protected previous-valid backup, saves only at stable strategic boundaries, and resumes through the normal title/player shell.
 
@@ -86,4 +86,4 @@ Treat save data as untrusted input. Validate lengths, IDs, ranges, references, s
 
 ## Gate
 
-Approval of this ADR authorizes only `STORY-SAVE-001`. Any implementation discovery that changes serialization ownership, introduces a package, requires a shadow runtime model, or weakens atomic/validation behavior must stop for an ADR amendment.
+APPROVED by the human owner on 2026-07-16 with `STORY-SAVE-001` as proposed. This ADR authorizes only `STORY-SAVE-001`. Any implementation discovery that changes serialization ownership, introduces a package, requires a second mutable gameplay model, or weakens atomic/validation behavior must stop for an ADR amendment.

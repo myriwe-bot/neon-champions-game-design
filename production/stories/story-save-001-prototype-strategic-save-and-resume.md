@@ -1,7 +1,7 @@
 ---
 title: STORY-SAVE-001 Prototype Strategic Save and Resume
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-16
@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY / approved by the human owner on 2026-07-16 as proposed. The Unity README activation pointer merged through PR #160 with exact-head and post-merge CI passing; implementation is runnable.
+DONE / merged. Unity PR #161 merged as `9dbcd372280dc0db0eead2cfeb2cd01ffe5636b3`; exact-head push and PR CI passed, and post-merge main CI passed. Continuity review then found an AI rollback path that omitted save-era runtime collections; Unity PR #162 fixed it before the next AI packet.
 
 ## Story type
 
@@ -141,4 +141,16 @@ Human approval: `Approved` on 2026-07-16, accepting the story and ADR exactly as
 
 ## Verdict
 
-READY / approved and fully activated. Sole current implementation packet after the connected proof; Codex may begin from current `main`.
+DONE / merged through Unity PR #161. Review fixes added a pre-deserialization 4 MiB document bound, regression coverage, and regenerated exact-head evidence. Follow-up Unity PR #162 preserves Feed consequences and migration diagnostics during failed strategic-AI rollback. No implementation packet is currently active; `STORY-AI-PLAY-001` is approval-pending.
+
+## Merge evidence
+
+- Implementation PR: https://github.com/myriwe-bot/neon-champions-unity/pull/161.
+- Reviewed exact head: `1d3e5a323cded9f243f82b23c3268d855e39a1bf`.
+- Exact-head push CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29525641485 — PASS.
+- Exact-head PR CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29525644936 — PASS.
+- Merge commit: `9dbcd372280dc0db0eead2cfeb2cd01ffe5636b3`.
+- Post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29526802217 — PASS.
+- Continuity hotfix PR: https://github.com/myriwe-bot/neon-champions-unity/pull/162.
+- Hotfix exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29527508203 — PASS.
+- Hotfix merge commit: `24890f7326da4f0c9c94ddc67bf86ef848c52f81`.

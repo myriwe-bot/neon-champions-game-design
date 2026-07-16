@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-16] merge | STORY-SAVE-001 completed; opponent-pressure candidate prepared
+
+- Reviewed and repaired Unity PR #161 for strategic save/resume. Added a 4 MiB pre-deserialization document bound, regression coverage, corrected duplicate evidence rendering, regenerated exact-head Windows Unity evidence, and removed temporary evidence-refresh automation before merge.
+- Exact-head push CI 29525641485 and PR CI 29525644936 passed; PR #161 merged as `9dbcd372280dc0db0eead2cfeb2cd01ffe5636b3`; post-merge CI 29526802217 passed.
+- Continuity review found the existing strategic-AI rollback clone omitted Feed consequences and migration diagnostics. Fixed and tested the state-loss path in Unity PR #162; exact-head CI 29527508203 passed and merge `24890f7326da4f0c9c94ddc67bf86ef848c52f81` landed.
+- Prepared `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume` as READY-candidate / approval pending, with a concrete deterministic priority policy and guarded non-runnable prompt. No Unity implementation packet is currently active.
+
 ## [2026-07-16] recovery | STORY-SAVE-001 local implementation publication
 
 - The Windows Codex worktree was confirmed on the correct STORY-SAVE-001 branch with substantial uncommitted runtime, infrastructure, scene, test, project-setting, and evidence changes based on Unity pointer commit `9a857e1`.

@@ -1,0 +1,31 @@
+GUARDED READY-CANDIDATE — DO NOT IMPLEMENT YET
+
+Candidate: STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume
+
+This file is intentionally non-runnable. Stop without editing Unity unless every activation prerequisite below is true.
+
+Activation prerequisites
+1. The design repository is on current clean `main`.
+2. `production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume.md` says `status: ready` and `approval: approved`.
+3. Its Ambiguity Check says PASS rather than PASS-candidate.
+4. The human-approved policy records the exact priority order and battle-favorability proxy.
+5. STORY-AI-001 and STORY-SAVE-001 are DONE / merged, Unity PR #162 is merged, and their post-merge CI is green.
+6. Unity `README.md` names STORY-AI-PLAY-001 as the sole current READY / approved packet.
+7. The pointer activation PR has exact-head and post-merge main CI evidence.
+8. Unity starts clean on current `main`.
+
+If any prerequisite fails, report the mismatch and stop without Unity edits, branch creation, commits, pushes, or PRs.
+
+After activation, implementation must follow the approved story literally:
+- branch `story/STORY-AI-PLAY-001-deterministic-opponent-pressure-after-resume`;
+- pure deterministic candidate enumeration/ranking;
+- explicit ordinal tie-breaks independent of collection order;
+- restored runtime state as authority;
+- central objective, favorable visible battle proxy, recruitment, safe site, and shortest-hop movement tiers;
+- at most one movement plus one major action;
+- existing tactical handoff only, no auto-resolution;
+- complete atomic rollback of every mutable runtime collection;
+- saved/resumed equivalence tests;
+- normal-shell readable evidence without raw IDs;
+- no randomness, new balance/content, save-schema changes, packages, or broad AI rewrite;
+- focused and full Unity verification, validators, Windows build, exact-head CI, evidence, non-draft PR, and explicit omissions.

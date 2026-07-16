@@ -28,11 +28,11 @@ This epic may proceed as a parallel implementation train without claiming that d
 
 ## Capability sequence
 
-1. `STORY-SAVE-001` — READY / approved; bounded prototype strategic save/resume and sole current implementation packet.
-2. `STORY-AI-PLAY-001` — unformed follow-up; deterministic site value, recruitment, contest, and favorable-attack pressure after save state is stable.
+1. `STORY-SAVE-001` — DONE / merged through Unity PR #161, with rollback continuity hotfix PR #162.
+2. `STORY-AI-PLAY-001` — READY-candidate / approval pending; deterministic site value, recruitment, objective contest, bounded favorable-attack pressure, and save/resume choice equivalence.
 3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — unformed human/automation gate for resume continuity and opponent pressure.
 
-Only the first child is formed. Later children remain unapproved and must not be inferred from this epic.
+The second child is now formed as an approval-pending candidate. It must not be implemented or activated without explicit human approval of its policy.
 
 ## Boundaries
 

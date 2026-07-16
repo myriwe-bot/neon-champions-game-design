@@ -111,35 +111,13 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-SAVE-001 Prototype Strategic Save and Resume`.
+**Current READY / approved Unity implementation packet:** none.
 
-`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` remains a deferred human-owned READY-candidate. `STORY-SAVE-001` and its save ADR were human-approved on 2026-07-16; `production/sprints/codex-story-save-001.prompt.txt` is the sole current implementation prompt. Unity pointer PR #160 and its exact-head/post-merge CI passed, so Codex may run from current `main`.
+`STORY-SAVE-001` is DONE / merged through Unity PR #161, with rollback continuity follow-up PR #162. `STORY-AI-PLAY-001` is the next READY-candidate / approval pending. Its prompt is guarded and non-runnable; do not implement or activate it before explicit human approval of the deterministic policy.
 
 ## Current READY implementation packet
 
-`production/sprints/codex-story-save-001.prompt.txt`
-
-Primary workspace-write handoff:
-
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git checkout main
-git pull --ff-only origin main
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-save-001.prompt.txt"
-codex exec --sandbox workspace-write $prompt
-```
-
-Trusted-repo fallback:
-
-```powershell
-codex exec --sandbox danger-full-access $prompt
-```
+None. Candidate only: `production/sprints/codex-story-ai-play-001.prompt.txt`.
 
 ### Historical STORY-PROOF-SCENARIO-001 handoff — do not rerun
 
@@ -169,7 +147,7 @@ Do not rerun the completed proof-scenario or faction-composition handoffs.
 
 ## Most recently completed implementation prompt
 
-Historical completed prompt: `production/sprints/codex-story-proof-scenario-001.prompt.txt` for the merged connected proof story.
+Historical completed prompt: `production/sprints/codex-story-save-001.prompt.txt` for the merged strategic save/resume story.
 
 ## Historical prompt-file runs
 

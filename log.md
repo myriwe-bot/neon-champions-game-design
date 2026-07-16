@@ -9,6 +9,8 @@
 - Continuity review found the existing strategic-AI rollback clone omitted Feed consequences and migration diagnostics. Fixed and tested the state-loss path in Unity PR #162; exact-head CI 29527508203 passed, merge `24890f7326da4f0c9c94ddc67bf86ef848c52f81` landed, and post-merge CI 29528027132 passed.
 - Prepared `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume` as READY-candidate / approval pending, with a concrete deterministic priority policy and guarded non-runnable prompt. No Unity implementation packet is currently active.
 - Cleared the Unity runnable pointer through PR #163; exact-head CI 29528493960 and post-merge main CI 29529064345 passed, with merge `426be3713aa0eacb6046d5fa1a90a77e697158d9`.
+- A delayed delegated review then exposed two additional fail-closed content-bound defects in the merged save validator: forged movement maximums could exceed authored Champion capacity, and recruitment stock could exceed authored offer capacity. Added both guards and regression coverage through Unity PR #164; exact-head CI 29531944838 passed, merge `89064ca6079be2d1cc9d67bc7b22bcb335098c52` landed, and post-merge CI 29532495229 passed.
+- Updated the committed evidence README with the original implementation CI URLs. Rechecked both paired 1920x1080 captures: legacy top/Feed IMGUI text has consistent raster softness in both images but remains readable and unclipped; the resumed proof visibly preserves Cycle/Turn, resources, army, objective, position, and the one-time Calibration Archive Feed consequence.
 
 ## [2026-07-16] recovery | STORY-SAVE-001 local implementation publication
 

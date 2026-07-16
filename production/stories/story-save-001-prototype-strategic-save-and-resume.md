@@ -159,3 +159,10 @@ DONE / merged through Unity PR #161. Review fixes added a pre-deserialization 4 
 - Closeout pointer exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29528493960 — PASS.
 - Closeout pointer merge commit: `426be3713aa0eacb6046d5fa1a90a77e697158d9`.
 - Closeout pointer post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29529064345 — PASS.
+- Late delegated review hotfix PR: https://github.com/myriwe-bot/neon-champions-unity/pull/164.
+- Late review finding repaired: restored Champion movement maximum must equal current authored `BaseMovementPoints`; forged save capacity now fails closed.
+- Late review finding repaired: restored recruitment stock may not exceed the current authored offer `InitialStock`; forged stock now fails closed.
+- Late review exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29531944838 — PASS.
+- Late review merge commit: `89064ca6079be2d1cc9d67bc7b22bcb335098c52`.
+- Late review post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29532495229 — PASS.
+- Evidence record now carries the original exact-head/post-merge CI URLs. Paired pre-save/resumed screenshots use the same capture pipeline; legacy top/Feed IMGUI text has consistent raster softness but remains readable, unclipped, and free of overlap, while uGUI proof text is sharp.

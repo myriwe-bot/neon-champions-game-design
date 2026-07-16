@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-07-16] recovery | STORY-SAVE-001 local implementation publication
+
+- The Windows Codex worktree was confirmed on the correct STORY-SAVE-001 branch with substantial uncommitted runtime, infrastructure, scene, test, project-setting, and evidence changes based on Unity pointer commit `9a857e1`.
+- GitHub correctly showed no implementation branch or PR because the work had not been committed or pushed; the implementation itself was not absent.
+- Updated the checked-in Codex prompt to recognize this exact story-scoped dirty worktree as a recovery case, preserve it, finish review/verification, and enforce commit/push/non-draft PR publication. Unrelated dirty files and generated root artifacts remain blockers/excluded.
+
 ## [2026-07-16] approval | STORY-SAVE-001 activated
 
 - Human approved `STORY-SAVE-001` and its version-1 strategic save/resume ADR exactly as proposed.

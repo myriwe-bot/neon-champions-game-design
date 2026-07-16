@@ -10,8 +10,11 @@ Required implementation branch
 Required PR title
 - STORY-SAVE-001 prototype strategic save and resume
 
-Preflight — stop without Unity edits if any check fails
-1. Both repositories must be clean, on current main, and fast-forwarded from origin/main before creating the story branch.
+Preflight — support both a clean start and recovery of an existing story worktree
+1. Inspect both repositories before changing anything.
+   - Fresh-start case: both repositories are clean, on current main, and fast-forwarded from origin/main before creating the story branch.
+   - Recovery case: the Unity repo is already on `story/STORY-SAVE-001-prototype-strategic-save-resume` with uncommitted STORY-SAVE-001 runtime/test/evidence changes based on `9a857e1a52f8d169cffb7f8d1e35b7be9176a0c0`. This is expected recoverable work. Do not discard, reset, stash, overwrite, or restart it. Inspect every modified/untracked path, continue implementation/review from that state, run verification, then commit and publish it.
+   - In the recovery case, generated root `artifacts/` are disposable scratch and must not be committed. Stop only for unrelated user-authored/unknown dirty paths, merge conflicts, a base other than the approved pointer commit/current main ancestry, or a scope contradiction.
 2. Read the full story: production/stories/story-save-001-prototype-strategic-save-and-resume.md.
 3. Confirm story frontmatter is status: ready and approval: approved; Ambiguity Check is PASS; Verdict is READY / approved.
 4. Read the full approved save ADR: docs/architecture/prototype-strategic-save-resume-adr.md. Confirm status: approved and approval: approved.
@@ -25,7 +28,7 @@ Preflight — stop without Unity edits if any check fails
    - production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure.md.
 6. Confirm the Unity README current-task pointer names STORY-SAVE-001, this branch, this prompt, and this PR title, with no contradictory current task nearby.
 7. Inspect the current scenario importer, runtime-state model, title/pause/player shell, tactical transition state, tests, and assembly boundaries before designing code.
-8. If a required source is missing/draft/pending/contradictory, the pointer is absent, the worktree is dirty, or implementation requires changing the approved serializer/ownership/boundary, stop and report the exact mismatch. Do not invent a workaround.
+8. If a required source is missing/draft/pending/contradictory, the pointer is absent, unrelated dirty work exists, or implementation requires changing the approved serializer/ownership/boundary, stop and report the exact mismatch. Do not treat the explicitly allowed STORY-SAVE-001 recovery worktree as unrelated dirt, and do not invent a workaround.
 
 Binding implementation contract
 - Implement one version-1 Continue slot plus protected last-valid backup.

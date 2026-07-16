@@ -71,8 +71,9 @@
 - [[production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike]] — DONE / merged vertical-look and provenance spike through Unity PR #149.
 - [[production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation]] — DONE / merged EPIC-016 facility-content and base-presentation packet through Unity PR #152.
 - [[production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof]] — DONE / merged EPIC-016 three-line faction-composition proof through Unity PR #155.
-- [[production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow]] — READY / approved current EPIC-016 connected proof implementation packet.
-- [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — runnable approved Codex packet with source-status and Unity-pointer preflight gates.
+- [[production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow]] — DONE / merged EPIC-016 connected proof through Unity PR #158.
+- [[production/stories/story-proof-qa-001-human-proof-build-playtest-and-capture-gate]] — READY-candidate / approval pending deferred human playtest and optional capture closeout; not current work.
+- [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.
 - [[production/epics/epic-strat-mvp-001-strategic-mvp-core-loop]] — implemented parent epic for the first strategic MVP core loop stories.

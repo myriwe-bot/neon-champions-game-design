@@ -1,7 +1,7 @@
 ---
 title: STORY-PROOF-SCENARIO-001 Month-One Route, Pressure, Feed, and Capture Flow
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-15
@@ -14,7 +14,7 @@ related: [production/epics/epic-016-accelerated-playable-product-foundation, pro
 
 ## Status
 
-READY / approved for implementation on 2026-07-15. Human approval: “Approved, prepare implementation packet.” Codex may run only after design/control publishes this promotion and the Unity README current-task pointer is activated through CI.
+DONE / merged through Unity PR #158 on 2026-07-16. Merge commit: `74f0d79fcf269cb84e14108626aac1c450d5392e`. Final exact-head push CI: [29500867867](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29500867867). Final exact-head PR CI: [29500871281](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29500871281). Post-merge `main` CI: [29502041312](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29502041312) — PASS.
 
 Human gate amendment on 2026-07-16: the authentic timed title-to-resolution playthrough and the later 30–60 second video are explicitly deferred to a subsequent EPIC-016 QA/playtest gate. Neither is a blocker to merging Unity PR #158. This amendment does not waive automated route legality, exact-head CI, independent review, or evidence-readability requirements.
 
@@ -186,20 +186,20 @@ Both interpretations describe the same recovered event, neither is canonical tru
 
 ## Acceptance criteria
 
-- [ ] Normal player entry can start either HRC or QXZ as the human faction, with the existing opponent controlling the other side and no hotseat-only step required for the connected proof.
-- [ ] The exact binding briefing appears before faction choice, fits the normal 1920×1080 shell, and contains no raw/internal IDs or forbidden region names.
-- [ ] Imported and fallback scenarios contain exactly ten nodes and the exact new node/site/route definitions above.
-- [ ] Both faction starts expose the exact three readable opening choices and asymmetric implications specified above; recruitment remains available through HRC's Fishery Relay and both faction bases, without adding an offer.
-- [ ] `site_central_objective` is unguarded only in this scenario, `holdRequiredCount` is exactly `5`, the objective engine/rules are unchanged, and route authoring order lets the unmodified opponent capture/pressure center by cycle 2 while leaving the player the exact five-check counterplay window needed to reach it.
-- [ ] Normal UI uses the binding provisional location labels and exposes no raw node/site/route/faction IDs, unresolved localization keys, `Greenland`, or player-facing placeholder terms on story-owned states.
-- [ ] Both proof caches preserve the existing one-time `+5 Intel` reward and show the exact shared incomplete-source fact, active-faction yard/corridor direction, and provenance/status cue without changing route legality or hidden state.
-- [ ] The literal connected HRC and QXZ routes above pass through normal input/turn APIs and prove faction choice, briefing, route tradeoff and reversal, facility choice, recruitment/composition, guarded tactical handoff/result, return to strategic state, Feed consequence, and real victory/defeat resolution.
-- [ ] The Calibration Archive Feed result is state-backed, one-time, faction-specific only in interpretation, and contains the exact shared fact, selected interpretation, and provenance/status lines.
-- [ ] The existing objective hold/contest/victory engine and dumb opponent behavior are reused unchanged; only the explicitly authorized scenario guard flag, five-check hold pacing, route order, new nodes/sites/routes, labels, and Feed/briefing presentation change.
+- [x] Normal player entry can start either HRC or QXZ as the human faction, with the existing opponent controlling the other side and no hotseat-only step required for the connected proof.
+- [x] The exact binding briefing appears before faction choice, fits the normal 1920×1080 shell, and contains no raw/internal IDs or forbidden region names.
+- [x] Imported and fallback scenarios contain exactly ten nodes and the exact new node/site/route definitions above.
+- [x] Both faction starts expose the exact three readable opening choices and asymmetric implications specified above; recruitment remains available through HRC's Fishery Relay and both faction bases, without adding an offer.
+- [x] `site_central_objective` is unguarded only in this scenario, `holdRequiredCount` is exactly `5`, the objective engine/rules are unchanged, and route authoring order lets the unmodified opponent capture/pressure center by cycle 2 while leaving the player the exact five-check counterplay window needed to reach it.
+- [x] Normal UI uses the binding provisional location labels and exposes no raw node/site/route/faction IDs, unresolved localization keys, `Greenland`, or player-facing placeholder terms on story-owned states.
+- [x] Both proof caches preserve the existing one-time `+5 Intel` reward and show the exact shared incomplete-source fact, active-faction yard/corridor direction, and provenance/status cue without changing route legality or hidden state.
+- [x] The literal connected HRC and QXZ routes above pass through normal input/turn APIs and prove faction choice, briefing, route tradeoff and reversal, facility choice, recruitment/composition, guarded tactical handoff/result, return to strategic state, Feed consequence, and real victory/defeat resolution.
+- [x] The Calibration Archive Feed result is state-backed, one-time, faction-specific only in interpretation, and contains the exact shared fact, selected interpretation, and provenance/status lines.
+- [x] The existing objective hold/contest/victory engine and dumb opponent behavior are reused unchanged; only the explicitly authorized scenario guard flag, five-check hold pacing, route order, new nodes/sites/routes, labels, and Feed/briefing presentation change.
 - [x] Human decision on 2026-07-16 explicitly defers the timed 20–30 minute title-to-resolution playthrough and its written run record to a subsequent EPIC-016 QA/playtest gate; it is not a merge criterion for Unity PR #158.
-- [ ] Existing movement, base/economy, recruitment, three-line army, tactical, Sensor Lock, AI, objective, import/fallback, and return-summary tests remain green.
-- [ ] No new external/generated non-code asset is introduced; if implementation unexpectedly needs one, stop rather than bypass the provenance contract.
-- [ ] EditMode, PlayMode, validator, standalone build, exact-head PR CI, and post-merge main CI pass.
+- [x] Existing movement, base/economy, recruitment, three-line army, tactical, Sensor Lock, AI, objective, import/fallback, and return-summary tests remain green.
+- [x] No new external/generated non-code asset is introduced; if implementation unexpectedly needs one, stop rather than bypass the provenance contract.
+- [x] EditMode, PlayMode, validator, standalone build, exact-head PR CI, and post-merge main CI pass.
 
 ## Verification and evidence
 
@@ -242,4 +242,4 @@ PASS / approved. The exact topology additions, route order, five-check pacing, p
 
 ## Verdict
 
-READY / approved. This is the sole current EPIC-016 Unity implementation packet after the merged faction-composition proof. Run only from the published prompt after the CI-gated Unity pointer activation.
+DONE / merged. Implementation, evidence, independent review, exact-head CI, and post-merge `main` CI passed. The human timed playtest/video is explicitly deferred to `STORY-PROOF-QA-001`, a READY-candidate that remains approval pending.

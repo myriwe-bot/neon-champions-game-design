@@ -110,15 +110,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-PROOF-SCENARIO-001 Month-One Route, Pressure, Feed, and Capture Flow`.
+**Current READY / approved Unity implementation packet:** none.
 
-`STORY-FACTION-COMPOSITION-001` is DONE / merged through Unity PR #155 with post-merge CI passed. `STORY-PROOF-SCENARIO-001` was explicitly approved on 2026-07-15 and is the sole active implementation packet.
+`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` is a deferred human-owned READY-candidate / approval pending; it is not a Codex or Unity implementation instruction.
 
 ## Current READY implementation packet
 
-Use `production/sprints/codex-story-proof-scenario-001.prompt.txt`. Its preflight requires the READY/approved story, source-authority matrix closure, and matching Unity README current-task pointer.
+None. Do not run a Codex implementation prompt until a later story is explicitly promoted to READY / approved and the Unity README pointer is activated through CI.
 
-### Copy-safe STORY-PROOF-SCENARIO-001 handoff
+### Historical STORY-PROOF-SCENARIO-001 handoff — do not rerun
 
 Primary workspace-write run:
 
@@ -142,11 +142,11 @@ Trusted-repo fallback:
 $prompt | codex exec --sandbox danger-full-access
 ```
 
-Do not rerun the completed faction-composition handoff. Pull both repositories before starting this current packet.
+Do not rerun the completed proof-scenario or faction-composition handoffs.
 
 ## Most recently completed implementation prompt
 
-Historical completed prompt: `production/sprints/codex-story-faction-composition-001.prompt.txt` for the merged three-line faction-composition story.
+Historical completed prompt: `production/sprints/codex-story-proof-scenario-001.prompt.txt` for the merged connected proof story.
 
 ## Historical prompt-file runs
 
@@ -372,4 +372,4 @@ Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\
 
 ## Final control-surface state
 
-`STORY-PROOF-SCENARIO-001` is the sole current READY / approved Unity implementation packet. `STORY-FACTION-COMPOSITION-001` remains historical and DONE.
+No Unity implementation packet is currently READY / approved. `STORY-PROOF-SCENARIO-001` is historical and DONE; `STORY-PROOF-QA-001` is deferred, human-owned, and approval pending.

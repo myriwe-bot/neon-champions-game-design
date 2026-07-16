@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-16] merge | STORY-PROOF-SCENARIO-001 completed; human QA deferred
+
+- Human decision explicitly deferred the 20–30 minute unaided playthrough and later 30–60 second video to a subsequent EPIC-016 QA/playtest gate; neither remained a blocker to Unity PR #158.
+- Published the gate amendment in design control, updated the Unity evidence README, and re-ran exact-head push/PR CI on final head `4c07109a067674f4f0b7f06a616a4654869dd8a7`; all required jobs passed.
+- Merged Unity PR #158 as `74f0d79fcf269cb84e14108626aac1c450d5392e`; post-merge `main` CI [29502041312](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29502041312) passed.
+- Marked `STORY-PROOF-SCENARIO-001` DONE, moved EPIC-016 to implementation complete / awaiting deferred QA closeout, and prepared `STORY-PROOF-QA-001` as a human-owned READY-candidate / approval pending. No current READY Unity implementation packet remains.
+
 ## [2026-07-15] blocker repair | STORY-FACTION-COMPOSITION-001 source-authority preflight
 
 - Codex correctly stopped before Unity edits because the activated prompt listed `design/gdd/faction-unit-rosters.md` as a required implementation source even though its frontmatter is `status: draft` / `approval: pending`.

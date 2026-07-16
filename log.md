@@ -6,8 +6,9 @@
 
 - Reviewed and repaired Unity PR #161 for strategic save/resume. Added a 4 MiB pre-deserialization document bound, regression coverage, corrected duplicate evidence rendering, regenerated exact-head Windows Unity evidence, and removed temporary evidence-refresh automation before merge.
 - Exact-head push CI 29525641485 and PR CI 29525644936 passed; PR #161 merged as `9dbcd372280dc0db0eead2cfeb2cd01ffe5636b3`; post-merge CI 29526802217 passed.
-- Continuity review found the existing strategic-AI rollback clone omitted Feed consequences and migration diagnostics. Fixed and tested the state-loss path in Unity PR #162; exact-head CI 29527508203 passed and merge `24890f7326da4f0c9c94ddc67bf86ef848c52f81` landed.
+- Continuity review found the existing strategic-AI rollback clone omitted Feed consequences and migration diagnostics. Fixed and tested the state-loss path in Unity PR #162; exact-head CI 29527508203 passed, merge `24890f7326da4f0c9c94ddc67bf86ef848c52f81` landed, and post-merge CI 29528027132 passed.
 - Prepared `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume` as READY-candidate / approval pending, with a concrete deterministic priority policy and guarded non-runnable prompt. No Unity implementation packet is currently active.
+- Cleared the Unity runnable pointer through PR #163; exact-head CI 29528493960 and post-merge main CI 29529064345 passed, with merge `426be3713aa0eacb6046d5fa1a90a77e697158d9`.
 
 ## [2026-07-16] recovery | STORY-SAVE-001 local implementation publication
 

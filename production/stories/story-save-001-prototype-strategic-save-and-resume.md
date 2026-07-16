@@ -154,3 +154,8 @@ DONE / merged through Unity PR #161. Review fixes added a pre-deserialization 4 
 - Continuity hotfix PR: https://github.com/myriwe-bot/neon-champions-unity/pull/162.
 - Hotfix exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29527508203 — PASS.
 - Hotfix merge commit: `24890f7326da4f0c9c94ddc67bf86ef848c52f81`.
+- Hotfix post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29528027132 — PASS.
+- Closeout pointer PR: https://github.com/myriwe-bot/neon-champions-unity/pull/163.
+- Closeout pointer exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29528493960 — PASS.
+- Closeout pointer merge commit: `426be3713aa0eacb6046d5fa1a90a77e697158d9`.
+- Closeout pointer post-merge main CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29529064345 — PASS.

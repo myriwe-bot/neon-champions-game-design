@@ -16,6 +16,8 @@ related: [production/epics/epic-016-accelerated-playable-product-foundation, pro
 
 READY / approved for implementation on 2026-07-15. Human approval: “Approved, prepare implementation packet.” Codex may run only after design/control publishes this promotion and the Unity README current-task pointer is activated through CI.
 
+Human gate amendment on 2026-07-16: the authentic timed title-to-resolution playthrough and the later 30–60 second video are explicitly deferred to a subsequent EPIC-016 QA/playtest gate. Neither is a blocker to merging Unity PR #158. This amendment does not waive automated route legality, exact-head CI, independent review, or evidence-readability requirements.
+
 ## Value
 
 As an HRC or QXZ player, I want one coherent faction-selectable scenario route from briefing through exploration, construction, recruitment, tactical conflict, disputed evidence, and objective resolution, so the presentable proof reads as a game rather than a collection of isolated feature demonstrations.
@@ -194,7 +196,7 @@ Both interpretations describe the same recovered event, neither is canonical tru
 - [ ] The literal connected HRC and QXZ routes above pass through normal input/turn APIs and prove faction choice, briefing, route tradeoff and reversal, facility choice, recruitment/composition, guarded tactical handoff/result, return to strategic state, Feed consequence, and real victory/defeat resolution.
 - [ ] The Calibration Archive Feed result is state-backed, one-time, faction-specific only in interpretation, and contains the exact shared fact, selected interpretation, and provenance/status lines.
 - [ ] The existing objective hold/contest/victory engine and dumb opponent behavior are reused unchanged; only the explicitly authorized scenario guard flag, five-check hold pacing, route order, new nodes/sites/routes, labels, and Feed/briefing presentation change.
-- [ ] A timed normal-input proof run from title entry to real resolution completes in 20–30 minutes without developer intervention; the evidence README records faction, start/end timestamps, elapsed time, route deviations, and any failed unaided task.
+- [x] Human decision on 2026-07-16 explicitly defers the timed 20–30 minute title-to-resolution playthrough and its written run record to a subsequent EPIC-016 QA/playtest gate; it is not a merge criterion for Unity PR #158.
 - [ ] Existing movement, base/economy, recruitment, three-line army, tactical, Sensor Lock, AI, objective, import/fallback, and return-summary tests remain green.
 - [ ] No new external/generated non-code asset is introduced; if implementation unexpectedly needs one, stop rather than bypass the provenance contract.
 - [ ] EditMode, PlayMode, validator, standalone build, exact-head PR CI, and post-merge main CI pass.
@@ -212,7 +214,7 @@ Required evidence under `production/evidence/STORY-PROOF-SCENARIO-001/`:
 - `07-feed-reveal-hrc-1920x1080.png` — shared fact, exact HRC interpretation, and provenance/status without a text wall.
 - `08-victory-or-defeat-1920x1080.png` — real existing-rule resolution with consequence and next-question hook.
 - Supplemental `07b-feed-reveal-qxz-1920x1080.png` — exact QXZ interpretation of the same shared fact and provenance/status. This is required because one still cannot prove both faction-selectable interpretations.
-- README with hashes, exact test names, timed-run record, exact-head CI URL recorded on the PR, changed-asset inventory, and omissions.
+- README with hashes, exact test names, the human-approved timed-run deferral and later QA ownership, exact-head CI URL recorded on the PR, changed-asset inventory, and omissions.
 
 Automated capture assertions must bind semantics to named player-facing objects, verify active 1920×1080 render state, bounds/non-overlap/text fit, exact labels/Feed lines, and absence of raw IDs/placeholders. Regenerate each materially different full-shell capture from a fresh scene/process if sequential capture causes ghosting.
 

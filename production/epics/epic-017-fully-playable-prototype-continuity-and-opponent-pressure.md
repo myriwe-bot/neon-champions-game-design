@@ -1,0 +1,46 @@
+---
+title: EPIC-017 Fully Playable Prototype Continuity and Opponent Pressure
+type: epic
+status: proposed
+phase: production
+owner: shared
+created: 2026-07-16
+updated: 2026-07-16
+approval: pending
+related: [production/planning/full-project-review-and-completion-plan-2026-07-12, production/epics/epic-016-accelerated-playable-product-foundation, docs/architecture/data-scenario-save-format-adr, design/gdd/product-constitution]
+---
+
+# EPIC-017 Fully Playable Prototype Continuity and Opponent Pressure
+
+## Outcome
+
+Extend the merged presentable proof into the first durable prototype foundation: a player can leave and resume a real strategic match safely, then face an opponent that makes legible scenario-directed choices rather than relying on authored route order alone.
+
+## Gate
+
+A clean Windows build can save a stable strategic state, return to title, resume the same scenario state without divergence, and continue against deterministic opponent pressure. Corrupt or incompatible saves fail safely and explain the problem without damaging the last valid save.
+
+## Why this comes next
+
+EPIC-016 proved the connected player-facing route and is implementation-complete, while its authentic human QA closeout remains explicitly deferred. The approved eight-week prototype contract still requires save/resume and functional strategic AI. Save/resume is first because it forces an explicit, testable runtime-state boundary before AI and scenario complexity grow.
+
+This epic may proceed as a parallel implementation train without claiming that deferred `STORY-PROOF-QA-001` has passed or that EPIC-016 is DONE.
+
+## Capability sequence
+
+1. `STORY-SAVE-001` — READY-candidate / approval pending; bounded prototype strategic save/resume.
+2. `STORY-AI-PLAY-001` — unformed follow-up; deterministic site value, recruitment, contest, and favorable-attack pressure after save state is stable.
+3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — unformed human/automation gate for resume continuity and opponent pressure.
+
+Only the first child is formed. Later children remain unapproved and must not be inferred from this epic.
+
+## Boundaries
+
+- Preserve current deterministic behavior as the temporary implementation baseline.
+- No tactical mid-battle save, multiple profiles, cloud sync, migration framework, replay system, campaign persistence, editor UI, or multiplayer.
+- No sophisticated AI, hidden-information cheating, random choice, diplomacy, or broad tactical-AI rewrite in the first story.
+- EPIC-016 human QA remains deferred and separately approval-gated.
+
+## Approval packet
+
+Approval of this epic authorizes only promotion of `STORY-SAVE-001` with the proposed prototype save ADR. It does not authorize later AI or QA children.

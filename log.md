@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-16] preparation | Next implementation candidate: strategic save/resume
+
+- Prepared proposed `EPIC-017 Fully Playable Prototype Continuity and Opponent Pressure` without claiming the deferred EPIC-016 human QA gate has passed.
+- Recommended save/resume before broader AI expansion because the approved eight-week prototype requires durable sessions and a stable runtime-state boundary before scenario/opponent complexity grows.
+- Drafted the proposed version-1 save ADR: stable strategic boundary only, one Continue slot plus last-valid backup, JSON envelope, explicit scenario content version, SHA-256 integrity, atomic temp/readback/replace, fail-closed incompatibility/corruption handling, and no migration or tactical mid-battle save.
+- Prepared `STORY-SAVE-001` as READY-candidate / approval pending with exact scope, acceptance, tests/evidence, branch/PR contract, and a guarded non-runnable Codex prompt.
+- No Unity implementation packet is currently READY; approval must promote the ADR/story, replace the guard, and activate the Unity README pointer through CI.
+
 ## [2026-07-16] merge | STORY-PROOF-SCENARIO-001 completed; human QA deferred
 
 - Human decision explicitly deferred the 20–30 minute unaided playthrough and later 30–60 second video to a subsequent EPIC-016 QA/playtest gate; neither remained a blocker to Unity PR #158.

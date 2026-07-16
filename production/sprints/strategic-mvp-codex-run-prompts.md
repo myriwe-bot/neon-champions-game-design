@@ -102,6 +102,7 @@ related:
     production/stories/story-base-content-001-hrc-qxz-six-facility-prototype-content-and-base-presentation,
     production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof,
     production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow,
+    production/stories/story-save-001-prototype-strategic-save-and-resume,
   ]
 approval: approved
 ---
@@ -112,11 +113,11 @@ approval: approved
 
 **Current READY / approved Unity implementation packet:** none.
 
-`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` is a deferred human-owned READY-candidate / approval pending; it is not a Codex or Unity implementation instruction.
+`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` remains a deferred human-owned READY-candidate. `STORY-SAVE-001` is the recommended next implementation-facing READY-candidate, but its proposed save ADR and story are approval pending; its checked-in prompt is guarded and non-runnable.
 
 ## Current READY implementation packet
 
-None. Do not run a Codex implementation prompt until a later story is explicitly promoted to READY / approved and the Unity README pointer is activated through CI.
+None. Do not run `production/sprints/codex-story-save-001.prompt.txt` or any historical implementation prompt until `STORY-SAVE-001` and its ADR are explicitly approved, the guard is replaced with a runnable contract, and the Unity README pointer is activated through CI.
 
 ### Historical STORY-PROOF-SCENARIO-001 handoff — do not rerun
 

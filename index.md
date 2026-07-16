@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-07-15
+> Last updated: 2026-07-16
 > Current phase: Production — accelerated eight-week prototype and six-month Early Access planning
 > Review mode: Lean default, Full for major gates
 
@@ -73,6 +73,10 @@
 - [[production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof]] — DONE / merged EPIC-016 three-line faction-composition proof through Unity PR #155.
 - [[production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow]] — DONE / merged EPIC-016 connected proof through Unity PR #158.
 - [[production/stories/story-proof-qa-001-human-proof-build-playtest-and-capture-gate]] — READY-candidate / approval pending deferred human playtest and optional capture closeout; not current work.
+- [[production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure]] — PROPOSED next prototype train for save continuity and later opponent pressure.
+- [[docs/architecture/prototype-strategic-save-resume-adr]] — PROPOSED version-1 strategic save/resume boundary; approval pending.
+- [[production/stories/story-save-001-prototype-strategic-save-and-resume]] — READY-candidate / approval pending recommended next Unity implementation step.
+- `production/sprints/codex-story-save-001.prompt.txt` — guarded, non-runnable candidate prompt.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.

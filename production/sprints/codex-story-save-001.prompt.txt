@@ -1,0 +1,17 @@
+GUARDED READY-CANDIDATE — DO NOT IMPLEMENT YET
+
+Target: STORY-SAVE-001 Prototype Strategic Save and Resume
+
+This file is intentionally non-runnable. Stop before editing either repository unless all preflight conditions are true:
+
+1. production/stories/story-save-001-prototype-strategic-save-and-resume.md has frontmatter status: ready and approval: approved.
+2. docs/architecture/prototype-strategic-save-resume-adr.md has status: approved and approval: approved.
+3. The story Ambiguity Check says PASS, not PASS-candidate.
+4. production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure.md is approved/active and names STORY-SAVE-001 as READY.
+5. production/sprints/strategic-mvp-codex-run-prompts.md names this exact file as the sole current READY implementation packet.
+6. C:\Users\NordicGamer\CodexProjects\neon-champions-unity\README.md names STORY-SAVE-001 as current READY work, including this branch and PR title, and that pointer is merged with passing CI.
+7. Both repositories are on clean, current main branches.
+
+If any condition is false, print the exact mismatch and stop without creating a branch, modifying files, running implementation tests, committing, pushing, or opening a PR.
+
+The runnable implementation contract will replace this guard after human approval. Do not infer implementation authority from the proposed epic, approved roadmap, or this candidate file.

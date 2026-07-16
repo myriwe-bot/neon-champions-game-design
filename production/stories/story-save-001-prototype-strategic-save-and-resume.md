@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY / approved by the human owner on 2026-07-16 as proposed. Implementation becomes runnable only after the Unity README activation pointer is merged with passing CI.
+READY / approved by the human owner on 2026-07-16 as proposed. The Unity README activation pointer merged through PR #160 with exact-head and post-merge CI passing; implementation is runnable.
 
 ## Story type
 
@@ -70,7 +70,7 @@ No draft campaign, roster, worldbuilding, or future editor document is implement
 - EPIC-016 implementation sequence DONE/merged; deferred `STORY-PROOF-QA-001` remains separately pending and is not claimed complete.
 - Save ADR approved in the same human decision as this story.
 - Existing scenario import/runtime separation and Unity CI remain green.
-- Unity README pointer must name this story through a separate CI-gated pointer PR before Codex runs.
+- Unity README pointer names this story through merged PR #160; exact-head and post-merge pointer CI passed.
 
 ## Acceptance criteria
 
@@ -127,8 +127,18 @@ Human approval: `Approved` on 2026-07-16, accepting the story and ADR exactly as
 - [x] Human approval recorded.
 - [x] Story promoted to READY / approved.
 - [x] Guarded prompt converted to runnable.
-- [ ] Unity README pointer activated through CI.
+- [x] Unity README pointer activated through CI.
+
+## Activation evidence
+
+- Design approval commit: `5e88074986c5b72d9561ce93abd8e50f7568ab2a`.
+- Design publish CI: https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/29510269770 — PASS.
+- Unity pointer PR: https://github.com/myriwe-bot/neon-champions-unity/pull/160.
+- Pointer exact head: `76c47acf31ebf1d5169170baf78b2576401b6bb4`.
+- Pointer exact-head CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29510312784 — PASS.
+- Pointer merge commit: `9a857e1a52f8d169cffb7f8d1e35b7be9176a0c0`.
+- Pointer post-merge CI: https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29510871938 — PASS.
 
 ## Verdict
 
-READY / approved. Sole current implementation packet after the connected proof. Codex may begin only after the Unity README activation pointer is merged with passing CI.
+READY / approved and fully activated. Sole current implementation packet after the connected proof; Codex may begin from current `main`.

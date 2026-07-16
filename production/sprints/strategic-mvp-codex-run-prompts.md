@@ -113,7 +113,7 @@ approval: approved
 
 **Current READY / approved Unity implementation packet:** `STORY-SAVE-001 Prototype Strategic Save and Resume`.
 
-`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` remains a deferred human-owned READY-candidate. `STORY-SAVE-001` and its save ADR were human-approved on 2026-07-16; `production/sprints/codex-story-save-001.prompt.txt` is the sole current implementation prompt. Codex may run only after the Unity README activation pointer is merged with passing CI.
+`STORY-PROOF-SCENARIO-001` is DONE / merged through Unity PR #158 with post-merge CI passed. `STORY-PROOF-QA-001` remains a deferred human-owned READY-candidate. `STORY-SAVE-001` and its save ADR were human-approved on 2026-07-16; `production/sprints/codex-story-save-001.prompt.txt` is the sole current implementation prompt. Unity pointer PR #160 and its exact-head/post-merge CI passed, so Codex may run from current `main`.
 
 ## Current READY implementation packet
 

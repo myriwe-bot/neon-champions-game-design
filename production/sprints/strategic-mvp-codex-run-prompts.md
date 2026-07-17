@@ -395,6 +395,40 @@ Trusted-repo fallback:
 Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt" | codex exec --sandbox danger-full-access
 ```
 
+## Copy-safe STORY-PROTOTYPE-CONTINUITY-QA-001 handoff
+
+Primary workspace-write run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-prototype-continuity-qa-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+Trusted-repo fallback:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-prototype-continuity-qa-001.prompt.txt"
+codex exec --sandbox danger-full-access $prompt
+```
+
 ## Final control-surface state
 
-`STORY-AI-PLAY-001` is historical and DONE after Unity PR #166 and verified merge-commit CI. No Unity implementation story is currently READY. `STORY-PROTOTYPE-CONTINUITY-QA-001` is the sole next READY-candidate / approval-pending packet; `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` is guarded and must not run. `STORY-PROOF-QA-001` remains separately deferred, human-owned, and approval pending.
+`STORY-AI-PLAY-001` is historical and DONE after Unity PR #166 and verified merge-commit CI. `STORY-PROTOTYPE-CONTINUITY-QA-001` is the sole current READY / approved packet and uses `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt`; execution remains gated on Unity pointer activation. `STORY-PROOF-QA-001` remains separately deferred, human-owned, and approval pending.

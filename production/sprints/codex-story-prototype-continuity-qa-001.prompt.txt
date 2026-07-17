@@ -1,24 +1,84 @@
-# Guarded Codex packet: STORY-PROTOTYPE-CONTINUITY-QA-001
+Implement STORY-PROTOTYPE-CONTINUITY-QA-001 Build Resume Pressure Playtest Closeout in the Neon Champions Unity repository.
 
-STOP. This packet is READY-candidate / approval pending and is not runnable implementation authority.
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 
-Do not modify either repository, create a branch, build evidence, run a human playtest, commit, push, or open a PR until all of the following are true:
+Required authority preflight
+1. Update both repositories to current `main` with `git checkout main` and `git pull --ff-only origin main`.
+2. Read these exact sources:
+   - production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout.md
+   - production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure.md
+   - production/stories/story-save-001-prototype-strategic-save-and-resume.md
+   - production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume.md
+   - docs/architecture/prototype-strategic-save-resume-adr.md
+   - docs/architecture/testing-strategy.md
+   - the Unity README current-task pointer
+3. Confirm the story says `status: ready`, `approval: approved`, and Ambiguity Check `PASS`.
+4. Confirm the Unity README names this exact story as the sole READY packet and records successful pointer activation.
+5. Confirm Unity `main` contains merge `a1ae8bcbf2b9705c2b20c3e4f4fce8423b3747d1`.
+6. Confirm a human is available to launch, fully close/relaunch, play, and own the final verdict. If not, automation and build/evidence preparation may proceed, but the story must remain REVIEW and must not be claimed DONE.
+7. Stop without edits for missing authority, wrong ancestry, unresolved source contradiction, or unrelated dirty files.
 
-1. `production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout.md` says `status: ready` and `approval: approved`.
-2. The Unity current-task pointer names this exact story.
-3. Pointer exact-head and post-merge CI have passed and are recorded in design control.
-4. A human is available to perform and own the required playtest verdict.
+Branch and recovery
+- Required branch: `story/STORY-PROTOTYPE-CONTINUITY-QA-001-build-resume-pressure-playtest-closeout`.
+- Fresh mode: branch from clean current Unity `main`.
+- Resume mode: if already on that exact branch with only story-scoped work and the approved `main` ancestor, preserve and inspect it, then continue.
+- Stop for another branch, conflicts, unrelated work, unknown generated files, or wrong ancestry.
 
-If any gate is absent, report the missing gate and stop without changes.
+Scope
+- Produce a clean Windows build tied to an immutable Unity commit.
+- Run full configured Compile/Standalone, EditMode, PlayMode, and validator coverage, plus focused save/Continue/opponent-pressure tests.
+- Prepare `production/evidence/STORY-PROTOTYPE-CONTINUITY-QA-001/README.md` with exact build SHA, build source, test commands/results, human script, expected state checkpoints, capture provenance, defects, and omissions.
+- Support the approved human route: fresh match, at least two meaningful human strategic actions, opponent action, stable Save and Return, full build close/relaunch, Continue, state verification, then post-resume opponent pressure.
+- Capture truthful normal-shell 1920x1080 evidence:
+  - `pre-save-1920x1080.png`
+  - `continued-state-1920x1080.png`
+  - `post-resume-opponent-pressure-1920x1080.png`
+- Verify resumed resources, armies, sites, facilities, objective/turn state, Feed consequences, and pending tactical state.
+- If tactical handoff occurs, verify strategic completion pauses and a legal `CombatAI` tactical step exists.
+- Keep any code changes limited to narrow QA/evidence/test harness repair or a clearly blocking defect already required by the approved behavior. Do not redesign gameplay, balance, map topology, content, AI policy, or save schema.
 
-After approval, this file must be replaced with a full runnable contract that:
+Human authority
+- Automation, screenshots, logs, or video cannot supply the human playtest verdict.
+- The human must fully close and relaunch the tested build before Continue.
+- Record exact human steps and actual observations.
+- Allowed verdicts: PASS, PASS WITH FOLLOW-UPS, or BLOCKED.
+- PASS WITH FOLLOW-UPS is allowed only when no continuity or player-blocking defect remains.
+- If the human has not completed the route, write `HUMAN PLAYTEST PENDING`, keep the story in REVIEW, and do not claim EPIC-017 or this story DONE.
 
-- reads the approved story, EPIC-017, save/resume ADR, testing strategy, Unity README pointer, and existing save/AI evidence;
-- starts from clean current `main` or resumes only the exact approved story branch with known story-scoped work;
-- produces a provenance-bound Windows build and evidence package;
-- runs full configured Unity checks and focused continuity/opponent-pressure tests;
-- supports but never impersonates the human playtester;
-- records truthful pre-save, continued-state, and post-resume-pressure evidence at 1920x1080;
-- discloses all fixtures, omissions, defects, and accepted prototype limitations;
-- limits code changes to narrow defects or test/evidence harness work authorized by the approved gate;
-- commits and pushes actual story-scoped changes, opens/updates a non-draft PR, and reports branch, SHA, remote ref, PR URL, exact CI, and recovery commands on failure.
+Evidence hygiene
+- Every capture must be genuinely 1920x1080, normal-shell, readable, and tied to the tested build SHA.
+- No raw IDs, local paths, debug panels, debug-only success text, hidden fixture changes, or misleading reconstructed UI.
+- Disclose all fixture/setup adjustments, known omissions, prototype limitations, and defects.
+- Do not overwrite historical STORY-AI-PLAY-001 evidence.
+- Temporary evidence-generation workflows must be removed before publication.
+- New Unity assets require paired `.meta` files and unique GUIDs.
+
+Verification before publication
+- Run `git diff --check` and `git diff origin/main...HEAD --check`.
+- Run all applicable full Unity checks and preserve exact outputs/CI URLs.
+- Inspect all three captures at native dimensions.
+- Verify evidence claims against actual runtime-state consequences.
+- Confirm no scenes, prefabs, packages, project settings, lockfiles, or unrelated assets changed unless a blocker makes one unavoidable and the PR explicitly justifies it.
+- Review the complete diff against the approved story.
+
+Publication contract
+1. Commit the actual story-scoped work.
+2. Push the committed HEAD to exactly:
+   `story/STORY-PROTOTYPE-CONTINUITY-QA-001-build-resume-pressure-playtest-closeout`
+3. Create or update a non-draft PR titled:
+   `STORY-PROTOTYPE-CONTINUITY-QA-001 build resume pressure playtest closeout`
+4. PR body must link the approved story, list build/evidence provenance, human verdict status, tests, known omissions/defects/follow-ups, and say `No known omissions` only if literally true.
+5. Verify and print:
+   - `git status --short --branch`
+   - `git log --oneline -5`
+   - local branch and SHA
+   - remote branch ref and SHA
+   - PR URL and draft state
+   - exact CI run URLs/status
+6. Required push form:
+   `git push -u origin HEAD:story/STORY-PROTOTYPE-CONTINUITY-QA-001-build-resume-pressure-playtest-closeout`
+7. If publication fails, report the exact error and concrete recovery commands. Do not stop at “PR-ready.”
+
+Do not merge the implementation PR. Final independent review, exact-head CI, human authority, and merge remain external gates.

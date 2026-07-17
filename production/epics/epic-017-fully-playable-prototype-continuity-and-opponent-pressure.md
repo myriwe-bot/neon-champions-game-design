@@ -30,9 +30,9 @@ This epic may proceed as a parallel implementation train without claiming that d
 
 1. `STORY-SAVE-001` — DONE / merged through Unity PR #161, with rollback continuity hotfix PR #162.
 2. `STORY-AI-PLAY-001` — DONE / merged through Unity PR #166 as `a1ae8bcbf2b9705c2b20c3e4f4fce8423b3747d1`; post-merge `main` CI 29581484295 passed.
-3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — READY-candidate / approval pending; formed human-owned build, resume-continuity, opponent-pressure, and evidence closeout gate.
+3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — READY / approved on 2026-07-17; human-owned build, full-relaunch resume-continuity, opponent-pressure, and evidence closeout gate.
 
-No implementation story is currently READY. The third child is the sole next candidate; its guarded prompt must not run and the Unity pointer must not activate until the human approves the packet.
+The third child is the sole current READY packet. Codex may run only after the Unity pointer activation and its exact-head/post-merge CI gates pass.
 
 ## Boundaries
 
@@ -43,4 +43,4 @@ No implementation story is currently READY. The third child is the sole next can
 
 ## Approval
 
-Human-approved on 2026-07-16 with `STORY-SAVE-001` and the prototype save ADR as proposed. On 2026-07-17, the human separately approved `STORY-AI-PLAY-001` and its deterministic policy exactly as written. The later QA child remains unformed and unauthorized.
+Human-approved on 2026-07-16 with `STORY-SAVE-001` and the prototype save ADR as proposed. On 2026-07-17, the human separately approved `STORY-AI-PLAY-001` and its deterministic policy exactly as written, then approved `STORY-PROTOTYPE-CONTINUITY-QA-001` with a mandatory full build close/relaunch and bounded `PASS WITH FOLLOW-UPS` verdict.

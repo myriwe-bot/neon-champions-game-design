@@ -77,8 +77,8 @@
 - [[docs/architecture/prototype-strategic-save-resume-adr]] — APPROVED version-1 strategic save/resume boundary.
 - [[production/stories/story-save-001-prototype-strategic-save-and-resume]] — DONE / merged through Unity PR #161; rollback continuity follow-up merged through PR #162.
 - [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — DONE / merged through Unity PR #166 with verified merge-commit CI.
-- [[production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]] — READY-candidate / approval pending human-owned continuity QA gate.
-- `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` — guarded non-runnable candidate prompt; no Unity implementation prompt is active.
+- [[production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]] — READY / approved human-owned continuity QA gate; runnable only after Unity pointer activation.
+- `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` — current approved Unity QA/closeout implementation prompt.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.

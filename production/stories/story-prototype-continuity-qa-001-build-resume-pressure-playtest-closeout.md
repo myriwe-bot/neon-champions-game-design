@@ -1,12 +1,12 @@
 ---
 title: STORY-PROTOTYPE-CONTINUITY-QA-001 Build Resume Pressure Playtest Closeout
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: human
 created: 2026-07-17
 updated: 2026-07-17
-approval: pending
+approval: approved
 related: [production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure, production/stories/story-save-001-prototype-strategic-save-and-resume, production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume, production/stories/story-proof-qa-001-human-proof-build-playtest-and-capture-gate, docs/architecture/prototype-strategic-save-resume-adr, docs/architecture/testing-strategy]
 ---
 
@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY-candidate / approval pending. This is the sole next EPIC-017 packet, but it is not implementation authority. Its guarded prompt must not run and the Unity pointer must remain inactive until human approval.
+READY / approved on 2026-07-17. Human approval accepts the exact proposed gate and recommended answers: fully close and relaunch the build before Continue, and allow `PASS WITH FOLLOW-UPS` only when no continuity or player-blocking defect remains. Implementation becomes runnable only after the Unity pointer activation gate passes.
 
 ## Player value
 
@@ -79,15 +79,17 @@ Every image must identify provenance in the README, not in leaked on-screen path
 
 ## Ambiguity check
 
-Status: PASS for approval review. The gate, human authority, expected route, evidence, and no-redesign boundary are explicit. Exact build-distribution mechanics may use the existing CI artifact path or a locally built verified executable, but provenance is mandatory.
+Status: PASS. The gate, human authority, expected route, evidence, and no-redesign boundary are explicit. Exact build-distribution mechanics may use the existing CI artifact path or a locally built verified executable, but provenance is mandatory.
 
 ## Approval questions
 
-1. Approve this exact human-owned QA gate and script?
-2. Is a title-level Continue in the same process acceptable, or must the build be fully closed and relaunched? Recommended: full close/relaunch.
-3. Is `PASS WITH FOLLOW-UPS` allowed when no continuity/player-blocking defect remains? Recommended: yes.
+Human-approved answers on 2026-07-17:
 
-## Branch / PR requirements after approval
+1. Approved the exact human-owned QA gate and script.
+2. The tested build must be fully closed and relaunched before Continue.
+3. `PASS WITH FOLLOW-UPS` is allowed only when no continuity or player-blocking defect remains.
+
+## Branch / PR requirements
 
 - Branch: `story/STORY-PROTOTYPE-CONTINUITY-QA-001-build-resume-pressure-playtest-closeout`
 - PR title: `STORY-PROTOTYPE-CONTINUITY-QA-001 build resume pressure playtest closeout`
@@ -96,4 +98,4 @@ Status: PASS for approval review. The gate, human authority, expected route, evi
 
 ## Verdict
 
-READY-candidate / approval pending. Do not implement or activate the Unity pointer yet.
+READY / approved. Run only from the activated Unity pointer using `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` on branch `story/STORY-PROTOTYPE-CONTINUITY-QA-001-build-resume-pressure-playtest-closeout`.

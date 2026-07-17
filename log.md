@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-17] approval | STORY-PROTOTYPE-CONTINUITY-QA-001 approved
+
+- Human approved the exact prepared closeout packet and recommended defaults: fully close/relaunch the Windows build before Continue, and allow `PASS WITH FOLLOW-UPS` only without continuity or player-blocking defects.
+- Promoted `STORY-PROTOTYPE-CONTINUITY-QA-001` to READY / approved as the sole current packet and converted its guarded file into the runnable Codex contract.
+- The human remains the authority for the real playtest and verdict; automation, screenshots, logs, or video cannot claim completion.
+- Unity pointer activation and exact-head/post-merge pointer CI remain required before execution.
+
 ## [2026-07-17] merge | STORY-AI-PLAY-001 completed; continuity QA candidate formed
 
 - Unity PR #166 passed final exact-head review at `60538b94ec7d003938dc74a289a2b98ec6e9d3c6`, exact-head PR CI 29580160752, and exact-head push CI 29580157233.

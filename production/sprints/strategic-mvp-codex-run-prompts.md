@@ -395,7 +395,7 @@ Trusted-repo fallback:
 Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt" | codex exec --sandbox danger-full-access
 ```
 
-## Copy-safe STORY-STANDALONE-ENTRY-001 handoff
+## Copy-safe STORY-MAP-VISUAL-SLICE-001 handoff
 
 Primary workspace-write run:
 
@@ -409,7 +409,7 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-standalone-entry-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001.prompt.txt"
 codex exec --sandbox workspace-write $prompt
 ```
 
@@ -425,10 +425,10 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-standalone-entry-001.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001.prompt.txt"
 codex exec --sandbox danger-full-access $prompt
 ```
 
 ## Final control-surface state
 
-`STORY-PROTOTYPE-CONTINUITY-QA-001` is historical and DONE with `BLOCKED — REJECT CLOSEOUT`; its human route did not pass. `STORY-STANDALONE-ENTRY-001` is the sole current READY / approved packet and becomes runnable only after Unity pointer activation; `production/sprints/codex-story-standalone-entry-001.prompt.txt` is the active contract. `STORY-MAP-VISUAL-SLICE-001` is READY-candidate / pending and guarded. `STORY-PROOF-QA-001` remains separately deferred.
+`STORY-PROTOTYPE-CONTINUITY-QA-001` remains historical and DONE with `BLOCKED — REJECT CLOSEOUT`; its human route did not pass. `STORY-STANDALONE-ENTRY-001` is DONE through Unity PR #170 and post-merge CI 29609782110. `STORY-MAP-VISUAL-SLICE-001` is the sole current READY / approved packet; `production/sprints/codex-story-map-visual-slice-001.prompt.txt` is the active contract after verified Unity pointer activation. All later interaction rollout/replaytest work and `STORY-PROOF-QA-001` remain deferred.

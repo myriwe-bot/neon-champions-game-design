@@ -1,3 +1,5 @@
+HISTORICAL / DO NOT RUN. STORY-STANDALONE-ENTRY-001 is DONE, merged as Unity PR #170, and post-merge verified. The sole next approved packet is STORY-MAP-VISUAL-SLICE-001.
+
 Implement STORY-STANDALONE-ENTRY-001 Windows Player Entry and Launch Smoke in the Neon Champions Unity repository.
 
 Repositories

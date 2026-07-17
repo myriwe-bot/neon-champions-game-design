@@ -1,15 +1,154 @@
-DO NOT RUN — STORY-MAP-VISUAL-SLICE-001 is READY-candidate / approval pending.
+Implement STORY-MAP-VISUAL-SLICE-001 Physical Arctic Adventure Map and Shell Vertical Slice in the Neon Champions Unity repository.
 
-This file records the proposed future implementation packet only. It is not current implementation authority.
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 
-Required gates before activation
-- STORY-STANDALONE-ENTRY-001 is DONE / merged with verified built-player entry.
-- The design story is explicitly promoted to `status: ready` and `approval: approved` by the human owner.
-- Ambiguity Check remains PASS after source-authority re-audit.
-- The Unity README current-task pointer is activated through exact-head and post-merge CI.
+Required authority preflight
+1. Update both repositories to current `main` with `git checkout main` and `git pull --ff-only origin main`.
+2. Read these exact approved sources:
+   - production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell.md
+   - production/epics/epic-018-physical-adventure-map-and-player-entry-recovery.md
+   - design/gdd/strategic-map.md, especially §9.1
+   - design/ux/player-shell.md, especially Global principles, Strategic shell, and Base screen/panel
+   - design/art/prototype-visual-target-and-asset-ledger.md, especially strategic-map, White Sky, faction, Champion/army, asset, vertical-look, and capture rules
+   - design/research/physical-adventure-map-direction-2026-07-17.md
+   - docs/architecture/unity-technical-scheme.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/control-manifest.md
+   - production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke.md as completed prerequisite context only
+   - Unity README current-task pointer
+3. Confirm the story says `status: ready`, `approval: approved`, and Ambiguity Check `PASS`.
+4. Confirm `STORY-STANDALONE-ENTRY-001` is DONE/merged and the Unity README names this exact story as the sole READY implementation packet with verified pointer activation.
+5. Treat the current scenario JSON only as implementation data. The approved story pins the exact IDs and design constraints.
+6. Stop without edits for missing authority, stale/non-activated pointer, source contradiction, wrong ancestry, merge conflict, or unrelated/unknown dirty files.
 
-Proposed future task
-- Produce one representative physical Arctic adventure-map-and-shell vertical slice over unchanged node-route rules.
-- Human visual verdict is required before any full-map rollout.
+Branch and recovery
+- Required branch: `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
+- Fresh mode: create it from clean current Unity `main` if it does not exist.
+- Resume mode: if already on that exact branch with story-scoped dirty or committed work based on the expected current `main` ancestor, preserve and inspect it, then continue.
+- Generated root `artifacts/` logs/results are disposable scratch: never commit them and do not treat them as unrelated human work. Story evidence belongs under `production/evidence/STORY-MAP-VISUAL-SLICE-001/`.
+- Stop for another branch, unknown source/assets, unrelated user work, conflicts, or wrong ancestry.
 
-Until all gates pass: stop without Unity edits, branch creation, asset generation/import, screenshots, commits, pushes, or PR creation.
+Player problem
+The prior human playtest could not read or use the strategic map. Preserve these complaints as acceptance authority:
+- "There seems to be no interactivity whatsoever."
+- "The readability on the map is horrible."
+- "I have no idea what do do."
+- "The map is very strange and text is unreadable, it is in general a mess."
+- Polygons did not communicate what they represented.
+- The base could not be opened/upgraded through the discovered path.
+- Champion inventory/units/stacks could not be found.
+- `Mobility support` was unexplained.
+- The visible node-map basis remained a concern.
+
+Exact representative HRC corridor
+Use unchanged current graph/domain/scenario rules and these existing IDs:
+- HRC base: `node_start_a` / `site_start_a` / `base_start_a`.
+- Resource destination: `node_neutral_alpha` / `site_data_cache_alpha`.
+- Guarded destination: `node_guarded_alpha` / `site_guarded_alpha`.
+- Distant crisis anchor: `node_central_objective` / `site_central_objective`.
+- Route A: `route_start_a_neutral_alpha`.
+- Route B: `route_start_a_guarded_alpha`.
+
+Do not rename IDs, modify scenario JSON, alter adjacency/cost/legality, add/remove nodes/routes/sites, or change AI/save/domain behavior. Presentation-only anchors keyed to these IDs are allowed through a bounded replacement layer.
+
+Required implementation
+1. Introduce one bounded replaceable presentation component/adapter for the exact slice. Do not keep extending the colored region-polygon metaphor and do not introduce a general scene/framework rewrite.
+2. Consume the real `StrategicMapPresentationSnapshot`; presentation may not own or mutate gameplay state.
+3. Build a physical Arctic composition containing:
+   - recognizable HRC civic/industrial base;
+   - physical data-cache/resource and guarded-industrial destinations;
+   - physical central calibration/White Sky infrastructure as distant/connected anchor;
+   - snow/ice, exposed rock or industrial ground, dark water/coast or another believable barrier;
+   - two physical roads/tracks/passes/corridors embodying the exact required routes;
+   - HRC Champion plus small cosmetic logistics/rescue entourage;
+   - restrained top bar, persistent Champion/army summary, contextual base state.
+4. Inside the required slice frame, remove/hide permanent region polygons, node circles, graph lines, corridor labels, tiny always-on labels, and critical unbacked terrain text.
+5. Use restrained temporary reachability/path overlays only when the Champion is selected.
+6. Keep out-of-slice scenario elements functional. They may retain placeholder presentation outside the required evidence framing but must not intrude into or dominate the slice.
+7. Preserve zoom/pan/focus behavior where it intersects the slice.
+
+Champion/army contract
+- The physical Champion must be selected through the normal Input System pointer/raycast path, not only a public method or fixture.
+- Selected state exposes real movement and current army stack name/count from snapshot data.
+- Initial evidence should resolve the current `Sled Logistics Team x5` state if still authored that way; do not fabricate or hardcode a replacement.
+- Truthfully explain `Mobility support` in plain language or remove it if current data cannot support a truthful explanation.
+- Do not create inventory, active abilities, bonuses, final taxonomy, independent entourage actors, pathfinding, occupancy, or targeting.
+
+Base interaction contract
+- The physical HRC base has normal, hover/focus, and selected states distinguishable beyond hue.
+- A normal pointer/raycast click on the physical base must select/open `site_start_a` / `base_start_a` even after the Champion was selected. It must not become a move-to-current-node command or do nothing.
+- Show truthful existing base/facility context or a relevant action/denial reason. Add no facilities or rules.
+- Give the resource and guarded destinations recognizable pointer affordance without expanding their full interaction systems.
+
+Asset/provenance contract
+- Existing approved procedural resources/primitives may be reused through stable logical boundaries.
+- New deterministic procedural assets require generator/recipe, reproducibility proof, ledger row, replacement target, and `replace-later` status.
+- Any AI-generated non-code asset requires literal `ai-generated__` filename, isolated `Assets/Generated/AI/<asset-type>/` path, complete ledger metadata, generation record, replacement target, and default `replace-later` status.
+- Stop rather than inventing or obscuring provenance.
+- Pair every new Unity asset with a valid unique `.meta` file.
+
+TDD and tests
+- Use TDD for production input/presentation behavior.
+- Capture focused RED then GREEN proof for:
+  - Champion selection through the actual pointer/raycast path;
+  - base selection/open through the actual pointer/raycast path after Champion selection;
+  - bounded physical-slice presentation contract.
+- Add EditMode coverage for exact ID/layout mapping, snapshot-driven presentation, no scenario/domain mutation, asset registry/provenance, and contrast calculations where practical.
+- Add PlayMode coverage for production title -> Play HRC -> representative slice, actual Input System pointer paths, selected/reachable states, and base context.
+- Direct `SelectChampion`, `SelectSite`, or similar calls alone do not satisfy the discoverability criteria.
+- Preserve all existing EditMode, PlayMode, validator, standalone, AI, save, tactical, and scenario tests.
+
+Required evidence
+Create `production/evidence/STORY-MAP-VISUAL-SLICE-001/` containing:
+- README with exact implementation SHA, commands/results, RED/GREEN proof, converted IDs/routes, changed assets/settings/packages, omissions, asset inventory, provenance, contrast measurements, and rendered object/material counts;
+- `normal-physical-slice-1920x1080.png`;
+- `champion-selected-reachable-1920x1080.png`;
+- `hrc-base-selected-open-1920x1080.png`;
+- focused test outputs or concise notes tied to exact commands/runs.
+
+Every PNG must come from the production strategic-map path at native 1920x1080, be inspected at native dimensions, and contain no raw IDs, debug UI, local paths, overlapping/clipped critical text, or unsupported claims. The normal frame must read as a physical place with overlays off. The Champion frame must show real movement/stacks and restrained route overlays. The base frame must prove the entrance path and context state, not only a panel opened through direct fixture setup.
+
+Verification
+- Focused RED/GREEN checks.
+- Full configured EditMode suite.
+- Full configured PlayMode suite.
+- PlayMode evidence-path hygiene.
+- Placeholder and asset-provenance validators.
+- Windows standalone build.
+- Built-player launch through the repaired entry; use the interactive launch smoke when the environment can truthfully capture it.
+- `git diff --check` before commit.
+- `git diff origin/main...HEAD --check` after commit.
+- Complete diff review against approved scope.
+- Verify all new `.meta` GUIDs are unique.
+- Record exact omissions/deferred work. Never say `No known omissions` while full-map rollout and human visual acceptance remain pending.
+
+Hard exclusions
+- No full-map/QXZ conversion.
+- No tile/hex/free movement, terrain costs, pathfinding, province simulation, fog, weather, supply, new strategic AI policy, save schema, topology, balance, new facilities/units/sites, tactical changes, broad onboarding, or final art.
+- No fake inventory, fake clickable controls, debug-only setup, direct state mutation for evidence, or synthetic screenshot reconstruction.
+- No scaling across all ten nodes.
+
+Human visual gate
+- Codex may implement, test, capture, commit, push, and open/update the PR.
+- Codex must not merge.
+- The exact candidate-head normal/Champion/base evidence requires explicit human APPROVE / REVISE / REJECT before merge or any full-map rollout story.
+
+Publication contract
+1. Commit the actual story-scoped implementation and evidence.
+2. Push committed HEAD exactly to `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
+3. Create or update a PR titled `STORY-MAP-VISUAL-SLICE-001 Physical Arctic adventure map and shell slice`.
+4. PR may remain draft while evidence is incomplete, but final handoff must mark it ready only when all implementation evidence is present.
+5. PR body must link the approved story and list exact converted IDs/routes, changed files/assets/settings/packages, RED/GREEN proof, pointer-path tests, all captures, provenance, contrast, rendered counts, omissions, local/remote SHA, and exact CI state.
+6. Verify and print:
+   - `git status --short --branch`;
+   - `git log --oneline -5`;
+   - local branch and SHA;
+   - remote branch ref and SHA;
+   - PR URL and draft state;
+   - exact CI run URLs/status.
+7. Required push form: `git push -u origin HEAD:story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
+8. If publication fails, report the exact error and concrete recovery commands. Do not stop at `PR-ready`.
+
+Independent technical review, exact-head CI, human visual approval, merge, and post-merge verification remain external gates.

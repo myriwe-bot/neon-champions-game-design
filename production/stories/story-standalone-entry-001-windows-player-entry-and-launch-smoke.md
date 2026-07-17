@@ -1,7 +1,7 @@
 ---
 title: STORY-STANDALONE-ENTRY-001 Windows Player Entry and Launch Smoke
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-17
@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / human-approved and Unity-pointer-activated on 2026-07-17. Sole current Unity implementation packet.
+DONE / merged and post-merge verified on 2026-07-17. Historical packet; do not rerun.
 
 ## Story type
 
@@ -41,7 +41,7 @@ Repository preflight found that `ProjectSettings/EditorBuildSettings.asset` enab
 
 | Path | Status / approval | Purpose | Disposition |
 |---|---|---|---|
-| `production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke.md` | ready / approved | exact implementation contract | required authority |
+| `production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke.md` | done / approved | exact implementation contract | historical authority |
 | `production/epics/epic-018-physical-adventure-map-and-player-entry-recovery.md` | active / approved | sequence and scope boundary | required authority |
 | `production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout.md` | done / approved | human failure evidence | required context; no old implementation authority |
 | `docs/architecture/unity-technical-scheme.md` | approved / approved | scene/presentation/application boundaries | required authority |
@@ -83,15 +83,15 @@ The implementation may either make the existing playable scene the correct first
 
 ## Acceptance criteria
 
-- [ ] Given a clean checkout at the story head, the configured Windows build succeeds.
-- [ ] Launching the built executable without Unity Editor intervention reaches the existing normal title shell rather than a gray/empty window.
-- [ ] From that same executable, `New Scenario` -> `Play HRC` reaches the current strategic map.
-- [ ] Repeating the launch from a closed process produces the same playable entry.
-- [ ] No manual scene object insertion, Inspector wiring, debug toggle, test fixture, or direct state mutation is required.
-- [ ] An automated check fails if the enabled first-player scene has neither the playable bootstrap nor an explicit valid loader path.
-- [ ] A built-player smoke records process launch, observed title/player entry, clean exit/termination, logs, and exact executable/build SHA.
-- [ ] Existing configured EditMode, PlayMode, validator, and standalone checks remain green.
-- [ ] The diff contains no strategic-map redesign or unrelated gameplay/content changes.
+- [x] Given a clean checkout at the story head, the configured Windows build succeeds.
+- [x] Launching the built executable without Unity Editor intervention reaches the existing normal title shell rather than a gray/empty window.
+- [x] From that same executable, `New Scenario` -> `Play HRC` reaches the current strategic map.
+- [x] Repeating the launch from a closed process produces the same playable entry.
+- [x] No manual scene object insertion, Inspector wiring, debug toggle, test fixture, or direct state mutation is required.
+- [x] An automated check fails if the enabled first-player scene has neither the playable bootstrap nor an explicit valid loader path.
+- [x] A built-player smoke records process launch, observed title/player entry, clean exit/termination, logs, and exact executable/build SHA.
+- [x] Existing configured EditMode, PlayMode, validator, and standalone checks remain green.
+- [x] The diff contains no strategic-map redesign or unrelated gameplay/content changes.
 
 ## Verification requirements
 
@@ -142,6 +142,18 @@ Status: PASS.
 - Pointer merge commit: `ce5465476b9d06839f9fd4d11684e2e3e31f66e8`.
 - Post-merge Unity `main` CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29589301841> — all four configured jobs passed.
 
+## Implementation and closeout evidence
+
+- Unity implementation PR: <https://github.com/myriwe-bot/neon-champions-unity/pull/170>.
+- Final exact head: `7b753ec462096769e1898d78e5d907361001095b`.
+- Exact-head push CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29608756396> — Compile/Standalone plus state-bound built-player launch, EditMode, PlayMode, and Placeholder Validator passed.
+- Exact-head PR CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29608759836> — the same four jobs passed.
+- Merge commit: `439e8fe05f4a65ce33d512e78bceb86eaa550b2f`.
+- Post-merge Unity `main` CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29609782110> — all four jobs passed, including built-player `Title|faction_1` -> `FactionChoice|faction_1` -> `StrategicMap|faction_1` and exit-code-zero enforcement.
+- Checked-in evidence: `production/evidence/STORY-STANDALONE-ENTRY-001/` in the Unity repository.
+- Review fixes closed before merge: nonzero exits now fail; fixed clicks cannot pass without actual stage/faction observations; exact-head CI runs the built player; evidence whitespace passes the full PR-range check; the implementation SHA and build-size quote match the reviewable commit/log.
+- This closes only player entry. It does not claim that the rejected continuity playtest, physical-map readability, Champion/army discovery, or base interaction now passes.
+
 ## Verdict
 
-READY / approved and pointer-activated. Implement only from the checked-in prompt `production/sprints/codex-story-standalone-entry-001.prompt.txt`.
+DONE / merged and post-merge verified. `production/sprints/codex-story-standalone-entry-001.prompt.txt` is historical and must not be rerun.

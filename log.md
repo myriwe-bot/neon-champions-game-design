@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-17] closeout and promotion | Standalone entry DONE; physical-map slice READY
+
+- Merged Unity PR #170 at exact head `7b753ec462096769e1898d78e5d907361001095b` as `439e8fe05f4a65ce33d512e78bceb86eaa550b2f` after both exact-head CI events passed.
+- Post-merge Unity `main` run 29609782110 passed Compile/Standalone with the required state-bound built-player launch, EditMode, PlayMode, and Placeholder Validator.
+- Closed `STORY-STANDALONE-ENTRY-001` as DONE without claiming that the rejected continuity/playability route now passes.
+- Promoted exactly `STORY-MAP-VISUAL-SLICE-001` to READY / approved from the previously approved repair sequence and explicit human request to prepare the next implementation packet.
+- Grounded the slice to `node_start_a`, `node_neutral_alpha`, `node_guarded_alpha`, `node_central_objective`, `route_start_a_neutral_alpha`, and `route_start_a_guarded_alpha`; topology/rules remain unchanged.
+- The old standalone prompt is historical. The physical-map prompt is fail-closed until a Unity README pointer activation names the published design commit and passes exact-head/post-merge CI.
+
 ## [2026-07-17] activation | STORY-STANDALONE-ENTRY-001 Unity pointer verified
 
 - Activated the Unity current-task pointer through PR #168 at exact head `9bf14d0aa063f35d678df04c07289853fed51f03`; exact-head CI 29588736112 passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.

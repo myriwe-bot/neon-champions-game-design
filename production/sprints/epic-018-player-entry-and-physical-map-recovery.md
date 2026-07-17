@@ -22,12 +22,12 @@ The standalone executable did not reach the player shell. The Editor workaround 
 
 | Order | Packet | Status | Gate |
 |---:|---|---|---|
-| 1 | `STORY-STANDALONE-ENTRY-001` | READY / approved | actual built executable reaches title and HRC map twice without Editor intervention |
-| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY-candidate / pending | standalone repair DONE, explicit promotion, then human APPROVE/REVISE/REJECT on representative slice |
+| 1 | `STORY-STANDALONE-ENTRY-001` | DONE / merged / verified | Unity PR #170 merged; post-merge run 29609782110 passed build+launch, EditMode, PlayMode, and validator |
+| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer pending | exact HRC slice packet approved; Unity pointer activation, then human APPROVE/REVISE/REJECT on exact-head evidence |
 | 3 | Champion/army/base interaction follow-up | DRAFT | formed from approved slice and exact remaining complaints |
 | 4 | Human continuity replaytest | DRAFT | launch, readability, Champion/base discovery, save/relaunch/Continue, and post-resume opponent pressure are all testable |
 
-Only order 1 is runnable. Do not parallelize the map slice with the entry repair.
+Order 1 is closed. Order 2 is the sole next packet and becomes runnable only after verified Unity pointer activation. Do not form or parallelize order 3.
 
 ## Direction lock
 
@@ -40,6 +40,6 @@ Only order 1 is runnable. Do not parallelize the map slice with the entry repair
 
 ## Current prompt
 
-`production/sprints/codex-story-standalone-entry-001.prompt.txt`
+`production/sprints/codex-story-map-visual-slice-001.prompt.txt`
 
-The map-slice prompt remains guarded and non-runnable.
+The map-slice prompt is approved but remains guarded until the Unity current-task pointer names it from the published design-control commit.

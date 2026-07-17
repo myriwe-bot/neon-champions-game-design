@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-17] merge | STORY-AI-PLAY-001 completed; continuity QA candidate formed
+
+- Unity PR #166 passed final exact-head review at `60538b94ec7d003938dc74a289a2b98ec6e9d3c6`, exact-head PR CI 29580160752, and exact-head push CI 29580157233.
+- PR #166 merged as `a1ae8bcbf2b9705c2b20c3e4f4fce8423b3747d1`; exact merge-commit `main` CI 29581484295 passed all configured jobs.
+- Closed `STORY-AI-PLAY-001` as DONE with deterministic complete-plan ranking, strict-greater visible battles, complete rollback, production Continue equivalence, tactical `CombatAI` handoff, and quantified 1920x1080 normal-shell pressure evidence.
+- Formed `STORY-PROTOTYPE-CONTINUITY-QA-001` as the sole next READY-candidate / approval-pending human-owned QA gate. Its Codex packet is guarded and non-runnable; no Unity implementation story is currently READY.
+
 ## [2026-07-17] approval | STORY-AI-PLAY-001 activated
 
 - Human approved `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume` exactly as proposed.

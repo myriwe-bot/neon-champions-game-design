@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-07-17
 approval: approved
 related: [production/planning/full-project-review-and-completion-plan-2026-07-12, production/epics/epic-016-accelerated-playable-product-foundation, docs/architecture/data-scenario-save-format-adr, design/gdd/product-constitution]
 ---
@@ -29,10 +29,10 @@ This epic may proceed as a parallel implementation train without claiming that d
 ## Capability sequence
 
 1. `STORY-SAVE-001` — DONE / merged through Unity PR #161, with rollback continuity hotfix PR #162.
-2. `STORY-AI-PLAY-001` — READY / approved on 2026-07-17; deterministic site value, recruitment, objective contest, strict-greater favorable-attack pressure, and save/resume choice equivalence.
-3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — unformed human/automation gate for resume continuity and opponent pressure.
+2. `STORY-AI-PLAY-001` — DONE / merged through Unity PR #166 as `a1ae8bcbf2b9705c2b20c3e4f4fce8423b3747d1`; post-merge `main` CI 29581484295 passed.
+3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — READY-candidate / approval pending; formed human-owned build, resume-continuity, opponent-pressure, and evidence closeout gate.
 
-The second child is approved as the sole current implementation packet. Unity pointer activation and its CI gate must pass before Codex implementation begins.
+No implementation story is currently READY. The third child is the sole next candidate; its guarded prompt must not run and the Unity pointer must not activate until the human approves the packet.
 
 ## Boundaries
 

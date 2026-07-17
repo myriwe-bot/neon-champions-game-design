@@ -397,4 +397,4 @@ Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\
 
 ## Final control-surface state
 
-`STORY-AI-PLAY-001` is the sole current READY / approved Unity implementation packet. `STORY-PROOF-SCENARIO-001` is historical and DONE; `STORY-PROOF-QA-001` is deferred, human-owned, and approval pending.
+`STORY-AI-PLAY-001` is historical and DONE after Unity PR #166 and verified merge-commit CI. No Unity implementation story is currently READY. `STORY-PROTOTYPE-CONTINUITY-QA-001` is the sole next READY-candidate / approval-pending packet; `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` is guarded and must not run. `STORY-PROOF-QA-001` remains separately deferred, human-owned, and approval pending.

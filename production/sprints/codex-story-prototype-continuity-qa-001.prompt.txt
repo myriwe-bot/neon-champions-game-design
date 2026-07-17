@@ -1,0 +1,24 @@
+# Guarded Codex packet: STORY-PROTOTYPE-CONTINUITY-QA-001
+
+STOP. This packet is READY-candidate / approval pending and is not runnable implementation authority.
+
+Do not modify either repository, create a branch, build evidence, run a human playtest, commit, push, or open a PR until all of the following are true:
+
+1. `production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout.md` says `status: ready` and `approval: approved`.
+2. The Unity current-task pointer names this exact story.
+3. Pointer exact-head and post-merge CI have passed and are recorded in design control.
+4. A human is available to perform and own the required playtest verdict.
+
+If any gate is absent, report the missing gate and stop without changes.
+
+After approval, this file must be replaced with a full runnable contract that:
+
+- reads the approved story, EPIC-017, save/resume ADR, testing strategy, Unity README pointer, and existing save/AI evidence;
+- starts from clean current `main` or resumes only the exact approved story branch with known story-scoped work;
+- produces a provenance-bound Windows build and evidence package;
+- runs full configured Unity checks and focused continuity/opponent-pressure tests;
+- supports but never impersonates the human playtester;
+- records truthful pre-save, continued-state, and post-resume-pressure evidence at 1920x1080;
+- discloses all fixtures, omissions, defects, and accepted prototype limitations;
+- limits code changes to narrow defects or test/evidence harness work authorized by the approved gate;
+- commits and pushes actual story-scoped changes, opens/updates a non-draft PR, and reports branch, SHA, remote ref, PR URL, exact CI, and recovery commands on failure.

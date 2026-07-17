@@ -73,11 +73,12 @@
 - [[production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof]] — DONE / merged EPIC-016 three-line faction-composition proof through Unity PR #155.
 - [[production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow]] — DONE / merged EPIC-016 connected proof through Unity PR #158.
 - [[production/stories/story-proof-qa-001-human-proof-build-playtest-and-capture-gate]] — READY-candidate / approval pending deferred human playtest and optional capture closeout; not current work.
-- [[production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure]] — ACTIVE approved prototype train for save continuity and later opponent pressure.
+- [[production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure]] — ACTIVE approved prototype train; save and deterministic opponent implementation are DONE, human continuity QA remains.
 - [[docs/architecture/prototype-strategic-save-resume-adr]] — APPROVED version-1 strategic save/resume boundary.
 - [[production/stories/story-save-001-prototype-strategic-save-and-resume]] — DONE / merged through Unity PR #161; rollback continuity follow-up merged through PR #162.
-- [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — READY / approved deterministic opponent-pressure packet.
-- `production/sprints/codex-story-ai-play-001.prompt.txt` — current runnable Unity implementation prompt after pointer activation.
+- [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — DONE / merged through Unity PR #166 with verified merge-commit CI.
+- [[production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]] — READY-candidate / approval pending human-owned continuity QA gate.
+- `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` — guarded non-runnable candidate prompt; no Unity implementation prompt is active.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.

@@ -1,3 +1,9 @@
+HISTORICAL COMPLETED PACKET — DO NOT RUN.
+
+STORY-AI-PLAY-001 is DONE and merged through Unity PR #166. This file is retained only for audit. Do not create or resume its branch, modify either repository from this prompt, or reopen implementation. The active control surface has no READY Unity packet; the next candidate is guarded separately.
+
+Original completed packet follows.
+
 Implement STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume in the Neon Champions Unity repository.
 
 Repositories

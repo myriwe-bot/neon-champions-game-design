@@ -1,11 +1,11 @@
 ---
 title: STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-07-17
 approval: approved
 related: [production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure, production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent, production/stories/story-save-001-prototype-strategic-save-and-resume, docs/architecture/determinism-and-rng-adr, docs/architecture/prototype-strategic-save-resume-adr, docs/architecture/control-manifest, docs/architecture/testing-strategy]
 ---
@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY / approved on 2026-07-17. Human approval accepts the recommended priority order and the strict-greater aggregate-count battle proxy exactly as written. Implementation becomes runnable only after the Unity pointer activation gate passes.
+DONE / approved and merged on 2026-07-17. Unity PR #166 merged exact reviewed head `60538b94ec7d003938dc74a289a2b98ec6e9d3c6` as `a1ae8bcbf2b9705c2b20c3e4f4fce8423b3747d1`; exact-head PR CI 29580160752, exact-head push CI 29580157233, and post-merge `main` CI 29581484295 passed.
 
 ## Parent epic
 
@@ -64,17 +64,17 @@ Within a tier, use explicit ordinal IDs as the final tie-break. Never rely on so
 
 ## Acceptance criteria
 
-- [ ] AI candidate generation is read-only and deterministic for the same scenario/runtime input.
-- [ ] Choice uses the approved tier order and explicit ordinal tie-breaks, never route/source collection order.
-- [ ] AI can choose a useful affordable recruitment offer and applies its real costs, stock, army, and major-action effects through existing services.
-- [ ] AI moves toward or contests the central objective when higher-tier legal pressure exists.
-- [ ] AI launches only battles that satisfy the approved visible aggregate-count proxy; unavailable force comparison makes that battle candidate ineligible.
-- [ ] Battle launch uses the existing tactical handoff and does not incorrectly end/advance the strategic turn.
-- [ ] Failed execution restores all mutable strategic state, including Feed consequences and migration diagnostics.
-- [ ] Save -> Continue -> AI turn matches the equivalent unsaved AI choice and resulting runtime state.
-- [ ] No entropy APIs or unordered iteration determine choices.
-- [ ] Normal-shell action text is readable at 1920x1080 and does not expose raw IDs or paths.
-- [ ] Focused EditMode/PlayMode tests, full suites, validators, standalone build, exact-head CI, and evidence pass.
+- [x] AI candidate generation is read-only and deterministic for the same scenario/runtime input.
+- [x] Choice uses the approved tier order and explicit ordinal tie-breaks, never route/source collection order.
+- [x] AI can choose a useful affordable recruitment offer and applies its real costs, stock, army, and major-action effects through existing services.
+- [x] AI moves toward or contests the central objective when higher-tier legal pressure exists.
+- [x] AI launches only battles that satisfy the approved visible aggregate-count proxy; unavailable force comparison makes that battle candidate ineligible.
+- [x] Battle launch uses the existing tactical handoff and does not incorrectly end/advance the strategic turn.
+- [x] Failed execution restores all mutable strategic state, including Feed consequences and migration diagnostics.
+- [x] Save -> Continue -> AI turn matches the equivalent unsaved AI choice and resulting runtime state.
+- [x] No entropy APIs or unordered iteration determine choices.
+- [x] Normal-shell action text is readable at 1920x1080 and does not expose raw IDs or paths.
+- [x] Focused EditMode/PlayMode tests, full suites, validators, standalone build, exact-head CI, and evidence pass.
 
 ## Verification matrix
 
@@ -121,4 +121,4 @@ Human-approved answer:
 
 ## Verdict
 
-READY / approved. Implement only from the activated Unity pointer on current `main`.
+DONE. Independent exact-head review passed with no blockers. Implementation, quantified 1920x1080 normal-shell evidence, exact-head CI, merge, and exact merge-commit `main` CI are verified. Human prototype continuity/playability closeout remains separate under `STORY-PROTOTYPE-CONTINUITY-QA-001`.

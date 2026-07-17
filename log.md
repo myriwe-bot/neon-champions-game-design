@@ -6,7 +6,9 @@
 
 - Human approved `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume` exactly as proposed.
 - Approved the deterministic action priority order and the strict-greater aggregate-count battle proxy as written; equal-strength battles remain ineligible.
-- Promoted the story to READY, activated its checked-in Codex prompt, and designated it as the sole current Unity implementation packet pending pointer CI completion.
+- Promoted the story to READY, activated its checked-in Codex prompt, and designated it as the sole current Unity implementation packet.
+- Design activation commit `4a0f6e38f11f35f4fb9d3c930292876a229c77b0` published successfully in run 29557667041.
+- Activated the Unity README pointer through PR #165; exact-head CI 29557773784 passed, merge `a2312752544fd3370addccc07f821769abe02653` landed, and post-merge main CI 29558124758 passed.
 
 ## [2026-07-16] merge | STORY-SAVE-001 completed; opponent-pressure candidate prepared
 

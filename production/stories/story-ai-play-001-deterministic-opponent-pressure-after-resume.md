@@ -93,7 +93,7 @@ Within a tier, use explicit ordinal IDs as the final tie-break. Never rely on so
 - `STORY-SAVE-001`: DONE / merged through Unity PR #161.
 - AI rollback continuity hotfix: merged through Unity PR #162.
 - Human approval of the policy in this packet: approved on 2026-07-17 as written.
-- Unity README pointer activation: pending and must occur only after approval.
+- Unity README pointer activation: merged through PR #165 as `a2312752544fd3370addccc07f821769abe02653`; exact-head CI 29557773784 and post-merge main CI 29558124758 passed.
 
 ## Ambiguity check
 
@@ -117,7 +117,7 @@ Human-approved answer:
 - [x] Proposed deterministic policy is concrete and testable.
 - [x] Human approved the proposed policy.
 - [x] Status changed to READY / approval approved.
-- [ ] Unity pointer activated and exact-head/post-merge pointer CI passed.
+- [x] Unity pointer activated and exact-head/post-merge pointer CI passed.
 
 ## Verdict
 

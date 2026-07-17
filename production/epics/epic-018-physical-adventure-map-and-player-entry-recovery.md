@@ -37,11 +37,11 @@ A clean Windows executable launches through the normal title/faction-choice path
 ## Capability sequence
 
 1. `STORY-STANDALONE-ENTRY-001` — DONE / merged as Unity PR #170 and post-merge verified; the executable now proves title -> scenario -> HRC strategic map through the normal production path.
-2. `STORY-MAP-VISUAL-SLICE-001` — READY / approved; produce the exact representative HRC physical-map-and-shell slice over unchanged graph rules for human visual review. Unity execution remains blocked until pointer activation is merged and verified.
+2. `STORY-MAP-VISUAL-SLICE-001` — READY / approved and Unity-pointer-activated through PR #171; produce the exact representative HRC physical-map-and-shell slice over unchanged graph rules for human visual review.
 3. Champion/army/base interaction follow-up — DRAFT only; form after the visual slice verdict so it does not encode a rejected layout.
 4. Human replaytest — DRAFT only; return to continuity/save/opponent-pressure validation after launch and basic playability blockers are repaired.
 
-The second child is the sole approved next packet. It becomes runnable only after the Unity README pointer is activated from the published design commit.
+The second child is the sole runnable approved packet.
 
 ## Boundaries
 
@@ -57,4 +57,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. `STORY-STANDALONE-ENTRY-001` is DONE. `STORY-MAP-VISUAL-SLICE-001` is the sole READY / approved next child and remains fail-closed until Unity pointer activation.
+ACTIVE / approved. `STORY-STANDALONE-ENTRY-001` is DONE. `STORY-MAP-VISUAL-SLICE-001` is the sole READY / approved and pointer-activated child.

@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / human-approved after `STORY-STANDALONE-ENTRY-001` merged and passed post-merge CI. Sole next Unity implementation packet.
+READY / human-approved and Unity-pointer-activated on 2026-07-17 after `STORY-STANDALONE-ENTRY-001` merged and passed post-merge CI. Sole current Unity implementation packet.
 
 The physical-adventure-map direction and ordered repair train were approved on 2026-07-17. The human owner then explicitly requested that the current repair be reviewed/merged and the next implementation packet prepared and continued through completion. This promotes this exact representative-slice packet; it does not authorize full-map rollout.
 
@@ -210,6 +210,16 @@ No implementer design, architecture, content, balance, UX, canon, or topology de
 - [x] Ambiguity Check PASS.
 - [x] Human approval recorded.
 
+## Activation evidence
+
+- Design authority merge commit: `dc4c4b429bc955f716cd2367e79297e767aa8d4c`.
+- Design publish CI: <https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/29610677245> — passed.
+- Unity pointer PR: <https://github.com/myriwe-bot/neon-champions-unity/pull/171>.
+- Pointer exact head: `f2dbb5bf9ac23890a435ea714c6549cf626fb3c9`.
+- Pointer exact-head CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29610911768> — Compile/Standalone with state-bound built-player launch, EditMode, PlayMode, and Placeholder Validator passed.
+- Pointer merge commit: `4057207919bf4add15a418b8a5071d4490946b85`.
+- Post-merge Unity `main` CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29611677131> — all four configured jobs passed.
+
 ## Verdict
 
-READY / approved after verified completion of `STORY-STANDALONE-ENTRY-001`. Implement only from `production/sprints/codex-story-map-visual-slice-001.prompt.txt` after Unity pointer activation.
+READY / approved and pointer-activated. Implement only from `production/sprints/codex-story-map-visual-slice-001.prompt.txt`.

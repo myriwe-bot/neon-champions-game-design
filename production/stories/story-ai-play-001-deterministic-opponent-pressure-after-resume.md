@@ -1,12 +1,12 @@
 ---
 title: STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-16
 updated: 2026-07-16
-approval: pending
+approval: approved
 related: [production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure, production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent, production/stories/story-save-001-prototype-strategic-save-and-resume, docs/architecture/determinism-and-rng-adr, docs/architecture/prototype-strategic-save-resume-adr, docs/architecture/control-manifest, docs/architecture/testing-strategy]
 ---
 
@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY-candidate / approval pending. This packet is intentionally non-runnable until human approval and Unity pointer activation.
+READY / approved on 2026-07-17. Human approval accepts the recommended priority order and the strict-greater aggregate-count battle proxy exactly as written. Implementation becomes runnable only after the Unity pointer activation gate passes.
 
 ## Parent epic
 
@@ -31,7 +31,7 @@ As a solo player, I need the strategic opponent to make legible choices from the
 - Unity PR #162 preserves save-era Feed and migration state during failed-AI-turn rollback.
 - The determinism ADR keeps unseeded and seeded randomness out of this story.
 
-## Recommended policy requiring approval
+## Human-approved policy
 
 Replace route-list-order choice with a small deterministic candidate-ranking policy. On one AI turn, evaluate legal actions from the active runtime state in this order:
 
@@ -92,16 +92,16 @@ Within a tier, use explicit ordinal IDs as the final tie-break. Never rely on so
 - `STORY-AI-001`: DONE / merged.
 - `STORY-SAVE-001`: DONE / merged through Unity PR #161.
 - AI rollback continuity hotfix: merged through Unity PR #162.
-- Human approval of the policy in this packet: pending.
+- Human approval of the policy in this packet: approved on 2026-07-17 as written.
 - Unity README pointer activation: pending and must occur only after approval.
 
 ## Ambiguity check
 
-Status: PASS-candidate for the recommended policy above; human approval is the remaining authority gate.
+Status: PASS. The policy, priority order, and strict-greater aggregate-count battle proxy were human-approved on 2026-07-17.
 
-Open approval choice:
+Human-approved answer:
 
-- Approve the recommended strict-greater aggregate-count battle proxy and priority order as written, or amend them before implementation.
+- Use the recommended strict-greater aggregate-count battle proxy and priority order exactly as written.
 
 ## Branch / PR requirements
 
@@ -115,10 +115,10 @@ Open approval choice:
 - [x] Stable ID, parent epic, player value, scope, exclusions, and verification are explicit.
 - [x] Existing AI/save/determinism authority is linked.
 - [x] Proposed deterministic policy is concrete and testable.
-- [ ] Human approved the proposed policy.
-- [ ] Status changed to READY / approval approved.
+- [x] Human approved the proposed policy.
+- [x] Status changed to READY / approval approved.
 - [ ] Unity pointer activated and exact-head/post-merge pointer CI passed.
 
 ## Verdict
 
-READY-candidate / approval pending. Do not implement yet.
+READY / approved. Implement only from the activated Unity pointer on current `main`.

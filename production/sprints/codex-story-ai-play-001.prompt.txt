@@ -1,31 +1,78 @@
-GUARDED READY-CANDIDATE — DO NOT IMPLEMENT YET
+Implement STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume in the Neon Champions Unity repository.
 
-Candidate: STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
 
-This file is intentionally non-runnable. Stop without editing Unity unless every activation prerequisite below is true.
+Required preflight
+1. Both repositories must be clean and on current `main` after `git pull --ff-only origin main`.
+2. Read these exact design-control sources:
+   - production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume.md
+   - production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure.md
+   - production/stories/story-ai-001-dumb-strategic-ai-playtest-opponent.md
+   - production/stories/story-save-001-prototype-strategic-save-and-resume.md
+   - docs/architecture/determinism-and-rng-adr.md
+   - docs/architecture/prototype-strategic-save-resume-adr.md
+   - docs/architecture/control-manifest.md
+   - docs/architecture/testing-strategy.md
+3. Confirm the story says `status: ready`, `approval: approved`, and Ambiguity Check `PASS`.
+4. Confirm Unity README names STORY-AI-PLAY-001 as the sole current READY / approved packet.
+5. Confirm STORY-AI-001 and STORY-SAVE-001 are DONE, and Unity PRs #162 and #164 are present in current main history.
+6. Treat the determinism ADR's `accepted-with-risk` status as binding temporary implementation authority for this story; do not add randomness.
+7. If any authority, pointer, ancestry, or cleanliness check fails, stop without implementation edits and report the exact mismatch.
 
-Activation prerequisites
-1. The design repository is on current clean `main`.
-2. `production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume.md` says `status: ready` and `approval: approved`.
-3. Its Ambiguity Check says PASS rather than PASS-candidate.
-4. The human-approved policy records the exact priority order and battle-favorability proxy.
-5. STORY-AI-001 and STORY-SAVE-001 are DONE / merged, Unity PR #162 is merged, and their post-merge CI is green.
-6. Unity `README.md` names STORY-AI-PLAY-001 as the sole current READY / approved packet.
-7. The pointer activation PR has exact-head and post-merge main CI evidence.
-8. Unity starts clean on current `main`.
+Branch and publication
+- Work on `story/STORY-AI-PLAY-001-deterministic-opponent-pressure-after-resume`.
+- Fresh mode: create it from clean current Unity `main`.
+- Resume mode: if already on that exact branch with only story-scoped work and current `main` is an ancestor, preserve and inspect the work, then continue. Stop for unrelated dirty paths, conflicts, wrong ancestry, or source-contract contradictions.
+- PR title: `STORY-AI-PLAY-001 deterministic opponent pressure after resume`.
+- Finish by committing the actual story changes, pushing the committed HEAD to that exact remote branch, and creating or updating a non-draft PR.
+- Print branch, exact SHA, remote ref, PR URL, verification results, and omissions. If publication fails, report the exact error and recovery commands; “PR-ready” is not completion.
 
-If any prerequisite fails, report the mismatch and stop without Unity edits, branch creation, commits, pushes, or PRs.
+Human-approved deterministic policy
+Evaluate legal actions from the active restored runtime state in this exact tier order:
+1. preserve or contest the central objective when a legal move or interaction does so;
+2. initiate an existing legal battle only when the active army's aggregate current unit count is strictly greater than the visible opposing or guard aggregate count;
+3. buy one legal affordable recruitment offer, preferring largest aggregate unit-count gain, then lower effective Credits cost, then ordinal offer ID;
+4. claim one safe unconsumed one-time reward or site interaction;
+5. move along the legal route minimizing remaining unweighted route hops to the central objective;
+6. otherwise end turn with a readable reason.
 
-After activation, implementation must follow the approved story literally:
-- branch `story/STORY-AI-PLAY-001-deterministic-opponent-pressure-after-resume`;
-- pure deterministic candidate enumeration/ranking;
-- explicit ordinal tie-breaks independent of collection order;
-- restored runtime state as authority;
-- central objective, favorable visible battle proxy, recruitment, safe site, and shortest-hop movement tiers;
-- at most one movement plus one major action;
-- existing tactical handoff only, no auto-resolution;
-- complete atomic rollback of every mutable runtime collection;
-- saved/resumed equivalence tests;
-- normal-shell readable evidence without raw IDs;
-- no randomness, new balance/content, save-schema changes, packages, or broad AI rewrite;
-- focused and full Unity verification, validators, Windows build, exact-head CI, evidence, non-draft PR, and explicit omissions.
+Within every tier, use explicit ordinal stable IDs as the final tie-break. Equal-strength, unfavorable, or unavailable force comparisons make a battle candidate ineligible. Never rely on source list or dictionary iteration order. The AI may perform at most one movement plus one major interaction or recruitment per turn. Battle launch pauses strategic completion and uses the existing tactical handoff; never auto-resolve tactical combat.
+
+In scope
+- Add a pure/read-only deterministic candidate enumeration and ranking boundary for the current strategic AI.
+- Use current scenario definitions plus restored ScenarioRuntimeState; never reconstruct mutable state from scenario defaults.
+- Support central-objective pressure, the approved visible battle proxy, one affordable recruitment choice, one safe one-time site value choice, and shortest-hop objective movement.
+- Route execution through existing movement, interaction, recruitment, objective, tactical-handoff, and turn services rather than parallel mutation logic.
+- Preserve atomic rollback across every mutable strategic collection, including Feed consequences and migration diagnostics, when execution fails.
+- Keep normal-shell summaries player-readable; raw IDs are allowed only in diagnostics, debug output, and evidence metadata.
+- Prove saved/resumed and equivalent unsaved paths select the same AI action and produce equivalent next runtime state.
+- Add story evidence under `production/evidence/STORY-AI-PLAY-001/`, including readable 1920x1080 normal-shell proof of the opponent action and resulting pressure.
+
+Out of scope
+- Randomness, seeded randomness, learning, minimax, search trees, personalities, diplomacy, fog or hidden-information cheating, economic forecasting, multi-turn plans, or difficulty levels.
+- New combat odds, tactical auto-resolution, or CombatAI rewrite.
+- New map topology, units, factions, scenario balance, objective rules, save schema, persistence fields, packages, or broad architecture changes.
+- More than one move and one major action per AI turn.
+- Human playtest closeout.
+
+Required implementation discipline
+- Use TDD for production logic: add failing focused tests first, then implement, then refactor.
+- Candidate generation must be read-only and collection-order independent.
+- Reuse current legality/preview/application services; if the approved policy cannot be expressed without an unspecified design, balance, content, UX, save-schema, or architecture decision, stop and report the ambiguity rather than inventing it.
+- Do not alter project/package settings unless strictly required by the approved story; explain any such change in the PR.
+- Preserve Unity `.meta` pairing and exclude generated scratch, Library, Temp, Logs, build outputs, credentials, and unrelated files.
+
+Required verification
+- Focused EditMode tests for every priority tier, reordered collections, stable tie-breaks, recruitment affordability/stock/locks, objective states, battle favorable/equal/unfavorable/missing-comparison cases, rollback, and save/resume equivalence.
+- PlayMode coverage for normal-shell opponent summary, resulting pressure, tactical handoff behavior, and readable 1920x1080 evidence without raw IDs or local paths.
+- Run the full configured EditMode and PlayMode suites, scenario/content/localization validators, repository hygiene checks, and standalone Windows build through the repository's established scripts/workflows.
+- Run `git diff --check` and verify all new Unity assets have matching `.meta` files.
+- Require exact-head CI on the final pushed commit. Do not cite stale CI from an earlier SHA.
+
+PR contract
+- Link STORY-AI-PLAY-001 and all required authority paths.
+- Map tests/evidence to acceptance criteria.
+- State known omissions, stubs, mocks, assumptions, and deferred work, or explicitly state `No known omissions`.
+- Call out any authorized resume-mode work and prove all diff paths are story-scoped.

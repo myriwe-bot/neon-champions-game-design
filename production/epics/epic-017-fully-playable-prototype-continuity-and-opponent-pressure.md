@@ -29,10 +29,10 @@ This epic may proceed as a parallel implementation train without claiming that d
 ## Capability sequence
 
 1. `STORY-SAVE-001` — DONE / merged through Unity PR #161, with rollback continuity hotfix PR #162.
-2. `STORY-AI-PLAY-001` — READY-candidate / approval pending; deterministic site value, recruitment, objective contest, bounded favorable-attack pressure, and save/resume choice equivalence.
+2. `STORY-AI-PLAY-001` — READY / approved on 2026-07-17; deterministic site value, recruitment, objective contest, strict-greater favorable-attack pressure, and save/resume choice equivalence.
 3. `STORY-PROTOTYPE-CONTINUITY-QA-001` — unformed human/automation gate for resume continuity and opponent pressure.
 
-The second child is now formed as an approval-pending candidate. It must not be implemented or activated without explicit human approval of its policy.
+The second child is approved as the sole current implementation packet. Unity pointer activation and its CI gate must pass before Codex implementation begins.
 
 ## Boundaries
 
@@ -43,4 +43,4 @@ The second child is now formed as an approval-pending candidate. It must not be 
 
 ## Approval
 
-Human-approved on 2026-07-16 with `STORY-SAVE-001` and the prototype save ADR as proposed. This approval authorizes only the first child. It does not authorize later AI or QA children.
+Human-approved on 2026-07-16 with `STORY-SAVE-001` and the prototype save ADR as proposed. On 2026-07-17, the human separately approved `STORY-AI-PLAY-001` and its deterministic policy exactly as written. The later QA child remains unformed and unauthorized.

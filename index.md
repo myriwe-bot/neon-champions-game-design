@@ -76,8 +76,8 @@
 - [[production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure]] — ACTIVE approved prototype train for save continuity and later opponent pressure.
 - [[docs/architecture/prototype-strategic-save-resume-adr]] — APPROVED version-1 strategic save/resume boundary.
 - [[production/stories/story-save-001-prototype-strategic-save-and-resume]] — DONE / merged through Unity PR #161; rollback continuity follow-up merged through PR #162.
-- [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — READY-candidate / approval pending next opponent-pressure packet.
-- `production/sprints/codex-story-ai-play-001.prompt.txt` — guarded non-runnable candidate prompt; no Unity implementation packet is currently active.
+- [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — READY / approved deterministic opponent-pressure packet.
+- `production/sprints/codex-story-ai-play-001.prompt.txt` — current runnable Unity implementation prompt after pointer activation.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.

@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-07-17] approval | STORY-AI-PLAY-001 activated
+
+- Human approved `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume` exactly as proposed.
+- Approved the deterministic action priority order and the strict-greater aggregate-count battle proxy as written; equal-strength battles remain ineligible.
+- Promoted the story to READY, activated its checked-in Codex prompt, and designated it as the sole current Unity implementation packet pending pointer CI completion.
+
 ## [2026-07-16] merge | STORY-SAVE-001 completed; opponent-pressure candidate prepared
 
 - Reviewed and repaired Unity PR #161 for strategic save/resume. Added a 4 MiB pre-deserialization document bound, regression coverage, corrected duplicate evidence rendering, regenerated exact-head Windows Unity evidence, and removed temporary evidence-refresh automation before merge.

@@ -111,13 +111,37 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume`.
 
-`STORY-SAVE-001` is DONE / merged through Unity PR #161, with rollback continuity follow-up PR #162. `STORY-AI-PLAY-001` is the next READY-candidate / approval pending. Its prompt is guarded and non-runnable; do not implement or activate it before explicit human approval of the deterministic policy.
+`STORY-SAVE-001` is DONE / merged through Unity PR #161, with rollback continuity follow-up PR #162 and late validator hotfix PR #164. `STORY-AI-PLAY-001` is READY / approved with its deterministic priority policy and strict-greater aggregate-count battle proxy accepted as written.
 
 ## Current READY implementation packet
 
-None. Candidate only: `production/sprints/codex-story-ai-play-001.prompt.txt`.
+Run `production/sprints/codex-story-ai-play-001.prompt.txt` after pulling current `main` in both repositories and confirming the Unity README pointer names this story.
+
+### Copy-safe STORY-AI-PLAY-001 handoff
+
+Primary workspace-write run:
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ai-play-001.prompt.txt"
+codex exec --sandbox workspace-write $prompt
+```
+
+Trusted-repo fallback:
+
+```powershell
+codex exec --sandbox danger-full-access $prompt
+```
 
 ### Historical STORY-PROOF-SCENARIO-001 handoff — do not rerun
 
@@ -373,4 +397,4 @@ Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\
 
 ## Final control-surface state
 
-No Unity implementation packet is currently READY / approved. `STORY-PROOF-SCENARIO-001` is historical and DONE; `STORY-PROOF-QA-001` is deferred, human-owned, and approval pending.
+`STORY-AI-PLAY-001` is the sole current READY / approved Unity implementation packet. `STORY-PROOF-SCENARIO-001` is historical and DONE; `STORY-PROOF-QA-001` is deferred, human-owned, and approval pending.

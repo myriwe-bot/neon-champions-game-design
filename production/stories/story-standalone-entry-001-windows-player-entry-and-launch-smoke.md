@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / human-approved on 2026-07-17. Sole current Unity implementation packet.
+READY / human-approved and Unity-pointer-activated on 2026-07-17. Sole current Unity implementation packet.
 
 ## Story type
 
@@ -132,6 +132,16 @@ Status: PASS.
 - [x] Ambiguity Check PASS.
 - [x] Human approval recorded.
 
+## Activation evidence
+
+- Design approval/control commit: `2cfd08c80e11e90923489d069348df81bf844bcf`.
+- Design publish CI: <https://github.com/myriwe-bot/neon-champions-game-design/actions/runs/29588556157> — passed.
+- Unity pointer PR: <https://github.com/myriwe-bot/neon-champions-unity/pull/168>.
+- Pointer exact head: `9bf14d0aa063f35d678df04c07289853fed51f03`.
+- Pointer exact-head CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29588736112> — Compile/Standalone, EditMode, PlayMode, and Placeholder Validator passed.
+- Pointer merge commit: `ce5465476b9d06839f9fd4d11684e2e3e31f66e8`.
+- Post-merge Unity `main` CI: <https://github.com/myriwe-bot/neon-champions-unity/actions/runs/29589301841> — all four configured jobs passed.
+
 ## Verdict
 
-READY / approved. Implement only from the checked-in prompt `production/sprints/codex-story-standalone-entry-001.prompt.txt` after Unity pointer activation.
+READY / approved and pointer-activated. Implement only from the checked-in prompt `production/sprints/codex-story-standalone-entry-001.prompt.txt`.

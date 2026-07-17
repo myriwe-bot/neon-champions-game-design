@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-07-17] activation | STORY-STANDALONE-ENTRY-001 Unity pointer verified
+
+- Activated the Unity current-task pointer through PR #168 at exact head `9bf14d0aa063f35d678df04c07289853fed51f03`; exact-head CI 29588736112 passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
+- PR #168 merged as `ce5465476b9d06839f9fd4d11684e2e3e31f66e8`; post-merge Unity `main` CI 29589301841 passed all four configured jobs.
+- `STORY-STANDALONE-ENTRY-001` is now the sole runnable Unity packet. `STORY-MAP-VISUAL-SLICE-001` remains guarded and non-runnable.
+
 ## [2026-07-17] human playtest rejection | Player entry and physical map recovery approved
 
 - Human `STORY-PROTOTYPE-CONTINUITY-QA-001` execution returned `BLOCKED — REJECT CLOSEOUT`: the Windows build showed the Unity splash and then a gray window; the Editor path required manually adding `Strategic Map Bootstrap`.

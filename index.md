@@ -80,8 +80,8 @@
 - [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — DONE / merged through Unity PR #166 with verified merge-commit CI.
 - [[production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]] — DONE / BLOCKED — REJECT CLOSEOUT after failed standalone entry and blocked human map playtest.
 - [[production/epics/epic-018-physical-adventure-map-and-player-entry-recovery]] — ACTIVE / approved recovery epic.
-- [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — READY / approved sole current Unity implementation packet.
-- `production/sprints/codex-story-standalone-entry-001.prompt.txt` — current runnable Unity implementation prompt after pointer activation.
+- [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — READY / approved and Unity-pointer-activated sole current implementation packet.
+- `production/sprints/codex-story-standalone-entry-001.prompt.txt` — current runnable Unity implementation prompt.
 - [[production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]] — READY-candidate / pending next physical-map-and-shell gate; not runnable.
 - [[production/sprints/epic-018-player-entry-and-physical-map-recovery]] — ordered recovery train and direction lock.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.

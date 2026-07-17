@@ -23,11 +23,11 @@ The standalone executable did not reach the player shell. The Editor workaround 
 | Order | Packet | Status | Gate |
 |---:|---|---|---|
 | 1 | `STORY-STANDALONE-ENTRY-001` | DONE / merged / verified | Unity PR #170 merged; post-merge run 29609782110 passed build+launch, EditMode, PlayMode, and validator |
-| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer pending | exact HRC slice packet approved; Unity pointer activation, then human APPROVE/REVISE/REJECT on exact-head evidence |
+| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer activated | Unity PR #171 and post-merge run 29611677131 passed; human APPROVE/REVISE/REJECT on exact implementation-head evidence remains required |
 | 3 | Champion/army/base interaction follow-up | DRAFT | formed from approved slice and exact remaining complaints |
 | 4 | Human continuity replaytest | DRAFT | launch, readability, Champion/base discovery, save/relaunch/Continue, and post-resume opponent pressure are all testable |
 
-Order 1 is closed. Order 2 is the sole next packet and becomes runnable only after verified Unity pointer activation. Do not form or parallelize order 3.
+Order 1 is closed. Order 2 is the sole runnable packet. Do not form or parallelize order 3.
 
 ## Direction lock
 
@@ -42,4 +42,4 @@ Order 1 is closed. Order 2 is the sole next packet and becomes runnable only aft
 
 `production/sprints/codex-story-map-visual-slice-001.prompt.txt`
 
-The map-slice prompt is approved but remains guarded until the Unity current-task pointer names it from the published design-control commit.
+The map-slice prompt is active through verified Unity pointer PR #171.

@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-17] activation | STORY-MAP-VISUAL-SLICE-001 Unity pointer verified
+
+- Published the approved design packet as `dc4c4b429bc955f716cd2367e79297e767aa8d4c`; design publish run 29610677245 passed.
+- Activated the Unity README pointer through PR #171 at exact head `f2dbb5bf9ac23890a435ea714c6549cf626fb3c9`; exact-head run 29610911768 passed Compile/Standalone with built-player launch, EditMode, PlayMode, and Placeholder Validator.
+- PR #171 merged as `4057207919bf4add15a418b8a5071d4490946b85`; post-merge Unity `main` run 29611677131 passed all four jobs.
+- `STORY-MAP-VISUAL-SLICE-001` is now the sole runnable Unity packet. Full-map scaling and later interaction/replaytest packets remain blocked on explicit human visual approval of the exact implementation-head evidence.
+
 ## [2026-07-17] closeout and promotion | Standalone entry DONE; physical-map slice READY
 
 - Merged Unity PR #170 at exact head `7b753ec462096769e1898d78e5d907361001095b` as `439e8fe05f4a65ce33d512e78bceb86eaa550b2f` after both exact-head CI events passed.

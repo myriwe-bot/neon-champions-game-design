@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-17] human playtest rejection | Player entry and physical map recovery approved
+
+- Human `STORY-PROTOTYPE-CONTINUITY-QA-001` execution returned `BLOCKED — REJECT CLOSEOUT`: the Windows build showed the Unity splash and then a gray window; the Editor path required manually adding `Strategic Map Bootstrap`.
+- The partial Editor play reached HRC and showed understandable opponent movement after End Turn, but unreadable map text/geometry, unclear polygons, non-discoverable Champion army/inventory, unexplained `Mobility support`, and a base that could not be opened/upgraded blocked further testing.
+- Repository preflight found only empty `Foundation.unity` enabled in `EditorBuildSettings`, while `StrategicMap.unity` contains the playable bootstrap; the READY repair requires Codex to reproduce rather than blindly assume this diagnosis.
+- Human approved the physical Arctic adventure-map direction over the hidden authored corridor graph: physical terrain/routes/sites, no visible polygon/node metaphor, contextual overlays only, and no full tile/hex/free-movement rewrite now.
+- Activated EPIC-018 and promoted only `STORY-STANDALONE-ENTRY-001` to READY / approved. `STORY-MAP-VISUAL-SLICE-001` remains READY-candidate / pending until the entry repair is DONE and explicitly promoted.
+- Research, playtest evidence, strategic-map/art clarifications, repair train, guarded next prompt, and active standalone prompt were recorded together.
+
 ## [2026-07-17] activation | STORY-PROTOTYPE-CONTINUITY-QA-001 Unity pointer verified
 
 - Activated the Unity current-task pointer through PR #167 at exact head `f21ac05c4f9e1ce2986d429f0ec7537225dfce37`; exact-head CI 29583179517 passed all configured jobs.

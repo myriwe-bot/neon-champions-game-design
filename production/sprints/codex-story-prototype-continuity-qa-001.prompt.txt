@@ -1,3 +1,7 @@
+HISTORICAL — DO NOT RUN. Human execution returned `BLOCKED — REJECT CLOSEOUT` on 2026-07-17. Current work is `STORY-STANDALONE-ENTRY-001` using `production/sprints/codex-story-standalone-entry-001.prompt.txt`.
+
+The content below is retained only for audit history.
+
 Implement STORY-PROTOTYPE-CONTINUITY-QA-001 Build Resume Pressure Playtest Closeout in the Neon Champions Unity repository.
 
 Repositories

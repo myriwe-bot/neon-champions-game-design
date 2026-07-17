@@ -1,0 +1,15 @@
+DO NOT RUN — STORY-MAP-VISUAL-SLICE-001 is READY-candidate / approval pending.
+
+This file records the proposed future implementation packet only. It is not current implementation authority.
+
+Required gates before activation
+- STORY-STANDALONE-ENTRY-001 is DONE / merged with verified built-player entry.
+- The design story is explicitly promoted to `status: ready` and `approval: approved` by the human owner.
+- Ambiguity Check remains PASS after source-authority re-audit.
+- The Unity README current-task pointer is activated through exact-head and post-merge CI.
+
+Proposed future task
+- Produce one representative physical Arctic adventure-map-and-shell vertical slice over unchanged node-route rules.
+- Human visual verdict is required before any full-map rollout.
+
+Until all gates pass: stop without Unity edits, branch creation, asset generation/import, screenshots, commits, pushes, or PR creation.

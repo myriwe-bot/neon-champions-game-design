@@ -1,7 +1,7 @@
 ---
 title: STORY-PROTOTYPE-CONTINUITY-QA-001 Build Resume Pressure Playtest Closeout
 type: story
-status: ready
+status: done
 phase: production
 owner: human
 created: 2026-07-17
@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY / approved and pointer-activated on 2026-07-17. Human approval accepts the exact proposed gate and recommended answers: fully close and relaunch the build before Continue, and allow `PASS WITH FOLLOW-UPS` only when no continuity or player-blocking defect remains. Unity pointer PR #167 merged as `ab6e7b823a8aaec48f619b0b0ca4f605767a2f82`; exact-head CI 29583179517 and post-merge `main` CI 29583671540 passed.
+DONE / `BLOCKED — REJECT CLOSEOUT` after human execution on 2026-07-17. Unity pointer activation and automation passed, but the standalone executable showed the Unity splash and then only a gray window. The tester could enter the game in the Unity Editor only after manually adding `Strategic Map Bootstrap`. The resulting strategic map was unreadable and insufficiently interactive to continue the approved save/relaunch/Continue route. No continuity PASS is claimed.
 
 ## Player value
 
@@ -89,6 +89,33 @@ Human-approved answers on 2026-07-17:
 2. The tested build must be fully closed and relaunched before Continue.
 3. `PASS WITH FOLLOW-UPS` is allowed only when no continuity or player-blocking defect remains.
 
+## Human playtest result — 2026-07-17
+
+- Tested build provenance: local Windows build prepared from the latest activated work; exact local build SHA was not reported and must not be invented.
+- Standalone result: Unity splash, then gray window with no playable title shell.
+- Editor workaround: manually add `Strategic Map Bootstrap`, press Play, then use the title shell, `New Scenario`, and `Play HRC`.
+- Positive observation: after End Turn, the opponent visibly moved toward nodes.
+- Untested because of blockers: stable Save and Return, full executable relaunch, Continue continuity, post-resume opponent pressure, and tactical handoff.
+
+Exact complaints preserved:
+
+- "There seems to be no interactivity whatsoever."
+- "The readability on the map is horrible."
+- "I have no idea what do do."
+- "The map is very strange and text is unreadable, it is in general a mess."
+- The polygons did not communicate what they represented.
+- The base could not be opened or upgraded through the discovered interaction path.
+- Champion inventory and units/stacks could not be found.
+- `Mobility support` was visible but unexplained.
+- The visible node-map basis remained an explicit concern.
+
+Gate consequence:
+
+- Close this QA execution as `BLOCKED / REJECT CLOSEOUT`; do not leave it READY.
+- Activate `EPIC-018 Physical Adventure Map and Player Entry Recovery`.
+- Run only the narrow standalone-entry repair first.
+- Preserve the approved physical-adventure-map direction as the next separately gated slice.
+
 ## Branch / PR requirements
 
 - Branch: `story/STORY-PROTOTYPE-CONTINUITY-QA-001-build-resume-pressure-playtest-closeout`
@@ -105,4 +132,4 @@ Human-approved answers on 2026-07-17:
 
 ## Verdict
 
-READY / approved. Run only from the activated Unity pointer using `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` on branch `story/STORY-PROTOTYPE-CONTINUITY-QA-001-build-resume-pressure-playtest-closeout`.
+DONE / `BLOCKED — REJECT CLOSEOUT`. Human evidence overrides automated closeout implications. Historical prompt only; do not rerun this packet. Current work moves to `STORY-STANDALONE-ENTRY-001` under EPIC-018.

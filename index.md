@@ -1,6 +1,6 @@
 # Neon Champions Game Design Index
 
-> Last updated: 2026-07-16
+> Last updated: 2026-07-17
 > Current phase: Production — accelerated eight-week prototype and six-month Early Access planning
 > Review mode: Lean default, Full for major gates
 
@@ -47,6 +47,7 @@
 - [[design/research/tactical-combat-deep-reference]] — preserved long-form tactical-combat packet history and rationale; reference only, not first-read implementation contract.
 - [[design/research/homm-like-tactical-battle-ui-reference]] — HoMM-like tactical battle UI/readability references: stack counts, event feed, movement/attack affordances, retaliation.
 - [[design/research/homm-like-strategic-map-topology-reference]] — HoMM-like strategic/adventure map topology references: node, region, tile/hex, bases, guarded sites.
+- [[design/research/physical-adventure-map-direction-2026-07-17]] — APPROVED research and human correction: physical Arctic adventure map over hidden authored corridor graph; no visible polygon/node metaphor.
 - [[design/research/homm-town-building-reference]] — HoMM3 and Olden Era town/building/dwelling reference for Neon Champions base facilities.
 - [[design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12]] — easy-access reference list covering HoMM3, Olden Era, XCOM, Shadowrun, Civilization V, Songs of Conquest, Invisible Inc., Jagged Alliance 3, BATTLETECH, Into the Breach, Against the Storm, and Age of Wonders 4, plus researched zero-budget asset sources and visual-pipeline guidance.
 
@@ -73,12 +74,16 @@
 - [[production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof]] — DONE / merged EPIC-016 three-line faction-composition proof through Unity PR #155.
 - [[production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow]] — DONE / merged EPIC-016 connected proof through Unity PR #158.
 - [[production/stories/story-proof-qa-001-human-proof-build-playtest-and-capture-gate]] — READY-candidate / approval pending deferred human playtest and optional capture closeout; not current work.
-- [[production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure]] — ACTIVE approved prototype train; save and deterministic opponent implementation are DONE, human continuity QA remains.
+- [[production/epics/epic-017-fully-playable-prototype-continuity-and-opponent-pressure]] — ACTIVE but human closeout rejected; save and deterministic opponent implementation are merged, continuity remains unproven.
 - [[docs/architecture/prototype-strategic-save-resume-adr]] — APPROVED version-1 strategic save/resume boundary.
 - [[production/stories/story-save-001-prototype-strategic-save-and-resume]] — DONE / merged through Unity PR #161; rollback continuity follow-up merged through PR #162.
 - [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — DONE / merged through Unity PR #166 with verified merge-commit CI.
-- [[production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]] — READY / approved and Unity-pointer-activated human-owned continuity QA gate.
-- `production/sprints/codex-story-prototype-continuity-qa-001.prompt.txt` — current runnable Unity QA/closeout implementation prompt.
+- [[production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]] — DONE / BLOCKED — REJECT CLOSEOUT after failed standalone entry and blocked human map playtest.
+- [[production/epics/epic-018-physical-adventure-map-and-player-entry-recovery]] — ACTIVE / approved recovery epic.
+- [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — READY / approved sole current Unity implementation packet.
+- `production/sprints/codex-story-standalone-entry-001.prompt.txt` — current runnable Unity implementation prompt after pointer activation.
+- [[production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]] — READY-candidate / pending next physical-map-and-shell gate; not runnable.
+- [[production/sprints/epic-018-player-entry-and-physical-map-recovery]] — ordered recovery train and direction lock.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.
 - [[production/epics/epic-template]] — epic template.

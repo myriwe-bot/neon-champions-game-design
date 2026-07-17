@@ -5,7 +5,7 @@ status: approved
 phase: systems-design
 owner: shared
 created: 2026-05-30
-updated: 2026-07-10
+updated: 2026-07-17
 source_lore: [greenland, blue-monday, blue-week, white-sky, digital-net]
 related:
   [
@@ -182,6 +182,23 @@ The first playable strategic map must make these visible:
 ### Packet C Decision: C/D Hybrid
 
 Approved direction: use an authored node-route graph for prototype rules, presented over a visual Arctic-region map. Keep the data model abstract enough that a later tile/grid or richer spatial layer is not blocked.
+
+### 9.1 Human playtest correction: physical corridor adventure map
+
+Human-reaffirmed and sharpened on 2026-07-17 after the current polygon/node presentation blocked playtesting.
+
+`Visual Arctic-region map` does not authorize a colored polygon quilt, permanent node circles, or luminous graph edges as the normal player-facing metaphor. The approved near-term presentation is a physical Arctic adventure map over the hidden authored graph:
+
+1. The player reads continuous elevated or shallow-isometric terrain first and graph rules second.
+2. Routes are embodied as roads, ice tracks, bridges, passes, maintenance corridors, coast/sea links, air links, or other believable infrastructure paths.
+3. Nodes are embodied as recognizable bases, settlements, resource/recruitment sites, guarded infrastructure, archives, relays, and objective structures.
+4. Champion travel may animate continuously along authored route splines while occupancy and legality remain node-route based.
+5. Reachability, path cost, ownership, and objective pressure are contextual overlays that recede when not relevant.
+6. Regions may remain metadata or optional overlays; physical geography must remain understandable with overlays off.
+7. Full square-tile, hex, free-movement, province, terrain-cost, and terrain-pathfinding systems remain deferred.
+8. Revisit richer topology only after a successful physical-map playtest proves arbitrary positioning, terrain occupancy, guard radius, or continuous path economy is missing strategic fun.
+
+Research and human evidence: `design/research/physical-adventure-map-direction-2026-07-17.md` and `production/playtests/playtest-journal.md`.
 
 This is a hybrid of:
 

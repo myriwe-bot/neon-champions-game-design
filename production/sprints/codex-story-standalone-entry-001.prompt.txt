@@ -1,0 +1,87 @@
+Implement STORY-STANDALONE-ENTRY-001 Windows Player Entry and Launch Smoke in the Neon Champions Unity repository.
+
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Required authority preflight
+1. Update both repositories to current `main` with `git checkout main` and `git pull --ff-only origin main`.
+2. Read these exact approved sources:
+   - production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke.md
+   - production/epics/epic-018-physical-adventure-map-and-player-entry-recovery.md
+   - production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout.md
+   - docs/architecture/unity-technical-scheme.md
+   - docs/architecture/testing-strategy.md
+   - docs/architecture/ci-build-automation.md
+   - docs/architecture/control-manifest.md
+   - the Unity README current-task pointer
+3. Confirm the story says `status: ready`, `approval: approved`, and Ambiguity Check `PASS`.
+4. Confirm the Unity README names this exact story as the sole READY implementation packet and records successful pointer activation.
+5. Confirm current Unity `main` contains merge `a1ae8bcbf2b9705c2b20c3e4f4fce8423b3747d1` and the later pointer history.
+6. Treat `design/research/physical-adventure-map-direction-2026-07-17.md` only as excluded next-step context. Do not implement map redesign in this story.
+7. Stop without edits for missing authority, wrong ancestry, unresolved source contradiction, or unrelated dirty files.
+
+Branch and recovery
+- Required branch: `story/STORY-STANDALONE-ENTRY-001-windows-player-entry-launch-smoke`.
+- Fresh mode: branch from clean current Unity `main`.
+- Resume mode: if already on that exact branch with only story-scoped work and the approved `main` ancestor, preserve and inspect it, then continue.
+- Stop for another branch, conflicts, unrelated work, unknown generated files, or wrong ancestry.
+
+Observed human blocker
+- The Windows build showed the Unity splash, then a gray window with no playable shell.
+- The Unity Editor worked only after manually adding `Strategic Map Bootstrap` and pressing Play.
+- Repository evidence suggests only `Foundation.unity` is enabled in build settings while the playable `StrategicMap.unity` contains the bootstrap. Reproduce and verify; do not blindly patch from this hypothesis.
+
+Scope
+- Reproduce the standalone entry failure on current `main`.
+- Use TDD: add the smallest failing configuration/entry check, prove RED for the expected reason, apply the smallest architecture-preserving fix, then prove GREEN.
+- Correct the player entry so a clean Windows executable reaches the existing normal title shell without Editor intervention.
+- Preserve title -> New Scenario -> Play HRC/QXZ -> strategic-map behavior.
+- Remove any requirement to drag/add the bootstrap manually.
+- Add PlayMode/configuration coverage for the production entry path.
+- Add an actual built-player launch smoke that launches the Windows executable, proves title/player entry through a truthful production-visible observation or capture, records logs/process result, and exits cleanly.
+- Create `production/evidence/STORY-STANDALONE-ENTRY-001/README.md` with exact build SHA, commands/results, RED/GREEN evidence, root cause, changed files, process behavior, captures/logs, and omissions.
+
+Implementation boundary
+- Choose the smallest reliable correction: either make the current playable scene the valid first player scene or make `Foundation.unity` an explicit minimal loader.
+- Do not introduce a general scene framework.
+- Do not redesign the strategic map, shell layout, army UI, base UI, onboarding, gameplay, AI, balance, content, save schema, topology, assets, or art.
+- Do not use a debug-only bootstrap, test fixture, direct state mutation, or Editor-only setup to make the smoke pass.
+- No package or render-pipeline changes.
+
+Required acceptance proof
+- Clean Windows build succeeds.
+- Launching the executable from a closed state reaches the normal title shell instead of gray/empty output.
+- New Scenario -> Play HRC reaches the current strategic map from that executable.
+- A second closed-process launch behaves the same way.
+- Automated coverage fails for an invalid enabled player entry and passes for the repaired configuration.
+- Existing full EditMode, PlayMode, validator, and standalone checks remain green.
+- Diff contains no map redesign or unrelated changes.
+
+Verification before publication
+- Run focused RED/GREEN checks and preserve exact output.
+- Run full configured EditMode, PlayMode, validator, and standalone commands.
+- Run the actual built-player launch smoke twice.
+- Run `git diff --check` and `git diff origin/main...HEAD --check`.
+- Review the complete diff against the approved story.
+- Record all omissions, limitations, stubs, assumptions, and deferred work; say `No known omissions` only if literally true.
+
+Publication contract
+1. Commit the actual story-scoped work.
+2. Push the committed HEAD exactly to:
+   `story/STORY-STANDALONE-ENTRY-001-windows-player-entry-launch-smoke`
+3. Create or update a non-draft PR titled:
+   `STORY-STANDALONE-ENTRY-001 Windows player entry and launch smoke`
+4. PR body must link the approved story and list root cause, changed files, RED/GREEN proof, built-player launch evidence, full tests, known omissions/deferred map work, and exact CI status.
+5. Verify and print:
+   - `git status --short --branch`
+   - `git log --oneline -5`
+   - local branch and SHA
+   - remote branch ref and SHA
+   - PR URL and draft state
+   - exact CI run URLs/status
+6. Required push form:
+   `git push -u origin HEAD:story/STORY-STANDALONE-ENTRY-001-windows-player-entry-launch-smoke`
+7. If publication fails, report the exact error and concrete recovery commands. Do not stop at `PR-ready`.
+
+Do not merge the implementation PR. Independent review, exact-head CI, merge, and post-merge verification remain external gates.

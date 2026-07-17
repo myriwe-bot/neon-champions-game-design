@@ -5,7 +5,7 @@ status: approved
 phase: pre-production
 owner: shared
 created: 2026-07-12
-updated: 2026-07-14
+updated: 2026-07-17
 approval: approved
 related: [design/research/zero-budget-prototype-assets-and-reference-games-2026-07-12, design/ux/player-shell]
 ---
@@ -19,6 +19,8 @@ White-daylight cyberpunk: pale engineered sky, dark industrial infrastructure, s
 ## Strategic-map visual model
 
 Human-approved on 2026-07-13: use a **hybrid physical map**. The dominant read is a real elevated landscape with terrain, structures, sites, and embodied Champion/unit presence. Routes, reachability, ownership, and objective pressure appear as restrained operational overlays on that world rather than as the world itself.
+
+Human-reaffirmed on 2026-07-17 after rejecting the implemented polygon/node surface: `hybrid physical map` means a physical corridor adventure map over hidden graph rules, not a region-polygon reskin. Prepare one representative map-and-shell slice for human review before converting the whole scenario. See `design/research/physical-adventure-map-direction-2026-07-17.md`.
 
 - Do not preserve the current colored node graph as the final visual metaphor.
 - Replace abstract region rectangles and luminous connection lines with physical terrain boundaries, roads/tracks/corridors, and recognizable site silhouettes wherever the authored topology allows.

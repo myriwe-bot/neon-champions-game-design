@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-07-17
 source_lore: []
 related:
   [
@@ -171,3 +171,55 @@ Source: `production/stories/story-cmd-005-champion-command-explanation-pass.md`.
 - Second-use denial is not understood.
 - Rally Order and Drone Strike do not yet feel differentiated.
 - Marshal vs Operator identity is not yet clear.
+
+## [2026-07-17] STORY-PROTOTYPE-CONTINUITY-QA-001 — REJECT / BLOCKED
+
+- Build / commit / PR: local Windows build prepared after Unity pointer PR #167; exact local build SHA was not reported. Activated Unity `main` pointer commit: `ab6e7b823a8aaec48f619b0b0ca4f605767a2f82`.
+- Scenario / mode: attempted standalone title-to-HRC continuity route; partial HRC Editor play after manual bootstrap setup.
+- Tester / role: human owner / first playtester.
+- Story / epic under review: `STORY-PROTOTYPE-CONTINUITY-QA-001` / EPIC-017.
+- Evidence path / screenshots / video: direct human report in session; no new truthful capture package supplied.
+
+### What dragged
+
+- Standalone showed the Unity splash and then a gray window.
+- The Editor path required manually adding `Strategic Map Bootstrap`.
+- Map readability and discoverability blocked further testing.
+
+### What surprised
+
+- `New Scenario` -> `Play HRC` worked in the Editor workaround.
+- Opponent movement after End Turn was visible and understood; it moved toward nodes.
+
+### What confused
+
+- Champion army/inventory/stack inspection could not be found.
+- `Sled Logistics Team x5` and `Mobility support` were visible, but the role meaning was unexplained.
+- Clicking the base, including with `Inspect` selected, did not expose construction or upgrade interaction.
+- White text was unreadable against gray/light-blue map geometry.
+- The meaning of the polygons and the intended next action were unclear.
+
+### What felt off-fiction
+
+- The visible map read as an abstract node/polygon diagram rather than a physical Arctic frontier with infrastructure, routes, bases, and sites.
+- The title copy `White Sky Calibration failure` was stylistically acceptable but sounded AI-written; copy revision is later work, not the current blocker.
+
+### Exact complaints to preserve
+
+- "There seems to be no interactivity whatsoever."
+- "The readability on the map is horrible."
+- "I have no idea what do do."
+- "The map is very strange and text is unreadable, it is in general a mess."
+- "Base cannot be oponed or upgraded."
+- "Also it seems that we are still using a node map based system."
+
+### Fun verdict
+
+- REJECT — usability and standalone-entry failures prevented the intended continuity and core-loop experience from being judged.
+
+### Next decision
+
+- Close story/epic: close the QA execution as DONE / REJECT; do not close EPIC-017 as a successful human gate.
+- One narrow follow-up: `STORY-STANDALONE-ENTRY-001` first.
+- Broader direction decision: approved physical Arctic adventure map over the hidden authored corridor graph; no visible polygon/node metaphor; defer full tile/hex movement.
+- Next visual gate: one representative map-and-shell vertical slice before whole-map rollout.

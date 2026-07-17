@@ -80,9 +80,9 @@
 - [[production/stories/story-ai-play-001-deterministic-opponent-pressure-after-resume]] — DONE / merged through Unity PR #166 with verified merge-commit CI.
 - [[production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]] — DONE / BLOCKED — REJECT CLOSEOUT after failed standalone entry and blocked human map playtest.
 - [[production/epics/epic-018-physical-adventure-map-and-player-entry-recovery]] — ACTIVE / approved recovery epic.
-- [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — READY / approved and Unity-pointer-activated sole current implementation packet.
-- `production/sprints/codex-story-standalone-entry-001.prompt.txt` — current runnable Unity implementation prompt.
-- [[production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]] — READY-candidate / pending next physical-map-and-shell gate; not runnable.
+- [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — DONE / merged through Unity PR #170 with verified post-merge build+launch CI.
+- [[production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]] — READY / approved sole next physical-map-and-shell packet; Unity pointer activation pending.
+- `production/sprints/codex-story-map-visual-slice-001.prompt.txt` — approved next implementation contract; fail-closed until verified Unity pointer activation.
 - [[production/sprints/epic-018-player-entry-and-physical-map-recovery]] — ordered recovery train and direction lock.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.

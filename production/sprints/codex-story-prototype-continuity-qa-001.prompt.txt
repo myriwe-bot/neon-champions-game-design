@@ -1,4 +1,4 @@
-HISTORICAL — DO NOT RUN. Human execution returned `BLOCKED — REJECT CLOSEOUT` on 2026-07-17. Current work is `STORY-STANDALONE-ENTRY-001` using `production/sprints/codex-story-standalone-entry-001.prompt.txt`.
+HISTORICAL — DO NOT RUN. Human execution returned `BLOCKED — REJECT CLOSEOUT` on 2026-07-17. `STORY-STANDALONE-ENTRY-001` later closed the player-entry blocker and is also historical. The sole next approved packet is `STORY-MAP-VISUAL-SLICE-001`, guarded by its Unity pointer activation.
 
 The content below is retained only for audit history.
 

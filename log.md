@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-07-17] activation | STORY-PROTOTYPE-CONTINUITY-QA-001 Unity pointer verified
+
+- Activated the Unity current-task pointer through PR #167 at exact head `f21ac05c4f9e1ce2986d429f0ec7537225dfce37`; exact-head CI 29583179517 passed all configured jobs.
+- PR #167 merged as `ab6e7b823a8aaec48f619b0b0ca4f605767a2f82`; post-merge `main` CI 29583671540 passed all configured jobs.
+- The checked-in Codex packet is now runnable. Human playtest execution and final verdict remain human-owned and cannot be inferred from CI.
+
 ## [2026-07-17] approval | STORY-PROTOTYPE-CONTINUITY-QA-001 approved
 
 - Human approved the exact prepared closeout packet and recommended defaults: fully close/relaunch the Windows build before Continue, and allow `PASS WITH FOLLOW-UPS` only without continuity or player-blocking defects.

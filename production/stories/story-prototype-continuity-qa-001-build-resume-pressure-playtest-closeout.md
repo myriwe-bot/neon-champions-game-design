@@ -14,7 +14,7 @@ related: [production/epics/epic-017-fully-playable-prototype-continuity-and-oppo
 
 ## Status
 
-READY / approved on 2026-07-17. Human approval accepts the exact proposed gate and recommended answers: fully close and relaunch the build before Continue, and allow `PASS WITH FOLLOW-UPS` only when no continuity or player-blocking defect remains. Implementation becomes runnable only after the Unity pointer activation gate passes.
+READY / approved and pointer-activated on 2026-07-17. Human approval accepts the exact proposed gate and recommended answers: fully close and relaunch the build before Continue, and allow `PASS WITH FOLLOW-UPS` only when no continuity or player-blocking defect remains. Unity pointer PR #167 merged as `ab6e7b823a8aaec48f619b0b0ca4f605767a2f82`; exact-head CI 29583179517 and post-merge `main` CI 29583671540 passed.
 
 ## Player value
 
@@ -95,6 +95,13 @@ Human-approved answers on 2026-07-17:
 - PR title: `STORY-PROTOTYPE-CONTINUITY-QA-001 build resume pressure playtest closeout`
 - Non-draft PR required for any Unity harness/evidence change.
 - Human notes and design closeout remain design-repository authority.
+
+## Activation evidence
+
+- Design approval commit: `266e0d55a15c15e4871cce86ce15ddc69238db5c`; publish CI 29583023235 passed.
+- Unity pointer PR: #167.
+- Pointer exact head: `f21ac05c4f9e1ce2986d429f0ec7537225dfce37`; CI 29583179517 passed all configured jobs.
+- Pointer merge: `ab6e7b823a8aaec48f619b0b0ca4f605767a2f82`; post-merge `main` CI 29583671540 passed all configured jobs.
 
 ## Verdict
 

@@ -1,0 +1,83 @@
+Resume and complete the existing local implementation of STORY-MAP-VISUAL-SLICE-001. This is a recovery/closeout run, not a fresh implementation.
+
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Known recovery state
+- The Unity checkout is already on `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
+- HEAD is still the approved pointer-activated main ancestor `4057207919bf4add15a418b8a5071d4490946b85`.
+- Valuable story-scoped local work exists and must be preserved:
+  - modified `Assets/NeonChampions/Runtime/Presentation/StrategicMapBootstrap.cs`;
+  - new `PhysicalArcticMapSliceAdapter.cs` plus `.meta`;
+  - new EditMode and PlayMode physical-slice tests plus `.meta` files;
+  - new `production/evidence/STORY-MAP-VISUAL-SLICE-001/` content.
+- No implementation commit, remote story branch, or implementation PR exists yet.
+
+Non-destructive preflight
+1. Start in the Unity repository.
+2. Run `git branch --show-current`, `git status --short --branch`, `git log --oneline -5`, and `git diff --stat`.
+3. The exact expected branch is `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
+4. Preserve all existing story-scoped modified and untracked files. Do not checkout main, reset, clean, stash, overwrite, or restart the implementation.
+5. `git fetch origin --prune` is allowed. Do not pull or merge into the dirty story worktree.
+6. Stop only for unrelated/unknown user files, merge conflicts, wrong branch/ancestry, or a genuine source-authority contradiction. Generated root `artifacts/` test/build output is disposable scratch and must not be committed.
+
+Authority
+Read and obey:
+- the complete approved story at `production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell.md` in the design repository;
+- the original implementation packet at `production/sprints/codex-story-map-visual-slice-001.prompt.txt`;
+- the Unity README current-task pointer.
+The original packet remains the complete scope, acceptance, exclusions, test, evidence, provenance, and human-gate authority. This recovery prompt changes only the execution mode: inspect and finish existing work, then publish it.
+
+Recovery work
+1. Review the entire current local diff before changing it. Confirm every file is story-scoped and every new Unity asset has a valid unique `.meta` GUID.
+2. Compare the implementation against every acceptance criterion in the approved story. Finish missing implementation instead of assuming the partial work is correct.
+3. Check especially:
+   - bounded presentation adapter consumes the real `StrategicMapPresentationSnapshot` and does not own/mutate domain or scenario state;
+   - exact HRC IDs/routes are mapped without scenario JSON, topology, movement, AI, save, balance, or content changes;
+   - normal Input System pointer/raycast Champion selection works;
+   - normal pointer/raycast HRC-base selection/open works after Champion selection and is not reinterpreted as movement;
+   - normal view reads as a physical Arctic place with permanent graph/polygon/node presentation removed inside the slice;
+   - Champion-selected view shows truthful movement and stack data plus restrained temporary route overlays;
+   - base-open view shows truthful existing base/facility context;
+   - `Mobility support` is truthfully explained or removed;
+   - no fake inventory, controls, facilities, units, sites, interactions, or screenshot-only state exists;
+   - out-of-slice behavior and all existing systems remain functional.
+4. Inspect and complete TDD evidence. Preserve truthful RED/GREEN notes; do not fabricate a RED run that did not occur.
+5. Run focused EditMode and PlayMode tests for the new slice, then all configured EditMode, PlayMode, placeholder/provenance validator, and Windows standalone checks using the repository's established CI scripts/commands.
+6. Fix all grounded compile, test, input, rendering, provenance, evidence, whitespace, or meta-file defects. Re-run affected checks after every fix.
+7. Complete `production/evidence/STORY-MAP-VISUAL-SLICE-001/` with:
+   - README covering commands/results, implementation commit provenance, exact converted IDs/routes, changed assets/settings/packages, RED/GREEN proof, omissions, asset provenance, contrast measurements, and rendered object/material counts;
+   - native `normal-physical-slice-1920x1080.png`;
+   - native `champion-selected-reachable-1920x1080.png`;
+   - native `hrc-base-selected-open-1920x1080.png`;
+   - focused test outputs or concise truthful notes.
+8. Inspect all three PNGs at native size. They must come from the production strategic-map path and contain no raw IDs, debug UI, local paths, clipped/overlapping critical text, or unsupported claims. Do not synthesize screenshots outside Unity.
+9. Run `git diff --check` before commit. Ensure the intended story diff contains no generated root `artifacts/`, secrets, unrelated work, temporary workflows, or accidental settings/package changes.
+
+Publication is mandatory
+1. Commit the actual completed story-scoped runtime, tests, `.meta` files, and evidence. Use a focused commit message such as `feat: add physical Arctic map visual slice`.
+2. If the evidence README must bind to the implementation commit SHA, record the first implementation commit SHA truthfully in a final evidence commit. Do not claim that an earlier SHA is the final PR head.
+3. Run `git diff origin/main...HEAD --check` after commits and verify the worktree is clean except disposable ignored scratch.
+4. Push exactly:
+   `git push -u origin HEAD:story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`
+5. Create or update a non-draft PR to `main` titled:
+   `STORY-MAP-VISUAL-SLICE-001 Physical Arctic adventure map and shell slice`
+6. The PR body must link the approved story and report exact converted IDs/routes, changed files/assets/settings/packages, RED/GREEN and pointer-path proof, three evidence captures, provenance, contrast, rendered counts, omissions/deferred work, local/remote SHA, and current CI state.
+7. If `gh pr create` is unavailable, use the available authenticated GitHub mechanism. Do not stop at `PR-ready`.
+8. Query the remote branch and PR after publication. Confirm the remote SHA equals local HEAD and differs from `origin/main`.
+9. Report exact CI run URLs and current statuses. Do not claim pending CI passed.
+
+Final response contract
+Print:
+- final local branch and SHA;
+- remote branch and SHA;
+- PR URL and draft state;
+- `git status --short --branch`;
+- `git log --oneline -5`;
+- every test/build/validator command and result;
+- evidence files and dimensions;
+- exact CI URLs/status;
+- remaining omissions and the explicit human visual gate.
+
+Do not merge. Independent exact-head review, CI verification, explicit human APPROVE/REVISE/REJECT of the three exact-head images, merge, post-merge CI, design closeout, and next-packet activation remain external gates handled after publication.

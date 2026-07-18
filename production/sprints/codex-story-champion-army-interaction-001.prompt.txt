@@ -31,7 +31,7 @@ Required PR title:
    - `git fetch origin --prune`
    - `git checkout main`
    - `git pull --ff-only origin main`
-   - verify `main` contains exact required ancestor `0a704445ce9343b7f6cd5e17cf14dc39c43a29ea` and the current implementation-pointer activation required by the story;
+   - verify `git rev-parse HEAD` is exactly `b634439960d08165ce44a3745ead2d1d62ddaecf`, the post-merge-verified implementation-pointer activation required by the story;
    - verify clean status before creating/switching the story branch.
 3. Stop and report without editing if:
    - the story is not READY/approved/pointer-activated;

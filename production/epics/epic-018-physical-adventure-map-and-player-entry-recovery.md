@@ -41,7 +41,7 @@ A clean Windows executable launches through the normal title/faction-choice path
 3. `STORY-CHAMPION-ARMY-INTERACTION-001` — READY / approved; expose the truthful current Champion army and prove Champion -> base -> Champion selection continuity without inventing inventory or stack-management mechanics.
 4. Human replaytest — DRAFT only; return to continuity/save/opponent-pressure validation after launch and basic playability blockers are repaired.
 
-The third child is the sole approved next packet and becomes runnable only after its Unity README pointer activation is merged and post-merge verified.
+The third child is the sole runnable approved packet after its Unity README pointer activation merged and passed post-merge CI.
 
 ## Boundaries
 
@@ -57,4 +57,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. Orders 1 and 2 are DONE. `STORY-CHAMPION-ARMY-INTERACTION-001` is the sole READY / approved next child, pending Unity pointer activation.
+ACTIVE / approved. Orders 1 and 2 are DONE. `STORY-CHAMPION-ARMY-INTERACTION-001` is the sole READY / approved and pointer-activated child.

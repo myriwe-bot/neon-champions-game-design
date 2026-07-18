@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-18] activation | STORY-CHAMPION-ARMY-INTERACTION-001 Unity pointer verified
+
+- Published the closeout and READY packet as design commit `03c6bb613aebc44f09773277d395e9e3cdb9bd7e`; publish run `29663792587` passed.
+- Activated the Unity README pointer through PR #173 at exact head `b75e2ad3c508770e0d2bc08f7e44a4762f01e831`; exact-head PR run `29663881861` passed all four configured jobs.
+- PR #173 merged as `b634439960d08165ce44a3745ead2d1d62ddaecf`; post-merge Unity `main` run `29664128970` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
+- `STORY-CHAMPION-ARMY-INTERACTION-001` is now the sole runnable packet and must branch from exact clean Unity `main` head `b634439960d08165ce44a3745ead2d1d62ddaecf`.
+
 ## [2026-07-18] closeout and promotion | Physical map slice DONE; Champion army interaction READY
 
 - Final immutable Unity head `b4afc99739bf2e58b16239f2fc50538d07496d02` passed exact-head push run `29662252972` and PR run `29662254233`, including Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.

@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / approved as EPIC-018 order 3 after `STORY-MAP-VISUAL-SLICE-001` received an exact-head visual APPROVE, merged, and passed post-merge CI. This is the sole next implementation packet.
+READY / approved and Unity-pointer-activated as EPIC-018 order 3 after `STORY-MAP-VISUAL-SLICE-001` received an exact-head visual APPROVE, merged, and passed post-merge CI. This is the sole runnable implementation packet.
 
 Approval basis: the human owner instructed the agent on 2026-07-18 to verify/fix/merge the current story, prepare the next implementation packet, and continue until done. Scope is bounded to the already-approved order-3 interaction follow-up and preserved player complaint below.
 
@@ -133,7 +133,7 @@ Human-approved exceptions: none.
 
 - Branch: `story/STORY-CHAMPION-ARMY-INTERACTION-001-discoverable-army-selection`
 - PR title: `STORY-CHAMPION-ARMY-INTERACTION-001 Discoverable Champion army selection`
-- Required implementation ancestor: Unity merge `0a704445ce9343b7f6cd5e17cf14dc39c43a29ea`; create the branch from current clean Unity `main` only after the Unity README activation pointer is merged and post-merge verified.
+- Required starting head: Unity `main` `b634439960d08165ce44a3745ead2d1d62ddaecf`, the post-merge-verified README activation pointer commit; create the story branch from exactly this clean head.
 - Non-draft PR required only after exact evidence is committed and human visual verdict is APPROVE; use draft during implementation/review.
 - PR must link this story, list exact source/design SHAs, RED/GREEN proof, changed files, native evidence hashes, CI URLs, omissions/deferred work, and exact head.
 - Codex must checkpoint, commit, push, and create/update the PR before context exhaustion.
@@ -150,4 +150,4 @@ Human-approved exceptions: none.
 
 ## Verdict
 
-READY / approved, but not active until `STORY-MAP-VISUAL-SLICE-001` merge and post-merge CI are recorded in the design authority and the Unity implementation pointer is activated.
+READY / approved / pointer-activated. Unity pointer PR #173 merged as `b634439960d08165ce44a3745ead2d1d62ddaecf`; exact-head PR CI `29663881861` and post-merge `main` CI `29664128970` passed all configured jobs. This is the sole runnable packet.

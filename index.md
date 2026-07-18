@@ -82,7 +82,7 @@
 - [[production/epics/epic-018-physical-adventure-map-and-player-entry-recovery]] — ACTIVE / approved recovery epic.
 - [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — DONE / merged through Unity PR #170 with verified post-merge build+launch CI.
 - [[production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]] — DONE / merged through Unity PR #172 as `0a704445…`; exact-head owner APPROVE and post-merge CI verified.
-- [[production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity]] — READY / approved sole next implementation packet, pending Unity README pointer activation.
+- [[production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity]] — READY / approved and Unity-pointer-activated sole current implementation packet; required starting head `b634439…`.
 - `production/sprints/codex-story-champion-army-interaction-001.prompt.txt` — current guarded Codex contract for truthful structured army discovery and Champion/base selection continuity.
 - [[production/sprints/epic-018-player-entry-and-physical-map-recovery]] — ordered recovery train and direction lock.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.

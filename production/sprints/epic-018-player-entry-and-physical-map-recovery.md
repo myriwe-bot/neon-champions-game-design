@@ -24,10 +24,10 @@ The standalone executable did not reach the player shell. The Editor workaround 
 |---:|---|---|---|
 | 1 | `STORY-STANDALONE-ENTRY-001` | DONE / merged / verified | Unity PR #170 merged; post-merge run 29609782110 passed build+launch, EditMode, PlayMode, and validator |
 | 2 | `STORY-MAP-VISUAL-SLICE-001` | DONE / merged / post-merge verified | Final head `b4afc997…` received owner APPROVE; PR #172 merged as `0a704445…`; post-merge run `29663206375` passed |
-| 3 | `STORY-CHAMPION-ARMY-INTERACTION-001` | READY / approved / awaiting Unity pointer activation | structured truthful army discovery and Champion -> base -> Champion context continuity; no inventory or stack-management expansion |
+| 3 | `STORY-CHAMPION-ARMY-INTERACTION-001` | READY / approved / pointer activated | Unity PR #173 merged as `b634439…`; post-merge run `29664128970` passed; structured truthful army discovery and Champion -> base -> Champion context continuity |
 | 4 | Human continuity replaytest | DRAFT | launch, readability, Champion/base discovery, save/relaunch/Continue, and post-resume opponent pressure are all testable |
 
-Orders 1 and 2 are closed. Order 3 is the sole approved next packet; implementation remains fail-closed until its Unity README pointer activation merges and passes post-merge CI.
+Orders 1 and 2 are closed. Order 3 is the sole runnable approved packet.
 
 ## Direction lock
 

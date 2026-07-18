@@ -20,7 +20,15 @@ Non-destructive preflight
 3. The exact expected branch is `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
 4. Preserve all existing story-scoped modified and untracked files. Do not checkout main, reset, clean, stash, overwrite, or restart the implementation.
 5. `git fetch origin --prune` is allowed. Do not pull or merge into the dirty story worktree.
-6. Stop only for unrelated/unknown user files, merge conflicts, wrong branch/ancestry, or a genuine source-authority contradiction. Generated root `artifacts/` test/build output is disposable scratch and must not be committed.
+6. A later preflight found `ProjectSettings/ProjectSettings.asset` dirty. The human owner authorizes one narrow cleanup only under this fail-closed condition:
+   - first run `git diff --ignore-space-at-eol --exit-code -- ProjectSettings/ProjectSettings.asset`;
+   - proceed only if that command exits `0`, proving the worktree change consists solely of end-of-line whitespace;
+   - then restore only that file with `git restore --source=HEAD --worktree -- ProjectSettings/ProjectSettings.asset`;
+   - immediately verify it no longer appears in `git status --short`;
+   - do not stage, commit, normalize, or otherwise edit this file;
+   - if the whitespace-insensitive diff exits nonzero or any semantic difference exists, stop and report the exact diff summary without restoring it.
+7. This authorization applies only to `ProjectSettings/ProjectSettings.asset`; preserve every other existing story-scoped file exactly as required above.
+8. Stop only for other unrelated/unknown user files, merge conflicts, wrong branch/ancestry, or a genuine source-authority contradiction. Generated root `artifacts/` test/build output is disposable scratch and must not be committed.
 
 Authority
 Read and obey:

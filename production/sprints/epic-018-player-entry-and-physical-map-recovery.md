@@ -7,7 +7,7 @@ owner: shared
 created: 2026-07-17
 updated: 2026-07-18
 approval: approved
-related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]
+related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity]
 ---
 
 # EPIC-018 Player Entry and Physical Map Recovery Train
@@ -23,11 +23,11 @@ The standalone executable did not reach the player shell. The Editor workaround 
 | Order | Packet | Status | Gate |
 |---:|---|---|---|
 | 1 | `STORY-STANDALONE-ENTRY-001` | DONE / merged / verified | Unity PR #170 merged; post-merge run 29609782110 passed build+launch, EditMode, PlayMode, and validator |
-| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer activated / visual revision approved | Candidate `69e33189…` received REVISE; human explicitly approved the bounded continuation packet on 2026-07-18 |
-| 3 | Champion/army/base interaction follow-up | DRAFT | formed from approved slice and exact remaining complaints |
+| 2 | `STORY-MAP-VISUAL-SLICE-001` | DONE / merged / post-merge verified | Final head `b4afc997…` received owner APPROVE; PR #172 merged as `0a704445…`; post-merge run `29663206375` passed |
+| 3 | `STORY-CHAMPION-ARMY-INTERACTION-001` | READY / approved / awaiting Unity pointer activation | structured truthful army discovery and Champion -> base -> Champion context continuity; no inventory or stack-management expansion |
 | 4 | Human continuity replaytest | DRAFT | launch, readability, Champion/base discovery, save/relaunch/Continue, and post-resume opponent pressure are all testable |
 
-Order 1 is closed. Order 2 is the sole runnable packet. Do not form or parallelize order 3.
+Orders 1 and 2 are closed. Order 3 is the sole approved next packet; implementation remains fail-closed until its Unity README pointer activation merges and passes post-merge CI.
 
 ## Direction lock
 
@@ -40,6 +40,6 @@ Order 1 is closed. Order 2 is the sole runnable packet. Do not form or paralleli
 
 ## Current prompt
 
-`production/sprints/codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt`
+`production/sprints/codex-story-champion-army-interaction-001.prompt.txt`
 
-The recovery prompt first preserves five known unrelated local Unity settings changes in a named stash, then resumes the approved bounded visual revision on existing draft Unity PR #172. The original packet must not restart. Order 3 remains blocked.
+The packet exposes the real current Champion army as structured data-driven rows/cards and proves clean Champion -> base -> Champion context replacement through production pointer input. It may not invent inventory, equipment, stack rearrangement, new mechanics, topology, content, or full-map work.

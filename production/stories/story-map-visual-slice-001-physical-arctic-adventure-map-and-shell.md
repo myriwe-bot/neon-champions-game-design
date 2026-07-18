@@ -1,11 +1,11 @@
 ---
 title: STORY-MAP-VISUAL-SLICE-001 Physical Arctic Adventure Map and Shell Vertical Slice
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-18
 approval: approved
 related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, docs/architecture/unity-technical-scheme, docs/architecture/testing-strategy, docs/architecture/control-manifest, production/playtests/playtest-journal]
 ---
@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / human-approved and Unity-pointer-activated on 2026-07-17 after `STORY-STANDALONE-ENTRY-001` merged and passed post-merge CI. Sole current Unity implementation packet.
+DONE / merged through Unity PR #172 and post-merge verified on 2026-07-18.
 
 The physical-adventure-map direction and ordered repair train were approved on 2026-07-17. The human owner then explicitly requested that the current repair be reviewed/merged and the next implementation packet prepared and continued through completion. This promotes this exact representative-slice packet; it does not authorize full-map rollout.
 
@@ -222,4 +222,4 @@ No implementer design, architecture, content, balance, UX, canon, or topology de
 
 ## Verdict
 
-READY / approved and pointer-activated; the human explicitly approved the bounded visual revision on 2026-07-18 after exact-head candidate `69e33189f448e184df7163dd7bfbfa67466920f5` received `REVISE`. A preflight retry found five unrelated local Unity settings changes and correctly stopped without edits. Continue only from `production/sprints/codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt`, which preserves those exact paths in a named local stash before resuming the approved revision packet. Keep Unity PR #172 draft; do not merge, scale to the full map, or activate the follow-up until regenerated exact-head evidence receives a fresh visual verdict.
+DONE / approved / merged / post-merge verified. Final implementation head `b4afc99739bf2e58b16239f2fc50538d07496d02` passed exact-head push CI `29662252972` and PR CI `29662254233`; owner visual verdict was APPROVE against the three isolated-process native evidence PNGs. Unity PR #172 merged as `0a704445ce9343b7f6cd5e17cf14dc39c43a29ea`, and post-merge `main` run `29663206375` passed all four configured jobs. The bounded HRC slice, paired-rut reachable tracks, visible-segment production raycast coverage, direct Champion/base interaction, truthful summary/catalog states, and robust two-launch player-entry proof shipped without topology, scenario, rules, settings, or package drift. Full-map rollout remains deferred; the remaining army-discovery complaint advances to `STORY-CHAMPION-ARMY-INTERACTION-001`.

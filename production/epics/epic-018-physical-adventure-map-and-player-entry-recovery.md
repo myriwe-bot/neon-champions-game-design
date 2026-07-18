@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-18
 approval: approved
 related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]
 ---
@@ -37,11 +37,11 @@ A clean Windows executable launches through the normal title/faction-choice path
 ## Capability sequence
 
 1. `STORY-STANDALONE-ENTRY-001` — DONE / merged as Unity PR #170 and post-merge verified; the executable now proves title -> scenario -> HRC strategic map through the normal production path.
-2. `STORY-MAP-VISUAL-SLICE-001` — READY / approved and Unity-pointer-activated through PR #171; produce the exact representative HRC physical-map-and-shell slice over unchanged graph rules for human visual review.
-3. Champion/army/base interaction follow-up — DRAFT only; form after the visual slice verdict so it does not encode a rejected layout.
+2. `STORY-MAP-VISUAL-SLICE-001` — DONE / merged through Unity PR #172 and post-merge verified; the representative HRC physical-map-and-shell slice received owner visual APPROVE over unchanged graph rules.
+3. `STORY-CHAMPION-ARMY-INTERACTION-001` — READY / approved; expose the truthful current Champion army and prove Champion -> base -> Champion selection continuity without inventing inventory or stack-management mechanics.
 4. Human replaytest — DRAFT only; return to continuity/save/opponent-pressure validation after launch and basic playability blockers are repaired.
 
-The second child is the sole runnable approved packet.
+The third child is the sole approved next packet and becomes runnable only after its Unity README pointer activation is merged and post-merge verified.
 
 ## Boundaries
 
@@ -57,4 +57,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. `STORY-STANDALONE-ENTRY-001` is DONE. `STORY-MAP-VISUAL-SLICE-001` is the sole READY / approved and pointer-activated child.
+ACTIVE / approved. Orders 1 and 2 are DONE. `STORY-CHAMPION-ARMY-INTERACTION-001` is the sole READY / approved next child, pending Unity pointer activation.

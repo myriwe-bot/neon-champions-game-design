@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-18] closeout and promotion | Physical map slice DONE; Champion army interaction READY
+
+- Final immutable Unity head `b4afc99739bf2e58b16239f2fc50538d07496d02` passed exact-head push run `29662252972` and PR run `29662254233`, including Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
+- Owner visual verdict was APPROVE against isolated-process native 1920×1080 normal, Champion-selected, and HRC-base-open evidence. The representative slice now reads as a physical Arctic place with paired-rut reachable tracks, distinct landmarks, discoverable Champion/base state, and no raw IDs, debug paths, or critical clipping.
+- Unity PR #172 merged as `0a704445ce9343b7f6cd5e17cf14dc39c43a29ea`; post-merge `main` run `29663206375` passed all four configured jobs, including two independent production player launches.
+- Closed `STORY-MAP-VISUAL-SLICE-001` as DONE without claiming full-map rollout or the remaining army-discovery complaint complete.
+- Promoted `STORY-CHAMPION-ARMY-INTERACTION-001` as the sole READY / approved next packet. It exposes current snapshot army slots and Champion -> base -> Champion context continuity; inventory, equipment, stack rearrangement, and new mechanics remain excluded.
+- The new Codex packet remains fail-closed until a Unity README activation pointer is merged and post-merge verified.
+
 ## [2026-07-18] recovery | Preserve local Unity settings and resume visual revision
 
 - Codex correctly stopped before editing because five unrelated tracked Unity settings files were dirty on the story branch.

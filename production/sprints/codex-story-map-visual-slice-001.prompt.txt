@@ -30,6 +30,15 @@ Branch and recovery
 - Generated root `artifacts/` logs/results are disposable scratch: never commit them and do not treat them as unrelated human work. Story evidence belongs under `production/evidence/STORY-MAP-VISUAL-SLICE-001/`.
 - Stop for another branch, unknown source/assets, unrelated user work, conflicts, or wrong ancestry.
 
+Execution reliability and checkpoint contract
+- Keep command output bounded: use status/stat/path-scoped searches and test-result summaries; never print whole source files, full repository diffs, full Unity logs, or XML results unless one narrow excerpt is required to diagnose the first failure.
+- After authority preflight, do not repeatedly reread the full authority set. Record a compact checklist and use targeted lookups only.
+- Preserve work remotely before long Unity suites: once the first coherent story-scoped implementation and focused tests exist, run `git diff --check`, commit a truthful draft checkpoint, push the required branch, and open/update a draft PR. Do not leave the only copy in an uncommitted Windows worktree.
+- Run focused compile/tests before full suites. Inspect only the first concrete failure, fix it, and rerun the affected check before expanding verification.
+- Clear `NEON_CHAMPIONS_EVIDENCE_DIR` before any broad PlayMode suite. Set it only for the focused three-capture test, clear it immediately afterward, and reject unrelated generated screenshots from the story evidence directory.
+- Split the work into bounded phases: (1) authority/preflight and remote checkpoint, (2) focused implementation/tests, (3) isolated evidence generation, (4) full verification and publication closeout.
+- If context is running low or a long verification cannot finish, do not continue consuming context or stop locally: commit and push a truthful checkpoint, keep/update the draft PR, and report the exact remaining command/failure and remote SHA. Never restart completed implementation in a fresh session.
+
 Player problem
 The prior human playtest could not read or use the strategic map. Preserve these complaints as acceptance authority:
 - "There seems to be no interactivity whatsoever."
@@ -136,7 +145,7 @@ Human visual gate
 - The exact candidate-head normal/Champion/base evidence requires explicit human APPROVE / REVISE / REJECT before merge or any full-map rollout story.
 
 Publication contract
-1. Commit the actual story-scoped implementation and evidence.
+1. Commit the actual story-scoped implementation and evidence. Earlier truthful draft checkpoints are allowed and preferred over leaving valuable work local-only.
 2. Push committed HEAD exactly to `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
 3. Create or update a PR titled `STORY-MAP-VISUAL-SLICE-001 Physical Arctic adventure map and shell slice`.
 4. PR may remain draft while evidence is incomplete, but final handoff must mark it ready only when all implementation evidence is present.

@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-18] workflow | Codex checkpoint and stdin reliability repair
+
+- Root cause analysis of the interrupted map-slice implementation found two Codex sessions exhausted context before publication: the packet combined a large authority preflight, implementation, broad Unity suites, evidence generation, and GitHub closeout without requiring an early remote checkpoint or bounded output.
+- Updated the active packet to require compact tool output, one-pass authority reading, focused-first verification, isolated evidence environment handling, phased execution, and a truthful commit/push/draft-PR checkpoint before long suites.
+- Corrected the copy-safe PowerShell handoff to pipe the literal prompt through stdin with `$prompt | codex exec --sandbox workspace-write -`; multiline prompt text is no longer passed positionally.
+- Existing implementation PR #172 and exact-head evidence are unchanged by this design-control workflow repair.
+
 ## [2026-07-17] activation | STORY-MAP-VISUAL-SLICE-001 Unity pointer verified
 
 - Published the approved design packet as `dc4c4b429bc955f716cd2367e79297e767aa8d4c`; design publish run 29610677245 passed.

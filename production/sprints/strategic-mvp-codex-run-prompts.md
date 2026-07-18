@@ -410,7 +410,7 @@ git pull --ff-only origin main
 git status --short
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001.prompt.txt"
-codex exec --sandbox workspace-write $prompt
+$prompt | codex exec --sandbox workspace-write -
 ```
 
 Trusted-repo fallback:
@@ -426,7 +426,7 @@ git pull --ff-only origin main
 git status --short
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001.prompt.txt"
-codex exec --sandbox danger-full-access $prompt
+$prompt | codex exec --sandbox danger-full-access -
 ```
 
 ## Final control-surface state

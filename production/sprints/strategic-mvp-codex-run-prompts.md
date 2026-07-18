@@ -395,7 +395,7 @@ Trusted-repo fallback:
 Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ux-002.prompt.txt" | codex exec --sandbox danger-full-access
 ```
 
-## Copy-safe STORY-MAP-VISUAL-SLICE-001 visual-revision handoff
+## Copy-safe STORY-MAP-VISUAL-SLICE-001 visual-revision recovery handoff
 
 Primary workspace-write run:
 
@@ -410,7 +410,7 @@ git switch story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
 git pull --ff-only origin story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001-visual-revision.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt"
 $prompt | codex exec --sandbox workspace-write -
 ```
 
@@ -427,10 +427,10 @@ git switch story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
 git pull --ff-only origin story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001-visual-revision.prompt.txt"
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt"
 $prompt | codex exec --sandbox danger-full-access -
 ```
 
 ## Final control-surface state
 
-`STORY-PROTOTYPE-CONTINUITY-QA-001` remains historical and DONE with `BLOCKED — REJECT CLOSEOUT`; its human route did not pass. `STORY-STANDALONE-ENTRY-001` is DONE through Unity PR #170 and post-merge CI 29609782110. `STORY-MAP-VISUAL-SLICE-001` is the sole current READY / approved packet, but exact-head `69e33189…` received REVISE; `production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt` is the active bounded continuation contract for existing draft PR #172. Do not restart the original prompt. All later interaction rollout/replaytest work and `STORY-PROOF-QA-001` remain deferred.
+`STORY-PROTOTYPE-CONTINUITY-QA-001` remains historical and DONE with `BLOCKED — REJECT CLOSEOUT`; its human route did not pass. `STORY-STANDALONE-ENTRY-001` is DONE through Unity PR #170 and post-merge CI 29609782110. `STORY-MAP-VISUAL-SLICE-001` is the sole current READY / approved packet, but exact-head `69e33189…` received REVISE and the first retry stopped on five unrelated local Unity settings changes. `production/sprints/codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt` is the active non-destructive recovery contract for existing draft PR #172. All later interaction rollout/replaytest work and `STORY-PROOF-QA-001` remain deferred.

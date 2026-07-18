@@ -82,7 +82,7 @@
 - [[production/epics/epic-018-physical-adventure-map-and-player-entry-recovery]] — ACTIVE / approved recovery epic.
 - [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — DONE / merged through Unity PR #170 with verified post-merge build+launch CI.
 - [[production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]] — READY / approved and Unity-pointer-activated sole current packet; exact-head `69e33189…` received REVISE and continues through the bounded visual-revision prompt.
-- `production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt` — current bounded continuation contract for existing draft Unity PR #172; do not restart the original implementation prompt.
+- `production/sprints/codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt` — current recovery/continuation contract; preserve the five known local Unity settings changes, then finish existing draft Unity PR #172.
 - [[production/sprints/epic-018-player-entry-and-physical-map-recovery]] — ordered recovery train and direction lock.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.

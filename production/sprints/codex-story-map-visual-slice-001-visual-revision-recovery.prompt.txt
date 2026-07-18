@@ -1,0 +1,58 @@
+Recover from the STORY-MAP-VISUAL-SLICE-001 visual-revision preflight stop, preserve the known local Unity settings changes non-destructively, then complete the approved bounded visual revision and publish it to existing draft PR #172.
+
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Required Unity branch: `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`
+- Required starting implementation head: `69e33189f448e184df7163dd7bfbfa67466920f5`
+- Existing draft PR: https://github.com/myriwe-bot/neon-champions-unity/pull/172
+- Complete approved revision authority: `production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt`
+
+Human-authorized non-destructive dirty-file recovery
+The immediately preceding run stopped without edits after finding exactly these tracked local changes:
+- `Assets/Settings/DefaultVolumeProfile.asset`
+- `Assets/Settings/PC_RPAsset.asset`
+- `Assets/Settings/UniversalRenderPipelineGlobalSettings.asset`
+- `ProjectSettings/ProjectSettings.asset`
+- `ProjectSettings/UnityConnectSettings.asset`
+
+These files are not authorized story scope. Preserve them in a named local Git stash; do not discard, normalize, stage, commit, push, or inspect credentials/private values from them.
+
+Recovery procedure
+1. Update design `main` only, then return to the Unity repository. Do not update or switch the dirty Unity worktree before preservation.
+2. Confirm the Unity branch is exactly the required story branch and HEAD is exactly `69e33189f448e184df7163dd7bfbfa67466920f5`.
+3. Run compact `git status --short --branch` and confirm the dirty set contains exactly the five paths listed above and no untracked or additional modified files.
+4. If any other dirty path exists, stop and report it without changing anything.
+5. Preserve exactly the five paths with a named stash:
+
+   `git stash push -m "pre-visual-revision local Unity settings 2026-07-18" -- Assets/Settings/DefaultVolumeProfile.asset Assets/Settings/PC_RPAsset.asset Assets/Settings/UniversalRenderPipelineGlobalSettings.asset ProjectSettings/ProjectSettings.asset ProjectSettings/UnityConnectSettings.asset`
+
+6. Verify the newest stash exists with `git stash list -n 1` and includes all five paths using a name-only stash inspection. Do not print file contents or full diffs.
+7. Verify `git status --short` is empty. If preservation failed or any dirty path remains, stop without editing story files.
+8. Fetch the remote story branch and fast-forward only:
+   `git fetch origin`
+   `git pull --ff-only origin story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`
+9. Confirm required starting head `69e33189…` remains an ancestor.
+
+Implementation authority
+After successful preservation, read and follow `production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt` completely. Its scope, exclusions, visual correction, checkpoint, tests, isolated evidence generation, publication, and final-report requirements remain binding.
+
+Additional settings-noise rule during Unity execution
+- Never stage or commit the five settings paths above.
+- If Unity regenerates changes only in those same five paths during tests/build/capture, preserve that generated state in a second clearly named local stash before story commits, then continue.
+- If Unity changes any other ProjectSettings, Assets/Settings, package, scenario, or unrelated path, stop and report it unless the approved revision packet explicitly requires that path.
+- Do not pop or apply either settings stash during this run. Report exact stash names and the safe later recovery command in the final response.
+
+Completion is mandatory
+- Do not stop after preservation or at `PR-ready`.
+- Complete the bounded visual revision.
+- Create truthful checkpoint commits and push before long suites as required.
+- Regenerate and inspect all three isolated native captures.
+- Run required focused/full verification.
+- Push the final exact story head to the existing remote branch.
+- Update existing draft PR #172, keeping it draft.
+- Report exact local/remote SHA, tests, evidence, CI URLs/status, stashes preserved, omissions, and renewed human visual gate.
+- Do not merge or scale to the full map.
+
+Context/output discipline
+Use compact status/stat/path-scoped output and first-failure summaries. Never dump complete source files, full diffs, Unity logs, XML, or binary settings contents. If context runs low, commit and push a truthful checkpoint, update the draft PR, and report the exact remaining command/failure rather than losing progress.

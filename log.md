@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-07-18] recovery | Preserve local Unity settings and resume visual revision
+
+- Codex correctly stopped before editing because five unrelated tracked Unity settings files were dirty on the story branch.
+- Activated a non-destructive recovery packet that requires exactly those five paths to be preserved in a named local stash, rejects any additional dirty path, and forbids staging/committing/pushing or printing their contents.
+- The recovery packet must continue through implementation, checkpoint push, tests, isolated evidence regeneration, and update of existing draft PR #172; it may not stop after cleanup or at `PR-ready`.
+
 ## [2026-07-18] approval | STORY-MAP-VISUAL-SLICE-001 bounded visual revision approved
 
 - Human explicitly approved the prepared visual-revision packet after reviewing the current report and REVISE disposition.

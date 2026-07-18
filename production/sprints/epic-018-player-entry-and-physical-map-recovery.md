@@ -40,6 +40,6 @@ Order 1 is closed. Order 2 is the sole runnable packet. Do not form or paralleli
 
 ## Current prompt
 
-`production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt`
+`production/sprints/codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt`
 
-The bounded visual-revision prompt is active on existing draft Unity PR #172. The original packet remains authority, but must not be restarted. Order 3 remains blocked.
+The recovery prompt first preserves five known unrelated local Unity settings changes in a named stash, then resumes the approved bounded visual revision on existing draft Unity PR #172. The original packet must not restart. Order 3 remains blocked.

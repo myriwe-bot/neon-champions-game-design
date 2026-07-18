@@ -405,8 +405,9 @@ git checkout main
 git pull --ff-only origin main
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git checkout main
-git pull --ff-only origin main
+git fetch origin
+git switch story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
+git pull --ff-only origin story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
 git status --short
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001-visual-revision.prompt.txt"
@@ -421,8 +422,9 @@ git checkout main
 git pull --ff-only origin main
 
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git checkout main
-git pull --ff-only origin main
+git fetch origin
+git switch story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
+git pull --ff-only origin story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell
 git status --short
 
 $prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-visual-slice-001-visual-revision.prompt.txt"

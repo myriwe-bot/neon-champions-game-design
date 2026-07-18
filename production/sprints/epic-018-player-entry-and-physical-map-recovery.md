@@ -23,7 +23,7 @@ The standalone executable did not reach the player shell. The Editor workaround 
 | Order | Packet | Status | Gate |
 |---:|---|---|---|
 | 1 | `STORY-STANDALONE-ENTRY-001` | DONE / merged / verified | Unity PR #170 merged; post-merge run 29609782110 passed build+launch, EditMode, PlayMode, and validator |
-| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer activated / visual revision | Candidate `69e33189…` received REVISE: readable shell and interactions passed, but physical Arctic place/route/landmark hierarchy remains insufficient |
+| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer activated / visual revision approved | Candidate `69e33189…` received REVISE; human explicitly approved the bounded continuation packet on 2026-07-18 |
 | 3 | Champion/army/base interaction follow-up | DRAFT | formed from approved slice and exact remaining complaints |
 | 4 | Human continuity replaytest | DRAFT | launch, readability, Champion/base discovery, save/relaunch/Continue, and post-resume opponent pressure are all testable |
 

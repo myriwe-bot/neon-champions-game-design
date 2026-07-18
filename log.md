@@ -2,6 +2,12 @@
 
 > Append-only project log.
 
+## [2026-07-18] approval | STORY-MAP-VISUAL-SLICE-001 bounded visual revision approved
+
+- Human explicitly approved the prepared visual-revision packet after reviewing the current report and REVISE disposition.
+- `production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt` is runnable now against the existing story branch and draft Unity PR #172.
+- Approval does not authorize merge or full-map rollout. Regenerated exact-head evidence, CI, immutable review, and a fresh visual verdict remain mandatory.
+
 ## [2026-07-18] visual gate | STORY-MAP-VISUAL-SLICE-001 exact-head candidate REVISE
 
 - Reviewed the three native candidate captures at Unity head `69e33189f448e184df7163dd7bfbfa67466920f5`; the timed owner-choice gate delegated the decision to best judgment.

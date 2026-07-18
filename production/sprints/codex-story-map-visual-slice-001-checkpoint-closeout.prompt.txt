@@ -1,0 +1,61 @@
+Complete and publish the existing local STORY-MAP-VISUAL-SLICE-001 work. This is a compact checkpoint/closeout run after two earlier Codex sessions exhausted their context. Do not restart the implementation and do not dump large files or full diffs into output.
+
+Workspace and authority
+- Work only in `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`.
+- Required branch: `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
+- Expected ancestor: `4057207919bf4add15a418b8a5071d4490946b85`.
+- The READY story, original prompt, architecture, and pointer were already validated in the immediately preceding recovery run. They are unchanged. Check only story frontmatter/status and the current Unity pointer with targeted searches; do not print or reread whole design documents.
+- Preserve all current story-scoped code, tests, `.meta` files, and required evidence. Do not checkout, pull, reset, clean, stash, or restart.
+
+Token/output discipline
+- Do not run unbounded `Get-Content`, full `git diff`, recursive `Get-ChildItem` over the repository, or commands that print full Unity logs/XML.
+- Use `git status --short`, `git diff --stat`, path-scoped searches, test-result summaries, and the first failing assertion only.
+- Keep tool output compact. The goal is checkpoint, verify, fix, publish.
+
+Known current state
+- Partial implementation now includes the physical slice adapter, `StrategicMapBootstrap` integration, plain-language travel-support copy, focused EditMode/PlayMode tests, PlayMode assembly reference changes, and compatibility updates to existing smoke/proof tests.
+- `ProjectSettings/ProjectSettings.asset` is disposable Unity serialization noise only when `git diff --ignore-space-at-eol --exit-code -- ProjectSettings/ProjectSettings.asset` exits `0`. Whenever Unity regenerates that same whitespace-only diff, restore only that file to HEAD and verify it disappears. If the command exits nonzero, stop without restoring.
+- A prior full evidence run accidentally wrote many unrelated smoke-suite PNGs into the untracked story evidence directory. Only focused story evidence belongs there.
+
+Phase 1 — preserve work remotely immediately
+1. Confirm branch, status, ancestor, and GitHub authentication using compact output.
+2. Apply the conditional `ProjectSettings.asset` whitespace cleanup above.
+3. In `production/evidence/STORY-MAP-VISUAL-SLICE-001/`, retain only:
+   - `README.md` if present;
+   - `normal-physical-slice-1920x1080.png`;
+   - `champion-selected-reachable-1920x1080.png`;
+   - `hrc-base-selected-open-1920x1080.png`;
+   - narrowly named focused test/result notes created for this story.
+   Remove the other unrelated generated smoke-suite images only after confirming the directory is untracked/story-owned and the filenames are not in this allowlist. Do not touch evidence outside this story directory.
+4. Run `git diff --check`. Fix story-file whitespace; restore `ProjectSettings.asset` only under the verified condition above.
+5. Stage only current story-scoped runtime/test/meta/evidence files. Never stage root `artifacts/` or `ProjectSettings.asset`.
+6. Create a checkpoint commit and push it immediately to:
+   `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`
+7. Verify the remote SHA equals local HEAD and differs from `origin/main`. This checkpoint push is mandatory before long tests.
+8. Open a draft PR immediately if none exists, using the approved title. This ensures the work is no longer local-only.
+
+Phase 2 — focused completion
+1. Review only the current PR-range stat and targeted changed code. Do not dump the complete diff.
+2. Ensure actual production Input System pointer/raycast selection of the HRC Champion and base works; tests must not call private `Update` by reflection as a substitute.
+3. Ensure the physical HRC slice is bounded to HRC, leaves QXZ/legacy paths functional, does not mutate scenario/domain rules, and hides debug/graph/polygon presentation only inside the approved slice.
+4. Ensure plain-language travel-support copy remains truthful without inventing mechanics.
+5. Before full test suites, remove `NEON_CHAMPIONS_EVIDENCE_DIR` from the environment so unrelated tests cannot write into the story evidence directory.
+6. Run the repository's configured EditMode, PlayMode, placeholder/provenance validator, and Windows standalone checks. On failure, inspect only result summaries and the first concrete failing assertion; fix and rerun.
+7. Generate the three required 1920x1080 captures only with the focused physical-slice PlayMode test and a temporary `NEON_CHAMPIONS_EVIDENCE_DIR` pointing to the story evidence directory. Remove the variable immediately afterward.
+8. Verify exactly those three PNGs exist, are 1920x1080, and are production-path captures. Keep the story evidence directory focused.
+9. Complete a concise README with truthful commands/results, exact IDs/routes, changed assets/settings/packages, RED/GREEN facts, provenance, contrast, rendered counts, implementation SHA disposition, and omissions. Do not fabricate historical RED evidence.
+10. Restore whitespace-only `ProjectSettings.asset` again after all Unity runs, run `git diff --check`, and ensure no temporary workflow/root artifacts are staged.
+11. Commit fixes/evidence and push the new exact head.
+
+Phase 3 — publication closeout
+1. Run `git diff origin/main...HEAD --check` and compact status/log checks.
+2. Update the PR body with scope, exact IDs/routes, tests, three captures, provenance/contrast/counts, omissions, local/remote SHA, and current CI state.
+3. Mark the PR non-draft only when required local implementation/evidence is complete.
+4. Query and report exact push/PR CI URLs and statuses; do not claim pending CI passed.
+5. Verify final local SHA = remote branch SHA and print the PR URL.
+
+Do not merge. Human visual approval and independent exact-head review remain external gates.
+
+Failure contract
+- Do not end with only `PR-ready` or a dirty local worktree.
+- Because context exhaustion happened twice, if a long verification cannot finish, preserve progress first: commit and push a truthful checkpoint, keep/update the draft PR, then report the exact remaining failing test/command and remote SHA. Remote checkpoint publication is mandatory even when later verification remains incomplete.

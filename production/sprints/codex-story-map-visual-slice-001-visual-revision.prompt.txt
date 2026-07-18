@@ -1,0 +1,73 @@
+Revise the existing STORY-MAP-VISUAL-SLICE-001 implementation after the exact-head visual verdict REVISE. This is a bounded visual correction on the existing branch and PR, not a restart or a new story.
+
+Workspace and immutable starting point
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Required branch: `story/STORY-MAP-VISUAL-SLICE-001-physical-arctic-map-shell`.
+- Remote starting head: `69e33189f448e184df7163dd7bfbfa67466920f5`.
+- Existing draft PR: https://github.com/myriwe-bot/neon-champions-unity/pull/172
+- Visual verdict record: https://github.com/myriwe-bot/neon-champions-unity/pull/172#issuecomment-5012488299
+
+Preflight
+1. Update design `main` with `git checkout main` and `git pull --ff-only origin main`.
+2. In Unity, fetch origin, switch to the exact required story branch, and fast-forward it from the remote story branch. Do not reset, clean, or overwrite local work.
+3. Stop for unrelated dirty files, conflicts, wrong branch/ancestry, or if the branch does not contain starting head `69e33189…`.
+4. Read only:
+   - the approved story;
+   - the original prompt's hard exclusions and evidence contract;
+   - the PR visual-verdict comment;
+   - the current PR-range stat and targeted physical-slice code/tests.
+   The complete authority set was already validated. Do not reread or print all linked design documents.
+
+What already passes and must be preserved
+- Unchanged graph/domain/scenario/topology, save, AI, balance, settings, packages, and content.
+- Real Input System pointer/raycast Champion, route, and HRC-base interaction.
+- Canonical in-slice and out-of-slice Champion projection and snapshot-backed reachability.
+- Readable shell, truthful movement/army copy, opaque panels, fitted base facility catalog, and no critical overlap/raw IDs/debug paths.
+- Existing EditMode/PlayMode regression coverage, performance baseline, provenance boundary, and all exact-head technical fixes.
+
+Required bounded visual correction
+The current candidate still reads primarily as flat geometric primitives and graph corridors rather than a convincing physical Arctic place. Correct that without changing gameplay or scaling to the full map.
+
+1. Physical ground composition
+- Replace the dominant rectangular/map-diagram read with a more coherent irregular snow/ice landmass, exposed dark rock/industrial ground, and water/coast boundary.
+- Use overlapping, rotated, tapered, or clustered primitive silhouettes to break axis-aligned blockout edges.
+- Establish foreground/midground/background hierarchy and believable relative scale; keep the representative corridor fully visible and clickable.
+
+2. Landmark silhouettes
+- Make the HRC base read unmistakably as a civic/industrial compound through clustered buildings, yard/perimeter structure, and one clear focal silhouette.
+- Make the data cache/resource destination, guarded industrial destination, and distant calibration/crisis anchor visually distinct from each other at normal view without relying on permanent labels.
+- Preserve replace-later procedural construction; add no external or AI-generated asset unless the original provenance contract is fully satisfied.
+
+3. Route treatment
+- Roads/tracks must read as physical corridors embedded in terrain in normal view, not straight graph bars.
+- Selected reachability may brighten or edge-highlight those same physical tracks, but must not reintroduce obvious node-to-node graph lines.
+- Preserve exact route IDs, click/raycast geometry, legality, and snapshot-backed reachability.
+
+4. Visual hierarchy
+- The Champion must remain discoverable without becoming a floating abstract token.
+- Interactive destinations need restrained shape/lighting/contrast affordances beyond hue while normal view remains uncluttered.
+- Do not solve the problem by adding permanent text labels, debug outlines, extra panels, fake controls, or new mechanics.
+
+TDD and verification
+- Add or adjust regression assertions only where needed to prove decorative geometry cannot block production raycasts and selected physical tracks correspond exactly to current reachable route IDs.
+- Run focused EditMode and PlayMode checks before broad suites; inspect only the first concrete failure.
+- Clear `NEON_CHAMPIONS_EVIDENCE_DIR` before broad PlayMode runs. Set it only for isolated focused capture generation and clear it immediately afterward.
+- Regenerate all three native 1920x1080 captures in isolated Unity processes after the final rendering change.
+- Inspect captures at native dimensions for physical-place read, clipping/overlap, raw IDs/debug paths, route clarity, base context, and readability.
+- Update evidence README, hashes, counts, focused output, and PR body truthfully.
+- Run all configured EditMode, PlayMode, placeholder/provenance, standalone/launch, evidence-hygiene, meta-GUID, and PR-range whitespace checks.
+
+Checkpoint and context discipline
+- Keep output bounded: status/stat/path-scoped searches and result summaries only; never print full files, full diffs, Unity logs, or XML.
+- Before long full suites, commit and push the first coherent visual revision to the required branch and keep PR #172 draft.
+- If context runs low, push a truthful checkpoint and report the remaining exact command/failure and remote SHA. Do not restart implementation.
+
+Publication
+- Commit and push only scoped runtime/test/evidence changes to the existing required branch.
+- Update existing PR #172; do not create another PR.
+- Keep it draft after publication. A fresh exact-head technical review and explicit visual verdict on the regenerated images are required.
+- Do not merge, close the story, activate order 3, or scale to the full map.
+
+Final response
+Report local/remote SHA, branch, PR URL/draft state, scoped files changed, tests and exact results, evidence dimensions/hashes, exact CI URLs/status, remaining omissions, and the renewed human visual gate.

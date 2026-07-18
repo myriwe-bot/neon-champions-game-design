@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-18] visual gate | STORY-MAP-VISUAL-SLICE-001 exact-head candidate REVISE
+
+- Reviewed the three native candidate captures at Unity head `69e33189f448e184df7163dd7bfbfa67466920f5`; the timed owner-choice gate delegated the decision to best judgment.
+- Recorded `REVISE` on Unity PR #172. Shell readability, Champion/army state, route visibility, catalog fit, and absence of raw IDs/debug paths passed, but the map still reads primarily as flat primitives and graph corridors rather than a convincing physical Arctic place.
+- Kept PR #172 draft and preserved the unchanged graph/domain/scenario contract. Full-map rollout and order 3 remain blocked.
+- Activated `production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt` as the bounded continuation packet for the existing branch/PR; the original implementation prompt must not restart.
+
 ## [2026-07-18] workflow | Codex checkpoint and stdin reliability repair
 
 - Root cause analysis of the interrupted map-slice implementation found two Codex sessions exhausted context before publication: the packet combined a large authority preflight, implementation, broad Unity suites, evidence generation, and GitHub closeout without requiring an early remote checkpoint or bounded output.

@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-07-18
 approval: approved
 related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]
 ---
@@ -23,7 +23,7 @@ The standalone executable did not reach the player shell. The Editor workaround 
 | Order | Packet | Status | Gate |
 |---:|---|---|---|
 | 1 | `STORY-STANDALONE-ENTRY-001` | DONE / merged / verified | Unity PR #170 merged; post-merge run 29609782110 passed build+launch, EditMode, PlayMode, and validator |
-| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer activated | Unity PR #171 and post-merge run 29611677131 passed; human APPROVE/REVISE/REJECT on exact implementation-head evidence remains required |
+| 2 | `STORY-MAP-VISUAL-SLICE-001` | READY / approved / pointer activated / visual revision | Candidate `69e33189…` received REVISE: readable shell and interactions passed, but physical Arctic place/route/landmark hierarchy remains insufficient |
 | 3 | Champion/army/base interaction follow-up | DRAFT | formed from approved slice and exact remaining complaints |
 | 4 | Human continuity replaytest | DRAFT | launch, readability, Champion/base discovery, save/relaunch/Continue, and post-resume opponent pressure are all testable |
 
@@ -40,6 +40,6 @@ Order 1 is closed. Order 2 is the sole runnable packet. Do not form or paralleli
 
 ## Current prompt
 
-`production/sprints/codex-story-map-visual-slice-001.prompt.txt`
+`production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt`
 
-The map-slice prompt is active through verified Unity pointer PR #171.
+The bounded visual-revision prompt is active on existing draft Unity PR #172. The original packet remains authority, but must not be restarted. Order 3 remains blocked.

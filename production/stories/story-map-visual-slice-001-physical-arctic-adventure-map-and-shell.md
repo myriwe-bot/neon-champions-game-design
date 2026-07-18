@@ -222,4 +222,4 @@ No implementer design, architecture, content, balance, UX, canon, or topology de
 
 ## Verdict
 
-READY / approved and pointer-activated. Implement only from `production/sprints/codex-story-map-visual-slice-001.prompt.txt`.
+READY / approved and pointer-activated; implementation remains in visual revision after exact-head candidate `69e33189f448e184df7163dd7bfbfa67466920f5` received `REVISE` on 2026-07-18. Shell readability, production pointer paths, selected/base states, and technical evidence passed, but the central map still read as flat primitives and graph corridors rather than a convincing physical Arctic place. Continue only from `production/sprints/codex-story-map-visual-slice-001-visual-revision.prompt.txt`. Keep Unity PR #172 draft; do not merge, scale to the full map, or activate the follow-up until regenerated exact-head evidence receives a fresh visual verdict.

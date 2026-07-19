@@ -332,9 +332,12 @@ Open questions: none. An implementer can complete this story without inventing m
 
 - Design authority commit: `0696abbaefc53af009b739c47a810143930a1417`; publish CI `29685079236` passed.
 - Authority clarification commit: `b7bff8049af40959832e606d2bf0296b4acb1442`; publish CI `29685225278` passed.
-- Readiness-blocker correction commit: `f0cfe06b36baf470e2f30e8918ba95202751ac43`; final publish/review evidence is recorded in design control before pointer activation.
-- Unity README pointer PR/exact-head/post-merge CI: required before Codex execution.
+- Readiness-blocker corrections culminated at design head `3e1c1f28bccb87dd81678bf9684b54d69fd020ce`; publish CI `29686052697` passed. Final independent design-readiness and Unity-feasibility reviews returned PASS against that authority and Unity baseline `07aec85501a12252c5370e9e41a301c0f1afa0bf`.
+- Unity README pointer PR #175: https://github.com/myriwe-bot/neon-champions-unity/pull/175
+- Pointer exact head `ced0d055cc557186f69e9d146d3c6f8602bc6dee`; immutable independent pointer review PASS; exact-head Unity Foundation CI `29686447124` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
+- Pointer merge commit / required implementation ancestor: `7b2c6500685a30e91524e783826f5afca381695c`.
+- Post-merge Unity `main` CI `29686825262` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
 
 ## Verdict
 
-READY / approved. The packet is complete and implementation-authorized, but Codex must fail closed until the Unity README current-task pointer is activated and verified.
+READY / approved / activated. Implement from clean Unity `main` at or after required ancestor `7b2c6500685a30e91524e783826f5afca381695c` as one large but bounded physical-presentation rollout; stop/split rather than inventing mechanics, topology, content, assets, or broad architecture.

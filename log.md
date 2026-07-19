@@ -12,6 +12,8 @@
 - Unity README pointer activation and exact-head/post-merge pointer CI remain mandatory before implementation starts.
 - Independent readiness and Unity-feasibility reviews blocked the first draft on incomplete repository-instruction inventory, self-referential pointer evidence, non-authored route ordering, vague physical camera/focus ownership, HRC-only standalone proof, and incomplete actor/site/route target coverage.
 - Commit `f0cfe06b36baf470e2f30e8918ba95202751ac43` closed those blockers by pinning the scenario blob/hash and authored route order, classifying all repository/scoped instructions, separating README pointer content from post-merge activation evidence, binding camera focus/bounds to the physical anchor registry, requiring independent HRC and QXZ built-player launches, and adding a complete two-Champion/ten-site/twelve-route production-input matrix.
+- Final design-readiness and Unity-feasibility reviews passed after large-packet sizing/split controls and a complete exact-path runtime/test/CI/evidence inventory were added through design head `3e1c1f28bccb87dd81678bf9684b54d69fd020ce`; publish run `29686052697` passed.
+- Unity pointer PR #175 merged exact reviewed head `ced0d055cc557186f69e9d146d3c6f8602bc6dee` as `7b2c6500685a30e91524e783826f5afca381695c`. Exact-head run `29686447124` and post-merge `main` run `29686825262` passed all four required jobs. `STORY-MAP-PHYSICAL-ROLLOUT-001` is now activated and runnable from that implementation ancestor.
 
 ## [2026-07-19] recovery | Champion army implementation checkpoint contract repaired
 

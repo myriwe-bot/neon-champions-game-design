@@ -1,7 +1,7 @@
 ---
 title: STORY-MAP-PHYSICAL-ROLLOUT-001 Complete Duel Map and Two-Faction Interaction Parity
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-19
@@ -14,11 +14,11 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / approved on 2026-07-19.
+DONE / merged and post-merge verified on 2026-07-19.
 
 The representative HRC physical-map slice received owner visual APPROVE, `STORY-CHAMPION-ARMY-INTERACTION-001` then merged through Unity PR #174, and post-merge Unity `main` CI passed. The human owner explicitly requested the next large and meaningful implementation packet and approved its preparation. This activates the previously gated next step: scale the approved physical-map treatment across the complete current duel scenario and give HRC and QXZ equivalent normal interaction coverage.
 
-This is the sole next Unity implementation packet after its README pointer activation is merged and post-merge verified.
+Unity PR #176 merged the complete rollout as `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`; post-merge Unity `main` run `29699588200` passed every configured job. The next gate is a separately prepared human continuity replaytest, not another automatically activated implementation packet.
 
 ## Story type
 
@@ -244,21 +244,21 @@ The default visual read is terrain/infrastructure, not route lines. Reachability
 
 ## Acceptance criteria
 
-- [ ] Production title -> Play HRC and title -> Play QXZ both reach the physical duel map without Editor intervention or fallback graph/region presentation.
-- [ ] All ten contracted nodes/sites and all twelve contracted routes are represented through the scenario-wide physical presentation contract.
-- [ ] No contracted element uses `Out-of-slice` object naming/treatment or exposes raw node/route/site/localization IDs in normal UI.
-- [ ] Existing scenario JSON, stable IDs, node/route/site arrays, route endpoint order/traversal semantics/costs, domain rules, save state, AI policy, and tactical behavior are byte-identical to the activation ancestor.
-- [ ] Both faction bases and Champions have distinct approved physical grammars beyond recolor, while active/selected/reachable state remains readable beyond hue.
-- [ ] The complete actor/target matrix above is proved: both Champions, all ten sites, and every one of the twelve routes has the required rendered-target and legal real-input coverage.
-- [ ] Decorative terrain/structures do not occlude current in-scope pointer targets; screen-space or raycast coverage proves every visible route segment that is intended to accept input.
-- [ ] HRC and QXZ Champion selection shows actual current movement and structured attached-army cards from snapshot data; no fabricated inventory or stale cross-context cards.
-- [ ] HRC and QXZ base selection shows the correct existing faction-owned six-facility catalog and suppresses Champion-only actions until Champion context returns.
-- [ ] Recruitment, data-cache/visit, guarded encounter, central objective, save/resume, opponent movement, and tactical handoff regressions remain green through normal application paths.
-- [ ] Camera pan/zoom/focus uses the physical anchor registry, reaches and frames both starts, both side clusters, the central objective, the calibration archive, and moved Champions, remains bounded/clamped, and persists through snapshot/UI refresh without exposing old graph presentation.
-- [ ] Physical geography remains map-dominant and coherent at native 1920×1080; critical text/card content fits, does not overlap siblings/hints, and uses approved contrast baselines.
-- [ ] No per-frame geometry/material/UI recreation is introduced; scenario-wide render-object/material counts and two repeated render/capture counts are recorded and stable.
-- [ ] Exact-head Compile/Standalone, EditMode, PlayMode, and Placeholder Validator jobs pass.
-- [ ] Required native evidence is inspected and receives explicit human APPROVE / REVISE / REJECT before merge. Approval of this packet does not waive the final visual gate.
+- [x] Production title -> Play HRC and title -> Play QXZ both reach the physical duel map without Editor intervention or fallback graph/region presentation.
+- [x] All ten contracted nodes/sites and all twelve contracted routes are represented through the scenario-wide physical presentation contract.
+- [x] No contracted element uses `Out-of-slice` object naming/treatment or exposes raw node/route/site/localization IDs in normal UI.
+- [x] Existing scenario JSON, stable IDs, node/route/site arrays, route endpoint order/traversal semantics/costs, domain rules, save state, AI policy, and tactical behavior are byte-identical to the activation ancestor.
+- [x] Both faction bases and Champions have distinct approved physical grammars beyond recolor, while active/selected/reachable state remains readable beyond hue.
+- [x] The complete actor/target matrix above is proved: both Champions, all ten sites, and every one of the twelve routes has the required rendered-target and legal real-input coverage.
+- [x] Decorative terrain/structures do not occlude current in-scope pointer targets; screen-space or raycast coverage proves every visible route segment that is intended to accept input.
+- [x] HRC and QXZ Champion selection shows actual current movement and structured attached-army cards from snapshot data; no fabricated inventory or stale cross-context cards.
+- [x] HRC and QXZ base selection shows the correct existing faction-owned six-facility catalog and suppresses Champion-only actions until Champion context returns.
+- [x] Recruitment, data-cache/visit, guarded encounter, central objective, save/resume, opponent movement, and tactical handoff regressions remain green through normal application paths.
+- [x] Camera pan/zoom/focus uses the physical anchor registry, reaches and frames both starts, both side clusters, the central objective, the calibration archive, and moved Champions, remains bounded/clamped, and persists through snapshot/UI refresh without exposing old graph presentation.
+- [x] Physical geography remains map-dominant and coherent at native 1920×1080; critical text/card content fits, does not overlap siblings/hints, and uses approved contrast baselines.
+- [x] No per-frame geometry/material/UI recreation is introduced; scenario-wide render-object/material counts and two repeated render/capture counts are recorded and stable.
+- [x] Exact-head Compile/Standalone, EditMode, PlayMode, and Placeholder Validator jobs pass.
+- [x] Required native evidence is inspected and receives explicit human APPROVE / REVISE / REJECT before merge. Approval of this packet does not waive the final visual gate.
 
 ## Verification requirements
 
@@ -338,6 +338,17 @@ Open questions: none. An implementer can complete this story without inventing m
 - Pointer merge commit / required implementation ancestor: `7b2c6500685a30e91524e783826f5afca381695c`.
 - Post-merge Unity `main` CI `29686825262` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
 
+## Completion evidence
+
+- Unity PR #176: https://github.com/myriwe-bot/neon-champions-unity/pull/176
+- Final exact head: `0e478487958c73dcc91c80425ac21b1f7095b9fc`.
+- Exact-head CI: push `29698676191` and pull request `29698677811`; all configured jobs passed.
+- Independent immutable reviews: two `APPROVE` verdicts with no blocking findings, recorded on PR #176.
+- Human-owner visual verdict: `APPROVE` exact head `0e478487958c73dcc91c80425ac21b1f7095b9fc`, recorded on PR #176.
+- Merge commit: `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`.
+- Post-merge Unity `main` CI: `29699588200`; Compile/Standalone, EditMode, PlayMode, and Placeholder Validator passed.
+- Evidence: five isolated 1920×1080 captures and hash manifest under Unity `production/evidence/STORY-MAP-PHYSICAL-ROLLOUT-001/`.
+
 ## Verdict
 
-READY / approved / activated. Implement from clean Unity `main` at or after required ancestor `7b2c6500685a30e91524e783826f5afca381695c` as one large but bounded physical-presentation rollout; stop/split rather than inventing mechanics, topology, content, assets, or broad architecture.
+DONE / merged / post-merge verified. Unity PR #176 exact head `0e478487958c73dcc91c80425ac21b1f7095b9fc` received two independent immutable APPROVE verdicts and explicit human-owner visual APPROVE, merged as `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`, and passed post-merge Unity `main` CI `29699588200`.

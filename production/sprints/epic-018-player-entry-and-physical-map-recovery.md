@@ -7,7 +7,7 @@ owner: shared
 created: 2026-07-17
 updated: 2026-07-19
 approval: approved
-related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity]
+related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-prototype-continuity-qa-002-recovery-replaytest]
 ---
 
 # EPIC-018 Player Entry and Physical Map Recovery Train
@@ -25,10 +25,10 @@ The standalone executable did not reach the player shell. The Editor workaround 
 | 1 | `STORY-STANDALONE-ENTRY-001` | DONE / merged / verified | Unity PR #170 merged; post-merge run 29609782110 passed build+launch, EditMode, PlayMode, and validator |
 | 2 | `STORY-MAP-VISUAL-SLICE-001` | DONE / merged / post-merge verified | Final head `b4afc997…` received owner APPROVE; PR #172 merged as `0a704445…`; post-merge run `29663206375` passed |
 | 3 | `STORY-CHAMPION-ARMY-INTERACTION-001` | DONE / merged / verified | Unity PR #174 merged as `07aec855…`; post-merge run `29684259824` passed; structured truthful army discovery and Champion -> base -> Champion context continuity |
-| 4 | `STORY-MAP-PHYSICAL-ROLLOUT-001` | READY / approved / pointer activation pending | Complete current ten-node/twelve-route physical duel map with HRC/QXZ normal-input and context parity |
-| 5 | Human continuity replaytest | DRAFT | launch, complete-map readability, both-faction interaction, save/relaunch/Continue, and post-resume opponent pressure are all testable |
+| 4 | `STORY-MAP-PHYSICAL-ROLLOUT-001` | DONE / Unity PR #176 merged / post-merge verified | Complete current ten-node/twelve-route physical duel map with HRC/QXZ normal-input and context parity |
+| 5 | `STORY-PROTOTYPE-CONTINUITY-QA-002` human continuity replaytest | DRAFT prepared / inactive | launch, complete-map readability, both-faction interaction, save/relaunch/Continue, and post-resume opponent pressure are all testable after explicit human activation |
 
-Orders 1–3 are closed. Order 4 is the sole next approved implementation packet and becomes runnable only after Unity pointer activation.
+Orders 1–4 are closed. There is no automatically active Unity implementation packet. Order 5 is a prepared human-owned replaytest draft and becomes runnable only after explicit human activation.
 
 ## Direction lock
 
@@ -41,6 +41,6 @@ Orders 1–3 are closed. Order 4 is the sole next approved implementation packet
 
 ## Current prompt
 
-`production/sprints/codex-story-map-physical-rollout-001.prompt.txt`
+None. The next gate is human-owned and has no Codex implementation prompt.
 
-The packet scales the approved physical Arctic map treatment across all current duel-map nodes/routes and both factions while preserving graph rules, scenario JSON, gameplay, save/AI/tactical behavior, and asset provenance. It may not become a topology rewrite, content expansion, final-art pass, or mechanics bundle.
+`production/stories/story-prototype-continuity-qa-002-recovery-replaytest.md` is prepared as a DRAFT only. Automation may bind a build to verified Unity `main` and preserve the test script; it may not substitute screenshots, video, or automated checks for the human playtest verdict.

@@ -10,6 +10,8 @@
 - Human explicitly requested the next large and meaningful implementation packet and approved its preparation. Promoted `STORY-MAP-PHYSICAL-ROLLOUT-001` as the sole next READY packet: complete current ten-node/twelve-route physical duel-map rollout with HRC/QXZ interaction parity over unchanged graph rules.
 - Added the fail-closed runnable Codex contract in design commit `0696abbaefc53af009b739c47a810143930a1417`; publish run `29685079236` passed.
 - Unity README pointer activation and exact-head/post-merge pointer CI remain mandatory before implementation starts.
+- Independent readiness and Unity-feasibility reviews blocked the first draft on incomplete repository-instruction inventory, self-referential pointer evidence, non-authored route ordering, vague physical camera/focus ownership, HRC-only standalone proof, and incomplete actor/site/route target coverage.
+- Commit `f0cfe06b36baf470e2f30e8918ba95202751ac43` closed those blockers by pinning the scenario blob/hash and authored route order, classifying all repository/scoped instructions, separating README pointer content from post-merge activation evidence, binding camera focus/bounds to the physical anchor registry, requiring independent HRC and QXZ built-player launches, and adding a complete two-Champion/ten-site/twelve-route production-input matrix.
 
 ## [2026-07-19] recovery | Champion army implementation checkpoint contract repaired
 

@@ -289,6 +289,7 @@ Open questions: none. An implementer can complete this story without inventing m
 
 - Design authority commit: `0696abbaefc53af009b739c47a810143930a1417`; publish CI `29685079236` passed.
 - Authority clarification commit: `b7bff8049af40959832e606d2bf0296b4acb1442`; publish CI `29685225278` passed.
+- Readiness-blocker correction commit: `f0cfe06b36baf470e2f30e8918ba95202751ac43`; final publish/review evidence is recorded in design control before pointer activation.
 - Unity README pointer PR/exact-head/post-merge CI: required before Codex execution.
 
 ## Verdict

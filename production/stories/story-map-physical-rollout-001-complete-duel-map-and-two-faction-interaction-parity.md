@@ -82,7 +82,7 @@ Use current player-facing snapshot/localization text. The `placeholder` substrin
 
 ### Routes
 
-Embody all twelve current graph edges as believable physical corridors while preserving literal route IDs, directionality, movement costs, and legality:
+Embody all twelve current graph edges as believable physical corridors while preserving literal route IDs, stored endpoint order, existing traversal semantics, movement costs, and legality. Do not infer a new one-way rule from JSON `from`/`to` field order:
 
 - `route_start_a_neutral_alpha`
 - `route_start_a_recruitment`
@@ -162,7 +162,7 @@ The default visual read is terrain/infrastructure, not route lines. Reachability
 - [ ] Production title -> Play HRC and title -> Play QXZ both reach the physical duel map without Editor intervention or fallback graph/region presentation.
 - [ ] All ten contracted nodes/sites and all twelve contracted routes are represented through the scenario-wide physical presentation contract.
 - [ ] No contracted element uses `Out-of-slice` object naming/treatment or exposes raw node/route/site/localization IDs in normal UI.
-- [ ] Existing scenario JSON, stable IDs, node/route/site arrays, route directionality/costs, domain rules, save state, AI policy, and tactical behavior are byte-identical to the activation ancestor.
+- [ ] Existing scenario JSON, stable IDs, node/route/site arrays, route endpoint order/traversal semantics/costs, domain rules, save state, AI policy, and tactical behavior are byte-identical to the activation ancestor.
 - [ ] Both faction bases and Champions have distinct approved physical grammars beyond recolor, while active/selected/reachable state remains readable beyond hue.
 - [ ] Real Input System/raycast selection works for both Champions, both bases, every current site category, and representative reachable route segments on both halves and through the center.
 - [ ] Decorative terrain/structures do not occlude current in-scope pointer targets; screen-space or raycast coverage proves every visible route segment that is intended to accept input.
@@ -243,7 +243,7 @@ Open questions: none. An implementer can complete this story without inventing m
 
 ## Activation evidence
 
-- Design authority commit and publish CI: pending this preparation commit.
+- Design authority commit: `0696abbaefc53af009b739c47a810143930a1417`; publish CI `29685079236` passed.
 - Unity README pointer PR/exact-head/post-merge CI: required before Codex execution.
 
 ## Verdict

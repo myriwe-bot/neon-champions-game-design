@@ -64,7 +64,7 @@ Routes:
 - `route_central_guarded_beta`
 - `route_central_calibration_archive`
 
-Do not change IDs, arrays, directionality, movement costs, adjacency, categories, content, or scenario JSON.
+Do not change IDs, arrays, stored route endpoint order, current traversal semantics, movement costs, adjacency, categories, content, or scenario JSON. Do not infer a new one-way rule from JSON `from`/`to` field order.
 
 Implementation requirements
 1. Replace the HRC-only applicability and reduced out-of-slice fallback with one scenario-wide physical-map presentation contract for all contracted nodes/routes.
@@ -84,7 +84,7 @@ Implementation requirements
 15. No per-frame geometry/material/UI recreation. Keep snapshot-triggered rebuild semantics and record stable repeat counts.
 
 Hard exclusions
-- No scenario JSON, domain, application rule, topology, route-cost/direction, AI policy, save schema, economy/balance, tactical rule/UI, unit/facility/site content, campaign, editor, free-movement, tile/hex/province, terrain-cost/pathfinding, weather/fog/supply, package, settings, render-pipeline, or scene-ownership changes.
+- No scenario JSON, domain, application rule, topology, route-cost/endpoint/traversal, AI policy, save schema, economy/balance, tactical rule/UI, unit/facility/site content, campaign, editor, free-movement, tile/hex/province, terrain-cost/pathfinding, weather/fog/supply, package, settings, render-pipeline, or scene-ownership changes.
 - No inventory/equipment/stack transfer/rearrangement, independent entourage, new proper names/canon, fake buttons, direct state mutation, synthetic evidence state, permanent graph lines/circles/polygons, tiny labels over terrain, or decorative clickable objects without commands.
 - No new external/AI-generated asset unless complete provenance and replacement authority already exists. Stop instead of guessing. New deterministic procedural/code-built assets require recipe/reproducibility evidence and a stable replacement boundary.
 

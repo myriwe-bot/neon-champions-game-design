@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-19] closeout and approval | Champion army DONE; complete physical duel-map rollout READY
+
+- Final Unity implementation head `bffeb0b9969081d635adc0a28579c484911fc6ce` passed exact-head run `29683728194` plus immutable domain/runtime and UI/tests/evidence reviews.
+- Unity PR #174 merged as `07aec85501a12252c5370e9e41a301c0f1afa0bf`; post-merge `main` run `29684259824` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
+- Closed `STORY-CHAMPION-ARMY-INTERACTION-001` as DONE with truthful structured army cards, runtime-derived refresh, and clean Champion -> base -> Champion context replacement.
+- Human explicitly requested the next large and meaningful implementation packet and approved its preparation. Promoted `STORY-MAP-PHYSICAL-ROLLOUT-001` as the sole next READY packet: complete current ten-node/twelve-route physical duel-map rollout with HRC/QXZ interaction parity over unchanged graph rules.
+- Added the fail-closed runnable Codex contract. Unity README pointer activation and exact-head/post-merge pointer CI remain mandatory before implementation starts.
+
 ## [2026-07-19] recovery | Champion army implementation checkpoint contract repaired
 
 - The first local Codex run completed focused RED and focused GREEN work but exhausted roughly 100,000 tokens before publishing a checkpoint; no remote story branch or implementation PR existed afterward.

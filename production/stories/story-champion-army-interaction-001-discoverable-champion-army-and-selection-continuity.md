@@ -1,11 +1,11 @@
 ---
 title: STORY-CHAMPION-ARMY-INTERACTION-001 Discoverable Champion Army and Selection Continuity
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-18
-updated: 2026-07-18
+updated: 2026-07-19
 approval: approved
 related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, docs/architecture/unity-technical-scheme, docs/architecture/testing-strategy, docs/architecture/ci-build-automation, docs/architecture/control-manifest]
 ---
@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / approved and Unity-pointer-activated as EPIC-018 order 3 after `STORY-MAP-VISUAL-SLICE-001` received an exact-head visual APPROVE, merged, and passed post-merge CI. This is the sole runnable implementation packet.
+DONE / approved / merged / post-merge verified. Unity PR #174 merged as `07aec85501a12252c5370e9e41a301c0f1afa0bf` after exact-head CI and two immutable reviews passed at implementation head `bffeb0b9969081d635adc0a28579c484911fc6ce`. Post-merge Unity `main` run `29684259824` passed all four configured jobs.
 
 Approval basis: the human owner instructed the agent on 2026-07-18 to verify/fix/merge the current story, prepare the next implementation packet, and continue until done. Scope is bounded to the already-approved order-3 interaction follow-up and preserved player complaint below.
 
@@ -151,4 +151,4 @@ Human-approved exceptions: none.
 
 ## Verdict
 
-READY / approved / pointer-activated. Unity pointer PR #173 merged as `b634439960d08165ce44a3745ead2d1d62ddaecf`; exact-head PR CI `29663881861` and post-merge `main` CI `29664128970` passed all configured jobs. This is the sole runnable packet.
+DONE / approved / merged / post-merge verified. Final implementation head `bffeb0b9969081d635adc0a28579c484911fc6ce` passed exact-head CI run `29683728194` and immutable domain/runtime plus UI/tests/evidence review. Unity PR #174 merged as `07aec85501a12252c5370e9e41a301c0f1afa0bf`; post-merge `main` run `29684259824` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator. Structured army discovery, runtime refresh, and Champion -> base -> Champion context replacement shipped without domain/application/scenario/rule drift.

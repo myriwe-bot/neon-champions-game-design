@@ -1,4 +1,4 @@
-HISTORICAL — DO NOT RUN. Human execution returned `BLOCKED — REJECT CLOSEOUT` on 2026-07-17. `STORY-STANDALONE-ENTRY-001` later closed the player-entry blocker and is also historical. The sole next approved packet is `STORY-MAP-VISUAL-SLICE-001`, guarded by its Unity pointer activation.
+HISTORICAL — DO NOT RUN. Human execution returned `BLOCKED — REJECT CLOSEOUT` on 2026-07-17. `STORY-STANDALONE-ENTRY-001` and `STORY-MAP-VISUAL-SLICE-001` later closed their bounded repair gates and are also historical. Consult `strategic-mvp-codex-run-prompts.md` and the Unity README for current authority.
 
 The content below is retained only for audit history.
 

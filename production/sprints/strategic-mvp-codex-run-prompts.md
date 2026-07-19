@@ -5,7 +5,7 @@ status: approved
 phase: production
 owner: shared
 created: 2026-06-02
-updated: 2026-07-15
+updated: 2026-07-19
 source_lore: []
 related:
   [
@@ -103,6 +103,7 @@ related:
     production/stories/story-faction-composition-001-three-line-faction-composition-and-tactical-identity-proof,
     production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow,
     production/stories/story-save-001-prototype-strategic-save-and-resume,
+    production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity,
   ]
 approval: approved
 ---
@@ -111,15 +112,15 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-AI-PLAY-001 Deterministic Opponent Pressure After Resume`.
+**Current READY / approved Unity implementation packet:** `STORY-MAP-PHYSICAL-ROLLOUT-001 Complete Duel Map and Two-Faction Interaction Parity`.
 
-`STORY-SAVE-001` is DONE / merged through Unity PR #161, with rollback continuity follow-up PR #162 and late validator hotfix PR #164. `STORY-AI-PLAY-001` is READY / approved with its deterministic priority policy and strict-greater aggregate-count battle proxy accepted as written.
+`STORY-CHAMPION-ARMY-INTERACTION-001` is DONE / merged through Unity PR #174 with green post-merge CI. The next approved packet scales the owner-approved physical-map grammar across the complete current duel scenario and both factions without changing topology or gameplay rules.
 
 ## Current READY implementation packet
 
-Run `production/sprints/codex-story-ai-play-001.prompt.txt` after pulling current `main` in both repositories and confirming the Unity README pointer names this story.
+Run `production/sprints/codex-story-map-physical-rollout-001.prompt.txt` after pulling current `main` in both repositories and confirming the Unity README pointer names this story and records successful activation.
 
-### Copy-safe STORY-AI-PLAY-001 handoff
+### Copy-safe STORY-MAP-PHYSICAL-ROLLOUT-001 handoff
 
 Primary workspace-write run:
 
@@ -133,14 +134,14 @@ git checkout main
 git pull --ff-only origin main
 git status --short
 
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-ai-play-001.prompt.txt"
-codex exec --sandbox workspace-write $prompt
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-map-physical-rollout-001.prompt.txt"
+$prompt | codex exec --sandbox workspace-write -
 ```
 
 Trusted-repo fallback:
 
 ```powershell
-codex exec --sandbox danger-full-access $prompt
+$prompt | codex exec --sandbox danger-full-access -
 ```
 
 ### Historical STORY-PROOF-SCENARIO-001 handoff — do not rerun

@@ -5,9 +5,9 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-17
-updated: 2026-07-18
+updated: 2026-07-19
 approval: approved
-related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout]
+related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity]
 ---
 
 # EPIC-018 Physical Adventure Map and Player Entry Recovery
@@ -38,10 +38,11 @@ A clean Windows executable launches through the normal title/faction-choice path
 
 1. `STORY-STANDALONE-ENTRY-001` — DONE / merged as Unity PR #170 and post-merge verified; the executable now proves title -> scenario -> HRC strategic map through the normal production path.
 2. `STORY-MAP-VISUAL-SLICE-001` — DONE / merged through Unity PR #172 and post-merge verified; the representative HRC physical-map-and-shell slice received owner visual APPROVE over unchanged graph rules.
-3. `STORY-CHAMPION-ARMY-INTERACTION-001` — READY / approved; expose the truthful current Champion army and prove Champion -> base -> Champion selection continuity without inventing inventory or stack-management mechanics.
-4. Human replaytest — DRAFT only; return to continuity/save/opponent-pressure validation after launch and basic playability blockers are repaired.
+3. `STORY-CHAMPION-ARMY-INTERACTION-001` — DONE / merged through Unity PR #174 and post-merge verified; exposes the truthful current Champion army and clean Champion -> base -> Champion context continuity.
+4. `STORY-MAP-PHYSICAL-ROLLOUT-001` — READY / approved; scale the owner-approved physical-map treatment across the complete current ten-node/twelve-route duel scenario with HRC/QXZ interaction parity.
+5. Human replaytest — DRAFT only; return to continuity/save/opponent-pressure validation after the complete current scenario uses one coherent physical map.
 
-The third child is the sole runnable approved packet after its Unity README pointer activation merged and passed post-merge CI.
+The fourth child is the sole next approved implementation packet after its Unity README pointer activation merges and passes post-merge CI.
 
 ## Boundaries
 
@@ -57,4 +58,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. Orders 1 and 2 are DONE. `STORY-CHAMPION-ARMY-INTERACTION-001` is the sole READY / approved and pointer-activated child.
+ACTIVE / approved. Orders 1–3 are DONE. `STORY-MAP-PHYSICAL-ROLLOUT-001` is READY / approved as the sole next implementation packet; Unity pointer activation remains the execution precondition.

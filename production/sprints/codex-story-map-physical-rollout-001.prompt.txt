@@ -1,0 +1,162 @@
+Implement `STORY-MAP-PHYSICAL-ROLLOUT-001 Complete Duel Map and Two-Faction Interaction Parity` in the Neon Champions Unity repository.
+
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+
+Outcome
+Scale the approved physical Arctic adventure-map presentation across the complete current ten-node/twelve-route duel scenario. HRC and QXZ must both use one coherent physical map and equivalent production input/context behavior. Preserve the current hidden graph, gameplay rules, scenario content, and save/AI/tactical contracts.
+
+Authority preflight — fail closed
+1. Update both repositories to current `main` with `git checkout main` and `git pull --ff-only origin main`.
+2. Read these exact sources once, in order:
+   - `production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity.md`
+   - `production/epics/epic-018-physical-adventure-map-and-player-entry-recovery.md`
+   - `production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell.md`
+   - `production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity.md`
+   - `design/gdd/product-constitution.md` sections Player promise, Core loop, Product rule
+   - `design/gdd/strategic-map.md` sections 2–3, 6, 8, 9.1
+   - `design/ux/player-shell.md`
+   - `design/art/prototype-visual-target-and-asset-ledger.md`
+   - `design/research/physical-adventure-map-direction-2026-07-17.md`
+   - `docs/architecture/unity-technical-scheme.md`
+   - `docs/architecture/testing-strategy.md`
+   - `docs/architecture/ci-build-automation.md`
+   - `docs/architecture/control-manifest.md`
+   - Unity `README.md` current-task pointer
+   - current Unity scenario, presentation, camera/input, shell, tests, and evidence harness relevant to this story
+3. Confirm the story says `status: ready`, `approval: approved`, Ambiguity Check `PASS`, and the Unity README names this exact story and prompt as the sole READY packet with successful pointer activation evidence.
+4. Confirm Unity `main` includes merge commit `07aec85501a12252c5370e9e41a301c0f1afa0bf` and the later approved pointer activation merge.
+5. Parse the current `mvp-greenland-duel-test.scenario.json`. Confirm its map still contains exactly the contracted ten nodes and twelve routes from the story. Confirm the scenario map/node/route/site arrays match the approved packet before coding.
+6. Stop without edits if required authority is missing/draft/contradictory, pointer activation is absent, topology differs, ancestry is wrong, conflicts exist, or dirty files include unrelated/unknown work.
+7. Root `artifacts/` Unity logs/results are disposable generated scratch: do not commit them. Stop only if dirty content is user-authored, unrelated, or unknown.
+
+Branch and recovery contract
+- Required branch: `story/STORY-MAP-PHYSICAL-ROLLOUT-001-complete-duel-map`.
+- Fresh mode: from clean current Unity `main`, create/switch to that branch.
+- Resume mode: if already on that exact branch with the approved pointer-main ancestor and only story-scoped `M`/`??` files or generated root `artifacts/`, preserve the work, inspect the diff, and continue. Do not reset, discard, or restart valid partial work.
+- Stop for another branch, wrong ancestry, conflicts, unrelated dirty paths, unknown generated files, or source contradiction.
+
+Exact contracted topology
+Nodes/sites:
+- `node_start_a` / `site_start_a` / `base_start_a`
+- `node_placeholder_recruitment` / `site_placeholder_recruitment`
+- `node_guarded_alpha` / `site_guarded_alpha`
+- `node_neutral_alpha` / `site_data_cache_alpha`
+- `node_central_objective` / `site_central_objective`
+- `node_neutral_beta` / `site_neutral_beta`
+- `node_guarded_beta` / `site_guarded_beta`
+- `node_data_cache_beta` / `site_data_cache_beta`
+- `node_calibration_archive` / `site_calibration_archive`
+- `node_start_b` / `site_start_b` / `base_start_b`
+
+Routes:
+- `route_start_a_neutral_alpha`
+- `route_start_a_recruitment`
+- `route_start_a_guarded_alpha`
+- `route_neutral_alpha_central`
+- `route_guarded_alpha_central`
+- `route_central_neutral_beta`
+- `route_neutral_beta_start_b`
+- `route_start_b_data_cache_beta`
+- `route_data_cache_beta_central`
+- `route_guarded_beta_start_b`
+- `route_central_guarded_beta`
+- `route_central_calibration_archive`
+
+Do not change IDs, arrays, directionality, movement costs, adjacency, categories, content, or scenario JSON.
+
+Implementation requirements
+1. Replace the HRC-only applicability and reduced out-of-slice fallback with one scenario-wide physical-map presentation contract for all contracted nodes/routes.
+2. Refactor and reuse the approved HRC physical renderer/adapter; do not create a duplicated QXZ-only renderer or put gameplay state in presentation.
+3. Use deterministic, testable presentation recipes/anchors keyed to existing IDs and snapshot facts. Presentation-only anchors/route bends may live outside scenario rules and must not alter domain/save/scenario state.
+4. Remove `Out-of-slice` naming/treatment for the contracted map. No normal path may expose the old region/polygon/node graph fallback merely because QXZ is active or the camera reaches another cluster.
+5. Embody every route as believable physical infrastructure. Default corridors recede; selected/reachable emphasis is temporary/contextual. Preserve legal pointer route commands through aggregate collider/raycast coverage of visible reachable segments.
+6. Embody every site category with a recognizable physical silhouette and normal/hover-or-focus/selected state beyond color. Use existing player-facing snapshot/localization text; do not invent canon names.
+7. Preserve HRC's approved repaired civic/rescue-orange grammar.
+8. Give QXZ its approved pearl/white sealed expedition/corporate grammar with pale-blue controlled signals, sensor precision, and useful climate/infrastructure silhouettes. It must not be an HRC recolor or generic villain fortress.
+9. Render both Champions as sole strategic actors with cosmetic composition-informed entourage. Followers have no occupancy, pathfinding, input, targeting, or independent state.
+10. Through existing snapshot/application boundaries, preserve structured Champion army cards, movement, base/site context, legal/disabled actions, and clean Champion -> base/site -> Champion replacement for both factions.
+11. Both bases must open their correct existing faction-owned six-facility catalog without cross-faction leakage. Champion-only actions remain hidden/suppressed while another context is visibly selected.
+12. Existing recruitment, one-shot visit, data-cache, guarded encounter, objective, save/resume, opponent, and tactical-handoff behavior remains unchanged and reachable through current map targets.
+13. Preserve/extend pan, zoom, focus, and pointer usability across both starts, side clusters, center, and archive. The whole scenario need not fit one frame; it must remain inspectable without graph fallback.
+14. Physical terrain/geography must read as one connected Arctic place. Preserve map dominance, controlled text backing, contrast, fit, and non-overlap.
+15. No per-frame geometry/material/UI recreation. Keep snapshot-triggered rebuild semantics and record stable repeat counts.
+
+Hard exclusions
+- No scenario JSON, domain, application rule, topology, route-cost/direction, AI policy, save schema, economy/balance, tactical rule/UI, unit/facility/site content, campaign, editor, free-movement, tile/hex/province, terrain-cost/pathfinding, weather/fog/supply, package, settings, render-pipeline, or scene-ownership changes.
+- No inventory/equipment/stack transfer/rearrangement, independent entourage, new proper names/canon, fake buttons, direct state mutation, synthetic evidence state, permanent graph lines/circles/polygons, tiny labels over terrain, or decorative clickable objects without commands.
+- No new external/AI-generated asset unless complete provenance and replacement authority already exists. Stop instead of guessing. New deterministic procedural/code-built assets require recipe/reproducibility evidence and a stable replacement boundary.
+
+TDD and phased execution
+Phase A — preflight and RED
+- Inspect current adapter/renderer/tests and current scenario arrays.
+- Add focused failing tests for exact ten-node/twelve-route scenario-wide mapping; faction-independent applicability; QXZ physical entry; both bases/Champions; site/route pointer coverage; missing-contract rejection; no scenario mutation; camera reach.
+- Run the narrowest selectors and preserve concise RED evidence.
+
+Phase B — focused GREEN and immediate checkpoint
+- Implement only enough to make focused tests pass.
+- Run focused EditMode and PlayMode selectors.
+- Review `git diff --check`, story-scoped changed paths, and exclusions.
+- Commit and push a draft checkpoint immediately. Create/update the draft PR before broad suites or screenshot work so interruption recovery has a real remote commit.
+
+Phase C — full behavior/evidence
+- Run full EditMode, PlayMode, Placeholder Validator, and Compile/Standalone checks.
+- Exercise production title -> HRC and title -> QXZ, pan/focus across both halves and center, and normal pointer selection of Champions/bases/sites/reachable route segments.
+- Add robust regression coverage for raw-ID/path/debug leakage, card/text fit, child/card containment, sibling/hint overlap, cross-context leakage, collider occlusion, aggregate visible-route hit coverage, stable repeat counts, and no per-frame recreation.
+- Keep logs concise. Do not repeatedly dump full files or full Unity logs when a focused summary is sufficient.
+
+Phase D — isolated native evidence
+Create `production/evidence/STORY-MAP-PHYSICAL-ROLLOUT-001/` with:
+- `README.md`
+- `hrc-start-and-west-approach-1920x1080.png`
+- `central-corridors-and-objective-1920x1080.png`
+- `qxz-start-and-east-approach-1920x1080.png`
+- `qxz-champion-army-selected-1920x1080.png`
+- `qxz-base-selected-1920x1080.png`
+
+Capture each materially different full-shell state in an isolated Unity process if sequential capture contaminates/ghosts later images. Evidence must use production paths/current runtime snapshots—not direct DTO edits or fake setup presented as gameplay.
+
+Evidence README must record:
+- immutable capture SHA and ancestor;
+- exact selector/production route for each image;
+- native dimensions and SHA-256 hashes;
+- contracted IDs/categories visibly represented without leaking them on-screen;
+- focused RED/GREEN and full commands/results;
+- renderer/material/collider/UI-object counts for HRC/center/QXZ and stable repeated counts;
+- changed-file and non-code asset/provenance inventory;
+- omissions/deferred work and whether any temporary workflow was used;
+- native visual inspection notes for physical-place read, faction distinction, target discoverability, fit/overlap, contrast, raw-ID/path/debug leakage.
+
+Temporary evidence workflow rule
+A branch-scoped workflow may be used only as evidence transport when necessary. Remove it before the final mergeable head. After removing it, rerun exact-head full CI. Never leave temporary workflow files in the final diff.
+
+Verification before publication handoff
+- `git diff --check`
+- `git diff origin/main...HEAD --check`
+- exact contracted ID arrays confirmed unchanged
+- scenario JSON blob unchanged from activation ancestor
+- all focused and full Unity checks passed or exact blockers reported
+- all five PNGs exist, are genuinely 1920x1080, hash-recorded, and inspected at native size
+- all current visible route segments intended for pointer input have aggregate collider/raycast coverage
+- no raw IDs/local paths/debug UI/`Out-of-slice` labels/fake controls
+- no temporary workflows
+- no unrelated changed files
+
+Publication contract
+1. Commit the actual story-scoped implementation/tests/evidence.
+2. Push committed HEAD exactly to `story/STORY-MAP-PHYSICAL-ROLLOUT-001-complete-duel-map`.
+3. Create/update a PR titled `STORY-MAP-PHYSICAL-ROLLOUT-001 Complete physical duel map rollout`.
+4. Keep it draft until evidence is committed and external human visual approval is received.
+5. PR body must link the approved story and design commit; list all ten nodes/twelve routes, changed files/assets, RED/GREEN proof, normal pointer/raycast coverage, evidence hashes, object/material/UI counts, provenance, exact omissions/deferred work, exact head, and CI URLs. Say `No known omissions` only if literally true.
+6. Verify and print compactly:
+   - `git status --short --branch`
+   - `git log --oneline -5`
+   - local branch/SHA
+   - remote branch ref/SHA
+   - PR URL/draft state
+   - exact CI run URLs/status
+7. Required push form: `git push -u origin HEAD:story/STORY-MAP-PHYSICAL-ROLLOUT-001-complete-duel-map`.
+8. If publication fails, report the exact error and concrete recovery commands. Do not stop at `PR-ready`.
+
+Do not merge. Independent immutable domain/runtime and UI/tests/evidence reviews, exact-head CI, explicit human visual APPROVE/REVISE/REJECT, merge, and post-merge verification remain external gates.

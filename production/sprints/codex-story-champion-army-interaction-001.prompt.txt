@@ -19,29 +19,45 @@ Required PR title:
 
 `STORY-CHAMPION-ARMY-INTERACTION-001 Discoverable Champion army selection`
 
-## 1. Fail-closed preflight
+## 1. Fail-closed preflight with restart support
+
+Choose exactly one mode.
+
+### Fresh mode
 
 1. In design:
-   - `git checkout main`
-   - `git pull --ff-only origin main`
+   - `git checkout main`;
+   - `git pull --ff-only origin main`;
    - verify clean status;
    - read the complete READY story literally;
    - read every required source in its source-authority matrix once, in listed order.
 2. In Unity:
-   - `git fetch origin --prune`
-   - `git checkout main`
-   - `git pull --ff-only origin main`
-   - verify `git rev-parse HEAD` is exactly `b634439960d08165ce44a3745ead2d1d62ddaecf`, the post-merge-verified implementation-pointer activation required by the story;
-   - verify clean status before creating/switching the story branch.
-3. Stop and report without editing if:
-   - the story is not READY/approved/pointer-activated;
-   - the predecessor is not recorded DONE with post-merge CI;
-   - any unrelated dirty/untracked file exists;
-   - required sources are missing, draft, stale, or contradictory;
-   - branch history does not descend from the required starting head.
-4. Never reset, clean, stash, overwrite, absorb, or commit unrelated work.
+   - `git fetch origin --prune`;
+   - `git checkout main`;
+   - `git pull --ff-only origin main`;
+   - verify `git rev-parse HEAD` is exactly `b634439960d08165ce44a3745ead2d1d62ddaecf`;
+   - verify clean status before creating the story branch.
 
-Print the design SHA, Unity starting SHA, branch, dirty status, and source matrix result before coding.
+### Resume mode
+
+Use this mode when the required story branch or story-scoped local `M` / `??` files already exist.
+
+- Do not checkout, pull, reset, clean, restore, or stash in the dirty Unity worktree.
+- Verify HEAD is the required starting head or a descendant of it.
+- Preserve and continue the existing story work.
+- Expected story-owned paths are the relevant presentation/view-model files, focused EditMode/PlayMode tests, and `production/evidence/STORY-CHAMPION-ARMY-INTERACTION-001/`.
+- The following known settings paths may remain dirty and must never be staged, committed, printed in full, overwritten, normalized, restored, reset, cleaned, or stashed:
+  - `Assets/Settings/DefaultVolumeProfile.asset`;
+  - `Assets/Settings/PC_RPAsset.asset`;
+  - `Assets/Settings/UniversalRenderPipelineGlobalSettings.asset`;
+  - `ProjectSettings/ProjectSettings.asset`;
+  - `ProjectSettings/UnityConnectSettings.asset`.
+- Unity may modify those settings paths during tests. Their presence does not invalidate or block checkpointing story-owned files.
+- Stop only for additional unknown dirty paths, conflicts, wrong ancestry, missing authority, or contradictions.
+
+In either mode, never use `git add .`, `git add -A`, broad restore/reset/clean, or a whole-worktree commit. Stage explicit authorized story paths only.
+
+Print the design SHA, Unity starting/current SHA, branch, compact dirty-path classification, and source matrix result before coding.
 
 ## 2. Inspect before implementation
 
@@ -87,15 +103,17 @@ Run focused GREEN tests, then refactor without widening scope.
 
 ### Phase C — checkpoint before broad suites
 
-Before long Unity runs:
+Before any long Unity run or evidence capture:
 
-1. `git diff --check`
-2. inspect `git status --short` and changed files against story scope;
-3. commit a truthful checkpoint;
-4. push the story branch;
-5. create or update the draft PR with story/source links, RED/GREEN proof, changed files, omissions, and current exact head.
+1. run `git diff --check -- <explicit story-owned paths>` rather than a whole-worktree check when preserved settings drift exists;
+2. inspect the compact changed-path list against story scope;
+3. stage only explicit story-owned paths and verify `git diff --cached --name-only`;
+4. commit a truthful checkpoint;
+5. push the exact story branch;
+6. create or update the draft PR with story/source links, RED/GREEN proof, changed files, preserved settings exclusions, omissions, and current exact head;
+7. verify the local SHA, remote SHA, and PR URL.
 
-Do this before context exhaustion. Never leave valuable implementation only in the working tree.
+Do this immediately after the first focused GREEN result. Never leave valuable implementation only in the working tree. A pushed partial checkpoint is required even if later broad suites, evidence, or CI fail.
 
 ### Phase D — evidence and regression
 
@@ -156,10 +174,12 @@ Do not merge. Do not mark the story DONE. Do not activate the human replaytest p
 
 ## 4. Context reliability
 
-- Read each authority source once; keep a compact source matrix rather than rereading whole files.
-- Use bounded diffs and targeted log excerpts.
-- Checkpoint and push before broad suites and evidence review.
-- If context becomes low after checkpoint, stop only at a recoverable published state and print exact branch/SHA/PR/remaining gates.
+- Read each authority source once in fresh mode; in resume mode use the already-recorded source matrix unless a concrete contradiction appears.
+- Never print complete authority documents, complete large source files, full diffs, or full Unity logs. Use changed-path lists, concise test counts, and targeted failing windows.
+- Checkpoint and push immediately after focused GREEN and after each subsequent production/evidence correction.
+- Do not spend more context on broad inspection after focused behavior is understood; move to a remote checkpoint.
+- If context becomes low or a long verification step blocks, stop only after pushing the latest truthful checkpoint and updating the draft PR with exact remaining gates.
+- Preserved settings drift is reported by path name only and remains unstaged; it does not block story publication.
 - Never claim a run, capture, commit, push, CI result, or PR update that did not actually occur.
 
 ## 5. Required final report

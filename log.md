@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-19] recovery | Champion army implementation checkpoint contract repaired
+
+- The first local Codex run completed focused RED and focused GREEN work but exhausted roughly 100,000 tokens before publishing a checkpoint; no remote story branch or implementation PR existed afterward.
+- Unity test execution modified `ProjectSettings/ProjectSettings.asset`, and the original prompt then treated that preserved settings drift as a fatal dirty-path contradiction even though the story-owned implementation remained valid and local.
+- Published `production/sprints/codex-story-champion-army-interaction-001-local-recovery.prompt.txt` to preserve the existing implementation, stage only explicit story-owned paths, push a draft checkpoint before more Unity work, and continue despite the five known unstaged settings paths.
+- Hardened the primary implementation prompt with explicit fresh/resume modes, path-scoped whitespace and staging rules, immediate post-GREEN publication, bounded output, and mandatory remote-SHA/PR verification.
+
 ## [2026-07-18] activation | STORY-CHAMPION-ARMY-INTERACTION-001 Unity pointer verified
 
 - Published the closeout and READY packet as design commit `03c6bb613aebc44f09773277d395e9e3cdb9bd7e`; publish run `29663792587` passed.

@@ -136,7 +136,8 @@ Human-approved exceptions: none.
 - Required starting head: Unity `main` `b634439960d08165ce44a3745ead2d1d62ddaecf`, the post-merge-verified README activation pointer commit; create the story branch from exactly this clean head.
 - Non-draft PR required only after exact evidence is committed and human visual verdict is APPROVE; use draft during implementation/review.
 - PR must link this story, list exact source/design SHAs, RED/GREEN proof, changed files, native evidence hashes, CI URLs, omissions/deferred work, and exact head.
-- Codex must checkpoint, commit, push, and create/update the PR before context exhaustion.
+- Codex must checkpoint, commit, push, and create/update the PR immediately after focused GREEN and before broad suites or evidence capture.
+- If a local run stops with story-owned files plus preserved Unity settings drift, resume with `production/sprints/codex-story-champion-army-interaction-001-local-recovery.prompt.txt`; do not restart or discard the local implementation.
 
 ## Story readiness gate
 

@@ -1,0 +1,115 @@
+Recover and complete the already-started local implementation of `STORY-CHAMPION-ARMY-INTERACTION-001`, publish checkpoints early, and stop before merge.
+
+This is a continuation contract for the existing Windows Unity worktree. Do not restart the story, discard work, or reread the entire authority set.
+
+Repositories:
+- Design authority: `C:\Users\NordicGamer\CodexProjects\neon-champions-game-design`
+- Unity implementation: `C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Required ancestor: `b634439960d08165ce44a3745ead2d1d62ddaecf`
+Required branch: `story/STORY-CHAMPION-ARMY-INTERACTION-001-discoverable-army-selection`
+Required PR title: `STORY-CHAMPION-ARMY-INTERACTION-001 Discoverable Champion army selection`
+
+## 1. Preserve and classify the existing work
+
+Do not run checkout, pull, reset, clean, restore, or stash in the dirty Unity worktree.
+
+Print only:
+- current branch;
+- `git rev-parse HEAD`;
+- whether HEAD descends from the required ancestor;
+- `git status --short`;
+- a compact changed-path classification.
+
+Expected story-owned dirty paths are:
+- `Assets/NeonChampions/Runtime/Presentation/StrategicMapBootstrap.cs`
+- `Assets/NeonChampions/Runtime/Presentation/StrategicPlayerShellViewModel.cs`
+- `Assets/NeonChampions/Tests/EditMode/Strategic/PhysicalArcticMapSliceTests.cs`
+- `Assets/NeonChampions/Tests/PlayMode/PhysicalArcticMapSlicePlayModeTests.cs`
+- later, files under `production/evidence/STORY-CHAMPION-ARMY-INTERACTION-001/`
+
+The following known local settings paths are preserved non-story work and may remain dirty before or after Unity runs:
+- `Assets/Settings/DefaultVolumeProfile.asset`
+- `Assets/Settings/PC_RPAsset.asset`
+- `Assets/Settings/UniversalRenderPipelineGlobalSettings.asset`
+- `ProjectSettings/ProjectSettings.asset`
+- `ProjectSettings/UnityConnectSettings.asset`
+
+Never stage, commit, print full diffs for, overwrite, normalize, restore, reset, clean, or stash those settings paths. Their presence is not a reason to discard or refuse to checkpoint the story-owned files. Stop only if there are additional unknown dirty paths, conflicts, wrong ancestry, or source contradictions.
+
+If currently on clean `main` ancestry with the expected story files dirty, create/switch to the required story branch while preserving the work. If already on the required branch, continue there. Do not pull into the dirty implementation worktree.
+
+## 2. Existing verified progress
+
+Treat the following as existing local evidence; verify the named files/results exist where practical, but do not rerun RED or repeat broad source inspection merely to consume context:
+
+- Focused RED: compiler errors because `StrategicPlayerShellViewModel.ArmyCards` did not exist.
+- Minimal implementation added a snapshot-derived `StrategicArmyCardViewModel`, structured non-interactive Champion army rows, and Champion/base/Champion context replacement.
+- Focused GREEN EditMode: `PhysicalArcticMapSliceTests`, 6/6 passed.
+- Focused GREEN PlayMode: `ProductionEntryPointerSelectsChampionThenOpensPhysicalBase`, 1/1 passed through real Input System/raycast input.
+
+Review the current story diff once with bounded output. Correct only concrete story-scope defects.
+
+## 3. Immediate checkpoint—before any more Unity work
+
+Do this now, before evidence capture, full suites, or further broad inspection:
+
+1. Run whitespace checks only on the four story-owned source/test paths. Do not use a whole-worktree `git diff --check` while preserved settings drift exists.
+2. Stage exactly the four story-owned source/test paths with explicit path arguments. Never use `git add .`, `git add -A`, or broad globs.
+3. Inspect `git diff --cached --name-only`; it must contain only those authorized paths.
+4. Commit a truthful checkpoint.
+5. Push with:
+   `git push -u origin HEAD:story/STORY-CHAMPION-ARMY-INTERACTION-001-discoverable-army-selection`
+6. Create or update a draft PR immediately. Include the story/source links, existing RED/GREEN proof, current head, changed paths, preserved settings exclusions, omissions, and remaining gates.
+7. Verify and print the local commit SHA, remote branch SHA, and PR URL.
+
+Publication is mandatory even if later evidence or broad suites fail. A pushed checkpoint is safer than another 100,000-token local-only session.
+
+## 4. Finish in bounded phases
+
+After checkpoint publication:
+
+1. Add or tighten only focused tests needed by the approved acceptance criteria.
+2. Generate the three required isolated native 1920x1080 captures under:
+   `production/evidence/STORY-CHAMPION-ARMY-INTERACTION-001/`
+3. Add the evidence README with exact current facts. Do not claim final CI before it exists.
+4. After every production or evidence correction:
+   - run targeted checks;
+   - stage only explicit authorized story paths;
+   - commit;
+   - push;
+   - verify remote SHA.
+5. Run full EditMode, full PlayMode, validator, compile, and two-launch standalone smoke only after the implementation and evidence are checkpointed remotely.
+6. Keep output bounded. Never print complete authority documents, complete large source files, full diffs, or full Unity logs. Print changed-path lists, concise test counts, and only failing log windows.
+7. If a long command times out, inspect its result/log and process state. Do not repeatedly dump the same diff or source context.
+
+Unity may modify the five preserved settings paths during tests. Continue while leaving them unstaged and untouched. For story whitespace checks use explicit story paths; for PR-range checks use `git diff origin/main...HEAD --check`, which checks committed story content rather than unrelated local settings.
+
+## 5. Final publication contract
+
+Before stopping:
+
+- ensure all story-owned source, tests, and evidence are committed;
+- push the exact required story branch;
+- update the draft PR body to the final exact head;
+- trigger/wait for exact-head CI when available;
+- if implementation CI fails, fix, checkpoint, push, and repeat;
+- leave the PR draft pending immutable review and explicit human visual verdict;
+- keep preserved settings paths local and unstaged;
+- do not merge or mark the story DONE.
+
+If context becomes low or an environment blocker appears, stop only after pushing the latest truthful checkpoint and updating the PR with exact remaining gates.
+
+## 6. Required final report
+
+Print only:
+- PASS/BLOCKED;
+- design SHA, required ancestor, and final local/remote SHA;
+- branch and PR URL;
+- commits pushed;
+- authorized changed paths;
+- preserved unstaged settings path names only;
+- focused/full suite, validator, standalone, and CI status;
+- evidence paths, dimensions, and hashes;
+- omissions and remaining gates;
+- explicit confirmation that merge/DONE/inventory/stack mechanics were not performed.

@@ -14,6 +14,7 @@
 - Commit `f0cfe06b36baf470e2f30e8918ba95202751ac43` closed those blockers by pinning the scenario blob/hash and authored route order, classifying all repository/scoped instructions, separating README pointer content from post-merge activation evidence, binding camera focus/bounds to the physical anchor registry, requiring independent HRC and QXZ built-player launches, and adding a complete two-Champion/ten-site/twelve-route production-input matrix.
 - Final design-readiness and Unity-feasibility reviews passed after large-packet sizing/split controls and a complete exact-path runtime/test/CI/evidence inventory were added through design head `3e1c1f28bccb87dd81678bf9684b54d69fd020ce`; publish run `29686052697` passed.
 - Unity pointer PR #175 merged exact reviewed head `ced0d055cc557186f69e9d146d3c6f8602bc6dee` as `7b2c6500685a30e91524e783826f5afca381695c`. Exact-head run `29686447124` and post-merge `main` run `29686825262` passed all four required jobs. `STORY-MAP-PHYSICAL-ROLLOUT-001` is now activated and runnable from that implementation ancestor.
+- Added a checked-in one-shot Codex recovery prompt for the user's exact dirty Windows checkout: archive the five staged Unity settings files and two accidental `taged*` root command fragments into one verified local stash, preserve bytes/index state, restore clean `main`, and stop before implementation. This replaces fragile pasted recovery commands and keeps machine-specific settings off remote branches.
 
 ## [2026-07-19] recovery | Champion army implementation checkpoint contract repaired
 

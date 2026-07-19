@@ -120,6 +120,8 @@ approval: approved
 
 Run `production/sprints/codex-story-map-physical-rollout-001.prompt.txt` after pulling current `main` in both repositories and confirming the Unity README pointer names this story and records successful activation.
 
+If the local Unity `main` has the exact known five staged Unity settings files plus two accidental untracked root files beginning with `taged`, do not paste more recovery commands. First run `production/sprints/codex-archive-preexisting-unity-settings-before-map-rollout.prompt.txt`. It archives the verified seven-path dirty state into one named local stash without editing, deleting, normalizing, committing, or pushing it. Run the implementation prompt only after that recovery reports PASS and a clean Unity `main`.
+
 ### Copy-safe STORY-MAP-PHYSICAL-ROLLOUT-001 handoff
 
 Primary workspace-write run:

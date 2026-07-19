@@ -83,8 +83,9 @@
 - [[production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke]] — DONE / merged through Unity PR #170 with verified post-merge build+launch CI.
 - [[production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell]] — DONE / merged through Unity PR #172 as `0a704445…`; exact-head owner APPROVE and post-merge CI verified.
 - [[production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity]] — DONE / merged through Unity PR #174 as `07aec855…`; post-merge CI verified.
-- [[production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity]] — READY / approved complete current physical duel-map rollout and HRC/QXZ interaction-parity packet; Unity pointer activation required before execution.
+- [[production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity]] — READY / approved / activated complete current physical duel-map rollout and HRC/QXZ interaction-parity packet; Unity pointer PR #175 and post-merge CI verified.
 - `production/sprints/codex-story-map-physical-rollout-001.prompt.txt` — current fail-closed Codex contract for the complete ten-node/twelve-route rollout.
+- `production/sprints/codex-archive-preexisting-unity-settings-before-map-rollout.prompt.txt` — one-shot local recovery contract for archiving the known pre-story Unity settings drift and accidental command-fragment files before implementation.
 - [[production/sprints/epic-018-player-entry-and-physical-map-recovery]] — ordered recovery train and direction lock.
 - [[production/sprints/codex-story-proof-scenario-001.prompt.txt]] — historical completed Codex packet retained for audit only.
 - [[production/planning/prototype-readability-and-map-next-steps-2026-06-15]] — draft next-steps plan after prototype readability/reference review: tactical stack labels/event feed, retaliation, movement/attack affordances, unit data, AP/Defend, neutral AI, strategic map readability, bases, and region/site map evolution.

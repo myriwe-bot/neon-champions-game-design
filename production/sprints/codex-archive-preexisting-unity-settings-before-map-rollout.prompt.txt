@@ -1,0 +1,58 @@
+# LOCAL RECOVERY ONLY — ARCHIVE PREEXISTING UNITY SETTINGS BEFORE STORY-MAP-PHYSICAL-ROLLOUT-001
+
+You are Codex operating in:
+`C:\Users\NordicGamer\CodexProjects\neon-champions-unity`
+
+Goal
+Archive the exact pre-existing dirty Unity settings and two accidental root command-fragment files into one named local Git stash, restore a clean Unity `main`, and report the durable stash identity and restore command.
+
+This is recovery only. Do not implement `STORY-MAP-PHYSICAL-ROLLOUT-001` in this run.
+
+Known required state
+- Current branch must be `main`.
+- Current HEAD must be `7b2c6500685a30e91524e783826f5afca381695c` or a descendant on `origin/main`.
+- The Unity Editor must not be running or rewriting files.
+- Exactly five tracked settings paths are expected dirty/staged:
+  - `Assets/Settings/DefaultVolumeProfile.asset`
+  - `Assets/Settings/PC_RPAsset.asset`
+  - `Assets/Settings/UniversalRenderPipelineGlobalSettings.asset`
+  - `ProjectSettings/ProjectSettings.asset`
+  - `ProjectSettings/UnityConnectSettings.asset`
+- Exactly two untracked repository-root files are expected. Their basenames begin with `taged`; they were accidentally created by malformed pasted PowerShell commands.
+- No other modified, staged, deleted, renamed, or untracked path is allowed.
+
+Mandatory preflight
+1. Confirm repository root, branch, HEAD, upstream, and porcelain status using bounded output.
+2. Parse `git status --porcelain=v1 -z` robustly. Do not rely on hand-typed quoting of the unusual root filenames.
+3. Confirm the complete dirty set is exactly:
+   - the five literal tracked settings paths above; and
+   - exactly two untracked root files whose basenames begin with `taged`.
+4. Print only the seven quoted path names plus status codes, file sizes, and SHA-256 hashes. Do not print file contents or full diffs.
+5. Stop without mutation if the branch/ancestry is wrong, Unity is running, any expected path is absent, either root file is not untracked, or any additional dirty path exists.
+
+Archive procedure
+1. Do not run `git diff --check`. Unity serialization contains trailing whitespace and must be preserved byte-for-byte.
+2. Do not edit, normalize, restore, reset, clean, commit, push, or delete any dirty file.
+3. Create one local stash containing the complete verified dirty set, including staged and untracked files:
+   `git stash push --include-untracked -m "pre-STORY-MAP-PHYSICAL-ROLLOUT-001 Unity settings and accidental prompt fragments"`
+4. Capture both:
+   - the stash selector created by this run; and
+   - its immutable stash commit SHA via `git rev-parse`.
+5. Verify the stash contains exactly the same seven path names. Use bounded name/status inspection only; do not print contents or a patch.
+6. Verify `main` is now clean and still at the expected ancestor/descendant. Do not pull, switch branches, or start implementation in this recovery run.
+7. If the worktree is not clean after stashing, stop and report the exact remaining paths. Do not run another stash automatically.
+
+Required final report
+Return only:
+- PASS or BLOCKED;
+- branch and HEAD;
+- exact seven archived paths;
+- stash message;
+- stash selector;
+- immutable stash commit SHA;
+- clean-worktree verification;
+- exact restore command using the immutable SHA:
+  `git stash apply --index <stash-commit-sha>`
+- confirmation that no files were edited, deleted, normalized, committed, pushed, or implemented.
+
+Do not drop the stash. Do not begin the implementation packet. After PASS, the user will run the normal checked-in implementation prompt separately.

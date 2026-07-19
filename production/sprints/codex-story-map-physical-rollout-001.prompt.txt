@@ -35,13 +35,20 @@ Authority preflight — fail closed
    - `Assets/NeonChampions/Runtime/Presentation/StrategicPlayerShellViewModel.cs`
    - `Assets/NeonChampions/Runtime/Presentation/StrategicMapRenderedElement.cs`
    - `Assets/NeonChampions/Runtime/Application/Strategic/StrategicMapInputSession.cs`
+   - `Assets/NeonChampions/Runtime/Application/Strategic/StrategicMapPresentationSmokeScenario.cs`
    - `Assets/NeonChampions/Runtime/Data/Scenarios/mvp-greenland-duel-test.scenario.json`
    - `Assets/NeonChampions/Tests/EditMode/Strategic/PhysicalArcticMapSliceTests.cs`
    - `Assets/NeonChampions/Tests/PlayMode/PhysicalArcticMapSlicePlayModeTests.cs`
    - `Assets/NeonChampions/Tests/PlayMode/PlayModeSmokeTests.cs`
    - `Assets/NeonChampions/Tests/PlayMode/StoryProofScenario001PlayModeTests.cs`
+   - `Assets/NeonChampions/Tests/PlayMode/PlayerEntryPlayModeTests.cs`
    - `ci/RunWindowsPlayerLaunchSmoke.ps1`
-   - configured build/EditMode/PlayMode/validator scripts under `ci/`
+   - `ci/BuildStandaloneWindows64.ps1`
+   - `ci/RunEditModeTests.ps1`
+   - `ci/RunPlayModeTests.ps1`
+   - `ci/RunPlaceholderValidator.ps1`
+   - `ci/ValidatePlayModeEvidencePath.ps1`
+   - `.github/workflows/unity-foundation-ci.yml`
    - prior baseline evidence under `production/evidence/STORY-MAP-VISUAL-SLICE-001/` and `production/evidence/STORY-CHAMPION-ARMY-INTERACTION-001/`; inspect but never overwrite
 3. Confirm the story says `status: ready`, `approval: approved`, and Ambiguity Check `PASS`.
 4. Confirm the Unity README names this exact story, prompt, branch, design-control commit, and scope as the sole READY packet. The README is pointer content and cannot attest to its own later merge/CI.

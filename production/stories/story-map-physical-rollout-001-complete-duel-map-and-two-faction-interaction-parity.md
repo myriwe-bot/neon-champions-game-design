@@ -66,6 +66,44 @@ It does not claim final art or change the graph rules. It turns the complete cur
 
 All required design/control sources are approved. The scenario file supplies current implementation facts only. If its blob/hash or node/route/site arrays differ at implementation preflight, stop and reconcile this packet rather than silently changing scope. If implementation touches another scoped Unity directory, its nearest `AGENTS.md` becomes required reading and cannot expand story authority.
 
+### Current Unity implementation-fact inventory
+
+These paths are required inspection surfaces, not independent design authority:
+
+| Unity path | Current role | Disposition |
+|---|---|---|
+| `Assets/NeonChampions/Runtime/Presentation/PhysicalArcticMapSliceAdapter.cs` | HRC-only contract/model/role mapping and physical palette | primary bounded-refactor starting point |
+| `Assets/NeonChampions/Runtime/Presentation/StrategicMapBootstrap.cs` | physical/fallback rendering, Input System/raycast dispatch, camera pan/zoom/focus, shell rebuild and evidence selectors | primary integration starting point; presentation changes allowed within story |
+| `Assets/NeonChampions/Runtime/Presentation/StrategicPlayerShellViewModel.cs` | selected-context, structured army cards, action gating and base/site shell projection | required regression surface; change only if parity exposes a presentation defect |
+| `Assets/NeonChampions/Runtime/Presentation/StrategicMapRenderedElement.cs` | rendered target kind/source identity used by pointer dispatch | required target-identity surface; preserve application command ownership |
+| `Assets/NeonChampions/Runtime/Application/Strategic/StrategicMapInputSession.cs` | production selection/movement/site/base/tactical commands | read-only implementation fact; Application changes are excluded and require stop/amendment |
+| `Assets/NeonChampions/Runtime/Data/Scenarios/mvp-greenland-duel-test.scenario.json` | exact pinned scenario topology/content | immutable implementation fact for this story |
+| `Assets/NeonChampions/Tests/EditMode/Strategic/PhysicalArcticMapSliceTests.cs` | current adapter, context and runtime-refresh regressions | focused EditMode extension starting point |
+| `Assets/NeonChampions/Tests/PlayMode/PhysicalArcticMapSlicePlayModeTests.cs` | current native physical-slice/input/context evidence | focused PlayMode/evidence extension starting point |
+| `Assets/NeonChampions/Tests/PlayMode/PlayModeSmokeTests.cs` | camera, QXZ, composition, shell, input and broad regression surfaces | extend narrowly; do not weaken unrelated tests |
+| `Assets/NeonChampions/Tests/PlayMode/StoryProofScenario001PlayModeTests.cs` | connected HRC/QXZ route and composition proof | required connected-route regression surface |
+| `ci/RunWindowsPlayerLaunchSmoke.ps1` | current built-player production launch smoke | narrow HRC+QXZ launch-harness extension allowed; no unrelated workflow redesign |
+| `ci/BuildStandaloneWindows64.ps1`, `ci/RunEditModeTests.ps1`, `ci/RunPlayModeTests.ps1`, `ci/RunPlaceholderValidator.ps1` | configured required verification entry points | execute as required; changes excluded unless a narrowly proven story blocker requires stop/amendment |
+| `production/evidence/STORY-MAP-VISUAL-SLICE-001/` | approved representative physical-map baseline and provenance | historical comparison/regression evidence; never overwrite |
+| `production/evidence/STORY-CHAMPION-ARMY-INTERACTION-001/` | approved structured-army/context baseline | historical comparison/regression evidence; never overwrite |
+
+If current code moved or any listed path no longer owns the stated role, stop and reconcile the inventory. Do not silently substitute a broad architecture change.
+
+## Estimate and split control
+
+- Size: **large-capability**.
+- Expected implementation shape: one shared scenario-wide presentation adapter/recipe boundary; bounded renderer/camera/input integration; focused EditMode and PlayMode extensions; a narrow two-faction standalone-smoke extension; one five-state evidence package.
+- Expected effort: approximately **4–8 focused engineering days**, plus exact-head CI, independent review, evidence regeneration, and human visual review. This is a sizing estimate, not a deadline promise.
+- Expected changed surface: primarily Presentation, focused tests, the launch-smoke script if needed, and the new evidence package. Domain, Application, scenario Data, packages, ProjectSettings, scenes, and prior evidence remain unchanged.
+
+Mandatory stop/split rule at focused-GREEN checkpoint:
+
+1. Stop and mark the story BLOCKED rather than broadening it if implementation requires Domain/Application/scenario mutation, topology/content/balance changes, package/settings/scene changes, unapproved assets, or a new camera/input architecture.
+2. Stop and form a narrow prerequisite if any contracted route/site cannot be exercised legally through the current production runtime, if the pinned fixture contradicts actual traversal, or if QXZ standalone entry cannot be proved by a narrow extension of the existing launch harness.
+3. Stop and split a test/evidence-harness prerequisite if complete two-Champion/ten-site/twelve-route proof requires broad CI/tooling redesign. Do not weaken or sample down the matrix.
+4. Stop for human scope amendment if a shared renderer cannot replace HRC-only/fallback behavior without becoming an unrelated full renderer rewrite.
+5. A pushed focused-GREEN checkpoint is recovery evidence only. No partial sub-slice may be called DONE or merged under this story unless the human explicitly amends the story and acceptance contract.
+
 ## Exact current rollout contract
 
 ### Nodes and sites
@@ -280,6 +318,8 @@ Open questions: none. An implementer can complete this story without inventing m
 - [x] Exact current ten-node/twelve-route scope and categories pinned.
 - [x] Runtime/data compatibility preflight completed against current scenario JSON.
 - [x] Large but coherent presentation capability; unrelated gameplay remains excluded.
+- [x] Large-capability estimate, expected changed surface, and mandatory stop/split rules are explicit.
+- [x] Current Unity runtime/test/CI/prior-evidence surfaces are inventoried by exact path and disposition.
 - [x] Two-faction parity and approved visual grammar explicit.
 - [x] TDD, pointer/raycast, native evidence, performance, provenance, exact-head CI, and human visual gate explicit.
 - [x] Ambiguity Check PASS and human approval recorded.

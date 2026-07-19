@@ -30,7 +30,19 @@ Authority preflight — fail closed
    - Unity `Assets/NeonChampions/Tests/AGENTS.md`
    - Unity `production/evidence/AGENTS.md`
    - Unity `README.md` current-task pointer
-   - current Unity scenario, presentation, camera/input, shell, tests, and evidence harness relevant to this story
+   - `Assets/NeonChampions/Runtime/Presentation/PhysicalArcticMapSliceAdapter.cs`
+   - `Assets/NeonChampions/Runtime/Presentation/StrategicMapBootstrap.cs`
+   - `Assets/NeonChampions/Runtime/Presentation/StrategicPlayerShellViewModel.cs`
+   - `Assets/NeonChampions/Runtime/Presentation/StrategicMapRenderedElement.cs`
+   - `Assets/NeonChampions/Runtime/Application/Strategic/StrategicMapInputSession.cs`
+   - `Assets/NeonChampions/Runtime/Data/Scenarios/mvp-greenland-duel-test.scenario.json`
+   - `Assets/NeonChampions/Tests/EditMode/Strategic/PhysicalArcticMapSliceTests.cs`
+   - `Assets/NeonChampions/Tests/PlayMode/PhysicalArcticMapSlicePlayModeTests.cs`
+   - `Assets/NeonChampions/Tests/PlayMode/PlayModeSmokeTests.cs`
+   - `Assets/NeonChampions/Tests/PlayMode/StoryProofScenario001PlayModeTests.cs`
+   - `ci/RunWindowsPlayerLaunchSmoke.ps1`
+   - configured build/EditMode/PlayMode/validator scripts under `ci/`
+   - prior baseline evidence under `production/evidence/STORY-MAP-VISUAL-SLICE-001/` and `production/evidence/STORY-CHAMPION-ARMY-INTERACTION-001/`; inspect but never overwrite
 3. Confirm the story says `status: ready`, `approval: approved`, and Ambiguity Check `PASS`.
 4. Confirm the Unity README names this exact story, prompt, branch, design-control commit, and scope as the sole READY packet. The README is pointer content and cannot attest to its own later merge/CI.
 5. Confirm the story Activation evidence records the Unity pointer PR, pointer merge commit, exact-head CI, and post-merge `main` CI. Stop until both the README pointer and design-control activation record agree.
@@ -45,6 +57,13 @@ Branch and recovery contract
 - Fresh mode: from clean current Unity `main`, create/switch to that branch.
 - Resume mode: if already on that exact branch with the approved pointer-main ancestor and only story-scoped `M`/`??` files or generated root `artifacts/`, preserve the work, inspect the diff, and continue. Do not reset, discard, or restart valid partial work.
 - Stop for another branch, wrong ancestry, conflicts, unrelated dirty paths, unknown generated files, or source contradiction.
+
+Size and mandatory checkpoint decision
+- This is a large-capability packet, estimated at 4–8 focused engineering days plus CI/review/evidence gates.
+- At the focused-GREEN checkpoint, explicitly report `CONTINUE` or `STOP/SPLIT`.
+- `STOP/SPLIT` is mandatory if completion requires Domain/Application/scenario mutation; topology/content/balance changes; package/settings/scene changes; unapproved assets; a new camera/input architecture; broad CI/tooling redesign; an illegal/unreachable contracted route/site; or a renderer rewrite that exceeds the shared scenario-wide presentation boundary.
+- If complete two-Champion/ten-site/twelve-route proof exceeds the narrow existing harness extensions, form a prerequisite rather than sampling down evidence.
+- A checkpoint branch/PR is recovery evidence only. Do not claim or merge a partial rollout without an explicit human story amendment.
 
 Exact contracted topology
 Nodes/sites:
@@ -117,6 +136,7 @@ Phase B — focused GREEN and immediate checkpoint
 - Run focused EditMode and PlayMode selectors.
 - Review `git diff --check`, story-scoped changed paths, and exclusions.
 - Commit and push a draft checkpoint immediately. Create/update the draft PR before broad suites or screenshot work so interruption recovery has a real remote commit.
+- At that checkpoint, evaluate every mandatory stop/split condition above and print the decision with evidence. Stop without broadening if any condition applies.
 
 Phase C — full behavior/evidence
 - Run full EditMode, PlayMode, Placeholder Validator, and Compile/Standalone checks.

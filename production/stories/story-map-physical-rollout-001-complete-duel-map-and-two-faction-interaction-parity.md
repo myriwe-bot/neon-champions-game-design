@@ -42,6 +42,7 @@ It does not claim final art or change the graph rules. It turns the complete cur
 
 | Path | Status / purpose | Disposition |
 |---|---|---|
+| design-control root `AGENTS.md` | approved repository reading/order and document-control instructions | required repository instruction; not mechanics authority |
 | this story | exact rollout scope, IDs, acceptance, evidence, branch | required authority |
 | `production/epics/epic-018-physical-adventure-map-and-player-entry-recovery.md` | approved physical-map direction and recovery boundaries | required authority |
 | `production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell.md` | approved visual grammar, replacement boundary, pointer and evidence standards | required authority |
@@ -55,9 +56,15 @@ It does not claim final art or change the graph rules. It turns the complete cur
 | `docs/architecture/testing-strategy.md` | TDD, PlayMode, visual/evidence layers | required authority |
 | `docs/architecture/ci-build-automation.md` | exact-head configured checks | required authority |
 | `docs/architecture/control-manifest.md` | implementation, provenance, branch and PR controls | required authority |
-| Unity `mvp-greenland-duel-test.scenario.json` at activation ancestry | current literal topology, categories, stable IDs and runtime content | implementation fact only; must not become new canon or be edited by this story |
+| Unity root `AGENTS.md` | implementation authority, architecture, test, asset, Git and stop rules | required repository instruction |
+| Unity `Assets/NeonChampions/Runtime/Presentation/AGENTS.md` | presentation-local UX/evidence/authority rules | required scoped repository instruction |
+| Unity `Assets/NeonChampions/Runtime/Data/AGENTS.md` | data inspection/validation rules; data edits remain excluded | required scoped repository instruction for preflight |
+| Unity `Assets/NeonChampions/Tests/AGENTS.md` | TDD and evidence rules | required scoped repository instruction |
+| Unity `production/evidence/AGENTS.md` | evidence package requirements | required scoped repository instruction |
+| Unity `README.md` current-task pointer | implementation-repo story/prompt/branch/scope agreement | required control surface; not design authority and cannot attest to its own later merge/CI |
+| Unity `mvp-greenland-duel-test.scenario.json` at `07aec85501a12252c5370e9e41a301c0f1afa0bf` | current literal topology, categories, stable IDs and runtime content | implementation fact only; Git blob `e2d547785c7501275de38d85f9ff11376d6f1b6b`, SHA-256 `91a253fd5f7c714db43d654ff81ce0ad47aa0b0c7cf89fb3ea8486417e6795ee`; must not become canon or be edited |
 
-All required design/control sources are approved. The scenario file supplies current implementation facts only. If its node/route/site arrays differ at implementation preflight, stop and reconcile this packet rather than silently changing scope.
+All required design/control sources are approved. The scenario file supplies current implementation facts only. If its blob/hash or node/route/site arrays differ at implementation preflight, stop and reconcile this packet rather than silently changing scope. If implementation touches another scoped Unity directory, its nearest `AGENTS.md` becomes required reading and cannot expand story authority.
 
 ## Exact current rollout contract
 
@@ -97,6 +104,41 @@ Embody all twelve current graph edges as believable physical corridors while pre
 - `route_central_guarded_beta`
 - `route_central_calibration_archive`
 
+The authored route-array order is binding and must remain exactly:
+
+1. `route_neutral_alpha_central`
+2. `route_start_a_neutral_alpha`
+3. `route_start_a_recruitment`
+4. `route_start_a_guarded_alpha`
+5. `route_guarded_alpha_central`
+6. `route_central_neutral_beta`
+7. `route_neutral_beta_start_b`
+8. `route_start_b_data_cache_beta`
+9. `route_data_cache_beta_central`
+10. `route_guarded_beta_start_b`
+11. `route_central_guarded_beta`
+12. `route_central_calibration_archive`
+
+The bullet list above groups the physical corridor train for readability; it does not redefine serialized order.
+
+### Actor and target coverage matrix
+
+| Contracted target | Required physical/input proof |
+|---|---|
+| `champion_1` / `faction_1` at HRC-side nodes | physical HRC actor/entourage, real pointer selection, selected-army context, movement and focus anchor |
+| `champion_2` / `faction_2` at QXZ-side nodes | physical QXZ actor/entourage, real pointer selection, selected-army context, movement and focus anchor |
+| `site_start_a` / `base_start_a` | HRC landmark, real pointer open, correct HRC facility catalog, Champion-context replacement |
+| `site_start_b` / `base_start_b` | QXZ landmark, real pointer open, correct QXZ facility catalog, Champion-context replacement |
+| `site_placeholder_recruitment` | recruitment silhouette and legal production-path pointer/preview proof; internal placeholder ID never shown |
+| `site_data_cache_alpha`, `site_data_cache_beta` | data-cache silhouettes and legal production-path pointer/preview/consumed-state proof on both halves |
+| `site_guarded_alpha`, `site_guarded_beta` | guarded-site silhouettes and legal production-path pointer/encounter preview proof on both halves |
+| `site_neutral_beta` | one-shot visit silhouette and legal production-path pointer/preview proof |
+| `site_calibration_archive` | archive/calibration silhouette and legal production-path pointer/preview proof |
+| `site_central_objective` | central objective silhouette and legal production-path pointer/pressure context proof |
+| all twelve routes in authored order | every rendered segment is geometrically associated with its route; aggregate collider/camera-ray coverage spans each visible reachable corridor; at least one real Input System route command is proved for each route in a legal production state; unreachable corridors are not false clickable routes |
+
+Use fresh legal production sessions/routes as needed. A test may derive expected presentation from runtime snapshots, but direct DTO mutation, teleporting, or synthetic player-facing success state does not satisfy input parity.
+
 The default visual read is terrain/infrastructure, not route lines. Reachability and selected-path emphasis remain contextual and restrained.
 
 ## In scope
@@ -109,6 +151,8 @@ The default visual read is terrain/infrastructure, not route lines. Reachability
 - Preserve a stable presentation adapter/registry boundary keyed to current IDs and snapshot facts; presentation must not own gameplay state.
 - Presentation-only anchors, route bends, silhouette recipes, and terrain grouping may be authored outside scenario rules. They must be deterministic, testable, replaceable, and must not alter scenario JSON or saved/domain state.
 - Support pan, zoom, focus, and normal target interaction across the complete converted map. The whole scenario need not be readable in one fixed frame; the player must be able to inspect it without exposing a graph fallback.
+- Use the same scenario-wide physical anchor/recipe registry for rendering, Champion/site focus, and camera bounds. Current legacy `ToWorld(node.X,node.Y)` focus/clamp behavior must not focus empty graph coordinates after physical anchors diverge.
+- Preserve the existing camera contract: pointer drag and explicit pan remain bounded; zoom remains clamped; pan/zoom survive snapshot/UI refresh; Focus centers the selected physical Champion or site and applies the existing focus zoom. Tests must prove HRC start, center, archive, QXZ start, and moved-Champion focus against rendered physical targets.
 
 ### Two-faction parity
 
@@ -164,12 +208,12 @@ The default visual read is terrain/infrastructure, not route lines. Reachability
 - [ ] No contracted element uses `Out-of-slice` object naming/treatment or exposes raw node/route/site/localization IDs in normal UI.
 - [ ] Existing scenario JSON, stable IDs, node/route/site arrays, route endpoint order/traversal semantics/costs, domain rules, save state, AI policy, and tactical behavior are byte-identical to the activation ancestor.
 - [ ] Both faction bases and Champions have distinct approved physical grammars beyond recolor, while active/selected/reachable state remains readable beyond hue.
-- [ ] Real Input System/raycast selection works for both Champions, both bases, every current site category, and representative reachable route segments on both halves and through the center.
+- [ ] The complete actor/target matrix above is proved: both Champions, all ten sites, and every one of the twelve routes has the required rendered-target and legal real-input coverage.
 - [ ] Decorative terrain/structures do not occlude current in-scope pointer targets; screen-space or raycast coverage proves every visible route segment that is intended to accept input.
 - [ ] HRC and QXZ Champion selection shows actual current movement and structured attached-army cards from snapshot data; no fabricated inventory or stale cross-context cards.
 - [ ] HRC and QXZ base selection shows the correct existing faction-owned six-facility catalog and suppresses Champion-only actions until Champion context returns.
 - [ ] Recruitment, data-cache/visit, guarded encounter, central objective, save/resume, opponent movement, and tactical handoff regressions remain green through normal application paths.
-- [ ] Camera pan/zoom/focus can reach and frame both starts, both side clusters, the central objective, and the calibration archive without exposing old graph presentation or losing shell usability.
+- [ ] Camera pan/zoom/focus uses the physical anchor registry, reaches and frames both starts, both side clusters, the central objective, the calibration archive, and moved Champions, remains bounded/clamped, and persists through snapshot/UI refresh without exposing old graph presentation.
 - [ ] Physical geography remains map-dominant and coherent at native 1920×1080; critical text/card content fits, does not overlap siblings/hints, and uses approved contrast baselines.
 - [ ] No per-frame geometry/material/UI recreation is introduced; scenario-wide render-object/material counts and two repeated render/capture counts are recorded and stable.
 - [ ] Exact-head Compile/Standalone, EditMode, PlayMode, and Placeholder Validator jobs pass.
@@ -182,7 +226,7 @@ The default visual read is terrain/infrastructure, not route lines. Reachability
 - Focused RED/GREEN required before broad suites.
 - EditMode: exact ten-node/twelve-route contract; scenario-wide applicability independent of active faction; deterministic anchor/recipe mapping; distinct faction recipe mapping; no scenario/domain mutation; stable snapshot-derived army/context data; malformed/missing contracted ID rejection.
 - PlayMode: production HRC and QXZ entry; real pointer/raycast Champion/base/site/route selection; cross-map pan/zoom/focus; Champion -> site/base -> Champion context replacement; target non-occlusion; route-segment aggregate hit coverage; raw-ID/path/debug leakage; text/card fit and overlap at 1920×1080.
-- Regression: full existing EditMode, PlayMode, validator, compile, and repeated standalone title -> HRC/QXZ launch checks.
+- Regression: full existing EditMode, PlayMode, validator, compile, and built-player launch checks. Standalone proof must execute two independent production launches: title -> Play HRC -> physical HRC map and title -> Play QXZ -> physical QXZ map. A compile-only result or HRC-only launch does not satisfy QXZ parity.
 
 ### Native evidence
 
@@ -244,6 +288,7 @@ Open questions: none. An implementer can complete this story without inventing m
 ## Activation evidence
 
 - Design authority commit: `0696abbaefc53af009b739c47a810143930a1417`; publish CI `29685079236` passed.
+- Authority clarification commit: `b7bff8049af40959832e606d2bf0296b4acb1442`; publish CI `29685225278` passed.
 - Unity README pointer PR/exact-head/post-merge CI: required before Codex execution.
 
 ## Verdict

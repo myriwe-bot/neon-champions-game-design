@@ -23,13 +23,22 @@ Authority preflight — fail closed
    - `docs/architecture/testing-strategy.md`
    - `docs/architecture/ci-build-automation.md`
    - `docs/architecture/control-manifest.md`
+   - design-control root `AGENTS.md`
+   - Unity root `AGENTS.md`
+   - Unity `Assets/NeonChampions/Runtime/Presentation/AGENTS.md`
+   - Unity `Assets/NeonChampions/Runtime/Data/AGENTS.md`
+   - Unity `Assets/NeonChampions/Tests/AGENTS.md`
+   - Unity `production/evidence/AGENTS.md`
    - Unity `README.md` current-task pointer
    - current Unity scenario, presentation, camera/input, shell, tests, and evidence harness relevant to this story
-3. Confirm the story says `status: ready`, `approval: approved`, Ambiguity Check `PASS`, and the Unity README names this exact story and prompt as the sole READY packet with successful pointer activation evidence.
-4. Confirm Unity `main` includes merge commit `07aec85501a12252c5370e9e41a301c0f1afa0bf` and the later approved pointer activation merge.
-5. Parse the current `mvp-greenland-duel-test.scenario.json`. Confirm its map still contains exactly the contracted ten nodes and twelve routes from the story. Confirm the scenario map/node/route/site arrays match the approved packet before coding.
-6. Stop without edits if required authority is missing/draft/contradictory, pointer activation is absent, topology differs, ancestry is wrong, conflicts exist, or dirty files include unrelated/unknown work.
-7. Root `artifacts/` Unity logs/results are disposable generated scratch: do not commit them. Stop only if dirty content is user-authored, unrelated, or unknown.
+3. Confirm the story says `status: ready`, `approval: approved`, and Ambiguity Check `PASS`.
+4. Confirm the Unity README names this exact story, prompt, branch, design-control commit, and scope as the sole READY packet. The README is pointer content and cannot attest to its own later merge/CI.
+5. Confirm the story Activation evidence records the Unity pointer PR, pointer merge commit, exact-head CI, and post-merge `main` CI. Stop until both the README pointer and design-control activation record agree.
+6. Confirm Unity `main` includes merge commit `07aec85501a12252c5370e9e41a301c0f1afa0bf` and the later approved pointer activation merge.
+7. Confirm `mvp-greenland-duel-test.scenario.json` remains Git blob `e2d547785c7501275de38d85f9ff11376d6f1b6b` with SHA-256 `91a253fd5f7c714db43d654ff81ce0ad47aa0b0c7cf89fb3ea8486417e6795ee`. Parse it and confirm exactly the contracted ten nodes and twelve routes in the story's exact authored array order.
+8. If implementation touches any other scoped directory, read its nearest `AGENTS.md`; it cannot expand approved scope.
+9. Stop without edits if required authority is missing/draft/contradictory, pointer activation is absent, scenario blob/hash/order differs, topology differs, ancestry is wrong, conflicts exist, or dirty files include unrelated/unknown work.
+10. Root `artifacts/` Unity logs/results are disposable generated scratch: do not commit them. Stop only if dirty content is user-authored, unrelated, or unknown.
 
 Branch and recovery contract
 - Required branch: `story/STORY-MAP-PHYSICAL-ROLLOUT-001-complete-duel-map`.
@@ -51,10 +60,10 @@ Nodes/sites:
 - `node_start_b` / `site_start_b` / `base_start_b`
 
 Routes:
+- `route_neutral_alpha_central`
 - `route_start_a_neutral_alpha`
 - `route_start_a_recruitment`
 - `route_start_a_guarded_alpha`
-- `route_neutral_alpha_central`
 - `route_guarded_alpha_central`
 - `route_central_neutral_beta`
 - `route_neutral_beta_start_b`
@@ -79,9 +88,17 @@ Implementation requirements
 10. Through existing snapshot/application boundaries, preserve structured Champion army cards, movement, base/site context, legal/disabled actions, and clean Champion -> base/site -> Champion replacement for both factions.
 11. Both bases must open their correct existing faction-owned six-facility catalog without cross-faction leakage. Champion-only actions remain hidden/suppressed while another context is visibly selected.
 12. Existing recruitment, one-shot visit, data-cache, guarded encounter, objective, save/resume, opponent, and tactical-handoff behavior remains unchanged and reachable through current map targets.
-13. Preserve/extend pan, zoom, focus, and pointer usability across both starts, side clusters, center, and archive. The whole scenario need not fit one frame; it must remain inspectable without graph fallback.
-14. Physical terrain/geography must read as one connected Arctic place. Preserve map dominance, controlled text backing, contrast, fit, and non-overlap.
-15. No per-frame geometry/material/UI recreation. Keep snapshot-triggered rebuild semantics and record stable repeat counts.
+13. Use one physical anchor/recipe registry for rendering, selected Champion/site focus, and camera bounds. Do not use legacy graph `ToWorld` positions to focus or clamp a visually relocated physical target.
+14. Preserve explicit pan and pointer-drag bounds, clamped zoom, pan/zoom persistence through snapshot/UI refresh, and Focus centering/zoom. Prove physical focus at HRC start, center, archive, QXZ start, and moved Champions.
+15. Physical terrain/geography must read as one connected Arctic place. Preserve map dominance, controlled text backing, contrast, fit, and non-overlap.
+16. No per-frame geometry/material/UI recreation. Keep snapshot-triggered rebuild semantics and record stable repeat counts.
+
+Complete target/input matrix
+- `champion_1` and `champion_2`: physical actor, real pointer selection, army context, movement and physical focus.
+- `site_start_a`/`base_start_a` and `site_start_b`/`base_start_b`: real pointer open, correct faction catalog, context replacement.
+- `site_placeholder_recruitment`, both data caches, both guarded sites, `site_neutral_beta`, `site_calibration_archive`, and `site_central_objective`: physical category silhouette plus legal production-path pointer/preview or encounter/context proof; internal IDs never shown.
+- All twelve routes in exact authored order: each rendered segment maps to its route; aggregate collider/camera-ray coverage spans every visible reachable corridor; each route receives at least one real Input System route command in a legal production state; unreachable corridors do not become false clickable routes.
+- Use fresh legal sessions/routes when needed. Direct DTO mutation, teleporting, or synthetic visible success state is forbidden.
 
 Hard exclusions
 - No scenario JSON, domain, application rule, topology, route-cost/endpoint/traversal, AI policy, save schema, economy/balance, tactical rule/UI, unit/facility/site content, campaign, editor, free-movement, tile/hex/province, terrain-cost/pathfinding, weather/fog/supply, package, settings, render-pipeline, or scene-ownership changes.
@@ -92,6 +109,7 @@ TDD and phased execution
 Phase A — preflight and RED
 - Inspect current adapter/renderer/tests and current scenario arrays.
 - Add focused failing tests for exact ten-node/twelve-route scenario-wide mapping; faction-independent applicability; QXZ physical entry; both bases/Champions; site/route pointer coverage; missing-contract rejection; no scenario mutation; camera reach.
+- Pin exact authored route-array order, scenario blob/hash, complete actor/site/route matrix, and physical-anchor focus/clamp behavior in focused tests.
 - Run the narrowest selectors and preserve concise RED evidence.
 
 Phase B — focused GREEN and immediate checkpoint
@@ -102,6 +120,7 @@ Phase B — focused GREEN and immediate checkpoint
 
 Phase C — full behavior/evidence
 - Run full EditMode, PlayMode, Placeholder Validator, and Compile/Standalone checks.
+- Execute two independent built-player production launches: title -> Play HRC -> physical HRC map, and title -> Play QXZ -> physical QXZ map. Compile-only or HRC-only launch is insufficient.
 - Exercise production title -> HRC and title -> QXZ, pan/focus across both halves and center, and normal pointer selection of Champions/bases/sites/reachable route segments.
 - Add robust regression coverage for raw-ID/path/debug leakage, card/text fit, child/card containment, sibling/hint overlap, cross-context leakage, collider occlusion, aggregate visible-route hit coverage, stable repeat counts, and no per-frame recreation.
 - Keep logs concise. Do not repeatedly dump full files or full Unity logs when a focused summary is sufficient.

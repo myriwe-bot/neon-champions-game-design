@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-MERGED / automated gates passed / human double-click verification pending. Unity PR #180 merged reviewed head `a80146e8d256be7ec9fc4d16b016e702d30b24e3` as `56122d14e709637d746b259e849b85e85dd4c20f`; exact-head PR run `29761977696` and post-merge `main` run `29762704689` passed all four configured jobs. The reviewed-head and merge trees are identical at `13665466ccb9763cc589bed8fc201b9fc8f691d0`. Do not mark DONE until the owner double-clicks the exact rebuilt `main` executable on the same high-resolution machine and confirms the title appears without launch arguments.
+MERGED / automated gates passed after review hardening / human double-click verification pending. Unity PR #180 merged the display implementation as `56122d14e709637d746b259e849b85e85dd4c20f`. A delayed independent review correctly found that prior `Screenmanager *` registry values could contaminate the no-argument proof on a persistent runner; follow-up PR #182 isolated and restored only those values and merged as `2133c364f6f94452cf00100a87045ebb4a33be45` after exact-head run `29764493527` passed all four jobs. Do not mark DONE until the owner double-clicks the exact rebuilt `main` executable on the same high-resolution machine and confirms the title appears without launch arguments.
 
 ## Activation evidence
 
@@ -39,6 +39,13 @@ MERGED / automated gates passed / human double-click verification pending. Unity
 - Post-merge `main` CI: `29762704689` — passed.
 - Automated evidence is PASS. Human double-click verification remains pending.
 - Unity README closeout PR #181 merged docs-only head `f05c6b008ae188a37a5753ed9d8739e5da86448d` as `019c32452571aa7dd36b228dd6472b61610c9021`; both trees equal `1b4f89843ce71510651fb78e5536a6c25c4a7ada`. Automatically started PR run `29763873067` and main run `29763946600` were intentionally cancelled because the only changed path was `README.md`; literal authority readback and `git diff --check` passed.
+- Delayed independent review verdict on `02ca3ed…`: BLOCKED because launch 1 did not isolate persisted Unity display preferences, so earlier forced-resolution runs could produce a false positive.
+- Follow-up PR #182: https://github.com/myriwe-bot/neon-champions-unity/pull/182
+- Follow-up exact head: `2c6f6a54d57b5d5bad9f753492a8448b62c3f03c`; exact-head PR run `29764493527` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
+- The smoke now snapshots and removes only `Screenmanager *` values under `HKCU\Software\DefaultCompany\Neon Champions` before launch 1, records names/count without values, and restores prior display values in a top-level `finally`. Unrelated PlayerPrefs are untouched, and EditMode binds the company/product registry identity.
+- Follow-up merge: `2133c364f6f94452cf00100a87045ebb4a33be45`; reviewed and merge trees both equal `f9bd1988238fbc8734ec7e820e9f455bfc19f200`.
+- Redundant post-merge run `29765326843` was intentionally cancelled after exact tree identity was proven. The immutable PR head already passed the affected full matrix because the classifier/smoke harness is high-risk CI infrastructure.
+- This closes contamination of the automated fresh-default proof. It does not claim arbitrary stale saved display state is migrated at runtime; the exact-machine human double-click remains decisive. If that launch still goes black, authority must be amended for a bounded saved-state recovery instead of claiming DONE.
 
 ## Player problem
 
@@ -120,7 +127,7 @@ If Unity serialization or platform-specific APIs cannot represent this exact con
 
 ## Immediate human verification
 
-1. Pull Unity `main` at `56122d14e709637d746b259e849b85e85dd4c20f`.
+1. Pull Unity `main` at `2133c364f6f94452cf00100a87045ebb4a33be45`.
 2. Rebuild with `ci/BuildStandaloneWindows64.ps1`.
 3. Record the executable SHA-256.
 4. Double-click `Builds/StandaloneWindows64/NeonChampionsFoundation.exe`; do not use PowerShell, `-screen-*`, Editor, or the smoke harness.

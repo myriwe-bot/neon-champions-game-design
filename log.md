@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-20] delayed review repair | Isolated persisted display preferences
+
+- A delayed independent review of Unity head `02ca3ed…` returned BLOCKED: the no-screen-argument smoke did not isolate Unity's persisted `Screenmanager *` registry values, so prior forced-resolution runs on the persistent runner could contaminate proof of the new defaults.
+- Accepted the finding after PR #180 merge; the story remained human-QA-pending and was never marked DONE.
+- Follow-up Unity PR #182 snapshots and removes only display-manager values under `HKCU\Software\DefaultCompany\Neon Champions` before launch 1, records names/count without values, restores prior display values in a top-level `finally`, leaves unrelated PlayerPrefs untouched, and binds company/product identity in EditMode.
+- Exact follow-up head `2c6f6a54d57b5d5bad9f753492a8448b62c3f03c` passed run `29764493527`, including the isolated no-argument standalone route and all three other configured jobs.
+- PR #182 merged as `2133c364f6f94452cf00100a87045ebb4a33be45`; reviewed and merge trees both equal `f9bd1988238fbc8734ec7e820e9f455bfc19f200`.
+- Cancelled redundant post-merge run `29765326843` after proving exact tree identity. This follows the owner-directed risk-tier policy while retaining one full affected matrix for the high-risk CI-smoke change.
+- Automated fresh-default evidence is now uncontaminated. Runtime migration of arbitrary stale saved display state is not claimed; the owner’s exact-machine double-click remains mandatory and fail-closed.
+
 ## [2026-07-20] merge and workflow candidate | Display repair merged; risk-tiered CI candidate prepared
 
 - Reviewed Unity PR #180 against `STORY-STANDALONE-DISPLAY-001`; corrected stale evidence lifecycle wording before final freeze.

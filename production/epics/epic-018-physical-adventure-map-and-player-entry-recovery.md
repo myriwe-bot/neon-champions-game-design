@@ -7,7 +7,7 @@ owner: shared
 created: 2026-07-17
 updated: 2026-07-20
 approval: approved
-related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-prototype-continuity-qa-002-recovery-replaytest]
+related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-prototype-continuity-qa-002-recovery-replaytest, production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity]
 ---
 
 # EPIC-018 Physical Adventure Map and Player Entry Recovery
@@ -40,9 +40,10 @@ A clean Windows executable launches through the normal title/faction-choice path
 2. `STORY-MAP-VISUAL-SLICE-001` — DONE / merged through Unity PR #172 and post-merge verified; the representative HRC physical-map-and-shell slice received owner visual APPROVE over unchanged graph rules.
 3. `STORY-CHAMPION-ARMY-INTERACTION-001` — DONE / merged through Unity PR #174 and post-merge verified; exposes the truthful current Champion army and clean Champion -> base -> Champion context continuity.
 4. `STORY-MAP-PHYSICAL-ROLLOUT-001` — DONE / merged as Unity PR #176 / post-merge verified by `main` run `29699588200`; the complete ten-node/twelve-route duel scenario now uses the shared physical presentation with HRC/QXZ interaction parity.
-5. `STORY-PROTOTYPE-CONTINUITY-QA-002` human replaytest — READY / approved on 2026-07-20; execution and human verdict pending for launch, complete-map readability, both-faction interaction, save/relaunch/Continue, and post-resume opponent pressure.
+5. `STORY-PROTOTYPE-CONTINUITY-QA-002` human replaytest — DONE / `BLOCKED — REJECT CLOSEOUT`; ordinary double-click launch showed the Unity splash then a black window, while CI-style forced 1920x1080 launch succeeded on the same machine.
+6. `STORY-STANDALONE-DISPLAY-001` — READY-candidate / approval pending; safe default 1920x1080 resizable window and no-screen-arguments built-player launch parity only.
 
-No Unity implementation packet is active. The next gate is the approved human-owned `STORY-PROTOTYPE-CONTINUITY-QA-002` replaytest. Automation may prepare build provenance and evidence scaffolding but may not execute or pass the human verdict.
+No Unity implementation packet is active. The sole next candidate is `STORY-STANDALONE-DISPLAY-001`; its prompt remains guarded until explicit human approval. The full recovery replaytest must be repeated after any repair and cannot be passed by automation.
 
 ## Boundaries
 
@@ -58,4 +59,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. Orders 1–4 are DONE. `STORY-PROTOTYPE-CONTINUITY-QA-002` is READY / approved for human execution; closeout remains pending the actual report and verdict.
+ACTIVE / approved. Orders 1–4 are DONE. Order 5 returned `BLOCKED — REJECT CLOSEOUT`. Order 6 is the sole bounded READY-candidate and remains non-runnable pending explicit human approval.

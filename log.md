@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-20] human replaytest rejection | Normal Windows launch black; display repair candidate formed
+
+- `STORY-PROTOTYPE-CONTINUITY-QA-002` returned `BLOCKED — REJECT CLOSEOUT` at its first required step: ordinary manual launch showed the Made with Unity splash and then a black window on the owner’s high-resolution display.
+- The same executable opened normally on the same machine when launched with CI’s forced `-screen-fullscreen 0 -screen-width 1920 -screen-height 1080` policy.
+- The supplied player log reached Unity 6000.4.8f1, D3D12 on NVIDIA GeForce RTX 5070 Ti, Mono, PhysX, and Input System initialization without a fatal error. The successful forced run makes the D3D12 info-queue warning non-causal evidence.
+- Current project settings declare 1024x768 defaults while also enabling native-resolution startup, disabling resizing, and using fullscreen mode 1; current CI always overrides that policy. CI therefore did not prove ordinary player launch parity.
+- Formed exactly one bounded `STORY-STANDALONE-DISPLAY-001` READY-candidate: explicit safe 1920x1080 resizable window defaults, project-settings validation, a real built-player launch with no `-screen-*` arguments, preservation of explicit overrides, and mandatory human double-click recheck.
+- No implementation is approved. The repair prompt is guarded, EPIC-018 remains active, and the broader continuity replaytest must be repeated after repair.
+
 ## [2026-07-20] approval | EPIC-018 recovery continuity replaytest READY
 
 - Human explicitly approved the exact `STORY-PROTOTYPE-CONTINUITY-QA-002` script and guide.

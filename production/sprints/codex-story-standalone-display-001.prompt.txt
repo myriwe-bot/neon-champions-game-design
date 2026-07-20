@@ -1,0 +1,27 @@
+# Guarded Codex packet: STORY-STANDALONE-DISPLAY-001
+
+STOP. This packet is READY-candidate / approval pending and is not runnable implementation authority.
+
+Do not modify either repository, create a branch, edit Unity project settings, build, test, commit, push, or open a PR until all of these are true:
+
+1. `production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity.md` says `status: ready` and `approval: approved`.
+2. Its Ambiguity Check remains PASS.
+3. The Unity README current-task pointer names this exact story and its pointer PR has passed exact-head and post-merge CI.
+4. Design control records the pointer activation and identifies the exact Unity implementation ancestor.
+
+If any gate is absent, report the missing gate and stop without changes.
+
+After explicit approval, replace this guard with a full runnable contract that requires Codex to:
+
+- read the approved story, rejected `STORY-PROTOTYPE-CONTINUITY-QA-002` report, testing strategy, Unity root/scoped instructions, current `ProjectSettings.asset`, standalone builder, launch smoke, and existing entry/display tests;
+- reproduce and preserve the difference between ordinary no-screen-arguments launch and CI-forced 1920x1080 launch;
+- use focused RED/GREEN before changing the approved display defaults;
+- encode only the approved safe Windows startup contract;
+- add validator/test coverage and one real built-player launch with no `-screen-*` arguments;
+- preserve explicit screen overrides and independent HRC/QXZ production-input coverage;
+- record actual initial window/client dimensions, mode, logs, source SHA, executable hash, tests, evidence, and omissions;
+- stop rather than change graphics APIs, renderer/shaders, gameplay, packages, unrelated settings, or user preferences broadly;
+- publish a remote checkpoint after focused GREEN, then finish full suites and evidence;
+- commit and push the actual story branch, create/update a non-draft PR, and print branch, SHA, remote ref, PR URL, CI, omissions, and exact recovery commands if publication fails.
+
+Human double-click verification remains mandatory after merge and cannot be impersonated by Codex, CI, screenshots, or an agent walkthrough.

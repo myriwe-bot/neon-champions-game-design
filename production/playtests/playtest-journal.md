@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-05
-updated: 2026-07-17
+updated: 2026-07-20
 source_lore: []
 related:
   [
@@ -171,6 +171,45 @@ Source: `production/stories/story-cmd-005-champion-command-explanation-pass.md`.
 - Second-use denial is not understood.
 - Rally Order and Drone Strike do not yet feel differentiated.
 - Marshal vs Operator identity is not yet clear.
+
+## [2026-07-20] STORY-PROTOTYPE-CONTINUITY-QA-002 — REJECT / BLOCKED
+
+- Build / commit / PR: Unity `main` `91443c87e7f68241403cb1004c4acb0f12c07089`; gameplay implementation from PR #176. Executable SHA-256 was not supplied during the partial run.
+- Scenario / mode: ordinary Windows standalone launch versus diagnostic CI-style forced 1920x1080 window launch.
+- Tester / role: human owner / high-resolution Windows machine.
+- Story / epic under review: `STORY-PROTOTYPE-CONTINUITY-QA-002` / EPIC-018.
+- Evidence: direct human report plus pasted forced-launch player log; no valid HRC/QXZ or continuity captures were reached.
+
+### What dragged
+
+- Ordinary double-click launch showed the Made with Unity splash and then a black window.
+- The first required replaytest step failed, so no broader discovery or continuity result is claimed.
+
+### What surprised
+
+- The same executable opened normally on the same machine when forced to a 1920x1080 window, matching CI’s launch policy.
+- The log showed normal Unity, D3D12, Mono, PhysX, and Input System initialization without a fatal error.
+
+### What confused
+
+- CI was green because it always supplied safe screen arguments; it did not prove normal player launch.
+- Project settings combine 1024x768 defaults with native-resolution startup, non-resizable windows, and fullscreen mode 1.
+
+### Exact complaints to preserve
+
+- “For some reason my machine does not open the build. It shows the made with unity splash but after that gives a black screen.”
+- “It is running windowed, my display is actually much larger in resolution.”
+- “The window properly pops open on the same machine when the tests run.”
+
+### Fun verdict
+
+- REJECT — normal player entry remains blocked; forced-resolution command-line launch is diagnostic evidence, not an accepted workaround.
+
+### Next decision
+
+- Keep EPIC-018 active.
+- Review/approve one bounded safe-default-window and no-arguments-launch-parity repair candidate.
+- Repeat the human recovery continuity replaytest after repair.
 
 ## [2026-07-17] STORY-PROTOTYPE-CONTINUITY-QA-001 — REJECT / BLOCKED
 

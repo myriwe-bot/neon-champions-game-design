@@ -1,20 +1,39 @@
 ---
 title: STORY-PROTOTYPE-CONTINUITY-QA-002 Recovery Continuity Replaytest
 type: story
-status: ready
+status: done
 phase: production
 owner: human
 created: 2026-07-19
 updated: 2026-07-20
 approval: approved
-related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity]
+related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity]
 ---
 
 # STORY-PROTOTYPE-CONTINUITY-QA-002 Recovery Continuity Replaytest
 
 ## Status
 
-READY / approved by the human owner on 2026-07-20. The exact script, candidate-build basis, both-faction discovery route, full save/relaunch/Continue route, verdict model, and fail-closed treatment of unexecuted required steps are approved. Human execution and verdict remain pending.
+DONE / `BLOCKED — REJECT CLOSEOUT` on 2026-07-20. Normal manual launch showed the Made with Unity splash and then a black window on the owner’s high-resolution display. The same executable reached the title when launched with CI’s forced `1920x1080` window arguments. Required discovery and continuity steps were not executed and are not claimed.
+
+## Human execution result — 2026-07-20
+
+- Exact complaint: “For some reason my machine does not open the build. It shows the made with unity splash but after that gives a black screen.”
+- Display context: the owner’s actual display resolution is substantially larger than 1920x1080; the failing direct launch was windowed.
+- Same-machine contrast: the player window opens properly when automated tests run.
+- Diagnostic result: launching the same build with `-screen-fullscreen 0 -screen-width 1920 -screen-height 1080` reached the game normally.
+- Player log reached Unity 6000.4.8f1 engine, D3D12 initialization on NVIDIA GeForce RTX 5070 Ti, Mono reload, Physics/PhysX, Input System, and scene unload timing without a reported managed exception or fatal graphics error.
+- The D3D12 info-queue warning is not treated as root cause: the forced-resolution run used the same D3D12 device and succeeded.
+- Current project settings are inconsistent with a safe normal-launch contract: `defaultScreenWidth: 1024`, `defaultScreenHeight: 768`, `defaultIsNativeResolution: 1`, `resizableWindow: 0`, and `fullscreenMode: 1`, while CI always supplies explicit 1920x1080 window arguments.
+- Result: CI launch coverage masks a normal-launch/display-policy defect. Forced-resolution launch is diagnostic evidence, not an accepted player workaround.
+- Executable SHA-256 was not supplied with this partial run; candidate source remains bound to verified Unity `main` `91443c87e7f68241403cb1004c4acb0f12c07089`.
+
+## Gate consequence
+
+- Final verdict: `BLOCKED — REJECT CLOSEOUT`.
+- No HRC/QXZ discovery, save/relaunch/Continue, post-resume opponent-pressure, or tactical-handoff pass is claimed.
+- EPIC-018 remains active.
+- One bounded repair candidate owns safe Windows display defaults and parity between ordinary double-click launch and CI launch.
 
 ## Why this gate exists
 
@@ -113,7 +132,7 @@ The replaytest must directly re-evaluate, not paraphrase away, the original comp
 
 ## Acceptance criteria
 
-- [ ] Human activation approval is recorded before execution.
+- [x] Human activation approval is recorded before execution.
 - [ ] Tested executable/archive checksum and exact Unity `main` commit are recorded.
 - [ ] The standalone title -> HRC and title -> QXZ paths work without Editor intervention.
 - [ ] The human can identify both Champions, attached armies, both bases/facility contexts, legal map interaction, and the central objective without debug UI.
@@ -218,4 +237,4 @@ Reason:
 
 ## Verdict
 
-READY / approved for human execution. No human replaytest result is claimed, no Unity implementation work is activated, and EPIC-018 remains active pending the actual human report and verdict.
+DONE / `BLOCKED — REJECT CLOSEOUT`. Ordinary manual launch remains player-blocking even though CI’s forced-resolution launch passes. Continue only through a separately approved display/default-launch repair and a fresh human replaytest.

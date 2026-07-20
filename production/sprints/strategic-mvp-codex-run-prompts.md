@@ -105,6 +105,7 @@ related:
     production/stories/story-save-001-prototype-strategic-save-and-resume,
     production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity,
     production/stories/story-prototype-continuity-qa-002-recovery-replaytest,
+    production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity,
   ]
 approval: approved
 ---
@@ -115,11 +116,11 @@ approval: approved
 
 **Current READY / approved Unity implementation packet:** none.
 
-`STORY-MAP-PHYSICAL-ROLLOUT-001` is DONE / merged through Unity PR #176 with green post-merge CI. `STORY-PROTOTYPE-CONTINUITY-QA-002` is the sole current READY / approved gate, but it is a human replaytest rather than a Codex implementation packet.
+`STORY-PROTOTYPE-CONTINUITY-QA-002` is DONE with `BLOCKED — REJECT CLOSEOUT`: normal manual launch showed splash then a black window, while forced 1920x1080 launch worked. `STORY-STANDALONE-DISPLAY-001` is the sole next READY-candidate / approval-pending repair.
 
 ## Current READY implementation packet
 
-Do not run a Codex implementation prompt. Execute the approved human guide in `production/stories/story-prototype-continuity-qa-002-recovery-replaytest.md` against the recorded standalone build candidate.
+Do not run a Codex implementation prompt. `production/sprints/codex-story-standalone-display-001.prompt.txt` is guarded pending explicit human approval and Unity pointer activation.
 
 ### Historical STORY-MAP-PHYSICAL-ROLLOUT-001 handoff — do not rerun
 

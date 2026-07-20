@@ -30,9 +30,9 @@ Automation proves those repairs exist. It cannot prove that a human can now unde
 ## Candidate build provenance
 
 - Unity repository: `myriwe-bot/neon-champions-unity`.
-- Candidate verified `main`: `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`.
-- Source implementation PR: #176; exact reviewed head `0e478487958c73dcc91c80425ac21b1f7095b9fc`.
-- Post-merge Unity Foundation CI: `29699588200`; Compile/Standalone, EditMode, PlayMode, and Placeholder Validator passed.
+- Candidate verified `main`: `91443c87e7f68241403cb1004c4acb0f12c07089`. This adds only the approved replaytest pointer over gameplay merge `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`.
+- Source implementation PR: #176; exact reviewed head `0e478487958c73dcc91c80425ac21b1f7095b9fc`. Replaytest pointer PR: #177.
+- Candidate post-merge Unity Foundation CI: `29720981887`; Compile/Standalone, EditMode, PlayMode, and Placeholder Validator passed.
 - This provenance identifies a candidate only. The eventual human report must record the exact executable/archive hash actually tested; do not infer it from this document.
 
 ## Human authority
@@ -79,9 +79,9 @@ The replaytest must directly re-evaluate, not paraphrase away, the original comp
 
 ### Before starting
 
-1. Use a clean Windows checkout of Unity `main` at `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`. If a newer `main` is used, record its exact commit and verify all configured CI jobs first.
+1. Use a clean Windows checkout of Unity `main` at `91443c87e7f68241403cb1004c4acb0f12c07089`. If a newer `main` is used, record its exact commit and verify all configured CI jobs first.
 2. Build the standalone player with `& .\ci\BuildStandaloneWindows64.ps1` from the Unity repository. The expected executable path is `Builds\StandaloneWindows64\NeonChampionsFoundation.exe`.
-3. Record `git rev-parse HEAD`, `Get-FileHash -Algorithm SHA256` for the executable, and, if a ZIP is used, the ZIP SHA-256. CI run `29699588200` proves the candidate source passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator; it does not replace hashing the actual tested copy.
+3. Record `git rev-parse HEAD`, `Get-FileHash -Algorithm SHA256` for the executable, and, if a ZIP is used, the ZIP SHA-256. CI run `29720981887` proves the candidate source passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator; it does not replace hashing the actual tested copy.
 4. Test at 1920x1080 in the normal player shell. Do not use the Unity Editor, debug panels, raw IDs, implementation notes, or agent guidance during the initial discovery pass.
 5. Record observations while playing. Preserve concrete wording. For each failure note: attempted action, expected result, actual result, whether recovery was possible without help, and severity.
 6. A screenshot is required only at the five named checkpoints. It supports the report but never substitutes for the human observation.

@@ -8,6 +8,8 @@
 - Approval accepts candidate Unity `main` `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f` or a newer explicitly identified verified `main`, both-faction discovery, one full Save -> Return to Title -> full process close -> relaunch -> Continue route, and fail-closed treatment of any unexecuted required step.
 - Promoted the human-owned replaytest to READY / approved. No Unity implementation packet or Codex prompt is active, and no playtest verdict is claimed before the owner reports actual observations.
 - Added an inline preparation guide and copyable response template preserving every original player complaint as direct re-evaluation authority.
+- Unity pointer PR #177 merged exact head `ebda9a0eff88730952377ba7e6cf88f6eb02e808` as `91443c87e7f68241403cb1004c4acb0f12c07089`. Exact-head run `29720565162` and post-merge `main` run `29720981887` passed all four required jobs.
+- The verified replaytest candidate is now Unity `main` `91443c87e7f68241403cb1004c4acb0f12c07089`; the underlying gameplay remains PR #176 merge `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`.
 
 ## [2026-07-19] closeout and approval | Champion army DONE; complete physical duel-map rollout READY
 

@@ -1,7 +1,7 @@
 ---
 title: STORY-STANDALONE-DISPLAY-001 Safe Default Window and Manual Launch Parity
 type: story
-status: ready
+status: review
 phase: production
 owner: shared
 created: 2026-07-20
@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / approved and pointer-activated on 2026-07-20. The exact safe-default display contract, no-screen-arguments launch proof, override compatibility, scope boundaries, and mandatory post-merge human double-click recheck are approved as written. Unity pointer PR #178 merged as `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`; exact-head run `29753475424` and post-merge `main` run `29754166388` passed all four configured jobs.
+MERGED / automated gates passed / human double-click verification pending. Unity PR #180 merged reviewed head `a80146e8d256be7ec9fc4d16b016e702d30b24e3` as `56122d14e709637d746b259e849b85e85dd4c20f`; exact-head PR run `29761977696` and post-merge `main` run `29762704689` passed all four configured jobs. The reviewed-head and merge trees are identical at `13665466ccb9763cc589bed8fc201b9fc8f691d0`. Do not mark DONE until the owner double-clicks the exact rebuilt `main` executable on the same high-resolution machine and confirms the title appears without launch arguments.
 
 ## Activation evidence
 
@@ -26,6 +26,18 @@ READY / approved and pointer-activated on 2026-07-20. The exact safe-default dis
 - Pointer merge / implementation ancestor: `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`.
 - Pointer post-merge `main` CI: `29754166388` — passed.
 - README activation-evidence correction: PR #179 merged exact head `59bc120d9ea4a1fde1027c200f666a737e0afb9e` as `f942e8b240bc1ca6fe916fe7e76fc6c267669391`; exact-head run `29755729120` and post-merge run `29756417708` passed. This records canonical PR #178 evidence in the implementation-repo preflight surface; it does not replace PR #178 as the activation event.
+
+## Implementation evidence
+
+- Unity PR: #180 — https://github.com/myriwe-bot/neon-champions-unity/pull/180
+- Built-player implementation source: `f6019620a249bf3fff76792e2e266003c308b103`.
+- Final reviewed head: `a80146e8d256be7ec9fc4d16b016e702d30b24e3`.
+- Exact-head pull-request CI: `29761977696` — passed.
+- Duplicate exact-head push run `29761981398` was intentionally cancelled before execution because the final commit changed evidence wording only; implementation head `02ca3ed68f3d41ac1fb9acbb4b8d4c79fc5530a6` had already passed both PR run `29758627763` and push run `29758623934`.
+- Merge commit: `56122d14e709637d746b259e849b85e85dd4c20f`.
+- Reviewed/merge tree: `13665466ccb9763cc589bed8fc201b9fc8f691d0` — identical.
+- Post-merge `main` CI: `29762704689` — passed.
+- Automated evidence is PASS. Human double-click verification remains pending.
 
 ## Player problem
 
@@ -94,16 +106,24 @@ If Unity serialization or platform-specific APIs cannot represent this exact con
 
 ## Acceptance criteria
 
-- [ ] Project settings encode the approved 1920x1080 windowed, non-native, resizable startup contract.
-- [ ] An automated validator fails if those startup defaults drift.
-- [ ] A freshly built Windows player launched with no `-screen-*` arguments reaches the normal title shell.
-- [ ] That no-screen-arguments process then reaches faction choice and HRC strategic map through real production UI input and exits zero.
-- [ ] Evidence records observed initial client/window dimensions and mode; a mere state-signal file is insufficient.
-- [ ] Existing explicit 1920x1080 HRC and QXZ built-player routes remain green, or equivalent independent faction coverage remains green without weakening real OS-input proof.
-- [ ] Command-line screen overrides still work and are not overwritten after startup.
-- [ ] Full EditMode, PlayMode, Placeholder Validator, standalone build, exact-head CI, and post-merge CI pass.
-- [ ] No gameplay, save, AI, map, content, package, unrelated project setting, graphics API, or prior evidence changes occur.
+- [x] Project settings encode the approved 1920x1080 windowed, non-native, resizable startup contract.
+- [x] An automated validator fails if those startup defaults drift.
+- [x] A freshly built Windows player launched with no `-screen-*` arguments reaches the normal title shell.
+- [x] That no-screen-arguments process then reaches faction choice and HRC strategic map through real production UI input and exits zero.
+- [x] Evidence records observed initial client/window dimensions and mode; a mere state-signal file is insufficient.
+- [x] Existing explicit 1920x1080 HRC and QXZ built-player routes remain green, or equivalent independent faction coverage remains green without weakening real OS-input proof.
+- [x] Command-line screen overrides still work and are not overwritten after startup.
+- [x] Full EditMode, PlayMode, Placeholder Validator, standalone build, exact-head CI, and post-merge CI pass.
+- [x] No gameplay, save, AI, map, content, package, unrelated project setting, graphics API, or prior evidence changes occur.
 - [ ] Human owner double-clicks the exact repaired build on the same high-resolution machine and confirms the title appears without launch arguments before the continuity replaytest resumes.
+
+## Immediate human verification
+
+1. Pull Unity `main` at `56122d14e709637d746b259e849b85e85dd4c20f`.
+2. Rebuild with `ci/BuildStandaloneWindows64.ps1`.
+3. Record the executable SHA-256.
+4. Double-click `Builds/StandaloneWindows64/NeonChampionsFoundation.exe`; do not use PowerShell, `-screen-*`, Editor, or the smoke harness.
+5. Report only whether the normal title appears or the splash still ends in a black window. If title appears, the broader continuity replaytest may resume; otherwise this story remains blocked.
 
 ## Evidence package
 
@@ -129,4 +149,4 @@ PASS. Human approval is recorded. The observed failure, safe default values, no-
 
 ## Verdict
 
-READY / approved / pointer-activated. Sole current Unity implementation packet. Run from clean current Unity `main` at `f942e8b240bc1ca6fe916fe7e76fc6c267669391` using `production/sprints/codex-story-standalone-display-001.prompt.txt`; the full recovery replaytest remains blocked until the repaired build receives human double-click verification.
+MERGED / HUMAN QA PENDING. No implementation prompt is runnable. Automation passed, but the story is not DONE and the full recovery replaytest remains blocked until the repaired build receives human double-click verification.

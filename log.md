@@ -2,6 +2,16 @@
 
 > Append-only project log.
 
+## [2026-07-20] merge and workflow candidate | Display repair merged; risk-tiered CI candidate prepared
+
+- Reviewed Unity PR #180 against `STORY-STANDALONE-DISPLAY-001`; corrected stale evidence lifecycle wording before final freeze.
+- Verified safe PlayerSettings, focused RED/GREEN, no-screen-argument 1920x1080 windowed/resizable launch, explicit 1600x900 override preservation, independent QXZ route, non-black title/map captures, dimensions/mode/provenance, clean process exit, scope exclusions, and exact-head CI.
+- Final reviewed head `a80146e8d256be7ec9fc4d16b016e702d30b24e3` passed PR run `29761977696`; implementation/evidence head `02ca3ed…` had already passed both PR `29758627763` and push `29758623934` runs.
+- Cancelled redundant duplicate push run `29761981398` for the evidence-README-only final commit under the owner-directed risk-tier exception; the final implementation tree was unchanged.
+- PR #180 merged as `56122d14e709637d746b259e849b85e85dd4c20f`; reviewed-head and merge tree both equal `13665466ccb9763cc589bed8fc201b9fc8f691d0`; post-merge run `29762704689` passed.
+- `STORY-STANDALONE-DISPLAY-001` is MERGED / human QA pending, not DONE. The owner must double-click the exact rebuilt `main` executable without arguments before continuity testing resumes.
+- Formed `EPIC-019` and `STORY-CI-RISK-TIERING-001` as READY-candidate / approval pending. The proposed contract removes duplicate story-branch push matrices, gives docs/evidence a no-Unity fast path, uses a stable aggregate gate with fail-safe unknown paths, retains nightly/manual full regression, and uses exact tree identity instead of redundant post-merge full suites.
+
 ## [2026-07-20] approval | STORY-STANDALONE-DISPLAY-001 approved
 
 - Human explicitly approved the bounded safe-default-window and manual-launch-parity repair exactly as proposed.

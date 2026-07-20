@@ -1,0 +1,13 @@
+STOP. This packet is guarded and non-runnable.
+
+`STORY-CI-RISK-TIERING-001 Change-Aware Unity CI` is READY-candidate / approval pending. Do not edit either repository, create a branch, run Unity, commit, push, or open a PR.
+
+Before implementation, require all of:
+- human explicitly approves STORY-CI-RISK-TIERING-001;
+- story frontmatter is `status: ready` and `approval: approved`;
+- Ambiguity Check remains PASS;
+- design-control publication succeeds;
+- Unity README points to the approved story and records successful pointer activation;
+- current Unity `main` is clean and synchronized.
+
+When activated, implement only the exact event policy, stable aggregate gate, fail-safe path classifier, affected matrix, nightly/manual full regression, and post-merge tree-identity audit in the story. Preserve all tests and human gates. Unknown paths must select the full matrix.

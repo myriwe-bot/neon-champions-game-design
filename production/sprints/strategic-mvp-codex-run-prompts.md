@@ -106,6 +106,8 @@ related:
     production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity,
     production/stories/story-prototype-continuity-qa-002-recovery-replaytest,
     production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity,
+    production/epics/epic-019-risk-tiered-ci-and-delivery-velocity,
+    production/stories/story-ci-risk-tiering-001-change-aware-unity-ci,
   ]
 approval: approved
 ---
@@ -114,29 +116,17 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-STANDALONE-DISPLAY-001 Safe Default Window and Manual Launch Parity`.
+**Current READY / approved Unity implementation packet:** none.
 
-`STORY-PROTOTYPE-CONTINUITY-QA-002` is DONE with `BLOCKED — REJECT CLOSEOUT`: normal manual launch showed splash then a black window, while forced 1920x1080 launch worked. `STORY-STANDALONE-DISPLAY-001` is READY / approved as the sole bounded repair.
+`STORY-STANDALONE-DISPLAY-001` merged through Unity PR #180 and passed automated gates, but mandatory human double-click verification remains pending. `STORY-CI-RISK-TIERING-001` is the sole next implementation candidate and remains approval-pending with a guarded prompt.
 
 ## Current READY implementation packet
 
-Run `production/sprints/codex-story-standalone-display-001.prompt.txt` only after pulling current `main` in both repositories and confirming the Unity README pointer names the story with successful post-merge activation CI.
+None. Do not rerun `production/sprints/codex-story-standalone-display-001.prompt.txt`. Do not run `production/sprints/codex-story-ci-risk-tiering-001.prompt.txt` until explicit approval and pointer activation.
 
-### Copy-safe STORY-STANDALONE-DISPLAY-001 handoff
+### Historical STORY-STANDALONE-DISPLAY-001 handoff — do not rerun
 
-```powershell
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
-git checkout main
-git pull --ff-only origin main
-
-cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
-git checkout main
-git pull --ff-only origin main
-git status --short
-
-$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-standalone-display-001.prompt.txt"
-$prompt | codex exec --sandbox danger-full-access -
-```
+Implementation merged through Unity PR #180. The only open gate is the human double-click check; there is no Codex command.
 
 ### Historical STORY-MAP-PHYSICAL-ROLLOUT-001 handoff — do not rerun
 
@@ -454,4 +444,4 @@ $prompt | codex exec --sandbox danger-full-access -
 
 ## Final control-surface state
 
-`STORY-PROTOTYPE-CONTINUITY-QA-001` remains historical and DONE with `BLOCKED — REJECT CLOSEOUT`; its human route did not pass. `STORY-STANDALONE-ENTRY-001` is DONE through Unity PR #170 and post-merge CI 29609782110. `STORY-MAP-VISUAL-SLICE-001` is the sole current READY / approved packet, but exact-head `69e33189…` received REVISE and the first retry stopped on five unrelated local Unity settings changes. `production/sprints/codex-story-map-visual-slice-001-visual-revision-recovery.prompt.txt` is the active non-destructive recovery contract for existing draft PR #172. All later interaction rollout/replaytest work and `STORY-PROOF-QA-001` remain deferred.
+No Unity implementation story is READY. `STORY-STANDALONE-DISPLAY-001` is merged and automation-green but awaits human double-click verification. `STORY-CI-RISK-TIERING-001` is the sole next READY-candidate with a guarded non-runnable prompt. All older implementation and recovery prompts are historical and must not be rerun.

@@ -27,9 +27,9 @@ The standalone executable did not reach the player shell. The Editor workaround 
 | 3 | `STORY-CHAMPION-ARMY-INTERACTION-001` | DONE / merged / verified | Unity PR #174 merged as `07aec855…`; post-merge run `29684259824` passed; structured truthful army discovery and Champion -> base -> Champion context continuity |
 | 4 | `STORY-MAP-PHYSICAL-ROLLOUT-001` | DONE / Unity PR #176 merged / post-merge verified | Complete current ten-node/twelve-route physical duel map with HRC/QXZ normal-input and context parity |
 | 5 | `STORY-PROTOTYPE-CONTINUITY-QA-002` human continuity replaytest | DONE / `BLOCKED — REJECT CLOSEOUT` | normal double-click showed splash then black window; same build opened under CI-forced 1920x1080 on the same high-resolution machine |
-| 6 | `STORY-STANDALONE-DISPLAY-001` | READY-candidate / approval pending | safe 1920x1080 resizable window defaults plus a built-player no-screen-arguments production launch proof and human double-click recheck |
+| 6 | `STORY-STANDALONE-DISPLAY-001` | READY / approved; pointer activation pending | safe 1920x1080 resizable window defaults plus a built-player no-screen-arguments production launch proof and human double-click recheck |
 
-Orders 1–5 are closed, with order 5 rejected. There is no active Unity implementation packet. Order 6 is the sole next candidate and remains guarded pending explicit human approval.
+Orders 1–5 are closed, with order 5 rejected. Order 6 is the sole approved implementation packet and becomes runnable after Unity pointer activation.
 
 ## Direction lock
 
@@ -42,6 +42,6 @@ Orders 1–5 are closed, with order 5 rejected. There is no active Unity impleme
 
 ## Current prompt
 
-None runnable.
+`production/sprints/codex-story-standalone-display-001.prompt.txt` after pointer activation.
 
-`production/sprints/codex-story-standalone-display-001.prompt.txt` is guarded. Do not run it until the candidate is explicitly promoted to READY / approved and the Unity pointer activation passes.
+The prompt is approved but fail-closed: it must verify story READY/approved, Ambiguity Check PASS, exact design authority, and a merged/green Unity pointer before editing.

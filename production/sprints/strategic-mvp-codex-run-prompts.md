@@ -114,13 +114,29 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-STANDALONE-DISPLAY-001 Safe Default Window and Manual Launch Parity`.
 
-`STORY-PROTOTYPE-CONTINUITY-QA-002` is DONE with `BLOCKED — REJECT CLOSEOUT`: normal manual launch showed splash then a black window, while forced 1920x1080 launch worked. `STORY-STANDALONE-DISPLAY-001` is the sole next READY-candidate / approval-pending repair.
+`STORY-PROTOTYPE-CONTINUITY-QA-002` is DONE with `BLOCKED — REJECT CLOSEOUT`: normal manual launch showed splash then a black window, while forced 1920x1080 launch worked. `STORY-STANDALONE-DISPLAY-001` is READY / approved as the sole bounded repair.
 
 ## Current READY implementation packet
 
-Do not run a Codex implementation prompt. `production/sprints/codex-story-standalone-display-001.prompt.txt` is guarded pending explicit human approval and Unity pointer activation.
+Run `production/sprints/codex-story-standalone-display-001.prompt.txt` only after pulling current `main` in both repositories and confirming the Unity README pointer names the story with successful post-merge activation CI.
+
+### Copy-safe STORY-STANDALONE-DISPLAY-001 handoff
+
+```powershell
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+git checkout main
+git pull --ff-only origin main
+
+cd C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+git checkout main
+git pull --ff-only origin main
+git status --short
+
+$prompt = Get-Content -Raw "C:\Users\NordicGamer\CodexProjects\neon-champions-game-design\production\sprints\codex-story-standalone-display-001.prompt.txt"
+$prompt | codex exec --sandbox danger-full-access -
+```
 
 ### Historical STORY-MAP-PHYSICAL-ROLLOUT-001 handoff — do not rerun
 

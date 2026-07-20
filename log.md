@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-20] approval | STORY-STANDALONE-DISPLAY-001 approved
+
+- Human explicitly approved the bounded safe-default-window and manual-launch-parity repair exactly as proposed.
+- Promoted `STORY-STANDALONE-DISPLAY-001` to READY / approved as the sole next Unity implementation packet.
+- Approval binds 1920x1080 initial windowed mode, native-resolution startup disabled, resizing enabled, preservation of explicit screen overrides, one built-player launch with no `-screen-*` arguments, existing faction coverage, and a mandatory human double-click recheck after merge.
+- Gameplay, renderer/shader, graphics API, GPU-driver, broad preference deletion, packages, map, save, AI, economy, and unrelated settings remain excluded.
+- Unity pointer activation and exact-head/post-merge pointer CI remain mandatory before Codex runs.
+
 ## [2026-07-20] human replaytest rejection | Normal Windows launch black; display repair candidate formed
 
 - `STORY-PROTOTYPE-CONTINUITY-QA-002` returned `BLOCKED — REJECT CLOSEOUT` at its first required step: ordinary manual launch showed the Made with Unity splash and then a black window on the owner’s high-resolution display.

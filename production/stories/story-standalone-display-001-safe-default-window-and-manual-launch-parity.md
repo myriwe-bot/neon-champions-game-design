@@ -1,12 +1,12 @@
 ---
 title: STORY-STANDALONE-DISPLAY-001 Safe Default Window and Manual Launch Parity
 type: story
-status: ready-candidate
+status: ready
 phase: production
 owner: shared
 created: 2026-07-20
 updated: 2026-07-20
-approval: pending
+approval: approved
 related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-prototype-continuity-qa-002-recovery-replaytest, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, docs/architecture/testing-strategy]
 ---
 
@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY-candidate / approval pending. This is the sole proposed repair for the rejected recovery replaytest. It is not implementation authority and its guarded prompt must not run until the human owner explicitly approves it.
+READY / approved by the human owner on 2026-07-20. The exact safe-default display contract, no-screen-arguments launch proof, override compatibility, scope boundaries, and mandatory post-merge human double-click recheck are approved as written. Implementation becomes runnable only after the Unity pointer activation gate passes.
 
 ## Player problem
 
@@ -108,7 +108,7 @@ If Unity serialization or platform-specific APIs cannot represent this exact con
 
 ## Ambiguity check
 
-PASS for approval review. The observed failure, safe default values, no-arguments production launch proof, command-line override compatibility, scope boundary, and human recheck are explicit. Implementation may choose the narrow Unity API/serialization mechanism needed to encode the approved values, but it may not invent a different display policy or broaden into renderer/GPU work.
+PASS. Human approval is recorded. The observed failure, safe default values, no-arguments production launch proof, command-line override compatibility, scope boundary, and human recheck are explicit. Implementation may choose the narrow Unity API/serialization mechanism needed to encode the approved values, but it may not invent a different display policy or broaden into renderer/GPU work.
 
 ## Branch and PR
 
@@ -118,4 +118,4 @@ PASS for approval review. The observed failure, safe default values, no-argument
 
 ## Verdict
 
-READY-candidate / approval pending. Recommended next action: approve this one bounded repair; do not resume the continuity replaytest or run any implementation prompt yet.
+READY / approved. Sole next Unity implementation packet. Run only from the activated Unity pointer and checked-in `production/sprints/codex-story-standalone-display-001.prompt.txt`; the full recovery replaytest remains blocked until the repaired build receives human double-click verification.

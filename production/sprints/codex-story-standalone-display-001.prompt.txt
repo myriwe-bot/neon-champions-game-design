@@ -1,27 +1,86 @@
-# Guarded Codex packet: STORY-STANDALONE-DISPLAY-001
+Implement only STORY-STANDALONE-DISPLAY-001 Safe Default Window and Manual Launch Parity.
 
-STOP. This packet is READY-candidate / approval pending and is not runnable implementation authority.
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Story: production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity.md
+- Parent epic: production/epics/epic-018-physical-adventure-map-and-player-entry-recovery.md
+- Rejected human gate: production/stories/story-prototype-continuity-qa-002-recovery-replaytest.md
+- Testing authority: docs/architecture/testing-strategy.md
+- Exact branch: story/STORY-STANDALONE-DISPLAY-001-safe-default-window
+- Exact PR title: STORY-STANDALONE-DISPLAY-001 Safe default Windows launch
 
-Do not modify either repository, create a branch, edit Unity project settings, build, test, commit, push, or open a PR until all of these are true:
+Authority preflight — fail closed before edits
+1. Pull current design main and verify the story says status: ready, approval: approved, and Ambiguity Check PASS.
+2. Verify testing strategy says status: approved and approval: approved.
+3. Pull current Unity main and read root AGENTS.md plus every nearer scoped AGENTS.md for each likely changed path.
+4. Verify Unity README names this exact story, prompt, branch, PR title, approved scope, exact design commit, and successful pointer activation. Stop if the pointer is absent, stale, contradictory, or its post-merge CI is not recorded.
+5. Inventory current ProjectSettings/ProjectSettings.asset, ci/BuildStandaloneWindows64.ps1, ci/RunWindowsPlayerLaunchSmoke.ps1, WindowsStandaloneBuilder.cs, relevant validators/tests, and prior standalone-entry/display evidence. Confirm current facts rather than assuming the diagnosis.
+6. Stop on draft/pending required authority, source contradiction, wrong ancestor, merge conflict, unrelated dirty work, or required scope expansion.
 
-1. `production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity.md` says `status: ready` and `approval: approved`.
-2. Its Ambiguity Check remains PASS.
-3. The Unity README current-task pointer names this exact story and its pointer PR has passed exact-head and post-merge CI.
-4. Design control records the pointer activation and identifies the exact Unity implementation ancestor.
+Fresh and resume modes
+- Fresh: start from clean current Unity main, create the exact story branch, and publish a remote checkpoint immediately after focused GREEN.
+- Resume: if already on the exact story branch with story-scoped M/?? work, preserve and inspect it; verify ancestry and scope, continue tests/evidence, then commit/push/update the PR. Do not discard valid local work.
+- Stop only for unrelated/unknown dirty paths, wrong ancestry, conflicts, authority mismatch, or scope contradiction. Unity-generated drift outside the explicit story paths must be restored after inspecting it; never stage it accidentally.
 
-If any gate is absent, report the missing gate and stop without changes.
+Human-observed defect
+- Ordinary double-click launch on the owner's high-resolution Windows display showed the Made with Unity splash and then a black window.
+- The same executable opened on the same machine with: -screen-fullscreen 0 -screen-width 1920 -screen-height 1080.
+- Current CI always supplies those arguments, so it masked ordinary-launch failure.
+- The supplied successful diagnostic log used the same Unity 6000.4.8f1, NVIDIA RTX 5070 Ti, D3D12, Mono, PhysX, and Input System path without a fatal error. Do not treat the nonfatal D3D12 info-queue warning as root cause.
 
-After explicit approval, replace this guard with a full runnable contract that requires Codex to:
+Approved implementation contract
+- Initial Windows width: 1920.
+- Initial Windows height: 1080.
+- Initial mode: windowed, not exclusive or borderless native fullscreen.
+- Native-resolution startup: disabled.
+- Resizable window: enabled.
+- Do not force resolution every frame or overwrite a valid later user/CLI choice on every launch.
+- Preserve explicit command-line screen overrides.
+- If Unity 6000.4.8f1 serialization cannot represent this exact contract, stop with focused evidence and propose the narrow equivalent; do not silently choose another policy.
 
-- read the approved story, rejected `STORY-PROTOTYPE-CONTINUITY-QA-002` report, testing strategy, Unity root/scoped instructions, current `ProjectSettings.asset`, standalone builder, launch smoke, and existing entry/display tests;
-- reproduce and preserve the difference between ordinary no-screen-arguments launch and CI-forced 1920x1080 launch;
-- use focused RED/GREEN before changing the approved display defaults;
-- encode only the approved safe Windows startup contract;
-- add validator/test coverage and one real built-player launch with no `-screen-*` arguments;
-- preserve explicit screen overrides and independent HRC/QXZ production-input coverage;
-- record actual initial window/client dimensions, mode, logs, source SHA, executable hash, tests, evidence, and omissions;
-- stop rather than change graphics APIs, renderer/shaders, gameplay, packages, unrelated settings, or user preferences broadly;
-- publish a remote checkpoint after focused GREEN, then finish full suites and evidence;
-- commit and push the actual story branch, create/update a non-draft PR, and print branch, SHA, remote ref, PR URL, CI, omissions, and exact recovery commands if publication fails.
+Required TDD/evidence sequence
+1. Focused RED: add validator/test coverage that fails on the current unsafe/inconsistent startup defaults and/or a built-player no-screen-arguments route that fails before the fix. Record the actual RED result.
+2. Focused GREEN: apply only the approved display defaults and narrow smoke/harness changes. Record focused results.
+3. Immediately commit and push a remote checkpoint to the exact branch; create/update a draft PR if broad verification remains.
+4. Build a fresh Windows player from the story head.
+5. Launch one fresh process with NO -screen-fullscreen, -screen-width, or -screen-height arguments. It must reach Title, FactionChoice, and HRC StrategicMap through real production UI input and exit zero.
+6. The no-screen-arguments evidence must record actual initial outer/client dimensions and window/display mode plus the production state signal, player log, truthful title capture, source SHA, executable SHA-256, and launch command. A signal alone is insufficient.
+7. Preserve independent explicit-resolution HRC and QXZ production-input launches, including the real Focus Selected OS click, unless equivalent faction coverage remains at least as strong.
+8. Prove an explicit screen override remains honored and is not overwritten after startup.
+9. Run focused tests, full EditMode, full PlayMode, Placeholder Validator, Windows standalone build, launch smokes, and git diff --check over origin/main...HEAD.
+10. Update production/evidence/STORY-STANDALONE-DISPLAY-001/README.md truthfully with commands/results, hashes, dimensions/mode, changed settings, CI pending/current facts, provenance, and omissions.
 
-Human double-click verification remains mandatory after merge and cannot be impersonated by Codex, CI, screenshots, or an agent walkthrough.
+Allowed changed surfaces
+- ProjectSettings/ProjectSettings.asset only for the approved display defaults.
+- Existing CI/editor validator/test code needed to validate those exact settings.
+- ci/RunWindowsPlayerLaunchSmoke.ps1 and narrowly related launch-smoke helpers/tests.
+- production/evidence/STORY-STANDALONE-DISPLAY-001/ and matching .meta files if required.
+- README current-task/evidence text only when needed for truthful story closeout.
+
+Hard exclusions
+- No strategic/tactical gameplay, scenario, map, save schema, AI, economy, balance, content, assets, renderer replacement, render-pipeline, shader, graphics-API, GPU-driver, package/lockfile, scene, prefab, broad settings, or prior-evidence changes.
+- Do not disable D3D12.
+- Do not delete all user preferences or registry data indiscriminately.
+- Do not ship command-line arguments as the player workaround.
+- Do not claim the full recovery continuity replaytest passes. Human double-click verification remains pending after merge.
+
+Review and publication completion contract
+- Inspect the complete PR range for scope, architecture, tests, evidence truth, meta hygiene, generated settings drift, and omissions.
+- Stage only explicit story-owned paths.
+- Commit all actual implementation/evidence changes.
+- Push committed HEAD to origin/story/STORY-STANDALONE-DISPLAY-001-safe-default-window.
+- Create or update a non-draft PR with the exact title after focused/full evidence is ready.
+- PR body must link the READY story and testing authority, list exact tests/evidence, changed PlayerSettings keys, known omissions/stubs/mocks/assumptions/deferred work or state `No known omissions`, and state that human double-click verification remains pending.
+- Verify and print: branch, local HEAD SHA, remote branch SHA, PR URL/number, git status --short --branch, git log --oneline -5, and current CI URLs/status.
+- If commit, push, PR, or CI publication fails, report the exact error and exact recovery commands. Do not stop at “PR-ready.”
+
+Final report
+- Summary and exact player-facing change.
+- Files changed.
+- RED/GREEN and full command results.
+- No-arguments launch dimensions/mode/state/log/capture/hash evidence.
+- Explicit-override result.
+- Branch/SHA/remote ref/PR URL/CI.
+- Omissions and stop-condition risks.
+- Clear statement that human double-click verification and the broader continuity replaytest remain unpassed.

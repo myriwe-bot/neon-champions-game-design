@@ -25,6 +25,7 @@ READY / approved and pointer-activated on 2026-07-20. The exact safe-default dis
 - Pointer exact-head CI: `29753475424` — passed.
 - Pointer merge / implementation ancestor: `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`.
 - Pointer post-merge `main` CI: `29754166388` — passed.
+- README activation-evidence correction: PR #179 merged exact head `59bc120d9ea4a1fde1027c200f666a737e0afb9e` as `f942e8b240bc1ca6fe916fe7e76fc6c267669391`; exact-head run `29755729120` and post-merge run `29756417708` passed. This records canonical PR #178 evidence in the implementation-repo preflight surface; it does not replace PR #178 as the activation event.
 
 ## Player problem
 
@@ -128,4 +129,4 @@ PASS. Human approval is recorded. The observed failure, safe default values, no-
 
 ## Verdict
 
-READY / approved / pointer-activated. Sole current Unity implementation packet. Run from clean Unity `main` at `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234` using `production/sprints/codex-story-standalone-display-001.prompt.txt`; the full recovery replaytest remains blocked until the repaired build receives human double-click verification.
+READY / approved / pointer-activated. Sole current Unity implementation packet. Run from clean current Unity `main` at `f942e8b240bc1ca6fe916fe7e76fc6c267669391` using `production/sprints/codex-story-standalone-display-001.prompt.txt`; the full recovery replaytest remains blocked until the repaired build receives human double-click verification.

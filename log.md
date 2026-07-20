@@ -11,6 +11,8 @@
 - Unity pointer activation and exact-head/post-merge pointer CI remain mandatory before Codex runs.
 - Unity pointer PR #178 merged exact head `9dce9eedeaa1b1717a8754ac79362739882c5f62` as `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`; exact-head run `29753475424` and post-merge `main` run `29754166388` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
 - The story is now pointer-activated and runnable from that clean Unity `main` ancestor. Human double-click verification remains a post-implementation requirement, not something CI has passed.
+- Codex correctly stopped because the merged Unity README named the story but omitted the canonical PR #178 exact-head/post-merge evidence required by its fail-closed preflight.
+- Corrective README-only PR #179 merged exact head `59bc120d9ea4a1fde1027c200f666a737e0afb9e` as `f942e8b240bc1ca6fe916fe7e76fc6c267669391`; exact-head run `29755729120` and post-merge run `29756417708` passed all four jobs. The README now records PR #178, merge `d36e4d0…`, run `29753475424`, and run `29754166388` explicitly.
 
 ## [2026-07-20] human replaytest rejection | Normal Windows launch black; display repair candidate formed
 

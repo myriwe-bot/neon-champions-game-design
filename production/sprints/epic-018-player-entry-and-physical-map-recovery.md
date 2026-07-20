@@ -42,6 +42,6 @@ Orders 1–5 are closed, with order 5 rejected. Order 6 is the sole runnable imp
 
 ## Current prompt
 
-`production/sprints/codex-story-standalone-display-001.prompt.txt` from clean Unity `main` at `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`.
+`production/sprints/codex-story-standalone-display-001.prompt.txt` from clean Unity `main` at `f942e8b240bc1ca6fe916fe7e76fc6c267669391`, which adds only the missing README activation-evidence record over canonical pointer merge `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`.
 
 The prompt is approved but fail-closed: it must verify story READY/approved, Ambiguity Check PASS, exact design authority, and a merged/green Unity pointer before editing.

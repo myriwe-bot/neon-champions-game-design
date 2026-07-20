@@ -14,7 +14,17 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / approved by the human owner on 2026-07-20. The exact safe-default display contract, no-screen-arguments launch proof, override compatibility, scope boundaries, and mandatory post-merge human double-click recheck are approved as written. Implementation becomes runnable only after the Unity pointer activation gate passes.
+READY / approved and pointer-activated on 2026-07-20. The exact safe-default display contract, no-screen-arguments launch proof, override compatibility, scope boundaries, and mandatory post-merge human double-click recheck are approved as written. Unity pointer PR #178 merged as `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`; exact-head run `29753475424` and post-merge `main` run `29754166388` passed all four configured jobs.
+
+## Activation evidence
+
+- Design approval authority: `a02d15669b78d3e42f8b4c06860484f996cb9223`.
+- Design publish: `29753310136` — passed.
+- Unity pointer PR: #178.
+- Pointer exact head: `9dce9eedeaa1b1717a8754ac79362739882c5f62`.
+- Pointer exact-head CI: `29753475424` — passed.
+- Pointer merge / implementation ancestor: `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`.
+- Pointer post-merge `main` CI: `29754166388` — passed.
 
 ## Player problem
 
@@ -118,4 +128,4 @@ PASS. Human approval is recorded. The observed failure, safe default values, no-
 
 ## Verdict
 
-READY / approved. Sole next Unity implementation packet. Run only from the activated Unity pointer and checked-in `production/sprints/codex-story-standalone-display-001.prompt.txt`; the full recovery replaytest remains blocked until the repaired build receives human double-click verification.
+READY / approved / pointer-activated. Sole current Unity implementation packet. Run from clean Unity `main` at `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234` using `production/sprints/codex-story-standalone-display-001.prompt.txt`; the full recovery replaytest remains blocked until the repaired build receives human double-click verification.

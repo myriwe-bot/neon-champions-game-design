@@ -41,9 +41,9 @@ A clean Windows executable launches through the normal title/faction-choice path
 3. `STORY-CHAMPION-ARMY-INTERACTION-001` — DONE / merged through Unity PR #174 and post-merge verified; exposes the truthful current Champion army and clean Champion -> base -> Champion context continuity.
 4. `STORY-MAP-PHYSICAL-ROLLOUT-001` — DONE / merged as Unity PR #176 / post-merge verified by `main` run `29699588200`; the complete ten-node/twelve-route duel scenario now uses the shared physical presentation with HRC/QXZ interaction parity.
 5. `STORY-PROTOTYPE-CONTINUITY-QA-002` human replaytest — DONE / `BLOCKED — REJECT CLOSEOUT`; ordinary double-click launch showed the Unity splash then a black window, while CI-style forced 1920x1080 launch succeeded on the same machine.
-6. `STORY-STANDALONE-DISPLAY-001` — READY / approved on 2026-07-20; safe default 1920x1080 resizable window and no-screen-arguments built-player launch parity only.
+6. `STORY-STANDALONE-DISPLAY-001` — READY / approved / pointer-activated on 2026-07-20; safe default 1920x1080 resizable window and no-screen-arguments built-player launch parity only.
 
-`STORY-STANDALONE-DISPLAY-001` is the sole approved Unity implementation packet. It becomes runnable only after the Unity README pointer PR passes exact-head and post-merge CI. The full recovery replaytest must be repeated after repair and cannot be passed by automation.
+`STORY-STANDALONE-DISPLAY-001` is the sole runnable Unity implementation packet after pointer PR #178 and post-merge run `29754166388` passed. The full recovery replaytest must be repeated after repair and cannot be passed by automation.
 
 ## Boundaries
 
@@ -59,4 +59,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. Orders 1–4 are DONE. Order 5 returned `BLOCKED — REJECT CLOSEOUT`. Order 6 is READY / approved and awaits Unity pointer activation before implementation.
+ACTIVE / approved. Orders 1–4 are DONE. Order 5 returned `BLOCKED — REJECT CLOSEOUT`. Order 6 is READY / approved / pointer-activated for implementation.

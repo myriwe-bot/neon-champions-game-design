@@ -9,6 +9,8 @@
 - Approval binds 1920x1080 initial windowed mode, native-resolution startup disabled, resizing enabled, preservation of explicit screen overrides, one built-player launch with no `-screen-*` arguments, existing faction coverage, and a mandatory human double-click recheck after merge.
 - Gameplay, renderer/shader, graphics API, GPU-driver, broad preference deletion, packages, map, save, AI, economy, and unrelated settings remain excluded.
 - Unity pointer activation and exact-head/post-merge pointer CI remain mandatory before Codex runs.
+- Unity pointer PR #178 merged exact head `9dce9eedeaa1b1717a8754ac79362739882c5f62` as `d36e4d03c47b78b3f25f7c68a9f8dd71b41fe234`; exact-head run `29753475424` and post-merge `main` run `29754166388` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator.
+- The story is now pointer-activated and runnable from that clean Unity `main` ancestor. Human double-click verification remains a post-implementation requirement, not something CI has passed.
 
 ## [2026-07-20] human replaytest rejection | Normal Windows launch black; display repair candidate formed
 

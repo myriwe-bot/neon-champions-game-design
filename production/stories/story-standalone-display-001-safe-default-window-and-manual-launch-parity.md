@@ -38,6 +38,7 @@ MERGED / automated gates passed / human double-click verification pending. Unity
 - Reviewed/merge tree: `13665466ccb9763cc589bed8fc201b9fc8f691d0` — identical.
 - Post-merge `main` CI: `29762704689` — passed.
 - Automated evidence is PASS. Human double-click verification remains pending.
+- Unity README closeout PR #181 merged docs-only head `f05c6b008ae188a37a5753ed9d8739e5da86448d` as `019c32452571aa7dd36b228dd6472b61610c9021`; both trees equal `1b4f89843ce71510651fb78e5536a6c25c4a7ada`. Automatically started PR run `29763873067` and main run `29763946600` were intentionally cancelled because the only changed path was `README.md`; literal authority readback and `git diff --check` passed.
 
 ## Player problem
 

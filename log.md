@@ -11,6 +11,8 @@
 - PR #180 merged as `56122d14e709637d746b259e849b85e85dd4c20f`; reviewed-head and merge tree both equal `13665466ccb9763cc589bed8fc201b9fc8f691d0`; post-merge run `29762704689` passed.
 - `STORY-STANDALONE-DISPLAY-001` is MERGED / human QA pending, not DONE. The owner must double-click the exact rebuilt `main` executable without arguments before continuity testing resumes.
 - Formed `EPIC-019` and `STORY-CI-RISK-TIERING-001` as READY-candidate / approval pending. The proposed contract removes duplicate story-branch push matrices, gives docs/evidence a no-Unity fast path, uses a stable aggregate gate with fail-safe unknown paths, retains nightly/manual full regression, and uses exact tree identity instead of redundant post-merge full suites.
+- Unity README closeout PR #181 merged docs-only head `f05c6b008ae188a37a5753ed9d8739e5da86448d` as `019c32452571aa7dd36b228dd6472b61610c9021`; reviewed and merge trees are identical at `1b4f89843ce71510651fb78e5536a6c25c4a7ada` and the only changed path was `README.md`.
+- Under the owner-directed risk-tier exception, automatically started full Unity runs `29763873067` and `29763946600` were cancelled. README literal readback, scoped diff, tree identity, and `git diff --check` are the relevant evidence; no Unity/player/screenshot work was performed for this docs-only closeout.
 
 ## [2026-07-20] approval | STORY-STANDALONE-DISPLAY-001 approved
 

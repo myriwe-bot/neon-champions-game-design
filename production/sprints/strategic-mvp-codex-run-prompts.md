@@ -104,6 +104,7 @@ related:
     production/stories/story-proof-scenario-001-month-one-route-pressure-feed-and-capture-flow,
     production/stories/story-save-001-prototype-strategic-save-and-resume,
     production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity,
+    production/stories/story-prototype-continuity-qa-002-recovery-replaytest,
   ]
 approval: approved
 ---
@@ -112,19 +113,19 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-MAP-PHYSICAL-ROLLOUT-001 Complete Duel Map and Two-Faction Interaction Parity`.
+**Current READY / approved Unity implementation packet:** none.
 
-`STORY-CHAMPION-ARMY-INTERACTION-001` is DONE / merged through Unity PR #174 with green post-merge CI. The next approved packet scales the owner-approved physical-map grammar across the complete current duel scenario and both factions without changing topology or gameplay rules.
+`STORY-MAP-PHYSICAL-ROLLOUT-001` is DONE / merged through Unity PR #176 with green post-merge CI. `STORY-PROTOTYPE-CONTINUITY-QA-002` is the sole current READY / approved gate, but it is a human replaytest rather than a Codex implementation packet.
 
 ## Current READY implementation packet
 
-Run `production/sprints/codex-story-map-physical-rollout-001.prompt.txt` after pulling current `main` in both repositories and confirming the Unity README pointer names this story and records successful activation.
+Do not run a Codex implementation prompt. Execute the approved human guide in `production/stories/story-prototype-continuity-qa-002-recovery-replaytest.md` against the recorded standalone build candidate.
 
-If the local Unity `main` has the exact known five staged Unity settings files plus two accidental untracked root files beginning with `taged`, do not paste more recovery commands. First run `production/sprints/codex-archive-preexisting-unity-settings-before-map-rollout.prompt.txt`. It archives the verified seven-path dirty state into one named local stash without editing, deleting, normalizing, committing, or pushing it. Run the implementation prompt only after that recovery reports PASS and a clean Unity `main`.
+### Historical STORY-MAP-PHYSICAL-ROLLOUT-001 handoff — do not rerun
 
-### Copy-safe STORY-MAP-PHYSICAL-ROLLOUT-001 handoff
+The rollout and its local settings-recovery prompt are historical. No Codex command is part of the current human replaytest gate.
 
-Primary workspace-write run:
+Historical workspace-write run:
 
 ```powershell
 cd C:\Users\NordicGamer\CodexProjects\neon-champions-game-design

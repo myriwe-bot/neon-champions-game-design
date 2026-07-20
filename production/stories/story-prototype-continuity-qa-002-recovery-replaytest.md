@@ -1,12 +1,12 @@
 ---
 title: STORY-PROTOTYPE-CONTINUITY-QA-002 Recovery Continuity Replaytest
 type: story
-status: draft
+status: ready
 phase: production
 owner: human
 created: 2026-07-19
-updated: 2026-07-19
-approval: pending
+updated: 2026-07-20
+approval: approved
 related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity]
 ---
 
@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-DRAFT prepared / inactive. This packet may not be called READY, executed as an authoritative playtest, or used to close EPIC-018 until the human owner explicitly approves activation.
+READY / approved by the human owner on 2026-07-20. The exact script, candidate-build basis, both-faction discovery route, full save/relaunch/Continue route, verdict model, and fail-closed treatment of unexecuted required steps are approved. Human execution and verdict remain pending.
 
 ## Why this gate exists
 
@@ -73,9 +73,20 @@ The replaytest must directly re-evaluate, not paraphrase away, the original comp
 - New gameplay, balance, topology, content, save-schema, AI-policy, tactical, economy, art-production, or renderer work.
 - Treating prototype limitations as fixed without human observation.
 - Deferring a failed step while claiming the overall route passed.
-- Activating an implementation packet from this draft. A defect found here requires a separately approved bounded packet.
+- Activating implementation work from this replaytest. A defect found here requires a separately approved bounded packet.
 
-## Human replaytest script
+## Preparation and execution guide
+
+### Before starting
+
+1. Use a clean Windows checkout of Unity `main` at `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`. If a newer `main` is used, record its exact commit and verify all configured CI jobs first.
+2. Build the standalone player with `& .\ci\BuildStandaloneWindows64.ps1` from the Unity repository. The expected executable path is `Builds\StandaloneWindows64\NeonChampionsFoundation.exe`.
+3. Record `git rev-parse HEAD`, `Get-FileHash -Algorithm SHA256` for the executable, and, if a ZIP is used, the ZIP SHA-256. CI run `29699588200` proves the candidate source passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator; it does not replace hashing the actual tested copy.
+4. Test at 1920x1080 in the normal player shell. Do not use the Unity Editor, debug panels, raw IDs, implementation notes, or agent guidance during the initial discovery pass.
+5. Record observations while playing. Preserve concrete wording. For each failure note: attempted action, expected result, actual result, whether recovery was possible without help, and severity.
+6. A screenshot is required only at the five named checkpoints. It supports the report but never substitutes for the human observation.
+7. If a required step cannot be completed, record the blocker and continue only where doing so cannot hide or bypass it. The final verdict remains `BLOCKED` unless the human authority amends the gate before verdict.
+8. Report directly in chat using the response template below; the design repository can be updated afterward from the human report.
 
 ### A. Standalone and complete-map recovery
 
@@ -117,7 +128,7 @@ The replaytest must directly re-evaluate, not paraphrase away, the original comp
 
 ## Evidence package
 
-Prepare only after activation:
+Approved evidence targets:
 
 - `production/evidence/STORY-PROTOTYPE-CONTINUITY-QA-002/README.md`
 - `hrc-complete-map-and-army-1920x1080.png`
@@ -129,15 +140,82 @@ Prepare only after activation:
 
 Images support the human notes; they do not replace them. Every artifact must record provenance and remain free of raw IDs, local paths, debug panels, or undisclosed setup.
 
-## Activation gate
+## Approved activation decision
 
-Before changing `status: draft` or `approval: pending`, ask the human owner to approve:
+The human owner approved on 2026-07-20:
 
 1. this exact script and verdict model;
-2. the candidate build or a newer explicitly identified verified Unity `main`;
+2. candidate Unity `main` `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f`, or a newer explicitly identified and verified `main`;
 3. both-faction discovery plus one full save/relaunch/Continue route;
 4. the rule that any unexecuted required step blocks closeout unless authority is explicitly amended before the verdict.
 
+## Human response template
+
+```text
+Build
+- Unity commit:
+- Executable path:
+- Executable SHA-256:
+- ZIP SHA-256, if used:
+- Resolution:
+
+HRC discovery
+- Title -> New Scenario -> Play HRC worked without Editor help: Yes / No
+- Champion and location were clear:
+- Attached army was findable and understandable:
+- Base and facility context were findable:
+- Legal routes/sites and central objective were understandable:
+- Two meaningful actions taken:
+  1.
+  2.
+- Feed/context clearly explained the consequences:
+- Physical-place verdict vs visible node/polygon graph:
+
+QXZ discovery
+- Title -> New Scenario -> Play QXZ worked without Editor help: Yes / No
+- Champion and location were clear:
+- Attached army was findable and understandable:
+- Base and facility context were findable:
+- Legal routes/sites and central objective were understandable:
+- Physical-place verdict vs visible node/polygon graph:
+
+Continuity route
+- Faction used:
+- Pre-save cycle/turn and active faction:
+- Pre-save Champion location/movement/army:
+- Pre-save resources/sites/facilities/objective/Feed/pending tactical state:
+- Opponent action before save and visible consequence:
+- Save and Return to Title worked: Yes / No
+- Entire executable fully closed: Yes / No
+- Same executable relaunched: Yes / No
+- Continue worked: Yes / No
+- Differences after Continue: None / describe
+- Opponent action after Continue and visible consequence:
+- Tactical handoff: Not encountered / describe pause and legal CombatAI step
+
+Original complaints re-evaluated
+- “There seems to be no interactivity whatsoever.” Resolved / remains / notes:
+- “The readability on the map is horrible.” Resolved / remains / notes:
+- “I have no idea what do do.” Resolved / remains / notes:
+- “The map is very strange and text is unreadable, it is in general a mess.” Resolved / remains / notes:
+- Polygons/node-map metaphor concern: Resolved / remains / notes:
+- Base could not be opened/upgraded: Resolved / remains / notes:
+- Champion army/stacks could not be found: Resolved / remains / notes:
+- “Mobility support” was unexplained: Resolved / remains / notes:
+
+Defects
+- BLOCKER:
+- FOLLOW-UP:
+- ACCEPTED PROTOTYPE LIMITATION:
+
+Best moment:
+Most confusing moment:
+Overall experience/design observations:
+
+Final verdict: PASS / PASS WITH FOLLOW-UPS / BLOCKED
+Reason:
+```
+
 ## Verdict
 
-DRAFT prepared / inactive. No human replaytest result is claimed, no implementation work is activated, and EPIC-018 remains active pending explicit human approval and execution.
+READY / approved for human execution. No human replaytest result is claimed, no Unity implementation work is activated, and EPIC-018 remains active pending the actual human report and verdict.

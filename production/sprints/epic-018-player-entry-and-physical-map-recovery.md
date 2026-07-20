@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-17
-updated: 2026-07-19
+updated: 2026-07-20
 approval: approved
 related: [production/epics/epic-018-physical-adventure-map-and-player-entry-recovery, production/stories/story-standalone-entry-001-windows-player-entry-and-launch-smoke, production/stories/story-map-visual-slice-001-physical-arctic-adventure-map-and-shell, production/stories/story-champion-army-interaction-001-discoverable-champion-army-and-selection-continuity, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-prototype-continuity-qa-002-recovery-replaytest]
 ---
@@ -26,9 +26,9 @@ The standalone executable did not reach the player shell. The Editor workaround 
 | 2 | `STORY-MAP-VISUAL-SLICE-001` | DONE / merged / post-merge verified | Final head `b4afc997…` received owner APPROVE; PR #172 merged as `0a704445…`; post-merge run `29663206375` passed |
 | 3 | `STORY-CHAMPION-ARMY-INTERACTION-001` | DONE / merged / verified | Unity PR #174 merged as `07aec855…`; post-merge run `29684259824` passed; structured truthful army discovery and Champion -> base -> Champion context continuity |
 | 4 | `STORY-MAP-PHYSICAL-ROLLOUT-001` | DONE / Unity PR #176 merged / post-merge verified | Complete current ten-node/twelve-route physical duel map with HRC/QXZ normal-input and context parity |
-| 5 | `STORY-PROTOTYPE-CONTINUITY-QA-002` human continuity replaytest | DRAFT prepared / inactive | launch, complete-map readability, both-faction interaction, save/relaunch/Continue, and post-resume opponent pressure are all testable after explicit human activation |
+| 5 | `STORY-PROTOTYPE-CONTINUITY-QA-002` human continuity replaytest | READY / approved; human execution pending | launch, complete-map readability, both-faction interaction, save/relaunch/Continue, and post-resume opponent pressure must receive an explicit human verdict |
 
-Orders 1–4 are closed. There is no automatically active Unity implementation packet. Order 5 is a prepared human-owned replaytest draft and becomes runnable only after explicit human activation.
+Orders 1–4 are closed. There is no active Unity implementation packet. Order 5 was explicitly approved on 2026-07-20 and is now the sole active human-owned gate.
 
 ## Direction lock
 
@@ -43,4 +43,4 @@ Orders 1–4 are closed. There is no automatically active Unity implementation p
 
 None. The next gate is human-owned and has no Codex implementation prompt.
 
-`production/stories/story-prototype-continuity-qa-002-recovery-replaytest.md` is prepared as a DRAFT only. Automation may bind a build to verified Unity `main` and preserve the test script; it may not substitute screenshots, video, or automated checks for the human playtest verdict.
+`production/stories/story-prototype-continuity-qa-002-recovery-replaytest.md` is READY / approved for human execution. Automation may bind a build to verified Unity `main` and preserve the test script; it may not substitute screenshots, video, or automated checks for the human playtest verdict.

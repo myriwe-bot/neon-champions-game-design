@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-17
-updated: 2026-07-19
+updated: 2026-07-20
 approval: approved
 related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-prototype-continuity-qa-002-recovery-replaytest]
 ---
@@ -40,9 +40,9 @@ A clean Windows executable launches through the normal title/faction-choice path
 2. `STORY-MAP-VISUAL-SLICE-001` — DONE / merged through Unity PR #172 and post-merge verified; the representative HRC physical-map-and-shell slice received owner visual APPROVE over unchanged graph rules.
 3. `STORY-CHAMPION-ARMY-INTERACTION-001` — DONE / merged through Unity PR #174 and post-merge verified; exposes the truthful current Champion army and clean Champion -> base -> Champion context continuity.
 4. `STORY-MAP-PHYSICAL-ROLLOUT-001` — DONE / merged as Unity PR #176 / post-merge verified by `main` run `29699588200`; the complete ten-node/twelve-route duel scenario now uses the shared physical presentation with HRC/QXZ interaction parity.
-5. `STORY-PROTOTYPE-CONTINUITY-QA-002` human replaytest — DRAFT prepared; return to launch, complete-map readability, both-faction interaction, save/relaunch/Continue, and post-resume opponent-pressure validation only after explicit human activation.
+5. `STORY-PROTOTYPE-CONTINUITY-QA-002` human replaytest — READY / approved on 2026-07-20; execution and human verdict pending for launch, complete-map readability, both-faction interaction, save/relaunch/Continue, and post-resume opponent pressure.
 
-No Unity implementation packet is automatically active. The next gate is the human-owned `STORY-PROTOTYPE-CONTINUITY-QA-002` replaytest draft; automation may prepare its build provenance and script but may not activate, execute, or pass the human verdict.
+No Unity implementation packet is active. The next gate is the approved human-owned `STORY-PROTOTYPE-CONTINUITY-QA-002` replaytest. Automation may prepare build provenance and evidence scaffolding but may not execute or pass the human verdict.
 
 ## Boundaries
 
@@ -58,4 +58,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. Orders 1–4 are DONE. `STORY-PROTOTYPE-CONTINUITY-QA-002` is prepared as the next human-owned DRAFT gate and remains inactive until explicit human approval.
+ACTIVE / approved. Orders 1–4 are DONE. `STORY-PROTOTYPE-CONTINUITY-QA-002` is READY / approved for human execution; closeout remains pending the actual report and verdict.

@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-20] approval | EPIC-018 recovery continuity replaytest READY
+
+- Human explicitly approved the exact `STORY-PROTOTYPE-CONTINUITY-QA-002` script and guide.
+- Approval accepts candidate Unity `main` `c038d42d977eef9a9d71ad0b5c83bc4c6ba0016f` or a newer explicitly identified verified `main`, both-faction discovery, one full Save -> Return to Title -> full process close -> relaunch -> Continue route, and fail-closed treatment of any unexecuted required step.
+- Promoted the human-owned replaytest to READY / approved. No Unity implementation packet or Codex prompt is active, and no playtest verdict is claimed before the owner reports actual observations.
+- Added an inline preparation guide and copyable response template preserving every original player complaint as direct re-evaluation authority.
+
 ## [2026-07-19] closeout and approval | Champion army DONE; complete physical duel-map rollout READY
 
 - Final Unity implementation head `bffeb0b9969081d635adc0a28579c484911fc6ce` passed exact-head run `29683728194` plus immutable domain/runtime and UI/tests/evidence reviews.

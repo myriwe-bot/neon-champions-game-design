@@ -20,6 +20,40 @@ approval: approved
 
 # Playtest Journal
 
+## [2026-07-23] STORY-STANDALONE-DISPLAY-001 — REJECT / launch-context blocker
+
+- Build / commit / PR: Unity `main` `b0ea56ad2998421464baadee3bfbd32a16790ec0`; executable SHA-256 `E83058C236F35A720C27E465DC42D1549F13B25A8573DCE464438B855764E7AF`.
+- Scenario / mode: ordinary Explorer/executable-directory launch versus repository-root `Start-Process`; no `-screen-*` arguments.
+- Tester / role: human owner / 2560x1440 two-monitor Windows machine.
+- Story / epic under review: `STORY-STANDALONE-DISPLAY-001` / EPIC-018.
+- Evidence: direct human report, read-only `Screenmanager *` inventory, state `Title|faction_1|846|632|0`, player log, and controlled working-directory A/B launches.
+
+### What dragged
+
+- Explorer and explicit executable-directory working-directory launches showed the Unity splash, then a gray window that became black when resized.
+- The broader HRC/QXZ and continuity route remains unexecuted because normal launch is still player-blocking.
+
+### What surprised
+
+- The exact same no-screen-argument executable opened from repository-root working directory.
+- `-logFile` only and `-logFile` plus smoke signal both opened from repository root; smoke signal was not required.
+- Saved display values already described a visible on-screen 1920x1080 windowed launch, so registry deletion was rejected as unnecessary and speculative.
+
+### Exact complaints to preserve
+
+- “Window color: grey originally, black when resized. Window visible. Window resizable.”
+- “On the same monitor, when tests run, the game opens just fine.”
+- “A — EXE DIRECTORY: splash then gray/black  B — REPOSITORY ROOT: title opened.”
+
+### Fun verdict
+
+- REJECT — the player depends on repository-root current working directory, while CI inherits that successful context and masks normal distribution behavior.
+
+### Next decision
+
+- Human approved `STORY-STANDALONE-LAUNCH-CONTEXT-001` through implementation merge, followed by one exact-machine Explorer double-click gate.
+- No registry, graphics API, renderer, gameplay, or continuity scope expansion.
+
 ## Purpose
 
 This journal makes playtest feel notes first-class production evidence. Use it for human/director playtests, agent-run closeout reviews, and any subjective readability/fun verdict that would otherwise live only in chat.

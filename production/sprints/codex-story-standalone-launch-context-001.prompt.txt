@@ -1,0 +1,77 @@
+Implement only STORY-STANDALONE-LAUNCH-CONTEXT-001 Working-Directory-Independent Windows Launch.
+
+Repositories
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design
+- Unity implementation: C:\Users\NordicGamer\CodexProjects\neon-champions-unity
+- Story: production/stories/story-standalone-launch-context-001-working-directory-independent-windows-launch.md
+- Parent epic: production/epics/epic-018-physical-adventure-map-and-player-entry-recovery.md
+- Prior display story: production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity.md
+- Testing authority: docs/architecture/testing-strategy.md
+- Exact branch: story/STORY-STANDALONE-LAUNCH-CONTEXT-001-working-directory-independent-launch
+- Exact PR title: STORY-STANDALONE-LAUNCH-CONTEXT-001 Working-directory-independent Windows launch
+
+Authority preflight — fail closed
+1. Pull design main and verify this story is status ready, approval approved, and Ambiguity Check PASS.
+2. Verify testing strategy approved/approved.
+3. Pull Unity main; read root and scoped implementer instructions.
+4. Verify Unity README points to this exact story/prompt/branch/PR, exact design commit, and merged pointer activation evidence. Stop if absent, stale, contradictory, or unverified.
+5. Confirm clean current main and inventory startup, title/canvas layout, path/resource resolution, ci/RunWindowsPlayerLaunchSmoke.ps1, relevant tests, and prior display evidence.
+6. Stop on wrong ancestor, dirty unrelated work, draft authority, scope expansion, or contradiction.
+
+Exact human reproduction
+- Source: b0ea56ad2998421464baadee3bfbd32a16790ec0.
+- Executable SHA-256: E83058C236F35A720C27E465DC42D1549F13B25A8573DCE464438B855764E7AF.
+- Owner machine: Windows, 2560x1440, two monitors.
+- Explorer/executable-directory working directory, no screen args: splash -> gray window; resizing turns it black.
+- Start-Process with WorkingDirectory executable directory, no args: same failure.
+- Start-Process with WorkingDirectory repository root, no args: title opens.
+- Repository-root -logFile only: title opens.
+- Repository-root -logFile plus -standaloneSmokeSignal: title opens; signal Title|faction_1|846|632|0.
+- Saved display policy is 1920x1080, native false, windowed mode 3, resizable and on-screen. Do not pursue registry deletion.
+- CI Start-Process currently inherits repository-root working directory and masks normal launch.
+
+Required plan/TDD
+1. Before edits, propose a concise root-cause and RED/GREEN plan.
+2. Add focused RED that explicitly launches a fresh player from its executable directory with no -screen-* args and requires nonblank visible-title evidence. Preserve repository-root success as control.
+3. Find the actual production dependency on current working directory. Do not merely set CI back to repository root or ship a wrapper.
+4. Implement the narrow production fix.
+5. Prove GREEN from executable directory, repository root, and unrelated temporary directory outside repo/build.
+6. Set WorkingDirectory explicitly on every CI player Start-Process.
+7. Add at least one signal-free launch that proves visible title rendering. State signal alone is insufficient.
+8. Verify -standaloneSmokeSignal/faction transport does not force or rebuild layout earlier than production, repair rendering, bypass title UI, or create a different startup. The current coordinate path calls Canvas.ForceUpdateCanvases(); remove it, move genuinely required readiness into normal production startup, or prove behavior-neutral signal/no-signal parity.
+9. Retain real OS pointer title/faction/map actions, HRC/QXZ parity, safe 1920x1080 windowed defaults, and explicit 1600x900 override.
+10. Record exact working directories, commands, logs, process exits, window/client dimensions/mode, screenshots/pixel evidence, source SHA, and executable SHA-256.
+11. After focused GREEN, commit/push a remote checkpoint and open/update a draft PR before broad suites.
+12. Run focused tests, full EditMode, PlayMode, Placeholder Validator, Windows standalone build/launch, git diff --check, and exact-head CI.
+
+Allowed surfaces
+- Narrow production startup/title/layout/path code proven causal.
+- ci/RunWindowsPlayerLaunchSmoke.ps1 and narrowly related launch helpers/tests.
+- Focused EditMode/PlayMode regression tests.
+- production/evidence/STORY-STANDALONE-LAUNCH-CONTEXT-001/ and matching meta files.
+- README evidence/current-task wording only for truthful completion.
+
+Hard exclusions
+- No registry deletion/reset.
+- No D3D12, graphics API, renderer, render pipeline, shader, driver, package/lockfile, broad ProjectSettings, scene/prefab, gameplay, map, save, AI, economy, balance, content, or asset changes.
+- No repository-root launcher, batch file, shortcut, forced screen args, or WorkingDirectory wrapper as player workaround.
+- Do not claim the continuity replaytest passed.
+- Stop with evidence if the real fix requires excluded scope.
+
+Publication and review contract
+- Stage only story-owned paths; never git add .
+- Commit and push actual implementation branch.
+- PR body links story/testing authority, lists RED/GREEN/full evidence, changed paths, root cause, omissions, and mandatory human double-click gate.
+- Non-draft PR only after complete evidence and review readiness.
+- Print branch, local/remote SHA, PR URL, status, tests, and CI URLs.
+- Do not stop at PR-ready. Commit, push, and create/update the remote PR or report an exact blocker.
+
+Final report
+- Root cause and player-facing repair.
+- Files changed.
+- RED/GREEN and full results.
+- Three working-directory results and signal-free visual proof.
+- Signal/no-signal parity.
+- Branch/SHA/PR/CI.
+- Omissions/risks.
+- Explicit statement that final human Explorer double-click verification remains pending after merge.

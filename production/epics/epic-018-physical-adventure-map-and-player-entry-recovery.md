@@ -7,7 +7,7 @@ owner: shared
 created: 2026-07-17
 updated: 2026-07-20
 approval: approved
-related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-prototype-continuity-qa-002-recovery-replaytest, production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity]
+related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, design/art/prototype-visual-target-and-asset-ledger, design/research/physical-adventure-map-direction-2026-07-17, production/stories/story-prototype-continuity-qa-001-build-resume-pressure-playtest-closeout, production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity, production/stories/story-prototype-continuity-qa-002-recovery-replaytest, production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity, production/stories/story-standalone-launch-context-001-working-directory-independent-windows-launch]
 ---
 
 # EPIC-018 Physical Adventure Map and Player Entry Recovery
@@ -41,9 +41,10 @@ A clean Windows executable launches through the normal title/faction-choice path
 3. `STORY-CHAMPION-ARMY-INTERACTION-001` — DONE / merged through Unity PR #174 and post-merge verified; exposes the truthful current Champion army and clean Champion -> base -> Champion context continuity.
 4. `STORY-MAP-PHYSICAL-ROLLOUT-001` — DONE / merged as Unity PR #176 / post-merge verified by `main` run `29699588200`; the complete ten-node/twelve-route duel scenario now uses the shared physical presentation with HRC/QXZ interaction parity.
 5. `STORY-PROTOTYPE-CONTINUITY-QA-002` human replaytest — DONE / `BLOCKED — REJECT CLOSEOUT`; ordinary double-click launch showed the Unity splash then a black window, while CI-style forced 1920x1080 launch succeeded on the same machine.
-6. `STORY-STANDALONE-DISPLAY-001` — MERGED / automated PASS / human recheck pending; Unity PR #180 merged as `56122d14…`, exact-head run `29761977696` and post-merge run `29762704689` passed.
+6. `STORY-STANDALONE-DISPLAY-001` — DONE / automated PASS / `BLOCKED — REJECT HUMAN CLOSEOUT`; exact rebuilt `main` still failed from Explorer/executable-directory context while repository-root no-screen launch succeeded.
+7. `STORY-STANDALONE-LAUNCH-CONTEXT-001` — READY / approved; remove current-working-directory dependence, prove executable-root/repository-root/unrelated-temp launches with signal-free visual evidence, merge, then return to the owner only for exact-machine double-click verification.
 
-No EPIC-018 implementation packet is runnable. The owner must first double-click the exact repaired `main` build without arguments. The full recovery replaytest must be repeated after repair and cannot be passed by automation.
+`STORY-STANDALONE-LAUNCH-CONTEXT-001` is the sole approved implementation packet and becomes runnable only after its Unity pointer is merged and verified. The full recovery replaytest must be repeated after repair and cannot be passed by automation.
 
 ## Boundaries
 
@@ -59,4 +60,4 @@ EPIC-017 implementation remains technically merged, but its human continuity clo
 
 ## Verdict
 
-ACTIVE / approved. Orders 1–4 are DONE. Order 5 returned `BLOCKED — REJECT CLOSEOUT`. Order 6 is merged and automation-green but awaits mandatory human double-click verification.
+ACTIVE / approved. Orders 1–4 are DONE. Orders 5–6 returned `BLOCKED — REJECT CLOSEOUT` at human gates. Order 7 is READY / approved and owns the launch-context repair through merge plus final human double-click verification.

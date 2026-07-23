@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-23] human rejection and approval | Working-directory-independent launch repair
+
+- Human rebuilt Unity `main` `b0ea56ad2998421464baadee3bfbd32a16790ec0`; executable SHA-256 `E83058C236F35A720C27E465DC42D1549F13B25A8573DCE464438B855764E7AF`.
+- On a 2560x1440 two-monitor Windows machine, Explorer/executable-directory launch showed splash then gray, becoming black when resized. The same no-screen-argument executable opened from repository-root working directory.
+- Controlled A/B proof: executable-directory working directory failed; repository-root working directory passed. `-logFile` only also passed, so the smoke signal was not causal. CI currently inherits repository-root context and masks the ordinary-launch defect.
+- Registry modification was explicitly rejected; read-only values already showed an on-screen 1920x1080 windowed policy. No registry, GPU, D3D12, renderer, or resolution cause is claimed.
+- Closed `STORY-STANDALONE-DISPLAY-001` as DONE / `BLOCKED — REJECT HUMAN CLOSEOUT` without weakening its valid merged default-window work.
+- Human approved `STORY-STANDALONE-LAUNCH-CONTEXT-001` exactly as proposed: prepare/activate, remove current-working-directory dependence, prove executable-root/repo-root/unrelated-temp and signal-free visible-title parity, fix through merge, then return only for final double-click verification.
+
 ## [2026-07-20] delayed review repair | Isolated persisted display preferences
 
 - A delayed independent review of Unity head `02ca3ed…` returned BLOCKED: the no-screen-argument smoke did not isolate Unity's persisted `Screenmanager *` registry values, so prior forced-resolution runs on the persistent runner could contaminate proof of the new defaults.

@@ -1,7 +1,7 @@
 ---
 title: STORY-STANDALONE-DISPLAY-001 Safe Default Window and Manual Launch Parity
 type: story
-status: review
+status: done
 phase: production
 owner: shared
 created: 2026-07-20
@@ -14,7 +14,7 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-MERGED / automated gates passed after review hardening / human double-click verification pending. Unity PR #180 merged the display implementation as `56122d14e709637d746b259e849b85e85dd4c20f`. A delayed independent review correctly found that prior `Screenmanager *` registry values could contaminate the no-argument proof on a persistent runner; follow-up PR #182 isolated and restored only those values and merged as `2133c364f6f94452cf00100a87045ebb4a33be45` after exact-head run `29764493527` passed all four jobs. Do not mark DONE until the owner double-clicks the exact rebuilt `main` executable on the same high-resolution machine and confirms the title appears without launch arguments.
+DONE / `BLOCKED — REJECT HUMAN CLOSEOUT` on 2026-07-23. The owner rebuilt exact Unity `main` `b0ea56ad2998421464baadee3bfbd32a16790ec0`; executable SHA-256 `E83058C236F35A720C27E465DC42D1549F13B25A8573DCE464438B855764E7AF`. Explorer and explicit executable-directory launches still showed splash then gray/black, while the same no-screen-argument executable opened from repository-root working directory. The display defaults merged and automated checks remain valid, but CI inherited repository-root context and did not prove ordinary launch. Recovery continues only through approved `STORY-STANDALONE-LAUNCH-CONTEXT-001`.
 
 ## Activation evidence
 
@@ -157,4 +157,4 @@ PASS. Human approval is recorded. The observed failure, safe default values, no-
 
 ## Verdict
 
-MERGED / HUMAN QA PENDING. No implementation prompt is runnable. Automation passed, but the story is not DONE and the full recovery replaytest remains blocked until the repaired build receives human double-click verification.
+DONE / `BLOCKED — REJECT HUMAN CLOSEOUT`. Safe defaults are merged, but normal player launch remains blocked by a proven current-working-directory dependency. Historical prompt only; do not rerun. The full continuity replaytest remains blocked.

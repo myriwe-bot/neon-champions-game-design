@@ -106,6 +106,7 @@ related:
     production/stories/story-map-physical-rollout-001-complete-duel-map-and-two-faction-interaction-parity,
     production/stories/story-prototype-continuity-qa-002-recovery-replaytest,
     production/stories/story-standalone-display-001-safe-default-window-and-manual-launch-parity,
+    production/stories/story-standalone-launch-context-001-working-directory-independent-windows-launch,
     production/epics/epic-019-risk-tiered-ci-and-delivery-velocity,
     production/stories/story-ci-risk-tiering-001-change-aware-unity-ci,
   ]
@@ -116,13 +117,13 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** none.
+**Current READY / approved Unity implementation packet:** `STORY-STANDALONE-LAUNCH-CONTEXT-001`.
 
-`STORY-STANDALONE-DISPLAY-001` merged through Unity PR #180 and passed automated gates, but mandatory human double-click verification remains pending. `STORY-CI-RISK-TIERING-001` is the sole next implementation candidate and remains approval-pending with a guarded prompt.
+`STORY-STANDALONE-DISPLAY-001` failed human closeout after exact-machine testing isolated a current-working-directory dependency. `STORY-STANDALONE-LAUNCH-CONTEXT-001` is approved and becomes runnable only after its Unity README pointer is merged and verified. `STORY-CI-RISK-TIERING-001` remains approval-pending and is not current.
 
 ## Current READY implementation packet
 
-None. Do not rerun `production/sprints/codex-story-standalone-display-001.prompt.txt`. Do not run `production/sprints/codex-story-ci-risk-tiering-001.prompt.txt` until explicit approval and pointer activation.
+`production/sprints/codex-story-standalone-launch-context-001.prompt.txt`, gated on merged Unity pointer activation. Do not rerun the display prompt or run the CI-risk prompt.
 
 ### Historical STORY-STANDALONE-DISPLAY-001 handoff — do not rerun
 

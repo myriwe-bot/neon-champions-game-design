@@ -10,6 +10,10 @@
 - Registry modification was explicitly rejected; read-only values already showed an on-screen 1920x1080 windowed policy. No registry, GPU, D3D12, renderer, or resolution cause is claimed.
 - Closed `STORY-STANDALONE-DISPLAY-001` as DONE / `BLOCKED — REJECT HUMAN CLOSEOUT` without weakening its valid merged default-window work.
 - Human approved `STORY-STANDALONE-LAUNCH-CONTEXT-001` exactly as proposed: prepare/activate, remove current-working-directory dependence, prove executable-root/repo-root/unrelated-temp and signal-free visible-title parity, fix through merge, then return only for final double-click verification.
+- Published design approval commit `caaadacbe29c22d566ec203584e83c81137399b3`; Quartz run `30016804695` passed.
+- Unity pointer PR #184 merged exact head `a3167ebbf2596a2a17c5bc40d983725217cc2d0e` as `2c0a2dec86d85d5619410282ad7f2194623d0ff1`; both trees equal `7f00605604670f88bca59c6581f42894b31690f5`.
+- Pointer PR/main runs `30017007517` and `30017032180` were cancelled because only `README.md` changed; no Unity/player/screenshot work was relevant. README evidence reconciliation PR #185 merged as `d1b71c7ff161925b50ec4a2d8080890859ac0173`, with its docs-only runs likewise cancelled.
+- The implementation packet is now pointer-activated from clean Unity `main` `d1b71c7ff161925b50ec4a2d8080890859ac0173`.
 
 ## [2026-07-20] delayed review repair | Isolated persisted display preferences
 

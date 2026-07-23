@@ -14,7 +14,15 @@ related: [production/epics/epic-018-physical-adventure-map-and-player-entry-reco
 
 ## Status
 
-READY / approved on 2026-07-23. This is the sole runnable Unity implementation packet after pointer activation. The owner authorized preparation, activation, implementation through merge, and return only for final exact-machine double-click verification.
+READY / approved and pointer-activated on 2026-07-23. This is the sole runnable Unity implementation packet. The owner authorized preparation, activation, implementation through merge, and return only for final exact-machine double-click verification.
+
+## Activation evidence
+
+- Design approval commit: `caaadacbe29c22d566ec203584e83c81137399b3`; publish run `30016804695` passed.
+- Unity pointer PR #184 merged exact head `a3167ebbf2596a2a17c5bc40d983725217cc2d0e` as `2c0a2dec86d85d5619410282ad7f2194623d0ff1`; both trees equal `7f00605604670f88bca59c6581f42894b31690f5`.
+- PR run `30017007517` and post-merge run `30017032180` were intentionally cancelled because the only changed path was `README.md`; `git diff --check`, exact authority readback, and tree identity passed. No Unity/player evidence was relevant to pointer activation.
+- README activation-evidence PR #185 merged as `d1b71c7ff161925b50ec4a2d8080890859ac0173`; its docs-only runs `30017099869` and `30017124419` were likewise cancelled under the approved risk-tier policy.
+- Activated implementation ancestor: clean Unity `main` `d1b71c7ff161925b50ec4a2d8080890859ac0173`.
 
 ## Player blocker
 
@@ -128,4 +136,4 @@ Human-approved verbatim on 2026-07-23:
 
 ## Verdict
 
-READY / APPROVED. Implementation may begin only after the Unity README pointer is merged and its required activation verification is recorded.
+READY / APPROVED / POINTER-ACTIVATED. Implementation may begin from clean Unity `main` `d1b71c7ff161925b50ec4a2d8080890859ac0173`.

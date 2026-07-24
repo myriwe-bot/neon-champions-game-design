@@ -1,0 +1,86 @@
+You are implementing Neon Champions Unity story STORY-RESET-001.
+
+Repositories:
+- Unity: C:\Users\NordicGamer\CodexProjects\neon-champions-unity on Windows; /root/wiki/neon-champions-unity in the current Linux environment.
+- Design authority: C:\Users\NordicGamer\CodexProjects\neon-champions-game-design on Windows; /root/wiki/neon-champions-game-design here.
+
+Required authority:
+- Design commit b56d6489305f37b060ee4a00e74e59e863a4a64c.
+- Read production/stories/story-reset-001-readable-isometric-core-loop-replacement-slice.md in full.
+- Read its linked product constitution, strategic-map, player-shell, architecture/testing/control documents, the 2026-07-24 playtest journal entry, Unity root AGENTS.md, and every nearest scoped AGENTS.md before editing.
+- If authority is missing, contradictory, or not READY, stop. Do not infer from this prompt alone.
+
+Required Unity ancestor and branch:
+1. Fetch and fast-forward clean main.
+2. Confirm the README current-task pointer names STORY-RESET-001 and design commit b56d6489305f37b060ee4a00e74e59e863a4a64c.
+3. Create/continue branch story/STORY-RESET-001-readable-isometric-core-loop from that exact main.
+4. Preserve all local work if recovery is needed.
+
+Goal:
+Replace the rejected graph/dashboard first-run presentation with one bounded, playable, shallow-isometric core-loop slice while reusing existing Domain/Application/scenario/save/AI/tactical rules. The normal production route must prove dedicated title -> quiet faction choice -> map-dominant isometric strategic view -> click persistent base -> dedicated three-role base view -> build/recruit -> return -> select Champion -> click visible reachable physical destination -> concise result.
+
+Mandatory implementation boundaries:
+- Presentation -> Application -> Domain remains intact. Application stays engine-free and noEngineReferences remains true.
+- Do not mutate gameplay state directly from presentation.
+- Existing StrategicMapInputSession commands remain the command path.
+- Do not change scenario topology, resource rules, save schema, AI policy, tactical rules, packages, render pipeline, or scenes unless the story stop rule is reached and reported.
+- Do not add more monolithic implementation to StrategicMapBootstrap. Extract bounded adapter/view-model/render-shell components and leave Bootstrap as integration/command routing where practical.
+- Current authored graph may remain hidden internally. It must not read as permanent nodes/edges in normal play.
+- Preserve current legacy/debug diagnostics only behind debug/test compatibility when necessary; do not expose them in normal production entry.
+- No external or AI-generated assets are required. Deterministic code-built replace-later geometry is allowed.
+
+Required product behavior:
+1. Dedicated title and faction-choice states do not render the live map or gameplay HUD behind them.
+2. Window can be resized and UI reflows; provide F11 or visible window/fullscreen control.
+3. Strategic world uses a deliberate shallow-isometric camera, continuous terrain, readable landmark silhouettes, and no permanent node circles/graph-edge controls/region bands/label carpet.
+4. Routes read as physical tracks. Reachable/path emphasis appears only while the Champion is selected and is subordinate to terrain.
+5. Both bases are large physical landmarks and remain clickable after the Champion leaves.
+6. Base click opens a dedicated base screen/view, not extra cards over the map dashboard.
+7. Base view exposes exactly three current safe facility roles: built administration/income, buildable Materials/resource support, and buildable recruitment. Each shows plain purpose, state, exact cost/prerequisite, and result.
+8. Hide Stratospheric Lab, Intel-income facilities, discount suites/garages, advanced Operations/Lead/Verify Lead, Field Upgrade, vague Starting-hub support copy, and always-open feed from normal first-run UI. Do not delete their data/domain support.
+9. Recruitment shows actual authored unit name, count, stock, and exact costs before apply and updates the Champion army after apply.
+10. Persistent strategic UI is minimal: compact faction/turn/Credits/Materials/objective strip; compact selected-Champion card; no more than three context actions; one stable End Turn; collapsed feed with only factual latest-result toast.
+11. Objective copy is the story-approved functional label: Control the Central Relay for 5 turns. This maps to the current central site and holdRequiredCount=5 and is replace-later, not canon.
+12. First-turn guidance is exactly three steps: Open your base; Recruit or build; Select your Champion and choose a destination. Progress it truthfully.
+13. No continuous Action unavailable feed spam or atmospheric/generated result prose.
+14. HRC and QXZ use distinct shapes/silhouettes beyond color.
+
+Implementation sequence and TDD:
+A. Baseline: run focused existing EditMode/PlayMode tests before edits and record exact commands/results.
+B. RED: add focused EditMode tests for a new bounded core-loop projection: objective, hidden advanced actions/content, three facility roles, plain recruitment data, guidance state, deterministic isometric anchors/palette.
+C. GREEN: implement the projection/view-model.
+D. RED/GREEN: add PlayMode tests for title isolation, HRC/QXZ entry, minimal shell absence/presence, real pointer base access after movement, three-role base view, build/recruit, return/select/move, responsive/fullscreen behavior.
+E. Implement extracted title/shell/base/isometric presentation components and minimal Bootstrap integration.
+F. Run focused suites, then full EditMode, PlayMode, placeholder/data/provenance validators, Windows compile/build, and standalone smoke routes.
+G. Capture fresh isolated native 1920x1080 evidence under production/evidence/STORY-RESET-001/: title, HRC map, HRC base, Champion/path, QXZ map, QXZ base. Add README with exact SHA, selectors/input routes, dimensions/hashes, counts, provenance, changed files, tests, omissions, and explicit statement that human fun acceptance is pending.
+
+Compatibility/testing rules:
+- Existing tests that encode the rejected normal shell may be updated only when they directly assert behavior this approved story replaces. Do not weaken Domain/Application/save/AI/tactical/scenario assertions.
+- Keep built-player smoke signal observational; no smoke-only layout repair.
+- Do not fabricate visual evidence or use direct DTO mutation as player-input proof.
+- Keep full HRC and QXZ production-entry coverage.
+- Run git diff --check and inspect all generated/changed .meta files.
+
+Publication/recovery:
+- Commit and push an early focused-GREEN checkpoint to the branch.
+- Create/update a draft PR titled STORY-RESET-001 Readable isometric core-loop replacement.
+- PR body must link the story, design commit, exact Unity ancestor/head, tests/CI/evidence, files/assets, and every retained omission/deferred system.
+- Continue through implementation, test, evidence, commit, push, and PR update. Do not stop at “PR-ready.”
+- Do not merge. Human owner replaytest remains after merge and cannot be passed by automation or agent review.
+
+Stop conditions:
+- Base opening requires changing ownership/location gameplay rules.
+- Movement simplification requires topology/pathfinding/domain rewrite.
+- Scenario/data/schema/package/scene changes become necessary outside explicit story authority.
+- Required Unity/Windows tests cannot run and no approved CI route can provide them.
+- The scope cannot be implemented without inventing mechanics/content/final art.
+
+Final report must state:
+- exact branch, ancestor, head, PR URL;
+- summary and exact changed files/assets/settings;
+- RED/GREEN and full test/CI results with run URLs;
+- evidence paths and hashes;
+- retained legacy/debug compatibility;
+- hidden/deferred systems and all omissions/placeholders;
+- any stop-condition risk;
+- explicit statement that unaided owner fun/readability acceptance remains pending.

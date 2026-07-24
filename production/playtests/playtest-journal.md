@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-05
-updated: 2026-07-20
+updated: 2026-07-24
 source_lore: []
 related:
   [
@@ -19,6 +19,80 @@ approval: approved
 ---
 
 # Playtest Journal
+
+## [2026-07-24] post-launch-repair unaided owner playtest — REJECT CLOSEOUT / DESIGN RESET REQUIRED
+
+- Build / commit / PR: local Windows standalone built from Unity `main` after PRs #186-#188; instructed source head `8dad95d2854f26a7445f8ea1b3fb2dc4f3e08ae5`, but the tester did not paste an independent build hash.
+- Scenario / mode: ordinary Explorer launch; QXZ; unaided title and first-ten-minute strategic-map route. Test stopped after the first section because the experience was not judgeable as fun.
+- Tester / role: human owner / solo unaided playtest.
+- Story / epic under review: post-EPIC-018 continuity and whole-prototype direction.
+- Evidence: direct structured human report. Screenshots/video are neither supplied nor requested for this design-reset verdict.
+
+### What worked technically
+
+- Explorer launch reached a usable window within a few seconds.
+- The window was not black, blank, frozen, or visibly at the wrong resolution.
+- Text was not generally overlapping or clipped.
+
+### What dragged
+
+- The title reads as gameplay UI with a much smaller title box layered over it; the map and shell remain visible behind `White Sky Calibration failure` and `New Scenario`.
+- The shell is overcrowded, map elements look like similar buttons, and the lower bar presents too many choices.
+- Movement is complicated and its rules are not understood.
+- The feed repeatedly says `Action unavailable` without creating useful understanding.
+- The base cannot be reopened or found after the Champion moves away; buildings are not presented as clear, accessible physical structures.
+- `Stratospheric Lab`, `specialists`, `Effect: Starting-hub support`, `Verify Lead`, and the Weather Station interaction do not communicate a coherent player purpose or consequence.
+
+### What confused
+
+- The objective was unclear immediately.
+- Turn ownership was inferred only from whether actions appeared possible.
+- The Champion was hard to identify because the frame was overwhelmingly blue.
+- Building `Stratospheric Lab` looked like a meaningful first decision, but its purpose and recruitment promise were not understood.
+- The player expected to recruit units and instead lost access to the base after moving.
+- The map read as a complicated node-and-edge graph, not a physical Arctic place or an isometric strategy/adventure map.
+
+### What felt off-fiction and off-product
+
+- The game does not look or feel like the discussed product or its inspiration games.
+- Preliminary art is not functioning as readable game art.
+- Vague objective/direction text and unexplained systems read as generated filler rather than authored strategy-game choices.
+- The current implementation does not reveal a legible core loop or a source of fun.
+
+### Exact complaints to preserve
+
+- “There is a very big problem here.”
+- “The game does not look or feel like anything we have discussed, definitely not like the games that give it inspiration.”
+- “Movement is complicated, art is hard to read, bases cant even be opened.”
+- “The text and the ‘objectives’ are confusing, not simple in any way.”
+- “Something has got to change radically.”
+- “This is quite shit.”
+- “We need to turn this into a normal isometric-type view game where even if art is preliminary, it is still understandable.”
+- “Bases need to be accessible and haver clearly defined buildings.”
+- “There may have been assumptions baked in here that are not fixed.”
+- “I do not understand at all what the game loops are supposed to be or where the fun should be.”
+- “There are way too many buttons to click and options to choose.”
+- “It is not fun AT ALL.”
+- “I started as QXZ and built a ‘Stratospheric Lab’, even though I do not understand what id does.”
+- “I also do not think we have designed these buildings together....”
+- “I tried to ‘verify lead’, did not understand why I am doing it or what it did.”
+- “I went to ‘Weather station’ and clicked on something, got some AI slop text in return.”
+- “I do not understand what I am doing and this is DEFINITELY not fun and not fitting with the design.”
+- “Straight away.”
+- “See above - complete chaos.”
+- “A node and edge graph and very complicated.”
+
+### Fun verdict
+
+- REJECT CLOSEOUT — the build launches, but the title, map metaphor, base interaction, information hierarchy, authored content, first-turn purpose, and core fun loop all fail the unaided human gate. This is not a narrow polish/readability defect.
+
+### Gate consequence
+
+- Stop feature throughput and do not ask the owner to continue this playtest route on the same design surface.
+- Reopen design basics: player fantasy, first-session core loop, meaningful decisions, map/movement metaphor, base/building interaction, objective framing, and information hierarchy.
+- Treat a normal readable isometric-type physical map, directly accessible bases, and clearly defined buildings as explicit owner direction for the reset—not as approval of a specific technical implementation yet.
+- Remove or quarantine unexplained prototype content such as `Stratospheric Lab`, `Verify Lead`, and vague generated consequence text unless it can be traced to newly approved design authority.
+- No screenshots or video are required from this solo playtest.
 
 ## [2026-07-23] STORY-STANDALONE-DISPLAY-001 — REJECT / launch-context blocker
 

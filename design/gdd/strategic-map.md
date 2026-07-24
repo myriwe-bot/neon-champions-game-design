@@ -5,7 +5,7 @@ status: approved
 phase: systems-design
 owner: shared
 created: 2026-05-30
-updated: 2026-07-17
+updated: 2026-07-24
 source_lore: [greenland, blue-monday, blue-week, white-sky, digital-net]
 related:
   [
@@ -182,6 +182,8 @@ The first playable strategic map must make these visible:
 ### Packet C Decision: C/D Hybrid
 
 Approved direction: use an authored node-route graph for prototype rules, presented over a visual Arctic-region map. Keep the data model abstract enough that a later tile/grid or richer spatial layer is not blocked.
+
+Human correction, 2026-07-24: the authored graph is now a **temporary implementation substrate for the replacement vertical slice**, not an approved final movement model. The completed owner playtest still perceived the shipped surface as “a node and edge graph and very complicated.” The replacement slice may reuse graph legality to avoid rewriting proven domain systems, but permanent route lines/node controls are prohibited and the final graph/grid/freeform decision remains open until the isometric slice proves or disproves the need for richer spatial play.
 
 ### 9.1 Human playtest correction: physical corridor adventure map
 

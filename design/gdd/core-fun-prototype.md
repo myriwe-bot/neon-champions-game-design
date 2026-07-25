@@ -55,6 +55,26 @@ Investigation uses readable uncertainty, source information, actions, access, an
 
 A crisis may reward rare Intel, but that reward feeds the slower apex-progression layer rather than purchasing the crisis decision itself.
 
+## Selected Crisis
+
+### Multi-Service Relay Failure and Disputed Sabotage
+
+Selected on 2026-07-25 under delegated best-judgment authority after the owner approved the experiment but did not select among the crisis options. This is the prototype premise, not permanent world canon.
+
+A central emergency relay serving navigation beacons, emergency communications, local clinic/port coordination, and White Sky telemetry is failing during Blue Monday. The player and rival both have plausible reasons to secure it, but physical possession alone does not establish safe operation or accepted authority.
+
+The experiment must make three layers distinct:
+
+1. **Physical control:** who can enter, secure, and defend the relay.
+2. **Operational restoration:** which essential services are restored, how safely, and at what opportunity cost.
+3. **Accepted account:** what caused the failure, what each side did, and which operator relevant local stakeholders will recognize.
+
+The authored truth may involve sabotage, negligent maintenance, a cascading technical fault, or mixed responsibility. The player must receive source-tagged evidence sufficient to reason; ambiguity must not conceal basic rules.
+
+This crisis is preferred because it reuses the current central-objective concept, makes rival intent legible, supports several approaches and immediate map consequences, and tests control/restoration/proof without requiring Echo ontology or a large civilian simulation.
+
+Intel remains separate. Recovering a rare technical archive may award Intel as an apex-progression reward, but Intel is neither evidence of responsibility nor the price of investigation or public acceptance.
+
 ## Smallest Coherent Experiment
 
 Include only:
@@ -144,10 +164,9 @@ Reject or redesign the hypothesis if:
 
 ## Open Design Packets
 
-1. Select and define the single crisis fiction.
-2. Define the three response postures as exact scenario contracts.
-3. Define three rival intentions and how they are communicated.
-4. Define physical control, operational restoration, and local acceptance for that crisis.
-5. Define three materially different outcomes.
-6. Select the cheapest honest first confrontation resolution.
-7. Only after the loop passes, run the map-substrate comparison.
+1. Define the three response postures as exact scenario contracts.
+2. Define three rival intentions and how they are communicated.
+3. Define physical control, operational restoration, and local acceptance as implementation-testable relay rules.
+4. Define three materially different outcomes.
+5. Select the cheapest honest first confrontation resolution.
+6. Only after the loop passes, run the map-substrate comparison.

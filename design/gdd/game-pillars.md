@@ -5,7 +5,7 @@ status: draft
 phase: concept
 owner: shared
 created: 2026-05-22
-updated: 2026-07-10
+updated: 2026-07-25
 source_lore:
   [greenland, blue-monday, blue-week, digital-net, white-sky, champions]
 related: [design/gdd/game-concept, design/game-design-principles]
@@ -22,7 +22,7 @@ Definition: The player should make readable strategic choices in a world where i
 
 Design test: If choosing between hidden randomness and source-tagged uncertainty, choose source-tagged uncertainty because the player must be able to reason about risk.
 
-Served by: scouting states, Digital-Net overlay, Proof, Intel, source tags, rival propaganda, Axiom/UNP/corporate admissibility states.
+Served by: scouting states, Digital-Net overlay, Evidence/Proof, source tags, rival propaganda, Axiom/UNP/corporate admissibility states. Intel is not the information-action currency for this pillar.
 
 ### Pillar: Infrastructure Is Power
 
@@ -38,7 +38,7 @@ Definition: Champions are strategic commanders and public symbols whose bodies, 
 
 Design test: If a Champion is only a stronger unit, redesign them until they affect command, legitimacy, assets, doctrine, and narrative risk.
 
-Served by: Champion assets, Intel upgrades, public legitimacy, death/capture/Echo states, faction doctrines, media/proof systems.
+Served by: Champion Assets, Intel-funded apex upgrades, public legitimacy, death/capture/Echo states, faction doctrines, media/proof systems.
 
 ### Pillar: Factions as Evolutionary Philosophies
 
@@ -56,13 +56,13 @@ Design test: If wilderness becomes empty scenery, turn it into route risk, senso
 
 Served by: Arctic routes, weather events, isolated hubs, wilderness patrols, wildlife systems, air/sea mobility, local consent, search-and-rescue.
 
-### Pillar: Intel Turns Secrets Into Power
+### Pillar: Intel Fuels Apex Technology
 
-Definition: The special upgrade resource should feel like stolen research, proofs, blackmail, model leaks, and operational knowledge becoming concrete advantage.
+Definition: Intel is the scarce Alchemical Dust-style progression resource used to upgrade Champion Assets and unlock highest-tier units or the buildings that produce them.
 
-Design test: If Intel could be renamed mana or dust without changing the fiction, the design has failed.
+Design test: If Intel pays for routine scouting, proof, generic abilities, or basic construction, use another rule or resource; Intel spending should signal a consequential apex upgrade.
 
-Served by: asset upgrades, proof nodes, heists, reverse engineering, rival Champion scandals, environmental-model leaks, dark-net caches.
+Served by: Asset upgrades, reverse engineering, rare research recoveries, apex-unit authorization, and highest-tier production facilities.
 
 ## Anti-Pillars
 

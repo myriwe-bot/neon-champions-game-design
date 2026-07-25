@@ -5,11 +5,11 @@ status: draft
 phase: systems-design
 owner: shared
 created: 2026-05-22
-updated: 2026-05-30
+updated: 2026-07-25
 source_lore: [digital-net, greenland, blue-monday, blue-week]
 related:
   [design/gdd/game-concept, design/gdd/game-pillars, design/gdd/systems-index]
-approval: pending
+approval: core-role-approved
 ---
 
 # Intel Resource System
@@ -18,9 +18,9 @@ approval: pending
 
 ## Summary
 
-Intel is Neon Champions' special cross-system upgrade resource. Like Olden Era's Alchemical Dust, it links map exploration, Champion inventory, hub development, ability progression, and asset empowerment. Unlike magic dust, Intel represents actionable secrets: stolen research, blackmail, model leaks, schematics, field reports, proof packets, defectors, and reverse-engineered assets.
+Intel is Neon Champions' scarce apex-progression resource. Like Olden Era's Alchemical Dust, it converts rare map rewards and obsolete Assets into upgrades for artifact-equivalent Champion Assets and access to highest-tier units or the buildings that produce them. It is not a generic information-action, proof, scouting, hacking, or ability currency.
 
-> Quick reference — Layer: Core · Priority: MVP/Vertical Slice · Key deps: Strategic Map, Resources, Champions, Hubs, Tactical Combat, Information / Feed State
+> Quick reference — Layer: Core · Priority: MVP/Vertical Slice · Key deps: Strategic Map, Resources, Champions, Assets, Hubs, Recruitment
 
 ## Design Reference: Alchemical Dust
 
@@ -45,7 +45,7 @@ Neon Champions translation:
 - Wild pickups -> data caches / field dossiers / dead drops.
 - Subskills -> Analyst / Fixer / Signals / HUMINT specializations.
 - Dwelling upgrades -> recruitment-site / unit-line upgrades.
-- Spell levels -> hack / doctrine / operation levels.
+- Spell upgrades are not mapped to Intel by default; Operations use their own progression contracts.
 - Artifact empowerment -> asset upgrades.
 
 ## Player Fantasy
@@ -57,24 +57,24 @@ The player should think:
 - “I stole their research, so my gear improves.”
 - “I burned an asset for what it taught me.”
 - “I know how this site works now, so my units can be upgraded.”
-- “I can spend this scandal as a weapon, or keep it for development.”
+- “I cannot fund every apex Asset and unit line, so this recovery determines my build.”
 
 ## Core Rules
 
-1. Intel is a strategic resource stored globally by faction, with some Champion-local modifiers and temporary caches.
+1. Intel is a strategic resource stored globally by faction for the prototype.
 2. Intel is rarer than Credits/Energy and should not be required for every basic action.
-3. Intel has three main sinks:
-   - asset/artifact empowerment;
-   - doctrine/hack/operation leveling;
-   - recruitment-site or elite-unit upgrade.
+3. Intel has two approved sink families:
+   - upgrading artifact-equivalent Champion Assets;
+   - unlocking highest-tier units or the buildings that produce them.
 4. Intel has four main source types:
    - map discovery and guarded data sites;
    - conversion of other rare resources through analysis structures;
    - dismantling / reverse-engineering assets;
    - Champion/faction skills or site control producing recurring Intel.
 5. Intel sources must be visible enough that scarcity feels strategic, not arbitrary.
-6. Intel spending should create opportunity cost between stronger Champions, stronger troops/sites, and stronger operations.
-7. Intel should never be named or presented as magic energy. It is always documents, models, proofs, secrets, schematics, credentials, people, or captured process knowledge.
+6. Intel spending should create opportunity cost between stronger Champion Assets and access to apex troops.
+7. Intel should never be named or presented as magic energy. It is always captured research, technical models, schematics, credentials, reverse-engineered process knowledge, or comparable apex-development material.
+8. Evidence/Proof is separate state used to investigate claims and establish public accounts. Intel does not pay for routine investigation, proof, scouting, Signal actions, or legitimacy.
 
 ## Acquisition Modes
 
@@ -87,18 +87,15 @@ The player should think:
 | Reverse-engineering | disenchant artifact     | dismantle asset, burn contact, debrief captured gear    | No, converts item to Intel |
 | Specialist skill    | subskill generation     | Analyst/Fixer/Signals Champion produces Intel/day       | Yes                        |
 | Tactical outcome    | battle reward           | capture VIP, hack tactical objective, recover prototype | Event-based                |
-| Public scandal      | unique cyberpunk source | convert Proof/legitimacy win into Intel or damage rival | Event-based                |
+| Research exposure   | unique cyberpunk source | recover apex schematics or authorization from an exposed program | Event-based |
 
 ## Spending Modes
 
 | Sink                     | Olden Era Analogue     | Neon Champions Translation                                                      | Notes                      |
 | ------------------------ | ---------------------- | ------------------------------------------------------------------------------- | -------------------------- |
 | Asset empowerment        | artifact empowerment   | upgrade Champion gear/assets                                                    | Core MVP use               |
-| Operation leveling       | spell leveling         | upgrade hacks, media ops, legal strikes, climate-system actions                 | Vertical Slice             |
-| Recruitment-site upgrade | town dwelling upgrade  | upgrade drone depot, clinic, hunter council, merc lodge, animal-control station | Vertical Slice             |
-| Elite unit unlock        | dwelling/unit upgrade  | unlock advanced squad variants                                                  | Alpha unless MVP needs it  |
-| Map-layer reveal         | none/direct adaptation | reveal hidden Digital-Net/proof/route state                                     | Use sparingly              |
-| Counter-intel cleanup    | none/direct adaptation | remove spoofed/polluted info from region                                        | Supports dirty-info pillar |
+| Apex production unlock   | town dwelling upgrade  | unlock or construct a highest-tier unit facility                                | Core second proof sink     |
+| Highest-tier unit unlock | dwelling/unit upgrade  | authorize the apex unit line when no separate facility is used                  | Scenario/faction alternative |
 
 ## Prototype Values
 
@@ -112,8 +109,8 @@ Use placeholder values until playtested:
 - Dismantle elite asset: 20 Intel.
 - Basic asset upgrade: 10 Intel.
 - Major asset upgrade: 25 Intel.
-- Basic operation/hack level-up: 15 Intel.
-- Recruitment-site upgrade: 20 Intel.
+- Apex production unlock: 25 Intel.
+- Highest-tier unit authorization: 25 Intel.
 
 These are intentionally lower-granularity than Olden Era until the resource economy is proven.
 
@@ -155,17 +152,19 @@ This makes Intel more interesting than post-battle loot and reinforces the cyber
 
 ## Acceptance Criteria
 
-- [ ] Intel has at least one map pickup source, one guarded-site source, one conversion source, and one dismantling source in the vertical slice.
+- [ ] Intel has at least one rare map/guarded source and one Asset-dismantling source in the vertical slice.
 - [ ] Intel can upgrade at least one Champion asset in the MVP.
+- [ ] Intel can unlock one highest-tier unit or its production building in the vertical slice.
 - [ ] Intel costs and rewards are data-driven.
 - [ ] Full tactical battles can award Intel through at least one optional objective.
-- [ ] UI labels Intel sources as secrets/proofs/research/contacts rather than abstract dust.
+- [ ] UI labels Intel sources as research, schematics, credentials, or reverse-engineered process knowledge rather than abstract dust or public Proof.
+- [ ] Investigation, Evidence/Proof, Signal actions, and ordinary abilities do not deduct Intel.
 - [ ] A player can recover from an early bad Intel spend without campaign failure.
 
 ## Open Questions
 
 | Question                                                       | Owner        | Deadline                       | Resolution                                                             |
 | -------------------------------------------------------------- | ------------ | ------------------------------ | ---------------------------------------------------------------------- |
-| Should Intel be stored globally, Champion-local, or hybrid?    | Human/shared | Before resource implementation | Recommended: global pool plus Champion-local discounts/special caches. |
+| Should Intel be stored globally, Champion-local, or hybrid?    | Human/shared | Before resource implementation | Resolved 2026-07-25: global faction resource for the prototype.          |
 | Should Intel have subtypes, e.g. HUMINT/SIGINT/Research/Proof? | Human/shared | After MVP                      | Recommended: no for MVP.                                               |
 | Can Intel be traded on markets?                                | Human/shared | Before economy GDD             | Recommended: only through controlled Intel Exchanges, not open market. |

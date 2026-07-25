@@ -5,12 +5,13 @@ status: draft
 phase: systems-design
 owner: shared
 created: 2026-05-22
-updated: 2026-05-30
+updated: 2026-07-25
 source_lore: []
 related:
   [
     design/gdd/game-concept,
     design/gdd/game-pillars,
+    design/gdd/core-fun-prototype,
     design/gdd/strategic-map,
     design/gdd/tactical-combat,
     design/gdd/README,
@@ -20,7 +21,7 @@ approval: pending
 
 # Systems Index
 
-> Status: Draft. Use for system orientation and planning only; implementation still requires an approved GDD section or READY story.
+> Status: Draft. Use for system orientation and planning only; implementation still requires an approved GDD section or READY story. The approved core-fun experiment is `design/gdd/core-fun-prototype`; it narrows prototype validation without approving every system below.
 
 ## Dependency Layers
 
@@ -31,12 +32,12 @@ approval: pending
 |     3 | Strategic Map                 | Core         | MVP            | Turn / Time Structure, Factions, Champions, Resources, Tactical Combat | Main HoMM-like decision surface; MVP target is two-faction local hotseat with duel/race pacing, site control, resources, recruitment/reinforcement, and tactical battle handoff.                                                                | Draft  | design/gdd/strategic-map        |
 |     4 | Site / Infrastructure Control | Core         | MVP            | Strategic Map                                                          | Makes map objectives meaningful.                                                                                                                                                                                                                | Draft  | TBD                             |
 |     5 | Resources                     | Core         | MVP            | Strategic Map, Sites                                                   | Drives expansion, tradeoffs, and constraints.                                                                                                                                                                                                   | Draft  | TBD                             |
-|   5.1 | Intel Resource                | Core         | MVP            | Resources, Champions, Strategic Map, Tactical Combat                   | Special upgrade resource based on Olden Era Alchemical Dust; required for asset empowerment and later recruitment/operation upgrades.                                                                                                           | Draft  | design/gdd/intel-resource       |
+|   5.1 | Intel Resource                | Core         | MVP            | Resources, Champions, Strategic Map, Assets, Recruitment               | Scarce Olden Era Alchemical Dust-style apex resource used for Champion Asset upgrades and highest-tier units or their production buildings; separate from Evidence/Proof, scouting, Signal actions, and ordinary abilities.                      | Core role approved | design/gdd/intel-resource       |
 |     6 | Champions                     | Core         | MVP            | Strategic Map, Resources                                               | Core identity/commander fantasy.                                                                                                                                                                                                                | Draft  | TBD                             |
 |   6.1 | Champion Assets / Operations | Core         | Vertical Slice | Champions, Intel Resource, Strategic Map, Tactical Combat              | Starts the cyberpunk artifact/spellbook analogue: Champions project leverage through Assets, Command, and Operations without becoming magic users or generic army tokens.                                                                      | Approved slice | design/gdd/tactical-combat/champion-operations-and-progression |
 |     7 | Factions                      | Core         | MVP            | Champions, Resources                                                   | Differentiates strategies and worldview.                                                                                                                                                                                                        | Draft  | TBD                             |
 |   7.1 | Faction Unit Rosters          | Core         | MVP            | Factions, Champions, Tactical Combat, Resources                        | Defines recruitable unit identities and tactical roles for the first campaign.                                                                                                                                                                  | Draft  | design/gdd/faction-unit-rosters |
-|     8 | Information / Feed State      | Feature      | Vertical Slice | Strategic Map                                                          | Differentiates the setting from generic strategy.                                                                                                                                                                                               | Draft  | TBD                             |
+|     8 | Evidence / Feed State         | Feature      | Vertical Slice | Strategic Map, Sites                                                   | Supports investigation and accepted public accounts; changes local access/authority rather than consuming Intel or merely adding a score.                                                                                                      | Prototype direction approved | design/gdd/core-fun-prototype   |
 |     9 | Crisis Clocks                 | Feature      | Vertical Slice | Strategic Map, Sites                                                   | Creates campaign pressure and consequences.                                                                                                                                                                                                     | Draft  | TBD                             |
 |    10 | Tactical Combat               | Core         | MVP            | Champions, Units, Strategic Map, Resources, Intel, UI/HUD              | Full tactical battles are required for the intended HoMM-like experience and MVP fun test; MVP complexity is constrained to a readable flat-grid stack battle with simple AP, limited statuses, explicit objectives, and data-driven contracts. | Draft  | design/gdd/tactical-combat      |
 |    11 | UX / HUD                      | Presentation | MVP            | All player-facing MVP systems                                          | Needed for comprehension and playtest.                                                                                                                                                                                                          | Draft  | TBD                             |

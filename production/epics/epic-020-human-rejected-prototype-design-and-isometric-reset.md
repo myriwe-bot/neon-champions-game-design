@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: human
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-07-25
 approval: approved
 related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, production/playtests/playtest-journal, production/stories/story-reset-001-readable-isometric-core-loop-replacement-slice]
 ---
@@ -35,10 +35,11 @@ The owner then approved the proposed reset direction and requested immediate imp
 
 ## Capability sequence
 
-1. `STORY-RESET-001` — READY / approved: one replacement isometric core-loop slice using current rules where safe.
-2. Owner unaided replaytest — required before any feature train resumes.
-3. Movement-model decision — DRAFT until replaytest evidence exists.
-4. Broader content/faction/tactical redesign — DRAFT and not implementation authority.
+1. `STORY-RESET-001` — DONE / merged / `BLOCKED — REJECT HUMAN PLAYABILITY CLOSEOUT`: readability improved, but objective/rival/combat and meaningful decisions did not land.
+2. Immediate bounded usability repair — Unity PR #191; no game-design expansion.
+3. Reference research plus owner co-design of one new core-fun hypothesis — ACTIVE.
+4. Movement-model decision — DRAFT; the replaytest proves the current endpoint-only graph feels spatially empty, but does not by itself approve a full tile/hex rewrite.
+5. Objective/economy/building/Champion/unit/combat redesign — DRAFT and not implementation authority until the new hypothesis is approved.
 
 ## Gate
 
@@ -46,4 +47,4 @@ No new gameplay feature story becomes READY until the owner can launch, understa
 
 ## Verdict
 
-ACTIVE / approved. `STORY-RESET-001` is the sole current implementation packet.
+ACTIVE / feature freeze. `STORY-RESET-001` is closed with rejected human playability verdict. PR #191 may merge only as a bounded defect repair; no broader gameplay packet is READY while the next fun hypothesis is being co-designed.

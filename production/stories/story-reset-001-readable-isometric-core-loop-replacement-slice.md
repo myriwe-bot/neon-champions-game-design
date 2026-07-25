@@ -1,11 +1,11 @@
 ---
 title: STORY-RESET-001 Readable Isometric Core-Loop Replacement Slice
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-07-25
 approval: approved
 related: [production/epics/epic-020-human-rejected-prototype-design-and-isometric-reset, production/playtests/playtest-journal, design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, docs/architecture/unity-technical-scheme, docs/architecture/testing-strategy, docs/architecture/control-manifest]
 ---
@@ -14,7 +14,7 @@ related: [production/epics/epic-020-human-rejected-prototype-design-and-isometri
 
 ## Status
 
-READY / human-approved on 2026-07-24. Immediate implementation is authorized.
+DONE / merged through Unity PR #190 as `af83b11a8d015647f567b2de014b47c3308643a1` / `BLOCKED — REJECT HUMAN PLAYABILITY CLOSEOUT` on 2026-07-25. The replacement materially improved readability but did not establish meaningful decisions, objective/rival/combat comprehension, or fun. Historical implementation authority only; do not rerun.
 
 ## Story type
 
@@ -205,4 +205,4 @@ Open questions: none that require invention for the bounded replacement slice.
 
 ## Verdict
 
-READY / approved. Sole active implementation story under EPIC-020.
+DONE / implemented and human-tested / `BLOCKED — REJECT HUMAN PLAYABILITY CLOSEOUT`. See `production/playtests/playtest-journal.md#[2026-07-25]-story-reset-001-unaided-owner-replaytest`.

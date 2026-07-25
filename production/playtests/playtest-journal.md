@@ -5,7 +5,7 @@ status: active
 phase: production
 owner: shared
 created: 2026-07-05
-updated: 2026-07-24
+updated: 2026-07-25
 source_lore: []
 related:
   [
@@ -19,6 +19,62 @@ approval: approved
 ---
 
 # Playtest Journal
+
+## [2026-07-25] STORY-RESET-001 unaided owner replaytest — BLOCKED / LOOP READABLE BUT NOT YET A GAME
+
+- Build / commit / PR: Windows standalone from merged Unity `main` `af83b11a8d015647f567b2de014b47c3308643a1`; implementation PR #190.
+- Scenario / mode: unaided HRC and QXZ strategic-map/base/movement replaytest, followed by resizing/fullscreen and opponent-turn checks. Save/Continue and tactical handoff were not discoverable or naturally reached.
+- Tester / role: human owner / solo unaided playtest.
+- Story / epic under review: `STORY-RESET-001` / EPIC-020.
+- Evidence: direct structured human report. No screenshots/video requested.
+
+### What improved
+
+- The game looks more like an isometric strategy/adventure game and is substantially clearer than the rejected graph/dashboard shell.
+- Faction, base, Champion, at least one destination, base opening, building purpose/cost/result, build/recruit result, Champion selection, movement, route cost, and both faction starting compositions were broadly understandable.
+- Window resizing worked.
+
+### What remains blocking
+
+- The physical space still reads as decoration around a graph. Important interactions exist only at fixed sites, and the player cannot leave the authored routes to explore.
+- The rival direction, rival Champion, central objective, combat entrance, opponent action, victory pressure, and route to contest the objective were not understandable.
+- Clicking the home base prioritizes opening it, leaving no obvious way to move the Champion back there.
+- The apparent End Turn control was not legibly labeled; `Save and Return` / `Continue` were not discovered.
+- Fullscreen blurred text and the scene by stretching the prior window rendering rather than rendering crisply at the display resolution.
+- A one-time starting recruitment offer appears before the Recruitment Hall, making the prerequisite relationship look broken.
+
+### Core-fun diagnosis
+
+- The loop is mechanically present but not meaningful: move, recruit, and build do not yet create a compelling objective, contest, payoff, or Champion fantasy.
+- The visible base decision is mostly which of two affordable buildings to build first; both are easy to afford and current building roles are not strategically interesting.
+- Unit variety and army-composition decisions are too thin.
+- Combat was not encountered naturally, so the player could not understand how battles start or what they award.
+- Opponent victory occurs after repeated turn advances without a readable causal chain or clear counterplay.
+
+### Exact complaints to preserve
+
+- “why all the space if important things are only contained in one place?”
+- “The button that probably ends the turn is unlabeled.”
+- “I cannot see the other player.”
+- “I cannot understand where [the central objective] is.”
+- “I cannot return to base easily with the champion, because when I click on the base, it immediately opens it.”
+- “I cannot ‘go off the beaten path’ to explore.”
+- “After a while after ending the turn they seem to capture the central objective, I am unsure on how to reach it myself or how to stop them.”
+- “I didnt happen into combat, I am unsure on how to trigger it.”
+- “Champion mechanics are also sorely lacking.”
+- “I can move around and recruit but it is not meaningful.”
+- “Cannot comment since there is not much game going on.”
+
+### Fun verdict
+
+- BLOCKED — the replacement is a real readability improvement, but the core-loop hypothesis still fails the decisive gate because the player cannot identify rival/objective/combat pressure and the available decisions do not yet produce strategy or enjoyment.
+
+### Gate consequence
+
+- Close `STORY-RESET-001` as implemented and human-tested, with rejected playability verdict; do not rerun the same scope.
+- Fix only bounded factual usability defects immediately. Unity PR #191 owns base-return movement, objective/rival direction labels, Save/Menu discoverability, recruitment-prerequisite explanation, and native-resolution fullscreen behavior.
+- Keep EPIC-020 active and the feature freeze in force.
+- Research reference games and co-design the next fun hypothesis before changing movement topology, objective rules, economy, buildings, Champions, units, or combat cadence.
 
 ## [2026-07-24] post-launch-repair unaided owner playtest — REJECT CLOSEOUT / DESIGN RESET REQUIRED
 

@@ -89,13 +89,34 @@ Include only:
 - physical control, operational restoration, and local acceptance;
 - immediate, attributable map consequences.
 
-The three provisional posture functions are:
+The first implementation uses these exact mutually exclusive scenario choices:
 
-1. **Mobility:** arrive first or preserve route tempo.
-2. **Force:** arrive prepared to win a confrontation or limit losses.
-3. **Verification:** improve knowledge and the eventual accepted outcome at the cost of tempo or force.
+### Mobility — `ARRIVE FIRST`
 
-These are functional experiment labels, not approved building names or permanent base modules.
+- On selection, the active faction's starting Champion gains `+2` maximum movement and `+2` current movement.
+- The increase persists for the scenario and refreshes through the existing turn system as an `8`-point maximum.
+- No unit or accepted-account benefit is granted.
+- Player-facing sacrifice: `No reinforcements. No verified public account.`
+
+### Force — `ARRIVE READY`
+
+- On selection, the first stack in the active faction's starting Champion army gains `+4` current count and `+4` maximum count.
+- Exact live-fixture results are HRC `5/5 -> 9/9` and QXZ `7/7 -> 11/11`.
+- No movement or accepted-account benefit is granted.
+- Player-facing sacrifice: `No mobility boost. No verified public account.`
+
+### Verification — `VERIFY THE FAILURE`
+
+- On selection, the faction gains a scenario-specific verified public account. This is Evidence/Proof state, never Intel.
+- If that faction controls the Central Relay, its required own-turn hold checks are `3` rather than `5`.
+- If control changes to a faction without Verification, the requirement returns to `5` and hold progress resets through existing contest rules.
+- The rival direction text also identifies the rival's committed objective as the Central Relay.
+- No movement or unit benefit is granted.
+- Player-facing sacrifice: `No mobility boost. No reinforcements.`
+
+Before normal map, base, or End Turn input, the local human chooses exactly one posture. Selection is free, immediate, saved, and irreversible. Re-selection fails without mutation. Mobility fails closed without an active Champion; Force fails closed without a valid army stack; Verification never spends or creates Intel. Save/resume preserves the selection and never reapplies its numerical grant. Legacy saves without a posture reopen the choice and preserve their existing state until selection.
+
+These are functional experiment contracts, not approved building names, Assets, Operations, permanent base modules, or a generalized posture architecture.
 
 ## Explicitly Deferred
 

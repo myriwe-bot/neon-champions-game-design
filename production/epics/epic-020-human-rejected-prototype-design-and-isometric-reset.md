@@ -7,7 +7,7 @@ owner: human
 created: 2026-07-24
 updated: 2026-07-25
 approval: approved
-related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, production/playtests/playtest-journal, production/stories/story-reset-001-readable-isometric-core-loop-replacement-slice]
+related: [design/gdd/product-constitution, design/gdd/strategic-map, design/ux/player-shell, production/playtests/playtest-journal, production/stories/story-reset-001-readable-isometric-core-loop-replacement-slice, production/epics/epic-021-contested-crisis-core-fun-experiment]
 ---
 
 # EPIC-020 Human-Rejected Prototype Design and Isometric Reset
@@ -37,14 +37,14 @@ The owner then approved the proposed reset direction and requested immediate imp
 
 1. `STORY-RESET-001` — DONE / merged / `BLOCKED — REJECT HUMAN PLAYABILITY CLOSEOUT`: readability improved, but objective/rival/combat and meaningful decisions did not land.
 2. Immediate bounded usability repair — Unity PR #191; no game-design expansion.
-3. Reference research plus owner co-design of one new core-fun hypothesis — ACTIVE.
+3. Reference research plus owner co-design of one new core-fun hypothesis — DONE / approved as `EPIC-021`.
 4. Movement-model decision — DRAFT; the replaytest proves the current endpoint-only graph feels spatially empty, but does not by itself approve a full tile/hex rewrite.
 5. Objective/economy/building/Champion/unit/combat redesign — DRAFT and not implementation authority until the new hypothesis is approved.
 
 ## Gate
 
-No new gameplay feature story becomes READY until the owner can launch, understand the goal, open a base, understand at least one building and recruit choice, select and move a Champion through a physical map, and describe the immediate loop without developer explanation.
+No new gameplay feature story becomes READY without an owner-approved core-fun hypothesis. That condition is now satisfied only for the bounded `EPIC-021` contested-crisis train. Adjacent redesign remains frozen.
 
 ## Verdict
 
-ACTIVE / feature freeze. `STORY-RESET-001` is closed with rejected human playability verdict. PR #191 may merge only as a bounded defect repair; no broader gameplay packet is READY while the next fun hypothesis is being co-designed.
+SUPERSEDED FORWARD PATH. `STORY-RESET-001` remains closed with rejected human playability verdict. PR #191 merged as a bounded defect repair. The approved forward path is `EPIC-021`; this does not retroactively accept the rejected loop or unfreeze adjacent features.

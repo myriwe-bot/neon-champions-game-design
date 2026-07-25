@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-25] merge | Opening response postures implemented; human fun gate pending
+
+- Unity PR #192 merged reviewed head `87f6c627379ad80fdaa8f9376d705959332bfb97` as squash commit `673970739bace47cad255e205fbac7f7b8314fab`.
+- Reviewed and merged trees are identical at `014194bec33182568711d0b0f32c9a2f33b57db3`.
+- Exact-head run `30177057877` and post-merge `main` run `30177571918` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator; final immutable review returned PASS at the exact PR head.
+- `STORY-CORE-FUN-001` is MERGED / HUMAN REPLAYTEST PENDING, not DONE. Automation proves the exact three-choice contract, persistence, no-reapplication behavior, Central Relay ownership integrity, full-modal input blocking, and Intel separation; it does not prove the decision is fun.
+- `EPIC-021` remains active. Rival adaptation, resolution/restoration, route rewrite, and further implementation remain gated behind owner replaytest or explicit owner direction.
+
 ## [2026-07-23] human rejection and approval | Working-directory-independent launch repair
 
 - Human rebuilt Unity `main` `b0ea56ad2998421464baadee3bfbd32a16790ec0`; executable SHA-256 `E83058C236F35A720C27E465DC42D1549F13B25A8573DCE464438B855764E7AF`.

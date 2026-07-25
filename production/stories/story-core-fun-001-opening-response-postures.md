@@ -1,7 +1,7 @@
 ---
 title: STORY-CORE-FUN-001 Opening Response Postures
 type: story
-status: ready
+status: review
 phase: production
 owner: shared
 created: 2026-07-25
@@ -14,7 +14,9 @@ related: [production/epics/epic-021-contested-crisis-core-fun-experiment, design
 
 ## Status
 
-READY / approved for immediate implementation by the owner's 2026-07-25 instruction: `Okay, implement these now.`
+MERGED / automated implementation gates passed / owner replaytest pending.
+
+Unity PR [#192](https://github.com/myriwe-bot/neon-champions-unity/pull/192) merged on 2026-07-25. This completes the bounded implementation contract but does not claim that the choice is fun; the required owner replaytest remains open.
 
 ## Story type
 
@@ -76,18 +78,18 @@ Selection is free, immediate, saved, irreversible, and applies once. Re-selectio
 
 ## Acceptance criteria
 
-- [ ] New HRC and QXZ games show exactly three posture choices before normal interaction.
-- [ ] Modal describes exact benefit and sacrifice; no option mentions spending Intel.
-- [ ] Modal blocks world/base input and End Turn until successful selection.
-- [ ] Mobility produces `8/8` from current `6/6` and future refresh respects `8`.
-- [ ] Force produces exact HRC `9/9` and QXZ `11/11` first-stack results.
-- [ ] Verification leaves movement, army, and Intel unchanged; its holder wins at `3` own-turn checks rather than `5`.
-- [ ] A non-Verification holder uses `5`; a holder change resets progress and updates the displayed requirement truthfully.
-- [ ] Selection persists through save/resume and numerical grants are not reapplied.
-- [ ] Re-selection and invalid preconditions return diagnostics without partial mutation.
-- [ ] Legacy save payloads without posture deserialize to `None` and reopen the choice.
-- [ ] Existing movement, recruitment, construction, AI, battle, objective, save, and title/faction-entry tests remain green.
-- [ ] Exact-head CI and independent spec/code review pass before merge.
+- [x] New HRC and QXZ games show exactly three posture choices before normal interaction.
+- [x] Modal describes exact benefit and sacrifice; no option mentions spending Intel.
+- [x] Modal blocks world/base input and End Turn until successful selection.
+- [x] Mobility produces `8/8` from current `6/6` and future refresh respects `8`.
+- [x] Force produces exact HRC `9/9` and QXZ `11/11` first-stack results.
+- [x] Verification leaves movement, army, and Intel unchanged; its holder wins at `3` own-turn checks rather than `5`.
+- [x] A non-Verification holder uses `5`; a holder change resets progress and updates the displayed requirement truthfully.
+- [x] Selection persists through save/resume and numerical grants are not reapplied.
+- [x] Re-selection and invalid preconditions return diagnostics without partial mutation.
+- [x] Legacy save payloads without posture deserialize to `None` and reopen the choice.
+- [x] Existing movement, recruitment, construction, AI, battle, objective, save, and title/faction-entry tests remain green.
+- [x] Exact-head CI and independent spec/code review pass before merge.
 
 ## Verification requirements
 
@@ -120,8 +122,14 @@ PASS. The owner approved the experiment and explicitly requested implementation.
 
 - Branch: `story/STORY-CORE-FUN-001-opening-response-postures`
 - PR title: `STORY-CORE-FUN-001 Opening response postures`
-- Squash merge after exact-head green CI and independent review.
+- PR: [myriwe-bot/neon-champions-unity#192](https://github.com/myriwe-bot/neon-champions-unity/pull/192).
+- Final reviewed head: `87f6c627379ad80fdaa8f9376d705959332bfb97` — immutable review `PASS`.
+- Exact-head CI: [30177057877](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/30177057877) — all four required jobs passed.
+- Squash merge: `673970739bace47cad255e205fbac7f7b8314fab`.
+- Reviewed and merged Git tree: `014194bec33182568711d0b0f32c9a2f33b57db3`.
+- Post-merge `main` CI: [30177571918](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/30177571918) — all four required jobs passed.
+- Owner replaytest: pending; automation cannot supply this verdict.
 
 ## Verdict
 
-READY / APPROVED.
+MERGED — HUMAN REPLAYTEST PENDING.

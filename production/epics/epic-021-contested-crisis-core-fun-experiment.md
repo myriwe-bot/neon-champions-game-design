@@ -29,7 +29,7 @@ The owner approved the contested-crisis approach, corrected Intel to remain an A
 
 ## Story train
 
-1. `STORY-CORE-FUN-001` — READY / approved: opening Mobility, Force, or Verification choice with persistent, mechanically distinct consequences.
+1. `STORY-CORE-FUN-001` — MERGED / automated gates passed / owner replaytest pending: opening Mobility, Force, or Verification choice with persistent, mechanically distinct consequences.
 2. Rival-intent adaptation — DRAFT; do not implement until posture closeout.
 3. Control/restoration/accepted-account resolution — DRAFT; do not implement until posture closeout.
 4. Route time/danger/information rewrite — DRAFT; do not implement until posture closeout.
@@ -37,8 +37,8 @@ The owner approved the contested-crisis approach, corrected Intel to remain an A
 
 ## Gate
 
-Implement and merge only `STORY-CORE-FUN-001`. Its automated gate proves truthful selection, persistence, and mechanical consequence. It does not prove fun. Continue the train only after owner replaytest or explicit owner direction.
+`STORY-CORE-FUN-001` merged through Unity PR #192 as `673970739bace47cad255e205fbac7f7b8314fab`; exact-head run `30177057877`, immutable review, and post-merge `main` run `30177571918` passed. These gates prove truthful selection, persistence, mechanical consequence, save compatibility, and blocked pre-choice input. They do not prove fun. Continue the train only after owner replaytest or explicit owner direction.
 
 ## Verdict
 
-ACTIVE / first bounded story approved for implementation.
+ACTIVE / first bounded implementation merged / owner core-fun replaytest pending.

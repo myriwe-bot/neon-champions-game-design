@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-26] delayed review closeout | Force feedback and Central Relay naming repaired
+
+- Unity PR #196 merged final candidate `a0f5bedbfa76dc091a1d4717626e7810350e275d` as `0149668ecf2bd0dd21f119923922296b91227697`; both trees equal `6f66b38ae3fc382e8cba6c00f614229923214fe1`.
+- Exact-head run `30196880961` passed Compile/Standalone launch, EditMode, PlayMode, and Placeholder Validator. Redundant post-merge run `30197131595` was cancelled after tree-identity proof.
+- Force now reports exact live faction/unit changes immediately: HRC Sled Logistics Team `5 -> 9` or QXZ Climate Bulwark `7 -> 11`.
+- `site_central_objective` is now consistently `Central Relay` in briefing, physical map object, normal selection UI, and production tests. No mechanic changed.
+- STORY-CORE-FUN-002 returns to DONE / owner replaytest pending. Deeper EPIC-021 work remains blocked.
+
 ## [2026-07-26] delayed review | STORY-CORE-FUN-002 reopened for two P1 clarity repairs
 
 - A delayed independent review of Unity PR #194 head `64e9806c44f0f28f9e896ba4ec9c16f946e72c8c` arrived after merge. Its 1280x720 finding was already resolved by final candidate `cbcc0aa…`, but two P1 findings survive current Unity `main`.

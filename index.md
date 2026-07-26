@@ -70,7 +70,7 @@
 - [[design/gdd/core-fun-prototype]] — APPROVED contested-crisis experiment; current numerical opening effects are prototype facts, while the first player-facing language was human-rejected.
 - [[production/epics/epic-021-contested-crisis-core-fun-experiment]] — ACTIVE / first opening implementation rejected / readability-regression repair merged / owner replaytest pending.
 - [[production/stories/story-core-fun-001-opening-response-postures]] — DONE / merged / `REJECT CLOSEOUT` after owner replaytest.
-- [[production/stories/story-core-fun-002-opening-crisis-readability-and-regression-repair]] — REOPENED / delayed P1 review repair in progress / owner replaytest blocked.
+- [[production/stories/story-core-fun-002-opening-crisis-readability-and-regression-repair]] — DONE / delayed P1 review closed through Unity PR #196 / owner replaytest pending.
 - [[production/epics/epic-016-accelerated-playable-product-foundation]] — ACTIVE four-week proof-build foundation epic.
 - [[production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell]] — DONE / merged first EPIC-016 player-shell implementation packet.
 - [[production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike]] — DONE / merged vertical-look and provenance spike through Unity PR #149.

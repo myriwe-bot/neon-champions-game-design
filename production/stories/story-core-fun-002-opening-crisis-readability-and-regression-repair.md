@@ -1,7 +1,7 @@
 ---
 title: STORY-CORE-FUN-002 Opening Crisis Readability and Regression Repair
 type: story
-status: in-progress
+status: done
 phase: production
 owner: shared
 created: 2026-07-26
@@ -14,13 +14,14 @@ related: [production/epics/epic-021-contested-crisis-core-fun-experiment, produc
 
 ## Status
 
-REOPENED / DELAYED INDEPENDENT REVIEW REPAIR. Unity PR #194 merged on 2026-07-26 as `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`, but a delayed independent review found two P1 specification gaps that survive current `main`: Force's immediate result omits exact before/after counts, and `site_central_objective` changes from `Central Relay` in the briefing to conflicting map/selection names. Owner replaytest remains blocked until the bounded follow-up merges.
+DONE / MERGED / OWNER REPLAYTEST PENDING. Unity PR #194 merged the repair, and delayed-review follow-up PR #196 merged as `0149668ecf2bd0dd21f119923922296b91227697`, closing the surviving P1 Force-feedback and Central-Relay-name gaps. Automation proves the bounded contracts; it does not prove first-contact comprehension or fun.
 
 ## Delayed independent review repair
 
 - Force result must name the actual first-stack unit and report HRC `5 -> 9` or QXZ `7 -> 11` immediately after selection.
 - The same `site_central_objective` must be player-facing `Central Relay` in the briefing, physical map object, selection title, objective text, and relevant tests.
 - Existing mechanics, layout, gate, save behavior, and all other site names remain unchanged.
+- Follow-up candidate `a0f5bedbfa76dc091a1d4717626e7810350e275d` passed exact-head run `30196880961`; merge and candidate trees are identical at `6f66b38ae3fc382e8cba6c00f614229923214fe1`.
 
 ## Implementation evidence
 
@@ -185,4 +186,4 @@ PASS for this bounded repair. The owner authorized radical correction and implem
 
 ## Verdict
 
-REOPENED / P1 REVIEW REPAIR IN PROGRESS — owner replaytest and deeper crisis implementation remain blocked.
+DONE / DELAYED P1 REVIEW CLOSED / OWNER REPLAYTEST PENDING — deeper crisis implementation remains blocked.

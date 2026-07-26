@@ -67,6 +67,10 @@
 - [[production/planning/accelerated-prototype-and-early-access-plan-2026-07-10]] — IN REVIEW plan for a fully playable eight-week prototype and near-shipping six-month Early Access candidate with four factions, editor/tooling, graphics, audio, broad systems, and polish.
 - [[production/planning/full-project-review-and-completion-plan-2026-07-12]] — APPROVED full cross-repository audit, three-gate delivery model, revised completion plan, owner decisions, prototype contract, risks, and production gates.
 - [[production/planning/month-one-proof-scenario-and-capture-plan]] — APPROVED PROVISIONAL faction-selectable proof scenario, map/beat budget, capture shot list, and gate metrics.
+- [[design/gdd/core-fun-prototype]] — APPROVED contested-crisis experiment; current numerical opening effects are prototype facts, while the first player-facing language was human-rejected.
+- [[production/epics/epic-021-contested-crisis-core-fun-experiment]] — ACTIVE / first opening implementation rejected / radical readability-regression repair underway.
+- [[production/stories/story-core-fun-001-opening-response-postures]] — DONE / merged / `REJECT CLOSEOUT` after owner replaytest.
+- [[production/stories/story-core-fun-002-opening-crisis-readability-and-regression-repair]] — READY / approved sole current repair packet.
 - [[production/epics/epic-016-accelerated-playable-product-foundation]] — ACTIVE four-week proof-build foundation epic.
 - [[production/stories/story-ui-shell-001-map-first-strategic-ui-and-normal-player-shell]] — DONE / merged first EPIC-016 player-shell implementation packet.
 - [[production/stories/story-art-look-001-vertical-look-and-asset-provenance-integration-spike]] — DONE / merged vertical-look and provenance spike through Unity PR #149.

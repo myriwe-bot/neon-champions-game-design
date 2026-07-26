@@ -7,7 +7,7 @@ owner: human
 created: 2026-07-25
 updated: 2026-07-25
 approval: approved
-related: [design/gdd/core-fun-prototype, production/playtests/playtest-journal, production/stories/story-core-fun-001-opening-response-postures]
+related: [design/gdd/core-fun-prototype, production/playtests/playtest-journal, production/stories/story-core-fun-001-opening-response-postures, production/stories/story-core-fun-002-opening-crisis-readability-and-regression-repair]
 ---
 
 # EPIC-021 Contested Crisis Core-Fun Experiment
@@ -29,16 +29,17 @@ The owner approved the contested-crisis approach, corrected Intel to remain an A
 
 ## Story train
 
-1. `STORY-CORE-FUN-001` — MERGED / automated gates passed / owner replaytest pending: opening Mobility, Force, or Verification choice with persistent, mechanically distinct consequences.
-2. Rival-intent adaptation — DRAFT; do not implement until posture closeout.
-3. Control/restoration/accepted-account resolution — DRAFT; do not implement until posture closeout.
-4. Route time/danger/information rewrite — DRAFT; do not implement until posture closeout.
-5. Human 30-second / 5-minute / 20-minute replaytest — DRAFT.
+1. `STORY-CORE-FUN-001` — DONE / MERGED / `REJECT CLOSEOUT`: automation passed, but the owner could not understand the situation, choices, sacrifices, selected effect, rival, objective, or map extent.
+2. `STORY-CORE-FUN-002` — READY / approved by owner on 2026-07-26: radical opening-crisis readability and verified shell-regression repair over unchanged numerical effects.
+3. Rival-intent adaptation — DRAFT; do not implement until the repaired opening survives owner replaytest.
+4. Control/restoration/accepted-account resolution — DRAFT; do not implement until the repaired opening survives owner replaytest.
+5. Route time/danger/information rewrite — DRAFT; do not implement until the repaired opening survives owner replaytest.
+6. Human 30-second / 5-minute / 20-minute replaytest — DRAFT; the immediate next gate is the narrower repaired-opening replaytest.
 
 ## Gate
 
-`STORY-CORE-FUN-001` merged through Unity PR #192 as `673970739bace47cad255e205fbac7f7b8314fab`; exact-head run `30177057877`, immutable review, and post-merge `main` run `30177571918` passed. These gates prove truthful selection, persistence, mechanical consequence, save compatibility, and blocked pre-choice input. They do not prove fun. Continue the train only after owner replaytest or explicit owner direction.
+`STORY-CORE-FUN-001` merged through Unity PR #192 as `673970739bace47cad255e205fbac7f7b8314fab`; exact-head run `30177057877`, immutable review, and post-merge `main` run `30177571918` passed. The 2026-07-26 owner replaytest rejected closeout. The owner then explicitly directed a radical plan and implementation as a persistent goal, authorizing only `STORY-CORE-FUN-002`; all deeper crisis stories remain blocked.
 
 ## Verdict
 
-ACTIVE / first bounded implementation merged / owner core-fun replaytest pending.
+ACTIVE / first implementation human-rejected / one approved readability-regression repair in progress / deeper crisis train blocked.

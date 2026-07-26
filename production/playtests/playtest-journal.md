@@ -20,6 +20,54 @@ approval: approved
 
 # Playtest Journal
 
+## [2026-07-26] STORY-CORE-FUN-001 opening-response owner replaytest — REJECT CLOSEOUT / CHOICE AND MAP CONTEXT UNREADABLE
+
+- Build / commit / PR: Windows standalone from merged Unity `main` `673970739bace47cad255e205fbac7f7b8314fab`; implementation PR #192.
+- Scenario / mode: unaided title -> HRC -> mandatory opening response. The test could not fairly reach consequence or save/Continue judgment because the opening decision and underlying map situation were not understood.
+- Tester / role: human owner / solo unaided playtest.
+- Story / epic under review: `STORY-CORE-FUN-001` / EPIC-021.
+- Evidence: direct structured human report. No screenshots/video requested.
+
+### What worked
+
+- The full-screen choice covered the game and appeared to block normal map interaction.
+- A mandatory `first response` remains theoretically promising.
+
+### What remains blocking
+
+- The sacrifices and comparison language were not understood. `No reinforcements`, `no verified public account`, and `stack capacity` read as unexplained implementation/design jargon rather than approved game language.
+- The three choices, their opportunity costs, and the chosen effect were not readable during play.
+- The player knew nothing actionable about the rival, could not locate the objective, could not judge map extent, and read blue lines as a possibly false boundary.
+- The apparent End Turn control was again not legibly labeled. The owner suspects revisions may have dropped or obscured earlier features; this requires an implementation audit rather than an assumption.
+- Save/Continue preservation was untested because the commitment itself was not comprehensible.
+
+### Exact complaints to preserve
+
+- “I do not understand what the sacrifices mean.”
+- “What is ‘no reinforcements’ or ‘no verified public account’?”
+- “This is not in accordance to our design language and not approved by me.”
+- “Also, what is stack capacity?”
+- “The concept of a ‘first response’ is theoretically good, but this is very confusing.”
+- Chosen effect obvious during play: “No.”
+- “I know nothing on the rival.”
+- “The blue lines seem to indicate that there is a boundary, which there is not I think.”
+- “I do not know where the objective is.”
+- “I do not know how large the map itself is even.”
+- “I do not understand the choices.”
+- “The ‘End turn’ button is once again unlabeled.”
+- “I think it is possible that the game has degenerated, i.e some revisions might have dropped features here.”
+
+### Fun verdict
+
+- REJECT CLOSEOUT — the decision cannot be judged as meaningful or fun while its language, situation, alternatives, and consequences are unreadable.
+
+### Gate consequence
+
+- Close `STORY-CORE-FUN-001` as implemented and human-tested with rejected closeout.
+- Do not advance rival adaptation, restoration, accepted-account, or route-rewrite stories.
+- Execute the owner-approved radical readability/regression repair in `STORY-CORE-FUN-002`, preserving the current numerical experiment while replacing rejected player language, grounding rival/objective/map context, making the selected effect conspicuous, trialing bounded keyword hover help, and repairing verified shell regressions.
+- Keep final mechanics, canon terminology, movement topology, AI policy, objective redesign, economy/buildings, Champion depth, combat cadence, and overall fun human-gated.
+
 ## [2026-07-25] STORY-RESET-001 unaided owner replaytest — BLOCKED / LOOP READABLE BUT NOT YET A GAME
 
 - Build / commit / PR: Windows standalone from merged Unity `main` `af83b11a8d015647f567b2de014b47c3308643a1`; implementation PR #190.

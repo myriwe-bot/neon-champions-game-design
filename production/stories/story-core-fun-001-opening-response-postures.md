@@ -1,7 +1,7 @@
 ---
 title: STORY-CORE-FUN-001 Opening Response Postures
 type: story
-status: review
+status: done
 phase: production
 owner: shared
 created: 2026-07-25
@@ -14,9 +14,9 @@ related: [production/epics/epic-021-contested-crisis-core-fun-experiment, design
 
 ## Status
 
-MERGED / automated implementation gates passed / owner replaytest pending.
+DONE / merged / `REJECT CLOSEOUT` in the 2026-07-26 unaided owner replaytest.
 
-Unity PR [#192](https://github.com/myriwe-bot/neon-champions-unity/pull/192) merged on 2026-07-25. This completes the bounded implementation contract but does not claim that the choice is fun; the required owner replaytest remains open.
+Unity PR [#192](https://github.com/myriwe-bot/neon-champions-unity/pull/192) merged on 2026-07-25 and passed its automated contract. The owner replaytest then rejected the player-facing language and could not understand the situation, alternatives, sacrifices, or selected effect. Historical implementation authority only; do not rerun this presentation contract.
 
 ## Story type
 
@@ -128,8 +128,14 @@ PASS. The owner approved the experiment and explicitly requested implementation.
 - Squash merge: `673970739bace47cad255e205fbac7f7b8314fab`.
 - Reviewed and merged Git tree: `014194bec33182568711d0b0f32c9a2f33b57db3`.
 - Post-merge `main` CI: [30177571918](https://github.com/myriwe-bot/neon-champions-unity/actions/runs/30177571918) — all four required jobs passed.
-- Owner replaytest: pending; automation cannot supply this verdict.
+- Owner replaytest: `REJECT CLOSEOUT` on 2026-07-26; automation could not override the human readability verdict.
+
+## Human replaytest result
+
+See `production/playtests/playtest-journal.md#[2026-07-26]-story-core-fun-001-opening-response-owner-replaytest--reject-closeout--choice-and-map-context-unreadable`.
+
+Exact rejected terms include `No reinforcements`, `No verified public account`, and `stack capacity`. Their presence in the merged story records what was implemented; it no longer establishes approved player-facing design language.
 
 ## Verdict
 
-MERGED — HUMAN REPLAYTEST PENDING.
+DONE / MERGED / `REJECT CLOSEOUT` — superseded for player-facing repair by `STORY-CORE-FUN-002`.

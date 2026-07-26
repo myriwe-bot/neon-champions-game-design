@@ -1,0 +1,50 @@
+Implement `STORY-CORE-FUN-002 Opening Crisis Readability and Regression Repair` end to end.
+
+Read first, in this order:
+1. `production/stories/story-core-fun-002-opening-crisis-readability-and-regression-repair.md`
+2. `production/playtests/playtest-journal.md` — 2026-07-26 STORY-CORE-FUN-001 entry
+3. `design/gdd/core-fun-prototype.md` — approval boundary, numerical effects, and 2026-07-26 terminology correction
+4. `design/ux/player-shell.md`
+5. `docs/architecture/control-manifest.md`
+6. `docs/architecture/unity-technical-scheme.md`
+7. `docs/architecture/testing-strategy.md`
+8. Unity root/scoped `AGENTS.md`, `README.md`, live scenario fixtures, current opening projection/canvas, save flow, and related tests.
+
+Preflight:
+- Design story must be `status: ready`, `approval: approved`, and Ambiguity Check PASS.
+- Start from clean current Unity `main`, or resume only the exact story branch with story-scoped work on the expected ancestor.
+- Inspect current HRC/QXZ values, unit display names, rival behavior, physical anchors, UI construction, and native evidence paths before editing.
+- If a required statement cannot be made truthfully from current implementation facts, stop that subpart rather than inventing design/canon.
+
+Hard rules:
+- Preserve current Domain/Application effects, save compatibility, no-reapplication, Intel separation, and command gate.
+- Do not expose `posture`, `stack capacity`, `verified public account`, `No reinforcements`, or `checks` meaning turns in normal player UI.
+- Plain language must work with tooltip hidden.
+- Implement only a shallow keyword hover/focus trial; no nested encyclopedia.
+- Do not redesign map topology, AI policy, objective mechanics beyond existing 5->3, economy/buildings, units, combat, Champion systems, canon, or final art.
+- Diagnose the reported blue lines from native evidence; do not guess from source color names.
+- Use TDD for projection/help/layout logic where feasible and preserve production pointer/input paths.
+- No screenshot/video request to the owner.
+
+Required implementation:
+- Faction-specific opening briefing: concrete failure/service purpose, own start, Central Relay, rival identity/direction/commitment when truthful, objective, and a clear orientation strip that is not presented as a boundary or exact minimap.
+- Three structurally comparable cards: concrete action, exact change, exact alternatives left unchanged. Use actual HRC/QXZ unit names and counts.
+- Supplemental highlighted keyword hover/focus help for the small approved term set.
+- Immediate exact selection result plus persistent dedicated response badge paired with the changed movement/army/objective value.
+- Visible/unclipped END TURN, Save / Menu, objective, rival, and response badge at 1280x720, 1920x1080, and a resized state.
+- Save/Continue and legacy-save integration.
+- Focused EditMode/PlayMode tests and native evidence for HRC/QXZ opening and post-choice states.
+
+Execution discipline:
+1. Write focused failing tests and record RED.
+2. Implement minimal production changes and reach focused GREEN.
+3. Commit and push an early draft checkpoint; open/update the draft PR.
+4. Run focused checks, then the required exact-head matrix once candidate scope is frozen.
+5. Inspect native evidence and obtain independent spec, code-quality/architecture, test, and visual/UX review.
+6. Fix substantive findings; push and rerun affected gates on the new exact SHA.
+7. Make the PR non-draft only when all machine-verifiable gates pass.
+8. Commit and push the actual story branch, verify remote branch/SHA and PR URL, and merge only after final review/CI.
+9. Verify post-merge `main` CI or documented reviewed/merge tree identity under the risk-tier policy.
+10. Reconcile design story/epic/journal/log/index and Unity pointer truthfully. Leave human replaytest pending.
+
+Completion report must include changed files, RED/GREEN commands/results, exact final SHA, PR URL, exact-head run(s), review verdicts, merge commit/tree identity, post-merge result, evidence paths, known omissions, and fresh owner replaytest instructions. `PR-ready` or local-only work is incomplete.

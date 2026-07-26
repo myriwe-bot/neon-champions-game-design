@@ -21,7 +21,9 @@ related:
 
 Approved on 2026-07-25: test a compact HoMM-like adventure-strategy loop in one tightly authored crisis scenario before expanding the current prototype.
 
-This approves the **fun hypothesis and experiment**, not final map topology, final crisis fiction, permanent system architecture, final art, balance values, or production implementation stories.
+This approves the **fun hypothesis and experiment**, not final map topology, final crisis fiction, permanent system architecture, final art, balance values, production implementation stories, or unreviewed player-facing terminology.
+
+The 2026-07-26 owner replaytest specifically rejected `No reinforcements`, `No verified public account`, `stack capacity`, and the surrounding opening-choice presentation as confusing and not approved design language. The numerical implementation remains a bounded prototype fact while `STORY-CORE-FUN-002` repairs readability; these rejected phrases are not canon or reusable UX authority.
 
 ## Product Spine
 
@@ -89,7 +91,7 @@ Include only:
 - physical control, operational restoration, and local acceptance;
 - immediate, attributable map consequences.
 
-The first implementation uses these exact mutually exclusive scenario choices:
+The first implementation used these exact mutually exclusive numerical scenario effects. The 2026-07-26 owner replaytest rejected the original labels/sacrifice copy; preserve the numbers for the bounded repair but do not preserve the rejected language:
 
 ### Mobility — `ARRIVE FIRST`
 

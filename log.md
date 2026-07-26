@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-26] human rejection and goal activation | Opening crisis radical readability repair
+
+- The owner replaytested Unity `main` `673970739bace47cad255e205fbac7f7b8314fab` and rejected `STORY-CORE-FUN-001` closeout: sacrifices, choices, selected effect, rival, objective, and map extent were not understood; blue lines looked like a false boundary; End Turn appeared unlabeled.
+- The modal covering/blocking normal interaction was the only confirmed success, and `first response` remains theoretically promising.
+- Recorded the exact complaints in the playtest journal, closed `STORY-CORE-FUN-001` as DONE / `REJECT CLOSEOUT`, and blocked deeper EPIC-021 crisis stories.
+- The owner explicitly directed a radical repair plan and implementation as `/goal`. `STORY-CORE-FUN-002` is the sole READY / approved repair: preserve existing numerical effects and save/command contracts, replace rejected language, ground crisis/rival/objective/map context, make the selected effect conspicuous, trial shallow keyword hover help, and repair only verified shell regressions.
+- Final mechanics, canon terminology, movement topology, AI policy, broader objective redesign, economy/buildings, Champion depth, combat cadence, and overall fun remain human-gated.
+
 ## [2026-07-25] merge | Opening response postures implemented; human fun gate pending
 
 - Unity PR #192 merged reviewed head `87f6c627379ad80fdaa8f9376d705959332bfb97` as squash commit `673970739bace47cad255e205fbac7f7b8314fab`.

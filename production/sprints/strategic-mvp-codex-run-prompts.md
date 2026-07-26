@@ -117,13 +117,13 @@ approval: approved
 
 ## Recommended mode
 
-**Current READY / approved Unity implementation packet:** `STORY-STANDALONE-LAUNCH-CONTEXT-001`.
+**Current READY / approved Unity implementation packet:** `STORY-CORE-FUN-002`.
 
-`STORY-STANDALONE-DISPLAY-001` failed human closeout after exact-machine testing isolated a current-working-directory dependency. `STORY-STANDALONE-LAUNCH-CONTEXT-001` is approved and becomes runnable only after its Unity README pointer is merged and verified. `STORY-CI-RISK-TIERING-001` remains approval-pending and is not current.
+The owner rejected `STORY-CORE-FUN-001` closeout and explicitly authorized a radical opening-crisis readability/regression repair as `/goal`. `STORY-CORE-FUN-002` is the sole current packet. Deeper EPIC-021 crisis work and older prompts are not current.
 
 ## Current READY implementation packet
 
-`production/sprints/codex-story-standalone-launch-context-001.prompt.txt`, gated on merged Unity pointer activation. Do not rerun the display prompt or run the CI-risk prompt.
+`production/sprints/codex-story-core-fun-002.prompt.txt`. Do not rerun `STORY-CORE-FUN-001` or any historical prompt.
 
 ### Historical STORY-STANDALONE-DISPLAY-001 handoff — do not rerun
 

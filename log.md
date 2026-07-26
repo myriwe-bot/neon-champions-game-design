@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-26] delayed review | STORY-CORE-FUN-002 reopened for two P1 clarity repairs
+
+- A delayed independent review of Unity PR #194 head `64e9806c44f0f28f9e896ba4ec9c16f946e72c8c` arrived after merge. Its 1280x720 finding was already resolved by final candidate `cbcc0aa…`, but two P1 findings survive current Unity `main`.
+- Force immediate feedback says only that four units joined instead of naming the unit and reporting HRC `5 -> 9` or QXZ `7 -> 11`.
+- `site_central_objective` is introduced as `Central Relay` but later appears as `White Sky calibration station` and `Meridian Calibration Station`, directly undermining the owner's objective-location complaint.
+- Reopened only the same bounded story for exact dynamic Force feedback and one consistent `Central Relay` player-facing name. Mechanics and deeper crisis work remain blocked.
+
 ## [2026-07-26] merge | Opening crisis readability repair implemented; owner replaytest pending
 
 - Unity PR #194 merged final candidate `cbcc0aafd2e8af2b402bcb0d34b6a367af7bf73c` as `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`; both trees equal `12c805088f0dd9d637e1c777346ac1c70ce384ef`.

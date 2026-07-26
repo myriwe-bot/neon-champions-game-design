@@ -30,7 +30,7 @@ The owner approved the contested-crisis approach, corrected Intel to remain an A
 ## Story train
 
 1. `STORY-CORE-FUN-001` — DONE / MERGED / `REJECT CLOSEOUT`: automation passed, but the owner could not understand the situation, choices, sacrifices, selected effect, rival, objective, or map extent.
-2. `STORY-CORE-FUN-002` — DONE / merged through Unity PR #194 as `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`; exact-head automation passed, owner replaytest pending.
+2. `STORY-CORE-FUN-002` — REOPENED after delayed independent review found two surviving P1 clarity gaps; bounded Force-result and Central-Relay-name repair in progress.
 3. Rival-intent adaptation — DRAFT; do not implement until the repaired opening survives owner replaytest.
 4. Control/restoration/accepted-account resolution — DRAFT; do not implement until the repaired opening survives owner replaytest.
 5. Route time/danger/information rewrite — DRAFT; do not implement until the repaired opening survives owner replaytest.
@@ -42,4 +42,4 @@ The owner approved the contested-crisis approach, corrected Intel to remain an A
 
 ## Verdict
 
-ACTIVE / first implementation human-rejected / readability-regression repair merged / owner replaytest pending / deeper crisis train blocked.
+ACTIVE / first implementation human-rejected / readability-regression story reopened for delayed P1 review repair / owner replaytest pending / deeper crisis train blocked.

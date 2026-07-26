@@ -1,7 +1,7 @@
 ---
 title: STORY-CORE-FUN-002 Opening Crisis Readability and Regression Repair
 type: story
-status: done
+status: in-progress
 phase: production
 owner: shared
 created: 2026-07-26
@@ -14,7 +14,13 @@ related: [production/epics/epic-021-contested-crisis-core-fun-experiment, produc
 
 ## Status
 
-DONE / MERGED / OWNER REPLAYTEST PENDING. Unity PR #194 merged on 2026-07-26 as `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`. Automation proves the bounded implementation and regression contracts; it does not prove first-contact comprehension or fun.
+REOPENED / DELAYED INDEPENDENT REVIEW REPAIR. Unity PR #194 merged on 2026-07-26 as `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`, but a delayed independent review found two P1 specification gaps that survive current `main`: Force's immediate result omits exact before/after counts, and `site_central_objective` changes from `Central Relay` in the briefing to conflicting map/selection names. Owner replaytest remains blocked until the bounded follow-up merges.
+
+## Delayed independent review repair
+
+- Force result must name the actual first-stack unit and report HRC `5 -> 9` or QXZ `7 -> 11` immediately after selection.
+- The same `site_central_objective` must be player-facing `Central Relay` in the briefing, physical map object, selection title, objective text, and relevant tests.
+- Existing mechanics, layout, gate, save behavior, and all other site names remain unchanged.
 
 ## Implementation evidence
 
@@ -179,4 +185,4 @@ PASS for this bounded repair. The owner authorized radical correction and implem
 
 ## Verdict
 
-DONE / MERGED / OWNER REPLAYTEST PENDING — deeper crisis implementation remains blocked.
+REOPENED / P1 REVIEW REPAIR IN PROGRESS — owner replaytest and deeper crisis implementation remain blocked.

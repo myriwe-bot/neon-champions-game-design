@@ -2,6 +2,15 @@
 
 > Append-only project log.
 
+## [2026-07-26] merge | Opening crisis readability repair implemented; owner replaytest pending
+
+- Unity PR #194 merged final candidate `cbcc0aafd2e8af2b402bcb0d34b6a367af7bf73c` as `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`; both trees equal `12c805088f0dd9d637e1c777346ac1c70ce384ef`.
+- Exact-head run `30195930086` passed Compile/Standalone launch, EditMode, PlayMode, and Placeholder Validator. The focused HRC/QXZ opening path now executes at 1280x720 and checks the mandatory gate, readable context, keyword help, selected effect, and End Turn/Save label fit.
+- Rejected phrases were removed from normal copy; cards now state exact changes and unchanged alternatives. The crisis, rival, objective, full map orientation, and map extent are explicit; the dimmed map remains visible beneath the hard gate.
+- A shallow four-term hover/focus help trial, immediate result, persistent first-response badge, and Save/Continue restoration proof were added. The false-boundary blue bar became a compact ice landmark without dropping physical-map detail.
+- Manual run `30195477014` passed and generated 240 evidence files, but GitHub refused artifact creation because Actions artifact storage was full. No screenshot inspection is claimed. Fresh owner replaytest remains mandatory and fail-closed.
+- Redundant post-merge run `30196206689` was cancelled after exact tree-identity proof. Rival adaptation, accepted-account/restoration, route rewrite, and wider crisis development remain blocked.
+
 ## [2026-07-26] human rejection and goal activation | Opening crisis radical readability repair
 
 - The owner replaytested Unity `main` `673970739bace47cad255e205fbac7f7b8314fab` and rejected `STORY-CORE-FUN-001` closeout: sacrifices, choices, selected effect, rival, objective, and map extent were not understood; blue lines looked like a false boundary; End Turn appeared unlabeled.

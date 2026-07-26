@@ -20,6 +20,45 @@ approval: approved
 
 # Playtest Journal
 
+## [2026-07-26] STORY-CORE-FUN-002 merged — focused owner replaytest READY
+
+### Candidate
+
+- Unity `main`: `b2e6344091b6a58514302f8f43d1b23cfb95ebc5` or a newer explicitly identified verified main.
+- Unity PR #194; exact-head run `30195930086` passed all four configured jobs.
+- This is still only the repaired opening-decision slice, not the full relay-crisis experience.
+
+### First-contact gate
+
+Start from title and choose HRC. Do not read the design document. Before selecting anything, answer in roughly 30 seconds:
+
+1. What is happening?
+2. Where do HRC, the Central Relay, and QXZ begin on the full map?
+3. What is QXZ currently trying to do?
+4. What are the three choices?
+5. What exact value changes for each choice?
+6. What two advantages remain unchanged for each choice?
+
+Then:
+
+1. Hover or focus each highlighted help term; note whether help is useful or merely repairs unclear primary writing.
+2. Choose one response and state the effect before looking elsewhere.
+3. Confirm the same effect is visible during play.
+4. Confirm `END TURN` and `Save / Menu` are plainly labeled.
+5. Save, return to title, fully close/relaunch if practical, Continue, and confirm the choice/effect persists without being granted twice.
+6. Note whether any remaining blue mark reads as a map boundary.
+
+### Fail-closed verdict rule
+
+- Do not accept because automation passed.
+- Any failure to answer the six first-contact questions is a readability rejection.
+- Any unlabeled control, false boundary cue, missing selected effect, or lost/reapplied Continue state is a regression rejection.
+- Broader map, rival, objective, economy, combat, or game-fun confusion should be recorded separately even if this bounded opening repair passes.
+
+### Evidence limitation
+
+Manual run `30195477014` passed and generated 240 files, but GitHub Actions artifact storage was full and artifact creation failed. No native screenshot review is claimed; the owner replaytest is the controlling visual evidence.
+
 ## [2026-07-26] STORY-CORE-FUN-001 opening-response owner replaytest — REJECT CLOSEOUT / CHOICE AND MAP CONTEXT UNREADABLE
 
 - Build / commit / PR: Windows standalone from merged Unity `main` `673970739bace47cad255e205fbac7f7b8314fab`; implementation PR #192.

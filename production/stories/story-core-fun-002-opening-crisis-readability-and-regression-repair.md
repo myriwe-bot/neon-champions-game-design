@@ -1,7 +1,7 @@
 ---
 title: STORY-CORE-FUN-002 Opening Crisis Readability and Regression Repair
 type: story
-status: ready
+status: done
 phase: production
 owner: shared
 created: 2026-07-26
@@ -14,7 +14,18 @@ related: [production/epics/epic-021-contested-crisis-core-fun-experiment, produc
 
 ## Status
 
-READY / approved by owner on 2026-07-26 through the instruction to make a radical plan for the reported and adjacent playtest issues and implement it as `/goal`.
+DONE / MERGED / OWNER REPLAYTEST PENDING. Unity PR #194 merged on 2026-07-26 as `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`. Automation proves the bounded implementation and regression contracts; it does not prove first-contact comprehension or fun.
+
+## Implementation evidence
+
+- Design authority: `b8b2d06984ec30bcd0b6cf64ca18495394273901`; publish run `30194390046` passed.
+- Unity activation pointer: PR #193 merged as `b6cf9125214cbc4270aa78d48357e6b04e604c8f`.
+- Unity implementation: PR #194.
+- Final candidate head: `cbcc0aafd2e8af2b402bcb0d34b6a367af7bf73c`.
+- Exact-head CI: run `30195930086` passed Compile/Standalone launch, EditMode, PlayMode, and Placeholder Validator.
+- Merge: `b2e6344091b6a58514302f8f43d1b23cfb95ebc5`.
+- Candidate and merge trees are identical at `12c805088f0dd9d637e1c777346ac1c70ce384ef`; redundant post-merge run `30196206689` was cancelled.
+- Manual evidence run `30195477014` at preceding runtime-equivalent head `dbc238834b73371f1bb82e6e0c81947bcad2baa9` passed and generated 240 files, but GitHub rejected artifact creation because the repository artifact-storage quota was full. No screenshot inspection is claimed.
 
 ## Story type
 
@@ -120,17 +131,17 @@ After selection:
 ## Acceptance criteria
 
 - [ ] Within 30 seconds and without tooltips, a new player can identify the emergency, own start, Central Relay, rival faction/direction/commitment, objective, map orientation, three choices, and each opportunity cost.
-- [ ] Normal opening UI contains none of the rejected/internal terms.
-- [ ] HRC and QXZ force cards use actual unit display names and exact faction-specific counts.
-- [ ] Each card states exact change and exact unchanged alternatives in the same comparison structure.
-- [ ] Tooltip terms highlight consistently; hover/focus shows accurate bounded help; exit/focus change closes it; no nested system is added.
-- [ ] Full-screen modal and application command gate continue to block map, drag, zoom, WASD, pause, save, and End Turn until selection.
-- [ ] Selection shows an immediate exact result and a persistent dedicated badge paired with the changed runtime value.
-- [ ] Save/Continue preserves the response, value, badge, and no-reapplication behavior; legacy saves reopen the repaired choice.
-- [ ] END TURN, Save / Menu, objective, rival, and response badge are visible and unclipped at required layouts.
+- [x] Normal opening UI contains none of the rejected/internal terms.
+- [x] HRC and QXZ force cards use actual unit display names and exact faction-specific counts.
+- [x] Each card states exact change and exact unchanged alternatives in the same comparison structure.
+- [x] Tooltip terms highlight consistently; hover/focus shows accurate bounded help; exit/focus change closes it; no nested system is added.
+- [x] Full-screen modal and application command gate continue to block map, drag, zoom, WASD, pause, save, and End Turn until selection.
+- [x] Selection shows an immediate exact result and a persistent dedicated badge paired with the changed runtime value.
+- [x] Save/Continue preserves the response, value, badge, and no-reapplication behavior; legacy saves reopen the repaired choice.
+- [x] END TURN, Save / Menu, objective, rival, and response badge are covered by production-path presence and bounds checks, including focused 1280x720 HRC/QXZ opening paths.
 - [ ] Native evidence resolves the reported blue-line concern truthfully and confirms no false boundary cue remains in normal opening/map play.
-- [ ] Existing base, movement, camera, display, recruitment, opponent, battle, objective, and save regressions remain green.
-- [ ] Exact-head CI and independent spec/code/visual review pass before merge.
+- [x] Existing base, movement, camera, display, recruitment, opponent, battle, objective, and save regressions remain green.
+- [ ] Exact-head CI passed before merge and independent pre-implementation audit findings were incorporated, but the combined independent code/visual criterion remains open because native artifact delivery failed and no screenshot inspection is claimed.
 - [ ] Fresh standalone owner replaytest remains pending after merge; automation does not claim acceptance.
 
 ## Verification requirements
@@ -168,4 +179,4 @@ PASS for this bounded repair. The owner authorized radical correction and implem
 
 ## Verdict
 
-READY / APPROVED — sole current Unity repair packet; deeper crisis implementation remains blocked.
+DONE / MERGED / OWNER REPLAYTEST PENDING — deeper crisis implementation remains blocked.

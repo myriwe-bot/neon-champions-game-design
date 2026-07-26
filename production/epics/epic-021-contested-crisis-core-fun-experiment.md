@@ -30,7 +30,7 @@ The owner approved the contested-crisis approach, corrected Intel to remain an A
 ## Story train
 
 1. `STORY-CORE-FUN-001` — DONE / MERGED / `REJECT CLOSEOUT`: automation passed, but the owner could not understand the situation, choices, sacrifices, selected effect, rival, objective, or map extent.
-2. `STORY-CORE-FUN-002` — DONE; base repair merged through PR #194 and delayed P1 review repair through PR #196; owner replaytest pending.
+2. `STORY-CORE-FUN-002` — REOPENED for final delayed-review keyword-interaction and compact-ice-proof repair; owner replaytest blocked.
 3. Rival-intent adaptation — DRAFT; do not implement until the repaired opening survives owner replaytest.
 4. Control/restoration/accepted-account resolution — DRAFT; do not implement until the repaired opening survives owner replaytest.
 5. Route time/danger/information rewrite — DRAFT; do not implement until the repaired opening survives owner replaytest.
@@ -42,4 +42,4 @@ The owner approved the contested-crisis approach, corrected Intel to remain an A
 
 ## Verdict
 
-ACTIVE / first implementation human-rejected / readability-regression repair and delayed P1 follow-up merged / owner replaytest pending / deeper crisis train blocked.
+ACTIVE / first implementation human-rejected / final bounded delayed-review repair in progress / owner replaytest blocked / deeper crisis train blocked.

@@ -1,7 +1,7 @@
 ---
 title: STORY-CORE-FUN-002 Opening Crisis Readability and Regression Repair
 type: story
-status: done
+status: in-progress
 phase: production
 owner: shared
 created: 2026-07-26
@@ -14,7 +14,13 @@ related: [production/epics/epic-021-contested-crisis-core-fun-experiment, produc
 
 ## Status
 
-DONE / MERGED / OWNER REPLAYTEST PENDING. Unity PR #194 merged the repair, and delayed-review follow-up PR #196 merged as `0149668ecf2bd0dd21f119923922296b91227697`, closing the surviving P1 Force-feedback and Central-Relay-name gaps. Automation proves the bounded contracts; it does not prove first-contact comprehension or fun.
+REOPENED / FINAL DELAYED REVIEW REPAIR. A second delayed review confirmed the Force issue already closed by PR #196, but correctly found that keyword help remains a detached button row with handler-direct tests, and that the compact ice-landmark repair has only an existence assertion. Owner replaytest remains blocked while these bounded proof gaps are repaired.
+
+### Final delayed-review repair
+
+- Place each keyword affordance beside the copy it explains: Central Relay beside the objective fact, and Movement, Army, or Hold turns inside its corresponding choice card.
+- Prove real EventSystem raycast/hover dispatch, keyboard selection, definition replacement, exit/deselect closure, and tooltip bounds.
+- Prove the blue ice landmark is compact rather than a boundary-like bar using deterministic production-object geometry/color assertions. Native visual acceptance remains separately pending.
 
 ## Delayed independent review repair
 
@@ -186,4 +192,4 @@ PASS for this bounded repair. The owner authorized radical correction and implem
 
 ## Verdict
 
-DONE / DELAYED P1 REVIEW CLOSED / OWNER REPLAYTEST PENDING — deeper crisis implementation remains blocked.
+REOPENED / FINAL DELAYED REVIEW REPAIR IN PROGRESS — owner replaytest and deeper crisis implementation remain blocked.

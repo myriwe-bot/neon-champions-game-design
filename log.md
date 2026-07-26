@@ -2,6 +2,13 @@
 
 > Append-only project log.
 
+## [2026-07-26] second delayed review | keyword interaction and ice proof reopened
+
+- A second delayed review targeted pre-PR-196 head `dbc2388…`; its Force finding is already closed, but two high findings survive current Unity `main`.
+- Keyword help is a detached row and tests directly call handlers instead of proving raycast hover and keyboard focus behavior required by STORY-CORE-FUN-002.
+- The compact blue ice landmark exists, but production tests do not constrain its dimensions/color against regression to a long boundary-like bar.
+- Reopened only term-associated affordance/interactions and deterministic compact-landmark proof. Native visual and owner acceptance remain human/evidence gates; mechanics and deeper crisis scope remain unchanged.
+
 ## [2026-07-26] delayed review closeout | Force feedback and Central Relay naming repaired
 
 - Unity PR #196 merged final candidate `a0f5bedbfa76dc091a1d4717626e7810350e275d` as `0149668ecf2bd0dd21f119923922296b91227697`; both trees equal `6f66b38ae3fc382e8cba6c00f614229923214fe1`.

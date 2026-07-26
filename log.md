@@ -2,6 +2,14 @@
 
 > Append-only project log.
 
+## [2026-07-26] final delayed review closeout | keyword and compact-ice proof merged
+
+- Unity PR #198 merged candidate `e1d23e9a50db6b0507f450eae29fcc90347f7fb8` as `5ce7dec484c734bd16021f802679ea93f088be2c`; trees match at `7bccbd106fdc55a54f7b0c0e403a2d2b354d11c2`.
+- Exact-head run `30198963136` passed Compile/Standalone, EditMode, PlayMode, and Placeholder Validator. Redundant post-merge run `30199253508` was cancelled after tree-identity proof.
+- Central Relay help now sits beside the objective; Movement, Army, and Hold turns help sits inside the corresponding choice card. Production tests prove EventSystem raycast hover, keyboard focus replacement/deselect, and 1280x720 tooltip bounds.
+- Production tests now constrain the blue ice landmark's compact dimensions, aspect ratio, and color against regression to the rejected long boundary-like bar. Native visual and owner acceptance remain pending.
+- CI now clears only stale Unity processes bound to the repository workspace, bounds each Unity invocation to five minutes, and surfaces compiler errors before warning-heavy log tails.
+
 ## [2026-07-26] second delayed review | keyword interaction and ice proof reopened
 
 - A second delayed review targeted pre-PR-196 head `dbc2388…`; its Force finding is already closed, but two high findings survive current Unity `main`.

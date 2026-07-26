@@ -1,7 +1,7 @@
 ---
 title: STORY-CORE-FUN-002 Opening Crisis Readability and Regression Repair
 type: story
-status: in-progress
+status: done
 phase: production
 owner: shared
 created: 2026-07-26
@@ -14,13 +14,14 @@ related: [production/epics/epic-021-contested-crisis-core-fun-experiment, produc
 
 ## Status
 
-REOPENED / FINAL DELAYED REVIEW REPAIR. A second delayed review confirmed the Force issue already closed by PR #196, but correctly found that keyword help remains a detached button row with handler-direct tests, and that the compact ice-landmark repair has only an existence assertion. Owner replaytest remains blocked while these bounded proof gaps are repaired.
+DONE / ALL DELAYED HIGH REVIEW FINDINGS CLOSED / OWNER REPLAYTEST PENDING. PR #198 merged the term-associated keyword interaction, production EventSystem/keyboard/bounds proof, compact ice geometry/color proof, and bounded Unity CI diagnostics. Automation still does not claim native visual or human acceptance.
 
 ### Final delayed-review repair
 
 - Place each keyword affordance beside the copy it explains: Central Relay beside the objective fact, and Movement, Army, or Hold turns inside its corresponding choice card.
 - Prove real EventSystem raycast/hover dispatch, keyboard selection, definition replacement, exit/deselect closure, and tooltip bounds.
 - Prove the blue ice landmark is compact rather than a boundary-like bar using deterministic production-object geometry/color assertions. Native visual acceptance remains separately pending.
+- Final candidate `e1d23e9a50db6b0507f450eae29fcc90347f7fb8` passed exact-head run `30198963136`; merge `5ce7dec484c734bd16021f802679ea93f088be2c` has the identical tree `7bccbd106fdc55a54f7b0c0e403a2d2b354d11c2`.
 
 ## Delayed independent review repair
 
@@ -192,4 +193,4 @@ PASS for this bounded repair. The owner authorized radical correction and implem
 
 ## Verdict
 
-REOPENED / FINAL DELAYED REVIEW REPAIR IN PROGRESS — owner replaytest and deeper crisis implementation remain blocked.
+DONE / ALL DELAYED HIGH FINDINGS CLOSED / OWNER REPLAYTEST PENDING — deeper crisis implementation remains blocked.
